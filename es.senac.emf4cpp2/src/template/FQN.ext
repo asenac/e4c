@@ -1,0 +1,38 @@
+import org::eclipse::emf::ecore;
+
+String getName(ENamedElement this) : 
+	switch (name) {
+		case "volatile"		: name + "_"
+		case "export"		: name + "_"
+		default: name
+	};
+
+String getFQN(ENamedElement this, String separator) :
+	let container = eContainer():
+	if container != null && ENamedElement.isInstance(container) then
+		((ENamedElement) container).getFQN(separator) + separator + getName()
+	else
+		getName();
+		
+String getFQN(ENamedElement this) : getFQN("::");
+
+
+String getHeader(ENamedElement this, String suffix) : "EMF_CPP_" + getFQN("_").toUpperCase() + "_" + suffix + "_HPP";
+String getHeader(ENamedElement this) : getHeader("");
+
+String getFilePrefix(ENamedElement this) : getFQN("/");
+String getCMakeFile(ENamedElement this) : getFQN("_") + ".cmake";
+String getFwdFile(ENamedElement this) : getFilePrefix() + "/fwd.hpp";
+String getIncFile(ENamedElement this) : getFilePrefix() + "/include.hpp";
+String getMetaFile(ENamedElement this) : getFilePrefix() + "/meta.hpp";
+
+String getTagName(EStructuralFeature this) : EContainingClass.name + "__" + name + "_tag";
+String getTagFQN(EStructuralFeature this) : EContainingClass.EPackage.getFQN() + "::" + EContainingClass.name + "__" + name + "_tag";
+String getTagMethod(EStructuralFeature this) : "getTag_" + EContainingClass.name + "__" + name;
+String getTagMethod(EClassifier this) : "getTag_" + name;
+
+String getFactory(EPackage this) : name.toFirstUpper() + "Factory";
+String getPackage(EPackage this) : name.toFirstUpper() + "Package";
+
+
+String getListSeparator() : ",\n\t                          ";

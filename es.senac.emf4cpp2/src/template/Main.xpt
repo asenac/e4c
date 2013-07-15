@@ -1,0 +1,16 @@
+«IMPORT org::eclipse::emf::ecore»
+
+«EXTENSION template::Queries»
+
+«DEFINE main FOR EPackage»
+	«EXPAND template::EPackage::generateFwd FOR this»
+	«EXPAND template::EPackage::generateInc FOR this»
+	«EXPAND template::EPackage::generateMeta FOR this»
+	«EXPAND template::EClass::generateHeader FOREACH getClasses()»
+	«EXPAND template::EClass::generateImpl FOREACH getClasses()»
+	«EXPAND template::CMake::generateCMake FOR this»
+	
+	«EXPAND template::Package::packageHeader FOR this»
+	«EXPAND template::Package::packageImpl FOR this»
+	«EXPAND main FOREACH ESubpackages»
+«ENDDEFINE»

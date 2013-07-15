@@ -1,0 +1,79 @@
+«IMPORT org::eclipse::emf::ecore»
+
+«EXTENSION template::FQN»
+«EXTENSION template::Queries»
+
+«DEFINE packageHeader FOR EPackage»
+«FILE getFQN("/") + "/" + getPackage() + ".hpp"-»
+#ifndef «getHeader("PACKAGE")»
+#define «getHeader("PACKAGE")»
+
+#include <emf4cpp2/tag.hpp>
+#include <ecore/EPackage.hpp>
+#include <«getFwdFile()»>
+
+«EXPAND template::EPackage::namespacesBegin FOR this»
+
+class «getPackage()» : public ::ecore::EPackage
+{
+public:
+    static «getPackage()»_ptr _instance();
+ 
+ 	// Classifiers
+  	«FOREACH EClassifiers AS e-»
+ 	e4c::tag_t «e.getTagMethod()»();
+ 	«ENDFOREACH-»
+ 
+ 	// Structural features
+ 	«FOREACH getStructuralFeatures() AS e-»
+ 	e4c::tag_t «e.getTagMethod()»();
+ 	«ENDFOREACH-»
+
+protected:
+    «getPackage()»();
+};
+
+«EXPAND template::EPackage::namespacesEnd FOR this»
+
+#endif // «getHeader("PACKAGE")»
+«ENDFILE»
+«ENDDEFINE»
+
+«DEFINE packageImpl FOR EPackage»
+«FILE getFQN("/") + "/" + getPackage() + ".cpp"-»
+#include "«getPackage()».hpp"
+#include "include.hpp"
+#include <emf4cpp2/tag.ipp>
+
+using namespace «getFQN()»;
+
+«getPackage()»::«getPackage()»()
+{
+}
+
+«getPackage()»_ptr «getPackage()»::_instance()
+{
+	static «getPackage()» __instance;
+	return &__instance;
+}
+
+  	«FOREACH EClassifiers AS e-»
+e4c::tag_t «getPackage()»::«e.getTagMethod()»()
+{
+	return e4c::tag< «e.getName()» >::get();
+}
+ 
+ 	«ENDFOREACH-»
+ 	«FOREACH getStructuralFeatures() AS e-»
+e4c::tag_t «getPackage()»::«e.getTagMethod()»()
+{
+	return e4c::tag< «e.getTagName()» >::get();
+}
+
+ 	«ENDFOREACH-»		
+extern "C" ::ecore::EPackage_ptr e4c_«getFQN("_")»()
+{
+	return ::«getFQN()»::«getPackage()»::_instance();
+}
+«ENDFILE»
+«ENDDEFINE»

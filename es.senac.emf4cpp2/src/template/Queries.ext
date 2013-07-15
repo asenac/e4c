@@ -1,0 +1,19 @@
+import org::eclipse::emf::ecore;
+
+getDataTypes(EPackage this):
+	EClassifiers.typeSelect(EDataType);
+
+getClasses(EPackage this):
+	EClassifiers.typeSelect(EClass);
+	
+getStructuralFeatures(EPackage this):
+	getClasses().EStructuralFeatures;
+	
+getAllStructuralFeatures(EPackage this):
+	getClasses().EAllStructuralFeatures;
+	
+getDependencies(EPackage this):
+	getAllStructuralFeatures().typeSelect(EAttribute).EType.select(e|e.EPackage != this).EPackage
+		.addAll(getAllStructuralFeatures().typeSelect(EReference).EReferenceType.select(e|e.EPackage != this).EPackage)
+		.addAll(getClasses().EAllSuperTypes.select(e|e.EPackage != this).EPackage)
+		.toSet();

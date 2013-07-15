@@ -1,0 +1,25 @@
+«IMPORT org::eclipse::emf::ecore»
+
+«EXTENSION template::Queries»
+«EXTENSION template::FQN»
+
+«DEFINE generateCMake FOR EPackage»
+«FILE getCMakeFile()»
+
+«FOREACH ESubpackages AS e-»
+include(«e.getCMakeFile()»)
+«ENDFOREACH-»
+
+include_directories(${CMAKE_CURRENT_SOURCE_DIR})
+
+add_library(e4c-«getFQN("-")» SHARED
+	«getFQN("/")»/«getPackage()».cpp
+«FOREACH getClasses() AS e-»
+	«e.getFilePrefix()».cpp
+«ENDFOREACH-»
+	)
+	
+target_link_libraries(e4c-«getFQN("-")» e4c)
+
+«ENDFILE»
+«ENDDEFINE»

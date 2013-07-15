@@ -1,0 +1,82 @@
+«IMPORT org::eclipse::emf::ecore»
+
+«EXTENSION template::FQN»
+«EXTENSION template::Queries»
+
+«REM»Header«ENDREM»
+
+«DEFINE generateHeader FOR EClass-»
+«FILE getFilePrefix() + ".hpp"»
+#ifndef «getHeader()»
+#define «getHeader()»
+
+#include <«EPackage.getFwdFile()»>
+#include <«EPackage.getMetaFile()»>
+«FOREACH ESuperTypes AS e-»
+#include <«e.getFilePrefix()».hpp>
+«ENDFOREACH-»
+«IF ESuperTypes.isEmpty && getFQN() != "ecore::EObject"-»
+#include <ecore/EObject.hpp>
+«ENDIF-»
+
+«EXPAND template::EPackage::namespacesBegin FOR EPackage»
+
+// «getFQN()»
+class «getName()» : «IF !ESuperTypes.isEmpty»«FOREACH ESuperTypes AS e SEPARATOR ", "» public virtual ::«e.getFQN()»«ENDFOREACH»«ELSEIF getFQN() != "ecore::EObject"»public ::ecore::EObject«ELSE»public ::e4c::eclass«ENDIF»
+{
+public:
+
+	typedef «name»_ptr ptr_type;
+
+	«getName()»();
+	virtual ~«getName()»();
+
+	// Typedefs
+	«EXPAND generateTypedef FOREACH EStructuralFeatures»
+	
+	// Members
+	«EXPAND generateDecl FOREACH EStructuralFeatures»
+};
+
+«EXPAND template::EPackage::namespacesEnd FOR EPackage»
+
+#endif // «getHeader()»
+«ENDFILE»
+«ENDDEFINE»
+
+«REM»Typedef«ENDREM»
+«DEFINE generateTypedef FOR EStructuralFeature»«ENDDEFINE»
+
+«DEFINE generateTypedef FOR EAttribute-»
+	typedef ::e4c::impl::attribute< «getTagName()» > _«name»_t;
+«ENDDEFINE»
+
+«DEFINE generateTypedef FOR EReference-»
+	typedef ::e4c::impl::reference< «getTagName()» > _«name»_t;
+«ENDDEFINE»
+
+«DEFINE generateDecl FOR EStructuralFeature-»
+	_«name»_t «getName()»;
+«ENDDEFINE»
+
+«REM»Impl«ENDREM»
+
+«DEFINE generateImpl FOR EClass-»
+«FILE getFilePrefix() + ".cpp"»
+#include "«getName()».hpp"
+«FOREACH EStructuralFeatures.typeSelect(EReference).EReferenceType.toSet() AS e-»
+#include <«e.getFilePrefix()».hpp>
+«ENDFOREACH-»
+
+using namespace «EPackage.getFQN()»;
+
+«getName()»::«getName()»()«IF !EStructuralFeatures.isEmpty» : «FOREACH EStructuralFeatures AS e SEPARATOR ", "»«e.getName()»(this)«ENDFOREACH»«ENDIF»
+{
+}
+
+«getName()»::~«getName()»()
+{
+}
+
+«ENDFILE»
+«ENDDEFINE»

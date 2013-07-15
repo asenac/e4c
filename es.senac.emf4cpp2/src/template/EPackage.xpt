@@ -1,0 +1,195 @@
+«IMPORT org::eclipse::emf::ecore»
+
+«EXTENSION template::FQN»
+«EXTENSION template::Queries»
+
+
+«DEFINE namespacesBegin FOR EPackage-»
+«IF this != null-»
+«EXPAND namespacesBegin FOR ESuperPackage-»
+namespace «getName()»
+{
+«ENDIF-»
+«ENDDEFINE»
+
+«DEFINE namespacesEnd FOR EPackage-»
+«IF this != null-»
+} // «getName()»
+«EXPAND namespacesEnd FOR ESuperPackage-»
+«ENDIF-»
+«ENDDEFINE»
+
+«DEFINE generateFwd FOR EPackage»
+«FILE getFwdFile()»
+#ifndef «getHeader("FWD")»
+#define «getHeader("FWD")»
+
+#include <emf4cpp2/emf4cpp2.hpp>
+
+«FOREACH ESubpackages AS e-»
+#include <«e.getFwdFile()»>
+«ENDFOREACH-»
+
+«EXPAND namespacesBegin FOR this»
+
+class «getPackage()»;
+typedef «getPackage()» * «getPackage()»_ptr;
+class «getFactory()»;
+typedef «getFactory()» * «getFactory()»_ptr;
+
+// Data types
+«EXPAND generateFwd FOREACH getDataTypes()»
+
+// Classes
+«EXPAND generateFwd FOREACH getClasses()»
+
+// Structural features
+«EXPAND generateTagFwd FOREACH getStructuralFeatures()»
+
+«EXPAND namespacesEnd FOR this»
+
+#endif // «getHeader("FWD")»
+«ENDFILE»
+«ENDDEFINE»
+
+«DEFINE generateFwd FOR EDataType-»
+typedef int «getName()»;
+«ENDDEFINE»
+
+«DEFINE generateFwd FOR EClass-»
+class «getName()»;
+typedef «getName()»* «name»_ptr;
+«ENDDEFINE»
+
+«REM»Tag Fwd«ENDREM»
+«DEFINE generateTagFwd FOR EStructuralFeature-»
+struct «getTagName()»;
+«ENDDEFINE»
+
+«REM»Tag«ENDREM»
+«DEFINE generateTag FOR EStructuralFeature»«ENDDEFINE»
+
+«DEFINE tagMembers FOR ETypedElement-»
+	static const int upperBound = «upperBound»;
+	static const int lowerBound = «lowerBound»;
+	static const bool ordered = «ordered»;
+	static const bool unique = «unique»;
+«ENDDEFINE-»
+
+«DEFINE generateTag FOR EAttribute»
+struct «getTagName()»
+{
+	typedef «EContainingClass.getName()» eClass;
+	typedef ::«EType.getFQN()» eType;
+	«EXPAND tagMembers FOR this-»
+};
+«ENDDEFINE»
+
+«DEFINE generateTag FOR EReference»
+struct «getTagName()»
+{
+	typedef «EContainingClass.getName()» eClass;
+	typedef ::«EReferenceType.getFQN()» eReferenceType;
+	static const bool containment = «containment»;
+	static const bool container = «container»;
+	static const bool hasOpposite = «EOpposite != null»; 
+	«IF EOpposite == null-»
+	typedef «getTagName()» eOpposite;
+	«ELSE-»
+	typedef ::«EOpposite.getTagFQN()» eOpposite;
+	«ENDIF-»
+	«EXPAND tagMembers FOR this-»
+};
+«ENDDEFINE»
+
+
+«DEFINE generateInc FOR EPackage»
+«FILE getIncFile()»
+#ifndef «getHeader("INC")»
+#define «getHeader("INC")»
+
+#include <«getFwdFile()»>
+
+«FOREACH getDependencies() AS e-»
+#include <«e.getFwdFile()»>
+«ENDFOREACH-»
+
+«FOREACH ESubpackages AS e-»
+#include <«e.getIncFile()»>
+«ENDFOREACH-»
+
+«FOREACH getClasses() AS e-»
+#include <«e.getFilePrefix()».hpp>
+«ENDFOREACH-»
+
+#endif // «getHeader("INC")»
+«ENDFILE»
+«ENDDEFINE»
+
+«DEFINE generateMeta FOR EPackage»
+«FILE getMetaFile()»
+#ifndef «getHeader("META")»
+#define «getHeader("META")»
+
+#include <«getFwdFile()»>
+
+«FOREACH getDependencies() AS e-»
+#include <«e.getFwdFile()»>
+«ENDFOREACH-»
+
+«EXPAND namespacesBegin FOR this»
+
+«EXPAND generateTag FOREACH getStructuralFeatures()»
+
+«EXPAND namespacesEnd FOR this»
+
+namespace e4c
+{
+namespace definition
+{
+
+template < >
+struct epackage< ::«getFQN()»::«getPackage()» >
+{
+	typedef boost::mpl::list< «FOREACH getClasses() AS f SEPARATOR getListSeparator()»::«f.getFQN()»«ENDFOREACH» > eClasses;
+	typedef boost::mpl::list< «FOREACH ESubpackages AS f SEPARATOR getListSeparator()»::«f.getFQN()»::«f.getPackage()»«ENDFOREACH» > eSubpackages;
+};
+
+«FOREACH getClasses() AS e-»
+template < >
+struct eclass< ::«e.getFQN()» >
+{
+	typedef boost::mpl::list< «FOREACH e.ESuperTypes AS f SEPARATOR getListSeparator()»::«f.getFQN()»«ENDFOREACH» > eSuperTypes;
+	typedef boost::mpl::list< «FOREACH e.EAllSuperTypes AS f SEPARATOR getListSeparator()»::«f.getFQN()»«ENDFOREACH» > eAllSuperTypes;
+	typedef boost::mpl::list< «FOREACH e.EStructuralFeatures AS f SEPARATOR getListSeparator()»::«f.getTagFQN()»«ENDFOREACH» > eStructuralFeatures;
+	typedef boost::mpl::list< «FOREACH e.EAllStructuralFeatures AS f SEPARATOR getListSeparator()»::«f.getTagFQN()»«ENDFOREACH» > eAllStructuralFeatures;
+};
+
+template < >
+struct name< ::«e.getFQN()» >
+{
+	static const char * get()
+	{
+		return "«e.name»";
+	}
+};
+
+«FOREACH e.EStructuralFeatures AS f»
+template < >
+struct name< ::«f.getTagFQN()» >
+{
+	static const char * get()
+	{
+		return "«f.name»";
+	}
+};
+
+«ENDFOREACH»
+«ENDFOREACH-»
+
+} // namespace definition
+} // namespace e4c
+
+#endif // «getHeader("Meta")»
+«ENDFILE»
+«ENDDEFINE»

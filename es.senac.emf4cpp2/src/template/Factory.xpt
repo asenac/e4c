@@ -1,0 +1,20 @@
+«IMPORT org::eclipse::emf::ecore»
+
+«EXTENSION template::FQN»
+
+«DEFINE factoryHeader FOR EPackage»
+class «getFactory()» : public virtual ::ecore::EFactory
+{
+public:
+
+    static «getFactory()»_ptr _instance();
+
+«FOREACH this.EClassifiers.typeSelect(EClass) AS class-»
+    «class.name»_ptr create«class.name»();
+«ENDFOREACH-»
+
+protected:
+
+    «getFactory()»Factory();
+};
+«ENDDEFINE»

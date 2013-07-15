@@ -1,0 +1,6 @@
+bin
+build
+*.swp
+*.o
+*.a
+*.so

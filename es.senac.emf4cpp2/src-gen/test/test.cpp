@@ -2,14 +2,15 @@
 #include <cassert>
 #include <iostream>
 #include <memory>
+#include <cstring>
 
 int main()
 {
     {
         ecore::EClass cl;
 
-        *cl.name = 1;
-        int a = *cl.name;
+        cl.name = 1;
+        int a = cl.name;
 
         boost::shared_ptr< ecore::EClass > ocl(new ecore::EClass());
 
@@ -19,6 +20,9 @@ int main()
         std::cout << cl.eSuperTypes.name() << std::endl;
         std::cout << cl.eSuperTypes.tag() << std::endl;
         std::cout << cl.interface.name() << std::endl;
+
+        assert(std::strcmp(cl.eSuperTypes.name(), "eSuperTypes") == 0);
+        assert(std::strcmp(cl.interface.name(), "interface") == 0);
 
         std::cout << "Features:" << std::endl;
         e4c::eclass::structural_features_iterator it = cl._begin();

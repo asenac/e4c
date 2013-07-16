@@ -43,21 +43,29 @@ int main()
         std::auto_ptr< ecore::EClass > cl(new ecore::EClass);
         ecore::EClass * e = cl.get();
         e->name = 2;
-        // Assumes its ownership
-        p.eClassifiers.push_back(cl.release());
 
+        // p assumes its ownership
+        p.eClassifiers.push_back(cl.release());
         assert(e->ePackage == &p);
+        assert(p.eClassifiers.size() == 1);
+        assert(e == p.eClassifiers[0]); // no copies
         
         ecore::EPackage p2;
-        p.eClassifiers[0]->ePackage = &p2; 
-        p.eClassifiers.clear();
+        p.eClassifiers[0]->ePackage = &p2; // the EClass instance is 
+                                           // transparently moved from p to p2
+        assert(p.eClassifiers.size() == 0);
+        assert(p2.eClassifiers.size() == 1);
 
+        // nothing happens
+        p.eClassifiers.clear();
         assert(p.eClassifiers.size() == 0);
 
-        // e is still available
+        // the EClass instance is still available since it's owned by p2
+        assert(e == p2.eClassifiers[0]); // no copies
         assert(e->name == 2);
         assert(e->name == p2.eClassifiers[0]->name);
-        std::cout << p2.eClassifiers[0]->name << std::endl; 
+
+        // the EClass instance is deleted since it's owned by p2
     }
 
     return 0;

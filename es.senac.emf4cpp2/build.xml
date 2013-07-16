@@ -60,13 +60,6 @@
                 <exclude name="**/*.java"/>
             </fileset>
         </copy>
-        <copy includeemptydirs="false" todir="bin">
-            <fileset dir="src-gen">
-                <exclude name="**/*.launch"/>
-                <exclude name="**/*.xtend"/>
-                <exclude name="**/*.java"/>
-            </fileset>
-        </copy>
     </target>
     <target name="clean">
         <delete dir="bin"/>
@@ -79,7 +72,6 @@
         <echo message="${ant.project.name}: ${ant.file}"/>
         <javac debug="true" debuglevel="${debuglevel}" destdir="bin" includeantruntime="false" source="${source}" target="${target}">
             <src path="src"/>
-            <src path="src-gen"/>
             <classpath refid="es.senac.emf4cpp2.classpath"/>
         </javac>
     </target>

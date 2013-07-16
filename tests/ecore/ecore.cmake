@@ -26,6 +26,6 @@ add_library(e4c-ecore SHARED
 	ecore/EGenericType.cpp
 	ecore/ETypeParameter.cpp
 	)
-
+	
 target_link_libraries(e4c-ecore e4c)
 

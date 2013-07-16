@@ -10,7 +10,7 @@ namespace ecore
 
 
 // ecore::EObject
-class EObject : public virtual ::e4c::eclass
+class EObject : public ::e4c::eclass
 {
 public:
 

@@ -1,0 +1,33 @@
+
+#ifndef EMF_CPP_C_CFIELD__HPP
+#define EMF_CPP_C_CFIELD__HPP
+
+#include <C/fwd.hpp>
+#include <C/meta.hpp>
+#include <C/CStructuralFeature.hpp>
+
+namespace C
+{
+
+
+// C::CField
+class CField :  public virtual ::C::CStructuralFeature
+{
+public:
+
+	typedef CField_ptr ptr_type;
+
+	CField();
+	virtual ~CField();
+
+	// Typedefs
+	
+	
+	// Members
+	
+};
+
+} // C
+
+
+#endif // EMF_CPP_C_CFIELD__HPP

@@ -22,7 +22,7 @@
 «EXPAND template::EPackage::namespacesBegin FOR EPackage»
 
 // «getFQN()»
-class «getName()» : «IF !ESuperTypes.isEmpty»«FOREACH ESuperTypes AS e SEPARATOR ", "» public virtual ::«e.getFQN()»«ENDFOREACH»«ELSEIF getFQN() != "ecore::EObject"»public ::ecore::EObject«ELSE»public ::e4c::eclass«ENDIF»
+class «getName()» : «IF !ESuperTypes.isEmpty»«FOREACH ESuperTypes AS e SEPARATOR ", "» public virtual ::«e.getFQN()»«ENDFOREACH»«ELSEIF getFQN() != "ecore::EObject"»public virtual ::ecore::EObject«ELSE»public virtual ::e4c::eclass«ENDIF»
 {
 public:
 

@@ -1,3 +1,4 @@
 before_install:
-- sudo apt-get install libboost-all-dev
+- sudo apt-get update -qq
+- sudo apt-get install -qq libboost-all-dev valgrind
 script: cmake . && make && make test

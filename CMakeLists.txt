@@ -1,6 +1,8 @@
 cmake_minimum_required(VERSION 2.8)
 project(emf4cpp2 CXX)
 
+add_definitions(-Wall -Werror)
+
 enable_testing()
 
 include_directories(${CMAKE_CURRENT_SOURCE_DIR})

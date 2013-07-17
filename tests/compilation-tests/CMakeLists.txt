@@ -1,6 +1,7 @@
 include (bintree.cmake)
 include (json.cmake)
 include (tree.cmake)
+include (PrimitiveTypes.cmake)
 include (C.cmake)
 include (CST.cmake)
 include (company.cmake)

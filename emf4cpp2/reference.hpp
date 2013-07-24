@@ -325,7 +325,7 @@ protected:
 
         if (set)
         {
-            m_value.insert(val);
+            //m_value.insert(val);
         }
         else
         {

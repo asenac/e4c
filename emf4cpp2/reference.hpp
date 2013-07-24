@@ -321,16 +321,16 @@ protected:
 
     void set(bool set, eclass * value)
     {
-        T * val = dynamic_cast< T * >(value);
+        //T * val = dynamic_cast< T * >(value);
 
-        if (set)
-        {
-            //m_value.insert(val);
-        }
-        else
-        {
-            // TODO helper... requires a compliation test
-        }
+        //if (set)
+        //{
+            ////m_value.insert(val);
+        //}
+        //else
+        //{
+            //// TODO helper... requires a compliation test
+        //}
     }
 
     type m_value;

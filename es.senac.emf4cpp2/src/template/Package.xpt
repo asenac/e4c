@@ -44,6 +44,7 @@ protected:
 #include "«getPackage()».hpp"
 #include "include.hpp"
 #include <emf4cpp2/tag.ipp>
+#include <emf4cpp2/reference.ipp>
 
 using namespace «getFQN()»;
 
@@ -71,6 +72,10 @@ e4c::tag_t «getPackage()»::«e.getTagMethod()»()
 }
 
  	«ENDFOREACH-»		
+ 	«FOREACH getReferences() AS e-»
+template class e4c::impl::reference< «e.getTagName()» >;
+ 	«ENDFOREACH-»
+
 extern "C" ::ecore::EPackage_ptr e4c_«getFQN("_")»()
 {
 	return ::«getFQN()»::«getPackage()»::_instance();

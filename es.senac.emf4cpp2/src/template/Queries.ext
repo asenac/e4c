@@ -11,6 +11,9 @@ getStructuralFeatures(EPackage this):
 	
 getAllStructuralFeatures(EPackage this):
 	getClasses().EAllStructuralFeatures;
+
+getReferences(EPackage this):
+    getClasses().EStructuralFeatures.typeSelect(EReference);
 	
 getDependencies(EPackage this):
 	getAllStructuralFeatures().typeSelect(EAttribute).EType.select(e|e.EPackage != this).EPackage

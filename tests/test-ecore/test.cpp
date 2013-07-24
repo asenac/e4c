@@ -3,6 +3,7 @@
 #include <iostream>
 #include <memory>
 #include <cstring>
+#include <boost/shared_ptr.hpp>
 
 int main()
 {

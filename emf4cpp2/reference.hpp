@@ -1,13 +1,12 @@
 #ifndef EMF4CPP2_REFERENCE_HPP
 #define EMF4CPP2_REFERENCE_HPP
 
+#include <memory>
 #include <vector>
 #include <set>
-#include <memory>
-#include <boost/shared_ptr.hpp>
 #include <boost/ptr_container/ptr_vector.hpp>
+#include <boost/ptr_container/ptr_set.hpp>
 #include <boost/mpl/if.hpp>
-#include <emf4cpp2/definition.hpp>
 #include <emf4cpp2/structural_feature.hpp>
 
 namespace e4c
@@ -34,12 +33,12 @@ namespace detail
 template < typename T >
 struct reference_traits
 {
-    typedef std::auto_ptr< T > ContainmentType;
-    typedef T * NoContainmentType;
-    typedef std::set< NoContainmentType > UnorderedNoContainmentType;
-    typedef std::set< ContainmentType > UnorderedContainmentType;
-    typedef std::vector< NoContainmentType > OrderedNoContainmentType;
-    typedef boost::ptr_vector< T > OrderedContainmentType;
+    typedef std::auto_ptr< T >      ContainmentType;
+    typedef T *                     NoContainmentType;
+    typedef std::set< T * >         UnorderedNoContainmentType;
+    typedef boost::ptr_set< T >     UnorderedContainmentType;
+    typedef std::vector< T * >      OrderedNoContainmentType;
+    typedef boost::ptr_vector< T >  OrderedContainmentType;
 };
 
 template < typename TagType >
@@ -59,8 +58,23 @@ struct calculate_vector_type
     typedef typename TagType::eReferenceType eReferenceType;
     typedef typename 
         boost::mpl::if_c< TagType::containment,
-            typename reference_traits< eReferenceType >::OrderedContainmentType, 
-            typename reference_traits< eReferenceType >::OrderedNoContainmentType 
+            typename 
+                reference_traits< eReferenceType >::OrderedContainmentType, 
+            typename 
+                reference_traits< eReferenceType >::OrderedNoContainmentType 
+        >::type type;
+};
+
+template < typename TagType >
+struct calculate_set_type
+{
+    typedef typename TagType::eReferenceType eReferenceType;
+    typedef typename 
+        boost::mpl::if_c< TagType::containment,
+            typename 
+                reference_traits< eReferenceType >::UnorderedContainmentType, 
+            typename 
+                reference_traits< eReferenceType >::UnorderedNoContainmentType 
         >::type type;
 };
 
@@ -122,22 +136,22 @@ struct reference_holder_type
     }
 
     operator T * () { return pointer_helper< type >::get(m_value); }
-    operator const T * () const { return pointer_helper< const type >::get(m_value); }
+
+    operator const T * () const 
+    { 
+        return pointer_helper< const type >::get(m_value); 
+    }
 
     void operator=(T * val)
     {
         if (TagType::hasOpposite && m_value)
-        {
             notify(pointer_helper< type >::get(m_value), 
                     tag< OppositeTag >::get(), false);
-        }
 
         m_value = val;
 
         if (TagType::hasOpposite)
-        {
             notify(val, tag< OppositeTag >::get(), true);
-        }
     }
  
 protected:
@@ -220,6 +234,7 @@ struct vector_helper< T, boost::ptr_vector< T > >
     }
 };
 
+// TODO will have the same usage as std::vector
 template < typename TagType >
 struct reference_vector_holder_type
 {
@@ -232,11 +247,10 @@ struct reference_vector_holder_type
     {
         m_value.push_back(item);
 
-        // TODO: compile time
+        // Don't need to check it at compile time, since compilers are
+        // smart enough to remove this if it doesn't have an opposite
         if (TagType::hasOpposite)
-        {
             notify(item, tag< OppositeTag >::get(), true);
-        }
     }
 
     std::size_t size() const
@@ -246,15 +260,11 @@ struct reference_vector_holder_type
 
     void clear()
     {
-        // TODO: compile time
         if (TagType::hasOpposite)
-        {
             for (std::size_t i = 0; i < size(); i++)
-            {
                 notify(helper_t::get(m_value, i), 
                         tag< OppositeTag >::get(), false);
-            }
-        }
+
         m_value.clear();
     }
 
@@ -269,6 +279,7 @@ struct reference_vector_holder_type
     }
 
 protected:
+
     virtual void notify(eclass * opposite, tag_t tag, bool set) = 0;
 
     void set(bool set, eclass * value)
@@ -296,17 +307,30 @@ protected:
     type m_value;
 };
 
+// TODO will have the same usage as std::set
 template < typename TagType >
 struct reference_set_holder_type
 {
-    typedef typename calculate_reference_type< TagType >::type item_type;
+    typedef typename TagType::eReferenceType T;
+    typedef typename calculate_set_type< TagType >::type item_type;
     typedef std::set< item_type > type;
 
 protected:
+
     virtual void notify(eclass * opposite, tag_t tag, bool set) = 0;
 
     void set(bool set, eclass * value)
     {
+        T * val = dynamic_cast< T * >(value);
+
+        if (set)
+        {
+            m_value.insert(val);
+        }
+        else
+        {
+            // TODO helper... requires a compliation test
+        }
     }
 
     type m_value;
@@ -335,15 +359,12 @@ class reference : public ::e4c::reference, public impl_type
 {
 public:
     typedef typename TagType::eClass eClass;
-    typedef typename ::e4c::definition::name< TagType > name_t;
+    typedef impl_type implementation;
 
-    reference(eClass * owner) : 
-        ::e4c::reference(owner)
-    {
-    }
+    reference(eClass * owner);
 
-    const char * name() const { return name_t::get(); }
-    tag_t tag() const { return ::e4c::tag< TagType >::get(); }
+    const char * name() const;
+    tag_t tag() const;
 
     template < typename T >
     void operator=(T t)
@@ -353,16 +374,11 @@ public:
 
 protected:
 
-    void notify(eclass * opposite, tag_t tag, bool set)
-    {
-        ::e4c::reference::notify(opposite, tag, set);
-    }
+    void notify(eclass * opposite, tag_t tag, bool set);
 
-    void set(bool set, eclass * value)
-    {
-        impl_type::set(set, value);
-    }
+    void set(bool set, eclass * value);
 };
+
 } // namespace impl
 } // namespace e4c
 

@@ -1,6 +1,7 @@
 #include "EcorePackage.hpp"
 #include "include.hpp"
 #include <emf4cpp2/tag.ipp>
+#include <emf4cpp2/reference.ipp>
 
 using namespace ecore;
 
@@ -683,6 +684,55 @@ e4c::tag_t EcorePackage::getTag_ETypeParameter__eBounds()
 {
 	return e4c::tag< ETypeParameter__eBounds_tag >::get();
 }
+
+template class e4c::impl::reference< EAttribute__eAttributeType_tag >;
+template class e4c::impl::reference< EAnnotation__details_tag >;
+template class e4c::impl::reference< EAnnotation__eModelElement_tag >;
+template class e4c::impl::reference< EAnnotation__contents_tag >;
+template class e4c::impl::reference< EAnnotation__references_tag >;
+template class e4c::impl::reference< EClass__eSuperTypes_tag >;
+template class e4c::impl::reference< EClass__eOperations_tag >;
+template class e4c::impl::reference< EClass__eAllAttributes_tag >;
+template class e4c::impl::reference< EClass__eAllReferences_tag >;
+template class e4c::impl::reference< EClass__eReferences_tag >;
+template class e4c::impl::reference< EClass__eAttributes_tag >;
+template class e4c::impl::reference< EClass__eAllContainments_tag >;
+template class e4c::impl::reference< EClass__eAllOperations_tag >;
+template class e4c::impl::reference< EClass__eAllStructuralFeatures_tag >;
+template class e4c::impl::reference< EClass__eAllSuperTypes_tag >;
+template class e4c::impl::reference< EClass__eIDAttribute_tag >;
+template class e4c::impl::reference< EClass__eStructuralFeatures_tag >;
+template class e4c::impl::reference< EClass__eGenericSuperTypes_tag >;
+template class e4c::impl::reference< EClass__eAllGenericSuperTypes_tag >;
+template class e4c::impl::reference< EClassifier__ePackage_tag >;
+template class e4c::impl::reference< EClassifier__eTypeParameters_tag >;
+template class e4c::impl::reference< EEnum__eLiterals_tag >;
+template class e4c::impl::reference< EEnumLiteral__eEnum_tag >;
+template class e4c::impl::reference< EFactory__ePackage_tag >;
+template class e4c::impl::reference< EModelElement__eAnnotations_tag >;
+template class e4c::impl::reference< EOperation__eContainingClass_tag >;
+template class e4c::impl::reference< EOperation__eTypeParameters_tag >;
+template class e4c::impl::reference< EOperation__eParameters_tag >;
+template class e4c::impl::reference< EOperation__eExceptions_tag >;
+template class e4c::impl::reference< EOperation__eGenericExceptions_tag >;
+template class e4c::impl::reference< EPackage__eFactoryInstance_tag >;
+template class e4c::impl::reference< EPackage__eClassifiers_tag >;
+template class e4c::impl::reference< EPackage__eSubpackages_tag >;
+template class e4c::impl::reference< EPackage__eSuperPackage_tag >;
+template class e4c::impl::reference< EParameter__eOperation_tag >;
+template class e4c::impl::reference< EReference__eOpposite_tag >;
+template class e4c::impl::reference< EReference__eReferenceType_tag >;
+template class e4c::impl::reference< EReference__eKeys_tag >;
+template class e4c::impl::reference< EStructuralFeature__eContainingClass_tag >;
+template class e4c::impl::reference< ETypedElement__eType_tag >;
+template class e4c::impl::reference< ETypedElement__eGenericType_tag >;
+template class e4c::impl::reference< EGenericType__eUpperBound_tag >;
+template class e4c::impl::reference< EGenericType__eTypeArguments_tag >;
+template class e4c::impl::reference< EGenericType__eRawType_tag >;
+template class e4c::impl::reference< EGenericType__eLowerBound_tag >;
+template class e4c::impl::reference< EGenericType__eTypeParameter_tag >;
+template class e4c::impl::reference< EGenericType__eClassifier_tag >;
+template class e4c::impl::reference< ETypeParameter__eBounds_tag >;
 
 extern "C" ::ecore::EPackage_ptr e4c_ecore()
 {

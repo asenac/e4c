@@ -6,6 +6,8 @@
 #include <ecore/meta.hpp>
 #include <ecore/ENamedElement.hpp>
 
+#include <e4c/mapping.hpp>
+
 namespace ecore
 {
 
@@ -16,16 +18,19 @@ class ETypeParameter :  public virtual ::ecore::ENamedElement
 public:
 
 	typedef ETypeParameter_ptr ptr_type;
-
+	
 	ETypeParameter();
 	virtual ~ETypeParameter();
 
-	// Typedefs
-	typedef ::e4c::impl::reference< ETypeParameter__eBounds_tag > _eBounds_t;
+	typedef boost::ptr_vector < ecore::EGenericType > eBounds_t;
 
 	
-	// Members
-	_eBounds_t eBounds;
+	// TODO
+
+	
+protected:
+
+	eBounds_t m_eBounds;
 
 };
 

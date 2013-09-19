@@ -8,11 +8,18 @@
 
 using namespace ecore;
 
-EOperation::EOperation() : eContainingClass(this), eTypeParameters(this), eParameters(this), eExceptions(this), eGenericExceptions(this)
+EOperation::EOperation() : 
+	m_eContainingClass(),
+    m_eTypeParameters(),
+    m_eParameters(),
+    m_eExceptions(),
+    m_eGenericExceptions()
 {
 }
 
 EOperation::~EOperation()
 {
 }
+
+
 

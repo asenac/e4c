@@ -6,6 +6,8 @@
 #include <C/meta.hpp>
 #include <C/CInt.hpp>
 
+#include <e4c/mapping.hpp>
+
 namespace C
 {
 
@@ -16,14 +18,16 @@ class CUnsignedInt :  public virtual ::C::CInt
 public:
 
 	typedef CUnsignedInt_ptr ptr_type;
-
+	
 	CUnsignedInt();
 	virtual ~CUnsignedInt();
 
-	// Typedefs
 	
 	
-	// Members
+	
+	
+protected:
+
 	
 };
 

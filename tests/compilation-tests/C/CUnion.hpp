@@ -6,6 +6,8 @@
 #include <C/meta.hpp>
 #include <C/CStructured.hpp>
 
+#include <e4c/mapping.hpp>
+
 namespace C
 {
 
@@ -16,14 +18,16 @@ class CUnion :  public virtual ::C::CStructured
 public:
 
 	typedef CUnion_ptr ptr_type;
-
+	
 	CUnion();
 	virtual ~CUnion();
 
-	// Typedefs
 	
 	
-	// Members
+	
+	
+protected:
+
 	
 };
 

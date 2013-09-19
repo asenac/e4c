@@ -6,24 +6,28 @@
 #include <json/meta.hpp>
 #include <ecore/EObject.hpp>
 
+#include <e4c/mapping.hpp>
+
 namespace json
 {
 
 
 // json::Value
-class Value : public virtual ::ecore::EObject
+class Value
 {
 public:
 
 	typedef Value_ptr ptr_type;
-
-	Value();
+	
 	virtual ~Value();
 
-	// Typedefs
 	
 	
-	// Members
+	
+	
+protected:
+	Value();
+
 	
 };
 

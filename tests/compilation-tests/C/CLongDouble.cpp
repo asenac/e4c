@@ -11,3 +11,5 @@ CLongDouble::~CLongDouble()
 {
 }
 
+
+

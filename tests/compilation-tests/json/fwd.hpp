@@ -1,8 +1,5 @@
-
 #ifndef EMF_CPP_JSON_FWD_HPP
 #define EMF_CPP_JSON_FWD_HPP
-
-#include <emf4cpp2/emf4cpp2.hpp>
 
 
 namespace json

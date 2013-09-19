@@ -6,6 +6,8 @@
 #include <C/meta.hpp>
 #include <C/CClassifier.hpp>
 
+#include <e4c/mapping.hpp>
+
 namespace C
 {
 
@@ -16,14 +18,16 @@ class CDataType :  public virtual ::C::CClassifier
 public:
 
 	typedef CDataType_ptr ptr_type;
-
+	
 	CDataType();
 	virtual ~CDataType();
 
-	// Typedefs
 	
 	
-	// Members
+	
+	
+protected:
+
 	
 };
 

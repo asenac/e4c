@@ -6,6 +6,8 @@
 #include <C/meta.hpp>
 #include <C/CFloating.hpp>
 
+#include <e4c/mapping.hpp>
+
 namespace C
 {
 
@@ -16,14 +18,16 @@ class CDouble :  public virtual ::C::CFloating
 public:
 
 	typedef CDouble_ptr ptr_type;
-
+	
 	CDouble();
 	virtual ~CDouble();
 
-	// Typedefs
 	
 	
-	// Members
+	
+	
+protected:
+
 	
 };
 

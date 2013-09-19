@@ -6,6 +6,8 @@
 #include <C/meta.hpp>
 #include <C/CInt.hpp>
 
+#include <e4c/mapping.hpp>
+
 namespace C
 {
 
@@ -16,14 +18,16 @@ class CLong :  public virtual ::C::CInt
 public:
 
 	typedef CLong_ptr ptr_type;
-
+	
 	CLong();
 	virtual ~CLong();
 
-	// Typedefs
 	
 	
-	// Members
+	
+	
+protected:
+
 	
 };
 

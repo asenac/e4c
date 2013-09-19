@@ -6,6 +6,8 @@
 #include <C/meta.hpp>
 #include <C/CDataType.hpp>
 
+#include <e4c/mapping.hpp>
+
 namespace C
 {
 
@@ -16,14 +18,16 @@ class CIntegral :  public virtual ::C::CDataType
 public:
 
 	typedef CIntegral_ptr ptr_type;
-
+	
 	CIntegral();
 	virtual ~CIntegral();
 
-	// Typedefs
 	
 	
-	// Members
+	
+	
+protected:
+
 	
 };
 

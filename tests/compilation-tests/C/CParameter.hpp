@@ -6,6 +6,8 @@
 #include <C/meta.hpp>
 #include <C/CTypedElement.hpp>
 
+#include <e4c/mapping.hpp>
+
 namespace C
 {
 
@@ -16,16 +18,19 @@ class CParameter :  public virtual ::C::CTypedElement
 public:
 
 	typedef CParameter_ptr ptr_type;
-
+	
 	CParameter();
 	virtual ~CParameter();
 
-	// Typedefs
-	typedef ::e4c::impl::reference< CParameter__behavioralFeature_tag > _behavioralFeature_t;
+	typedef C::BehavioralFeature_ptr behavioralFeature_t;
 
 	
-	// Members
-	_behavioralFeature_t behavioralFeature;
+	// TODO
+
+	
+protected:
+
+	behavioralFeature_t m_behavioralFeature;
 
 };
 

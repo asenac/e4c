@@ -6,6 +6,8 @@
 #include <ecore/meta.hpp>
 #include <ecore/EModelElement.hpp>
 
+#include <e4c/mapping.hpp>
+
 namespace ecore
 {
 
@@ -16,24 +18,32 @@ class EAnnotation :  public virtual ::ecore::EModelElement
 public:
 
 	typedef EAnnotation_ptr ptr_type;
-
+	
 	EAnnotation();
 	virtual ~EAnnotation();
 
-	// Typedefs
-	typedef ::e4c::impl::attribute< EAnnotation__source_tag > _source_t;
-	typedef ::e4c::impl::reference< EAnnotation__details_tag > _details_t;
-	typedef ::e4c::impl::reference< EAnnotation__eModelElement_tag > _eModelElement_t;
-	typedef ::e4c::impl::reference< EAnnotation__contents_tag > _contents_t;
-	typedef ::e4c::impl::reference< EAnnotation__references_tag > _references_t;
+	typedef int source_t;
+	typedef boost::ptr_vector < ecore::EStringToStringMapEntry > details_t;
+	typedef ecore::EModelElement_ptr eModelElement_t;
+	typedef boost::ptr_vector < ecore::EObject > contents_t;
+	typedef std::set < ecore::EObject_ptr > references_t;
 
 	
-	// Members
-	_source_t source;
-	_details_t details;
-	_eModelElement_t eModelElement;
-	_contents_t contents;
-	_references_t references;
+	void setSource(source_t _source);
+	source_t getSource() const;
+	// TODO
+	// TODO
+	// TODO
+	// TODO
+
+	
+protected:
+
+	source_t m_source;
+	details_t m_details;
+	eModelElement_t m_eModelElement;
+	contents_t m_contents;
+	references_t m_references;
 
 };
 

@@ -2,6 +2,7 @@
 #ifndef EMF_CPP_C_META_HPP
 #define EMF_CPP_C_META_HPP
 
+#include <e4c/definition.hpp>
 #include <C/fwd.hpp>
 
 #include <PrimitiveTypes/fwd.hpp>

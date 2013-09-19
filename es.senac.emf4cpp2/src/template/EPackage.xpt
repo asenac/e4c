@@ -20,11 +20,9 @@ namespace «getName()»
 «ENDDEFINE»
 
 «DEFINE generateFwd FOR EPackage»
-«FILE getFwdFile()»
+«FILE getFwdFile()-	»
 #ifndef «getHeader("FWD")»
 #define «getHeader("FWD")»
-
-#include <emf4cpp2/emf4cpp2.hpp>
 
 «FOREACH ESubpackages AS e-»
 #include <«e.getFwdFile()»>
@@ -54,6 +52,13 @@ typedef «getFactory()» * «getFactory()»_ptr;
 
 «DEFINE generateFwd FOR EDataType-»
 typedef int «getName()»;
+«ENDDEFINE»
+
+«DEFINE generateFwd FOR EEnum-»
+enum class «getName()» 
+{
+	«FOREACH ELiterals AS e SEPARATOR ",\n    "-»«e.literal»«ENDFOREACH-»
+};
 «ENDDEFINE»
 
 «DEFINE generateFwd FOR EClass-»
@@ -131,6 +136,7 @@ struct «getTagName()»
 #ifndef «getHeader("META")»
 #define «getHeader("META")»
 
+#include <e4c/definition.hpp>
 #include <«getFwdFile()»>
 
 «FOREACH getDependencies() AS e-»

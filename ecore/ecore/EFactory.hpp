@@ -6,6 +6,8 @@
 #include <ecore/meta.hpp>
 #include <ecore/EModelElement.hpp>
 
+#include <e4c/mapping.hpp>
+
 namespace ecore
 {
 
@@ -16,16 +18,19 @@ class EFactory :  public virtual ::ecore::EModelElement
 public:
 
 	typedef EFactory_ptr ptr_type;
-
+	
 	EFactory();
 	virtual ~EFactory();
 
-	// Typedefs
-	typedef ::e4c::impl::reference< EFactory__ePackage_tag > _ePackage_t;
+	typedef ecore::EPackage_ptr ePackage_t;
 
 	
-	// Members
-	_ePackage_t ePackage;
+	// TODO
+
+	
+protected:
+
+	ePackage_t m_ePackage;
 
 };
 

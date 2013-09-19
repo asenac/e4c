@@ -6,6 +6,8 @@
 #include <ecore/meta.hpp>
 #include <ecore/EDataType.hpp>
 
+#include <e4c/mapping.hpp>
+
 namespace ecore
 {
 
@@ -16,16 +18,19 @@ class EEnum :  public virtual ::ecore::EDataType
 public:
 
 	typedef EEnum_ptr ptr_type;
-
+	
 	EEnum();
 	virtual ~EEnum();
 
-	// Typedefs
-	typedef ::e4c::impl::reference< EEnum__eLiterals_tag > _eLiterals_t;
+	typedef boost::ptr_vector < ecore::EEnumLiteral > eLiterals_t;
 
 	
-	// Members
-	_eLiterals_t eLiterals;
+	// TODO
+
+	
+protected:
+
+	eLiterals_t m_eLiterals;
 
 };
 

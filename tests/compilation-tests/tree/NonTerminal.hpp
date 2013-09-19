@@ -6,6 +6,8 @@
 #include <tree/meta.hpp>
 #include <tree/TreeNode.hpp>
 
+#include <e4c/mapping.hpp>
+
 namespace tree
 {
 
@@ -16,16 +18,19 @@ class NonTerminal :  public virtual ::tree::TreeNode
 public:
 
 	typedef NonTerminal_ptr ptr_type;
-
+	
 	NonTerminal();
 	virtual ~NonTerminal();
 
-	// Typedefs
-	typedef ::e4c::impl::reference< NonTerminal__children_tag > _children_t;
+	typedef boost::ptr_vector < tree::TreeNode > children_t;
 
 	
-	// Members
-	_children_t children;
+	// TODO
+
+	
+protected:
+
+	children_t m_children;
 
 };
 

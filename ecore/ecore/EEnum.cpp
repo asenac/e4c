@@ -4,11 +4,14 @@
 
 using namespace ecore;
 
-EEnum::EEnum() : eLiterals(this)
+EEnum::EEnum() : 
+	m_eLiterals()
 {
 }
 
 EEnum::~EEnum()
 {
 }
+
+
 

@@ -5,24 +5,28 @@
 #include <ecore/fwd.hpp>
 #include <ecore/meta.hpp>
 
+#include <e4c/mapping.hpp>
+
 namespace ecore
 {
 
 
 // ecore::EObject
-class EObject : public virtual ::e4c::eclass
+class EObject
 {
 public:
 
 	typedef EObject_ptr ptr_type;
-
+	
 	EObject();
 	virtual ~EObject();
 
-	// Typedefs
 	
 	
-	// Members
+	
+	
+protected:
+
 	
 };
 

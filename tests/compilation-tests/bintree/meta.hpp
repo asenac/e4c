@@ -2,6 +2,7 @@
 #ifndef EMF_CPP_BINTREE_META_HPP
 #define EMF_CPP_BINTREE_META_HPP
 
+#include <e4c/definition.hpp>
 #include <bintree/fwd.hpp>
 
 #include <ecore/fwd.hpp>

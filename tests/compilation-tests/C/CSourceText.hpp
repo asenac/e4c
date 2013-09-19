@@ -6,28 +6,36 @@
 #include <C/meta.hpp>
 #include <ecore/EObject.hpp>
 
+#include <e4c/mapping.hpp>
+
 namespace C
 {
 
 
 // C::CSourceText
-class CSourceText : public virtual ::ecore::EObject
+class CSourceText
 {
 public:
 
 	typedef CSourceText_ptr ptr_type;
-
+	
 	CSourceText();
 	virtual ~CSourceText();
 
-	// Typedefs
-	typedef ::e4c::impl::attribute< CSourceText__source_tag > _source_t;
-	typedef ::e4c::impl::attribute< CSourceText__fileName_tag > _fileName_t;
+	typedef int source_t;
+	typedef int fileName_t;
 
 	
-	// Members
-	_source_t source;
-	_fileName_t fileName;
+	void setSource(source_t _source);
+	source_t getSource() const;
+	void setFileName(fileName_t _fileName);
+	fileName_t getFileName() const;
+
+	
+protected:
+
+	source_t m_source;
+	fileName_t m_fileName;
 
 };
 

@@ -6,6 +6,8 @@
 #include <ecore/meta.hpp>
 #include <ecore/EStructuralFeature.hpp>
 
+#include <e4c/mapping.hpp>
+
 namespace ecore
 {
 
@@ -16,26 +18,37 @@ class EReference :  public virtual ::ecore::EStructuralFeature
 public:
 
 	typedef EReference_ptr ptr_type;
-
+	
 	EReference();
 	virtual ~EReference();
 
-	// Typedefs
-	typedef ::e4c::impl::attribute< EReference__containment_tag > _containment_t;
-	typedef ::e4c::impl::attribute< EReference__container_tag > _container_t;
-	typedef ::e4c::impl::attribute< EReference__resolveProxies_tag > _resolveProxies_t;
-	typedef ::e4c::impl::reference< EReference__eOpposite_tag > _eOpposite_t;
-	typedef ::e4c::impl::reference< EReference__eReferenceType_tag > _eReferenceType_t;
-	typedef ::e4c::impl::reference< EReference__eKeys_tag > _eKeys_t;
+	typedef int containment_t;
+	typedef int container_t;
+	typedef int resolveProxies_t;
+	typedef ecore::EReference_ptr eOpposite_t;
+	typedef ecore::EClass_ptr eReferenceType_t;
+	typedef std::set < ecore::EAttribute_ptr > eKeys_t;
 
 	
-	// Members
-	_containment_t containment;
-	_container_t container;
-	_resolveProxies_t resolveProxies;
-	_eOpposite_t eOpposite;
-	_eReferenceType_t eReferenceType;
-	_eKeys_t eKeys;
+	void setContainment(containment_t _containment);
+	containment_t getContainment() const;
+	void setContainer(container_t _container);
+	container_t getContainer() const;
+	void setResolveProxies(resolveProxies_t _resolveProxies);
+	resolveProxies_t getResolveProxies() const;
+	// TODO
+	// TODO
+	// TODO
+
+	
+protected:
+
+	containment_t m_containment;
+	container_t m_container;
+	resolveProxies_t m_resolveProxies;
+	eOpposite_t m_eOpposite;
+	eReferenceType_t m_eReferenceType;
+	eKeys_t m_eKeys;
 
 };
 

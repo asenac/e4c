@@ -11,3 +11,5 @@ CEnumeration::~CEnumeration()
 {
 }
 
+
+

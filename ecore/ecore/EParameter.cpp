@@ -4,11 +4,14 @@
 
 using namespace ecore;
 
-EParameter::EParameter() : eOperation(this)
+EParameter::EParameter() : 
+	m_eOperation()
 {
 }
 
 EParameter::~EParameter()
 {
 }
+
+
 

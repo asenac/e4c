@@ -11,3 +11,5 @@ CStructuralFeature::~CStructuralFeature()
 {
 }
 
+
+

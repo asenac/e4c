@@ -4,11 +4,14 @@
 
 using namespace C;
 
-CStructureContents::CStructureContents() : sc_container(this)
+CStructureContents::CStructureContents() : 
+	m_sc_container()
 {
 }
 
 CStructureContents::~CStructureContents()
 {
 }
+
+
 

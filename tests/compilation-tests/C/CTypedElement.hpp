@@ -6,28 +6,34 @@
 #include <C/meta.hpp>
 #include <ecore/EObject.hpp>
 
+#include <e4c/mapping.hpp>
+
 namespace C
 {
 
 
 // C::CTypedElement
-class CTypedElement : public virtual ::ecore::EObject
+class CTypedElement
 {
 public:
 
 	typedef CTypedElement_ptr ptr_type;
-
+	
 	CTypedElement();
 	virtual ~CTypedElement();
 
-	// Typedefs
-	typedef ::e4c::impl::reference< CTypedElement__type_tag > _type_t;
-	typedef ::e4c::impl::reference< CTypedElement__source_tag > _source_t;
+	typedef C::CClassifier_ptr type_t;
+	typedef C::CSourceText_ptr source_t;
 
 	
-	// Members
-	_type_t type;
-	_source_t source;
+	// TODO
+	// TODO
+
+	
+protected:
+
+	type_t m_type;
+	source_t m_source;
 
 };
 

@@ -6,11 +6,28 @@
 
 using namespace ecore;
 
-EAnnotation::EAnnotation() : source(this), details(this), eModelElement(this), contents(this), references(this)
+EAnnotation::EAnnotation() : 
+	m_source(),
+    m_details(),
+    m_eModelElement(),
+    m_contents(),
+    m_references()
 {
 }
 
 EAnnotation::~EAnnotation()
 {
 }
+
+void EAnnotation::setSource(source_t _source)
+{
+	m_source = _source;;
+}
+
+source_t EAnnotation::getSource() const
+{
+	return m_source;
+}
+
+
 

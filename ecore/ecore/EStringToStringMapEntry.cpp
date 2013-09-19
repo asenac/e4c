@@ -3,11 +3,35 @@
 
 using namespace ecore;
 
-EStringToStringMapEntry::EStringToStringMapEntry() : key(this), value(this)
+EStringToStringMapEntry::EStringToStringMapEntry() : 
+	m_key(),
+    m_value()
 {
 }
 
 EStringToStringMapEntry::~EStringToStringMapEntry()
 {
 }
+
+void EStringToStringMapEntry::setKey(key_t _key)
+{
+	m_key = _key;;
+}
+
+key_t EStringToStringMapEntry::getKey() const
+{
+	return m_key;
+}
+
+void EStringToStringMapEntry::setValue(value_t _value)
+{
+	m_value = _value;;
+}
+
+value_t EStringToStringMapEntry::getValue() const
+{
+	return m_value;
+}
+
+
 

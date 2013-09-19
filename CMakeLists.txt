@@ -1,14 +1,14 @@
 cmake_minimum_required(VERSION 2.8)
-project(emf4cpp2 CXX)
+project(e4c CXX)
 
-add_definitions(-Wall -Werror)
+set(CMAKE_CXX_FLAGS "-std=c++11 -Wall -Werror -pedantic")
 
 enable_testing()
 
 include_directories(${CMAKE_CURRENT_SOURCE_DIR})
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/ecore)
 
-add_subdirectory(emf4cpp2)
+add_subdirectory(e4c)
 add_subdirectory(ecore)
 add_subdirectory(tests EXCLUDE_FROM_ALL)
 

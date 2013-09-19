@@ -6,26 +6,31 @@
 #include <ecore/meta.hpp>
 #include <ecore/EObject.hpp>
 
+#include <e4c/mapping.hpp>
+
 namespace ecore
 {
 
 
 // ecore::EModelElement
-class EModelElement : public virtual ::ecore::EObject
+class EModelElement
 {
 public:
 
 	typedef EModelElement_ptr ptr_type;
-
-	EModelElement();
+	
 	virtual ~EModelElement();
 
-	// Typedefs
-	typedef ::e4c::impl::reference< EModelElement__eAnnotations_tag > _eAnnotations_t;
+	typedef boost::ptr_vector < ecore::EAnnotation > eAnnotations_t;
 
 	
-	// Members
-	_eAnnotations_t eAnnotations;
+	// TODO
+
+	
+protected:
+	EModelElement();
+
+	eAnnotations_t m_eAnnotations;
 
 };
 

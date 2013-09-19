@@ -6,6 +6,8 @@
 #include <json/meta.hpp>
 #include <json/Value.hpp>
 
+#include <e4c/mapping.hpp>
+
 namespace json
 {
 
@@ -16,16 +18,19 @@ class ArrayValue :  public virtual ::json::Value
 public:
 
 	typedef ArrayValue_ptr ptr_type;
-
+	
 	ArrayValue();
 	virtual ~ArrayValue();
 
-	// Typedefs
-	typedef ::e4c::impl::reference< ArrayValue__values_tag > _values_t;
+	typedef boost::ptr_vector < json::Value > values_t;
 
 	
-	// Members
-	_values_t values;
+	// TODO
+
+	
+protected:
+
+	values_t m_values;
 
 };
 

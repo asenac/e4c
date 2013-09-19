@@ -6,6 +6,8 @@
 #include <ecore/meta.hpp>
 #include <ecore/EClassifier.hpp>
 
+#include <e4c/mapping.hpp>
+
 namespace ecore
 {
 
@@ -16,46 +18,66 @@ class EClass :  public virtual ::ecore::EClassifier
 public:
 
 	typedef EClass_ptr ptr_type;
-
+	
 	EClass();
 	virtual ~EClass();
 
-	// Typedefs
-	typedef ::e4c::impl::attribute< EClass__abstract_tag > _abstract_t;
-	typedef ::e4c::impl::attribute< EClass__interface_tag > _interface_t;
-	typedef ::e4c::impl::reference< EClass__eSuperTypes_tag > _eSuperTypes_t;
-	typedef ::e4c::impl::reference< EClass__eOperations_tag > _eOperations_t;
-	typedef ::e4c::impl::reference< EClass__eAllAttributes_tag > _eAllAttributes_t;
-	typedef ::e4c::impl::reference< EClass__eAllReferences_tag > _eAllReferences_t;
-	typedef ::e4c::impl::reference< EClass__eReferences_tag > _eReferences_t;
-	typedef ::e4c::impl::reference< EClass__eAttributes_tag > _eAttributes_t;
-	typedef ::e4c::impl::reference< EClass__eAllContainments_tag > _eAllContainments_t;
-	typedef ::e4c::impl::reference< EClass__eAllOperations_tag > _eAllOperations_t;
-	typedef ::e4c::impl::reference< EClass__eAllStructuralFeatures_tag > _eAllStructuralFeatures_t;
-	typedef ::e4c::impl::reference< EClass__eAllSuperTypes_tag > _eAllSuperTypes_t;
-	typedef ::e4c::impl::reference< EClass__eIDAttribute_tag > _eIDAttribute_t;
-	typedef ::e4c::impl::reference< EClass__eStructuralFeatures_tag > _eStructuralFeatures_t;
-	typedef ::e4c::impl::reference< EClass__eGenericSuperTypes_tag > _eGenericSuperTypes_t;
-	typedef ::e4c::impl::reference< EClass__eAllGenericSuperTypes_tag > _eAllGenericSuperTypes_t;
+	typedef int abstract_t;
+	typedef int interface_t;
+	typedef std::set < ecore::EClass_ptr > eSuperTypes_t;
+	typedef boost::ptr_vector < ecore::EOperation > eOperations_t;
+	typedef std::set < ecore::EAttribute_ptr > eAllAttributes_t;
+	typedef std::set < ecore::EReference_ptr > eAllReferences_t;
+	typedef std::set < ecore::EReference_ptr > eReferences_t;
+	typedef std::set < ecore::EAttribute_ptr > eAttributes_t;
+	typedef std::set < ecore::EReference_ptr > eAllContainments_t;
+	typedef std::set < ecore::EOperation_ptr > eAllOperations_t;
+	typedef std::set < ecore::EStructuralFeature_ptr > eAllStructuralFeatures_t;
+	typedef std::set < ecore::EClass_ptr > eAllSuperTypes_t;
+	typedef ecore::EAttribute_ptr eIDAttribute_t;
+	typedef boost::ptr_vector < ecore::EStructuralFeature > eStructuralFeatures_t;
+	typedef boost::ptr_vector < ecore::EGenericType > eGenericSuperTypes_t;
+	typedef std::set < ecore::EGenericType_ptr > eAllGenericSuperTypes_t;
 
 	
-	// Members
-	_abstract_t abstract;
-	_interface_t interface;
-	_eSuperTypes_t eSuperTypes;
-	_eOperations_t eOperations;
-	_eAllAttributes_t eAllAttributes;
-	_eAllReferences_t eAllReferences;
-	_eReferences_t eReferences;
-	_eAttributes_t eAttributes;
-	_eAllContainments_t eAllContainments;
-	_eAllOperations_t eAllOperations;
-	_eAllStructuralFeatures_t eAllStructuralFeatures;
-	_eAllSuperTypes_t eAllSuperTypes;
-	_eIDAttribute_t eIDAttribute;
-	_eStructuralFeatures_t eStructuralFeatures;
-	_eGenericSuperTypes_t eGenericSuperTypes;
-	_eAllGenericSuperTypes_t eAllGenericSuperTypes;
+	void setAbstract(abstract_t _abstract);
+	abstract_t getAbstract() const;
+	void setInterface(interface_t _interface);
+	interface_t getInterface() const;
+	// TODO
+	// TODO
+	// TODO
+	// TODO
+	// TODO
+	// TODO
+	// TODO
+	// TODO
+	// TODO
+	// TODO
+	// TODO
+	// TODO
+	// TODO
+	// TODO
+
+	
+protected:
+
+	abstract_t m_abstract;
+	interface_t m_interface;
+	eSuperTypes_t m_eSuperTypes;
+	eOperations_t m_eOperations;
+	eAllAttributes_t m_eAllAttributes;
+	eAllReferences_t m_eAllReferences;
+	eReferences_t m_eReferences;
+	eAttributes_t m_eAttributes;
+	eAllContainments_t m_eAllContainments;
+	eAllOperations_t m_eAllOperations;
+	eAllStructuralFeatures_t m_eAllStructuralFeatures;
+	eAllSuperTypes_t m_eAllSuperTypes;
+	eIDAttribute_t m_eIDAttribute;
+	eStructuralFeatures_t m_eStructuralFeatures;
+	eGenericSuperTypes_t m_eGenericSuperTypes;
+	eAllGenericSuperTypes_t m_eAllGenericSuperTypes;
 
 };
 

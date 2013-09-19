@@ -6,6 +6,8 @@
 #include <tree/meta.hpp>
 #include <tree/TreeNode.hpp>
 
+#include <e4c/mapping.hpp>
+
 namespace tree
 {
 
@@ -16,14 +18,16 @@ class Leaf :  public virtual ::tree::TreeNode
 public:
 
 	typedef Leaf_ptr ptr_type;
-
+	
 	Leaf();
 	virtual ~Leaf();
 
-	// Typedefs
 	
 	
-	// Members
+	
+	
+protected:
+
 	
 };
 

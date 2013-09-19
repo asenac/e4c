@@ -6,6 +6,8 @@
 #include <json/meta.hpp>
 #include <json/Value.hpp>
 
+#include <e4c/mapping.hpp>
+
 namespace json
 {
 
@@ -16,16 +18,20 @@ class BooleanValue :  public virtual ::json::Value
 public:
 
 	typedef BooleanValue_ptr ptr_type;
-
+	
 	BooleanValue();
 	virtual ~BooleanValue();
 
-	// Typedefs
-	typedef ::e4c::impl::attribute< BooleanValue__value_tag > _value_t;
+	typedef int value_t;
 
 	
-	// Members
-	_value_t value;
+	void setValue(value_t _value);
+	value_t getValue() const;
+
+	
+protected:
+
+	value_t m_value;
 
 };
 

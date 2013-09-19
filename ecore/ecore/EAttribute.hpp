@@ -6,6 +6,8 @@
 #include <ecore/meta.hpp>
 #include <ecore/EStructuralFeature.hpp>
 
+#include <e4c/mapping.hpp>
+
 namespace ecore
 {
 
@@ -16,18 +18,23 @@ class EAttribute :  public virtual ::ecore::EStructuralFeature
 public:
 
 	typedef EAttribute_ptr ptr_type;
-
+	
 	EAttribute();
 	virtual ~EAttribute();
 
-	// Typedefs
-	typedef ::e4c::impl::attribute< EAttribute__iD_tag > _iD_t;
-	typedef ::e4c::impl::reference< EAttribute__eAttributeType_tag > _eAttributeType_t;
+	typedef int iD_t;
+	typedef ecore::EDataType_ptr eAttributeType_t;
 
 	
-	// Members
-	_iD_t iD;
-	_eAttributeType_t eAttributeType;
+	void setID(iD_t _iD);
+	iD_t getID() const;
+	// TODO
+
+	
+protected:
+
+	iD_t m_iD;
+	eAttributeType_t m_eAttributeType;
 
 };
 

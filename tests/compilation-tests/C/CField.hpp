@@ -6,6 +6,8 @@
 #include <C/meta.hpp>
 #include <C/CStructuralFeature.hpp>
 
+#include <e4c/mapping.hpp>
+
 namespace C
 {
 
@@ -16,14 +18,16 @@ class CField :  public virtual ::C::CStructuralFeature
 public:
 
 	typedef CField_ptr ptr_type;
-
+	
 	CField();
 	virtual ~CField();
 
-	// Typedefs
 	
 	
-	// Members
+	
+	
+protected:
+
 	
 };
 

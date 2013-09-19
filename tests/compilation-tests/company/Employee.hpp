@@ -6,26 +6,32 @@
 #include <company/meta.hpp>
 #include <ecore/EObject.hpp>
 
+#include <e4c/mapping.hpp>
+
 namespace company
 {
 
 
 // company::Employee
-class Employee : public virtual ::ecore::EObject
+class Employee
 {
 public:
 
 	typedef Employee_ptr ptr_type;
-
+	
 	Employee();
 	virtual ~Employee();
 
-	// Typedefs
-	typedef ::e4c::impl::attribute< Employee__name_tag > _name_t;
+	typedef int name_t;
 
 	
-	// Members
-	_name_t name;
+	void setName(name_t _name);
+	name_t getName() const;
+
+	
+protected:
+
+	name_t m_name;
 
 };
 

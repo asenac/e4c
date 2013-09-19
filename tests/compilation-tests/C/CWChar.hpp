@@ -6,6 +6,8 @@
 #include <C/meta.hpp>
 #include <C/CChar.hpp>
 
+#include <e4c/mapping.hpp>
+
 namespace C
 {
 
@@ -16,14 +18,16 @@ class CWChar :  public virtual ::C::CChar
 public:
 
 	typedef CWChar_ptr ptr_type;
-
+	
 	CWChar();
 	virtual ~CWChar();
 
-	// Typedefs
 	
 	
-	// Members
+	
+	
+protected:
+
 	
 };
 

@@ -4,11 +4,14 @@
 
 using namespace ecore;
 
-EModelElement::EModelElement() : eAnnotations(this)
+EModelElement::EModelElement() : 
+	m_eAnnotations()
 {
 }
 
 EModelElement::~EModelElement()
 {
 }
+
+
 

@@ -4,11 +4,14 @@
 
 using namespace tree;
 
-NonTerminal::NonTerminal() : children(this)
+NonTerminal::NonTerminal() : 
+	m_children()
 {
 }
 
 NonTerminal::~NonTerminal()
 {
 }
+
+
 

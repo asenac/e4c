@@ -4,11 +4,14 @@
 
 using namespace CST;
 
-Node::Node() : children(this)
+Node::Node() : 
+	m_children()
 {
 }
 
 Node::~Node()
 {
 }
+
+
 

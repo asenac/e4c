@@ -6,6 +6,8 @@
 #include <C/meta.hpp>
 #include <C/CIntegral.hpp>
 
+#include <e4c/mapping.hpp>
+
 namespace C
 {
 
@@ -16,14 +18,16 @@ class CInt :  public virtual ::C::CIntegral
 public:
 
 	typedef CInt_ptr ptr_type;
-
+	
 	CInt();
 	virtual ~CInt();
 
-	// Typedefs
 	
 	
-	// Members
+	
+	
+protected:
+
 	
 };
 

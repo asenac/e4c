@@ -6,6 +6,8 @@
 #include <ecore/meta.hpp>
 #include <ecore/EClassifier.hpp>
 
+#include <e4c/mapping.hpp>
+
 namespace ecore
 {
 
@@ -16,16 +18,20 @@ class EDataType :  public virtual ::ecore::EClassifier
 public:
 
 	typedef EDataType_ptr ptr_type;
-
+	
 	EDataType();
 	virtual ~EDataType();
 
-	// Typedefs
-	typedef ::e4c::impl::attribute< EDataType__serializable_tag > _serializable_t;
+	typedef int serializable_t;
 
 	
-	// Members
-	_serializable_t serializable;
+	void setSerializable(serializable_t _serializable);
+	serializable_t getSerializable() const;
+
+	
+protected:
+
+	serializable_t m_serializable;
 
 };
 

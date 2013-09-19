@@ -6,28 +6,36 @@
 #include <ecore/meta.hpp>
 #include <ecore/EObject.hpp>
 
+#include <e4c/mapping.hpp>
+
 namespace ecore
 {
 
 
 // ecore::EStringToStringMapEntry
-class EStringToStringMapEntry : public virtual ::ecore::EObject
+class EStringToStringMapEntry
 {
 public:
 
 	typedef EStringToStringMapEntry_ptr ptr_type;
-
+	
 	EStringToStringMapEntry();
 	virtual ~EStringToStringMapEntry();
 
-	// Typedefs
-	typedef ::e4c::impl::attribute< EStringToStringMapEntry__key_tag > _key_t;
-	typedef ::e4c::impl::attribute< EStringToStringMapEntry__value_tag > _value_t;
+	typedef int key_t;
+	typedef int value_t;
 
 	
-	// Members
-	_key_t key;
-	_value_t value;
+	void setKey(key_t _key);
+	key_t getKey() const;
+	void setValue(value_t _value);
+	value_t getValue() const;
+
+	
+protected:
+
+	key_t m_key;
+	value_t m_value;
 
 };
 

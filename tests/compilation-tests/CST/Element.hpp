@@ -6,26 +6,32 @@
 #include <CST/meta.hpp>
 #include <ecore/EObject.hpp>
 
+#include <e4c/mapping.hpp>
+
 namespace CST
 {
 
 
 // CST::Element
-class Element : public virtual ::ecore::EObject
+class Element
 {
 public:
 
 	typedef Element_ptr ptr_type;
-
+	
 	Element();
 	virtual ~Element();
 
-	// Typedefs
-	typedef ::e4c::impl::attribute< Element__kind_tag > _kind_t;
+	typedef int kind_t;
 
 	
-	// Members
-	_kind_t kind;
+	void setKind(kind_t _kind);
+	kind_t getKind() const;
+
+	
+protected:
+
+	kind_t m_kind;
 
 };
 

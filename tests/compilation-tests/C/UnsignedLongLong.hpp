@@ -6,6 +6,8 @@
 #include <C/meta.hpp>
 #include <C/CUnsignedInt.hpp>
 
+#include <e4c/mapping.hpp>
+
 namespace C
 {
 
@@ -16,14 +18,16 @@ class UnsignedLongLong :  public virtual ::C::CUnsignedInt
 public:
 
 	typedef UnsignedLongLong_ptr ptr_type;
-
+	
 	UnsignedLongLong();
 	virtual ~UnsignedLongLong();
 
-	// Typedefs
 	
 	
-	// Members
+	
+	
+protected:
+
 	
 };
 

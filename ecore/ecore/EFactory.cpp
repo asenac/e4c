@@ -4,11 +4,14 @@
 
 using namespace ecore;
 
-EFactory::EFactory() : ePackage(this)
+EFactory::EFactory() : 
+	m_ePackage()
 {
 }
 
 EFactory::~EFactory()
 {
 }
+
+
 

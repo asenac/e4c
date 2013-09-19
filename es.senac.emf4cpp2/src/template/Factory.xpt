@@ -3,18 +3,65 @@
 «EXTENSION template::FQN»
 
 «DEFINE factoryHeader FOR EPackage»
-class «getFactory()» : public virtual ::ecore::EFactory
+«FILE getFQN("/") + "/" + getFactory() + ".hpp"-»
+#ifndef «getHeader("FACTORY")»
+#define «getHeader("FACTORY")»
+
+#include <ecore/EFactory.hpp>
+#include <«getFQN("/")»/fwd.hpp>
+
+«EXPAND template::EPackage::namespacesBegin FOR this»
+
+class «getFactory()» : public ::ecore::EFactory
 {
 public:
 
-    static «getFactory()»_ptr _instance();
+    static const «getFactory()»_ptr _instance();
 
-«FOREACH this.EClassifiers.typeSelect(EClass) AS class-»
-    «class.name»_ptr create«class.name»();
+«FOREACH this.EClassifiers.typeSelect(EClass).select(e|!e.abstract) AS class-»
+    «class.getName()»_ptr create«class.getName()»() const;
 «ENDFOREACH-»
 
 protected:
 
-    «getFactory()»Factory();
+    «getFactory()»();
 };
+
+«EXPAND template::EPackage::namespacesEnd FOR this»
+
+#endif // «getHeader("FACTORY")»
+«ENDFILE»
+«ENDDEFINE»
+
+«DEFINE factoryImpl FOR EPackage»
+«FILE getFQN("/") + "/" + getFactory() + ".cpp"-»
+#include "«getFactory()».hpp"
+#include "«getPackage()».hpp"
+#include "include.hpp"
+
+using namespace «getFQN()»;
+
+«getFactory()»::«getFactory()»()
+{
+	m_ePackage = «getPackage()»::_instance();
+	«FOREACH this.EClassifiers.typeSelect(EClass).select(e|!e.abstract) AS class-»
+	// std::bind(&«getFactory()»::create«class.getName()», this);
+	// m_ePackage->«class.getTagMethod()»();
+	«ENDFOREACH-»
+}
+
+const «getFactory()»_ptr «getFactory()»::_instance()
+{
+	static «getFactory()» __instance;
+	return &__instance;
+}
+
+«FOREACH this.EClassifiers.typeSelect(EClass).select(e|!e.abstract) AS class-»
+«class.getName()»_ptr «getFactory()»::create«class.getName()»() const
+{
+	return new «class.getName()»();
+}
+
+«ENDFOREACH-»
+«ENDFILE»
 «ENDDEFINE»

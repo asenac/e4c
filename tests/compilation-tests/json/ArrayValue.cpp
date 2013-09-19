@@ -4,11 +4,14 @@
 
 using namespace json;
 
-ArrayValue::ArrayValue() : values(this)
+ArrayValue::ArrayValue() : 
+	m_values()
 {
 }
 
 ArrayValue::~ArrayValue()
 {
 }
+
+
 

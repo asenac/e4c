@@ -11,3 +11,5 @@ CDouble::~CDouble()
 {
 }
 
+
+

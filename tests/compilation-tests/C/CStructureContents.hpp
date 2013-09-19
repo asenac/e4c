@@ -6,26 +6,31 @@
 #include <C/meta.hpp>
 #include <ecore/EObject.hpp>
 
+#include <e4c/mapping.hpp>
+
 namespace C
 {
 
 
 // C::CStructureContents
-class CStructureContents : public virtual ::ecore::EObject
+class CStructureContents
 {
 public:
 
 	typedef CStructureContents_ptr ptr_type;
-
+	
 	CStructureContents();
 	virtual ~CStructureContents();
 
-	// Typedefs
-	typedef ::e4c::impl::reference< CStructureContents__sc_container_tag > _sc_container_t;
+	typedef C::CStructured_ptr sc_container_t;
 
 	
-	// Members
-	_sc_container_t sc_container;
+	// TODO
+
+	
+protected:
+
+	sc_container_t m_sc_container;
 
 };
 

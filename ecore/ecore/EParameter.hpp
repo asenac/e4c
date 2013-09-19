@@ -6,6 +6,8 @@
 #include <ecore/meta.hpp>
 #include <ecore/ETypedElement.hpp>
 
+#include <e4c/mapping.hpp>
+
 namespace ecore
 {
 
@@ -16,16 +18,19 @@ class EParameter :  public virtual ::ecore::ETypedElement
 public:
 
 	typedef EParameter_ptr ptr_type;
-
+	
 	EParameter();
 	virtual ~EParameter();
 
-	// Typedefs
-	typedef ::e4c::impl::reference< EParameter__eOperation_tag > _eOperation_t;
+	typedef ecore::EOperation_ptr eOperation_t;
 
 	
-	// Members
-	_eOperation_t eOperation;
+	// TODO
+
+	
+protected:
+
+	eOperation_t m_eOperation;
 
 };
 

@@ -3,11 +3,24 @@
 
 using namespace company;
 
-Employee::Employee() : name(this)
+Employee::Employee() : 
+	m_name()
 {
 }
 
 Employee::~Employee()
 {
 }
+
+void Employee::setName(name_t _name)
+{
+	m_name = _name;;
+}
+
+name_t Employee::getName() const
+{
+	return m_name;
+}
+
+
 

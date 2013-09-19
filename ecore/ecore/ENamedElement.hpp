@@ -6,6 +6,8 @@
 #include <ecore/meta.hpp>
 #include <ecore/EModelElement.hpp>
 
+#include <e4c/mapping.hpp>
+
 namespace ecore
 {
 
@@ -16,16 +18,20 @@ class ENamedElement :  public virtual ::ecore::EModelElement
 public:
 
 	typedef ENamedElement_ptr ptr_type;
-
-	ENamedElement();
+	
 	virtual ~ENamedElement();
 
-	// Typedefs
-	typedef ::e4c::impl::attribute< ENamedElement__name_tag > _name_t;
+	typedef int name_t;
 
 	
-	// Members
-	_name_t name;
+	void setName(name_t _name);
+	name_t getName() const;
+
+	
+protected:
+	ENamedElement();
+
+	name_t m_name;
 
 };
 

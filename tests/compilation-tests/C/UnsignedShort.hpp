@@ -6,6 +6,8 @@
 #include <C/meta.hpp>
 #include <C/CUnsignedInt.hpp>
 
+#include <e4c/mapping.hpp>
+
 namespace C
 {
 
@@ -16,14 +18,16 @@ class UnsignedShort :  public virtual ::C::CUnsignedInt
 public:
 
 	typedef UnsignedShort_ptr ptr_type;
-
+	
 	UnsignedShort();
 	virtual ~UnsignedShort();
 
-	// Typedefs
 	
 	
-	// Members
+	
+	
+protected:
+
 	
 };
 

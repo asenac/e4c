@@ -6,6 +6,8 @@
 #include <ecore/meta.hpp>
 #include <ecore/ETypedElement.hpp>
 
+#include <e4c/mapping.hpp>
+
 namespace ecore
 {
 
@@ -16,24 +18,31 @@ class EOperation :  public virtual ::ecore::ETypedElement
 public:
 
 	typedef EOperation_ptr ptr_type;
-
+	
 	EOperation();
 	virtual ~EOperation();
 
-	// Typedefs
-	typedef ::e4c::impl::reference< EOperation__eContainingClass_tag > _eContainingClass_t;
-	typedef ::e4c::impl::reference< EOperation__eTypeParameters_tag > _eTypeParameters_t;
-	typedef ::e4c::impl::reference< EOperation__eParameters_tag > _eParameters_t;
-	typedef ::e4c::impl::reference< EOperation__eExceptions_tag > _eExceptions_t;
-	typedef ::e4c::impl::reference< EOperation__eGenericExceptions_tag > _eGenericExceptions_t;
+	typedef ecore::EClass_ptr eContainingClass_t;
+	typedef boost::ptr_vector < ecore::ETypeParameter > eTypeParameters_t;
+	typedef boost::ptr_vector < ecore::EParameter > eParameters_t;
+	typedef std::set < ecore::EClassifier_ptr > eExceptions_t;
+	typedef boost::ptr_vector < ecore::EGenericType > eGenericExceptions_t;
 
 	
-	// Members
-	_eContainingClass_t eContainingClass;
-	_eTypeParameters_t eTypeParameters;
-	_eParameters_t eParameters;
-	_eExceptions_t eExceptions;
-	_eGenericExceptions_t eGenericExceptions;
+	// TODO
+	// TODO
+	// TODO
+	// TODO
+	// TODO
+
+	
+protected:
+
+	eContainingClass_t m_eContainingClass;
+	eTypeParameters_t m_eTypeParameters;
+	eParameters_t m_eParameters;
+	eExceptions_t m_eExceptions;
+	eGenericExceptions_t m_eGenericExceptions;
 
 };
 

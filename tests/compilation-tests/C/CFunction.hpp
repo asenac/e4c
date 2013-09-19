@@ -6,6 +6,8 @@
 #include <C/meta.hpp>
 #include <C/BehavioralFeature.hpp>
 
+#include <e4c/mapping.hpp>
+
 namespace C
 {
 
@@ -16,16 +18,20 @@ class CFunction :  public virtual ::C::BehavioralFeature
 public:
 
 	typedef CFunction_ptr ptr_type;
-
+	
 	CFunction();
 	virtual ~CFunction();
 
-	// Typedefs
-	typedef ::e4c::impl::attribute< CFunction__isVarArg_tag > _isVarArg_t;
+	typedef int isVarArg_t;
 
 	
-	// Members
-	_isVarArg_t isVarArg;
+	void setIsVarArg(isVarArg_t _isVarArg);
+	isVarArg_t getIsVarArg() const;
+
+	
+protected:
+
+	isVarArg_t m_isVarArg;
 
 };
 

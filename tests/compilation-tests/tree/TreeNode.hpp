@@ -6,28 +6,35 @@
 #include <tree/meta.hpp>
 #include <ecore/EObject.hpp>
 
+#include <e4c/mapping.hpp>
+
 namespace tree
 {
 
 
 // tree::TreeNode
-class TreeNode : public virtual ::ecore::EObject
+class TreeNode
 {
 public:
 
 	typedef TreeNode_ptr ptr_type;
-
-	TreeNode();
+	
 	virtual ~TreeNode();
 
-	// Typedefs
-	typedef ::e4c::impl::attribute< TreeNode__data_tag > _data_t;
-	typedef ::e4c::impl::reference< TreeNode__parent_tag > _parent_t;
+	typedef int data_t;
+	typedef tree::TreeNode_ptr parent_t;
 
 	
-	// Members
-	_data_t data;
-	_parent_t parent;
+	void setData(data_t _data);
+	data_t getData() const;
+	// TODO
+
+	
+protected:
+	TreeNode();
+
+	data_t m_data;
+	parent_t m_parent;
 
 };
 

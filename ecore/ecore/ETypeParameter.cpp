@@ -4,11 +4,14 @@
 
 using namespace ecore;
 
-ETypeParameter::ETypeParameter() : eBounds(this)
+ETypeParameter::ETypeParameter() : 
+	m_eBounds()
 {
 }
 
 ETypeParameter::~ETypeParameter()
 {
 }
+
+
 

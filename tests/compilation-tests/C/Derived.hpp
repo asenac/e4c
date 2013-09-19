@@ -6,6 +6,8 @@
 #include <C/meta.hpp>
 #include <C/CClassifier.hpp>
 
+#include <e4c/mapping.hpp>
+
 namespace C
 {
 
@@ -16,14 +18,16 @@ class Derived :  public virtual ::C::CClassifier
 public:
 
 	typedef Derived_ptr ptr_type;
-
+	
 	Derived();
 	virtual ~Derived();
 
-	// Typedefs
 	
 	
-	// Members
+	
+	
+protected:
+
 	
 };
 

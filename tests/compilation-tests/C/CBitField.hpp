@@ -6,6 +6,8 @@
 #include <C/meta.hpp>
 #include <C/CDataType.hpp>
 
+#include <e4c/mapping.hpp>
+
 namespace C
 {
 
@@ -16,14 +18,16 @@ class CBitField :  public virtual ::C::CDataType
 public:
 
 	typedef CBitField_ptr ptr_type;
-
+	
 	CBitField();
 	virtual ~CBitField();
 
-	// Typedefs
 	
 	
-	// Members
+	
+	
+protected:
+
 	
 };
 

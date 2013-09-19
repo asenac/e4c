@@ -6,26 +6,31 @@
 #include <C/meta.hpp>
 #include <ecore/EObject.hpp>
 
+#include <e4c/mapping.hpp>
+
 namespace C
 {
 
 
 // C::BehavioralFeature
-class BehavioralFeature : public virtual ::ecore::EObject
+class BehavioralFeature
 {
 public:
 
 	typedef BehavioralFeature_ptr ptr_type;
-
+	
 	BehavioralFeature();
 	virtual ~BehavioralFeature();
 
-	// Typedefs
-	typedef ::e4c::impl::reference< BehavioralFeature__parameters_tag > _parameters_t;
+	typedef boost::ptr_set < C::CParameter > parameters_t;
 
 	
-	// Members
-	_parameters_t parameters;
+	// TODO
+
+	
+protected:
+
+	parameters_t m_parameters;
 
 };
 

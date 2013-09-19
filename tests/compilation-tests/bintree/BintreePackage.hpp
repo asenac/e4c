@@ -1,7 +1,7 @@
 #ifndef EMF_CPP_BINTREE_PACKAGE_HPP
 #define EMF_CPP_BINTREE_PACKAGE_HPP
 
-#include <emf4cpp2/tag.hpp>
+#include <e4c/tag.hpp>
 #include <ecore/EPackage.hpp>
 #include <bintree/fwd.hpp>
 
@@ -12,16 +12,16 @@ namespace bintree
 class BintreePackage : public ::ecore::EPackage
 {
 public:
-    static BintreePackage_ptr _instance();
+    static const BintreePackage_ptr _instance();
  
  	// Classifiers
- 	e4c::tag_t getTag_BinTreeNode();
+ 	e4c::tag_t getTag_BinTreeNode() const;
  
  	// Structural features
- 	e4c::tag_t getTag_BinTreeNode__parent();
- 	e4c::tag_t getTag_BinTreeNode__left();
- 	e4c::tag_t getTag_BinTreeNode__right();
- 	e4c::tag_t getTag_BinTreeNode__data();
+ 	e4c::tag_t getTag_BinTreeNode__parent() const;
+ 	e4c::tag_t getTag_BinTreeNode__left() const;
+ 	e4c::tag_t getTag_BinTreeNode__right() const;
+ 	e4c::tag_t getTag_BinTreeNode__data() const;
 
 protected:
     BintreePackage();

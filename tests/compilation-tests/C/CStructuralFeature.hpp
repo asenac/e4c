@@ -7,6 +7,8 @@
 #include <C/CStructureContents.hpp>
 #include <C/CTypedElement.hpp>
 
+#include <e4c/mapping.hpp>
+
 namespace C
 {
 
@@ -17,14 +19,16 @@ class CStructuralFeature :  public virtual ::C::CStructureContents,  public virt
 public:
 
 	typedef CStructuralFeature_ptr ptr_type;
-
+	
 	CStructuralFeature();
 	virtual ~CStructuralFeature();
 
-	// Typedefs
 	
 	
-	// Members
+	
+	
+protected:
+
 	
 };
 

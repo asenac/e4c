@@ -6,6 +6,8 @@
 #include <ecore/meta.hpp>
 #include <ecore/ENamedElement.hpp>
 
+#include <e4c/mapping.hpp>
+
 namespace ecore
 {
 
@@ -16,30 +18,46 @@ class ETypedElement :  public virtual ::ecore::ENamedElement
 public:
 
 	typedef ETypedElement_ptr ptr_type;
-
-	ETypedElement();
+	
 	virtual ~ETypedElement();
 
-	// Typedefs
-	typedef ::e4c::impl::attribute< ETypedElement__ordered_tag > _ordered_t;
-	typedef ::e4c::impl::attribute< ETypedElement__unique_tag > _unique_t;
-	typedef ::e4c::impl::attribute< ETypedElement__lowerBound_tag > _lowerBound_t;
-	typedef ::e4c::impl::attribute< ETypedElement__upperBound_tag > _upperBound_t;
-	typedef ::e4c::impl::attribute< ETypedElement__many_tag > _many_t;
-	typedef ::e4c::impl::attribute< ETypedElement__required_tag > _required_t;
-	typedef ::e4c::impl::reference< ETypedElement__eType_tag > _eType_t;
-	typedef ::e4c::impl::reference< ETypedElement__eGenericType_tag > _eGenericType_t;
+	typedef int ordered_t;
+	typedef int unique_t;
+	typedef int lowerBound_t;
+	typedef int upperBound_t;
+	typedef int many_t;
+	typedef int required_t;
+	typedef ecore::EClassifier_ptr eType_t;
+	typedef std::unique_ptr < ecore::EGenericType > eGenericType_t;
 
 	
-	// Members
-	_ordered_t ordered;
-	_unique_t unique;
-	_lowerBound_t lowerBound;
-	_upperBound_t upperBound;
-	_many_t many;
-	_required_t required;
-	_eType_t eType;
-	_eGenericType_t eGenericType;
+	void setOrdered(ordered_t _ordered);
+	ordered_t getOrdered() const;
+	void setUnique(unique_t _unique);
+	unique_t getUnique() const;
+	void setLowerBound(lowerBound_t _lowerBound);
+	lowerBound_t getLowerBound() const;
+	void setUpperBound(upperBound_t _upperBound);
+	upperBound_t getUpperBound() const;
+	void setMany(many_t _many);
+	many_t getMany() const;
+	void setRequired(required_t _required);
+	required_t getRequired() const;
+	// TODO
+	// TODO
+
+	
+protected:
+	ETypedElement();
+
+	ordered_t m_ordered;
+	unique_t m_unique;
+	lowerBound_t m_lowerBound;
+	upperBound_t m_upperBound;
+	many_t m_many;
+	required_t m_required;
+	eType_t m_eType;
+	eGenericType_t m_eGenericType;
 
 };
 

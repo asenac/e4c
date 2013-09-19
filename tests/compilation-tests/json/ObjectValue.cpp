@@ -4,11 +4,14 @@
 
 using namespace json;
 
-ObjectValue::ObjectValue() : members(this)
+ObjectValue::ObjectValue() : 
+	m_members()
 {
 }
 
 ObjectValue::~ObjectValue()
 {
 }
+
+
 

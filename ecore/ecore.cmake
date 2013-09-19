@@ -5,6 +5,7 @@ include_directories(${CMAKE_CURRENT_SOURCE_DIR})
 
 add_library(e4c-ecore SHARED
 	ecore/EcorePackage.cpp
+	ecore/EcoreFactory.cpp
 	ecore/EAttribute.cpp
 	ecore/EAnnotation.cpp
 	ecore/EClass.cpp

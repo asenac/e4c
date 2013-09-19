@@ -6,6 +6,8 @@
 #include <C/meta.hpp>
 #include <C/CIntegral.hpp>
 
+#include <e4c/mapping.hpp>
+
 namespace C
 {
 
@@ -16,14 +18,16 @@ class CEnumeration :  public virtual ::C::CIntegral
 public:
 
 	typedef CEnumeration_ptr ptr_type;
-
+	
 	CEnumeration();
 	virtual ~CEnumeration();
 
-	// Typedefs
 	
 	
-	// Members
+	
+	
+protected:
+
 	
 };
 

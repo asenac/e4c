@@ -6,6 +6,8 @@
 #include <CST/meta.hpp>
 #include <CST/Element.hpp>
 
+#include <e4c/mapping.hpp>
+
 namespace CST
 {
 
@@ -16,16 +18,19 @@ class Node :  public virtual ::CST::Element
 public:
 
 	typedef Node_ptr ptr_type;
-
+	
 	Node();
 	virtual ~Node();
 
-	// Typedefs
-	typedef ::e4c::impl::reference< Node__children_tag > _children_t;
+	typedef boost::ptr_vector < CST::Element > children_t;
 
 	
-	// Members
-	_children_t children;
+	// TODO
+
+	
+protected:
+
+	children_t m_children;
 
 };
 

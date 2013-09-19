@@ -6,36 +6,46 @@
 #include <ecore/meta.hpp>
 #include <ecore/EObject.hpp>
 
+#include <e4c/mapping.hpp>
+
 namespace ecore
 {
 
 
 // ecore::EGenericType
-class EGenericType : public virtual ::ecore::EObject
+class EGenericType
 {
 public:
 
 	typedef EGenericType_ptr ptr_type;
-
+	
 	EGenericType();
 	virtual ~EGenericType();
 
-	// Typedefs
-	typedef ::e4c::impl::reference< EGenericType__eUpperBound_tag > _eUpperBound_t;
-	typedef ::e4c::impl::reference< EGenericType__eTypeArguments_tag > _eTypeArguments_t;
-	typedef ::e4c::impl::reference< EGenericType__eRawType_tag > _eRawType_t;
-	typedef ::e4c::impl::reference< EGenericType__eLowerBound_tag > _eLowerBound_t;
-	typedef ::e4c::impl::reference< EGenericType__eTypeParameter_tag > _eTypeParameter_t;
-	typedef ::e4c::impl::reference< EGenericType__eClassifier_tag > _eClassifier_t;
+	typedef std::unique_ptr < ecore::EGenericType > eUpperBound_t;
+	typedef boost::ptr_vector < ecore::EGenericType > eTypeArguments_t;
+	typedef ecore::EClassifier_ptr eRawType_t;
+	typedef std::unique_ptr < ecore::EGenericType > eLowerBound_t;
+	typedef ecore::ETypeParameter_ptr eTypeParameter_t;
+	typedef ecore::EClassifier_ptr eClassifier_t;
 
 	
-	// Members
-	_eUpperBound_t eUpperBound;
-	_eTypeArguments_t eTypeArguments;
-	_eRawType_t eRawType;
-	_eLowerBound_t eLowerBound;
-	_eTypeParameter_t eTypeParameter;
-	_eClassifier_t eClassifier;
+	// TODO
+	// TODO
+	// TODO
+	// TODO
+	// TODO
+	// TODO
+
+	
+protected:
+
+	eUpperBound_t m_eUpperBound;
+	eTypeArguments_t m_eTypeArguments;
+	eRawType_t m_eRawType;
+	eLowerBound_t m_eLowerBound;
+	eTypeParameter_t m_eTypeParameter;
+	eClassifier_t m_eClassifier;
 
 };
 

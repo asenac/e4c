@@ -19,22 +19,31 @@
 #include <ecore/EObject.hpp>
 «ENDIF-»
 
+#include <e4c/mapping.hpp>
+
 «EXPAND template::EPackage::namespacesBegin FOR EPackage»
 
 // «getFQN()»
-class «getName()» : «IF !ESuperTypes.isEmpty»«FOREACH ESuperTypes AS e SEPARATOR ", "» public virtual ::«e.getFQN()»«ENDFOREACH»«ELSEIF getFQN() != "ecore::EObject"»public virtual ::ecore::EObject«ELSE»public virtual ::e4c::eclass«ENDIF»
+class «getName()»«IF !ESuperTypes.isEmpty» : «FOREACH ESuperTypes AS e SEPARATOR ", "» public virtual ::«e.getFQN()»«ENDFOREACH»«ENDIF»
 {
 public:
 
 	typedef «name»_ptr ptr_type;
-
+	
+«IF !abstract-»
 	«getName()»();
+«ENDIF-»
 	virtual ~«getName()»();
 
-	// Typedefs
 	«EXPAND generateTypedef FOREACH EStructuralFeatures»
 	
-	// Members
+	«EXPAND generateAccessors FOREACH EStructuralFeatures»
+	
+protected:
+«IF abstract-»
+	«getName()»();
+«ENDIF-»
+
 	«EXPAND generateDecl FOREACH EStructuralFeatures»
 };
 
@@ -48,15 +57,45 @@ public:
 «DEFINE generateTypedef FOR EStructuralFeature»«ENDDEFINE»
 
 «DEFINE generateTypedef FOR EAttribute-»
-	typedef ::e4c::impl::attribute< «getTagName()» > _«name»_t;
+	typedef int «getName()»_t;
 «ENDDEFINE»
 
 «DEFINE generateTypedef FOR EReference-»
-	typedef ::e4c::impl::reference< «getTagName()» > _«name»_t;
+	typedef «getReferenceType()» «getName()»_t;
 «ENDDEFINE»
 
 «DEFINE generateDecl FOR EStructuralFeature-»
-	_«name»_t «getName()»;
+	«getName()»_t m_«getName()»;
+«ENDDEFINE»
+
+«REM»Accessors«ENDREM»
+«DEFINE generateAccessors FOR EStructuralFeature»«ENDDEFINE»
+
+«DEFINE generateAccessors FOR EAttribute-»
+	void set«getName().toFirstUpper()»(«getName()»_t _«getName()»);
+	«getName()»_t get«getName().toFirstUpper()»() const;
+«ENDDEFINE»
+
+«DEFINE generateAccessors FOR EReference-»
+	// TODO
+«ENDDEFINE»
+
+«DEFINE generateAccessorsImpl FOR EStructuralFeature»«ENDDEFINE»
+
+«DEFINE generateAccessorsImpl FOR EAttribute-»
+void «EContainingClass.getName()»::set«getName().toFirstUpper()»(«getName()»_t _«getName()»)
+{
+	m_«getName()» = _«getName()»;;
+}
+
+«getName()»_t «EContainingClass.getName()»::get«getName().toFirstUpper()»() const
+{
+	return m_«getName()»;
+}
+
+«ENDDEFINE»
+
+«DEFINE generateAccessorsImpl FOR EReference-»
 «ENDDEFINE»
 
 «REM»Impl«ENDREM»
@@ -70,13 +109,16 @@ public:
 
 using namespace «EPackage.getFQN()»;
 
-«getName()»::«getName()»()«IF !EStructuralFeatures.isEmpty» : «FOREACH EStructuralFeatures AS e SEPARATOR ", "»«e.getName()»(this)«ENDFOREACH»«ENDIF»
+«getName()»::«getName()»()«IF !EStructuralFeatures.isEmpty-» : 
+	«FOREACH EStructuralFeatures AS e SEPARATOR ",\n    "»m_«e.getName()»()«ENDFOREACH»«ENDIF»
 {
 }
 
 «getName()»::~«getName()»()
 {
 }
+
+«EXPAND generateAccessorsImpl FOREACH EStructuralFeatures»
 
 «ENDFILE»
 «ENDDEFINE»

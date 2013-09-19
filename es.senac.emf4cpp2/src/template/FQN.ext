@@ -36,3 +36,24 @@ String getPackage(EPackage this) : name.toFirstUpper() + "Package";
 
 
 String getListSeparator() : ",\n\t                          ";
+
+String getReferenceType(EReference this) :
+	if upperBound == 1 then
+	(
+		if containment then
+			"std::unique_ptr < " + EType.getFQN() + " >"
+		else
+			EType.getFQN() + "_ptr"
+	)
+	else
+	(
+		if containment && ordered then
+			"boost::ptr_vector < " + EType.getFQN() + " >"
+		else if containment then
+			"boost::ptr_set < " + EType.getFQN() + " >"
+		else if ordered then
+			"std::set < " + EType.getFQN() + "_ptr >"
+		else
+			"std::vector < " + EType.getFQN() + "_ptr >"			
+	)
+;

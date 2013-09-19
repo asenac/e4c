@@ -12,5 +12,7 @@
 	
 	«EXPAND template::Package::packageHeader FOR this»
 	«EXPAND template::Package::packageImpl FOR this»
+	«EXPAND template::Factory::factoryHeader FOR this»
+	«EXPAND template::Factory::factoryImpl FOR this»
 	«EXPAND main FOREACH ESubpackages»
 «ENDDEFINE»

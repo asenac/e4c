@@ -6,32 +6,41 @@
 #include <bintree/meta.hpp>
 #include <ecore/EObject.hpp>
 
+#include <e4c/mapping.hpp>
+
 namespace bintree
 {
 
 
 // bintree::BinTreeNode
-class BinTreeNode : public virtual ::ecore::EObject
+class BinTreeNode
 {
 public:
 
 	typedef BinTreeNode_ptr ptr_type;
-
+	
 	BinTreeNode();
 	virtual ~BinTreeNode();
 
-	// Typedefs
-	typedef ::e4c::impl::reference< BinTreeNode__parent_tag > _parent_t;
-	typedef ::e4c::impl::reference< BinTreeNode__left_tag > _left_t;
-	typedef ::e4c::impl::reference< BinTreeNode__right_tag > _right_t;
-	typedef ::e4c::impl::attribute< BinTreeNode__data_tag > _data_t;
+	typedef bintree::BinTreeNode_ptr parent_t;
+	typedef std::unique_ptr < bintree::BinTreeNode > left_t;
+	typedef std::unique_ptr < bintree::BinTreeNode > right_t;
+	typedef int data_t;
 
 	
-	// Members
-	_parent_t parent;
-	_left_t left;
-	_right_t right;
-	_data_t data;
+	// TODO
+	// TODO
+	// TODO
+	void setData(data_t _data);
+	data_t getData() const;
+
+	
+protected:
+
+	parent_t m_parent;
+	left_t m_left;
+	right_t m_right;
+	data_t m_data;
 
 };
 

@@ -4,11 +4,25 @@
 
 using namespace company;
 
-Company::Company() : name(this), departments(this)
+Company::Company() : 
+	m_name(),
+    m_departments()
 {
 }
 
 Company::~Company()
 {
 }
+
+void Company::setName(name_t _name)
+{
+	m_name = _name;;
+}
+
+name_t Company::getName() const
+{
+	return m_name;
+}
+
+
 

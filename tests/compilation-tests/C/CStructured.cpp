@@ -4,11 +4,14 @@
 
 using namespace C;
 
-CStructured::CStructured() : contains(this)
+CStructured::CStructured() : 
+	m_contains()
 {
 }
 
 CStructured::~CStructured()
 {
 }
+
+
 

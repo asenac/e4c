@@ -6,11 +6,19 @@
 
 using namespace ecore;
 
-EGenericType::EGenericType() : eUpperBound(this), eTypeArguments(this), eRawType(this), eLowerBound(this), eTypeParameter(this), eClassifier(this)
+EGenericType::EGenericType() : 
+	m_eUpperBound(),
+    m_eTypeArguments(),
+    m_eRawType(),
+    m_eLowerBound(),
+    m_eTypeParameter(),
+    m_eClassifier()
 {
 }
 
 EGenericType::~EGenericType()
 {
 }
+
+
 

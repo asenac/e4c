@@ -6,6 +6,8 @@
 #include <CST/meta.hpp>
 #include <CST/Node.hpp>
 
+#include <e4c/mapping.hpp>
+
 namespace CST
 {
 
@@ -16,14 +18,16 @@ class Tree :  public virtual ::CST::Node
 public:
 
 	typedef Tree_ptr ptr_type;
-
+	
 	Tree();
 	virtual ~Tree();
 
-	// Typedefs
 	
 	
-	// Members
+	
+	
+protected:
+
 	
 };
 

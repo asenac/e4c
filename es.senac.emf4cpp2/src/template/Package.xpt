@@ -8,25 +8,25 @@
 #ifndef «getHeader("PACKAGE")»
 #define «getHeader("PACKAGE")»
 
-#include <emf4cpp2/tag.hpp>
+#include <e4c/tag.hpp>
 #include <ecore/EPackage.hpp>
-#include <«getFwdFile()»>
+#include <«getFQN("/")»/fwd.hpp>
 
 «EXPAND template::EPackage::namespacesBegin FOR this»
 
 class «getPackage()» : public ::ecore::EPackage
 {
 public:
-    static «getPackage()»_ptr _instance();
+    static const «getPackage()»_ptr _instance();
  
  	// Classifiers
   	«FOREACH EClassifiers AS e-»
- 	e4c::tag_t «e.getTagMethod()»();
+ 	e4c::tag_t «e.getTagMethod()»() const;
  	«ENDFOREACH-»
  
  	// Structural features
  	«FOREACH getStructuralFeatures() AS e-»
- 	e4c::tag_t «e.getTagMethod()»();
+ 	e4c::tag_t «e.getTagMethod()»() const;
  	«ENDFOREACH-»
 
 protected:
@@ -42,38 +42,60 @@ protected:
 «DEFINE packageImpl FOR EPackage»
 «FILE getFQN("/") + "/" + getPackage() + ".cpp"-»
 #include "«getPackage()».hpp"
+#include "«getFactory()».hpp"
 #include "include.hpp"
-#include <emf4cpp2/tag.ipp>
-#include <emf4cpp2/reference.ipp>
+#include <ecore/include.hpp>
+#include <e4c/tag.ipp>
 
 using namespace «getFQN()»;
 
 «getPackage()»::«getPackage()»()
 {
+	m_eFactoryInstance = «getFactory()»::_instance();
+	::ecore::EcoreFactor_ptr ecoreFactory = ::ecore::EcoreFactory::_instance();
+	
+	«FOREACH EClassifiers.typeSelect(EEnum) AS ee-»
+	// «ee.getName()»
+	{
+	    ::ecore::EEnum_ptr ee = ecoreFactory->createEEnum();
+	    ee->setClassifierID(«ee.getName()»);
+	    ee->setEPackage(this);
+	    ee->setName("«ee.name»");
+	    ee->setSerializable(«ee.serializable»);
+	    «FOREACH ee.ELiterals AS el-»
+	    {
+	        ::ecore::EEnumLiteral_ptr el = ecoreFactory->createEEnumLiteral();
+	        el->setName("«el»");
+	        el->setValue(«ee.getName()»::«el»);
+	        el->setLiteral("«el»");
+	        el->setEEnum(ee);
+	        ee->getELiterals().push_back(el);
+	    }
+	    m_Classifiers.push_back(ee);
+	    «ENDFOREACH-»
+    }
+	«ENDFOREACH-»
 }
 
-«getPackage()»_ptr «getPackage()»::_instance()
+const «getPackage()»_ptr «getPackage()»::_instance()
 {
 	static «getPackage()» __instance;
 	return &__instance;
 }
 
   	«FOREACH EClassifiers AS e-»
-e4c::tag_t «getPackage()»::«e.getTagMethod()»()
+e4c::tag_t «getPackage()»::«e.getTagMethod()»() const
 {
 	return e4c::tag< «e.getName()» >::get();
 }
  
  	«ENDFOREACH-»
  	«FOREACH getStructuralFeatures() AS e-»
-e4c::tag_t «getPackage()»::«e.getTagMethod()»()
+e4c::tag_t «getPackage()»::«e.getTagMethod()»() const
 {
 	return e4c::tag< «e.getTagName()» >::get();
 }
 
- 	«ENDFOREACH-»		
- 	«FOREACH getReferences() AS e-»
-template class e4c::impl::reference< «e.getTagName()» >;
  	«ENDFOREACH-»
 
 extern "C" ::ecore::EPackage_ptr e4c_«getFQN("_")»()

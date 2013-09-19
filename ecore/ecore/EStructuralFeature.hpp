@@ -6,6 +6,8 @@
 #include <ecore/meta.hpp>
 #include <ecore/ETypedElement.hpp>
 
+#include <e4c/mapping.hpp>
+
 namespace ecore
 {
 
@@ -16,30 +18,47 @@ class EStructuralFeature :  public virtual ::ecore::ETypedElement
 public:
 
 	typedef EStructuralFeature_ptr ptr_type;
-
-	EStructuralFeature();
+	
 	virtual ~EStructuralFeature();
 
-	// Typedefs
-	typedef ::e4c::impl::attribute< EStructuralFeature__changeable_tag > _changeable_t;
-	typedef ::e4c::impl::attribute< EStructuralFeature__volatile_tag > _volatile_t;
-	typedef ::e4c::impl::attribute< EStructuralFeature__transient_tag > _transient_t;
-	typedef ::e4c::impl::attribute< EStructuralFeature__defaultValueLiteral_tag > _defaultValueLiteral_t;
-	typedef ::e4c::impl::attribute< EStructuralFeature__defaultValue_tag > _defaultValue_t;
-	typedef ::e4c::impl::attribute< EStructuralFeature__unsettable_tag > _unsettable_t;
-	typedef ::e4c::impl::attribute< EStructuralFeature__derived_tag > _derived_t;
-	typedef ::e4c::impl::reference< EStructuralFeature__eContainingClass_tag > _eContainingClass_t;
+	typedef int changeable_t;
+	typedef int volatile__t;
+	typedef int transient_t;
+	typedef int defaultValueLiteral_t;
+	typedef int defaultValue_t;
+	typedef int unsettable_t;
+	typedef int derived_t;
+	typedef ecore::EClass_ptr eContainingClass_t;
 
 	
-	// Members
-	_changeable_t changeable;
-	_volatile_t volatile_;
-	_transient_t transient;
-	_defaultValueLiteral_t defaultValueLiteral;
-	_defaultValue_t defaultValue;
-	_unsettable_t unsettable;
-	_derived_t derived;
-	_eContainingClass_t eContainingClass;
+	void setChangeable(changeable_t _changeable);
+	changeable_t getChangeable() const;
+	void setVolatile_(volatile__t _volatile_);
+	volatile__t getVolatile_() const;
+	void setTransient(transient_t _transient);
+	transient_t getTransient() const;
+	void setDefaultValueLiteral(defaultValueLiteral_t _defaultValueLiteral);
+	defaultValueLiteral_t getDefaultValueLiteral() const;
+	void setDefaultValue(defaultValue_t _defaultValue);
+	defaultValue_t getDefaultValue() const;
+	void setUnsettable(unsettable_t _unsettable);
+	unsettable_t getUnsettable() const;
+	void setDerived(derived_t _derived);
+	derived_t getDerived() const;
+	// TODO
+
+	
+protected:
+	EStructuralFeature();
+
+	changeable_t m_changeable;
+	volatile__t m_volatile_;
+	transient_t m_transient;
+	defaultValueLiteral_t m_defaultValueLiteral;
+	defaultValue_t m_defaultValue;
+	unsettable_t m_unsettable;
+	derived_t m_derived;
+	eContainingClass_t m_eContainingClass;
 
 };
 

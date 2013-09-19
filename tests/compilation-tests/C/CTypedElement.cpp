@@ -5,11 +5,15 @@
 
 using namespace C;
 
-CTypedElement::CTypedElement() : type(this), source(this)
+CTypedElement::CTypedElement() : 
+	m_type(),
+    m_source()
 {
 }
 
 CTypedElement::~CTypedElement()
 {
 }
+
+
 

@@ -11,3 +11,5 @@ CStruct::~CStruct()
 {
 }
 
+
+

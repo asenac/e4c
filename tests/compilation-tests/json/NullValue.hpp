@@ -6,6 +6,8 @@
 #include <json/meta.hpp>
 #include <json/Value.hpp>
 
+#include <e4c/mapping.hpp>
+
 namespace json
 {
 
@@ -16,14 +18,16 @@ class NullValue :  public virtual ::json::Value
 public:
 
 	typedef NullValue_ptr ptr_type;
-
+	
 	NullValue();
 	virtual ~NullValue();
 
-	// Typedefs
 	
 	
-	// Members
+	
+	
+protected:
+
 	
 };
 

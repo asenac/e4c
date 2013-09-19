@@ -4,11 +4,26 @@
 
 using namespace company;
 
-Department::Department() : employees(this), manager(this), number(this)
+Department::Department() : 
+	m_employees(),
+    m_manager(),
+    m_number()
 {
 }
 
 Department::~Department()
 {
 }
+
+void Department::setNumber(number_t _number)
+{
+	m_number = _number;;
+}
+
+number_t Department::getNumber() const
+{
+	return m_number;
+}
+
+
 

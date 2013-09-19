@@ -4,11 +4,14 @@
 
 using namespace C;
 
-CParameter::CParameter() : behavioralFeature(this)
+CParameter::CParameter() : 
+	m_behavioralFeature()
 {
 }
 
 CParameter::~CParameter()
 {
 }
+
+
 

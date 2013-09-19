@@ -6,28 +6,35 @@
 #include <json/meta.hpp>
 #include <ecore/EObject.hpp>
 
+#include <e4c/mapping.hpp>
+
 namespace json
 {
 
 
 // json::NVPair
-class NVPair : public virtual ::ecore::EObject
+class NVPair
 {
 public:
 
 	typedef NVPair_ptr ptr_type;
-
+	
 	NVPair();
 	virtual ~NVPair();
 
-	// Typedefs
-	typedef ::e4c::impl::attribute< NVPair__name_tag > _name_t;
-	typedef ::e4c::impl::reference< NVPair__value_tag > _value_t;
+	typedef int name_t;
+	typedef std::unique_ptr < json::Value > value_t;
 
 	
-	// Members
-	_name_t name;
-	_value_t value;
+	void setName(name_t _name);
+	name_t getName() const;
+	// TODO
+
+	
+protected:
+
+	name_t m_name;
+	value_t m_value;
 
 };
 

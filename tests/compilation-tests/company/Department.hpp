@@ -6,30 +6,38 @@
 #include <company/meta.hpp>
 #include <ecore/EObject.hpp>
 
+#include <e4c/mapping.hpp>
+
 namespace company
 {
 
 
 // company::Department
-class Department : public virtual ::ecore::EObject
+class Department
 {
 public:
 
 	typedef Department_ptr ptr_type;
-
+	
 	Department();
 	virtual ~Department();
 
-	// Typedefs
-	typedef ::e4c::impl::reference< Department__employees_tag > _employees_t;
-	typedef ::e4c::impl::reference< Department__manager_tag > _manager_t;
-	typedef ::e4c::impl::attribute< Department__number_tag > _number_t;
+	typedef boost::ptr_vector < company::Employee > employees_t;
+	typedef company::Employee_ptr manager_t;
+	typedef int number_t;
 
 	
-	// Members
-	_employees_t employees;
-	_manager_t manager;
-	_number_t number;
+	// TODO
+	// TODO
+	void setNumber(number_t _number);
+	number_t getNumber() const;
+
+	
+protected:
+
+	employees_t m_employees;
+	manager_t m_manager;
+	number_t m_number;
 
 };
 

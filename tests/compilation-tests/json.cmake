@@ -5,6 +5,7 @@ include_directories(${CMAKE_CURRENT_SOURCE_DIR})
 
 add_library(e4c-json SHARED
 	json/JsonPackage.cpp
+	json/JsonFactory.cpp
 	json/ObjectValue.cpp
 	json/NVPair.cpp
 	json/Value.cpp

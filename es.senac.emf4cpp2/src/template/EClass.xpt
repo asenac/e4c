@@ -233,11 +233,13 @@ using namespace «EPackage.getFQN()»;
 «FOREACH EOperations AS o-»
 «o.getSignature(true)»
 {
+	«PROTECT CSTART '/*' CEND '*/' ID o.getSignature(true) DISABLE»
 	«IF o.EType != null-»
 	return «o.getType()»();
-	
 	«ENDIF-»
+	«ENDPROTECT»
 }
+
 «ENDFOREACH-»
 
 «ENDFILE»

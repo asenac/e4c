@@ -33,17 +33,20 @@ void EFactory::setEPackage(ePackage_t ePackage_)
 
 ecore::EObject_ptr EFactory::create(ecore::EClass_ptr eClass)
 {
+	/*PROTECTED REGION ID(ecore::EObject_ptr EFactory::create(ecore::EClass_ptr eClass)) START*/
 	return ecore::EObject_ptr();
-	
+	/*PROTECTED REGION END*/
 }
 ecore::EJavaObject EFactory::createFromString(ecore::EDataType_ptr eDataType, ecore::EString literalValue)
 {
+	/*PROTECTED REGION ID(ecore::EJavaObject EFactory::createFromString(ecore::EDataType_ptr eDataType, ecore::EString literalValue)) START*/
 	return ecore::EJavaObject();
-	
+	/*PROTECTED REGION END*/
 }
 ecore::EString EFactory::convertToString(ecore::EDataType_ptr eDataType, ecore::EJavaObject instanceValue)
 {
+	/*PROTECTED REGION ID(ecore::EString EFactory::convertToString(ecore::EDataType_ptr eDataType, ecore::EJavaObject instanceValue)) START*/
 	return ecore::EString();
-	
+	/*PROTECTED REGION END*/
 }
 

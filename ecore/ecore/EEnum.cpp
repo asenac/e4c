@@ -36,17 +36,20 @@ void EEnum::addAllELiterals(const eLiterals_t& eLiterals_)
 
 ecore::EEnumLiteral_ptr EEnum::getEEnumLiteral(ecore::EString name)
 {
+	/*PROTECTED REGION ID(ecore::EEnumLiteral_ptr EEnum::getEEnumLiteral(ecore::EString name)) START*/
 	return ecore::EEnumLiteral_ptr();
-	
+	/*PROTECTED REGION END*/
 }
 ecore::EEnumLiteral_ptr EEnum::getEEnumLiteral(ecore::EInt value)
 {
+	/*PROTECTED REGION ID(ecore::EEnumLiteral_ptr EEnum::getEEnumLiteral(ecore::EInt value)) START*/
 	return ecore::EEnumLiteral_ptr();
-	
+	/*PROTECTED REGION END*/
 }
 ecore::EEnumLiteral_ptr EEnum::getEEnumLiteralByLiteral(ecore::EString literal)
 {
+	/*PROTECTED REGION ID(ecore::EEnumLiteral_ptr EEnum::getEEnumLiteralByLiteral(ecore::EString literal)) START*/
 	return ecore::EEnumLiteral_ptr();
-	
+	/*PROTECTED REGION END*/
 }
 

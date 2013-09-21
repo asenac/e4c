@@ -305,47 +305,56 @@ void EClass::addAllEAllGenericSuperTypes(const eAllGenericSuperTypes_t& eAllGene
 
 ecore::EBoolean EClass::isSuperTypeOf(ecore::EClass_ptr someClass)
 {
+	/*PROTECTED REGION ID(ecore::EBoolean EClass::isSuperTypeOf(ecore::EClass_ptr someClass)) START*/
 	return ecore::EBoolean();
-	
+	/*PROTECTED REGION END*/
 }
 ecore::EInt EClass::getFeatureCount()
 {
+	/*PROTECTED REGION ID(ecore::EInt EClass::getFeatureCount()) START*/
 	return ecore::EInt();
-	
+	/*PROTECTED REGION END*/
 }
 ecore::EStructuralFeature_ptr EClass::getEStructuralFeature(ecore::EInt featureID)
 {
+	/*PROTECTED REGION ID(ecore::EStructuralFeature_ptr EClass::getEStructuralFeature(ecore::EInt featureID)) START*/
 	return ecore::EStructuralFeature_ptr();
-	
+	/*PROTECTED REGION END*/
 }
 ecore::EInt EClass::getFeatureID(ecore::EStructuralFeature_ptr feature)
 {
+	/*PROTECTED REGION ID(ecore::EInt EClass::getFeatureID(ecore::EStructuralFeature_ptr feature)) START*/
 	return ecore::EInt();
-	
+	/*PROTECTED REGION END*/
 }
 ecore::EStructuralFeature_ptr EClass::getEStructuralFeature(ecore::EString featureName)
 {
+	/*PROTECTED REGION ID(ecore::EStructuralFeature_ptr EClass::getEStructuralFeature(ecore::EString featureName)) START*/
 	return ecore::EStructuralFeature_ptr();
-	
+	/*PROTECTED REGION END*/
 }
 ecore::EInt EClass::getOperationCount()
 {
+	/*PROTECTED REGION ID(ecore::EInt EClass::getOperationCount()) START*/
 	return ecore::EInt();
-	
+	/*PROTECTED REGION END*/
 }
 ecore::EOperation_ptr EClass::getEOperation(ecore::EInt operationID)
 {
+	/*PROTECTED REGION ID(ecore::EOperation_ptr EClass::getEOperation(ecore::EInt operationID)) START*/
 	return ecore::EOperation_ptr();
-	
+	/*PROTECTED REGION END*/
 }
 ecore::EInt EClass::getOperationID(ecore::EOperation_ptr operation)
 {
+	/*PROTECTED REGION ID(ecore::EInt EClass::getOperationID(ecore::EOperation_ptr operation)) START*/
 	return ecore::EInt();
-	
+	/*PROTECTED REGION END*/
 }
 ecore::EOperation_ptr EClass::getOverride(ecore::EOperation_ptr operation)
 {
+	/*PROTECTED REGION ID(ecore::EOperation_ptr EClass::getOverride(ecore::EOperation_ptr operation)) START*/
 	return ecore::EOperation_ptr();
-	
+	/*PROTECTED REGION END*/
 }
 

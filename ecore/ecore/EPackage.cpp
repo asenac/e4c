@@ -110,7 +110,8 @@ void EPackage::setESuperPackage(eSuperPackage_t eSuperPackage_)
 
 ecore::EClassifier_ptr EPackage::getEClassifier(ecore::EString name)
 {
+	/*PROTECTED REGION ID(ecore::EClassifier_ptr EPackage::getEClassifier(ecore::EString name)) START*/
 	return ecore::EClassifier_ptr();
-	
+	/*PROTECTED REGION END*/
 }
 

@@ -106,12 +106,14 @@ void EStructuralFeature::setEContainingClass(eContainingClass_t eContainingClass
 
 ecore::EInt EStructuralFeature::getFeatureID()
 {
+	/*PROTECTED REGION ID(ecore::EInt EStructuralFeature::getFeatureID()) START*/
 	return ecore::EInt();
-	
+	/*PROTECTED REGION END*/
 }
 ecore::EJavaClass EStructuralFeature::getContainerClass()
 {
+	/*PROTECTED REGION ID(ecore::EJavaClass EStructuralFeature::getContainerClass()) START*/
 	return ecore::EJavaClass();
-	
+	/*PROTECTED REGION END*/
 }
 

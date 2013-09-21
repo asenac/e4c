@@ -93,12 +93,14 @@ void EClassifier::addAllETypeParameters(const eTypeParameters_t& eTypeParameters
 
 ecore::EBoolean EClassifier::isInstance(ecore::EJavaObject object)
 {
+	/*PROTECTED REGION ID(ecore::EBoolean EClassifier::isInstance(ecore::EJavaObject object)) START*/
 	return ecore::EBoolean();
-	
+	/*PROTECTED REGION END*/
 }
 ecore::EInt EClassifier::getClassifierID()
 {
+	/*PROTECTED REGION ID(ecore::EInt EClassifier::getClassifierID()) START*/
 	return ecore::EInt();
-	
+	/*PROTECTED REGION END*/
 }
 

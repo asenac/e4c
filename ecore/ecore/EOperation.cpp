@@ -110,12 +110,14 @@ void EOperation::addAllEGenericExceptions(const eGenericExceptions_t& eGenericEx
 
 ecore::EInt EOperation::getOperationID()
 {
+	/*PROTECTED REGION ID(ecore::EInt EOperation::getOperationID()) START*/
 	return ecore::EInt();
-	
+	/*PROTECTED REGION END*/
 }
 ecore::EBoolean EOperation::isOverrideOf(ecore::EOperation_ptr someOperation)
 {
+	/*PROTECTED REGION ID(ecore::EBoolean EOperation::isOverrideOf(ecore::EOperation_ptr someOperation)) START*/
 	return ecore::EBoolean();
-	
+	/*PROTECTED REGION END*/
 }
 

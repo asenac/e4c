@@ -36,7 +36,8 @@ void EModelElement::addAllEAnnotations(const eAnnotations_t& eAnnotations_)
 
 ecore::EAnnotation_ptr EModelElement::getEAnnotation(ecore::EString source)
 {
+	/*PROTECTED REGION ID(ecore::EAnnotation_ptr EModelElement::getEAnnotation(ecore::EString source)) START*/
 	return ecore::EAnnotation_ptr();
-	
+	/*PROTECTED REGION END*/
 }
 

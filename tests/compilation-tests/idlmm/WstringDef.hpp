@@ -27,6 +27,9 @@ public:
 	void setBound(bound_t bound_);
 	bound_t releaseBound();
 	
+
+	/*PROTECTED REGION ID(idlmm::WstringDef public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
@@ -35,6 +38,12 @@ protected:
 	std::unique_ptr < idlmm::Expression > m_bound;
 
 	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(idlmm::WstringDef protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // idlmm

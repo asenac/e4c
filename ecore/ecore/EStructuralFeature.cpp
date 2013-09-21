@@ -1,8 +1,12 @@
 
 #include "EStructuralFeature.hpp"
+#include <ecore/EcorePackage.hpp>
 #include <ecore/EClass.hpp>
 
 using namespace ecore;
+
+/*PROTECTED REGION ID(ecore::EStructuralFeature include) START*/
+/*PROTECTED REGION END*/
 
 EStructuralFeature::EStructuralFeature() : 
 	m_changeable(),
@@ -106,14 +110,24 @@ void EStructuralFeature::setEContainingClass(eContainingClass_t eContainingClass
 
 ecore::EInt EStructuralFeature::getFeatureID()
 {
-	/*PROTECTED REGION ID(ecore::EInt EStructuralFeature::getFeatureID()) START*/
+	/*PROTECTED REGION ID(ecore::EInt EStructuralFeature::getFeatureID) START*/
 	return ecore::EInt();
 	/*PROTECTED REGION END*/
 }
+
 ecore::EJavaClass EStructuralFeature::getContainerClass()
 {
-	/*PROTECTED REGION ID(ecore::EJavaClass EStructuralFeature::getContainerClass()) START*/
+	/*PROTECTED REGION ID(ecore::EJavaClass EStructuralFeature::getContainerClass) START*/
 	return ecore::EJavaClass();
 	/*PROTECTED REGION END*/
 }
 
+
+/*PROTECTED REGION ID(ecore::EStructuralFeature implementation) START*/
+/*PROTECTED REGION END*/
+
+ecore::EClass_ptr EStructuralFeature::eClassImpl() const
+{
+	return EcorePackage::_instance()->getEStructuralFeature();
+}
+ 

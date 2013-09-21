@@ -1,8 +1,12 @@
 
 #include "EAttribute.hpp"
+#include <ecore/EcorePackage.hpp>
 #include <ecore/EDataType.hpp>
 
 using namespace ecore;
+
+/*PROTECTED REGION ID(ecore::EAttribute include) START*/
+/*PROTECTED REGION END*/
 
 EAttribute::EAttribute() : 
 	m_iD(),
@@ -39,3 +43,11 @@ void EAttribute::setEAttributeType(eAttributeType_t eAttributeType_)
 
 
 
+/*PROTECTED REGION ID(ecore::EAttribute implementation) START*/
+/*PROTECTED REGION END*/
+
+ecore::EClass_ptr EAttribute::eClassImpl() const
+{
+	return EcorePackage::_instance()->getEAttribute();
+}
+ 

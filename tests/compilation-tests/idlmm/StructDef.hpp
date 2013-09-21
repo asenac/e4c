@@ -27,6 +27,9 @@ public:
 	void addMembers(idlmm::Field_ptr members_);
 	void addAllMembers(const members_t& members_);
 	
+
+	/*PROTECTED REGION ID(idlmm::StructDef public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
@@ -35,6 +38,12 @@ protected:
 	std::vector < std::unique_ptr < idlmm::Field > > m_members;
 
 	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(idlmm::StructDef protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // idlmm

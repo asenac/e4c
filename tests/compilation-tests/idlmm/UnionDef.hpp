@@ -35,6 +35,9 @@ public:
 	
 	void setSharedDiscrim(sharedDiscrim_t sharedDiscrim_);
 	
+
+	/*PROTECTED REGION ID(idlmm::UnionDef public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
@@ -45,6 +48,12 @@ protected:
 	idlmm::TypedefDef_ptr m_sharedDiscrim;
 
 	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(idlmm::UnionDef protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // idlmm

@@ -1,9 +1,13 @@
 
 #include "ETypedElement.hpp"
+#include <ecore/EcorePackage.hpp>
 #include <ecore/EClassifier.hpp>
 #include <ecore/EGenericType.hpp>
 
 using namespace ecore;
+
+/*PROTECTED REGION ID(ecore::ETypedElement include) START*/
+/*PROTECTED REGION END*/
 
 ETypedElement::ETypedElement() : 
 	m_ordered(),
@@ -113,3 +117,11 @@ ETypedElement::eGenericType_t ETypedElement::releaseEGenericType()
 
 
 
+/*PROTECTED REGION ID(ecore::ETypedElement implementation) START*/
+/*PROTECTED REGION END*/
+
+ecore::EClass_ptr ETypedElement::eClassImpl() const
+{
+	return EcorePackage::_instance()->getETypedElement();
+}
+ 

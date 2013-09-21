@@ -26,6 +26,9 @@ public:
 	void setKind(kind_t _kind);
 	kind_t getKind() const;
 	
+
+	/*PROTECTED REGION ID(idlmm::PrimitiveDef public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
@@ -34,6 +37,12 @@ protected:
 	kind_t m_kind;
 
 	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(idlmm::PrimitiveDef protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // idlmm

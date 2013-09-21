@@ -1,8 +1,12 @@
 
 #include "ExceptionDef.hpp"
+#include <idlmm/IdlmmPackage.hpp>
 #include <idlmm/Field.hpp>
 
 using namespace idlmm;
+
+/*PROTECTED REGION ID(idlmm::ExceptionDef include) START*/
+/*PROTECTED REGION END*/
 
 ExceptionDef::ExceptionDef() : 
 	m_typeCode(),
@@ -45,3 +49,11 @@ void ExceptionDef::addAllMembers(const members_t& members_)
 
 
 
+/*PROTECTED REGION ID(idlmm::ExceptionDef implementation) START*/
+/*PROTECTED REGION END*/
+
+ecore::EClass_ptr ExceptionDef::eClassImpl() const
+{
+	return IdlmmPackage::_instance()->getExceptionDef();
+}
+ 

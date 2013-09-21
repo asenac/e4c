@@ -1,8 +1,12 @@
 
 #include "StringDef.hpp"
+#include <idlmm/IdlmmPackage.hpp>
 #include <idlmm/Expression.hpp>
 
 using namespace idlmm;
+
+/*PROTECTED REGION ID(idlmm::StringDef include) START*/
+/*PROTECTED REGION END*/
 
 StringDef::StringDef() : 
 	m_bound()
@@ -33,3 +37,11 @@ StringDef::bound_t StringDef::releaseBound()
 
 
 
+/*PROTECTED REGION ID(idlmm::StringDef implementation) START*/
+/*PROTECTED REGION END*/
+
+ecore::EClass_ptr StringDef::eClassImpl() const
+{
+	return IdlmmPackage::_instance()->getStringDef();
+}
+ 

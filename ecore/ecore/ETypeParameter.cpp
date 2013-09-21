@@ -1,8 +1,12 @@
 
 #include "ETypeParameter.hpp"
+#include <ecore/EcorePackage.hpp>
 #include <ecore/EGenericType.hpp>
 
 using namespace ecore;
+
+/*PROTECTED REGION ID(ecore::ETypeParameter include) START*/
+/*PROTECTED REGION END*/
 
 ETypeParameter::ETypeParameter() : 
 	m_eBounds()
@@ -34,3 +38,11 @@ void ETypeParameter::addAllEBounds(const eBounds_t& eBounds_)
 
 
 
+/*PROTECTED REGION ID(ecore::ETypeParameter implementation) START*/
+/*PROTECTED REGION END*/
+
+ecore::EClass_ptr ETypeParameter::eClassImpl() const
+{
+	return EcorePackage::_instance()->getETypeParameter();
+}
+ 

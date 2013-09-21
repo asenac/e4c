@@ -1,10 +1,14 @@
 
 #include "EReference.hpp"
+#include <ecore/EcorePackage.hpp>
 #include <ecore/EReference.hpp>
 #include <ecore/EClass.hpp>
 #include <ecore/EAttribute.hpp>
 
 using namespace ecore;
+
+/*PROTECTED REGION ID(ecore::EReference include) START*/
+/*PROTECTED REGION END*/
 
 EReference::EReference() : 
 	m_containment(),
@@ -95,3 +99,11 @@ void EReference::addAllEKeys(const eKeys_t& eKeys_)
 
 
 
+/*PROTECTED REGION ID(ecore::EReference implementation) START*/
+/*PROTECTED REGION END*/
+
+ecore::EClass_ptr EReference::eClassImpl() const
+{
+	return EcorePackage::_instance()->getEReference();
+}
+ 

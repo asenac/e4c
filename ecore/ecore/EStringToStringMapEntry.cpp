@@ -1,7 +1,11 @@
 
 #include "EStringToStringMapEntry.hpp"
+#include <ecore/EcorePackage.hpp>
 
 using namespace ecore;
+
+/*PROTECTED REGION ID(ecore::EStringToStringMapEntry include) START*/
+/*PROTECTED REGION END*/
 
 EStringToStringMapEntry::EStringToStringMapEntry() : 
 	m_key(),
@@ -36,3 +40,11 @@ EStringToStringMapEntry::value_t EStringToStringMapEntry::getValue() const
 
 
 
+/*PROTECTED REGION ID(ecore::EStringToStringMapEntry implementation) START*/
+/*PROTECTED REGION END*/
+
+ecore::EClass_ptr EStringToStringMapEntry::eClassImpl() const
+{
+	return EcorePackage::_instance()->getEStringToStringMapEntry();
+}
+ 

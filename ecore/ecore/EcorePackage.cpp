@@ -208,188 +208,188 @@ EcorePackage::EcorePackage()
     m_EInvocationTargetException->setSerializable(false);
 	
     {
-        ::ecore::EAttribute_ptr ef = ecoreFactory->createEAttribute();
-        ef->setName("iD");
-        m_EAttribute->addEStructuralFeatures(ef);
-        m_EAttribute->addEAllStructuralFeatures(ef);
-        m_EAttribute->addEAttributes(ef);
-        m_EAttribute->addEAllAttributes(ef);
+        m_EAttribute__iD = ecoreFactory->createEAttribute();
+        m_EAttribute__iD->setName("iD");
+        m_EAttribute->addEStructuralFeatures(m_EAttribute__iD);
+        m_EAttribute->addEAllStructuralFeatures(m_EAttribute__iD);
+        m_EAttribute->addEAttributes(m_EAttribute__iD);
+        m_EAttribute->addEAllAttributes(m_EAttribute__iD);
     }
     {
-        ::ecore::EReference_ptr ef = ecoreFactory->createEReference();
-        ef->setName("eAttributeType");
-        m_EAttribute->addEStructuralFeatures(ef);
-        m_EAttribute->addEAllStructuralFeatures(ef);
-        m_EAttribute->addEReferences(ef);
-        m_EAttribute->addEAllReferences(ef);
+        m_EAttribute__eAttributeType = ecoreFactory->createEReference();
+        m_EAttribute__eAttributeType->setName("eAttributeType");
+        m_EAttribute->addEStructuralFeatures(m_EAttribute__eAttributeType);
+        m_EAttribute->addEAllStructuralFeatures(m_EAttribute__eAttributeType);
+        m_EAttribute->addEReferences(m_EAttribute__eAttributeType);
+        m_EAttribute->addEAllReferences(m_EAttribute__eAttributeType);
     }
     {
-        ::ecore::EAttribute_ptr ef = ecoreFactory->createEAttribute();
-        ef->setName("source");
-        m_EAnnotation->addEStructuralFeatures(ef);
-        m_EAnnotation->addEAllStructuralFeatures(ef);
-        m_EAnnotation->addEAttributes(ef);
-        m_EAnnotation->addEAllAttributes(ef);
+        m_EAnnotation__source = ecoreFactory->createEAttribute();
+        m_EAnnotation__source->setName("source");
+        m_EAnnotation->addEStructuralFeatures(m_EAnnotation__source);
+        m_EAnnotation->addEAllStructuralFeatures(m_EAnnotation__source);
+        m_EAnnotation->addEAttributes(m_EAnnotation__source);
+        m_EAnnotation->addEAllAttributes(m_EAnnotation__source);
     }
     {
-        ::ecore::EReference_ptr ef = ecoreFactory->createEReference();
-        ef->setName("details");
-        m_EAnnotation->addEStructuralFeatures(ef);
-        m_EAnnotation->addEAllStructuralFeatures(ef);
-        m_EAnnotation->addEReferences(ef);
-        m_EAnnotation->addEAllReferences(ef);
+        m_EAnnotation__details = ecoreFactory->createEReference();
+        m_EAnnotation__details->setName("details");
+        m_EAnnotation->addEStructuralFeatures(m_EAnnotation__details);
+        m_EAnnotation->addEAllStructuralFeatures(m_EAnnotation__details);
+        m_EAnnotation->addEReferences(m_EAnnotation__details);
+        m_EAnnotation->addEAllReferences(m_EAnnotation__details);
     }
     {
-        ::ecore::EReference_ptr ef = ecoreFactory->createEReference();
-        ef->setName("eModelElement");
-        m_EAnnotation->addEStructuralFeatures(ef);
-        m_EAnnotation->addEAllStructuralFeatures(ef);
-        m_EAnnotation->addEReferences(ef);
-        m_EAnnotation->addEAllReferences(ef);
+        m_EAnnotation__eModelElement = ecoreFactory->createEReference();
+        m_EAnnotation__eModelElement->setName("eModelElement");
+        m_EAnnotation->addEStructuralFeatures(m_EAnnotation__eModelElement);
+        m_EAnnotation->addEAllStructuralFeatures(m_EAnnotation__eModelElement);
+        m_EAnnotation->addEReferences(m_EAnnotation__eModelElement);
+        m_EAnnotation->addEAllReferences(m_EAnnotation__eModelElement);
     }
     {
-        ::ecore::EReference_ptr ef = ecoreFactory->createEReference();
-        ef->setName("contents");
-        m_EAnnotation->addEStructuralFeatures(ef);
-        m_EAnnotation->addEAllStructuralFeatures(ef);
-        m_EAnnotation->addEReferences(ef);
-        m_EAnnotation->addEAllReferences(ef);
+        m_EAnnotation__contents = ecoreFactory->createEReference();
+        m_EAnnotation__contents->setName("contents");
+        m_EAnnotation->addEStructuralFeatures(m_EAnnotation__contents);
+        m_EAnnotation->addEAllStructuralFeatures(m_EAnnotation__contents);
+        m_EAnnotation->addEReferences(m_EAnnotation__contents);
+        m_EAnnotation->addEAllReferences(m_EAnnotation__contents);
     }
     {
-        ::ecore::EReference_ptr ef = ecoreFactory->createEReference();
-        ef->setName("references");
-        m_EAnnotation->addEStructuralFeatures(ef);
-        m_EAnnotation->addEAllStructuralFeatures(ef);
-        m_EAnnotation->addEReferences(ef);
-        m_EAnnotation->addEAllReferences(ef);
+        m_EAnnotation__references = ecoreFactory->createEReference();
+        m_EAnnotation__references->setName("references");
+        m_EAnnotation->addEStructuralFeatures(m_EAnnotation__references);
+        m_EAnnotation->addEAllStructuralFeatures(m_EAnnotation__references);
+        m_EAnnotation->addEReferences(m_EAnnotation__references);
+        m_EAnnotation->addEAllReferences(m_EAnnotation__references);
     }
     {
-        ::ecore::EAttribute_ptr ef = ecoreFactory->createEAttribute();
-        ef->setName("abstract");
-        m_EClass->addEStructuralFeatures(ef);
-        m_EClass->addEAllStructuralFeatures(ef);
-        m_EClass->addEAttributes(ef);
-        m_EClass->addEAllAttributes(ef);
+        m_EClass__abstract = ecoreFactory->createEAttribute();
+        m_EClass__abstract->setName("abstract");
+        m_EClass->addEStructuralFeatures(m_EClass__abstract);
+        m_EClass->addEAllStructuralFeatures(m_EClass__abstract);
+        m_EClass->addEAttributes(m_EClass__abstract);
+        m_EClass->addEAllAttributes(m_EClass__abstract);
     }
     {
-        ::ecore::EAttribute_ptr ef = ecoreFactory->createEAttribute();
-        ef->setName("interface");
-        m_EClass->addEStructuralFeatures(ef);
-        m_EClass->addEAllStructuralFeatures(ef);
-        m_EClass->addEAttributes(ef);
-        m_EClass->addEAllAttributes(ef);
+        m_EClass__interface = ecoreFactory->createEAttribute();
+        m_EClass__interface->setName("interface");
+        m_EClass->addEStructuralFeatures(m_EClass__interface);
+        m_EClass->addEAllStructuralFeatures(m_EClass__interface);
+        m_EClass->addEAttributes(m_EClass__interface);
+        m_EClass->addEAllAttributes(m_EClass__interface);
     }
     {
-        ::ecore::EReference_ptr ef = ecoreFactory->createEReference();
-        ef->setName("eSuperTypes");
-        m_EClass->addEStructuralFeatures(ef);
-        m_EClass->addEAllStructuralFeatures(ef);
-        m_EClass->addEReferences(ef);
-        m_EClass->addEAllReferences(ef);
+        m_EClass__eSuperTypes = ecoreFactory->createEReference();
+        m_EClass__eSuperTypes->setName("eSuperTypes");
+        m_EClass->addEStructuralFeatures(m_EClass__eSuperTypes);
+        m_EClass->addEAllStructuralFeatures(m_EClass__eSuperTypes);
+        m_EClass->addEReferences(m_EClass__eSuperTypes);
+        m_EClass->addEAllReferences(m_EClass__eSuperTypes);
     }
     {
-        ::ecore::EReference_ptr ef = ecoreFactory->createEReference();
-        ef->setName("eOperations");
-        m_EClass->addEStructuralFeatures(ef);
-        m_EClass->addEAllStructuralFeatures(ef);
-        m_EClass->addEReferences(ef);
-        m_EClass->addEAllReferences(ef);
+        m_EClass__eOperations = ecoreFactory->createEReference();
+        m_EClass__eOperations->setName("eOperations");
+        m_EClass->addEStructuralFeatures(m_EClass__eOperations);
+        m_EClass->addEAllStructuralFeatures(m_EClass__eOperations);
+        m_EClass->addEReferences(m_EClass__eOperations);
+        m_EClass->addEAllReferences(m_EClass__eOperations);
     }
     {
-        ::ecore::EReference_ptr ef = ecoreFactory->createEReference();
-        ef->setName("eAllAttributes");
-        m_EClass->addEStructuralFeatures(ef);
-        m_EClass->addEAllStructuralFeatures(ef);
-        m_EClass->addEReferences(ef);
-        m_EClass->addEAllReferences(ef);
+        m_EClass__eAllAttributes = ecoreFactory->createEReference();
+        m_EClass__eAllAttributes->setName("eAllAttributes");
+        m_EClass->addEStructuralFeatures(m_EClass__eAllAttributes);
+        m_EClass->addEAllStructuralFeatures(m_EClass__eAllAttributes);
+        m_EClass->addEReferences(m_EClass__eAllAttributes);
+        m_EClass->addEAllReferences(m_EClass__eAllAttributes);
     }
     {
-        ::ecore::EReference_ptr ef = ecoreFactory->createEReference();
-        ef->setName("eAllReferences");
-        m_EClass->addEStructuralFeatures(ef);
-        m_EClass->addEAllStructuralFeatures(ef);
-        m_EClass->addEReferences(ef);
-        m_EClass->addEAllReferences(ef);
+        m_EClass__eAllReferences = ecoreFactory->createEReference();
+        m_EClass__eAllReferences->setName("eAllReferences");
+        m_EClass->addEStructuralFeatures(m_EClass__eAllReferences);
+        m_EClass->addEAllStructuralFeatures(m_EClass__eAllReferences);
+        m_EClass->addEReferences(m_EClass__eAllReferences);
+        m_EClass->addEAllReferences(m_EClass__eAllReferences);
     }
     {
-        ::ecore::EReference_ptr ef = ecoreFactory->createEReference();
-        ef->setName("eReferences");
-        m_EClass->addEStructuralFeatures(ef);
-        m_EClass->addEAllStructuralFeatures(ef);
-        m_EClass->addEReferences(ef);
-        m_EClass->addEAllReferences(ef);
+        m_EClass__eReferences = ecoreFactory->createEReference();
+        m_EClass__eReferences->setName("eReferences");
+        m_EClass->addEStructuralFeatures(m_EClass__eReferences);
+        m_EClass->addEAllStructuralFeatures(m_EClass__eReferences);
+        m_EClass->addEReferences(m_EClass__eReferences);
+        m_EClass->addEAllReferences(m_EClass__eReferences);
     }
     {
-        ::ecore::EReference_ptr ef = ecoreFactory->createEReference();
-        ef->setName("eAttributes");
-        m_EClass->addEStructuralFeatures(ef);
-        m_EClass->addEAllStructuralFeatures(ef);
-        m_EClass->addEReferences(ef);
-        m_EClass->addEAllReferences(ef);
+        m_EClass__eAttributes = ecoreFactory->createEReference();
+        m_EClass__eAttributes->setName("eAttributes");
+        m_EClass->addEStructuralFeatures(m_EClass__eAttributes);
+        m_EClass->addEAllStructuralFeatures(m_EClass__eAttributes);
+        m_EClass->addEReferences(m_EClass__eAttributes);
+        m_EClass->addEAllReferences(m_EClass__eAttributes);
     }
     {
-        ::ecore::EReference_ptr ef = ecoreFactory->createEReference();
-        ef->setName("eAllContainments");
-        m_EClass->addEStructuralFeatures(ef);
-        m_EClass->addEAllStructuralFeatures(ef);
-        m_EClass->addEReferences(ef);
-        m_EClass->addEAllReferences(ef);
+        m_EClass__eAllContainments = ecoreFactory->createEReference();
+        m_EClass__eAllContainments->setName("eAllContainments");
+        m_EClass->addEStructuralFeatures(m_EClass__eAllContainments);
+        m_EClass->addEAllStructuralFeatures(m_EClass__eAllContainments);
+        m_EClass->addEReferences(m_EClass__eAllContainments);
+        m_EClass->addEAllReferences(m_EClass__eAllContainments);
     }
     {
-        ::ecore::EReference_ptr ef = ecoreFactory->createEReference();
-        ef->setName("eAllOperations");
-        m_EClass->addEStructuralFeatures(ef);
-        m_EClass->addEAllStructuralFeatures(ef);
-        m_EClass->addEReferences(ef);
-        m_EClass->addEAllReferences(ef);
+        m_EClass__eAllOperations = ecoreFactory->createEReference();
+        m_EClass__eAllOperations->setName("eAllOperations");
+        m_EClass->addEStructuralFeatures(m_EClass__eAllOperations);
+        m_EClass->addEAllStructuralFeatures(m_EClass__eAllOperations);
+        m_EClass->addEReferences(m_EClass__eAllOperations);
+        m_EClass->addEAllReferences(m_EClass__eAllOperations);
     }
     {
-        ::ecore::EReference_ptr ef = ecoreFactory->createEReference();
-        ef->setName("eAllStructuralFeatures");
-        m_EClass->addEStructuralFeatures(ef);
-        m_EClass->addEAllStructuralFeatures(ef);
-        m_EClass->addEReferences(ef);
-        m_EClass->addEAllReferences(ef);
+        m_EClass__eAllStructuralFeatures = ecoreFactory->createEReference();
+        m_EClass__eAllStructuralFeatures->setName("eAllStructuralFeatures");
+        m_EClass->addEStructuralFeatures(m_EClass__eAllStructuralFeatures);
+        m_EClass->addEAllStructuralFeatures(m_EClass__eAllStructuralFeatures);
+        m_EClass->addEReferences(m_EClass__eAllStructuralFeatures);
+        m_EClass->addEAllReferences(m_EClass__eAllStructuralFeatures);
     }
     {
-        ::ecore::EReference_ptr ef = ecoreFactory->createEReference();
-        ef->setName("eAllSuperTypes");
-        m_EClass->addEStructuralFeatures(ef);
-        m_EClass->addEAllStructuralFeatures(ef);
-        m_EClass->addEReferences(ef);
-        m_EClass->addEAllReferences(ef);
+        m_EClass__eAllSuperTypes = ecoreFactory->createEReference();
+        m_EClass__eAllSuperTypes->setName("eAllSuperTypes");
+        m_EClass->addEStructuralFeatures(m_EClass__eAllSuperTypes);
+        m_EClass->addEAllStructuralFeatures(m_EClass__eAllSuperTypes);
+        m_EClass->addEReferences(m_EClass__eAllSuperTypes);
+        m_EClass->addEAllReferences(m_EClass__eAllSuperTypes);
     }
     {
-        ::ecore::EReference_ptr ef = ecoreFactory->createEReference();
-        ef->setName("eIDAttribute");
-        m_EClass->addEStructuralFeatures(ef);
-        m_EClass->addEAllStructuralFeatures(ef);
-        m_EClass->addEReferences(ef);
-        m_EClass->addEAllReferences(ef);
+        m_EClass__eIDAttribute = ecoreFactory->createEReference();
+        m_EClass__eIDAttribute->setName("eIDAttribute");
+        m_EClass->addEStructuralFeatures(m_EClass__eIDAttribute);
+        m_EClass->addEAllStructuralFeatures(m_EClass__eIDAttribute);
+        m_EClass->addEReferences(m_EClass__eIDAttribute);
+        m_EClass->addEAllReferences(m_EClass__eIDAttribute);
     }
     {
-        ::ecore::EReference_ptr ef = ecoreFactory->createEReference();
-        ef->setName("eStructuralFeatures");
-        m_EClass->addEStructuralFeatures(ef);
-        m_EClass->addEAllStructuralFeatures(ef);
-        m_EClass->addEReferences(ef);
-        m_EClass->addEAllReferences(ef);
+        m_EClass__eStructuralFeatures = ecoreFactory->createEReference();
+        m_EClass__eStructuralFeatures->setName("eStructuralFeatures");
+        m_EClass->addEStructuralFeatures(m_EClass__eStructuralFeatures);
+        m_EClass->addEAllStructuralFeatures(m_EClass__eStructuralFeatures);
+        m_EClass->addEReferences(m_EClass__eStructuralFeatures);
+        m_EClass->addEAllReferences(m_EClass__eStructuralFeatures);
     }
     {
-        ::ecore::EReference_ptr ef = ecoreFactory->createEReference();
-        ef->setName("eGenericSuperTypes");
-        m_EClass->addEStructuralFeatures(ef);
-        m_EClass->addEAllStructuralFeatures(ef);
-        m_EClass->addEReferences(ef);
-        m_EClass->addEAllReferences(ef);
+        m_EClass__eGenericSuperTypes = ecoreFactory->createEReference();
+        m_EClass__eGenericSuperTypes->setName("eGenericSuperTypes");
+        m_EClass->addEStructuralFeatures(m_EClass__eGenericSuperTypes);
+        m_EClass->addEAllStructuralFeatures(m_EClass__eGenericSuperTypes);
+        m_EClass->addEReferences(m_EClass__eGenericSuperTypes);
+        m_EClass->addEAllReferences(m_EClass__eGenericSuperTypes);
     }
     {
-        ::ecore::EReference_ptr ef = ecoreFactory->createEReference();
-        ef->setName("eAllGenericSuperTypes");
-        m_EClass->addEStructuralFeatures(ef);
-        m_EClass->addEAllStructuralFeatures(ef);
-        m_EClass->addEReferences(ef);
-        m_EClass->addEAllReferences(ef);
+        m_EClass__eAllGenericSuperTypes = ecoreFactory->createEReference();
+        m_EClass__eAllGenericSuperTypes->setName("eAllGenericSuperTypes");
+        m_EClass->addEStructuralFeatures(m_EClass__eAllGenericSuperTypes);
+        m_EClass->addEAllStructuralFeatures(m_EClass__eAllGenericSuperTypes);
+        m_EClass->addEReferences(m_EClass__eAllGenericSuperTypes);
+        m_EClass->addEAllReferences(m_EClass__eAllGenericSuperTypes);
     }
     {
         ::ecore::EOperation_ptr op = ecoreFactory->createEOperation();
@@ -446,52 +446,52 @@ EcorePackage::EcorePackage()
         m_EClass->addEAllOperations(op);
     }
     {
-        ::ecore::EAttribute_ptr ef = ecoreFactory->createEAttribute();
-        ef->setName("instanceClassName");
-        m_EClassifier->addEStructuralFeatures(ef);
-        m_EClassifier->addEAllStructuralFeatures(ef);
-        m_EClassifier->addEAttributes(ef);
-        m_EClassifier->addEAllAttributes(ef);
+        m_EClassifier__instanceClassName = ecoreFactory->createEAttribute();
+        m_EClassifier__instanceClassName->setName("instanceClassName");
+        m_EClassifier->addEStructuralFeatures(m_EClassifier__instanceClassName);
+        m_EClassifier->addEAllStructuralFeatures(m_EClassifier__instanceClassName);
+        m_EClassifier->addEAttributes(m_EClassifier__instanceClassName);
+        m_EClassifier->addEAllAttributes(m_EClassifier__instanceClassName);
     }
     {
-        ::ecore::EAttribute_ptr ef = ecoreFactory->createEAttribute();
-        ef->setName("instanceClass");
-        m_EClassifier->addEStructuralFeatures(ef);
-        m_EClassifier->addEAllStructuralFeatures(ef);
-        m_EClassifier->addEAttributes(ef);
-        m_EClassifier->addEAllAttributes(ef);
+        m_EClassifier__instanceClass = ecoreFactory->createEAttribute();
+        m_EClassifier__instanceClass->setName("instanceClass");
+        m_EClassifier->addEStructuralFeatures(m_EClassifier__instanceClass);
+        m_EClassifier->addEAllStructuralFeatures(m_EClassifier__instanceClass);
+        m_EClassifier->addEAttributes(m_EClassifier__instanceClass);
+        m_EClassifier->addEAllAttributes(m_EClassifier__instanceClass);
     }
     {
-        ::ecore::EAttribute_ptr ef = ecoreFactory->createEAttribute();
-        ef->setName("defaultValue");
-        m_EClassifier->addEStructuralFeatures(ef);
-        m_EClassifier->addEAllStructuralFeatures(ef);
-        m_EClassifier->addEAttributes(ef);
-        m_EClassifier->addEAllAttributes(ef);
+        m_EClassifier__defaultValue = ecoreFactory->createEAttribute();
+        m_EClassifier__defaultValue->setName("defaultValue");
+        m_EClassifier->addEStructuralFeatures(m_EClassifier__defaultValue);
+        m_EClassifier->addEAllStructuralFeatures(m_EClassifier__defaultValue);
+        m_EClassifier->addEAttributes(m_EClassifier__defaultValue);
+        m_EClassifier->addEAllAttributes(m_EClassifier__defaultValue);
     }
     {
-        ::ecore::EAttribute_ptr ef = ecoreFactory->createEAttribute();
-        ef->setName("instanceTypeName");
-        m_EClassifier->addEStructuralFeatures(ef);
-        m_EClassifier->addEAllStructuralFeatures(ef);
-        m_EClassifier->addEAttributes(ef);
-        m_EClassifier->addEAllAttributes(ef);
+        m_EClassifier__instanceTypeName = ecoreFactory->createEAttribute();
+        m_EClassifier__instanceTypeName->setName("instanceTypeName");
+        m_EClassifier->addEStructuralFeatures(m_EClassifier__instanceTypeName);
+        m_EClassifier->addEAllStructuralFeatures(m_EClassifier__instanceTypeName);
+        m_EClassifier->addEAttributes(m_EClassifier__instanceTypeName);
+        m_EClassifier->addEAllAttributes(m_EClassifier__instanceTypeName);
     }
     {
-        ::ecore::EReference_ptr ef = ecoreFactory->createEReference();
-        ef->setName("ePackage");
-        m_EClassifier->addEStructuralFeatures(ef);
-        m_EClassifier->addEAllStructuralFeatures(ef);
-        m_EClassifier->addEReferences(ef);
-        m_EClassifier->addEAllReferences(ef);
+        m_EClassifier__ePackage = ecoreFactory->createEReference();
+        m_EClassifier__ePackage->setName("ePackage");
+        m_EClassifier->addEStructuralFeatures(m_EClassifier__ePackage);
+        m_EClassifier->addEAllStructuralFeatures(m_EClassifier__ePackage);
+        m_EClassifier->addEReferences(m_EClassifier__ePackage);
+        m_EClassifier->addEAllReferences(m_EClassifier__ePackage);
     }
     {
-        ::ecore::EReference_ptr ef = ecoreFactory->createEReference();
-        ef->setName("eTypeParameters");
-        m_EClassifier->addEStructuralFeatures(ef);
-        m_EClassifier->addEAllStructuralFeatures(ef);
-        m_EClassifier->addEReferences(ef);
-        m_EClassifier->addEAllReferences(ef);
+        m_EClassifier__eTypeParameters = ecoreFactory->createEReference();
+        m_EClassifier__eTypeParameters->setName("eTypeParameters");
+        m_EClassifier->addEStructuralFeatures(m_EClassifier__eTypeParameters);
+        m_EClassifier->addEAllStructuralFeatures(m_EClassifier__eTypeParameters);
+        m_EClassifier->addEReferences(m_EClassifier__eTypeParameters);
+        m_EClassifier->addEAllReferences(m_EClassifier__eTypeParameters);
     }
     {
         ::ecore::EOperation_ptr op = ecoreFactory->createEOperation();
@@ -506,20 +506,20 @@ EcorePackage::EcorePackage()
         m_EClassifier->addEAllOperations(op);
     }
     {
-        ::ecore::EAttribute_ptr ef = ecoreFactory->createEAttribute();
-        ef->setName("serializable");
-        m_EDataType->addEStructuralFeatures(ef);
-        m_EDataType->addEAllStructuralFeatures(ef);
-        m_EDataType->addEAttributes(ef);
-        m_EDataType->addEAllAttributes(ef);
+        m_EDataType__serializable = ecoreFactory->createEAttribute();
+        m_EDataType__serializable->setName("serializable");
+        m_EDataType->addEStructuralFeatures(m_EDataType__serializable);
+        m_EDataType->addEAllStructuralFeatures(m_EDataType__serializable);
+        m_EDataType->addEAttributes(m_EDataType__serializable);
+        m_EDataType->addEAllAttributes(m_EDataType__serializable);
     }
     {
-        ::ecore::EReference_ptr ef = ecoreFactory->createEReference();
-        ef->setName("eLiterals");
-        m_EEnum->addEStructuralFeatures(ef);
-        m_EEnum->addEAllStructuralFeatures(ef);
-        m_EEnum->addEReferences(ef);
-        m_EEnum->addEAllReferences(ef);
+        m_EEnum__eLiterals = ecoreFactory->createEReference();
+        m_EEnum__eLiterals->setName("eLiterals");
+        m_EEnum->addEStructuralFeatures(m_EEnum__eLiterals);
+        m_EEnum->addEAllStructuralFeatures(m_EEnum__eLiterals);
+        m_EEnum->addEReferences(m_EEnum__eLiterals);
+        m_EEnum->addEAllReferences(m_EEnum__eLiterals);
     }
     {
         ::ecore::EOperation_ptr op = ecoreFactory->createEOperation();
@@ -540,44 +540,44 @@ EcorePackage::EcorePackage()
         m_EEnum->addEAllOperations(op);
     }
     {
-        ::ecore::EAttribute_ptr ef = ecoreFactory->createEAttribute();
-        ef->setName("value");
-        m_EEnumLiteral->addEStructuralFeatures(ef);
-        m_EEnumLiteral->addEAllStructuralFeatures(ef);
-        m_EEnumLiteral->addEAttributes(ef);
-        m_EEnumLiteral->addEAllAttributes(ef);
+        m_EEnumLiteral__value = ecoreFactory->createEAttribute();
+        m_EEnumLiteral__value->setName("value");
+        m_EEnumLiteral->addEStructuralFeatures(m_EEnumLiteral__value);
+        m_EEnumLiteral->addEAllStructuralFeatures(m_EEnumLiteral__value);
+        m_EEnumLiteral->addEAttributes(m_EEnumLiteral__value);
+        m_EEnumLiteral->addEAllAttributes(m_EEnumLiteral__value);
     }
     {
-        ::ecore::EAttribute_ptr ef = ecoreFactory->createEAttribute();
-        ef->setName("instance");
-        m_EEnumLiteral->addEStructuralFeatures(ef);
-        m_EEnumLiteral->addEAllStructuralFeatures(ef);
-        m_EEnumLiteral->addEAttributes(ef);
-        m_EEnumLiteral->addEAllAttributes(ef);
+        m_EEnumLiteral__instance = ecoreFactory->createEAttribute();
+        m_EEnumLiteral__instance->setName("instance");
+        m_EEnumLiteral->addEStructuralFeatures(m_EEnumLiteral__instance);
+        m_EEnumLiteral->addEAllStructuralFeatures(m_EEnumLiteral__instance);
+        m_EEnumLiteral->addEAttributes(m_EEnumLiteral__instance);
+        m_EEnumLiteral->addEAllAttributes(m_EEnumLiteral__instance);
     }
     {
-        ::ecore::EAttribute_ptr ef = ecoreFactory->createEAttribute();
-        ef->setName("literal");
-        m_EEnumLiteral->addEStructuralFeatures(ef);
-        m_EEnumLiteral->addEAllStructuralFeatures(ef);
-        m_EEnumLiteral->addEAttributes(ef);
-        m_EEnumLiteral->addEAllAttributes(ef);
+        m_EEnumLiteral__literal = ecoreFactory->createEAttribute();
+        m_EEnumLiteral__literal->setName("literal");
+        m_EEnumLiteral->addEStructuralFeatures(m_EEnumLiteral__literal);
+        m_EEnumLiteral->addEAllStructuralFeatures(m_EEnumLiteral__literal);
+        m_EEnumLiteral->addEAttributes(m_EEnumLiteral__literal);
+        m_EEnumLiteral->addEAllAttributes(m_EEnumLiteral__literal);
     }
     {
-        ::ecore::EReference_ptr ef = ecoreFactory->createEReference();
-        ef->setName("eEnum");
-        m_EEnumLiteral->addEStructuralFeatures(ef);
-        m_EEnumLiteral->addEAllStructuralFeatures(ef);
-        m_EEnumLiteral->addEReferences(ef);
-        m_EEnumLiteral->addEAllReferences(ef);
+        m_EEnumLiteral__eEnum = ecoreFactory->createEReference();
+        m_EEnumLiteral__eEnum->setName("eEnum");
+        m_EEnumLiteral->addEStructuralFeatures(m_EEnumLiteral__eEnum);
+        m_EEnumLiteral->addEAllStructuralFeatures(m_EEnumLiteral__eEnum);
+        m_EEnumLiteral->addEReferences(m_EEnumLiteral__eEnum);
+        m_EEnumLiteral->addEAllReferences(m_EEnumLiteral__eEnum);
     }
     {
-        ::ecore::EReference_ptr ef = ecoreFactory->createEReference();
-        ef->setName("ePackage");
-        m_EFactory->addEStructuralFeatures(ef);
-        m_EFactory->addEAllStructuralFeatures(ef);
-        m_EFactory->addEReferences(ef);
-        m_EFactory->addEAllReferences(ef);
+        m_EFactory__ePackage = ecoreFactory->createEReference();
+        m_EFactory__ePackage->setName("ePackage");
+        m_EFactory->addEStructuralFeatures(m_EFactory__ePackage);
+        m_EFactory->addEAllStructuralFeatures(m_EFactory__ePackage);
+        m_EFactory->addEReferences(m_EFactory__ePackage);
+        m_EFactory->addEAllReferences(m_EFactory__ePackage);
     }
     {
         ::ecore::EOperation_ptr op = ecoreFactory->createEOperation();
@@ -598,12 +598,12 @@ EcorePackage::EcorePackage()
         m_EFactory->addEAllOperations(op);
     }
     {
-        ::ecore::EReference_ptr ef = ecoreFactory->createEReference();
-        ef->setName("eAnnotations");
-        m_EModelElement->addEStructuralFeatures(ef);
-        m_EModelElement->addEAllStructuralFeatures(ef);
-        m_EModelElement->addEReferences(ef);
-        m_EModelElement->addEAllReferences(ef);
+        m_EModelElement__eAnnotations = ecoreFactory->createEReference();
+        m_EModelElement__eAnnotations->setName("eAnnotations");
+        m_EModelElement->addEStructuralFeatures(m_EModelElement__eAnnotations);
+        m_EModelElement->addEAllStructuralFeatures(m_EModelElement__eAnnotations);
+        m_EModelElement->addEReferences(m_EModelElement__eAnnotations);
+        m_EModelElement->addEAllReferences(m_EModelElement__eAnnotations);
     }
     {
         ::ecore::EOperation_ptr op = ecoreFactory->createEOperation();
@@ -612,12 +612,12 @@ EcorePackage::EcorePackage()
         m_EModelElement->addEAllOperations(op);
     }
     {
-        ::ecore::EAttribute_ptr ef = ecoreFactory->createEAttribute();
-        ef->setName("name");
-        m_ENamedElement->addEStructuralFeatures(ef);
-        m_ENamedElement->addEAllStructuralFeatures(ef);
-        m_ENamedElement->addEAttributes(ef);
-        m_ENamedElement->addEAllAttributes(ef);
+        m_ENamedElement__name = ecoreFactory->createEAttribute();
+        m_ENamedElement__name->setName("name");
+        m_ENamedElement->addEStructuralFeatures(m_ENamedElement__name);
+        m_ENamedElement->addEAllStructuralFeatures(m_ENamedElement__name);
+        m_ENamedElement->addEAttributes(m_ENamedElement__name);
+        m_ENamedElement->addEAllAttributes(m_ENamedElement__name);
     }
     {
         ::ecore::EOperation_ptr op = ecoreFactory->createEOperation();
@@ -710,44 +710,44 @@ EcorePackage::EcorePackage()
         m_EObject->addEAllOperations(op);
     }
     {
-        ::ecore::EReference_ptr ef = ecoreFactory->createEReference();
-        ef->setName("eContainingClass");
-        m_EOperation->addEStructuralFeatures(ef);
-        m_EOperation->addEAllStructuralFeatures(ef);
-        m_EOperation->addEReferences(ef);
-        m_EOperation->addEAllReferences(ef);
+        m_EOperation__eContainingClass = ecoreFactory->createEReference();
+        m_EOperation__eContainingClass->setName("eContainingClass");
+        m_EOperation->addEStructuralFeatures(m_EOperation__eContainingClass);
+        m_EOperation->addEAllStructuralFeatures(m_EOperation__eContainingClass);
+        m_EOperation->addEReferences(m_EOperation__eContainingClass);
+        m_EOperation->addEAllReferences(m_EOperation__eContainingClass);
     }
     {
-        ::ecore::EReference_ptr ef = ecoreFactory->createEReference();
-        ef->setName("eTypeParameters");
-        m_EOperation->addEStructuralFeatures(ef);
-        m_EOperation->addEAllStructuralFeatures(ef);
-        m_EOperation->addEReferences(ef);
-        m_EOperation->addEAllReferences(ef);
+        m_EOperation__eTypeParameters = ecoreFactory->createEReference();
+        m_EOperation__eTypeParameters->setName("eTypeParameters");
+        m_EOperation->addEStructuralFeatures(m_EOperation__eTypeParameters);
+        m_EOperation->addEAllStructuralFeatures(m_EOperation__eTypeParameters);
+        m_EOperation->addEReferences(m_EOperation__eTypeParameters);
+        m_EOperation->addEAllReferences(m_EOperation__eTypeParameters);
     }
     {
-        ::ecore::EReference_ptr ef = ecoreFactory->createEReference();
-        ef->setName("eParameters");
-        m_EOperation->addEStructuralFeatures(ef);
-        m_EOperation->addEAllStructuralFeatures(ef);
-        m_EOperation->addEReferences(ef);
-        m_EOperation->addEAllReferences(ef);
+        m_EOperation__eParameters = ecoreFactory->createEReference();
+        m_EOperation__eParameters->setName("eParameters");
+        m_EOperation->addEStructuralFeatures(m_EOperation__eParameters);
+        m_EOperation->addEAllStructuralFeatures(m_EOperation__eParameters);
+        m_EOperation->addEReferences(m_EOperation__eParameters);
+        m_EOperation->addEAllReferences(m_EOperation__eParameters);
     }
     {
-        ::ecore::EReference_ptr ef = ecoreFactory->createEReference();
-        ef->setName("eExceptions");
-        m_EOperation->addEStructuralFeatures(ef);
-        m_EOperation->addEAllStructuralFeatures(ef);
-        m_EOperation->addEReferences(ef);
-        m_EOperation->addEAllReferences(ef);
+        m_EOperation__eExceptions = ecoreFactory->createEReference();
+        m_EOperation__eExceptions->setName("eExceptions");
+        m_EOperation->addEStructuralFeatures(m_EOperation__eExceptions);
+        m_EOperation->addEAllStructuralFeatures(m_EOperation__eExceptions);
+        m_EOperation->addEReferences(m_EOperation__eExceptions);
+        m_EOperation->addEAllReferences(m_EOperation__eExceptions);
     }
     {
-        ::ecore::EReference_ptr ef = ecoreFactory->createEReference();
-        ef->setName("eGenericExceptions");
-        m_EOperation->addEStructuralFeatures(ef);
-        m_EOperation->addEAllStructuralFeatures(ef);
-        m_EOperation->addEReferences(ef);
-        m_EOperation->addEAllReferences(ef);
+        m_EOperation__eGenericExceptions = ecoreFactory->createEReference();
+        m_EOperation__eGenericExceptions->setName("eGenericExceptions");
+        m_EOperation->addEStructuralFeatures(m_EOperation__eGenericExceptions);
+        m_EOperation->addEAllStructuralFeatures(m_EOperation__eGenericExceptions);
+        m_EOperation->addEReferences(m_EOperation__eGenericExceptions);
+        m_EOperation->addEAllReferences(m_EOperation__eGenericExceptions);
     }
     {
         ::ecore::EOperation_ptr op = ecoreFactory->createEOperation();
@@ -762,52 +762,52 @@ EcorePackage::EcorePackage()
         m_EOperation->addEAllOperations(op);
     }
     {
-        ::ecore::EAttribute_ptr ef = ecoreFactory->createEAttribute();
-        ef->setName("nsURI");
-        m_EPackage->addEStructuralFeatures(ef);
-        m_EPackage->addEAllStructuralFeatures(ef);
-        m_EPackage->addEAttributes(ef);
-        m_EPackage->addEAllAttributes(ef);
+        m_EPackage__nsURI = ecoreFactory->createEAttribute();
+        m_EPackage__nsURI->setName("nsURI");
+        m_EPackage->addEStructuralFeatures(m_EPackage__nsURI);
+        m_EPackage->addEAllStructuralFeatures(m_EPackage__nsURI);
+        m_EPackage->addEAttributes(m_EPackage__nsURI);
+        m_EPackage->addEAllAttributes(m_EPackage__nsURI);
     }
     {
-        ::ecore::EAttribute_ptr ef = ecoreFactory->createEAttribute();
-        ef->setName("nsPrefix");
-        m_EPackage->addEStructuralFeatures(ef);
-        m_EPackage->addEAllStructuralFeatures(ef);
-        m_EPackage->addEAttributes(ef);
-        m_EPackage->addEAllAttributes(ef);
+        m_EPackage__nsPrefix = ecoreFactory->createEAttribute();
+        m_EPackage__nsPrefix->setName("nsPrefix");
+        m_EPackage->addEStructuralFeatures(m_EPackage__nsPrefix);
+        m_EPackage->addEAllStructuralFeatures(m_EPackage__nsPrefix);
+        m_EPackage->addEAttributes(m_EPackage__nsPrefix);
+        m_EPackage->addEAllAttributes(m_EPackage__nsPrefix);
     }
     {
-        ::ecore::EReference_ptr ef = ecoreFactory->createEReference();
-        ef->setName("eFactoryInstance");
-        m_EPackage->addEStructuralFeatures(ef);
-        m_EPackage->addEAllStructuralFeatures(ef);
-        m_EPackage->addEReferences(ef);
-        m_EPackage->addEAllReferences(ef);
+        m_EPackage__eFactoryInstance = ecoreFactory->createEReference();
+        m_EPackage__eFactoryInstance->setName("eFactoryInstance");
+        m_EPackage->addEStructuralFeatures(m_EPackage__eFactoryInstance);
+        m_EPackage->addEAllStructuralFeatures(m_EPackage__eFactoryInstance);
+        m_EPackage->addEReferences(m_EPackage__eFactoryInstance);
+        m_EPackage->addEAllReferences(m_EPackage__eFactoryInstance);
     }
     {
-        ::ecore::EReference_ptr ef = ecoreFactory->createEReference();
-        ef->setName("eClassifiers");
-        m_EPackage->addEStructuralFeatures(ef);
-        m_EPackage->addEAllStructuralFeatures(ef);
-        m_EPackage->addEReferences(ef);
-        m_EPackage->addEAllReferences(ef);
+        m_EPackage__eClassifiers = ecoreFactory->createEReference();
+        m_EPackage__eClassifiers->setName("eClassifiers");
+        m_EPackage->addEStructuralFeatures(m_EPackage__eClassifiers);
+        m_EPackage->addEAllStructuralFeatures(m_EPackage__eClassifiers);
+        m_EPackage->addEReferences(m_EPackage__eClassifiers);
+        m_EPackage->addEAllReferences(m_EPackage__eClassifiers);
     }
     {
-        ::ecore::EReference_ptr ef = ecoreFactory->createEReference();
-        ef->setName("eSubpackages");
-        m_EPackage->addEStructuralFeatures(ef);
-        m_EPackage->addEAllStructuralFeatures(ef);
-        m_EPackage->addEReferences(ef);
-        m_EPackage->addEAllReferences(ef);
+        m_EPackage__eSubpackages = ecoreFactory->createEReference();
+        m_EPackage__eSubpackages->setName("eSubpackages");
+        m_EPackage->addEStructuralFeatures(m_EPackage__eSubpackages);
+        m_EPackage->addEAllStructuralFeatures(m_EPackage__eSubpackages);
+        m_EPackage->addEReferences(m_EPackage__eSubpackages);
+        m_EPackage->addEAllReferences(m_EPackage__eSubpackages);
     }
     {
-        ::ecore::EReference_ptr ef = ecoreFactory->createEReference();
-        ef->setName("eSuperPackage");
-        m_EPackage->addEStructuralFeatures(ef);
-        m_EPackage->addEAllStructuralFeatures(ef);
-        m_EPackage->addEReferences(ef);
-        m_EPackage->addEAllReferences(ef);
+        m_EPackage__eSuperPackage = ecoreFactory->createEReference();
+        m_EPackage__eSuperPackage->setName("eSuperPackage");
+        m_EPackage->addEStructuralFeatures(m_EPackage__eSuperPackage);
+        m_EPackage->addEAllStructuralFeatures(m_EPackage__eSuperPackage);
+        m_EPackage->addEReferences(m_EPackage__eSuperPackage);
+        m_EPackage->addEAllReferences(m_EPackage__eSuperPackage);
     }
     {
         ::ecore::EOperation_ptr op = ecoreFactory->createEOperation();
@@ -816,124 +816,124 @@ EcorePackage::EcorePackage()
         m_EPackage->addEAllOperations(op);
     }
     {
-        ::ecore::EReference_ptr ef = ecoreFactory->createEReference();
-        ef->setName("eOperation");
-        m_EParameter->addEStructuralFeatures(ef);
-        m_EParameter->addEAllStructuralFeatures(ef);
-        m_EParameter->addEReferences(ef);
-        m_EParameter->addEAllReferences(ef);
+        m_EParameter__eOperation = ecoreFactory->createEReference();
+        m_EParameter__eOperation->setName("eOperation");
+        m_EParameter->addEStructuralFeatures(m_EParameter__eOperation);
+        m_EParameter->addEAllStructuralFeatures(m_EParameter__eOperation);
+        m_EParameter->addEReferences(m_EParameter__eOperation);
+        m_EParameter->addEAllReferences(m_EParameter__eOperation);
     }
     {
-        ::ecore::EAttribute_ptr ef = ecoreFactory->createEAttribute();
-        ef->setName("containment");
-        m_EReference->addEStructuralFeatures(ef);
-        m_EReference->addEAllStructuralFeatures(ef);
-        m_EReference->addEAttributes(ef);
-        m_EReference->addEAllAttributes(ef);
+        m_EReference__containment = ecoreFactory->createEAttribute();
+        m_EReference__containment->setName("containment");
+        m_EReference->addEStructuralFeatures(m_EReference__containment);
+        m_EReference->addEAllStructuralFeatures(m_EReference__containment);
+        m_EReference->addEAttributes(m_EReference__containment);
+        m_EReference->addEAllAttributes(m_EReference__containment);
     }
     {
-        ::ecore::EAttribute_ptr ef = ecoreFactory->createEAttribute();
-        ef->setName("container");
-        m_EReference->addEStructuralFeatures(ef);
-        m_EReference->addEAllStructuralFeatures(ef);
-        m_EReference->addEAttributes(ef);
-        m_EReference->addEAllAttributes(ef);
+        m_EReference__container = ecoreFactory->createEAttribute();
+        m_EReference__container->setName("container");
+        m_EReference->addEStructuralFeatures(m_EReference__container);
+        m_EReference->addEAllStructuralFeatures(m_EReference__container);
+        m_EReference->addEAttributes(m_EReference__container);
+        m_EReference->addEAllAttributes(m_EReference__container);
     }
     {
-        ::ecore::EAttribute_ptr ef = ecoreFactory->createEAttribute();
-        ef->setName("resolveProxies");
-        m_EReference->addEStructuralFeatures(ef);
-        m_EReference->addEAllStructuralFeatures(ef);
-        m_EReference->addEAttributes(ef);
-        m_EReference->addEAllAttributes(ef);
+        m_EReference__resolveProxies = ecoreFactory->createEAttribute();
+        m_EReference__resolveProxies->setName("resolveProxies");
+        m_EReference->addEStructuralFeatures(m_EReference__resolveProxies);
+        m_EReference->addEAllStructuralFeatures(m_EReference__resolveProxies);
+        m_EReference->addEAttributes(m_EReference__resolveProxies);
+        m_EReference->addEAllAttributes(m_EReference__resolveProxies);
     }
     {
-        ::ecore::EReference_ptr ef = ecoreFactory->createEReference();
-        ef->setName("eOpposite");
-        m_EReference->addEStructuralFeatures(ef);
-        m_EReference->addEAllStructuralFeatures(ef);
-        m_EReference->addEReferences(ef);
-        m_EReference->addEAllReferences(ef);
+        m_EReference__eOpposite = ecoreFactory->createEReference();
+        m_EReference__eOpposite->setName("eOpposite");
+        m_EReference->addEStructuralFeatures(m_EReference__eOpposite);
+        m_EReference->addEAllStructuralFeatures(m_EReference__eOpposite);
+        m_EReference->addEReferences(m_EReference__eOpposite);
+        m_EReference->addEAllReferences(m_EReference__eOpposite);
     }
     {
-        ::ecore::EReference_ptr ef = ecoreFactory->createEReference();
-        ef->setName("eReferenceType");
-        m_EReference->addEStructuralFeatures(ef);
-        m_EReference->addEAllStructuralFeatures(ef);
-        m_EReference->addEReferences(ef);
-        m_EReference->addEAllReferences(ef);
+        m_EReference__eReferenceType = ecoreFactory->createEReference();
+        m_EReference__eReferenceType->setName("eReferenceType");
+        m_EReference->addEStructuralFeatures(m_EReference__eReferenceType);
+        m_EReference->addEAllStructuralFeatures(m_EReference__eReferenceType);
+        m_EReference->addEReferences(m_EReference__eReferenceType);
+        m_EReference->addEAllReferences(m_EReference__eReferenceType);
     }
     {
-        ::ecore::EReference_ptr ef = ecoreFactory->createEReference();
-        ef->setName("eKeys");
-        m_EReference->addEStructuralFeatures(ef);
-        m_EReference->addEAllStructuralFeatures(ef);
-        m_EReference->addEReferences(ef);
-        m_EReference->addEAllReferences(ef);
+        m_EReference__eKeys = ecoreFactory->createEReference();
+        m_EReference__eKeys->setName("eKeys");
+        m_EReference->addEStructuralFeatures(m_EReference__eKeys);
+        m_EReference->addEAllStructuralFeatures(m_EReference__eKeys);
+        m_EReference->addEReferences(m_EReference__eKeys);
+        m_EReference->addEAllReferences(m_EReference__eKeys);
     }
     {
-        ::ecore::EAttribute_ptr ef = ecoreFactory->createEAttribute();
-        ef->setName("changeable");
-        m_EStructuralFeature->addEStructuralFeatures(ef);
-        m_EStructuralFeature->addEAllStructuralFeatures(ef);
-        m_EStructuralFeature->addEAttributes(ef);
-        m_EStructuralFeature->addEAllAttributes(ef);
+        m_EStructuralFeature__changeable = ecoreFactory->createEAttribute();
+        m_EStructuralFeature__changeable->setName("changeable");
+        m_EStructuralFeature->addEStructuralFeatures(m_EStructuralFeature__changeable);
+        m_EStructuralFeature->addEAllStructuralFeatures(m_EStructuralFeature__changeable);
+        m_EStructuralFeature->addEAttributes(m_EStructuralFeature__changeable);
+        m_EStructuralFeature->addEAllAttributes(m_EStructuralFeature__changeable);
     }
     {
-        ::ecore::EAttribute_ptr ef = ecoreFactory->createEAttribute();
-        ef->setName("volatile");
-        m_EStructuralFeature->addEStructuralFeatures(ef);
-        m_EStructuralFeature->addEAllStructuralFeatures(ef);
-        m_EStructuralFeature->addEAttributes(ef);
-        m_EStructuralFeature->addEAllAttributes(ef);
+        m_EStructuralFeature__volatile = ecoreFactory->createEAttribute();
+        m_EStructuralFeature__volatile->setName("volatile");
+        m_EStructuralFeature->addEStructuralFeatures(m_EStructuralFeature__volatile);
+        m_EStructuralFeature->addEAllStructuralFeatures(m_EStructuralFeature__volatile);
+        m_EStructuralFeature->addEAttributes(m_EStructuralFeature__volatile);
+        m_EStructuralFeature->addEAllAttributes(m_EStructuralFeature__volatile);
     }
     {
-        ::ecore::EAttribute_ptr ef = ecoreFactory->createEAttribute();
-        ef->setName("transient");
-        m_EStructuralFeature->addEStructuralFeatures(ef);
-        m_EStructuralFeature->addEAllStructuralFeatures(ef);
-        m_EStructuralFeature->addEAttributes(ef);
-        m_EStructuralFeature->addEAllAttributes(ef);
+        m_EStructuralFeature__transient = ecoreFactory->createEAttribute();
+        m_EStructuralFeature__transient->setName("transient");
+        m_EStructuralFeature->addEStructuralFeatures(m_EStructuralFeature__transient);
+        m_EStructuralFeature->addEAllStructuralFeatures(m_EStructuralFeature__transient);
+        m_EStructuralFeature->addEAttributes(m_EStructuralFeature__transient);
+        m_EStructuralFeature->addEAllAttributes(m_EStructuralFeature__transient);
     }
     {
-        ::ecore::EAttribute_ptr ef = ecoreFactory->createEAttribute();
-        ef->setName("defaultValueLiteral");
-        m_EStructuralFeature->addEStructuralFeatures(ef);
-        m_EStructuralFeature->addEAllStructuralFeatures(ef);
-        m_EStructuralFeature->addEAttributes(ef);
-        m_EStructuralFeature->addEAllAttributes(ef);
+        m_EStructuralFeature__defaultValueLiteral = ecoreFactory->createEAttribute();
+        m_EStructuralFeature__defaultValueLiteral->setName("defaultValueLiteral");
+        m_EStructuralFeature->addEStructuralFeatures(m_EStructuralFeature__defaultValueLiteral);
+        m_EStructuralFeature->addEAllStructuralFeatures(m_EStructuralFeature__defaultValueLiteral);
+        m_EStructuralFeature->addEAttributes(m_EStructuralFeature__defaultValueLiteral);
+        m_EStructuralFeature->addEAllAttributes(m_EStructuralFeature__defaultValueLiteral);
     }
     {
-        ::ecore::EAttribute_ptr ef = ecoreFactory->createEAttribute();
-        ef->setName("defaultValue");
-        m_EStructuralFeature->addEStructuralFeatures(ef);
-        m_EStructuralFeature->addEAllStructuralFeatures(ef);
-        m_EStructuralFeature->addEAttributes(ef);
-        m_EStructuralFeature->addEAllAttributes(ef);
+        m_EStructuralFeature__defaultValue = ecoreFactory->createEAttribute();
+        m_EStructuralFeature__defaultValue->setName("defaultValue");
+        m_EStructuralFeature->addEStructuralFeatures(m_EStructuralFeature__defaultValue);
+        m_EStructuralFeature->addEAllStructuralFeatures(m_EStructuralFeature__defaultValue);
+        m_EStructuralFeature->addEAttributes(m_EStructuralFeature__defaultValue);
+        m_EStructuralFeature->addEAllAttributes(m_EStructuralFeature__defaultValue);
     }
     {
-        ::ecore::EAttribute_ptr ef = ecoreFactory->createEAttribute();
-        ef->setName("unsettable");
-        m_EStructuralFeature->addEStructuralFeatures(ef);
-        m_EStructuralFeature->addEAllStructuralFeatures(ef);
-        m_EStructuralFeature->addEAttributes(ef);
-        m_EStructuralFeature->addEAllAttributes(ef);
+        m_EStructuralFeature__unsettable = ecoreFactory->createEAttribute();
+        m_EStructuralFeature__unsettable->setName("unsettable");
+        m_EStructuralFeature->addEStructuralFeatures(m_EStructuralFeature__unsettable);
+        m_EStructuralFeature->addEAllStructuralFeatures(m_EStructuralFeature__unsettable);
+        m_EStructuralFeature->addEAttributes(m_EStructuralFeature__unsettable);
+        m_EStructuralFeature->addEAllAttributes(m_EStructuralFeature__unsettable);
     }
     {
-        ::ecore::EAttribute_ptr ef = ecoreFactory->createEAttribute();
-        ef->setName("derived");
-        m_EStructuralFeature->addEStructuralFeatures(ef);
-        m_EStructuralFeature->addEAllStructuralFeatures(ef);
-        m_EStructuralFeature->addEAttributes(ef);
-        m_EStructuralFeature->addEAllAttributes(ef);
+        m_EStructuralFeature__derived = ecoreFactory->createEAttribute();
+        m_EStructuralFeature__derived->setName("derived");
+        m_EStructuralFeature->addEStructuralFeatures(m_EStructuralFeature__derived);
+        m_EStructuralFeature->addEAllStructuralFeatures(m_EStructuralFeature__derived);
+        m_EStructuralFeature->addEAttributes(m_EStructuralFeature__derived);
+        m_EStructuralFeature->addEAllAttributes(m_EStructuralFeature__derived);
     }
     {
-        ::ecore::EReference_ptr ef = ecoreFactory->createEReference();
-        ef->setName("eContainingClass");
-        m_EStructuralFeature->addEStructuralFeatures(ef);
-        m_EStructuralFeature->addEAllStructuralFeatures(ef);
-        m_EStructuralFeature->addEReferences(ef);
-        m_EStructuralFeature->addEAllReferences(ef);
+        m_EStructuralFeature__eContainingClass = ecoreFactory->createEReference();
+        m_EStructuralFeature__eContainingClass->setName("eContainingClass");
+        m_EStructuralFeature->addEStructuralFeatures(m_EStructuralFeature__eContainingClass);
+        m_EStructuralFeature->addEAllStructuralFeatures(m_EStructuralFeature__eContainingClass);
+        m_EStructuralFeature->addEReferences(m_EStructuralFeature__eContainingClass);
+        m_EStructuralFeature->addEAllReferences(m_EStructuralFeature__eContainingClass);
     }
     {
         ::ecore::EOperation_ptr op = ecoreFactory->createEOperation();
@@ -948,140 +948,140 @@ EcorePackage::EcorePackage()
         m_EStructuralFeature->addEAllOperations(op);
     }
     {
-        ::ecore::EAttribute_ptr ef = ecoreFactory->createEAttribute();
-        ef->setName("ordered");
-        m_ETypedElement->addEStructuralFeatures(ef);
-        m_ETypedElement->addEAllStructuralFeatures(ef);
-        m_ETypedElement->addEAttributes(ef);
-        m_ETypedElement->addEAllAttributes(ef);
+        m_ETypedElement__ordered = ecoreFactory->createEAttribute();
+        m_ETypedElement__ordered->setName("ordered");
+        m_ETypedElement->addEStructuralFeatures(m_ETypedElement__ordered);
+        m_ETypedElement->addEAllStructuralFeatures(m_ETypedElement__ordered);
+        m_ETypedElement->addEAttributes(m_ETypedElement__ordered);
+        m_ETypedElement->addEAllAttributes(m_ETypedElement__ordered);
     }
     {
-        ::ecore::EAttribute_ptr ef = ecoreFactory->createEAttribute();
-        ef->setName("unique");
-        m_ETypedElement->addEStructuralFeatures(ef);
-        m_ETypedElement->addEAllStructuralFeatures(ef);
-        m_ETypedElement->addEAttributes(ef);
-        m_ETypedElement->addEAllAttributes(ef);
+        m_ETypedElement__unique = ecoreFactory->createEAttribute();
+        m_ETypedElement__unique->setName("unique");
+        m_ETypedElement->addEStructuralFeatures(m_ETypedElement__unique);
+        m_ETypedElement->addEAllStructuralFeatures(m_ETypedElement__unique);
+        m_ETypedElement->addEAttributes(m_ETypedElement__unique);
+        m_ETypedElement->addEAllAttributes(m_ETypedElement__unique);
     }
     {
-        ::ecore::EAttribute_ptr ef = ecoreFactory->createEAttribute();
-        ef->setName("lowerBound");
-        m_ETypedElement->addEStructuralFeatures(ef);
-        m_ETypedElement->addEAllStructuralFeatures(ef);
-        m_ETypedElement->addEAttributes(ef);
-        m_ETypedElement->addEAllAttributes(ef);
+        m_ETypedElement__lowerBound = ecoreFactory->createEAttribute();
+        m_ETypedElement__lowerBound->setName("lowerBound");
+        m_ETypedElement->addEStructuralFeatures(m_ETypedElement__lowerBound);
+        m_ETypedElement->addEAllStructuralFeatures(m_ETypedElement__lowerBound);
+        m_ETypedElement->addEAttributes(m_ETypedElement__lowerBound);
+        m_ETypedElement->addEAllAttributes(m_ETypedElement__lowerBound);
     }
     {
-        ::ecore::EAttribute_ptr ef = ecoreFactory->createEAttribute();
-        ef->setName("upperBound");
-        m_ETypedElement->addEStructuralFeatures(ef);
-        m_ETypedElement->addEAllStructuralFeatures(ef);
-        m_ETypedElement->addEAttributes(ef);
-        m_ETypedElement->addEAllAttributes(ef);
+        m_ETypedElement__upperBound = ecoreFactory->createEAttribute();
+        m_ETypedElement__upperBound->setName("upperBound");
+        m_ETypedElement->addEStructuralFeatures(m_ETypedElement__upperBound);
+        m_ETypedElement->addEAllStructuralFeatures(m_ETypedElement__upperBound);
+        m_ETypedElement->addEAttributes(m_ETypedElement__upperBound);
+        m_ETypedElement->addEAllAttributes(m_ETypedElement__upperBound);
     }
     {
-        ::ecore::EAttribute_ptr ef = ecoreFactory->createEAttribute();
-        ef->setName("many");
-        m_ETypedElement->addEStructuralFeatures(ef);
-        m_ETypedElement->addEAllStructuralFeatures(ef);
-        m_ETypedElement->addEAttributes(ef);
-        m_ETypedElement->addEAllAttributes(ef);
+        m_ETypedElement__many = ecoreFactory->createEAttribute();
+        m_ETypedElement__many->setName("many");
+        m_ETypedElement->addEStructuralFeatures(m_ETypedElement__many);
+        m_ETypedElement->addEAllStructuralFeatures(m_ETypedElement__many);
+        m_ETypedElement->addEAttributes(m_ETypedElement__many);
+        m_ETypedElement->addEAllAttributes(m_ETypedElement__many);
     }
     {
-        ::ecore::EAttribute_ptr ef = ecoreFactory->createEAttribute();
-        ef->setName("required");
-        m_ETypedElement->addEStructuralFeatures(ef);
-        m_ETypedElement->addEAllStructuralFeatures(ef);
-        m_ETypedElement->addEAttributes(ef);
-        m_ETypedElement->addEAllAttributes(ef);
+        m_ETypedElement__required = ecoreFactory->createEAttribute();
+        m_ETypedElement__required->setName("required");
+        m_ETypedElement->addEStructuralFeatures(m_ETypedElement__required);
+        m_ETypedElement->addEAllStructuralFeatures(m_ETypedElement__required);
+        m_ETypedElement->addEAttributes(m_ETypedElement__required);
+        m_ETypedElement->addEAllAttributes(m_ETypedElement__required);
     }
     {
-        ::ecore::EReference_ptr ef = ecoreFactory->createEReference();
-        ef->setName("eType");
-        m_ETypedElement->addEStructuralFeatures(ef);
-        m_ETypedElement->addEAllStructuralFeatures(ef);
-        m_ETypedElement->addEReferences(ef);
-        m_ETypedElement->addEAllReferences(ef);
+        m_ETypedElement__eType = ecoreFactory->createEReference();
+        m_ETypedElement__eType->setName("eType");
+        m_ETypedElement->addEStructuralFeatures(m_ETypedElement__eType);
+        m_ETypedElement->addEAllStructuralFeatures(m_ETypedElement__eType);
+        m_ETypedElement->addEReferences(m_ETypedElement__eType);
+        m_ETypedElement->addEAllReferences(m_ETypedElement__eType);
     }
     {
-        ::ecore::EReference_ptr ef = ecoreFactory->createEReference();
-        ef->setName("eGenericType");
-        m_ETypedElement->addEStructuralFeatures(ef);
-        m_ETypedElement->addEAllStructuralFeatures(ef);
-        m_ETypedElement->addEReferences(ef);
-        m_ETypedElement->addEAllReferences(ef);
+        m_ETypedElement__eGenericType = ecoreFactory->createEReference();
+        m_ETypedElement__eGenericType->setName("eGenericType");
+        m_ETypedElement->addEStructuralFeatures(m_ETypedElement__eGenericType);
+        m_ETypedElement->addEAllStructuralFeatures(m_ETypedElement__eGenericType);
+        m_ETypedElement->addEReferences(m_ETypedElement__eGenericType);
+        m_ETypedElement->addEAllReferences(m_ETypedElement__eGenericType);
     }
     {
-        ::ecore::EAttribute_ptr ef = ecoreFactory->createEAttribute();
-        ef->setName("key");
-        m_EStringToStringMapEntry->addEStructuralFeatures(ef);
-        m_EStringToStringMapEntry->addEAllStructuralFeatures(ef);
-        m_EStringToStringMapEntry->addEAttributes(ef);
-        m_EStringToStringMapEntry->addEAllAttributes(ef);
+        m_EStringToStringMapEntry__key = ecoreFactory->createEAttribute();
+        m_EStringToStringMapEntry__key->setName("key");
+        m_EStringToStringMapEntry->addEStructuralFeatures(m_EStringToStringMapEntry__key);
+        m_EStringToStringMapEntry->addEAllStructuralFeatures(m_EStringToStringMapEntry__key);
+        m_EStringToStringMapEntry->addEAttributes(m_EStringToStringMapEntry__key);
+        m_EStringToStringMapEntry->addEAllAttributes(m_EStringToStringMapEntry__key);
     }
     {
-        ::ecore::EAttribute_ptr ef = ecoreFactory->createEAttribute();
-        ef->setName("value");
-        m_EStringToStringMapEntry->addEStructuralFeatures(ef);
-        m_EStringToStringMapEntry->addEAllStructuralFeatures(ef);
-        m_EStringToStringMapEntry->addEAttributes(ef);
-        m_EStringToStringMapEntry->addEAllAttributes(ef);
+        m_EStringToStringMapEntry__value = ecoreFactory->createEAttribute();
+        m_EStringToStringMapEntry__value->setName("value");
+        m_EStringToStringMapEntry->addEStructuralFeatures(m_EStringToStringMapEntry__value);
+        m_EStringToStringMapEntry->addEAllStructuralFeatures(m_EStringToStringMapEntry__value);
+        m_EStringToStringMapEntry->addEAttributes(m_EStringToStringMapEntry__value);
+        m_EStringToStringMapEntry->addEAllAttributes(m_EStringToStringMapEntry__value);
     }
     {
-        ::ecore::EReference_ptr ef = ecoreFactory->createEReference();
-        ef->setName("eUpperBound");
-        m_EGenericType->addEStructuralFeatures(ef);
-        m_EGenericType->addEAllStructuralFeatures(ef);
-        m_EGenericType->addEReferences(ef);
-        m_EGenericType->addEAllReferences(ef);
+        m_EGenericType__eUpperBound = ecoreFactory->createEReference();
+        m_EGenericType__eUpperBound->setName("eUpperBound");
+        m_EGenericType->addEStructuralFeatures(m_EGenericType__eUpperBound);
+        m_EGenericType->addEAllStructuralFeatures(m_EGenericType__eUpperBound);
+        m_EGenericType->addEReferences(m_EGenericType__eUpperBound);
+        m_EGenericType->addEAllReferences(m_EGenericType__eUpperBound);
     }
     {
-        ::ecore::EReference_ptr ef = ecoreFactory->createEReference();
-        ef->setName("eTypeArguments");
-        m_EGenericType->addEStructuralFeatures(ef);
-        m_EGenericType->addEAllStructuralFeatures(ef);
-        m_EGenericType->addEReferences(ef);
-        m_EGenericType->addEAllReferences(ef);
+        m_EGenericType__eTypeArguments = ecoreFactory->createEReference();
+        m_EGenericType__eTypeArguments->setName("eTypeArguments");
+        m_EGenericType->addEStructuralFeatures(m_EGenericType__eTypeArguments);
+        m_EGenericType->addEAllStructuralFeatures(m_EGenericType__eTypeArguments);
+        m_EGenericType->addEReferences(m_EGenericType__eTypeArguments);
+        m_EGenericType->addEAllReferences(m_EGenericType__eTypeArguments);
     }
     {
-        ::ecore::EReference_ptr ef = ecoreFactory->createEReference();
-        ef->setName("eRawType");
-        m_EGenericType->addEStructuralFeatures(ef);
-        m_EGenericType->addEAllStructuralFeatures(ef);
-        m_EGenericType->addEReferences(ef);
-        m_EGenericType->addEAllReferences(ef);
+        m_EGenericType__eRawType = ecoreFactory->createEReference();
+        m_EGenericType__eRawType->setName("eRawType");
+        m_EGenericType->addEStructuralFeatures(m_EGenericType__eRawType);
+        m_EGenericType->addEAllStructuralFeatures(m_EGenericType__eRawType);
+        m_EGenericType->addEReferences(m_EGenericType__eRawType);
+        m_EGenericType->addEAllReferences(m_EGenericType__eRawType);
     }
     {
-        ::ecore::EReference_ptr ef = ecoreFactory->createEReference();
-        ef->setName("eLowerBound");
-        m_EGenericType->addEStructuralFeatures(ef);
-        m_EGenericType->addEAllStructuralFeatures(ef);
-        m_EGenericType->addEReferences(ef);
-        m_EGenericType->addEAllReferences(ef);
+        m_EGenericType__eLowerBound = ecoreFactory->createEReference();
+        m_EGenericType__eLowerBound->setName("eLowerBound");
+        m_EGenericType->addEStructuralFeatures(m_EGenericType__eLowerBound);
+        m_EGenericType->addEAllStructuralFeatures(m_EGenericType__eLowerBound);
+        m_EGenericType->addEReferences(m_EGenericType__eLowerBound);
+        m_EGenericType->addEAllReferences(m_EGenericType__eLowerBound);
     }
     {
-        ::ecore::EReference_ptr ef = ecoreFactory->createEReference();
-        ef->setName("eTypeParameter");
-        m_EGenericType->addEStructuralFeatures(ef);
-        m_EGenericType->addEAllStructuralFeatures(ef);
-        m_EGenericType->addEReferences(ef);
-        m_EGenericType->addEAllReferences(ef);
+        m_EGenericType__eTypeParameter = ecoreFactory->createEReference();
+        m_EGenericType__eTypeParameter->setName("eTypeParameter");
+        m_EGenericType->addEStructuralFeatures(m_EGenericType__eTypeParameter);
+        m_EGenericType->addEAllStructuralFeatures(m_EGenericType__eTypeParameter);
+        m_EGenericType->addEReferences(m_EGenericType__eTypeParameter);
+        m_EGenericType->addEAllReferences(m_EGenericType__eTypeParameter);
     }
     {
-        ::ecore::EReference_ptr ef = ecoreFactory->createEReference();
-        ef->setName("eClassifier");
-        m_EGenericType->addEStructuralFeatures(ef);
-        m_EGenericType->addEAllStructuralFeatures(ef);
-        m_EGenericType->addEReferences(ef);
-        m_EGenericType->addEAllReferences(ef);
+        m_EGenericType__eClassifier = ecoreFactory->createEReference();
+        m_EGenericType__eClassifier->setName("eClassifier");
+        m_EGenericType->addEStructuralFeatures(m_EGenericType__eClassifier);
+        m_EGenericType->addEAllStructuralFeatures(m_EGenericType__eClassifier);
+        m_EGenericType->addEReferences(m_EGenericType__eClassifier);
+        m_EGenericType->addEAllReferences(m_EGenericType__eClassifier);
     }
     {
-        ::ecore::EReference_ptr ef = ecoreFactory->createEReference();
-        ef->setName("eBounds");
-        m_ETypeParameter->addEStructuralFeatures(ef);
-        m_ETypeParameter->addEAllStructuralFeatures(ef);
-        m_ETypeParameter->addEReferences(ef);
-        m_ETypeParameter->addEAllReferences(ef);
+        m_ETypeParameter__eBounds = ecoreFactory->createEReference();
+        m_ETypeParameter__eBounds->setName("eBounds");
+        m_ETypeParameter->addEStructuralFeatures(m_ETypeParameter__eBounds);
+        m_ETypeParameter->addEAllStructuralFeatures(m_ETypeParameter__eBounds);
+        m_ETypeParameter->addEReferences(m_ETypeParameter__eBounds);
+        m_ETypeParameter->addEAllReferences(m_ETypeParameter__eBounds);
     }
 	
 	m_EAttribute->addESuperTypes(m_EStructuralFeature);
@@ -1708,9 +1708,19 @@ e4c::tag_t EcorePackage::getTag_EAttribute__iD() const
 	return e4c::tag< EAttribute__iD_tag >::get();
 }
 
+ecore::EAttribute_ptr EcorePackage::getEAttribute__iD() const
+{
+	return m_EAttribute__iD;
+}
+
 e4c::tag_t EcorePackage::getTag_EAttribute__eAttributeType() const
 {
 	return e4c::tag< EAttribute__eAttributeType_tag >::get();
+}
+
+ecore::EReference_ptr EcorePackage::getEAttribute__eAttributeType() const
+{
+	return m_EAttribute__eAttributeType;
 }
 
 e4c::tag_t EcorePackage::getTag_EAnnotation__source() const
@@ -1718,9 +1728,19 @@ e4c::tag_t EcorePackage::getTag_EAnnotation__source() const
 	return e4c::tag< EAnnotation__source_tag >::get();
 }
 
+ecore::EAttribute_ptr EcorePackage::getEAnnotation__source() const
+{
+	return m_EAnnotation__source;
+}
+
 e4c::tag_t EcorePackage::getTag_EAnnotation__details() const
 {
 	return e4c::tag< EAnnotation__details_tag >::get();
+}
+
+ecore::EReference_ptr EcorePackage::getEAnnotation__details() const
+{
+	return m_EAnnotation__details;
 }
 
 e4c::tag_t EcorePackage::getTag_EAnnotation__eModelElement() const
@@ -1728,9 +1748,19 @@ e4c::tag_t EcorePackage::getTag_EAnnotation__eModelElement() const
 	return e4c::tag< EAnnotation__eModelElement_tag >::get();
 }
 
+ecore::EReference_ptr EcorePackage::getEAnnotation__eModelElement() const
+{
+	return m_EAnnotation__eModelElement;
+}
+
 e4c::tag_t EcorePackage::getTag_EAnnotation__contents() const
 {
 	return e4c::tag< EAnnotation__contents_tag >::get();
+}
+
+ecore::EReference_ptr EcorePackage::getEAnnotation__contents() const
+{
+	return m_EAnnotation__contents;
 }
 
 e4c::tag_t EcorePackage::getTag_EAnnotation__references() const
@@ -1738,9 +1768,19 @@ e4c::tag_t EcorePackage::getTag_EAnnotation__references() const
 	return e4c::tag< EAnnotation__references_tag >::get();
 }
 
+ecore::EReference_ptr EcorePackage::getEAnnotation__references() const
+{
+	return m_EAnnotation__references;
+}
+
 e4c::tag_t EcorePackage::getTag_EClass__abstract() const
 {
 	return e4c::tag< EClass__abstract_tag >::get();
+}
+
+ecore::EAttribute_ptr EcorePackage::getEClass__abstract() const
+{
+	return m_EClass__abstract;
 }
 
 e4c::tag_t EcorePackage::getTag_EClass__interface() const
@@ -1748,9 +1788,19 @@ e4c::tag_t EcorePackage::getTag_EClass__interface() const
 	return e4c::tag< EClass__interface_tag >::get();
 }
 
+ecore::EAttribute_ptr EcorePackage::getEClass__interface() const
+{
+	return m_EClass__interface;
+}
+
 e4c::tag_t EcorePackage::getTag_EClass__eSuperTypes() const
 {
 	return e4c::tag< EClass__eSuperTypes_tag >::get();
+}
+
+ecore::EReference_ptr EcorePackage::getEClass__eSuperTypes() const
+{
+	return m_EClass__eSuperTypes;
 }
 
 e4c::tag_t EcorePackage::getTag_EClass__eOperations() const
@@ -1758,9 +1808,19 @@ e4c::tag_t EcorePackage::getTag_EClass__eOperations() const
 	return e4c::tag< EClass__eOperations_tag >::get();
 }
 
+ecore::EReference_ptr EcorePackage::getEClass__eOperations() const
+{
+	return m_EClass__eOperations;
+}
+
 e4c::tag_t EcorePackage::getTag_EClass__eAllAttributes() const
 {
 	return e4c::tag< EClass__eAllAttributes_tag >::get();
+}
+
+ecore::EReference_ptr EcorePackage::getEClass__eAllAttributes() const
+{
+	return m_EClass__eAllAttributes;
 }
 
 e4c::tag_t EcorePackage::getTag_EClass__eAllReferences() const
@@ -1768,9 +1828,19 @@ e4c::tag_t EcorePackage::getTag_EClass__eAllReferences() const
 	return e4c::tag< EClass__eAllReferences_tag >::get();
 }
 
+ecore::EReference_ptr EcorePackage::getEClass__eAllReferences() const
+{
+	return m_EClass__eAllReferences;
+}
+
 e4c::tag_t EcorePackage::getTag_EClass__eReferences() const
 {
 	return e4c::tag< EClass__eReferences_tag >::get();
+}
+
+ecore::EReference_ptr EcorePackage::getEClass__eReferences() const
+{
+	return m_EClass__eReferences;
 }
 
 e4c::tag_t EcorePackage::getTag_EClass__eAttributes() const
@@ -1778,9 +1848,19 @@ e4c::tag_t EcorePackage::getTag_EClass__eAttributes() const
 	return e4c::tag< EClass__eAttributes_tag >::get();
 }
 
+ecore::EReference_ptr EcorePackage::getEClass__eAttributes() const
+{
+	return m_EClass__eAttributes;
+}
+
 e4c::tag_t EcorePackage::getTag_EClass__eAllContainments() const
 {
 	return e4c::tag< EClass__eAllContainments_tag >::get();
+}
+
+ecore::EReference_ptr EcorePackage::getEClass__eAllContainments() const
+{
+	return m_EClass__eAllContainments;
 }
 
 e4c::tag_t EcorePackage::getTag_EClass__eAllOperations() const
@@ -1788,9 +1868,19 @@ e4c::tag_t EcorePackage::getTag_EClass__eAllOperations() const
 	return e4c::tag< EClass__eAllOperations_tag >::get();
 }
 
+ecore::EReference_ptr EcorePackage::getEClass__eAllOperations() const
+{
+	return m_EClass__eAllOperations;
+}
+
 e4c::tag_t EcorePackage::getTag_EClass__eAllStructuralFeatures() const
 {
 	return e4c::tag< EClass__eAllStructuralFeatures_tag >::get();
+}
+
+ecore::EReference_ptr EcorePackage::getEClass__eAllStructuralFeatures() const
+{
+	return m_EClass__eAllStructuralFeatures;
 }
 
 e4c::tag_t EcorePackage::getTag_EClass__eAllSuperTypes() const
@@ -1798,9 +1888,19 @@ e4c::tag_t EcorePackage::getTag_EClass__eAllSuperTypes() const
 	return e4c::tag< EClass__eAllSuperTypes_tag >::get();
 }
 
+ecore::EReference_ptr EcorePackage::getEClass__eAllSuperTypes() const
+{
+	return m_EClass__eAllSuperTypes;
+}
+
 e4c::tag_t EcorePackage::getTag_EClass__eIDAttribute() const
 {
 	return e4c::tag< EClass__eIDAttribute_tag >::get();
+}
+
+ecore::EReference_ptr EcorePackage::getEClass__eIDAttribute() const
+{
+	return m_EClass__eIDAttribute;
 }
 
 e4c::tag_t EcorePackage::getTag_EClass__eStructuralFeatures() const
@@ -1808,9 +1908,19 @@ e4c::tag_t EcorePackage::getTag_EClass__eStructuralFeatures() const
 	return e4c::tag< EClass__eStructuralFeatures_tag >::get();
 }
 
+ecore::EReference_ptr EcorePackage::getEClass__eStructuralFeatures() const
+{
+	return m_EClass__eStructuralFeatures;
+}
+
 e4c::tag_t EcorePackage::getTag_EClass__eGenericSuperTypes() const
 {
 	return e4c::tag< EClass__eGenericSuperTypes_tag >::get();
+}
+
+ecore::EReference_ptr EcorePackage::getEClass__eGenericSuperTypes() const
+{
+	return m_EClass__eGenericSuperTypes;
 }
 
 e4c::tag_t EcorePackage::getTag_EClass__eAllGenericSuperTypes() const
@@ -1818,9 +1928,19 @@ e4c::tag_t EcorePackage::getTag_EClass__eAllGenericSuperTypes() const
 	return e4c::tag< EClass__eAllGenericSuperTypes_tag >::get();
 }
 
+ecore::EReference_ptr EcorePackage::getEClass__eAllGenericSuperTypes() const
+{
+	return m_EClass__eAllGenericSuperTypes;
+}
+
 e4c::tag_t EcorePackage::getTag_EClassifier__instanceClassName() const
 {
 	return e4c::tag< EClassifier__instanceClassName_tag >::get();
+}
+
+ecore::EAttribute_ptr EcorePackage::getEClassifier__instanceClassName() const
+{
+	return m_EClassifier__instanceClassName;
 }
 
 e4c::tag_t EcorePackage::getTag_EClassifier__instanceClass() const
@@ -1828,9 +1948,19 @@ e4c::tag_t EcorePackage::getTag_EClassifier__instanceClass() const
 	return e4c::tag< EClassifier__instanceClass_tag >::get();
 }
 
+ecore::EAttribute_ptr EcorePackage::getEClassifier__instanceClass() const
+{
+	return m_EClassifier__instanceClass;
+}
+
 e4c::tag_t EcorePackage::getTag_EClassifier__defaultValue() const
 {
 	return e4c::tag< EClassifier__defaultValue_tag >::get();
+}
+
+ecore::EAttribute_ptr EcorePackage::getEClassifier__defaultValue() const
+{
+	return m_EClassifier__defaultValue;
 }
 
 e4c::tag_t EcorePackage::getTag_EClassifier__instanceTypeName() const
@@ -1838,9 +1968,19 @@ e4c::tag_t EcorePackage::getTag_EClassifier__instanceTypeName() const
 	return e4c::tag< EClassifier__instanceTypeName_tag >::get();
 }
 
+ecore::EAttribute_ptr EcorePackage::getEClassifier__instanceTypeName() const
+{
+	return m_EClassifier__instanceTypeName;
+}
+
 e4c::tag_t EcorePackage::getTag_EClassifier__ePackage() const
 {
 	return e4c::tag< EClassifier__ePackage_tag >::get();
+}
+
+ecore::EReference_ptr EcorePackage::getEClassifier__ePackage() const
+{
+	return m_EClassifier__ePackage;
 }
 
 e4c::tag_t EcorePackage::getTag_EClassifier__eTypeParameters() const
@@ -1848,9 +1988,19 @@ e4c::tag_t EcorePackage::getTag_EClassifier__eTypeParameters() const
 	return e4c::tag< EClassifier__eTypeParameters_tag >::get();
 }
 
+ecore::EReference_ptr EcorePackage::getEClassifier__eTypeParameters() const
+{
+	return m_EClassifier__eTypeParameters;
+}
+
 e4c::tag_t EcorePackage::getTag_EDataType__serializable() const
 {
 	return e4c::tag< EDataType__serializable_tag >::get();
+}
+
+ecore::EAttribute_ptr EcorePackage::getEDataType__serializable() const
+{
+	return m_EDataType__serializable;
 }
 
 e4c::tag_t EcorePackage::getTag_EEnum__eLiterals() const
@@ -1858,9 +2008,19 @@ e4c::tag_t EcorePackage::getTag_EEnum__eLiterals() const
 	return e4c::tag< EEnum__eLiterals_tag >::get();
 }
 
+ecore::EReference_ptr EcorePackage::getEEnum__eLiterals() const
+{
+	return m_EEnum__eLiterals;
+}
+
 e4c::tag_t EcorePackage::getTag_EEnumLiteral__value() const
 {
 	return e4c::tag< EEnumLiteral__value_tag >::get();
+}
+
+ecore::EAttribute_ptr EcorePackage::getEEnumLiteral__value() const
+{
+	return m_EEnumLiteral__value;
 }
 
 e4c::tag_t EcorePackage::getTag_EEnumLiteral__instance() const
@@ -1868,9 +2028,19 @@ e4c::tag_t EcorePackage::getTag_EEnumLiteral__instance() const
 	return e4c::tag< EEnumLiteral__instance_tag >::get();
 }
 
+ecore::EAttribute_ptr EcorePackage::getEEnumLiteral__instance() const
+{
+	return m_EEnumLiteral__instance;
+}
+
 e4c::tag_t EcorePackage::getTag_EEnumLiteral__literal() const
 {
 	return e4c::tag< EEnumLiteral__literal_tag >::get();
+}
+
+ecore::EAttribute_ptr EcorePackage::getEEnumLiteral__literal() const
+{
+	return m_EEnumLiteral__literal;
 }
 
 e4c::tag_t EcorePackage::getTag_EEnumLiteral__eEnum() const
@@ -1878,9 +2048,19 @@ e4c::tag_t EcorePackage::getTag_EEnumLiteral__eEnum() const
 	return e4c::tag< EEnumLiteral__eEnum_tag >::get();
 }
 
+ecore::EReference_ptr EcorePackage::getEEnumLiteral__eEnum() const
+{
+	return m_EEnumLiteral__eEnum;
+}
+
 e4c::tag_t EcorePackage::getTag_EFactory__ePackage() const
 {
 	return e4c::tag< EFactory__ePackage_tag >::get();
+}
+
+ecore::EReference_ptr EcorePackage::getEFactory__ePackage() const
+{
+	return m_EFactory__ePackage;
 }
 
 e4c::tag_t EcorePackage::getTag_EModelElement__eAnnotations() const
@@ -1888,9 +2068,19 @@ e4c::tag_t EcorePackage::getTag_EModelElement__eAnnotations() const
 	return e4c::tag< EModelElement__eAnnotations_tag >::get();
 }
 
+ecore::EReference_ptr EcorePackage::getEModelElement__eAnnotations() const
+{
+	return m_EModelElement__eAnnotations;
+}
+
 e4c::tag_t EcorePackage::getTag_ENamedElement__name() const
 {
 	return e4c::tag< ENamedElement__name_tag >::get();
+}
+
+ecore::EAttribute_ptr EcorePackage::getENamedElement__name() const
+{
+	return m_ENamedElement__name;
 }
 
 e4c::tag_t EcorePackage::getTag_EOperation__eContainingClass() const
@@ -1898,9 +2088,19 @@ e4c::tag_t EcorePackage::getTag_EOperation__eContainingClass() const
 	return e4c::tag< EOperation__eContainingClass_tag >::get();
 }
 
+ecore::EReference_ptr EcorePackage::getEOperation__eContainingClass() const
+{
+	return m_EOperation__eContainingClass;
+}
+
 e4c::tag_t EcorePackage::getTag_EOperation__eTypeParameters() const
 {
 	return e4c::tag< EOperation__eTypeParameters_tag >::get();
+}
+
+ecore::EReference_ptr EcorePackage::getEOperation__eTypeParameters() const
+{
+	return m_EOperation__eTypeParameters;
 }
 
 e4c::tag_t EcorePackage::getTag_EOperation__eParameters() const
@@ -1908,9 +2108,19 @@ e4c::tag_t EcorePackage::getTag_EOperation__eParameters() const
 	return e4c::tag< EOperation__eParameters_tag >::get();
 }
 
+ecore::EReference_ptr EcorePackage::getEOperation__eParameters() const
+{
+	return m_EOperation__eParameters;
+}
+
 e4c::tag_t EcorePackage::getTag_EOperation__eExceptions() const
 {
 	return e4c::tag< EOperation__eExceptions_tag >::get();
+}
+
+ecore::EReference_ptr EcorePackage::getEOperation__eExceptions() const
+{
+	return m_EOperation__eExceptions;
 }
 
 e4c::tag_t EcorePackage::getTag_EOperation__eGenericExceptions() const
@@ -1918,9 +2128,19 @@ e4c::tag_t EcorePackage::getTag_EOperation__eGenericExceptions() const
 	return e4c::tag< EOperation__eGenericExceptions_tag >::get();
 }
 
+ecore::EReference_ptr EcorePackage::getEOperation__eGenericExceptions() const
+{
+	return m_EOperation__eGenericExceptions;
+}
+
 e4c::tag_t EcorePackage::getTag_EPackage__nsURI() const
 {
 	return e4c::tag< EPackage__nsURI_tag >::get();
+}
+
+ecore::EAttribute_ptr EcorePackage::getEPackage__nsURI() const
+{
+	return m_EPackage__nsURI;
 }
 
 e4c::tag_t EcorePackage::getTag_EPackage__nsPrefix() const
@@ -1928,9 +2148,19 @@ e4c::tag_t EcorePackage::getTag_EPackage__nsPrefix() const
 	return e4c::tag< EPackage__nsPrefix_tag >::get();
 }
 
+ecore::EAttribute_ptr EcorePackage::getEPackage__nsPrefix() const
+{
+	return m_EPackage__nsPrefix;
+}
+
 e4c::tag_t EcorePackage::getTag_EPackage__eFactoryInstance() const
 {
 	return e4c::tag< EPackage__eFactoryInstance_tag >::get();
+}
+
+ecore::EReference_ptr EcorePackage::getEPackage__eFactoryInstance() const
+{
+	return m_EPackage__eFactoryInstance;
 }
 
 e4c::tag_t EcorePackage::getTag_EPackage__eClassifiers() const
@@ -1938,9 +2168,19 @@ e4c::tag_t EcorePackage::getTag_EPackage__eClassifiers() const
 	return e4c::tag< EPackage__eClassifiers_tag >::get();
 }
 
+ecore::EReference_ptr EcorePackage::getEPackage__eClassifiers() const
+{
+	return m_EPackage__eClassifiers;
+}
+
 e4c::tag_t EcorePackage::getTag_EPackage__eSubpackages() const
 {
 	return e4c::tag< EPackage__eSubpackages_tag >::get();
+}
+
+ecore::EReference_ptr EcorePackage::getEPackage__eSubpackages() const
+{
+	return m_EPackage__eSubpackages;
 }
 
 e4c::tag_t EcorePackage::getTag_EPackage__eSuperPackage() const
@@ -1948,9 +2188,19 @@ e4c::tag_t EcorePackage::getTag_EPackage__eSuperPackage() const
 	return e4c::tag< EPackage__eSuperPackage_tag >::get();
 }
 
+ecore::EReference_ptr EcorePackage::getEPackage__eSuperPackage() const
+{
+	return m_EPackage__eSuperPackage;
+}
+
 e4c::tag_t EcorePackage::getTag_EParameter__eOperation() const
 {
 	return e4c::tag< EParameter__eOperation_tag >::get();
+}
+
+ecore::EReference_ptr EcorePackage::getEParameter__eOperation() const
+{
+	return m_EParameter__eOperation;
 }
 
 e4c::tag_t EcorePackage::getTag_EReference__containment() const
@@ -1958,9 +2208,19 @@ e4c::tag_t EcorePackage::getTag_EReference__containment() const
 	return e4c::tag< EReference__containment_tag >::get();
 }
 
+ecore::EAttribute_ptr EcorePackage::getEReference__containment() const
+{
+	return m_EReference__containment;
+}
+
 e4c::tag_t EcorePackage::getTag_EReference__container() const
 {
 	return e4c::tag< EReference__container_tag >::get();
+}
+
+ecore::EAttribute_ptr EcorePackage::getEReference__container() const
+{
+	return m_EReference__container;
 }
 
 e4c::tag_t EcorePackage::getTag_EReference__resolveProxies() const
@@ -1968,9 +2228,19 @@ e4c::tag_t EcorePackage::getTag_EReference__resolveProxies() const
 	return e4c::tag< EReference__resolveProxies_tag >::get();
 }
 
+ecore::EAttribute_ptr EcorePackage::getEReference__resolveProxies() const
+{
+	return m_EReference__resolveProxies;
+}
+
 e4c::tag_t EcorePackage::getTag_EReference__eOpposite() const
 {
 	return e4c::tag< EReference__eOpposite_tag >::get();
+}
+
+ecore::EReference_ptr EcorePackage::getEReference__eOpposite() const
+{
+	return m_EReference__eOpposite;
 }
 
 e4c::tag_t EcorePackage::getTag_EReference__eReferenceType() const
@@ -1978,9 +2248,19 @@ e4c::tag_t EcorePackage::getTag_EReference__eReferenceType() const
 	return e4c::tag< EReference__eReferenceType_tag >::get();
 }
 
+ecore::EReference_ptr EcorePackage::getEReference__eReferenceType() const
+{
+	return m_EReference__eReferenceType;
+}
+
 e4c::tag_t EcorePackage::getTag_EReference__eKeys() const
 {
 	return e4c::tag< EReference__eKeys_tag >::get();
+}
+
+ecore::EReference_ptr EcorePackage::getEReference__eKeys() const
+{
+	return m_EReference__eKeys;
 }
 
 e4c::tag_t EcorePackage::getTag_EStructuralFeature__changeable() const
@@ -1988,9 +2268,19 @@ e4c::tag_t EcorePackage::getTag_EStructuralFeature__changeable() const
 	return e4c::tag< EStructuralFeature__changeable_tag >::get();
 }
 
+ecore::EAttribute_ptr EcorePackage::getEStructuralFeature__changeable() const
+{
+	return m_EStructuralFeature__changeable;
+}
+
 e4c::tag_t EcorePackage::getTag_EStructuralFeature__volatile() const
 {
 	return e4c::tag< EStructuralFeature__volatile_tag >::get();
+}
+
+ecore::EAttribute_ptr EcorePackage::getEStructuralFeature__volatile() const
+{
+	return m_EStructuralFeature__volatile;
 }
 
 e4c::tag_t EcorePackage::getTag_EStructuralFeature__transient() const
@@ -1998,9 +2288,19 @@ e4c::tag_t EcorePackage::getTag_EStructuralFeature__transient() const
 	return e4c::tag< EStructuralFeature__transient_tag >::get();
 }
 
+ecore::EAttribute_ptr EcorePackage::getEStructuralFeature__transient() const
+{
+	return m_EStructuralFeature__transient;
+}
+
 e4c::tag_t EcorePackage::getTag_EStructuralFeature__defaultValueLiteral() const
 {
 	return e4c::tag< EStructuralFeature__defaultValueLiteral_tag >::get();
+}
+
+ecore::EAttribute_ptr EcorePackage::getEStructuralFeature__defaultValueLiteral() const
+{
+	return m_EStructuralFeature__defaultValueLiteral;
 }
 
 e4c::tag_t EcorePackage::getTag_EStructuralFeature__defaultValue() const
@@ -2008,9 +2308,19 @@ e4c::tag_t EcorePackage::getTag_EStructuralFeature__defaultValue() const
 	return e4c::tag< EStructuralFeature__defaultValue_tag >::get();
 }
 
+ecore::EAttribute_ptr EcorePackage::getEStructuralFeature__defaultValue() const
+{
+	return m_EStructuralFeature__defaultValue;
+}
+
 e4c::tag_t EcorePackage::getTag_EStructuralFeature__unsettable() const
 {
 	return e4c::tag< EStructuralFeature__unsettable_tag >::get();
+}
+
+ecore::EAttribute_ptr EcorePackage::getEStructuralFeature__unsettable() const
+{
+	return m_EStructuralFeature__unsettable;
 }
 
 e4c::tag_t EcorePackage::getTag_EStructuralFeature__derived() const
@@ -2018,9 +2328,19 @@ e4c::tag_t EcorePackage::getTag_EStructuralFeature__derived() const
 	return e4c::tag< EStructuralFeature__derived_tag >::get();
 }
 
+ecore::EAttribute_ptr EcorePackage::getEStructuralFeature__derived() const
+{
+	return m_EStructuralFeature__derived;
+}
+
 e4c::tag_t EcorePackage::getTag_EStructuralFeature__eContainingClass() const
 {
 	return e4c::tag< EStructuralFeature__eContainingClass_tag >::get();
+}
+
+ecore::EReference_ptr EcorePackage::getEStructuralFeature__eContainingClass() const
+{
+	return m_EStructuralFeature__eContainingClass;
 }
 
 e4c::tag_t EcorePackage::getTag_ETypedElement__ordered() const
@@ -2028,9 +2348,19 @@ e4c::tag_t EcorePackage::getTag_ETypedElement__ordered() const
 	return e4c::tag< ETypedElement__ordered_tag >::get();
 }
 
+ecore::EAttribute_ptr EcorePackage::getETypedElement__ordered() const
+{
+	return m_ETypedElement__ordered;
+}
+
 e4c::tag_t EcorePackage::getTag_ETypedElement__unique() const
 {
 	return e4c::tag< ETypedElement__unique_tag >::get();
+}
+
+ecore::EAttribute_ptr EcorePackage::getETypedElement__unique() const
+{
+	return m_ETypedElement__unique;
 }
 
 e4c::tag_t EcorePackage::getTag_ETypedElement__lowerBound() const
@@ -2038,9 +2368,19 @@ e4c::tag_t EcorePackage::getTag_ETypedElement__lowerBound() const
 	return e4c::tag< ETypedElement__lowerBound_tag >::get();
 }
 
+ecore::EAttribute_ptr EcorePackage::getETypedElement__lowerBound() const
+{
+	return m_ETypedElement__lowerBound;
+}
+
 e4c::tag_t EcorePackage::getTag_ETypedElement__upperBound() const
 {
 	return e4c::tag< ETypedElement__upperBound_tag >::get();
+}
+
+ecore::EAttribute_ptr EcorePackage::getETypedElement__upperBound() const
+{
+	return m_ETypedElement__upperBound;
 }
 
 e4c::tag_t EcorePackage::getTag_ETypedElement__many() const
@@ -2048,9 +2388,19 @@ e4c::tag_t EcorePackage::getTag_ETypedElement__many() const
 	return e4c::tag< ETypedElement__many_tag >::get();
 }
 
+ecore::EAttribute_ptr EcorePackage::getETypedElement__many() const
+{
+	return m_ETypedElement__many;
+}
+
 e4c::tag_t EcorePackage::getTag_ETypedElement__required() const
 {
 	return e4c::tag< ETypedElement__required_tag >::get();
+}
+
+ecore::EAttribute_ptr EcorePackage::getETypedElement__required() const
+{
+	return m_ETypedElement__required;
 }
 
 e4c::tag_t EcorePackage::getTag_ETypedElement__eType() const
@@ -2058,9 +2408,19 @@ e4c::tag_t EcorePackage::getTag_ETypedElement__eType() const
 	return e4c::tag< ETypedElement__eType_tag >::get();
 }
 
+ecore::EReference_ptr EcorePackage::getETypedElement__eType() const
+{
+	return m_ETypedElement__eType;
+}
+
 e4c::tag_t EcorePackage::getTag_ETypedElement__eGenericType() const
 {
 	return e4c::tag< ETypedElement__eGenericType_tag >::get();
+}
+
+ecore::EReference_ptr EcorePackage::getETypedElement__eGenericType() const
+{
+	return m_ETypedElement__eGenericType;
 }
 
 e4c::tag_t EcorePackage::getTag_EStringToStringMapEntry__key() const
@@ -2068,9 +2428,19 @@ e4c::tag_t EcorePackage::getTag_EStringToStringMapEntry__key() const
 	return e4c::tag< EStringToStringMapEntry__key_tag >::get();
 }
 
+ecore::EAttribute_ptr EcorePackage::getEStringToStringMapEntry__key() const
+{
+	return m_EStringToStringMapEntry__key;
+}
+
 e4c::tag_t EcorePackage::getTag_EStringToStringMapEntry__value() const
 {
 	return e4c::tag< EStringToStringMapEntry__value_tag >::get();
+}
+
+ecore::EAttribute_ptr EcorePackage::getEStringToStringMapEntry__value() const
+{
+	return m_EStringToStringMapEntry__value;
 }
 
 e4c::tag_t EcorePackage::getTag_EGenericType__eUpperBound() const
@@ -2078,9 +2448,19 @@ e4c::tag_t EcorePackage::getTag_EGenericType__eUpperBound() const
 	return e4c::tag< EGenericType__eUpperBound_tag >::get();
 }
 
+ecore::EReference_ptr EcorePackage::getEGenericType__eUpperBound() const
+{
+	return m_EGenericType__eUpperBound;
+}
+
 e4c::tag_t EcorePackage::getTag_EGenericType__eTypeArguments() const
 {
 	return e4c::tag< EGenericType__eTypeArguments_tag >::get();
+}
+
+ecore::EReference_ptr EcorePackage::getEGenericType__eTypeArguments() const
+{
+	return m_EGenericType__eTypeArguments;
 }
 
 e4c::tag_t EcorePackage::getTag_EGenericType__eRawType() const
@@ -2088,9 +2468,19 @@ e4c::tag_t EcorePackage::getTag_EGenericType__eRawType() const
 	return e4c::tag< EGenericType__eRawType_tag >::get();
 }
 
+ecore::EReference_ptr EcorePackage::getEGenericType__eRawType() const
+{
+	return m_EGenericType__eRawType;
+}
+
 e4c::tag_t EcorePackage::getTag_EGenericType__eLowerBound() const
 {
 	return e4c::tag< EGenericType__eLowerBound_tag >::get();
+}
+
+ecore::EReference_ptr EcorePackage::getEGenericType__eLowerBound() const
+{
+	return m_EGenericType__eLowerBound;
 }
 
 e4c::tag_t EcorePackage::getTag_EGenericType__eTypeParameter() const
@@ -2098,14 +2488,29 @@ e4c::tag_t EcorePackage::getTag_EGenericType__eTypeParameter() const
 	return e4c::tag< EGenericType__eTypeParameter_tag >::get();
 }
 
+ecore::EReference_ptr EcorePackage::getEGenericType__eTypeParameter() const
+{
+	return m_EGenericType__eTypeParameter;
+}
+
 e4c::tag_t EcorePackage::getTag_EGenericType__eClassifier() const
 {
 	return e4c::tag< EGenericType__eClassifier_tag >::get();
 }
 
+ecore::EReference_ptr EcorePackage::getEGenericType__eClassifier() const
+{
+	return m_EGenericType__eClassifier;
+}
+
 e4c::tag_t EcorePackage::getTag_ETypeParameter__eBounds() const
 {
 	return e4c::tag< ETypeParameter__eBounds_tag >::get();
+}
+
+ecore::EReference_ptr EcorePackage::getETypeParameter__eBounds() const
+{
+	return m_ETypeParameter__eBounds;
 }
 
 

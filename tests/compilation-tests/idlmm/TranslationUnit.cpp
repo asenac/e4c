@@ -1,9 +1,13 @@
 
 #include "TranslationUnit.hpp"
+#include <idlmm/IdlmmPackage.hpp>
 #include <idlmm/Contained.hpp>
 #include <idlmm/Include.hpp>
 
 using namespace idlmm;
+
+/*PROTECTED REGION ID(idlmm::TranslationUnit include) START*/
+/*PROTECTED REGION END*/
 
 TranslationUnit::TranslationUnit() : 
 	m_contains(),
@@ -65,3 +69,11 @@ void TranslationUnit::addAllIncludes(const includes_t& includes_)
 
 
 
+/*PROTECTED REGION ID(idlmm::TranslationUnit implementation) START*/
+/*PROTECTED REGION END*/
+
+ecore::EClass_ptr TranslationUnit::eClassImpl() const
+{
+	return IdlmmPackage::_instance()->getTranslationUnit();
+}
+ 

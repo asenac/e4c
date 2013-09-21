@@ -1,8 +1,12 @@
 
 #include "Contained.hpp"
+#include <idlmm/IdlmmPackage.hpp>
 #include <idlmm/Container.hpp>
 
 using namespace idlmm;
+
+/*PROTECTED REGION ID(idlmm::Contained include) START*/
+/*PROTECTED REGION END*/
 
 Contained::Contained() : 
 	m_repositoryId(),
@@ -61,3 +65,11 @@ void Contained::setDefinedIn(definedIn_t definedIn_)
 
 
 
+/*PROTECTED REGION ID(idlmm::Contained implementation) START*/
+/*PROTECTED REGION END*/
+
+ecore::EClass_ptr Contained::eClassImpl() const
+{
+	return IdlmmPackage::_instance()->getContained();
+}
+ 

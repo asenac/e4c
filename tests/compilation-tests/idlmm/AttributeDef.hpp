@@ -37,6 +37,9 @@ public:
 	void setIsReadonly(isReadonly_t _isReadonly);
 	isReadonly_t getIsReadonly() const;
 	
+
+	/*PROTECTED REGION ID(idlmm::AttributeDef public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
@@ -47,6 +50,12 @@ protected:
 	isReadonly_t m_isReadonly;
 
 	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(idlmm::AttributeDef protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // idlmm

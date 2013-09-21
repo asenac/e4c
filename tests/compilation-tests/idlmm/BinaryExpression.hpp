@@ -34,6 +34,9 @@ public:
 	void setOperator(operator_t _operator);
 	operator_t getOperator() const;
 	
+
+	/*PROTECTED REGION ID(idlmm::BinaryExpression public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
@@ -44,6 +47,12 @@ protected:
 	operator_t m_operator;
 
 	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(idlmm::BinaryExpression protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // idlmm

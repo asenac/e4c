@@ -30,6 +30,9 @@ public:
 	void addLabel(idlmm::Expression_ptr label_);
 	void addAllLabel(const label_t& label_);
 	
+
+	/*PROTECTED REGION ID(idlmm::UnionField public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
@@ -39,6 +42,12 @@ protected:
 	std::vector < std::unique_ptr < idlmm::Expression > > m_label;
 
 	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(idlmm::UnionField protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // idlmm

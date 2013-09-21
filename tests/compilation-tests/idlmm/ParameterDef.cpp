@@ -1,7 +1,11 @@
 
 #include "ParameterDef.hpp"
+#include <idlmm/IdlmmPackage.hpp>
 
 using namespace idlmm;
+
+/*PROTECTED REGION ID(idlmm::ParameterDef include) START*/
+/*PROTECTED REGION END*/
 
 ParameterDef::ParameterDef() : 
 	m_identifier(),
@@ -36,3 +40,11 @@ ParameterDef::direction_t ParameterDef::getDirection() const
 
 
 
+/*PROTECTED REGION ID(idlmm::ParameterDef implementation) START*/
+/*PROTECTED REGION END*/
+
+ecore::EClass_ptr ParameterDef::eClassImpl() const
+{
+	return IdlmmPackage::_instance()->getParameterDef();
+}
+ 

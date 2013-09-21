@@ -1,8 +1,12 @@
 
 #include "ArrayDef.hpp"
+#include <idlmm/IdlmmPackage.hpp>
 #include <idlmm/Expression.hpp>
 
 using namespace idlmm;
+
+/*PROTECTED REGION ID(idlmm::ArrayDef include) START*/
+/*PROTECTED REGION END*/
 
 ArrayDef::ArrayDef() : 
 	m_name(),
@@ -45,3 +49,11 @@ void ArrayDef::addAllBounds(const bounds_t& bounds_)
 
 
 
+/*PROTECTED REGION ID(idlmm::ArrayDef implementation) START*/
+/*PROTECTED REGION END*/
+
+ecore::EClass_ptr ArrayDef::eClassImpl() const
+{
+	return IdlmmPackage::_instance()->getArrayDef();
+}
+ 

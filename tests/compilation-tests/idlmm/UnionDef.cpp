@@ -1,10 +1,14 @@
 
 #include "UnionDef.hpp"
+#include <idlmm/IdlmmPackage.hpp>
 #include <idlmm/UnionField.hpp>
 #include <idlmm/IDLType.hpp>
 #include <idlmm/TypedefDef.hpp>
 
 using namespace idlmm;
+
+/*PROTECTED REGION ID(idlmm::UnionDef include) START*/
+/*PROTECTED REGION END*/
 
 UnionDef::UnionDef() : 
 	m_unionMembers(),
@@ -67,3 +71,11 @@ void UnionDef::setSharedDiscrim(sharedDiscrim_t sharedDiscrim_)
 
 
 
+/*PROTECTED REGION ID(idlmm::UnionDef implementation) START*/
+/*PROTECTED REGION END*/
+
+ecore::EClass_ptr UnionDef::eClassImpl() const
+{
+	return IdlmmPackage::_instance()->getUnionDef();
+}
+ 

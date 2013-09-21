@@ -1,7 +1,11 @@
 
 #include "PrimitiveDef.hpp"
+#include <idlmm/IdlmmPackage.hpp>
 
 using namespace idlmm;
+
+/*PROTECTED REGION ID(idlmm::PrimitiveDef include) START*/
+/*PROTECTED REGION END*/
 
 PrimitiveDef::PrimitiveDef() : 
 	m_kind()
@@ -25,3 +29,11 @@ PrimitiveDef::kind_t PrimitiveDef::getKind() const
 
 
 
+/*PROTECTED REGION ID(idlmm::PrimitiveDef implementation) START*/
+/*PROTECTED REGION END*/
+
+ecore::EClass_ptr PrimitiveDef::eClassImpl() const
+{
+	return IdlmmPackage::_instance()->getPrimitiveDef();
+}
+ 

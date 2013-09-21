@@ -30,6 +30,9 @@ public:
 	
 	void setSharedType(sharedType_t sharedType_);
 	
+
+	/*PROTECTED REGION ID(idlmm::Typed public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 	Typed();
@@ -40,6 +43,12 @@ protected:
 	idlmm::TypedefDef_ptr m_sharedType;
 
 	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(idlmm::Typed protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // idlmm

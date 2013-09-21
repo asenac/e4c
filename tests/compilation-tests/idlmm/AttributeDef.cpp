@@ -1,8 +1,12 @@
 
 #include "AttributeDef.hpp"
+#include <idlmm/IdlmmPackage.hpp>
 #include <idlmm/ExceptionDef.hpp>
 
 using namespace idlmm;
+
+/*PROTECTED REGION ID(idlmm::AttributeDef include) START*/
+/*PROTECTED REGION END*/
 
 AttributeDef::AttributeDef() : 
 	m_getRaises(),
@@ -64,3 +68,11 @@ AttributeDef::isReadonly_t AttributeDef::getIsReadonly() const
 
 
 
+/*PROTECTED REGION ID(idlmm::AttributeDef implementation) START*/
+/*PROTECTED REGION END*/
+
+ecore::EClass_ptr AttributeDef::eClassImpl() const
+{
+	return IdlmmPackage::_instance()->getAttributeDef();
+}
+ 

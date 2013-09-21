@@ -26,6 +26,9 @@ public:
 	void setIdentifier(identifier_t _identifier);
 	identifier_t getIdentifier() const;
 	
+
+	/*PROTECTED REGION ID(idlmm::Field public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
@@ -34,6 +37,12 @@ protected:
 	identifier_t m_identifier;
 
 	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(idlmm::Field protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // idlmm

@@ -28,6 +28,9 @@ public:
 	void setValue(value_t _value);
 	value_t getValue() const;
 	
+
+	/*PROTECTED REGION ID(ecore::EStringToStringMapEntry public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
@@ -37,6 +40,12 @@ protected:
 	value_t m_value;
 
 	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(ecore::EStringToStringMapEntry protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // ecore

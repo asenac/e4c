@@ -41,6 +41,9 @@ public:
 	«FOREACH EOperations AS o-»
 	«o.getSignature(false)»;
 	«ENDFOREACH-»
+
+	«PROTECT CSTART '/*' CEND '*/' ID getFQN() + " public" DISABLE»
+	«ENDPROTECT»
 		
 protected:
 «IF abstract-»
@@ -57,6 +60,12 @@ protected:
 		«ENDIF-»
 	void set«e.getNameUpper()»(«e.getName()»_t «e.getName()»_);
 	«ENDFOREACH-»
+	
+	«REM»EObject stuff«ENDREM»
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	«PROTECT CSTART '/*' CEND '*/' ID getFQN() + " protected" DISABLE»
+	«ENDPROTECT»
 };
 
 «EXPAND template::EPackage::namespacesEnd FOR EPackage»
@@ -213,11 +222,15 @@ void «EContainingClass.getName()»::addAll«getNameUpper()»(const «getName()»_t& «
 «DEFINE generateImpl FOR EClass-»
 «FILE getFilePrefix() + ".cpp"»
 #include "«getName()».hpp"
+#include <«EPackage.getFilePrefix()»/«EPackage.getPackage()».hpp>
 «FOREACH EStructuralFeatures.typeSelect(EReference).EReferenceType.toSet() AS e-»
 #include <«e.getFilePrefix()».hpp>
 «ENDFOREACH-»
 
 using namespace «EPackage.getFQN()»;
+
+«PROTECT CSTART '/*' CEND '*/' ID getFQN() + " include" DISABLE»
+«ENDPROTECT»
 
 «getName()»::«getName()»()«IF !EStructuralFeatures.isEmpty-» : 
 	«FOREACH EStructuralFeatures AS e SEPARATOR ",\n    "»m_«e.getName()»()«ENDFOREACH»«ENDIF»
@@ -233,7 +246,7 @@ using namespace «EPackage.getFQN()»;
 «FOREACH EOperations AS o-»
 «o.getSignature(true)»
 {
-	«PROTECT CSTART '/*' CEND '*/' ID o.getSignature(true) DISABLE»
+	«PROTECT CSTART '/*' CEND '*/' ID o.getProtectedRegion() DISABLE»
 	«IF o.EType != null-»
 	return «o.getType()»();
 	«ENDIF-»
@@ -242,5 +255,13 @@ using namespace «EPackage.getFQN()»;
 
 «ENDFOREACH-»
 
+«PROTECT CSTART '/*' CEND '*/' ID getFQN() + " implementation" DISABLE»
+«ENDPROTECT»
+
+ecore::EClass_ptr «getName()»::eClassImpl() const
+{
+	return «EPackage.getPackage()»::_instance()->get«getName()»();
+}
+ 
 «ENDFILE»
 «ENDDEFINE»

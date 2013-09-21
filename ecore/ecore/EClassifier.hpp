@@ -42,6 +42,9 @@ public:
 	
 	ecore::EBoolean isInstance(ecore::EJavaObject object);
 	ecore::EInt getClassifierID();
+
+	/*PROTECTED REGION ID(ecore::EClassifier public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 	EClassifier();
@@ -58,6 +61,12 @@ protected:
 	
 	friend class ::ecore::EPackage;
 	void setEPackage(ePackage_t ePackage_);
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(ecore::EClassifier protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // ecore

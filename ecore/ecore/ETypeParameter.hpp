@@ -27,6 +27,9 @@ public:
 	void addEBounds(ecore::EGenericType_ptr eBounds_);
 	void addAllEBounds(const eBounds_t& eBounds_);
 	
+
+	/*PROTECTED REGION ID(ecore::ETypeParameter public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
@@ -35,6 +38,12 @@ protected:
 	std::vector < std::unique_ptr < ecore::EGenericType > > m_eBounds;
 
 	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(ecore::ETypeParameter protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // ecore

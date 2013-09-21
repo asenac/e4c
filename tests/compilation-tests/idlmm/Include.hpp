@@ -30,6 +30,9 @@ public:
 	
 	void setTranslationUnit(translationUnit_t translationUnit_);
 	
+
+	/*PROTECTED REGION ID(idlmm::Include public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
@@ -39,6 +42,12 @@ protected:
 	idlmm::TranslationUnit_ptr m_translationUnit;
 
 	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(idlmm::Include protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // idlmm

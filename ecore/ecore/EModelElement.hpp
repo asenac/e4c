@@ -26,6 +26,9 @@ public:
 	void addAllEAnnotations(const eAnnotations_t& eAnnotations_);
 	
 	ecore::EAnnotation_ptr getEAnnotation(ecore::EString source);
+
+	/*PROTECTED REGION ID(ecore::EModelElement public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 	EModelElement();
@@ -35,6 +38,12 @@ protected:
 	std::vector < std::unique_ptr < ecore::EAnnotation > > m_eAnnotations;
 
 	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(ecore::EModelElement protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // ecore

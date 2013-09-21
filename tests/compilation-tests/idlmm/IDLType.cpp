@@ -1,7 +1,11 @@
 
 #include "IDLType.hpp"
+#include <idlmm/IdlmmPackage.hpp>
 
 using namespace idlmm;
+
+/*PROTECTED REGION ID(idlmm::IDLType include) START*/
+/*PROTECTED REGION END*/
 
 IDLType::IDLType() : 
 	m_typeCode()
@@ -25,3 +29,11 @@ IDLType::typeCode_t IDLType::getTypeCode() const
 
 
 
+/*PROTECTED REGION ID(idlmm::IDLType implementation) START*/
+/*PROTECTED REGION END*/
+
+ecore::EClass_ptr IDLType::eClassImpl() const
+{
+	return IdlmmPackage::_instance()->getIDLType();
+}
+ 

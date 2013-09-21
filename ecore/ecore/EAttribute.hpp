@@ -30,6 +30,9 @@ public:
 	
 	void setEAttributeType(eAttributeType_t eAttributeType_);
 	
+
+	/*PROTECTED REGION ID(ecore::EAttribute public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
@@ -39,6 +42,12 @@ protected:
 	ecore::EDataType_ptr m_eAttributeType;
 
 	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(ecore::EAttribute protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // ecore

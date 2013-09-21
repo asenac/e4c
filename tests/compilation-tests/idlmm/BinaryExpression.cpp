@@ -1,8 +1,12 @@
 
 #include "BinaryExpression.hpp"
+#include <idlmm/IdlmmPackage.hpp>
 #include <idlmm/Expression.hpp>
 
 using namespace idlmm;
+
+/*PROTECTED REGION ID(idlmm::BinaryExpression include) START*/
+/*PROTECTED REGION END*/
 
 BinaryExpression::BinaryExpression() : 
 	m_left(),
@@ -62,3 +66,11 @@ BinaryExpression::operator_t BinaryExpression::getOperator() const
 
 
 
+/*PROTECTED REGION ID(idlmm::BinaryExpression implementation) START*/
+/*PROTECTED REGION END*/
+
+ecore::EClass_ptr BinaryExpression::eClassImpl() const
+{
+	return IdlmmPackage::_instance()->getBinaryExpression();
+}
+ 

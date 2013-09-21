@@ -1,8 +1,12 @@
 
 #include "ConstantDef.hpp"
+#include <idlmm/IdlmmPackage.hpp>
 #include <idlmm/Expression.hpp>
 
 using namespace idlmm;
+
+/*PROTECTED REGION ID(idlmm::ConstantDef include) START*/
+/*PROTECTED REGION END*/
 
 ConstantDef::ConstantDef() : 
 	m_constValue()
@@ -33,3 +37,11 @@ ConstantDef::constValue_t ConstantDef::releaseConstValue()
 
 
 
+/*PROTECTED REGION ID(idlmm::ConstantDef implementation) START*/
+/*PROTECTED REGION END*/
+
+ecore::EClass_ptr ConstantDef::eClassImpl() const
+{
+	return IdlmmPackage::_instance()->getConstantDef();
+}
+ 

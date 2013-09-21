@@ -1,5 +1,6 @@
 
 #include "EOperation.hpp"
+#include <ecore/EcorePackage.hpp>
 #include <ecore/EClass.hpp>
 #include <ecore/ETypeParameter.hpp>
 #include <ecore/EParameter.hpp>
@@ -7,6 +8,9 @@
 #include <ecore/EGenericType.hpp>
 
 using namespace ecore;
+
+/*PROTECTED REGION ID(ecore::EOperation include) START*/
+/*PROTECTED REGION END*/
 
 EOperation::EOperation() : 
 	m_eContainingClass(),
@@ -110,14 +114,24 @@ void EOperation::addAllEGenericExceptions(const eGenericExceptions_t& eGenericEx
 
 ecore::EInt EOperation::getOperationID()
 {
-	/*PROTECTED REGION ID(ecore::EInt EOperation::getOperationID()) START*/
+	/*PROTECTED REGION ID(ecore::EInt EOperation::getOperationID) START*/
 	return ecore::EInt();
 	/*PROTECTED REGION END*/
 }
+
 ecore::EBoolean EOperation::isOverrideOf(ecore::EOperation_ptr someOperation)
 {
-	/*PROTECTED REGION ID(ecore::EBoolean EOperation::isOverrideOf(ecore::EOperation_ptr someOperation)) START*/
+	/*PROTECTED REGION ID(ecore::EBoolean EOperation::isOverrideOfecore::EOperation_ptr someOperation) START*/
 	return ecore::EBoolean();
 	/*PROTECTED REGION END*/
 }
 
+
+/*PROTECTED REGION ID(ecore::EOperation implementation) START*/
+/*PROTECTED REGION END*/
+
+ecore::EClass_ptr EOperation::eClassImpl() const
+{
+	return EcorePackage::_instance()->getEOperation();
+}
+ 

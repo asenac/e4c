@@ -27,6 +27,9 @@ public:
 	
 	void setDefinition(definition_t definition_);
 	
+
+	/*PROTECTED REGION ID(idlmm::ForwardDef public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
@@ -35,6 +38,12 @@ protected:
 	idlmm::InterfaceDef_ptr m_definition;
 
 	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(idlmm::ForwardDef protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // idlmm

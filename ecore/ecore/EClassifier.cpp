@@ -1,9 +1,13 @@
 
 #include "EClassifier.hpp"
+#include <ecore/EcorePackage.hpp>
 #include <ecore/EPackage.hpp>
 #include <ecore/ETypeParameter.hpp>
 
 using namespace ecore;
+
+/*PROTECTED REGION ID(ecore::EClassifier include) START*/
+/*PROTECTED REGION END*/
 
 EClassifier::EClassifier() : 
 	m_instanceClassName(),
@@ -93,14 +97,24 @@ void EClassifier::addAllETypeParameters(const eTypeParameters_t& eTypeParameters
 
 ecore::EBoolean EClassifier::isInstance(ecore::EJavaObject object)
 {
-	/*PROTECTED REGION ID(ecore::EBoolean EClassifier::isInstance(ecore::EJavaObject object)) START*/
+	/*PROTECTED REGION ID(ecore::EBoolean EClassifier::isInstanceecore::EJavaObject object) START*/
 	return ecore::EBoolean();
 	/*PROTECTED REGION END*/
 }
+
 ecore::EInt EClassifier::getClassifierID()
 {
-	/*PROTECTED REGION ID(ecore::EInt EClassifier::getClassifierID()) START*/
+	/*PROTECTED REGION ID(ecore::EInt EClassifier::getClassifierID) START*/
 	return ecore::EInt();
 	/*PROTECTED REGION END*/
 }
 
+
+/*PROTECTED REGION ID(ecore::EClassifier implementation) START*/
+/*PROTECTED REGION END*/
+
+ecore::EClass_ptr EClassifier::eClassImpl() const
+{
+	return EcorePackage::_instance()->getEClassifier();
+}
+ 

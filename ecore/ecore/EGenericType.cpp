@@ -1,10 +1,14 @@
 
 #include "EGenericType.hpp"
+#include <ecore/EcorePackage.hpp>
 #include <ecore/EGenericType.hpp>
 #include <ecore/EClassifier.hpp>
 #include <ecore/ETypeParameter.hpp>
 
 using namespace ecore;
+
+/*PROTECTED REGION ID(ecore::EGenericType include) START*/
+/*PROTECTED REGION END*/
 
 EGenericType::EGenericType() : 
 	m_eUpperBound(),
@@ -111,3 +115,11 @@ void EGenericType::setEClassifier(eClassifier_t eClassifier_)
 
 
 
+/*PROTECTED REGION ID(ecore::EGenericType implementation) START*/
+/*PROTECTED REGION END*/
+
+ecore::EClass_ptr EGenericType::eClassImpl() const
+{
+	return EcorePackage::_instance()->getEGenericType();
+}
+ 

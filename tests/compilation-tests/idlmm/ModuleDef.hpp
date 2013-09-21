@@ -26,6 +26,9 @@ public:
 	void setPrefix(prefix_t _prefix);
 	prefix_t getPrefix() const;
 	
+
+	/*PROTECTED REGION ID(idlmm::ModuleDef public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
@@ -34,6 +37,12 @@ protected:
 	prefix_t m_prefix;
 
 	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(idlmm::ModuleDef protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // idlmm

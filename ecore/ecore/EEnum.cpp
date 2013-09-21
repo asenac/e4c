@@ -1,8 +1,12 @@
 
 #include "EEnum.hpp"
+#include <ecore/EcorePackage.hpp>
 #include <ecore/EEnumLiteral.hpp>
 
 using namespace ecore;
+
+/*PROTECTED REGION ID(ecore::EEnum include) START*/
+/*PROTECTED REGION END*/
 
 EEnum::EEnum() : 
 	m_eLiterals()
@@ -36,20 +40,31 @@ void EEnum::addAllELiterals(const eLiterals_t& eLiterals_)
 
 ecore::EEnumLiteral_ptr EEnum::getEEnumLiteral(ecore::EString name)
 {
-	/*PROTECTED REGION ID(ecore::EEnumLiteral_ptr EEnum::getEEnumLiteral(ecore::EString name)) START*/
-	return ecore::EEnumLiteral_ptr();
-	/*PROTECTED REGION END*/
-}
-ecore::EEnumLiteral_ptr EEnum::getEEnumLiteral(ecore::EInt value)
-{
-	/*PROTECTED REGION ID(ecore::EEnumLiteral_ptr EEnum::getEEnumLiteral(ecore::EInt value)) START*/
-	return ecore::EEnumLiteral_ptr();
-	/*PROTECTED REGION END*/
-}
-ecore::EEnumLiteral_ptr EEnum::getEEnumLiteralByLiteral(ecore::EString literal)
-{
-	/*PROTECTED REGION ID(ecore::EEnumLiteral_ptr EEnum::getEEnumLiteralByLiteral(ecore::EString literal)) START*/
+	/*PROTECTED REGION ID(ecore::EEnumLiteral_ptr EEnum::getEEnumLiteralecore::EString name) START*/
 	return ecore::EEnumLiteral_ptr();
 	/*PROTECTED REGION END*/
 }
 
+ecore::EEnumLiteral_ptr EEnum::getEEnumLiteral(ecore::EInt value)
+{
+	/*PROTECTED REGION ID(ecore::EEnumLiteral_ptr EEnum::getEEnumLiteralecore::EInt value) START*/
+	return ecore::EEnumLiteral_ptr();
+	/*PROTECTED REGION END*/
+}
+
+ecore::EEnumLiteral_ptr EEnum::getEEnumLiteralByLiteral(ecore::EString literal)
+{
+	/*PROTECTED REGION ID(ecore::EEnumLiteral_ptr EEnum::getEEnumLiteralByLiteralecore::EString literal) START*/
+	return ecore::EEnumLiteral_ptr();
+	/*PROTECTED REGION END*/
+}
+
+
+/*PROTECTED REGION ID(ecore::EEnum implementation) START*/
+/*PROTECTED REGION END*/
+
+ecore::EClass_ptr EEnum::eClassImpl() const
+{
+	return EcorePackage::_instance()->getEEnum();
+}
+ 

@@ -29,6 +29,9 @@ public:
 	void setConstValue(constValue_t constValue_);
 	constValue_t releaseConstValue();
 	
+
+	/*PROTECTED REGION ID(idlmm::ConstantDef public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
@@ -37,6 +40,12 @@ protected:
 	std::unique_ptr < idlmm::Expression > m_constValue;
 
 	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(idlmm::ConstantDef protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // idlmm

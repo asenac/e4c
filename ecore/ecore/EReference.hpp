@@ -45,6 +45,9 @@ public:
 	void addAllEKeys(const eKeys_t& eKeys_);
 	
 	
+
+	/*PROTECTED REGION ID(ecore::EReference public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
@@ -58,6 +61,12 @@ protected:
 	std::vector < ecore::EAttribute_ptr > m_eKeys;
 
 	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(ecore::EReference protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // ecore

@@ -1,9 +1,13 @@
 
 #include "Typed.hpp"
+#include <idlmm/IdlmmPackage.hpp>
 #include <idlmm/IDLType.hpp>
 #include <idlmm/TypedefDef.hpp>
 
 using namespace idlmm;
+
+/*PROTECTED REGION ID(idlmm::Typed include) START*/
+/*PROTECTED REGION END*/
 
 Typed::Typed() : 
 	m_containedType(),
@@ -47,3 +51,11 @@ void Typed::setSharedType(sharedType_t sharedType_)
 
 
 
+/*PROTECTED REGION ID(idlmm::Typed implementation) START*/
+/*PROTECTED REGION END*/
+
+ecore::EClass_ptr Typed::eClassImpl() const
+{
+	return IdlmmPackage::_instance()->getTyped();
+}
+ 

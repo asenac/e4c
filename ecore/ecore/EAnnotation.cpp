@@ -1,10 +1,14 @@
 
 #include "EAnnotation.hpp"
+#include <ecore/EcorePackage.hpp>
 #include <ecore/EStringToStringMapEntry.hpp>
 #include <ecore/EModelElement.hpp>
 #include <ecore/EObject.hpp>
 
 using namespace ecore;
+
+/*PROTECTED REGION ID(ecore::EAnnotation include) START*/
+/*PROTECTED REGION END*/
 
 EAnnotation::EAnnotation() : 
 	m_source(),
@@ -98,3 +102,11 @@ void EAnnotation::addAllReferences(const references_t& references_)
 
 
 
+/*PROTECTED REGION ID(ecore::EAnnotation implementation) START*/
+/*PROTECTED REGION END*/
+
+ecore::EClass_ptr EAnnotation::eClassImpl() const
+{
+	return EcorePackage::_instance()->getEAnnotation();
+}
+ 

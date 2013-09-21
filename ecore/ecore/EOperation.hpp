@@ -44,6 +44,9 @@ public:
 	
 	ecore::EInt getOperationID();
 	ecore::EBoolean isOverrideOf(ecore::EOperation_ptr someOperation);
+
+	/*PROTECTED REGION ID(ecore::EOperation public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
@@ -58,6 +61,12 @@ protected:
 	
 	friend class ::ecore::EClass;
 	void setEContainingClass(eContainingClass_t eContainingClass_);
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(ecore::EOperation protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // ecore

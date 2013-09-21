@@ -1,8 +1,12 @@
 
 #include "Container.hpp"
+#include <idlmm/IdlmmPackage.hpp>
 #include <idlmm/Contained.hpp>
 
 using namespace idlmm;
+
+/*PROTECTED REGION ID(idlmm::Container include) START*/
+/*PROTECTED REGION END*/
 
 Container::Container() : 
 	m_contains()
@@ -35,3 +39,11 @@ void Container::addAllContains(const contains_t& contains_)
 
 
 
+/*PROTECTED REGION ID(idlmm::Container implementation) START*/
+/*PROTECTED REGION END*/
+
+ecore::EClass_ptr Container::eClassImpl() const
+{
+	return IdlmmPackage::_instance()->getContainer();
+}
+ 

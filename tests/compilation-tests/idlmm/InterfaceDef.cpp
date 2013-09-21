@@ -1,9 +1,13 @@
 
 #include "InterfaceDef.hpp"
+#include <idlmm/IdlmmPackage.hpp>
 #include <idlmm/InterfaceDef.hpp>
 #include <idlmm/ForwardDef.hpp>
 
 using namespace idlmm;
+
+/*PROTECTED REGION ID(idlmm::InterfaceDef include) START*/
+/*PROTECTED REGION END*/
 
 InterfaceDef::InterfaceDef() : 
 	m_isAbstract(),
@@ -81,3 +85,11 @@ void InterfaceDef::setForward(forward_t forward_)
 
 
 
+/*PROTECTED REGION ID(idlmm::InterfaceDef implementation) START*/
+/*PROTECTED REGION END*/
+
+ecore::EClass_ptr InterfaceDef::eClassImpl() const
+{
+	return IdlmmPackage::_instance()->getInterfaceDef();
+}
+ 

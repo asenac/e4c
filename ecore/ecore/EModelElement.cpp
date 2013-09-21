@@ -1,8 +1,12 @@
 
 #include "EModelElement.hpp"
+#include <ecore/EcorePackage.hpp>
 #include <ecore/EAnnotation.hpp>
 
 using namespace ecore;
+
+/*PROTECTED REGION ID(ecore::EModelElement include) START*/
+/*PROTECTED REGION END*/
 
 EModelElement::EModelElement() : 
 	m_eAnnotations()
@@ -36,8 +40,17 @@ void EModelElement::addAllEAnnotations(const eAnnotations_t& eAnnotations_)
 
 ecore::EAnnotation_ptr EModelElement::getEAnnotation(ecore::EString source)
 {
-	/*PROTECTED REGION ID(ecore::EAnnotation_ptr EModelElement::getEAnnotation(ecore::EString source)) START*/
+	/*PROTECTED REGION ID(ecore::EAnnotation_ptr EModelElement::getEAnnotationecore::EString source) START*/
 	return ecore::EAnnotation_ptr();
 	/*PROTECTED REGION END*/
 }
 
+
+/*PROTECTED REGION ID(ecore::EModelElement implementation) START*/
+/*PROTECTED REGION END*/
+
+ecore::EClass_ptr EModelElement::eClassImpl() const
+{
+	return EcorePackage::_instance()->getEModelElement();
+}
+ 

@@ -1,8 +1,12 @@
 
 #include "UnionField.hpp"
+#include <idlmm/IdlmmPackage.hpp>
 #include <idlmm/Expression.hpp>
 
 using namespace idlmm;
+
+/*PROTECTED REGION ID(idlmm::UnionField include) START*/
+/*PROTECTED REGION END*/
 
 UnionField::UnionField() : 
 	m_identifier(),
@@ -45,3 +49,11 @@ void UnionField::addAllLabel(const label_t& label_)
 
 
 
+/*PROTECTED REGION ID(idlmm::UnionField implementation) START*/
+/*PROTECTED REGION END*/
+
+ecore::EClass_ptr UnionField::eClassImpl() const
+{
+	return IdlmmPackage::_instance()->getUnionField();
+}
+ 

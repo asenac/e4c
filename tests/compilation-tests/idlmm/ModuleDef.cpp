@@ -1,7 +1,11 @@
 
 #include "ModuleDef.hpp"
+#include <idlmm/IdlmmPackage.hpp>
 
 using namespace idlmm;
+
+/*PROTECTED REGION ID(idlmm::ModuleDef include) START*/
+/*PROTECTED REGION END*/
 
 ModuleDef::ModuleDef() : 
 	m_prefix()
@@ -25,3 +29,11 @@ ModuleDef::prefix_t ModuleDef::getPrefix() const
 
 
 
+/*PROTECTED REGION ID(idlmm::ModuleDef implementation) START*/
+/*PROTECTED REGION END*/
+
+ecore::EClass_ptr ModuleDef::eClassImpl() const
+{
+	return IdlmmPackage::_instance()->getModuleDef();
+}
+ 

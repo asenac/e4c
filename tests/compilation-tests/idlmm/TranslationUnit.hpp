@@ -34,6 +34,9 @@ public:
 	void addIncludes(idlmm::Include_ptr includes_);
 	void addAllIncludes(const includes_t& includes_);
 	
+
+	/*PROTECTED REGION ID(idlmm::TranslationUnit public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
@@ -44,6 +47,12 @@ protected:
 	std::vector < std::unique_ptr < idlmm::Include > > m_includes;
 
 	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(idlmm::TranslationUnit protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // idlmm

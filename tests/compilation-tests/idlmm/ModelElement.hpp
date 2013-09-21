@@ -22,6 +22,9 @@ public:
 
 	
 	
+
+	/*PROTECTED REGION ID(idlmm::ModelElement public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 	ModelElement();
@@ -30,6 +33,12 @@ protected:
 
 	
 	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(idlmm::ModelElement protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // idlmm

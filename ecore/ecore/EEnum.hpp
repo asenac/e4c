@@ -30,6 +30,9 @@ public:
 	ecore::EEnumLiteral_ptr getEEnumLiteral(ecore::EString name);
 	ecore::EEnumLiteral_ptr getEEnumLiteral(ecore::EInt value);
 	ecore::EEnumLiteral_ptr getEEnumLiteralByLiteral(ecore::EString literal);
+
+	/*PROTECTED REGION ID(ecore::EEnum public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
@@ -38,6 +41,12 @@ protected:
 	std::vector < std::unique_ptr < ecore::EEnumLiteral > > m_eLiterals;
 
 	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(ecore::EEnum protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // ecore

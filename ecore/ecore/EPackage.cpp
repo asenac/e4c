@@ -1,10 +1,14 @@
 
 #include "EPackage.hpp"
+#include <ecore/EcorePackage.hpp>
 #include <ecore/EFactory.hpp>
 #include <ecore/EClassifier.hpp>
 #include <ecore/EPackage.hpp>
 
 using namespace ecore;
+
+/*PROTECTED REGION ID(ecore::EPackage include) START*/
+/*PROTECTED REGION END*/
 
 EPackage::EPackage() : 
 	m_nsURI(),
@@ -110,8 +114,17 @@ void EPackage::setESuperPackage(eSuperPackage_t eSuperPackage_)
 
 ecore::EClassifier_ptr EPackage::getEClassifier(ecore::EString name)
 {
-	/*PROTECTED REGION ID(ecore::EClassifier_ptr EPackage::getEClassifier(ecore::EString name)) START*/
+	/*PROTECTED REGION ID(ecore::EClassifier_ptr EPackage::getEClassifierecore::EString name) START*/
 	return ecore::EClassifier_ptr();
 	/*PROTECTED REGION END*/
 }
 
+
+/*PROTECTED REGION ID(ecore::EPackage implementation) START*/
+/*PROTECTED REGION END*/
+
+ecore::EClass_ptr EPackage::eClassImpl() const
+{
+	return EcorePackage::_instance()->getEPackage();
+}
+ 

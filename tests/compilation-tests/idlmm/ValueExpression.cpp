@@ -1,7 +1,11 @@
 
 #include "ValueExpression.hpp"
+#include <idlmm/IdlmmPackage.hpp>
 
 using namespace idlmm;
+
+/*PROTECTED REGION ID(idlmm::ValueExpression include) START*/
+/*PROTECTED REGION END*/
 
 ValueExpression::ValueExpression() : 
 	m_value()
@@ -25,3 +29,11 @@ ValueExpression::value_t ValueExpression::getValue() const
 
 
 
+/*PROTECTED REGION ID(idlmm::ValueExpression implementation) START*/
+/*PROTECTED REGION END*/
+
+ecore::EClass_ptr ValueExpression::eClassImpl() const
+{
+	return IdlmmPackage::_instance()->getValueExpression();
+}
+ 

@@ -41,6 +41,9 @@ public:
 	void addAllReferences(const references_t& references_);
 	
 	
+
+	/*PROTECTED REGION ID(ecore::EAnnotation public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
@@ -55,6 +58,12 @@ protected:
 	
 	friend class ::ecore::EModelElement;
 	void setEModelElement(eModelElement_t eModelElement_);
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(ecore::EAnnotation protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // ecore

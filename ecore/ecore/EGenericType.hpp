@@ -46,6 +46,9 @@ public:
 	
 	void setEClassifier(eClassifier_t eClassifier_);
 	
+
+	/*PROTECTED REGION ID(ecore::EGenericType public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
@@ -59,6 +62,12 @@ protected:
 	ecore::EClassifier_ptr m_eClassifier;
 
 	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(ecore::EGenericType protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // ecore

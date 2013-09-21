@@ -33,6 +33,9 @@ public:
 	absoluteName_t getAbsoluteName() const;
 	definedIn_t getDefinedIn() const;
 	
+
+	/*PROTECTED REGION ID(idlmm::Contained public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 	Contained();
@@ -47,6 +50,12 @@ protected:
 	
 	friend class ::idlmm::Container;
 	void setDefinedIn(definedIn_t definedIn_);
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(idlmm::Contained protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // idlmm

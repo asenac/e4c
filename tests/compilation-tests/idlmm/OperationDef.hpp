@@ -39,6 +39,9 @@ public:
 	void addAllCanRaise(const canRaise_t& canRaise_);
 	
 	
+
+	/*PROTECTED REGION ID(idlmm::OperationDef public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
@@ -50,6 +53,12 @@ protected:
 	std::vector < idlmm::ExceptionDef_ptr > m_canRaise;
 
 	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(idlmm::OperationDef protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // idlmm

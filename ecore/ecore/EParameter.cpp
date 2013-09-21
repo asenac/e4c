@@ -1,8 +1,12 @@
 
 #include "EParameter.hpp"
+#include <ecore/EcorePackage.hpp>
 #include <ecore/EOperation.hpp>
 
 using namespace ecore;
+
+/*PROTECTED REGION ID(ecore::EParameter include) START*/
+/*PROTECTED REGION END*/
 
 EParameter::EParameter() : 
 	m_eOperation()
@@ -28,3 +32,11 @@ void EParameter::setEOperation(eOperation_t eOperation_)
 
 
 
+/*PROTECTED REGION ID(ecore::EParameter implementation) START*/
+/*PROTECTED REGION END*/
+
+ecore::EClass_ptr EParameter::eClassImpl() const
+{
+	return EcorePackage::_instance()->getEParameter();
+}
+ 

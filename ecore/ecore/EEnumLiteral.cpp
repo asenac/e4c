@@ -1,8 +1,12 @@
 
 #include "EEnumLiteral.hpp"
+#include <ecore/EcorePackage.hpp>
 #include <ecore/EEnum.hpp>
 
 using namespace ecore;
+
+/*PROTECTED REGION ID(ecore::EEnumLiteral include) START*/
+/*PROTECTED REGION END*/
 
 EEnumLiteral::EEnumLiteral() : 
 	m_value(),
@@ -61,3 +65,11 @@ void EEnumLiteral::setEEnum(eEnum_t eEnum_)
 
 
 
+/*PROTECTED REGION ID(ecore::EEnumLiteral implementation) START*/
+/*PROTECTED REGION END*/
+
+ecore::EClass_ptr EEnumLiteral::eClassImpl() const
+{
+	return EcorePackage::_instance()->getEEnumLiteral();
+}
+ 

@@ -27,6 +27,9 @@ public:
 	
 	void setConstant(constant_t constant_);
 	
+
+	/*PROTECTED REGION ID(idlmm::ConstantDefRef public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
@@ -35,6 +38,12 @@ protected:
 	idlmm::Constant_ptr m_constant;
 
 	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(idlmm::ConstantDefRef protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // idlmm

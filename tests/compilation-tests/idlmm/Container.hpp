@@ -26,6 +26,9 @@ public:
 	void addContains(idlmm::Contained_ptr contains_);
 	void addAllContains(const contains_t& contains_);
 	
+
+	/*PROTECTED REGION ID(idlmm::Container public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 	Container();
@@ -35,6 +38,12 @@ protected:
 	std::vector < std::unique_ptr < idlmm::Contained > > m_contains;
 
 	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(idlmm::Container protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // idlmm

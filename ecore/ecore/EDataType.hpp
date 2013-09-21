@@ -26,6 +26,9 @@ public:
 	void setSerializable(serializable_t _serializable);
 	serializable_t getSerializable() const;
 	
+
+	/*PROTECTED REGION ID(ecore::EDataType public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
@@ -34,6 +37,12 @@ protected:
 	serializable_t m_serializable;
 
 	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(ecore::EDataType protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // ecore

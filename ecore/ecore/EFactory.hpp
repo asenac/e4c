@@ -30,6 +30,9 @@ public:
 	ecore::EObject_ptr create(ecore::EClass_ptr eClass);
 	ecore::EJavaObject createFromString(ecore::EDataType_ptr eDataType, ecore::EString literalValue);
 	ecore::EString convertToString(ecore::EDataType_ptr eDataType, ecore::EJavaObject instanceValue);
+
+	/*PROTECTED REGION ID(ecore::EFactory public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
@@ -38,6 +41,12 @@ protected:
 	ecore::EPackage_ptr m_ePackage;
 
 	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(ecore::EFactory protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // ecore

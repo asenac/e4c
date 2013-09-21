@@ -25,6 +25,9 @@ public:
 	
 	eOperation_t getEOperation() const;
 	
+
+	/*PROTECTED REGION ID(ecore::EParameter public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
@@ -35,6 +38,12 @@ protected:
 	
 	friend class ::ecore::EOperation;
 	void setEOperation(eOperation_t eOperation_);
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(ecore::EParameter protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // ecore

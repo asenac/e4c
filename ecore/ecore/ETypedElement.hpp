@@ -48,6 +48,9 @@ public:
 	void setEGenericType(eGenericType_t eGenericType_);
 	eGenericType_t releaseEGenericType();
 	
+
+	/*PROTECTED REGION ID(ecore::ETypedElement public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 	ETypedElement();
@@ -64,6 +67,12 @@ protected:
 	std::unique_ptr < ecore::EGenericType > m_eGenericType;
 
 	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(ecore::ETypedElement protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // ecore

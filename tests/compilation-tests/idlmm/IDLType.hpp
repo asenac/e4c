@@ -25,6 +25,9 @@ public:
 	void setTypeCode(typeCode_t _typeCode);
 	typeCode_t getTypeCode() const;
 	
+
+	/*PROTECTED REGION ID(idlmm::IDLType public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 	IDLType();
@@ -34,6 +37,12 @@ protected:
 	typeCode_t m_typeCode;
 
 	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(idlmm::IDLType protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // idlmm

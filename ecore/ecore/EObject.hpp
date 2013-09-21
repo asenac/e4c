@@ -37,6 +37,9 @@ public:
 	ecore::EBoolean eIsSet(ecore::EStructuralFeature_ptr feature);
 	void eUnset(ecore::EStructuralFeature_ptr feature);
 	ecore::EJavaObject eInvoke(ecore::EOperation_ptr operation, ecore::EEList arguments);
+
+	/*PROTECTED REGION ID(ecore::EObject public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
@@ -44,6 +47,12 @@ protected:
 
 	
 	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(ecore::EObject protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // ecore

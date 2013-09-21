@@ -1,9 +1,13 @@
 
 #include "OperationDef.hpp"
+#include <idlmm/IdlmmPackage.hpp>
 #include <idlmm/ParameterDef.hpp>
 #include <idlmm/ExceptionDef.hpp>
 
 using namespace idlmm;
+
+/*PROTECTED REGION ID(idlmm::OperationDef include) START*/
+/*PROTECTED REGION END*/
 
 OperationDef::OperationDef() : 
 	m_parameters(),
@@ -76,3 +80,11 @@ void OperationDef::addAllCanRaise(const canRaise_t& canRaise_)
 
 
 
+/*PROTECTED REGION ID(idlmm::OperationDef implementation) START*/
+/*PROTECTED REGION END*/
+
+ecore::EClass_ptr OperationDef::eClassImpl() const
+{
+	return IdlmmPackage::_instance()->getOperationDef();
+}
+ 

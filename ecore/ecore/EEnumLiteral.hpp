@@ -34,6 +34,9 @@ public:
 	literal_t getLiteral() const;
 	eEnum_t getEEnum() const;
 	
+
+	/*PROTECTED REGION ID(ecore::EEnumLiteral public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
@@ -47,6 +50,12 @@ protected:
 	
 	friend class ::ecore::EEnum;
 	void setEEnum(eEnum_t eEnum_);
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(ecore::EEnumLiteral protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // ecore

@@ -44,6 +44,9 @@ public:
 	eSuperPackage_t getESuperPackage() const;
 	
 	ecore::EClassifier_ptr getEClassifier(ecore::EString name);
+
+	/*PROTECTED REGION ID(ecore::EPackage public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
@@ -58,6 +61,12 @@ protected:
 
 	
 	void setESuperPackage(eSuperPackage_t eSuperPackage_);
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(ecore::EPackage protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // ecore

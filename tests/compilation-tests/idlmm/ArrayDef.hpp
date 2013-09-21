@@ -31,6 +31,9 @@ public:
 	void addBounds(idlmm::Expression_ptr bounds_);
 	void addAllBounds(const bounds_t& bounds_);
 	
+
+	/*PROTECTED REGION ID(idlmm::ArrayDef public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
@@ -40,6 +43,12 @@ protected:
 	std::vector < std::unique_ptr < idlmm::Expression > > m_bounds;
 
 	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(idlmm::ArrayDef protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // idlmm

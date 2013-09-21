@@ -104,6 +104,9 @@ public:
 	ecore::EOperation_ptr getEOperation(ecore::EInt operationID);
 	ecore::EInt getOperationID(ecore::EOperation_ptr operation);
 	ecore::EOperation_ptr getOverride(ecore::EOperation_ptr operation);
+
+	/*PROTECTED REGION ID(ecore::EClass public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
@@ -127,6 +130,12 @@ protected:
 	std::vector < ecore::EGenericType_ptr > m_eAllGenericSuperTypes;
 
 	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(ecore::EClass protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // ecore

@@ -23,6 +23,9 @@ public:
 
 	
 	
+
+	/*PROTECTED REGION ID(idlmm::TypedefDef public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 	TypedefDef();
@@ -31,6 +34,12 @@ protected:
 
 	
 	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(idlmm::TypedefDef protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // idlmm

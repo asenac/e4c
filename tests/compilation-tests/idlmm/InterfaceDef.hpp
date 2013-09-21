@@ -42,6 +42,9 @@ public:
 	
 	void setForward(forward_t forward_);
 	
+
+	/*PROTECTED REGION ID(idlmm::InterfaceDef public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
@@ -54,6 +57,12 @@ protected:
 	idlmm::ForwardDef_ptr m_forward;
 
 	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(idlmm::InterfaceDef protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // idlmm

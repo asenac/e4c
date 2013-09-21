@@ -1,8 +1,12 @@
 
 #include "EnumDef.hpp"
+#include <idlmm/IdlmmPackage.hpp>
 #include <idlmm/EnumMember.hpp>
 
 using namespace idlmm;
+
+/*PROTECTED REGION ID(idlmm::EnumDef include) START*/
+/*PROTECTED REGION END*/
 
 EnumDef::EnumDef() : 
 	m_members()
@@ -35,3 +39,11 @@ void EnumDef::addAllMembers(const members_t& members_)
 
 
 
+/*PROTECTED REGION ID(idlmm::EnumDef implementation) START*/
+/*PROTECTED REGION END*/
+
+ecore::EClass_ptr EnumDef::eClassImpl() const
+{
+	return IdlmmPackage::_instance()->getEnumDef();
+}
+ 

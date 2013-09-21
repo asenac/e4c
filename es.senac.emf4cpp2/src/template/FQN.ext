@@ -30,7 +30,8 @@ String getMetaFile(ENamedElement this) : getFilePrefix() + "/meta.hpp";
 
 String getTagName(EStructuralFeature this) : EContainingClass.name + "__" + name + "_tag";
 String getTagFQN(EStructuralFeature this) : EContainingClass.EPackage.getFQN() + "::" + EContainingClass.name + "__" + name + "_tag";
-String getTagMethod(EStructuralFeature this) : "getTag_" + EContainingClass.name + "__" + name;
+String getMember(EStructuralFeature this) : EContainingClass.name + "__" + name;
+String getTagMethod(EStructuralFeature this) : "getTag_" + getMember();
 String getTagMethod(EClassifier this) : "getTag_" + name;
 
 String getFactory(EPackage this) : name.toFirstUpper() + "Factory";
@@ -106,3 +107,6 @@ String getDecl(EParameter this) : getType() + " " + name;
 String getPrefix(EOperation this) : EContainingClass.getName() + "::";
 String getSignature(EOperation this, Boolean prefix) :
 	getType() + " " + (if prefix then getPrefix() else "") + name + "(" + EParameters.getDecl().toCommaString() + ")";
+
+String getProtectedRegion(EOperation this) : getSignature(true).replaceAll("\\(", "").replaceAll("\\)", "");
+

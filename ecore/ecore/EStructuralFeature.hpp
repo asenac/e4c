@@ -47,6 +47,9 @@ public:
 	
 	ecore::EInt getFeatureID();
 	ecore::EJavaClass getContainerClass();
+
+	/*PROTECTED REGION ID(ecore::EStructuralFeature public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 	EStructuralFeature();
@@ -65,6 +68,12 @@ protected:
 	
 	friend class ::ecore::EClass;
 	void setEContainingClass(eContainingClass_t eContainingClass_);
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(ecore::EStructuralFeature protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // ecore

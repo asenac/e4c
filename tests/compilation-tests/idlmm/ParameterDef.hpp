@@ -29,6 +29,9 @@ public:
 	void setDirection(direction_t _direction);
 	direction_t getDirection() const;
 	
+
+	/*PROTECTED REGION ID(idlmm::ParameterDef public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
@@ -38,6 +41,12 @@ protected:
 	direction_t m_direction;
 
 	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(idlmm::ParameterDef protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // idlmm

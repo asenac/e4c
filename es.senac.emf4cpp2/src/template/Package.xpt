@@ -22,7 +22,11 @@ public:
   	«FOREACH EClassifiers AS e-»
  	::«e.eClass().getFQN()»_ptr get«e.getNameUpper()»() const;
  	«ENDFOREACH-»
- 
+ 	
+ 	«FOREACH getStructuralFeatures() AS e-»
+ 	::«e.eClass().getFQN()»_ptr get«e.getMember()»() const;
+ 	«ENDFOREACH-»
+
   	«FOREACH EClassifiers AS e-»
  	e4c::tag_t «e.getTagMethod()»() const;
  	«ENDFOREACH-»
@@ -36,6 +40,9 @@ protected:
     
      «FOREACH EClassifiers AS e-»
  	::«e.eClass().getFQN()»_ptr m_«e.getNameUpper()»;
+ 	«ENDFOREACH-»
+  	«FOREACH getStructuralFeatures() AS e-»
+ 	::«e.eClass().getFQN()»_ptr m_«e.getMember()»;
  	«ENDFOREACH-»
 };
 
@@ -88,12 +95,12 @@ using namespace «getFQN()»;
 	«FOREACH EClassifiers.typeSelect(EClass) AS cl-»
 	    «FOREACH cl.EStructuralFeatures AS ef-»
     {
-        ::«ef.eClass().getFQN()»_ptr ef = ecoreFactory->create«ef.eClass().getName()»();
-        ef->setName("«ef.name»");
-        m_«cl.getName()»->addEStructuralFeatures(ef);
-        m_«cl.getName()»->addEAllStructuralFeatures(ef);
-        m_«cl.getName()»->add«ef.eClass().getName()»s(ef);
-        m_«cl.getName()»->addEAll«ef.eClass().getName().replaceFirst("E", "")»s(ef);
+        m_«ef.getMember()» = ecoreFactory->create«ef.eClass().getName()»();
+        m_«ef.getMember()»->setName("«ef.name»");
+        m_«cl.getName()»->addEStructuralFeatures(m_«ef.getMember()»);
+        m_«cl.getName()»->addEAllStructuralFeatures(m_«ef.getMember()»);
+        m_«cl.getName()»->add«ef.eClass().getName()»s(m_«ef.getMember()»);
+        m_«cl.getName()»->addEAll«ef.eClass().getName().replaceFirst("E", "")»s(m_«ef.getMember()»);
     }
 	    «ENDFOREACH-»
 	    «FOREACH cl.EOperations AS op-»
@@ -124,7 +131,7 @@ const «getPackage()»_ptr «getPackage()»::_instance()
 }
 
   	«FOREACH EClassifiers AS e-»
-ecore::«e.eClass().name»_ptr «getPackage()»::get«e.getNameUpper()»() const
+«e.eClass().getFQN()»_ptr «getPackage()»::get«e.getNameUpper()»() const
 {
 	return m_«e.getNameUpper()»;
 }
@@ -139,6 +146,11 @@ e4c::tag_t «getPackage()»::«e.getTagMethod()»() const
 e4c::tag_t «getPackage()»::«e.getTagMethod()»() const
 {
 	return e4c::tag< «e.getTagName()» >::get();
+}
+
+«e.eClass().getFQN()»_ptr «getPackage()»::get«e.getMember()»() const
+{
+	return m_«e.getMember()»;
 }
 
  	«ENDFOREACH-»

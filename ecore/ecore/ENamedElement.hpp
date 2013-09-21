@@ -25,6 +25,9 @@ public:
 	void setName(name_t _name);
 	name_t getName() const;
 	
+
+	/*PROTECTED REGION ID(ecore::ENamedElement public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 	ENamedElement();
@@ -34,6 +37,12 @@ protected:
 	name_t m_name;
 
 	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(ecore::ENamedElement protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // ecore

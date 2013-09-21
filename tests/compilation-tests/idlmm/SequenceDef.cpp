@@ -1,8 +1,12 @@
 
 #include "SequenceDef.hpp"
+#include <idlmm/IdlmmPackage.hpp>
 #include <idlmm/Expression.hpp>
 
 using namespace idlmm;
+
+/*PROTECTED REGION ID(idlmm::SequenceDef include) START*/
+/*PROTECTED REGION END*/
 
 SequenceDef::SequenceDef() : 
 	m_bound()
@@ -33,3 +37,11 @@ SequenceDef::bound_t SequenceDef::releaseBound()
 
 
 
+/*PROTECTED REGION ID(idlmm::SequenceDef implementation) START*/
+/*PROTECTED REGION END*/
+
+ecore::EClass_ptr SequenceDef::eClassImpl() const
+{
+	return IdlmmPackage::_instance()->getSequenceDef();
+}
+ 

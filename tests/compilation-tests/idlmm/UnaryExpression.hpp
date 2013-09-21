@@ -30,6 +30,9 @@ public:
 	void setOperator(operator_t _operator);
 	operator_t getOperator() const;
 	
+
+	/*PROTECTED REGION ID(idlmm::UnaryExpression public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
@@ -39,6 +42,12 @@ protected:
 	operator_t m_operator;
 
 	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(idlmm::UnaryExpression protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // idlmm

@@ -31,6 +31,9 @@ public:
 	void setScale(scale_t scale_);
 	scale_t releaseScale();
 	
+
+	/*PROTECTED REGION ID(idlmm::FixedDef public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
@@ -40,6 +43,12 @@ protected:
 	std::unique_ptr < idlmm::Expression > m_scale;
 
 	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(idlmm::FixedDef protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // idlmm

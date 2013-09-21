@@ -25,6 +25,9 @@ public:
 	
 	enum_t getEnum() const;
 	
+
+	/*PROTECTED REGION ID(idlmm::EnumMember public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
@@ -35,6 +38,12 @@ protected:
 	
 	friend class ::idlmm::EnumDef;
 	void setEnum(enum_t enum_);
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(idlmm::EnumMember protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // idlmm

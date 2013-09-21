@@ -1,8 +1,12 @@
 
 #include "FixedDef.hpp"
+#include <idlmm/IdlmmPackage.hpp>
 #include <idlmm/Expression.hpp>
 
 using namespace idlmm;
+
+/*PROTECTED REGION ID(idlmm::FixedDef include) START*/
+/*PROTECTED REGION END*/
 
 FixedDef::FixedDef() : 
 	m_digits(),
@@ -51,3 +55,11 @@ FixedDef::scale_t FixedDef::releaseScale()
 
 
 
+/*PROTECTED REGION ID(idlmm::FixedDef implementation) START*/
+/*PROTECTED REGION END*/
+
+ecore::EClass_ptr FixedDef::eClassImpl() const
+{
+	return IdlmmPackage::_instance()->getFixedDef();
+}
+ 

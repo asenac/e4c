@@ -62,7 +62,7 @@ protected:
 	«ENDFOREACH-»
 	
 	«REM»EObject stuff«ENDREM»
-	virtual ecore::EClass_ptr eClassImpl() const;
+	virtual «eClass().eClass().getFQN()»_ptr eClassImpl() const;
 	
 	«PROTECT CSTART '/*' CEND '*/' ID getFQN() + " protected" DISABLE»
 	«ENDPROTECT»
@@ -258,7 +258,7 @@ using namespace «EPackage.getFQN()»;
 «PROTECT CSTART '/*' CEND '*/' ID getFQN() + " implementation" DISABLE»
 «ENDPROTECT»
 
-ecore::EClass_ptr «getName()»::eClassImpl() const
+«eClass().eClass().getFQN()»_ptr «getName()»::eClassImpl() const
 {
 	return «EPackage.getPackage()»::_instance()->get«getName()»();
 }

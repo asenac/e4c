@@ -22,12 +22,13 @@ public:
 	virtual ~EParameter();
 
 	typedef ecore::EOperation_ptr eOperation_t;
-
 	
 	eOperation_t getEOperation() const;
-
+	
 		
 protected:
+
+	friend class EcorePackage;
 
 	ecore::EOperation_ptr m_eOperation;
 

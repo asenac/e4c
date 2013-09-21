@@ -27,7 +27,6 @@ public:
 	typedef ecore::EReference_ptr eOpposite_t;
 	typedef ecore::EClass_ptr eReferenceType_t;
 	typedef std::vector < ecore::EAttribute_ptr > eKeys_t;
-
 	
 	void setContainment(containment_t _containment);
 	containment_t getContainment() const;
@@ -45,9 +44,11 @@ public:
 	void addEKeys(ecore::EAttribute_ptr eKeys_);
 	void addAllEKeys(const eKeys_t& eKeys_);
 	
-
+	
 		
 protected:
+
+	friend class EcorePackage;
 
 	containment_t m_containment;
 	container_t m_container;

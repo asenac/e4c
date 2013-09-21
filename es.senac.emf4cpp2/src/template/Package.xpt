@@ -62,14 +62,18 @@ using namespace «getFQN()»;
 	::ecore::EcoreFactory_ptr ecoreFactory = ::ecore::EcoreFactory::_instance();
 	«ENDIF-»
 	
+	«REM»FIXME subpackages«ENDREM»
+	
 	«FOREACH EClassifiers AS cl-»
 	m_«cl.getName()» = ecoreFactory->create«cl.eClass().name»();
 	m_«cl.getName()»->setName("«cl.name»");
 	addEClassifiers(m_«cl.getName()»);
-	«ENDFOREACH»
-	
-	«FOREACH EClassifiers.typeSelect(EEnum) AS ee-»
+	«ENDFOREACH-»
+
+	«FOREACH EClassifiers.typeSelect(EDataType) AS ee-»
     m_«ee.getName()»->setSerializable(«ee.serializable»);
+    «ENDFOREACH-»	
+	«FOREACH EClassifiers.typeSelect(EEnum) AS ee-»
 	    «FOREACH ee.ELiterals AS el-»
     {
         ::«el.eClass().getFQN()»_ptr el = ecoreFactory->createEEnumLiteral();

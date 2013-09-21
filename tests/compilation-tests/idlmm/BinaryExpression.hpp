@@ -24,7 +24,6 @@ public:
 	typedef idlmm::Expression_ptr left_t;
 	typedef idlmm::Expression_ptr right_t;
 	typedef ::ecore::EString operator_t;
-
 	
 	left_t getLeft() const;
 	void setLeft(left_t left_);
@@ -34,9 +33,11 @@ public:
 	right_t releaseRight();
 	void setOperator(operator_t _operator);
 	operator_t getOperator() const;
-
+	
 		
 protected:
+
+	friend class IdlmmPackage;
 
 	std::unique_ptr < idlmm::Expression > m_left;
 	std::unique_ptr < idlmm::Expression > m_right;

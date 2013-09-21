@@ -22,10 +22,11 @@ public:
 
 	
 	
-	
 		
 protected:
 	Constant();
+
+	friend class IdlmmPackage;
 
 	
 	

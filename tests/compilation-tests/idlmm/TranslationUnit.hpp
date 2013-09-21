@@ -24,7 +24,6 @@ public:
 	typedef std::vector < idlmm::Contained_ptr > contains_t;
 	typedef ::ecore::EString identifier_t;
 	typedef std::vector < idlmm::Include_ptr > includes_t;
-
 	
 	contains_t getContains() const;
 	void addContains(idlmm::Contained_ptr contains_);
@@ -34,9 +33,11 @@ public:
 	includes_t getIncludes() const;
 	void addIncludes(idlmm::Include_ptr includes_);
 	void addAllIncludes(const includes_t& includes_);
-
+	
 		
 protected:
+
+	friend class IdlmmPackage;
 
 	std::vector < std::unique_ptr < idlmm::Contained > > m_contains;
 	identifier_t m_identifier;

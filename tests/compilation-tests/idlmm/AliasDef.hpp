@@ -24,9 +24,10 @@ public:
 
 	
 	
-	
 		
 protected:
+
+	friend class IdlmmPackage;
 
 	
 	

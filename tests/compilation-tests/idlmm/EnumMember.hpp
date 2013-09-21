@@ -22,12 +22,13 @@ public:
 	virtual ~EnumMember();
 
 	typedef idlmm::EnumDef_ptr enum_t;
-
 	
 	enum_t getEnum() const;
-
+	
 		
 protected:
+
+	friend class IdlmmPackage;
 
 	idlmm::EnumDef_ptr m_enum;
 

@@ -4,7 +4,6 @@
 
 #include <ecore/fwd.hpp>
 #include <ecore/meta.hpp>
-#include <ecore/EObject.hpp>
 
 #include <e4c/mapping.hpp>
 
@@ -21,15 +20,17 @@ public:
 	virtual ~EModelElement();
 
 	typedef std::vector < ecore::EAnnotation_ptr > eAnnotations_t;
-
 	
 	eAnnotations_t getEAnnotations() const;
 	void addEAnnotations(ecore::EAnnotation_ptr eAnnotations_);
 	void addAllEAnnotations(const eAnnotations_t& eAnnotations_);
-
+	
+	ecore::EAnnotation_ptr getEAnnotation(ecore::EString source);
 		
 protected:
 	EModelElement();
+
+	friend class EcorePackage;
 
 	std::vector < std::unique_ptr < ecore::EAnnotation > > m_eAnnotations;
 

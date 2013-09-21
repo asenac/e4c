@@ -22,14 +22,15 @@ public:
 	virtual ~StructDef();
 
 	typedef std::vector < idlmm::Field_ptr > members_t;
-
 	
 	members_t getMembers() const;
 	void addMembers(idlmm::Field_ptr members_);
 	void addAllMembers(const members_t& members_);
-
+	
 		
 protected:
+
+	friend class IdlmmPackage;
 
 	std::vector < std::unique_ptr < idlmm::Field > > m_members;
 

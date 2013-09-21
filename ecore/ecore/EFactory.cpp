@@ -31,3 +31,19 @@ void EFactory::setEPackage(ePackage_t ePackage_)
 
 
 
+ecore::EObject_ptr EFactory::create(ecore::EClass_ptr eClass)
+{
+	return ecore::EObject_ptr();
+	
+}
+ecore::EJavaObject EFactory::createFromString(ecore::EDataType_ptr eDataType, ecore::EString literalValue)
+{
+	return ecore::EJavaObject();
+	
+}
+ecore::EString EFactory::convertToString(ecore::EDataType_ptr eDataType, ecore::EJavaObject instanceValue)
+{
+	return ecore::EString();
+	
+}
+

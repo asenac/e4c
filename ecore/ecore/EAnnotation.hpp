@@ -26,7 +26,6 @@ public:
 	typedef ecore::EModelElement_ptr eModelElement_t;
 	typedef std::vector < ecore::EObject_ptr > contents_t;
 	typedef std::vector < ecore::EObject_ptr > references_t;
-
 	
 	void setSource(source_t _source);
 	source_t getSource() const;
@@ -41,9 +40,11 @@ public:
 	void addReferences(ecore::EObject_ptr references_);
 	void addAllReferences(const references_t& references_);
 	
-
+	
 		
 protected:
+
+	friend class EcorePackage;
 
 	source_t m_source;
 	std::vector < std::unique_ptr < ecore::EStringToStringMapEntry > > m_details;

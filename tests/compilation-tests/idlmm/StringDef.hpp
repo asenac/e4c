@@ -22,14 +22,15 @@ public:
 	virtual ~StringDef();
 
 	typedef idlmm::Expression_ptr bound_t;
-
 	
 	bound_t getBound() const;
 	void setBound(bound_t bound_);
 	bound_t releaseBound();
-
+	
 		
 protected:
+
+	friend class IdlmmPackage;
 
 	std::unique_ptr < idlmm::Expression > m_bound;
 

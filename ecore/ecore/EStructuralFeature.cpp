@@ -104,3 +104,14 @@ void EStructuralFeature::setEContainingClass(eContainingClass_t eContainingClass
 
 
 
+ecore::EInt EStructuralFeature::getFeatureID()
+{
+	return ecore::EInt();
+	
+}
+ecore::EJavaClass EStructuralFeature::getContainerClass()
+{
+	return ecore::EJavaClass();
+	
+}
+

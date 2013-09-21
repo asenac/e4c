@@ -24,16 +24,17 @@ public:
 
 	typedef ::ecore::EString name_t;
 	typedef std::vector < idlmm::Expression_ptr > bounds_t;
-
 	
 	void setName(name_t _name);
 	name_t getName() const;
 	bounds_t getBounds() const;
 	void addBounds(idlmm::Expression_ptr bounds_);
 	void addAllBounds(const bounds_t& bounds_);
-
+	
 		
 protected:
+
+	friend class IdlmmPackage;
 
 	name_t m_name;
 	std::vector < std::unique_ptr < idlmm::Expression > > m_bounds;

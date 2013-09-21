@@ -22,14 +22,15 @@ public:
 	virtual ~ETypeParameter();
 
 	typedef std::vector < ecore::EGenericType_ptr > eBounds_t;
-
 	
 	eBounds_t getEBounds() const;
 	void addEBounds(ecore::EGenericType_ptr eBounds_);
 	void addAllEBounds(const eBounds_t& eBounds_);
-
+	
 		
 protected:
+
+	friend class EcorePackage;
 
 	std::vector < std::unique_ptr < ecore::EGenericType > > m_eBounds;
 

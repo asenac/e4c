@@ -22,13 +22,14 @@ public:
 	virtual ~PrimitiveDef();
 
 	typedef ::idlmm::PrimitiveKind kind_t;
-
 	
 	void setKind(kind_t _kind);
 	kind_t getKind() const;
-
+	
 		
 protected:
+
+	friend class IdlmmPackage;
 
 	kind_t m_kind;
 

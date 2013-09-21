@@ -22,14 +22,15 @@ public:
 	virtual ~ForwardDef();
 
 	typedef idlmm::InterfaceDef_ptr definition_t;
-
 	
 	definition_t getDefinition() const;
 	
 	void setDefinition(definition_t definition_);
-
+	
 		
 protected:
+
+	friend class IdlmmPackage;
 
 	idlmm::InterfaceDef_ptr m_definition;
 

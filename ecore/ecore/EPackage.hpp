@@ -27,7 +27,6 @@ public:
 	typedef std::vector < ecore::EClassifier_ptr > eClassifiers_t;
 	typedef std::vector < ecore::EPackage_ptr > eSubpackages_t;
 	typedef ecore::EPackage_ptr eSuperPackage_t;
-
 	
 	void setNsURI(nsURI_t _nsURI);
 	nsURI_t getNsURI() const;
@@ -43,9 +42,12 @@ public:
 	void addESubpackages(ecore::EPackage_ptr eSubpackages_);
 	void addAllESubpackages(const eSubpackages_t& eSubpackages_);
 	eSuperPackage_t getESuperPackage() const;
-
+	
+	ecore::EClassifier_ptr getEClassifier(ecore::EString name);
 		
 protected:
+
+	friend class EcorePackage;
 
 	nsURI_t m_nsURI;
 	nsPrefix_t m_nsPrefix;

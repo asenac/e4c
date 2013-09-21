@@ -27,7 +27,6 @@ public:
 	typedef ::ecore::EBoolean isTruncatable_t;
 	typedef std::vector < idlmm::InterfaceDef_ptr > derivesFrom_t;
 	typedef idlmm::ForwardDef_ptr forward_t;
-
 	
 	void setIsAbstract(isAbstract_t _isAbstract);
 	isAbstract_t getIsAbstract() const;
@@ -42,9 +41,11 @@ public:
 	forward_t getForward() const;
 	
 	void setForward(forward_t forward_);
-
+	
 		
 protected:
+
+	friend class IdlmmPackage;
 
 	isAbstract_t m_isAbstract;
 	isCustom_t m_isCustom;

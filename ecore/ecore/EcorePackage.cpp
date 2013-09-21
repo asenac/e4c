@@ -11,6 +11,8 @@ EcorePackage::EcorePackage()
 	m_eFactoryInstance = EcoreFactory::_instance();
 	::ecore::EcoreFactory_ptr ecoreFactory = ::ecore::EcoreFactory::_instance();
 	
+	
+	
 	m_EAttribute = ecoreFactory->createEClass();
 	m_EAttribute->setName("EAttribute");
 	addEClassifiers(m_EAttribute);
@@ -170,8 +172,40 @@ EcorePackage::EcorePackage()
 	m_EInvocationTargetException = ecoreFactory->createEDataType();
 	m_EInvocationTargetException->setName("EInvocationTargetException");
 	addEClassifiers(m_EInvocationTargetException);
-	
-	
+
+    m_EBigDecimal->setSerializable(true);
+    m_EBigInteger->setSerializable(true);
+    m_EBoolean->setSerializable(true);
+    m_EBooleanObject->setSerializable(true);
+    m_EByte->setSerializable(true);
+    m_EByteArray->setSerializable(true);
+    m_EByteObject->setSerializable(true);
+    m_EChar->setSerializable(true);
+    m_ECharacterObject->setSerializable(true);
+    m_EDate->setSerializable(true);
+    m_EDiagnosticChain->setSerializable(false);
+    m_EDouble->setSerializable(true);
+    m_EDoubleObject->setSerializable(true);
+    m_EEList->setSerializable(false);
+    m_EEnumerator->setSerializable(false);
+    m_EFeatureMap->setSerializable(false);
+    m_EFeatureMapEntry->setSerializable(false);
+    m_EFloat->setSerializable(true);
+    m_EFloatObject->setSerializable(true);
+    m_EInt->setSerializable(true);
+    m_EIntegerObject->setSerializable(true);
+    m_EJavaClass->setSerializable(true);
+    m_EJavaObject->setSerializable(true);
+    m_ELong->setSerializable(true);
+    m_ELongObject->setSerializable(true);
+    m_EMap->setSerializable(false);
+    m_EResource->setSerializable(false);
+    m_EResourceSet->setSerializable(false);
+    m_EShort->setSerializable(true);
+    m_EShortObject->setSerializable(true);
+    m_EString->setSerializable(true);
+    m_ETreeIterator->setSerializable(false);
+    m_EInvocationTargetException->setSerializable(false);
 	
     {
         ::ecore::EAttribute_ptr ef = ecoreFactory->createEAttribute();

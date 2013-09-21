@@ -11,6 +11,8 @@ IdlmmPackage::IdlmmPackage()
 	m_eFactoryInstance = IdlmmFactory::_instance();
 	::ecore::EcoreFactory_ptr ecoreFactory = ::ecore::EcoreFactory::_instance();
 	
+	
+	
 	m_ModelElement = ecoreFactory->createEClass();
 	m_ModelElement->setName("ModelElement");
 	addEClassifiers(m_ModelElement);
@@ -134,9 +136,11 @@ IdlmmPackage::IdlmmPackage()
 	m_NamedElement = ecoreFactory->createEClass();
 	m_NamedElement->setName("NamedElement");
 	addEClassifiers(m_NamedElement);
-	
-	
+
     m_ParameterMode->setSerializable(true);
+    m_PrimitiveKind->setSerializable(true);
+    m_EAny->setSerializable(true);
+    m_ETypeCode->setSerializable(true);
     {
         ::ecore::EEnumLiteral_ptr el = ecoreFactory->createEEnumLiteral();
         el->setName("PARAM_IN");
@@ -158,7 +162,6 @@ IdlmmPackage::IdlmmPackage()
         el->setLiteral("PARAM_INOUT");
         m_ParameterMode->addELiterals(el);
     }
-    m_PrimitiveKind->setSerializable(true);
     {
         ::ecore::EEnumLiteral_ptr el = ecoreFactory->createEEnumLiteral();
         el->setName("PK_NULL");

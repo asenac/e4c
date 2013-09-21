@@ -22,10 +22,11 @@ public:
 
 	
 	
-	
 		
 protected:
 	LiteralExpression();
+
+	friend class IdlmmPackage;
 
 	
 	

@@ -28,7 +28,6 @@ public:
 	typedef ::ecore::EBoolean unsettable_t;
 	typedef ::ecore::EBoolean derived_t;
 	typedef ecore::EClass_ptr eContainingClass_t;
-
 	
 	void setChangeable(changeable_t _changeable);
 	changeable_t getChangeable() const;
@@ -45,10 +44,14 @@ public:
 	void setDerived(derived_t _derived);
 	derived_t getDerived() const;
 	eContainingClass_t getEContainingClass() const;
-
+	
+	ecore::EInt getFeatureID();
+	ecore::EJavaClass getContainerClass();
 		
 protected:
 	EStructuralFeature();
+
+	friend class EcorePackage;
 
 	changeable_t m_changeable;
 	volatile__t m_volatile_;

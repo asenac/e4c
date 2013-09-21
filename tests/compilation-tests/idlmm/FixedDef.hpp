@@ -23,7 +23,6 @@ public:
 
 	typedef idlmm::Expression_ptr digits_t;
 	typedef idlmm::Expression_ptr scale_t;
-
 	
 	digits_t getDigits() const;
 	void setDigits(digits_t digits_);
@@ -31,9 +30,11 @@ public:
 	scale_t getScale() const;
 	void setScale(scale_t scale_);
 	scale_t releaseScale();
-
+	
 		
 protected:
+
+	friend class IdlmmPackage;
 
 	std::unique_ptr < idlmm::Expression > m_digits;
 	std::unique_ptr < idlmm::Expression > m_scale;

@@ -15,7 +15,7 @@
 «FOREACH ESuperTypes AS e-»
 #include <«e.getFilePrefix()».hpp>
 «ENDFOREACH-»
-«IF ESuperTypes.isEmpty && getFQN() != "ecore::EObject"-»
+«IF inheritFormEObject()-»
 #include <ecore/EObject.hpp>
 «ENDIF-»
 
@@ -23,7 +23,7 @@
 
 «EXPAND template::EPackage::namespacesBegin FOR EPackage»
 
-class «getName()»«IF !ESuperTypes.isEmpty» : «FOREACH ESuperTypes AS e SEPARATOR ", "» public virtual ::«e.getFQN()»«ENDFOREACH»«ENDIF»
+class «getName()»«IF !ESuperTypes.isEmpty» : «FOREACH ESuperTypes AS e SEPARATOR ", "» public virtual ::«e.getFQN()»«ENDFOREACH»«ENDIF»«IF inheritFormEObject()-» : ::ecore::EObject«ENDIF»
 {
 public:
 
@@ -34,14 +34,20 @@ public:
 «ENDIF-»
 	virtual ~«getName()»();
 
-	«EXPAND generateTypedef FOREACH EStructuralFeatures»
+	«EXPAND generateTypedef FOREACH EStructuralFeatures-»
 	
-	«EXPAND generateAccessors FOREACH EStructuralFeatures»
+	«EXPAND generateAccessors FOREACH EStructuralFeatures-»
+	
+	«FOREACH EOperations AS o-»
+	«o.getSignature(false)»;
+	«ENDFOREACH-»
 		
 protected:
 «IF abstract-»
 	«getName()»();
 «ENDIF-»
+
+	friend class «EPackage.getPackage()»;
 
 	«EXPAND generateDecl FOREACH EStructuralFeatures»
 	
@@ -223,6 +229,16 @@ using namespace «EPackage.getFQN()»;
 }
 
 «EXPAND generateAccessorsImpl FOREACH EStructuralFeatures»
+
+«FOREACH EOperations AS o-»
+«o.getSignature(true)»
+{
+	«IF o.EType != null-»
+	return «o.getType()»();
+	
+	«ENDIF-»
+}
+«ENDFOREACH-»
 
 «ENDFILE»
 «ENDDEFINE»

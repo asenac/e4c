@@ -21,14 +21,15 @@ public:
 	virtual ~NamedElement();
 
 	typedef ::ecore::EString identifier_t;
-
 	
 	void setIdentifier(identifier_t _identifier);
 	identifier_t getIdentifier() const;
-
+	
 		
 protected:
 	NamedElement();
+
+	friend class IdlmmPackage;
 
 	identifier_t m_identifier;
 

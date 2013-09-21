@@ -108,3 +108,14 @@ void EOperation::addAllEGenericExceptions(const eGenericExceptions_t& eGenericEx
 
 
 
+ecore::EInt EOperation::getOperationID()
+{
+	return ecore::EInt();
+	
+}
+ecore::EBoolean EOperation::isOverrideOf(ecore::EOperation_ptr someOperation)
+{
+	return ecore::EBoolean();
+	
+}
+

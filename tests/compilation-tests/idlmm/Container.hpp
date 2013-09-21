@@ -21,15 +21,16 @@ public:
 	virtual ~Container();
 
 	typedef std::vector < idlmm::Contained_ptr > contains_t;
-
 	
 	contains_t getContains() const;
 	void addContains(idlmm::Contained_ptr contains_);
 	void addAllContains(const contains_t& contains_);
-
+	
 		
 protected:
 	Container();
+
+	friend class IdlmmPackage;
 
 	std::vector < std::unique_ptr < idlmm::Contained > > m_contains;
 

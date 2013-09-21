@@ -23,16 +23,17 @@ public:
 
 	typedef idlmm::Expression_ptr expression_t;
 	typedef ::ecore::EString operator_t;
-
 	
 	expression_t getExpression() const;
 	void setExpression(expression_t expression_);
 	expression_t releaseExpression();
 	void setOperator(operator_t _operator);
 	operator_t getOperator() const;
-
+	
 		
 protected:
+
+	friend class IdlmmPackage;
 
 	std::unique_ptr < idlmm::Expression > m_expression;
 	operator_t m_operator;

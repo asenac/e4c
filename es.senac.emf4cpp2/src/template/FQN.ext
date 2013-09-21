@@ -83,3 +83,26 @@ String getNoContaimentType(EReference this) :
 			"std::set < " + EType.getFQN() + "_ptr >"			
 	)
 ;
+
+Boolean inheritFormEObject(EClass this) : ESuperTypes.isEmpty && EPackage.getFQN() != eClass().EPackage.getFQN();
+
+String toCommaStringImpl(List[String] this) : toCommaString();
+String toCommaString(List[String] this) : 
+	if isEmpty then 
+		"" 
+	else 
+	( 
+		if size == 1 then 
+			first() 
+		else 
+			first() + ", " + withoutFirst().toCommaStringImpl()
+	)
+;
+
+String getType(ETypedElement this) :
+	if EType == null then "void" else (if EClass.isInstance(EType) then EType.getFQN() + "_ptr" else EType.getFQN());
+	
+String getDecl(EParameter this) : getType() + " " + name;
+String getPrefix(EOperation this) : EContainingClass.getName() + "::";
+String getSignature(EOperation this, Boolean prefix) :
+	getType() + " " + (if prefix then getPrefix() else "") + name + "(" + EParameters.getDecl().toCommaString() + ")";

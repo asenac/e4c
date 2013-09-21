@@ -4,7 +4,6 @@
 
 #include <ecore/fwd.hpp>
 #include <ecore/meta.hpp>
-#include <ecore/EObject.hpp>
 
 #include <e4c/mapping.hpp>
 
@@ -23,15 +22,16 @@ public:
 
 	typedef ::ecore::EString key_t;
 	typedef ::ecore::EString value_t;
-
 	
 	void setKey(key_t _key);
 	key_t getKey() const;
 	void setValue(value_t _value);
 	value_t getValue() const;
-
+	
 		
 protected:
+
+	friend class EcorePackage;
 
 	key_t m_key;
 	value_t m_value;

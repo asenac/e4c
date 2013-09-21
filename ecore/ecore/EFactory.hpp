@@ -22,14 +22,18 @@ public:
 	virtual ~EFactory();
 
 	typedef ecore::EPackage_ptr ePackage_t;
-
 	
 	ePackage_t getEPackage() const;
 	
 	void setEPackage(ePackage_t ePackage_);
-
+	
+	ecore::EObject_ptr create(ecore::EClass_ptr eClass);
+	ecore::EJavaObject createFromString(ecore::EDataType_ptr eDataType, ecore::EString literalValue);
+	ecore::EString convertToString(ecore::EDataType_ptr eDataType, ecore::EJavaObject instanceValue);
 		
 protected:
+
+	friend class EcorePackage;
 
 	ecore::EPackage_ptr m_ePackage;
 

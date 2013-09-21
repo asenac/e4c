@@ -12,7 +12,7 @@ namespace idlmm
 {
 
 
-class ModelElement
+class ModelElement : ::ecore::EObject
 {
 public:
 
@@ -22,10 +22,11 @@ public:
 
 	
 	
-	
 		
 protected:
 	ModelElement();
+
+	friend class IdlmmPackage;
 
 	
 	

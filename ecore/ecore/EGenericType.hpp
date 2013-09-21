@@ -4,7 +4,6 @@
 
 #include <ecore/fwd.hpp>
 #include <ecore/meta.hpp>
-#include <ecore/EObject.hpp>
 
 #include <e4c/mapping.hpp>
 
@@ -27,7 +26,6 @@ public:
 	typedef ecore::EGenericType_ptr eLowerBound_t;
 	typedef ecore::ETypeParameter_ptr eTypeParameter_t;
 	typedef ecore::EClassifier_ptr eClassifier_t;
-
 	
 	eUpperBound_t getEUpperBound() const;
 	void setEUpperBound(eUpperBound_t eUpperBound_);
@@ -47,9 +45,11 @@ public:
 	eClassifier_t getEClassifier() const;
 	
 	void setEClassifier(eClassifier_t eClassifier_);
-
+	
 		
 protected:
+
+	friend class EcorePackage;
 
 	std::unique_ptr < ecore::EGenericType > m_eUpperBound;
 	std::vector < std::unique_ptr < ecore::EGenericType > > m_eTypeArguments;

@@ -21,14 +21,15 @@ public:
 	virtual ~ENamedElement();
 
 	typedef ::ecore::EString name_t;
-
 	
 	void setName(name_t _name);
 	name_t getName() const;
-
+	
 		
 protected:
 	ENamedElement();
+
+	friend class EcorePackage;
 
 	name_t m_name;
 

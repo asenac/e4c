@@ -22,13 +22,14 @@ public:
 	virtual ~EDataType();
 
 	typedef ::ecore::EBoolean serializable_t;
-
 	
 	void setSerializable(serializable_t _serializable);
 	serializable_t getSerializable() const;
-
+	
 		
 protected:
+
+	friend class EcorePackage;
 
 	serializable_t m_serializable;
 

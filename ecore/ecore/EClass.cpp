@@ -303,3 +303,49 @@ void EClass::addAllEAllGenericSuperTypes(const eAllGenericSuperTypes_t& eAllGene
 
 
 
+ecore::EBoolean EClass::isSuperTypeOf(ecore::EClass_ptr someClass)
+{
+	return ecore::EBoolean();
+	
+}
+ecore::EInt EClass::getFeatureCount()
+{
+	return ecore::EInt();
+	
+}
+ecore::EStructuralFeature_ptr EClass::getEStructuralFeature(ecore::EInt featureID)
+{
+	return ecore::EStructuralFeature_ptr();
+	
+}
+ecore::EInt EClass::getFeatureID(ecore::EStructuralFeature_ptr feature)
+{
+	return ecore::EInt();
+	
+}
+ecore::EStructuralFeature_ptr EClass::getEStructuralFeature(ecore::EString featureName)
+{
+	return ecore::EStructuralFeature_ptr();
+	
+}
+ecore::EInt EClass::getOperationCount()
+{
+	return ecore::EInt();
+	
+}
+ecore::EOperation_ptr EClass::getEOperation(ecore::EInt operationID)
+{
+	return ecore::EOperation_ptr();
+	
+}
+ecore::EInt EClass::getOperationID(ecore::EOperation_ptr operation)
+{
+	return ecore::EInt();
+	
+}
+ecore::EOperation_ptr EClass::getOverride(ecore::EOperation_ptr operation)
+{
+	return ecore::EOperation_ptr();
+	
+}
+

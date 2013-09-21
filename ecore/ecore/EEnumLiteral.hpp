@@ -25,7 +25,6 @@ public:
 	typedef ::ecore::EEnumerator instance_t;
 	typedef ::ecore::EString literal_t;
 	typedef ecore::EEnum_ptr eEnum_t;
-
 	
 	void setValue(value_t _value);
 	value_t getValue() const;
@@ -34,9 +33,11 @@ public:
 	void setLiteral(literal_t _literal);
 	literal_t getLiteral() const;
 	eEnum_t getEEnum() const;
-
+	
 		
 protected:
+
+	friend class EcorePackage;
 
 	value_t m_value;
 	instance_t m_instance;

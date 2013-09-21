@@ -22,7 +22,6 @@ public:
 
 	typedef idlmm::IDLType_ptr containedType_t;
 	typedef idlmm::TypedefDef_ptr sharedType_t;
-
 	
 	containedType_t getContainedType() const;
 	void setContainedType(containedType_t containedType_);
@@ -30,10 +29,12 @@ public:
 	sharedType_t getSharedType() const;
 	
 	void setSharedType(sharedType_t sharedType_);
-
+	
 		
 protected:
 	Typed();
+
+	friend class IdlmmPackage;
 
 	std::unique_ptr < idlmm::IDLType > m_containedType;
 	idlmm::TypedefDef_ptr m_sharedType;

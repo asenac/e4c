@@ -26,7 +26,6 @@ public:
 	typedef ::ecore::EString instanceTypeName_t;
 	typedef ecore::EPackage_ptr ePackage_t;
 	typedef std::vector < ecore::ETypeParameter_ptr > eTypeParameters_t;
-
 	
 	void setInstanceClassName(instanceClassName_t _instanceClassName);
 	instanceClassName_t getInstanceClassName() const;
@@ -40,10 +39,14 @@ public:
 	eTypeParameters_t getETypeParameters() const;
 	void addETypeParameters(ecore::ETypeParameter_ptr eTypeParameters_);
 	void addAllETypeParameters(const eTypeParameters_t& eTypeParameters_);
-
+	
+	ecore::EBoolean isInstance(ecore::EJavaObject object);
+	ecore::EInt getClassifierID();
 		
 protected:
 	EClassifier();
+
+	friend class EcorePackage;
 
 	instanceClassName_t m_instanceClassName;
 	instanceClass_t m_instanceClass;

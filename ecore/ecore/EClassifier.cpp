@@ -91,3 +91,14 @@ void EClassifier::addAllETypeParameters(const eTypeParameters_t& eTypeParameters
 
 
 
+ecore::EBoolean EClassifier::isInstance(ecore::EJavaObject object)
+{
+	return ecore::EBoolean();
+	
+}
+ecore::EInt EClassifier::getClassifierID()
+{
+	return ecore::EInt();
+	
+}
+

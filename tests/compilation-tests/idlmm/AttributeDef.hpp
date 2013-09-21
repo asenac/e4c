@@ -25,7 +25,6 @@ public:
 	typedef std::vector < idlmm::ExceptionDef_ptr > getRaises_t;
 	typedef std::vector < idlmm::ExceptionDef_ptr > setRaises_t;
 	typedef ::ecore::EBoolean isReadonly_t;
-
 	
 	getRaises_t getGetRaises() const;
 	void addGetRaises(idlmm::ExceptionDef_ptr getRaises_);
@@ -37,9 +36,11 @@ public:
 	
 	void setIsReadonly(isReadonly_t _isReadonly);
 	isReadonly_t getIsReadonly() const;
-
+	
 		
 protected:
+
+	friend class IdlmmPackage;
 
 	std::vector < idlmm::ExceptionDef_ptr > m_getRaises;
 	std::vector < idlmm::ExceptionDef_ptr > m_setRaises;

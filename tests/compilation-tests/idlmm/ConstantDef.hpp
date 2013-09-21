@@ -24,14 +24,15 @@ public:
 	virtual ~ConstantDef();
 
 	typedef idlmm::Expression_ptr constValue_t;
-
 	
 	constValue_t getConstValue() const;
 	void setConstValue(constValue_t constValue_);
 	constValue_t releaseConstValue();
-
+	
 		
 protected:
+
+	friend class IdlmmPackage;
 
 	std::unique_ptr < idlmm::Expression > m_constValue;
 

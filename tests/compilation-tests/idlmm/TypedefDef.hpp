@@ -23,10 +23,11 @@ public:
 
 	
 	
-	
 		
 protected:
 	TypedefDef();
+
+	friend class IdlmmPackage;
 
 	
 	

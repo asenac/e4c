@@ -28,7 +28,6 @@ public:
 	typedef ::ecore::EBoolean required_t;
 	typedef ecore::EClassifier_ptr eType_t;
 	typedef ecore::EGenericType_ptr eGenericType_t;
-
 	
 	void setOrdered(ordered_t _ordered);
 	ordered_t getOrdered() const;
@@ -48,10 +47,12 @@ public:
 	eGenericType_t getEGenericType() const;
 	void setEGenericType(eGenericType_t eGenericType_);
 	eGenericType_t releaseEGenericType();
-
+	
 		
 protected:
 	ETypedElement();
+
+	friend class EcorePackage;
 
 	ordered_t m_ordered;
 	unique_t m_unique;

@@ -26,7 +26,6 @@ public:
 	typedef ::ecore::EBoolean isOneway_t;
 	typedef ::ecore::EString contexts_t;
 	typedef std::vector < idlmm::ExceptionDef_ptr > canRaise_t;
-
 	
 	parameters_t getParameters() const;
 	void addParameters(idlmm::ParameterDef_ptr parameters_);
@@ -39,9 +38,11 @@ public:
 	void addCanRaise(idlmm::ExceptionDef_ptr canRaise_);
 	void addAllCanRaise(const canRaise_t& canRaise_);
 	
-
+	
 		
 protected:
+
+	friend class IdlmmPackage;
 
 	std::vector < std::unique_ptr < idlmm::ParameterDef > > m_parameters;
 	isOneway_t m_isOneway;

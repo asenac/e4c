@@ -34,3 +34,9 @@ void EModelElement::addAllEAnnotations(const eAnnotations_t& eAnnotations_)
 
 
 
+ecore::EAnnotation_ptr EModelElement::getEAnnotation(ecore::EString source)
+{
+	return ecore::EAnnotation_ptr();
+	
+}
+

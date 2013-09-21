@@ -24,7 +24,6 @@ public:
 	typedef std::vector < idlmm::UnionField_ptr > unionMembers_t;
 	typedef idlmm::IDLType_ptr containedDiscrim_t;
 	typedef idlmm::TypedefDef_ptr sharedDiscrim_t;
-
 	
 	unionMembers_t getUnionMembers() const;
 	void addUnionMembers(idlmm::UnionField_ptr unionMembers_);
@@ -35,9 +34,11 @@ public:
 	sharedDiscrim_t getSharedDiscrim() const;
 	
 	void setSharedDiscrim(sharedDiscrim_t sharedDiscrim_);
-
+	
 		
 protected:
+
+	friend class IdlmmPackage;
 
 	std::vector < std::unique_ptr < idlmm::UnionField > > m_unionMembers;
 	std::unique_ptr < idlmm::IDLType > m_containedDiscrim;

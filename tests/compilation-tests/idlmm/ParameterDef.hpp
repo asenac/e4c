@@ -23,15 +23,16 @@ public:
 
 	typedef ::ecore::EString identifier_t;
 	typedef ::idlmm::ParameterMode direction_t;
-
 	
 	void setIdentifier(identifier_t _identifier);
 	identifier_t getIdentifier() const;
 	void setDirection(direction_t _direction);
 	direction_t getDirection() const;
-
+	
 		
 protected:
+
+	friend class IdlmmPackage;
 
 	identifier_t m_identifier;
 	direction_t m_direction;

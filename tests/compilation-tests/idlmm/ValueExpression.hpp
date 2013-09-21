@@ -22,13 +22,14 @@ public:
 	virtual ~ValueExpression();
 
 	typedef ::ecore::EString value_t;
-
 	
 	void setValue(value_t _value);
 	value_t getValue() const;
-
+	
 		
 protected:
+
+	friend class IdlmmPackage;
 
 	value_t m_value;
 

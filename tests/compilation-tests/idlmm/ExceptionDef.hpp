@@ -23,16 +23,17 @@ public:
 
 	typedef ::idlmm::ETypeCode typeCode_t;
 	typedef std::vector < idlmm::Field_ptr > members_t;
-
 	
 	void setTypeCode(typeCode_t _typeCode);
 	typeCode_t getTypeCode() const;
 	members_t getMembers() const;
 	void addMembers(idlmm::Field_ptr members_);
 	void addAllMembers(const members_t& members_);
-
+	
 		
 protected:
+
+	friend class IdlmmPackage;
 
 	typeCode_t m_typeCode;
 	std::vector < std::unique_ptr < idlmm::Field > > m_members;

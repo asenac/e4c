@@ -108,3 +108,9 @@ void EPackage::setESuperPackage(eSuperPackage_t eSuperPackage_)
 
 
 
+ecore::EClassifier_ptr EPackage::getEClassifier(ecore::EString name)
+{
+	return ecore::EClassifier_ptr();
+	
+}
+

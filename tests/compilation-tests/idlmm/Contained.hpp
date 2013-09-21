@@ -24,7 +24,6 @@ public:
 	typedef ::ecore::EString version_t;
 	typedef ::ecore::EString absoluteName_t;
 	typedef idlmm::Container_ptr definedIn_t;
-
 	
 	void setRepositoryId(repositoryId_t _repositoryId);
 	repositoryId_t getRepositoryId() const;
@@ -33,10 +32,12 @@ public:
 	void setAbsoluteName(absoluteName_t _absoluteName);
 	absoluteName_t getAbsoluteName() const;
 	definedIn_t getDefinedIn() const;
-
+	
 		
 protected:
 	Contained();
+
+	friend class IdlmmPackage;
 
 	repositoryId_t m_repositoryId;
 	version_t m_version;

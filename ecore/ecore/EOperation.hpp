@@ -26,7 +26,6 @@ public:
 	typedef std::vector < ecore::EParameter_ptr > eParameters_t;
 	typedef std::vector < ecore::EClassifier_ptr > eExceptions_t;
 	typedef std::vector < ecore::EGenericType_ptr > eGenericExceptions_t;
-
 	
 	eContainingClass_t getEContainingClass() const;
 	eTypeParameters_t getETypeParameters() const;
@@ -42,9 +41,13 @@ public:
 	eGenericExceptions_t getEGenericExceptions() const;
 	void addEGenericExceptions(ecore::EGenericType_ptr eGenericExceptions_);
 	void addAllEGenericExceptions(const eGenericExceptions_t& eGenericExceptions_);
-
+	
+	ecore::EInt getOperationID();
+	ecore::EBoolean isOverrideOf(ecore::EOperation_ptr someOperation);
 		
 protected:
+
+	friend class EcorePackage;
 
 	ecore::EClass_ptr m_eContainingClass;
 	std::vector < std::unique_ptr < ecore::ETypeParameter > > m_eTypeParameters;

@@ -23,16 +23,17 @@ public:
 
 	typedef ::ecore::EString importURI_t;
 	typedef idlmm::TranslationUnit_ptr translationUnit_t;
-
 	
 	void setImportURI(importURI_t _importURI);
 	importURI_t getImportURI() const;
 	translationUnit_t getTranslationUnit() const;
 	
 	void setTranslationUnit(translationUnit_t translationUnit_);
-
+	
 		
 protected:
+
+	friend class IdlmmPackage;
 
 	importURI_t m_importURI;
 	idlmm::TranslationUnit_ptr m_translationUnit;

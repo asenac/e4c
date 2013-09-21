@@ -22,13 +22,14 @@ public:
 	virtual ~Field();
 
 	typedef ::ecore::EString identifier_t;
-
 	
 	void setIdentifier(identifier_t _identifier);
 	identifier_t getIdentifier() const;
-
+	
 		
 protected:
+
+	friend class IdlmmPackage;
 
 	identifier_t m_identifier;
 

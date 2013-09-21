@@ -37,7 +37,6 @@ public:
 	typedef std::vector < ecore::EStructuralFeature_ptr > eStructuralFeatures_t;
 	typedef std::vector < ecore::EGenericType_ptr > eGenericSuperTypes_t;
 	typedef std::vector < ecore::EGenericType_ptr > eAllGenericSuperTypes_t;
-
 	
 	void setAbstract(abstract_t _abstract);
 	abstract_t getAbstract() const;
@@ -95,9 +94,20 @@ public:
 	void addEAllGenericSuperTypes(ecore::EGenericType_ptr eAllGenericSuperTypes_);
 	void addAllEAllGenericSuperTypes(const eAllGenericSuperTypes_t& eAllGenericSuperTypes_);
 	
-
+	
+	ecore::EBoolean isSuperTypeOf(ecore::EClass_ptr someClass);
+	ecore::EInt getFeatureCount();
+	ecore::EStructuralFeature_ptr getEStructuralFeature(ecore::EInt featureID);
+	ecore::EInt getFeatureID(ecore::EStructuralFeature_ptr feature);
+	ecore::EStructuralFeature_ptr getEStructuralFeature(ecore::EString featureName);
+	ecore::EInt getOperationCount();
+	ecore::EOperation_ptr getEOperation(ecore::EInt operationID);
+	ecore::EInt getOperationID(ecore::EOperation_ptr operation);
+	ecore::EOperation_ptr getOverride(ecore::EOperation_ptr operation);
 		
 protected:
+
+	friend class EcorePackage;
 
 	abstract_t m_abstract;
 	interface_t m_interface;

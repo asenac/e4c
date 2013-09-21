@@ -34,3 +34,19 @@ void EEnum::addAllELiterals(const eLiterals_t& eLiterals_)
 
 
 
+ecore::EEnumLiteral_ptr EEnum::getEEnumLiteral(ecore::EString name)
+{
+	return ecore::EEnumLiteral_ptr();
+	
+}
+ecore::EEnumLiteral_ptr EEnum::getEEnumLiteral(ecore::EInt value)
+{
+	return ecore::EEnumLiteral_ptr();
+	
+}
+ecore::EEnumLiteral_ptr EEnum::getEEnumLiteralByLiteral(ecore::EString literal)
+{
+	return ecore::EEnumLiteral_ptr();
+	
+}
+

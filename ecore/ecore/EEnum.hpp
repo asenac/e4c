@@ -22,14 +22,18 @@ public:
 	virtual ~EEnum();
 
 	typedef std::vector < ecore::EEnumLiteral_ptr > eLiterals_t;
-
 	
 	eLiterals_t getELiterals() const;
 	void addELiterals(ecore::EEnumLiteral_ptr eLiterals_);
 	void addAllELiterals(const eLiterals_t& eLiterals_);
-
+	
+	ecore::EEnumLiteral_ptr getEEnumLiteral(ecore::EString name);
+	ecore::EEnumLiteral_ptr getEEnumLiteral(ecore::EInt value);
+	ecore::EEnumLiteral_ptr getEEnumLiteralByLiteral(ecore::EString literal);
 		
 protected:
+
+	friend class EcorePackage;
 
 	std::vector < std::unique_ptr < ecore::EEnumLiteral > > m_eLiterals;
 

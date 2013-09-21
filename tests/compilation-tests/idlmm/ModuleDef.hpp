@@ -22,13 +22,14 @@ public:
 	virtual ~ModuleDef();
 
 	typedef ::ecore::EString prefix_t;
-
 	
 	void setPrefix(prefix_t _prefix);
 	prefix_t getPrefix() const;
-
+	
 		
 protected:
+
+	friend class IdlmmPackage;
 
 	prefix_t m_prefix;
 

@@ -2,6 +2,8 @@
 #define EMF_CPP_PRIMITIVETYPES_FWD_HPP
 
 
+#include <e4c/mapping.hpp>
+
 namespace PrimitiveTypes
 {
 
@@ -12,10 +14,20 @@ class PrimitiveTypesFactory;
 typedef PrimitiveTypesFactory * PrimitiveTypesFactory_ptr;
 
 // Data types
-typedef int Boolean;
+
+/*PROTECTED REGION ID(typedef_PrimitiveTypes::Boolean) ENABLED START*/typedef int Boolean;
+/*PROTECTED REGION END*/
+
+/*PROTECTED REGION ID(typedef_PrimitiveTypes::Integer) START*/
 typedef int Integer;
-typedef int String;
+/*PROTECTED REGION END*/
+
+/*PROTECTED REGION ID(typedef_PrimitiveTypes::String) ENABLED START*/typedef int String;
+/*PROTECTED REGION END*/
+
+/*PROTECTED REGION ID(typedef_PrimitiveTypes::Double) START*/
 typedef int Double;
+/*PROTECTED REGION END*/
 
 
 // Classes

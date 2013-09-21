@@ -22,15 +22,16 @@ public:
 	Use();
 	virtual ~Use();
 
-	typedef std::vector < SVG::Element_ptr > use_t;
+	typedef std::set < SVG::Element_ptr > use_t;
 
 	
-	// TODO
+	use_t getUse() const;
 
-	
+
+	std::set < SVG::Element_ptr > m_use;
+
+		
 protected:
-
-	use_t m_use;
 
 };
 

@@ -9,4 +9,7 @@
 
 #include <bintree/BinTreeNode.hpp>
 
+#include <bintree/BintreeFactory.hpp>
+#include <bintree/BintreePackage.hpp>
+
 #endif // EMF_CPP_BINTREE_INC_HPP

@@ -15,5 +15,15 @@ Displays::~Displays()
 {
 }
 
+Displays::to_t Displays::getTo() const
+{
+	return e4c::returned(m_to);
+}
+
+Displays::from_t Displays::getFrom() const
+{
+	return e4c::returned(m_from);
+}
+
 
 

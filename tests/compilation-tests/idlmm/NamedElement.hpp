@@ -21,18 +21,19 @@ public:
 	
 	virtual ~NamedElement();
 
-	typedef int identifier_t;
+	typedef ::ecore::EString identifier_t;
 
 	
 	void setIdentifier(identifier_t _identifier);
 	identifier_t getIdentifier() const;
 
-	
+		
 protected:
 	NamedElement();
 
 	identifier_t m_identifier;
 
+	
 };
 
 } // idlmm

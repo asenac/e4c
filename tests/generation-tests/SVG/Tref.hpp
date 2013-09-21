@@ -25,12 +25,13 @@ public:
 	typedef SVG::TextElement_ptr xlinkHref_t;
 
 	
-	// TODO
+	xlinkHref_t getXlinkHref() const;
 
-	
+
+	SVG::TextElement_ptr m_xlinkHref;
+
+		
 protected:
-
-	xlinkHref_t m_xlinkHref;
 
 };
 

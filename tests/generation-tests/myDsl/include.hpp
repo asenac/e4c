@@ -14,4 +14,7 @@
 #include <myDsl/Entity.hpp>
 #include <myDsl/Property.hpp>
 
+#include <myDsl/MyDslFactory.hpp>
+#include <myDsl/MyDslPackage.hpp>
+
 #endif // EMF_CPP_MYDSL_INC_HPP

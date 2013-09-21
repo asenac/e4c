@@ -22,8 +22,8 @@ public:
 	Rect();
 	virtual ~Rect();
 
-	typedef int rx_t;
-	typedef int ry_t;
+	typedef ::PrimitiveTypes::Double rx_t;
+	typedef ::PrimitiveTypes::Double ry_t;
 
 	
 	void setRx(rx_t _rx);
@@ -31,11 +31,12 @@ public:
 	void setRy(ry_t _ry);
 	ry_t getRy() const;
 
-	
-protected:
 
 	rx_t m_rx;
 	ry_t m_ry;
+
+		
+protected:
 
 };
 

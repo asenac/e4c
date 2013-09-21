@@ -14,5 +14,15 @@ ReferenceTo::~ReferenceTo()
 {
 }
 
+ReferenceTo::to_t ReferenceTo::getTo() const
+{
+	return e4c::returned(m_to);
+}
+
+ReferenceTo::from_t ReferenceTo::getFrom() const
+{
+	return e4c::returned(m_from);
+}
+
 
 

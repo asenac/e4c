@@ -15,5 +15,15 @@ Model::~Model()
 {
 }
 
+Model::imports_t Model::getImports() const
+{
+	return e4c::returned(m_imports);
+}
+
+Model::elements_t Model::getElements() const
+{
+	return e4c::returned(m_elements);
+}
+
 
 

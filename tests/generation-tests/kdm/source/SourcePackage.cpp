@@ -9,7 +9,85 @@ using namespace kdm::source;
 SourcePackage::SourcePackage()
 {
 	m_eFactoryInstance = SourceFactory::_instance();
-	::ecore::EcoreFactor_ptr ecoreFactory = ::ecore::EcoreFactory::_instance();
+	::ecore::EcoreFactory_ptr ecoreFactory = ::ecore::EcoreFactory::_instance();
+	
+	::ecore::EClass_ptr SourceRef_ = ecoreFactory->createEClass();
+	SourceRef_->setName("SourceRef");
+	// m_eClassifiers.push_back(SourceRef_);
+	::ecore::EClass_ptr SourceRegion_ = ecoreFactory->createEClass();
+	SourceRegion_->setName("SourceRegion");
+	// m_eClassifiers.push_back(SourceRegion_);
+	::ecore::EClass_ptr InventoryModel_ = ecoreFactory->createEClass();
+	InventoryModel_->setName("InventoryModel");
+	// m_eClassifiers.push_back(InventoryModel_);
+	::ecore::EClass_ptr AbstractInventoryElement_ = ecoreFactory->createEClass();
+	AbstractInventoryElement_->setName("AbstractInventoryElement");
+	// m_eClassifiers.push_back(AbstractInventoryElement_);
+	::ecore::EClass_ptr InventoryItem_ = ecoreFactory->createEClass();
+	InventoryItem_->setName("InventoryItem");
+	// m_eClassifiers.push_back(InventoryItem_);
+	::ecore::EClass_ptr SourceFile_ = ecoreFactory->createEClass();
+	SourceFile_->setName("SourceFile");
+	// m_eClassifiers.push_back(SourceFile_);
+	::ecore::EClass_ptr Image_ = ecoreFactory->createEClass();
+	Image_->setName("Image");
+	// m_eClassifiers.push_back(Image_);
+	::ecore::EClass_ptr ResourceDescription_ = ecoreFactory->createEClass();
+	ResourceDescription_->setName("ResourceDescription");
+	// m_eClassifiers.push_back(ResourceDescription_);
+	::ecore::EClass_ptr Configuration_ = ecoreFactory->createEClass();
+	Configuration_->setName("Configuration");
+	// m_eClassifiers.push_back(Configuration_);
+	::ecore::EClass_ptr InventoryContainer_ = ecoreFactory->createEClass();
+	InventoryContainer_->setName("InventoryContainer");
+	// m_eClassifiers.push_back(InventoryContainer_);
+	::ecore::EClass_ptr Directory_ = ecoreFactory->createEClass();
+	Directory_->setName("Directory");
+	// m_eClassifiers.push_back(Directory_);
+	::ecore::EClass_ptr Project_ = ecoreFactory->createEClass();
+	Project_->setName("Project");
+	// m_eClassifiers.push_back(Project_);
+	::ecore::EClass_ptr AbstractInventoryRelationship_ = ecoreFactory->createEClass();
+	AbstractInventoryRelationship_->setName("AbstractInventoryRelationship");
+	// m_eClassifiers.push_back(AbstractInventoryRelationship_);
+	::ecore::EClass_ptr BinaryFile_ = ecoreFactory->createEClass();
+	BinaryFile_->setName("BinaryFile");
+	// m_eClassifiers.push_back(BinaryFile_);
+	::ecore::EClass_ptr ExecutableFile_ = ecoreFactory->createEClass();
+	ExecutableFile_->setName("ExecutableFile");
+	// m_eClassifiers.push_back(ExecutableFile_);
+	::ecore::EClass_ptr DependsOn_ = ecoreFactory->createEClass();
+	DependsOn_->setName("DependsOn");
+	// m_eClassifiers.push_back(DependsOn_);
+	::ecore::EClass_ptr InventoryElement_ = ecoreFactory->createEClass();
+	InventoryElement_->setName("InventoryElement");
+	// m_eClassifiers.push_back(InventoryElement_);
+	::ecore::EClass_ptr InventoryRelationship_ = ecoreFactory->createEClass();
+	InventoryRelationship_->setName("InventoryRelationship");
+	// m_eClassifiers.push_back(InventoryRelationship_);
+	
+	
+	// SourceRef_->addESuperType(Element_);
+	// SourceRegion_->addESuperType(Element_);
+	// InventoryModel_->addESuperType(KDMModel_);
+	// AbstractInventoryElement_->addESuperType(KDMEntity_);
+	// InventoryItem_->addESuperType(AbstractInventoryElement_);
+	// SourceFile_->addESuperType(InventoryItem_);
+	// Image_->addESuperType(InventoryItem_);
+	// ResourceDescription_->addESuperType(InventoryItem_);
+	// Configuration_->addESuperType(InventoryItem_);
+	// InventoryContainer_->addESuperType(AbstractInventoryElement_);
+	// Directory_->addESuperType(InventoryContainer_);
+	// Project_->addESuperType(InventoryContainer_);
+	// AbstractInventoryRelationship_->addESuperType(KDMRelationship_);
+	// BinaryFile_->addESuperType(InventoryItem_);
+	// ExecutableFile_->addESuperType(InventoryItem_);
+	// DependsOn_->addESuperType(AbstractInventoryRelationship_);
+	// InventoryElement_->addESuperType(AbstractInventoryElement_);
+	// InventoryRelationship_->addESuperType(AbstractInventoryRelationship_);
+	
+	
+	
 	
 }
 

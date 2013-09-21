@@ -21,17 +21,18 @@ public:
 	
 	virtual ~NamedElement();
 
-	typedef int name_t;
+	typedef ::emof::String name_t;
 
 	
 	void setName(name_t _name);
 	name_t getName() const;
 
-	
-protected:
-	NamedElement();
 
 	name_t m_name;
+
+		
+protected:
+	NamedElement();
 
 };
 

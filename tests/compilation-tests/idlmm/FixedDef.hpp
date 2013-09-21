@@ -22,19 +22,24 @@ public:
 	FixedDef();
 	virtual ~FixedDef();
 
-	typedef std::unique_ptr < idlmm::Expression > digits_t;
-	typedef std::unique_ptr < idlmm::Expression > scale_t;
+	typedef idlmm::Expression_ptr digits_t;
+	typedef idlmm::Expression_ptr scale_t;
 
 	
-	// TODO
-	// TODO
+	digits_t getDigits() const;
+	void setDigits(digits_t digits_);
+	digits_t releaseDigits();
+	scale_t getScale() const;
+	void setScale(scale_t scale_);
+	scale_t releaseScale();
 
-	
+		
 protected:
 
-	digits_t m_digits;
-	scale_t m_scale;
+	std::unique_ptr < idlmm::Expression > m_digits;
+	std::unique_ptr < idlmm::Expression > m_scale;
 
+	
 };
 
 } // idlmm

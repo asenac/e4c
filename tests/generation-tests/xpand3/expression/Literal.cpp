@@ -13,5 +13,10 @@ Literal::~Literal()
 {
 }
 
+Literal::literalValue_t Literal::getLiteralValue() const
+{
+	return e4c::returned(m_literalValue);
+}
+
 
 

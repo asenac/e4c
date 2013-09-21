@@ -17,7 +17,7 @@ void MemberUnit::setExport_(export__t _export_)
 	m_export_ = _export_;;
 }
 
-export__t MemberUnit::getExport_() const
+MemberUnit::export__t MemberUnit::getExport_() const
 {
 	return m_export_;
 }

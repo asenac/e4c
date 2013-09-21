@@ -21,9 +21,19 @@ void Makefile::setName(name_t _name)
 	m_name = _name;;
 }
 
-name_t Makefile::getName() const
+Makefile::name_t Makefile::getName() const
 {
 	return m_name;
+}
+
+Makefile::comment_t Makefile::getComment() const
+{
+	return e4c::returned(m_comment);
+}
+
+Makefile::elements_t Makefile::getElements() const
+{
+	return e4c::returned(m_elements);
 }
 
 

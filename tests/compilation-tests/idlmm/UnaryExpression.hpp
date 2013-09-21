@@ -22,20 +22,23 @@ public:
 	UnaryExpression();
 	virtual ~UnaryExpression();
 
-	typedef std::unique_ptr < idlmm::Expression > expression_t;
-	typedef int operator_t;
+	typedef idlmm::Expression_ptr expression_t;
+	typedef ::ecore::EString operator_t;
 
 	
-	// TODO
+	expression_t getExpression() const;
+	void setExpression(expression_t expression_);
+	expression_t releaseExpression();
 	void setOperator(operator_t _operator);
 	operator_t getOperator() const;
 
-	
+		
 protected:
 
-	expression_t m_expression;
+	std::unique_ptr < idlmm::Expression > m_expression;
 	operator_t m_operator;
 
+	
 };
 
 } // idlmm

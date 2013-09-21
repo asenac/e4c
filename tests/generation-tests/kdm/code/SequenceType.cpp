@@ -17,7 +17,7 @@ void SequenceType::setSize(size_t _size)
 	m_size = _size;;
 }
 
-size_t SequenceType::getSize() const
+SequenceType::size_t SequenceType::getSize() const
 {
 	return m_size;
 }

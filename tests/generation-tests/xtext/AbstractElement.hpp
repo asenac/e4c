@@ -22,16 +22,17 @@ public:
 	AbstractElement();
 	virtual ~AbstractElement();
 
-	typedef int cardinality_t;
+	typedef ::ecore::EString cardinality_t;
 
 	
 	void setCardinality(cardinality_t _cardinality);
 	cardinality_t getCardinality() const;
 
-	
-protected:
 
 	cardinality_t m_cardinality;
+
+		
+protected:
 
 };
 

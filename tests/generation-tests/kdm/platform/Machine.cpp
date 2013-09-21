@@ -15,5 +15,15 @@ Machine::~Machine()
 {
 }
 
+Machine::deployedComponent_t Machine::getDeployedComponent() const
+{
+	return e4c::returned(m_deployedComponent);
+}
+
+Machine::deployedResource_t Machine::getDeployedResource() const
+{
+	return e4c::returned(m_deployedResource);
+}
+
 
 

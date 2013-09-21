@@ -22,16 +22,18 @@ public:
 	EEnum();
 	virtual ~EEnum();
 
-	typedef boost::ptr_vector < ecore::EEnumLiteral > eLiterals_t;
+	typedef std::vector < ecore::EEnumLiteral_ptr > eLiterals_t;
 
 	
-	// TODO
+	eLiterals_t getELiterals() const;
+	void addELiterals(ecore::EEnumLiteral_ptr eLiterals_);
 
-	
+		
 protected:
 
-	eLiterals_t m_eLiterals;
+	std::vector < std::unique_ptr < ecore::EEnumLiteral > > m_eLiterals;
 
+	
 };
 
 } // ecore

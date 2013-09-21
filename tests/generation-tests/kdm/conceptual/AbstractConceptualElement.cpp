@@ -19,5 +19,25 @@ AbstractConceptualElement::~AbstractConceptualElement()
 {
 }
 
+AbstractConceptualElement::source_t AbstractConceptualElement::getSource() const
+{
+	return e4c::returned(m_source);
+}
+
+AbstractConceptualElement::implementation_t AbstractConceptualElement::getImplementation() const
+{
+	return e4c::returned(m_implementation);
+}
+
+AbstractConceptualElement::conceptualRelation_t AbstractConceptualElement::getConceptualRelation() const
+{
+	return e4c::returned(m_conceptualRelation);
+}
+
+AbstractConceptualElement::abstraction_t AbstractConceptualElement::getAbstraction() const
+{
+	return e4c::returned(m_abstraction);
+}
+
 
 

@@ -15,5 +15,15 @@ ConsumesEvent::~ConsumesEvent()
 {
 }
 
+ConsumesEvent::to_t ConsumesEvent::getTo() const
+{
+	return e4c::returned(m_to);
+}
+
+ConsumesEvent::from_t ConsumesEvent::getFrom() const
+{
+	return e4c::returned(m_from);
+}
+
 
 

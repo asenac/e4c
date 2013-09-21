@@ -22,16 +22,18 @@ public:
 	EnumDef();
 	virtual ~EnumDef();
 
-	typedef boost::ptr_vector < idlmm::EnumMember > members_t;
+	typedef std::vector < idlmm::EnumMember_ptr > members_t;
 
 	
-	// TODO
+	members_t getMembers() const;
+	void addMembers(idlmm::EnumMember_ptr members_);
 
-	
+		
 protected:
 
-	members_t m_members;
+	std::vector < std::unique_ptr < idlmm::EnumMember > > m_members;
 
+	
 };
 
 } // idlmm

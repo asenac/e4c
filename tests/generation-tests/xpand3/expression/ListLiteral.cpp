@@ -13,5 +13,10 @@ ListLiteral::~ListLiteral()
 {
 }
 
+ListLiteral::elements_t ListLiteral::getElements() const
+{
+	return e4c::returned(m_elements);
+}
+
 
 

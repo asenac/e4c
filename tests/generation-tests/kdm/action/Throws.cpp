@@ -15,5 +15,15 @@ Throws::~Throws()
 {
 }
 
+Throws::to_t Throws::getTo() const
+{
+	return e4c::returned(m_to);
+}
+
+Throws::from_t Throws::getFrom() const
+{
+	return e4c::returned(m_from);
+}
+
 
 

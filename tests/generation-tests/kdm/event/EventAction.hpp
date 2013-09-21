@@ -24,19 +24,20 @@ public:
 	EventAction();
 	virtual ~EventAction();
 
-	typedef int kind_t;
-	typedef boost::ptr_set < kdm::event::Event > eventElement_t;
+	typedef ::kdm::core::String kind_t;
+	typedef std::set < kdm::event::Event_ptr > eventElement_t;
 
 	
 	void setKind(kind_t _kind);
 	kind_t getKind() const;
-	// TODO
+	eventElement_t getEventElement() const;
 
-	
-protected:
 
 	kind_t m_kind;
-	eventElement_t m_eventElement;
+	std::set < std::unique_ptr < kdm::event::Event > > m_eventElement;
+
+		
+protected:
 
 };
 

@@ -22,9 +22,9 @@ public:
 	EEnumLiteral();
 	virtual ~EEnumLiteral();
 
-	typedef int value_t;
-	typedef int instance_t;
-	typedef int literal_t;
+	typedef ::ecore::EInt value_t;
+	typedef ::ecore::EEnumerator instance_t;
+	typedef ::ecore::EString literal_t;
 	typedef ecore::EEnum_ptr eEnum_t;
 
 	
@@ -34,16 +34,19 @@ public:
 	instance_t getInstance() const;
 	void setLiteral(literal_t _literal);
 	literal_t getLiteral() const;
-	// TODO
+	eEnum_t getEEnum() const;
 
-	
+		
 protected:
 
 	value_t m_value;
 	instance_t m_instance;
 	literal_t m_literal;
-	eEnum_t m_eEnum;
+	ecore::EEnum_ptr m_eEnum;
 
+	
+	friend class ::ecore::EEnum;
+	void setEEnum(eEnum_t eEnum_);
 };
 
 } // ecore

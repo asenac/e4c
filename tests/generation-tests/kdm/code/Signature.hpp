@@ -24,15 +24,16 @@ public:
 	Signature();
 	virtual ~Signature();
 
-	typedef boost::ptr_vector < kdm::code::ParameterUnit > parameterUnit_t;
+	typedef std::vector < kdm::code::ParameterUnit_ptr > parameterUnit_t;
 
 	
-	// TODO
+	parameterUnit_t getParameterUnit() const;
 
-	
+
+	std::vector < std::unique_ptr < kdm::code::ParameterUnit > > m_parameterUnit;
+
+		
 protected:
-
-	parameterUnit_t m_parameterUnit;
 
 };
 

@@ -15,5 +15,15 @@ IfStatement::~IfStatement()
 {
 }
 
+IfStatement::condition_t IfStatement::getCondition() const
+{
+	return e4c::returned(m_condition);
+}
+
+IfStatement::elseIf_t IfStatement::getElseIf() const
+{
+	return e4c::returned(m_elseIf);
+}
+
 
 

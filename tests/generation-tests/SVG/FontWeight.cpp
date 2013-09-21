@@ -17,7 +17,7 @@ void FontWeight::setBold(bold_t _bold)
 	m_bold = _bold;;
 }
 
-bold_t FontWeight::getBold() const
+FontWeight::bold_t FontWeight::getBold() const
 {
 	return m_bold;
 }

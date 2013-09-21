@@ -22,20 +22,22 @@ public:
 	ExceptionDef();
 	virtual ~ExceptionDef();
 
-	typedef int typeCode_t;
-	typedef boost::ptr_vector < idlmm::Field > members_t;
+	typedef ::idlmm::ETypeCode typeCode_t;
+	typedef std::vector < idlmm::Field_ptr > members_t;
 
 	
 	void setTypeCode(typeCode_t _typeCode);
 	typeCode_t getTypeCode() const;
-	// TODO
+	members_t getMembers() const;
+	void addMembers(idlmm::Field_ptr members_);
 
-	
+		
 protected:
 
 	typeCode_t m_typeCode;
-	members_t m_members;
+	std::vector < std::unique_ptr < idlmm::Field > > m_members;
 
+	
 };
 
 } // idlmm

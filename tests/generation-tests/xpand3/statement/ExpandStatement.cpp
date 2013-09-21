@@ -23,9 +23,29 @@ void ExpandStatement::setForeach(foreach_t _foreach)
 	m_foreach = _foreach;;
 }
 
-foreach_t ExpandStatement::getForeach() const
+ExpandStatement::foreach_t ExpandStatement::getForeach() const
 {
 	return m_foreach;
+}
+
+ExpandStatement::parameters_t ExpandStatement::getParameters() const
+{
+	return e4c::returned(m_parameters);
+}
+
+ExpandStatement::separator_t ExpandStatement::getSeparator() const
+{
+	return e4c::returned(m_separator);
+}
+
+ExpandStatement::target_t ExpandStatement::getTarget() const
+{
+	return e4c::returned(m_target);
+}
+
+ExpandStatement::definition_t ExpandStatement::getDefinition() const
+{
+	return e4c::returned(m_definition);
 }
 
 

@@ -25,13 +25,16 @@ public:
 	typedef idlmm::Constant_ptr constant_t;
 
 	
-	// TODO
-
+	constant_t getConstant() const;
 	
+	void setConstant(constant_t constant_);
+
+		
 protected:
 
-	constant_t m_constant;
+	idlmm::Constant_ptr m_constant;
 
+	
 };
 
 } // idlmm

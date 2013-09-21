@@ -24,19 +24,20 @@ public:
 	ExtensionFamily();
 	virtual ~ExtensionFamily();
 
-	typedef boost::ptr_set < kdm::kdm::Stereotype > stereotype_t;
-	typedef int name_t;
+	typedef std::set < kdm::kdm::Stereotype_ptr > stereotype_t;
+	typedef ::kdm::core::String name_t;
 
 	
-	// TODO
+	stereotype_t getStereotype() const;
 	void setName(name_t _name);
 	name_t getName() const;
 
-	
-protected:
 
-	stereotype_t m_stereotype;
+	std::set < std::unique_ptr < kdm::kdm::Stereotype > > m_stereotype;
 	name_t m_name;
+
+		
+protected:
 
 };
 

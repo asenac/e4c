@@ -22,19 +22,20 @@ public:
 	Company();
 	virtual ~Company();
 
-	typedef int name_t;
-	typedef boost::ptr_vector < company::Department > departments_t;
+	typedef ::ecore::EString name_t;
+	typedef std::vector < company::Department_ptr > departments_t;
 
 	
 	void setName(name_t _name);
 	name_t getName() const;
-	// TODO
+	departments_t getDepartments() const;
 
-	
-protected:
 
 	name_t m_name;
-	departments_t m_departments;
+	std::vector < std::unique_ptr < company::Department > > m_departments;
+
+		
+protected:
 
 };
 

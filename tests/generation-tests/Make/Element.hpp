@@ -21,17 +21,18 @@ public:
 	
 	virtual ~Element();
 
-	typedef int name_t;
+	typedef ::PrimitiveTypes::String name_t;
 
 	
 	void setName(name_t _name);
 	name_t getName() const;
 
-	
-protected:
-	Element();
 
 	name_t m_name;
+
+		
+protected:
+	Element();
 
 };
 

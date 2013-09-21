@@ -24,19 +24,20 @@ public:
 	ArrayType();
 	virtual ~ArrayType();
 
-	typedef int size_t;
-	typedef std::unique_ptr < kdm::code::IndexUnit > indexUnit_t;
+	typedef ::kdm::core::Integer size_t;
+	typedef kdm::code::IndexUnit_ptr indexUnit_t;
 
 	
 	void setSize(size_t _size);
 	size_t getSize() const;
-	// TODO
+	indexUnit_t getIndexUnit() const;
 
-	
-protected:
 
 	size_t m_size;
-	indexUnit_t m_indexUnit;
+	std::unique_ptr < kdm::code::IndexUnit > m_indexUnit;
+
+		
+protected:
 
 };
 

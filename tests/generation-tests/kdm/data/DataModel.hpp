@@ -24,15 +24,16 @@ public:
 	DataModel();
 	virtual ~DataModel();
 
-	typedef boost::ptr_set < kdm::data::AbstractDataElement > dataElement_t;
+	typedef std::set < kdm::data::AbstractDataElement_ptr > dataElement_t;
 
 	
-	// TODO
+	dataElement_t getDataElement() const;
 
-	
+
+	std::set < std::unique_ptr < kdm::data::AbstractDataElement > > m_dataElement;
+
+		
 protected:
-
-	dataElement_t m_dataElement;
 
 };
 

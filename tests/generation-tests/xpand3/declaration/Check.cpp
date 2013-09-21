@@ -21,9 +21,19 @@ void Check::setErrorSeverity(errorSeverity_t _errorSeverity)
 	m_errorSeverity = _errorSeverity;;
 }
 
-errorSeverity_t Check::getErrorSeverity() const
+Check::errorSeverity_t Check::getErrorSeverity() const
 {
 	return m_errorSeverity;
+}
+
+Check::msg_t Check::getMsg() const
+{
+	return e4c::returned(m_msg);
+}
+
+Check::constraint_t Check::getConstraint() const
+{
+	return e4c::returned(m_constraint);
 }
 
 void Check::setFeature(feature_t _feature)
@@ -31,7 +41,7 @@ void Check::setFeature(feature_t _feature)
 	m_feature = _feature;;
 }
 
-feature_t Check::getFeature() const
+Check::feature_t Check::getFeature() const
 {
 	return m_feature;
 }

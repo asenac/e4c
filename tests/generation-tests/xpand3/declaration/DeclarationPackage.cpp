@@ -9,7 +9,53 @@ using namespace xpand3::declaration;
 DeclarationPackage::DeclarationPackage()
 {
 	m_eFactoryInstance = DeclarationFactory::_instance();
-	::ecore::EcoreFactor_ptr ecoreFactory = ::ecore::EcoreFactory::_instance();
+	::ecore::EcoreFactory_ptr ecoreFactory = ::ecore::EcoreFactory::_instance();
+	
+	::ecore::EClass_ptr AbstractDeclaration_ = ecoreFactory->createEClass();
+	AbstractDeclaration_->setName("AbstractDeclaration");
+	// m_eClassifiers.push_back(AbstractDeclaration_);
+	::ecore::EClass_ptr AbstractNamedDeclaration_ = ecoreFactory->createEClass();
+	AbstractNamedDeclaration_->setName("AbstractNamedDeclaration");
+	// m_eClassifiers.push_back(AbstractNamedDeclaration_);
+	::ecore::EClass_ptr Definition_ = ecoreFactory->createEClass();
+	Definition_->setName("Definition");
+	// m_eClassifiers.push_back(Definition_);
+	::ecore::EClass_ptr Extension_ = ecoreFactory->createEClass();
+	Extension_->setName("Extension");
+	// m_eClassifiers.push_back(Extension_);
+	::ecore::EClass_ptr AbstractAspect_ = ecoreFactory->createEClass();
+	AbstractAspect_->setName("AbstractAspect");
+	// m_eClassifiers.push_back(AbstractAspect_);
+	::ecore::EClass_ptr ExtensionAspect_ = ecoreFactory->createEClass();
+	ExtensionAspect_->setName("ExtensionAspect");
+	// m_eClassifiers.push_back(ExtensionAspect_);
+	::ecore::EClass_ptr DefinitionAspect_ = ecoreFactory->createEClass();
+	DefinitionAspect_->setName("DefinitionAspect");
+	// m_eClassifiers.push_back(DefinitionAspect_);
+	::ecore::EClass_ptr Check_ = ecoreFactory->createEClass();
+	Check_->setName("Check");
+	// m_eClassifiers.push_back(Check_);
+	::ecore::EClass_ptr CreateExtension_ = ecoreFactory->createEClass();
+	CreateExtension_->setName("CreateExtension");
+	// m_eClassifiers.push_back(CreateExtension_);
+	::ecore::EClass_ptr JavaExtension_ = ecoreFactory->createEClass();
+	JavaExtension_->setName("JavaExtension");
+	// m_eClassifiers.push_back(JavaExtension_);
+	
+	
+	// AbstractDeclaration_->addESuperType(SyntaxElement_);
+	// AbstractNamedDeclaration_->addESuperType(AbstractDeclaration_);
+	// Definition_->addESuperType(AbstractNamedDeclaration_);
+	// Extension_->addESuperType(AbstractNamedDeclaration_);
+	// AbstractAspect_->addESuperType(AbstractDeclaration_);
+	// ExtensionAspect_->addESuperType(AbstractAspect_);
+	// DefinitionAspect_->addESuperType(AbstractAspect_);
+	// Check_->addESuperType(AbstractDeclaration_);
+	// CreateExtension_->addESuperType(Extension_);
+	// JavaExtension_->addESuperType(AbstractNamedDeclaration_);
+	
+	
+	
 	
 }
 

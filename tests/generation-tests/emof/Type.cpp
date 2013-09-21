@@ -13,5 +13,10 @@ Type::~Type()
 {
 }
 
+Type::package_t Type::getPackage() const
+{
+	return e4c::returned(m_package);
+}
+
 
 

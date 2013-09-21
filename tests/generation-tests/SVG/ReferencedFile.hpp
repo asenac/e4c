@@ -21,20 +21,21 @@ public:
 	
 	virtual ~ReferencedFile();
 
-	typedef std::vector < SVG::Image_ptr > referer_t;
-	typedef int name_t;
+	typedef std::set < SVG::Image_ptr > referer_t;
+	typedef ::PrimitiveTypes::String name_t;
 
 	
-	// TODO
+	referer_t getReferer() const;
 	void setName(name_t _name);
 	name_t getName() const;
 
-	
+
+	std::set < SVG::Image_ptr > m_referer;
+	name_t m_name;
+
+		
 protected:
 	ReferencedFile();
-
-	referer_t m_referer;
-	name_t m_name;
 
 };
 

@@ -9,7 +9,22 @@ using namespace company;
 CompanyPackage::CompanyPackage()
 {
 	m_eFactoryInstance = CompanyFactory::_instance();
-	::ecore::EcoreFactor_ptr ecoreFactory = ::ecore::EcoreFactory::_instance();
+	::ecore::EcoreFactory_ptr ecoreFactory = ::ecore::EcoreFactory::_instance();
+	
+	::ecore::EClass_ptr Employee_ = ecoreFactory->createEClass();
+	Employee_->setName("Employee");
+	// m_eClassifiers.push_back(Employee_);
+	::ecore::EClass_ptr Department_ = ecoreFactory->createEClass();
+	Department_->setName("Department");
+	// m_eClassifiers.push_back(Department_);
+	::ecore::EClass_ptr Company_ = ecoreFactory->createEClass();
+	Company_->setName("Company");
+	// m_eClassifiers.push_back(Company_);
+	
+	
+	
+	
+	
 	
 }
 

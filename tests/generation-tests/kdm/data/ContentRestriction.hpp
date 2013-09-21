@@ -24,8 +24,8 @@ public:
 	ContentRestriction();
 	virtual ~ContentRestriction();
 
-	typedef int kind_t;
-	typedef int value_t;
+	typedef ::kdm::core::String kind_t;
+	typedef ::kdm::core::String value_t;
 
 	
 	void setKind(kind_t _kind);
@@ -33,11 +33,12 @@ public:
 	void setValue(value_t _value);
 	value_t getValue() const;
 
-	
-protected:
 
 	kind_t m_kind;
 	value_t m_value;
+
+		
+protected:
 
 };
 

@@ -22,18 +22,19 @@ public:
 	CrossReference();
 	virtual ~CrossReference();
 
-	typedef std::unique_ptr < xtext::TypeRef > type_t;
-	typedef std::unique_ptr < xtext::AbstractElement > terminal_t;
+	typedef xtext::TypeRef_ptr type_t;
+	typedef xtext::AbstractElement_ptr terminal_t;
 
 	
-	// TODO
-	// TODO
+	type_t getType() const;
+	terminal_t getTerminal() const;
 
-	
+
+	std::unique_ptr < xtext::TypeRef > m_type;
+	std::unique_ptr < xtext::AbstractElement > m_terminal;
+
+		
 protected:
-
-	type_t m_type;
-	terminal_t m_terminal;
 
 };
 

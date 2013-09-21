@@ -19,9 +19,14 @@ void ClassUnit::setIsAbstract(isAbstract_t _isAbstract)
 	m_isAbstract = _isAbstract;;
 }
 
-isAbstract_t ClassUnit::getIsAbstract() const
+ClassUnit::isAbstract_t ClassUnit::getIsAbstract() const
 {
 	return m_isAbstract;
+}
+
+ClassUnit::codeElement_t ClassUnit::getCodeElement() const
+{
+	return e4c::returned(m_codeElement);
 }
 
 

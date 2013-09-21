@@ -17,7 +17,7 @@ void ENamedElement::setName(name_t _name)
 	m_name = _name;;
 }
 
-name_t ENamedElement::getName() const
+ENamedElement::name_t ENamedElement::getName() const
 {
 	return m_name;
 }

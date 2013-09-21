@@ -13,5 +13,10 @@ XMLSchema::~XMLSchema()
 {
 }
 
+XMLSchema::contentElement_t XMLSchema::getContentElement() const
+{
+	return e4c::returned(m_contentElement);
+}
+
 
 

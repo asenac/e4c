@@ -24,8 +24,8 @@ public:
 	RangeType();
 	virtual ~RangeType();
 
-	typedef int lower_t;
-	typedef int upper_t;
+	typedef ::kdm::core::Integer lower_t;
+	typedef ::kdm::core::Integer upper_t;
 
 	
 	void setLower(lower_t _lower);
@@ -33,11 +33,12 @@ public:
 	void setUpper(upper_t _upper);
 	upper_t getUpper() const;
 
-	
-protected:
 
 	lower_t m_lower;
 	upper_t m_upper;
+
+		
+protected:
 
 };
 

@@ -19,9 +19,14 @@ void Window::setTitle(title_t _title)
 	m_title = _title;;
 }
 
-title_t Window::getTitle() const
+Window::title_t Window::getTitle() const
 {
 	return m_title;
+}
+
+Window::children_t Window::getChildren() const
+{
+	return e4c::returned(m_children);
 }
 
 

@@ -22,11 +22,11 @@ public:
 	EPackage();
 	virtual ~EPackage();
 
-	typedef int nsURI_t;
-	typedef int nsPrefix_t;
+	typedef ::ecore::EString nsURI_t;
+	typedef ::ecore::EString nsPrefix_t;
 	typedef ecore::EFactory_ptr eFactoryInstance_t;
-	typedef boost::ptr_vector < ecore::EClassifier > eClassifiers_t;
-	typedef boost::ptr_vector < ecore::EPackage > eSubpackages_t;
+	typedef std::vector < ecore::EClassifier_ptr > eClassifiers_t;
+	typedef std::vector < ecore::EPackage_ptr > eSubpackages_t;
 	typedef ecore::EPackage_ptr eSuperPackage_t;
 
 	
@@ -34,21 +34,27 @@ public:
 	nsURI_t getNsURI() const;
 	void setNsPrefix(nsPrefix_t _nsPrefix);
 	nsPrefix_t getNsPrefix() const;
-	// TODO
-	// TODO
-	// TODO
-	// TODO
-
+	eFactoryInstance_t getEFactoryInstance() const;
 	
+	void setEFactoryInstance(eFactoryInstance_t eFactoryInstance_);
+	eClassifiers_t getEClassifiers() const;
+	void addEClassifiers(ecore::EClassifier_ptr eClassifiers_);
+	eSubpackages_t getESubpackages() const;
+	void addESubpackages(ecore::EPackage_ptr eSubpackages_);
+	eSuperPackage_t getESuperPackage() const;
+
+		
 protected:
 
 	nsURI_t m_nsURI;
 	nsPrefix_t m_nsPrefix;
-	eFactoryInstance_t m_eFactoryInstance;
-	eClassifiers_t m_eClassifiers;
-	eSubpackages_t m_eSubpackages;
-	eSuperPackage_t m_eSuperPackage;
+	ecore::EFactory_ptr m_eFactoryInstance;
+	std::vector < std::unique_ptr < ecore::EClassifier > > m_eClassifiers;
+	std::vector < std::unique_ptr < ecore::EPackage > > m_eSubpackages;
+	ecore::EPackage_ptr m_eSuperPackage;
 
+	
+	void setESuperPackage(eSuperPackage_t eSuperPackage_);
 };
 
 } // ecore

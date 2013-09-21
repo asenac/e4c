@@ -24,10 +24,11 @@ public:
 	
 	
 	
-	
+		
 protected:
 	LiteralExpression();
 
+	
 	
 };
 

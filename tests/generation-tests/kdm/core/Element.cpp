@@ -15,5 +15,15 @@ Element::~Element()
 {
 }
 
+Element::attribute_t Element::getAttribute() const
+{
+	return e4c::returned(m_attribute);
+}
+
+Element::annotation_t Element::getAnnotation() const
+{
+	return e4c::returned(m_annotation);
+}
+
 
 

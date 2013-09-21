@@ -22,20 +22,22 @@ public:
 	UnionField();
 	virtual ~UnionField();
 
-	typedef int identifier_t;
-	typedef boost::ptr_vector < idlmm::Expression > label_t;
+	typedef ::ecore::EString identifier_t;
+	typedef std::vector < idlmm::Expression_ptr > label_t;
 
 	
 	void setIdentifier(identifier_t _identifier);
 	identifier_t getIdentifier() const;
-	// TODO
+	label_t getLabel() const;
+	void addLabel(idlmm::Expression_ptr label_);
 
-	
+		
 protected:
 
 	identifier_t m_identifier;
-	label_t m_label;
+	std::vector < std::unique_ptr < idlmm::Expression > > m_label;
 
+	
 };
 
 } // idlmm

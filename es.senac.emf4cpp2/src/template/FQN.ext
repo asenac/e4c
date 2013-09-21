@@ -6,6 +6,8 @@ String getName(ENamedElement this) :
 		case "export"		: name + "_"
 		default: name
 	};
+String getNameUpper(ENamedElement this) :
+	getName().toFirstUpper();
 
 String getFQN(ENamedElement this, String separator) :
 	let container = eContainer():
@@ -37,23 +39,44 @@ String getPackage(EPackage this) : name.toFirstUpper() + "Package";
 
 String getListSeparator() : ",\n\t                          ";
 
+String getContaimentPtr(EReference this) :
+	"std::unique_ptr < " + EType.getFQN() + " >"
+;
+String getNoContaimentPtr(EReference this) :
+	EType.getFQN() + "_ptr"
+;
+
 String getReferenceType(EReference this) :
 	if upperBound == 1 then
 	(
 		if containment then
-			"std::unique_ptr < " + EType.getFQN() + " >"
+			getContaimentPtr()
 		else
-			EType.getFQN() + "_ptr"
+			getNoContaimentPtr()
 	)
 	else
 	(
 		if containment && ordered then
-			"boost::ptr_vector < " + EType.getFQN() + " >"
+			"std::vector < " + getContaimentPtr() + " >"
 		else if containment then
-			"boost::ptr_set < " + EType.getFQN() + " >"
+			"std::set < " + getContaimentPtr() + " >"
 		else if ordered then
-			"std::set < " + EType.getFQN() + "_ptr >"
+			"std::vector < " + getNoContaimentPtr() + " >"
 		else
-			"std::vector < " + EType.getFQN() + "_ptr >"			
+			"std::set < " + getNoContaimentPtr() + " >"			
+	)
+;
+
+String getNoContaimentType(EReference this) :
+	if upperBound == 1 then
+	(
+		EType.getFQN() + "_ptr"
+	)
+	else
+	(
+		if ordered then
+			"std::vector < " + EType.getFQN() + "_ptr >"
+		else
+			"std::set < " + EType.getFQN() + "_ptr >"			
 	)
 ;

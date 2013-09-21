@@ -17,7 +17,7 @@ void FileDep::setName(name_t _name)
 	m_name = _name;;
 }
 
-name_t FileDep::getName() const
+FileDep::name_t FileDep::getName() const
 {
 	return m_name;
 }

@@ -9,7 +9,105 @@ using namespace emof;
 EmofPackage::EmofPackage()
 {
 	m_eFactoryInstance = EmofFactory::_instance();
-	::ecore::EcoreFactor_ptr ecoreFactory = ::ecore::EcoreFactory::_instance();
+	::ecore::EcoreFactory_ptr ecoreFactory = ::ecore::EcoreFactory::_instance();
+	
+	::ecore::EClass_ptr Class_ = ecoreFactory->createEClass();
+	Class_->setName("Class");
+	// m_eClassifiers.push_back(Class_);
+	::ecore::EClass_ptr Comment_ = ecoreFactory->createEClass();
+	Comment_->setName("Comment");
+	// m_eClassifiers.push_back(Comment_);
+	::ecore::EClass_ptr DataType_ = ecoreFactory->createEClass();
+	DataType_->setName("DataType");
+	// m_eClassifiers.push_back(DataType_);
+	::ecore::EClass_ptr Element_ = ecoreFactory->createEClass();
+	Element_->setName("Element");
+	// m_eClassifiers.push_back(Element_);
+	::ecore::EClass_ptr Enumeration_ = ecoreFactory->createEClass();
+	Enumeration_->setName("Enumeration");
+	// m_eClassifiers.push_back(Enumeration_);
+	::ecore::EClass_ptr EnumerationLiteral_ = ecoreFactory->createEClass();
+	EnumerationLiteral_->setName("EnumerationLiteral");
+	// m_eClassifiers.push_back(EnumerationLiteral_);
+	::ecore::EClass_ptr Extent_ = ecoreFactory->createEClass();
+	Extent_->setName("Extent");
+	// m_eClassifiers.push_back(Extent_);
+	::ecore::EClass_ptr MultiplicityElement_ = ecoreFactory->createEClass();
+	MultiplicityElement_->setName("MultiplicityElement");
+	// m_eClassifiers.push_back(MultiplicityElement_);
+	::ecore::EClass_ptr NamedElement_ = ecoreFactory->createEClass();
+	NamedElement_->setName("NamedElement");
+	// m_eClassifiers.push_back(NamedElement_);
+	::ecore::EClass_ptr Object_ = ecoreFactory->createEClass();
+	Object_->setName("Object");
+	// m_eClassifiers.push_back(Object_);
+	::ecore::EClass_ptr Operation_ = ecoreFactory->createEClass();
+	Operation_->setName("Operation");
+	// m_eClassifiers.push_back(Operation_);
+	::ecore::EClass_ptr Package_ = ecoreFactory->createEClass();
+	Package_->setName("Package");
+	// m_eClassifiers.push_back(Package_);
+	::ecore::EClass_ptr Parameter_ = ecoreFactory->createEClass();
+	Parameter_->setName("Parameter");
+	// m_eClassifiers.push_back(Parameter_);
+	::ecore::EClass_ptr PrimitiveType_ = ecoreFactory->createEClass();
+	PrimitiveType_->setName("PrimitiveType");
+	// m_eClassifiers.push_back(PrimitiveType_);
+	::ecore::EClass_ptr Property_ = ecoreFactory->createEClass();
+	Property_->setName("Property");
+	// m_eClassifiers.push_back(Property_);
+	::ecore::EClass_ptr Tag_ = ecoreFactory->createEClass();
+	Tag_->setName("Tag");
+	// m_eClassifiers.push_back(Tag_);
+	::ecore::EClass_ptr Type_ = ecoreFactory->createEClass();
+	Type_->setName("Type");
+	// m_eClassifiers.push_back(Type_);
+	::ecore::EClass_ptr TypedElement_ = ecoreFactory->createEClass();
+	TypedElement_->setName("TypedElement");
+	// m_eClassifiers.push_back(TypedElement_);
+	::ecore::EClass_ptr URIExtent_ = ecoreFactory->createEClass();
+	URIExtent_->setName("URIExtent");
+	// m_eClassifiers.push_back(URIExtent_);
+	
+	
+	// Class_->addESuperType(Type_);
+	// Comment_->addESuperType(Element_);
+	// DataType_->addESuperType(Type_);
+	// Element_->addESuperType(Object_);
+	// Enumeration_->addESuperType(DataType_);
+	// EnumerationLiteral_->addESuperType(NamedElement_);
+	// Extent_->addESuperType(Object_);
+	// NamedElement_->addESuperType(Element_);
+	// Operation_->addESuperType(TypedElement_);
+	// Operation_->addESuperType(MultiplicityElement_);
+	// Package_->addESuperType(NamedElement_);
+	// Parameter_->addESuperType(TypedElement_);
+	// Parameter_->addESuperType(MultiplicityElement_);
+	// PrimitiveType_->addESuperType(DataType_);
+	// Property_->addESuperType(TypedElement_);
+	// Property_->addESuperType(MultiplicityElement_);
+	// Tag_->addESuperType(Element_);
+	// Type_->addESuperType(NamedElement_);
+	// TypedElement_->addESuperType(NamedElement_);
+	// URIExtent_->addESuperType(Extent_);
+	
+	
+	::ecore::EDataType_ptr Boolean_ = ecoreFactory->createEDataType();
+	Boolean_->setName("Boolean");
+	// m_eClassifiers.push_back(Boolean_);
+	::ecore::EDataType_ptr Integer_ = ecoreFactory->createEDataType();
+	Integer_->setName("Integer");
+	// m_eClassifiers.push_back(Integer_);
+	::ecore::EDataType_ptr Real_ = ecoreFactory->createEDataType();
+	Real_->setName("Real");
+	// m_eClassifiers.push_back(Real_);
+	::ecore::EDataType_ptr String_ = ecoreFactory->createEDataType();
+	String_->setName("String");
+	// m_eClassifiers.push_back(String_);
+	::ecore::EDataType_ptr UnlimitedNatural_ = ecoreFactory->createEDataType();
+	UnlimitedNatural_->setName("UnlimitedNatural");
+	// m_eClassifiers.push_back(UnlimitedNatural_);
+	
 	
 }
 

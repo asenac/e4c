@@ -24,28 +24,29 @@ public:
 	ExpandStatement();
 	virtual ~ExpandStatement();
 
-	typedef int foreach_t;
-	typedef boost::ptr_vector < xpand3::expression::AbstractExpression > parameters_t;
-	typedef std::unique_ptr < xpand3::expression::AbstractExpression > separator_t;
-	typedef std::unique_ptr < xpand3::expression::AbstractExpression > target_t;
-	typedef std::unique_ptr < xpand3::Identifier > definition_t;
+	typedef ::ecore::EBoolean foreach_t;
+	typedef std::vector < xpand3::expression::AbstractExpression_ptr > parameters_t;
+	typedef xpand3::expression::AbstractExpression_ptr separator_t;
+	typedef xpand3::expression::AbstractExpression_ptr target_t;
+	typedef xpand3::Identifier_ptr definition_t;
 
 	
 	void setForeach(foreach_t _foreach);
 	foreach_t getForeach() const;
-	// TODO
-	// TODO
-	// TODO
-	// TODO
+	parameters_t getParameters() const;
+	separator_t getSeparator() const;
+	target_t getTarget() const;
+	definition_t getDefinition() const;
 
-	
-protected:
 
 	foreach_t m_foreach;
-	parameters_t m_parameters;
-	separator_t m_separator;
-	target_t m_target;
-	definition_t m_definition;
+	std::vector < std::unique_ptr < xpand3::expression::AbstractExpression > > m_parameters;
+	std::unique_ptr < xpand3::expression::AbstractExpression > m_separator;
+	std::unique_ptr < xpand3::expression::AbstractExpression > m_target;
+	std::unique_ptr < xpand3::Identifier > m_definition;
+
+		
+protected:
 
 };
 

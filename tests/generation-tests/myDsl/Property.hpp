@@ -22,23 +22,24 @@ public:
 	Property();
 	virtual ~Property();
 
-	typedef int name_t;
+	typedef ::ecore::EString name_t;
 	typedef myDsl::Type_ptr type_t;
-	typedef int many_t;
+	typedef ::ecore::EBoolean many_t;
 
 	
 	void setName(name_t _name);
 	name_t getName() const;
-	// TODO
+	type_t getType() const;
 	void setMany(many_t _many);
 	many_t getMany() const;
 
-	
-protected:
 
 	name_t m_name;
-	type_t m_type;
+	myDsl::Type_ptr m_type;
 	many_t m_many;
+
+		
+protected:
 
 };
 

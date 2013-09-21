@@ -17,7 +17,7 @@ void StorableUnit::setKind(kind_t _kind)
 	m_kind = _kind;;
 }
 
-kind_t StorableUnit::getKind() const
+StorableUnit::kind_t StorableUnit::getKind() const
 {
 	return m_kind;
 }

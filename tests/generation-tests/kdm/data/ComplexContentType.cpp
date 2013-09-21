@@ -13,5 +13,10 @@ ComplexContentType::~ComplexContentType()
 {
 }
 
+ComplexContentType::contentElement_t ComplexContentType::getContentElement() const
+{
+	return e4c::returned(m_contentElement);
+}
+
 
 

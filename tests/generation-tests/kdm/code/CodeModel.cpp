@@ -13,5 +13,10 @@ CodeModel::~CodeModel()
 {
 }
 
+CodeModel::codeElement_t CodeModel::getCodeElement() const
+{
+	return e4c::returned(m_codeElement);
+}
+
 
 

@@ -26,13 +26,14 @@ public:
 	typedef kdm::kdm::TagDefinition_ptr tag_t;
 
 	
-	// TODO
+	tag_t getTag() const;
 
-	
+
+	kdm::kdm::TagDefinition_ptr m_tag;
+
+		
 protected:
 	ExtendedValue();
-
-	tag_t m_tag;
 
 };
 

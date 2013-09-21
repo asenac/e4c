@@ -23,16 +23,17 @@ public:
 	
 	virtual ~AbstractInventoryElement();
 
-	typedef boost::ptr_set < kdm::source::AbstractInventoryRelationship > inventoryRelation_t;
+	typedef std::set < kdm::source::AbstractInventoryRelationship_ptr > inventoryRelation_t;
 
 	
-	// TODO
+	inventoryRelation_t getInventoryRelation() const;
 
-	
+
+	std::set < std::unique_ptr < kdm::source::AbstractInventoryRelationship > > m_inventoryRelation;
+
+		
 protected:
 	AbstractInventoryElement();
-
-	inventoryRelation_t m_inventoryRelation;
 
 };
 

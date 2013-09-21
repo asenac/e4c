@@ -17,7 +17,7 @@ void EDataType::setSerializable(serializable_t _serializable)
 	m_serializable = _serializable;;
 }
 
-serializable_t EDataType::getSerializable() const
+EDataType::serializable_t EDataType::getSerializable() const
 {
 	return m_serializable;
 }

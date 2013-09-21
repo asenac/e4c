@@ -17,7 +17,7 @@ void Employee::setName(name_t _name)
 	m_name = _name;;
 }
 
-name_t Employee::getName() const
+Employee::name_t Employee::getName() const
 {
 	return m_name;
 }

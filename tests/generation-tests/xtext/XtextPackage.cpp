@@ -9,7 +9,108 @@ using namespace xtext;
 XtextPackage::XtextPackage()
 {
 	m_eFactoryInstance = XtextFactory::_instance();
-	::ecore::EcoreFactor_ptr ecoreFactory = ::ecore::EcoreFactory::_instance();
+	::ecore::EcoreFactory_ptr ecoreFactory = ::ecore::EcoreFactory::_instance();
+	
+	::ecore::EClass_ptr Grammar_ = ecoreFactory->createEClass();
+	Grammar_->setName("Grammar");
+	// m_eClassifiers.push_back(Grammar_);
+	::ecore::EClass_ptr AbstractRule_ = ecoreFactory->createEClass();
+	AbstractRule_->setName("AbstractRule");
+	// m_eClassifiers.push_back(AbstractRule_);
+	::ecore::EClass_ptr AbstractMetamodelDeclaration_ = ecoreFactory->createEClass();
+	AbstractMetamodelDeclaration_->setName("AbstractMetamodelDeclaration");
+	// m_eClassifiers.push_back(AbstractMetamodelDeclaration_);
+	::ecore::EClass_ptr GeneratedMetamodel_ = ecoreFactory->createEClass();
+	GeneratedMetamodel_->setName("GeneratedMetamodel");
+	// m_eClassifiers.push_back(GeneratedMetamodel_);
+	::ecore::EClass_ptr ReferencedMetamodel_ = ecoreFactory->createEClass();
+	ReferencedMetamodel_->setName("ReferencedMetamodel");
+	// m_eClassifiers.push_back(ReferencedMetamodel_);
+	::ecore::EClass_ptr ParserRule_ = ecoreFactory->createEClass();
+	ParserRule_->setName("ParserRule");
+	// m_eClassifiers.push_back(ParserRule_);
+	::ecore::EClass_ptr TypeRef_ = ecoreFactory->createEClass();
+	TypeRef_->setName("TypeRef");
+	// m_eClassifiers.push_back(TypeRef_);
+	::ecore::EClass_ptr AbstractElement_ = ecoreFactory->createEClass();
+	AbstractElement_->setName("AbstractElement");
+	// m_eClassifiers.push_back(AbstractElement_);
+	::ecore::EClass_ptr Action_ = ecoreFactory->createEClass();
+	Action_->setName("Action");
+	// m_eClassifiers.push_back(Action_);
+	::ecore::EClass_ptr Keyword_ = ecoreFactory->createEClass();
+	Keyword_->setName("Keyword");
+	// m_eClassifiers.push_back(Keyword_);
+	::ecore::EClass_ptr RuleCall_ = ecoreFactory->createEClass();
+	RuleCall_->setName("RuleCall");
+	// m_eClassifiers.push_back(RuleCall_);
+	::ecore::EClass_ptr Assignment_ = ecoreFactory->createEClass();
+	Assignment_->setName("Assignment");
+	// m_eClassifiers.push_back(Assignment_);
+	::ecore::EClass_ptr CrossReference_ = ecoreFactory->createEClass();
+	CrossReference_->setName("CrossReference");
+	// m_eClassifiers.push_back(CrossReference_);
+	::ecore::EClass_ptr TerminalRule_ = ecoreFactory->createEClass();
+	TerminalRule_->setName("TerminalRule");
+	// m_eClassifiers.push_back(TerminalRule_);
+	::ecore::EClass_ptr AbstractNegatedToken_ = ecoreFactory->createEClass();
+	AbstractNegatedToken_->setName("AbstractNegatedToken");
+	// m_eClassifiers.push_back(AbstractNegatedToken_);
+	::ecore::EClass_ptr NegatedToken_ = ecoreFactory->createEClass();
+	NegatedToken_->setName("NegatedToken");
+	// m_eClassifiers.push_back(NegatedToken_);
+	::ecore::EClass_ptr UntilToken_ = ecoreFactory->createEClass();
+	UntilToken_->setName("UntilToken");
+	// m_eClassifiers.push_back(UntilToken_);
+	::ecore::EClass_ptr Wildcard_ = ecoreFactory->createEClass();
+	Wildcard_->setName("Wildcard");
+	// m_eClassifiers.push_back(Wildcard_);
+	::ecore::EClass_ptr EnumRule_ = ecoreFactory->createEClass();
+	EnumRule_->setName("EnumRule");
+	// m_eClassifiers.push_back(EnumRule_);
+	::ecore::EClass_ptr EnumLiteralDeclaration_ = ecoreFactory->createEClass();
+	EnumLiteralDeclaration_->setName("EnumLiteralDeclaration");
+	// m_eClassifiers.push_back(EnumLiteralDeclaration_);
+	::ecore::EClass_ptr Alternatives_ = ecoreFactory->createEClass();
+	Alternatives_->setName("Alternatives");
+	// m_eClassifiers.push_back(Alternatives_);
+	::ecore::EClass_ptr UnorderedGroup_ = ecoreFactory->createEClass();
+	UnorderedGroup_->setName("UnorderedGroup");
+	// m_eClassifiers.push_back(UnorderedGroup_);
+	::ecore::EClass_ptr Group_ = ecoreFactory->createEClass();
+	Group_->setName("Group");
+	// m_eClassifiers.push_back(Group_);
+	::ecore::EClass_ptr CharacterRange_ = ecoreFactory->createEClass();
+	CharacterRange_->setName("CharacterRange");
+	// m_eClassifiers.push_back(CharacterRange_);
+	::ecore::EClass_ptr CompoundElement_ = ecoreFactory->createEClass();
+	CompoundElement_->setName("CompoundElement");
+	// m_eClassifiers.push_back(CompoundElement_);
+	
+	
+	// GeneratedMetamodel_->addESuperType(AbstractMetamodelDeclaration_);
+	// ReferencedMetamodel_->addESuperType(AbstractMetamodelDeclaration_);
+	// ParserRule_->addESuperType(AbstractRule_);
+	// Action_->addESuperType(AbstractElement_);
+	// Keyword_->addESuperType(AbstractElement_);
+	// RuleCall_->addESuperType(AbstractElement_);
+	// Assignment_->addESuperType(AbstractElement_);
+	// CrossReference_->addESuperType(AbstractElement_);
+	// TerminalRule_->addESuperType(AbstractRule_);
+	// AbstractNegatedToken_->addESuperType(AbstractElement_);
+	// NegatedToken_->addESuperType(AbstractNegatedToken_);
+	// UntilToken_->addESuperType(AbstractNegatedToken_);
+	// Wildcard_->addESuperType(AbstractElement_);
+	// EnumRule_->addESuperType(AbstractRule_);
+	// EnumLiteralDeclaration_->addESuperType(AbstractElement_);
+	// Alternatives_->addESuperType(CompoundElement_);
+	// UnorderedGroup_->addESuperType(CompoundElement_);
+	// Group_->addESuperType(CompoundElement_);
+	// CharacterRange_->addESuperType(AbstractElement_);
+	// CompoundElement_->addESuperType(AbstractElement_);
+	
+	
+	
 	
 }
 

@@ -15,5 +15,15 @@ DisplaysImage::~DisplaysImage()
 {
 }
 
+DisplaysImage::to_t DisplaysImage::getTo() const
+{
+	return e4c::returned(m_to);
+}
+
+DisplaysImage::from_t DisplaysImage::getFrom() const
+{
+	return e4c::returned(m_from);
+}
+
 
 

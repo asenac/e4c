@@ -22,63 +22,79 @@ public:
 	EClass();
 	virtual ~EClass();
 
-	typedef int abstract_t;
-	typedef int interface_t;
-	typedef std::set < ecore::EClass_ptr > eSuperTypes_t;
-	typedef boost::ptr_vector < ecore::EOperation > eOperations_t;
-	typedef std::set < ecore::EAttribute_ptr > eAllAttributes_t;
-	typedef std::set < ecore::EReference_ptr > eAllReferences_t;
-	typedef std::set < ecore::EReference_ptr > eReferences_t;
-	typedef std::set < ecore::EAttribute_ptr > eAttributes_t;
-	typedef std::set < ecore::EReference_ptr > eAllContainments_t;
-	typedef std::set < ecore::EOperation_ptr > eAllOperations_t;
-	typedef std::set < ecore::EStructuralFeature_ptr > eAllStructuralFeatures_t;
-	typedef std::set < ecore::EClass_ptr > eAllSuperTypes_t;
+	typedef ::ecore::EBoolean abstract_t;
+	typedef ::ecore::EBoolean interface_t;
+	typedef std::vector < ecore::EClass_ptr > eSuperTypes_t;
+	typedef std::vector < ecore::EOperation_ptr > eOperations_t;
+	typedef std::vector < ecore::EAttribute_ptr > eAllAttributes_t;
+	typedef std::vector < ecore::EReference_ptr > eAllReferences_t;
+	typedef std::vector < ecore::EReference_ptr > eReferences_t;
+	typedef std::vector < ecore::EAttribute_ptr > eAttributes_t;
+	typedef std::vector < ecore::EReference_ptr > eAllContainments_t;
+	typedef std::vector < ecore::EOperation_ptr > eAllOperations_t;
+	typedef std::vector < ecore::EStructuralFeature_ptr > eAllStructuralFeatures_t;
+	typedef std::vector < ecore::EClass_ptr > eAllSuperTypes_t;
 	typedef ecore::EAttribute_ptr eIDAttribute_t;
-	typedef boost::ptr_vector < ecore::EStructuralFeature > eStructuralFeatures_t;
-	typedef boost::ptr_vector < ecore::EGenericType > eGenericSuperTypes_t;
-	typedef std::set < ecore::EGenericType_ptr > eAllGenericSuperTypes_t;
+	typedef std::vector < ecore::EStructuralFeature_ptr > eStructuralFeatures_t;
+	typedef std::vector < ecore::EGenericType_ptr > eGenericSuperTypes_t;
+	typedef std::vector < ecore::EGenericType_ptr > eAllGenericSuperTypes_t;
 
 	
 	void setAbstract(abstract_t _abstract);
 	abstract_t getAbstract() const;
 	void setInterface(interface_t _interface);
 	interface_t getInterface() const;
-	// TODO
-	// TODO
-	// TODO
-	// TODO
-	// TODO
-	// TODO
-	// TODO
-	// TODO
-	// TODO
-	// TODO
-	// TODO
-	// TODO
-	// TODO
-	// TODO
-
+	eSuperTypes_t getESuperTypes() const;
 	
+	eOperations_t getEOperations() const;
+	void addEOperations(ecore::EOperation_ptr eOperations_);
+	eAllAttributes_t getEAllAttributes() const;
+	
+	eAllReferences_t getEAllReferences() const;
+	
+	eReferences_t getEReferences() const;
+	
+	eAttributes_t getEAttributes() const;
+	
+	eAllContainments_t getEAllContainments() const;
+	
+	eAllOperations_t getEAllOperations() const;
+	
+	eAllStructuralFeatures_t getEAllStructuralFeatures() const;
+	
+	eAllSuperTypes_t getEAllSuperTypes() const;
+	
+	eIDAttribute_t getEIDAttribute() const;
+	
+	void setEIDAttribute(eIDAttribute_t eIDAttribute_);
+	eStructuralFeatures_t getEStructuralFeatures() const;
+	void addEStructuralFeatures(ecore::EStructuralFeature_ptr eStructuralFeatures_);
+	eGenericSuperTypes_t getEGenericSuperTypes() const;
+	void addEGenericSuperTypes(ecore::EGenericType_ptr eGenericSuperTypes_);
+	eAllGenericSuperTypes_t getEAllGenericSuperTypes() const;
+	
+
+		
 protected:
 
 	abstract_t m_abstract;
 	interface_t m_interface;
-	eSuperTypes_t m_eSuperTypes;
-	eOperations_t m_eOperations;
-	eAllAttributes_t m_eAllAttributes;
-	eAllReferences_t m_eAllReferences;
-	eReferences_t m_eReferences;
-	eAttributes_t m_eAttributes;
-	eAllContainments_t m_eAllContainments;
-	eAllOperations_t m_eAllOperations;
-	eAllStructuralFeatures_t m_eAllStructuralFeatures;
-	eAllSuperTypes_t m_eAllSuperTypes;
-	eIDAttribute_t m_eIDAttribute;
-	eStructuralFeatures_t m_eStructuralFeatures;
-	eGenericSuperTypes_t m_eGenericSuperTypes;
-	eAllGenericSuperTypes_t m_eAllGenericSuperTypes;
+	std::vector < ecore::EClass_ptr > m_eSuperTypes;
+	std::vector < std::unique_ptr < ecore::EOperation > > m_eOperations;
+	std::vector < ecore::EAttribute_ptr > m_eAllAttributes;
+	std::vector < ecore::EReference_ptr > m_eAllReferences;
+	std::vector < ecore::EReference_ptr > m_eReferences;
+	std::vector < ecore::EAttribute_ptr > m_eAttributes;
+	std::vector < ecore::EReference_ptr > m_eAllContainments;
+	std::vector < ecore::EOperation_ptr > m_eAllOperations;
+	std::vector < ecore::EStructuralFeature_ptr > m_eAllStructuralFeatures;
+	std::vector < ecore::EClass_ptr > m_eAllSuperTypes;
+	ecore::EAttribute_ptr m_eIDAttribute;
+	std::vector < std::unique_ptr < ecore::EStructuralFeature > > m_eStructuralFeatures;
+	std::vector < std::unique_ptr < ecore::EGenericType > > m_eGenericSuperTypes;
+	std::vector < ecore::EGenericType_ptr > m_eAllGenericSuperTypes;
 
+	
 };
 
 } // ecore

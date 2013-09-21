@@ -44,4 +44,7 @@
 #include <kdm/platform/DefinedBy.hpp>
 #include <kdm/platform/StreamResource.hpp>
 
+#include <kdm/platform/PlatformFactory.hpp>
+#include <kdm/platform/PlatformPackage.hpp>
+
 #endif // EMF_CPP_KDM_PLATFORM_INC_HPP

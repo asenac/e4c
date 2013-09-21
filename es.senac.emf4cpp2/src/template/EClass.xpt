@@ -38,13 +38,20 @@ public:
 	«EXPAND generateTypedef FOREACH EStructuralFeatures»
 	
 	«EXPAND generateAccessors FOREACH EStructuralFeatures»
-	
+		
 protected:
 «IF abstract-»
 	«getName()»();
 «ENDIF-»
 
 	«EXPAND generateDecl FOREACH EStructuralFeatures»
+	
+	«FOREACH EReferences.select(e|e.container) AS e-»
+		«IF e.EType != this-»
+	friend class ::«e.EType.getFQN()»;
+		«ENDIF-»
+	void set«e.getNameUpper()»(«e.getName()»_t «e.getName()»_);
+	«ENDFOREACH-»
 };
 
 «EXPAND template::EPackage::namespacesEnd FOR EPackage»
@@ -57,38 +64,57 @@ protected:
 «DEFINE generateTypedef FOR EStructuralFeature»«ENDDEFINE»
 
 «DEFINE generateTypedef FOR EAttribute-»
-	typedef int «getName()»_t;
+	typedef ::«EType.getFQN()» «getName()»_t;
 «ENDDEFINE»
 
 «DEFINE generateTypedef FOR EReference-»
-	typedef «getReferenceType()» «getName()»_t;
+	typedef «getNoContaimentType()» «getName()»_t;
 «ENDDEFINE»
 
 «DEFINE generateDecl FOR EStructuralFeature-»
 	«getName()»_t m_«getName()»;
 «ENDDEFINE»
 
+«DEFINE generateDecl FOR EReference-»
+	«getReferenceType()» m_«getName()»;
+«ENDDEFINE»
+
 «REM»Accessors«ENDREM»
 «DEFINE generateAccessors FOR EStructuralFeature»«ENDDEFINE»
 
 «DEFINE generateAccessors FOR EAttribute-»
-	void set«getName().toFirstUpper()»(«getName()»_t _«getName()»);
-	«getName()»_t get«getName().toFirstUpper()»() const;
+	void set«getNameUpper()»(«getName()»_t _«getName()»);
+	«getName()»_t get«getNameUpper()»() const;
 «ENDDEFINE»
 
 «DEFINE generateAccessors FOR EReference-»
-	// TODO
+	«getName()»_t get«getNameUpper()»() const;
+	«IF containment-»
+		«IF upperBound == 1-»
+	void set«getNameUpper()»(«getName()»_t «getName()»_);
+	«getName()»_t release«getNameUpper()»();
+		«ELSEIF ordered-»
+	void add«getNameUpper()»(«getNoContaimentPtr()» «getName()»_);
+		«ELSE-»
+	void add«getNameUpper()»(«getNoContaimentPtr()» «getName()»_);
+		«ENDIF-»
+	«ELSEIF !container»
+		«IF upperBound == 1-»
+	void set«getNameUpper()»(«getName()»_t «getName()»_);
+		«ELSE-»
+		«ENDIF-»
+	«ENDIF-»
 «ENDDEFINE»
 
 «DEFINE generateAccessorsImpl FOR EStructuralFeature»«ENDDEFINE»
 
 «DEFINE generateAccessorsImpl FOR EAttribute-»
-void «EContainingClass.getName()»::set«getName().toFirstUpper()»(«getName()»_t _«getName()»)
+void «EContainingClass.getName()»::set«getNameUpper()»(«getName()»_t _«getName()»)
 {
 	m_«getName()» = _«getName()»;;
 }
 
-«getName()»_t «EContainingClass.getName()»::get«getName().toFirstUpper()»() const
+«EContainingClass.getName()»::«getName()»_t «EContainingClass.getName()»::get«getNameUpper()»() const
 {
 	return m_«getName()»;
 }
@@ -96,6 +122,68 @@ void «EContainingClass.getName()»::set«getName().toFirstUpper()»(«getName()»_t _
 «ENDDEFINE»
 
 «DEFINE generateAccessorsImpl FOR EReference-»
+«EContainingClass.getName()»::«getName()»_t «EContainingClass.getName()»::get«getNameUpper()»() const
+{
+	return e4c::returned(m_«getName()»);
+}
+
+«IF containment-»
+	«IF upperBound == 1-»
+void «EContainingClass.getName()»::set«getNameUpper()»(«getName()»_t «getName()»_)
+{
+	m_«getName()».reset(«getName()»_);
+	«IF EOpposite != null-»
+	m_«getName()»->set«EOpposite.getNameUpper()»(this);
+	«ENDIF-»
+}
+
+«EContainingClass.getName()»::«getName()»_t «EContainingClass.getName()»::release«getNameUpper()»()
+{
+	«IF EOpposite != null-»
+	m_«getName()»->set«EOpposite.getNameUpper()»(0);
+	«ENDIF-»
+	return m_«getName()».release();
+}
+	«ELSEIF ordered-»
+void «EContainingClass.getName()»::add«getNameUpper()»(«getNoContaimentPtr()» «getName()»_)
+{
+	«IF EOpposite != null-»
+	«getName()»_->set«EOpposite.getNameUpper()»(this);
+	«ENDIF-»
+	m_«getName()».push_back(«getContaimentPtr()»(«getName()»_));
+}
+	«ELSE-»
+void «EContainingClass.getName()»::add«getNameUpper()»(«getNoContaimentPtr()» «getName()»_)
+{
+	«IF EOpposite != null-»
+	«getName()»_->set«EOpposite.getNameUpper()»(this);
+	«ENDIF-»
+	m_«getName()».insert(«getContaimentPtr()»(«getName()»_));
+}
+	«ENDIF-»
+«ELSEIF container-»
+void «EContainingClass.getName()»::set«getNameUpper()»(«getName()»_t «getName()»_)
+{
+	m_«getName()» = «getName()»_;
+}
+«ELSE-»
+	«IF upperBound == 1-»
+void «EContainingClass.getName()»::set«getNameUpper()»(«getName()»_t «getName()»_)
+{
+	«IF EOpposite != null && EOpposite.upperBound == 1-»;
+	if (m_«getName()»)
+		m_«getName()»->set«EOpposite.getNameUpper()»(0);
+	«ENDIF-»
+	m_«getName()» = «getName()»_;
+	«IF EOpposite != null && EOpposite.upperBound == 1-»
+	if (m_«getName()» && m_«getName()»->get«EOpposite.getNameUpper()»() != this)
+		m_«getName()»->set«EOpposite.getNameUpper()»(this);
+	«ENDIF-»
+}
+	«ELSE-»
+	«ENDIF-»
+«ENDIF»
+
 «ENDDEFINE»
 
 «REM»Impl«ENDREM»

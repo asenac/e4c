@@ -13,5 +13,10 @@ DeployedSoftwareSystem::~DeployedSoftwareSystem()
 {
 }
 
+DeployedSoftwareSystem::groupedComponent_t DeployedSoftwareSystem::getGroupedComponent() const
+{
+	return e4c::returned(m_groupedComponent);
+}
+
 
 

@@ -23,25 +23,26 @@ public:
 	
 	virtual ~AbstractEventElement();
 
-	typedef boost::ptr_set < kdm::source::SourceRef > source_t;
-	typedef boost::ptr_set < kdm::event::AbstractEventRelationship > eventRelation_t;
-	typedef boost::ptr_vector < kdm::action::ActionElement > abstraction_t;
-	typedef std::vector < kdm::code::AbstractCodeElement_ptr > implementation_t;
+	typedef std::set < kdm::source::SourceRef_ptr > source_t;
+	typedef std::set < kdm::event::AbstractEventRelationship_ptr > eventRelation_t;
+	typedef std::vector < kdm::action::ActionElement_ptr > abstraction_t;
+	typedef std::set < kdm::code::AbstractCodeElement_ptr > implementation_t;
 
 	
-	// TODO
-	// TODO
-	// TODO
-	// TODO
+	source_t getSource() const;
+	eventRelation_t getEventRelation() const;
+	abstraction_t getAbstraction() const;
+	implementation_t getImplementation() const;
 
-	
+
+	std::set < std::unique_ptr < kdm::source::SourceRef > > m_source;
+	std::set < std::unique_ptr < kdm::event::AbstractEventRelationship > > m_eventRelation;
+	std::vector < std::unique_ptr < kdm::action::ActionElement > > m_abstraction;
+	std::set < kdm::code::AbstractCodeElement_ptr > m_implementation;
+
+		
 protected:
 	AbstractEventElement();
-
-	source_t m_source;
-	eventRelation_t m_eventRelation;
-	abstraction_t m_abstraction;
-	implementation_t m_implementation;
 
 };
 

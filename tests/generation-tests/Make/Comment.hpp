@@ -22,16 +22,17 @@ public:
 	Comment();
 	virtual ~Comment();
 
-	typedef int text_t;
+	typedef ::PrimitiveTypes::String text_t;
 
 	
 	void setText(text_t _text);
 	text_t getText() const;
 
-	
-protected:
 
 	text_t m_text;
+
+		
+protected:
 
 };
 

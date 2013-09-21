@@ -15,5 +15,15 @@ EventRelationship::~EventRelationship()
 {
 }
 
+EventRelationship::to_t EventRelationship::getTo() const
+{
+	return e4c::returned(m_to);
+}
+
+EventRelationship::from_t EventRelationship::getFrom() const
+{
+	return e4c::returned(m_from);
+}
+
 
 

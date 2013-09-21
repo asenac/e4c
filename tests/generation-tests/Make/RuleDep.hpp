@@ -25,12 +25,13 @@ public:
 	typedef Make::Rule_ptr ruledep_t;
 
 	
-	// TODO
+	ruledep_t getRuledep() const;
 
-	
+
+	Make::Rule_ptr m_ruledep;
+
+		
 protected:
-
-	ruledep_t m_ruledep;
 
 };
 

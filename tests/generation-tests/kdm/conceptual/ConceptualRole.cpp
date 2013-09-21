@@ -13,5 +13,10 @@ ConceptualRole::~ConceptualRole()
 {
 }
 
+ConceptualRole::conceptualElement_t ConceptualRole::getConceptualElement() const
+{
+	return e4c::returned(m_conceptualElement);
+}
+
 
 

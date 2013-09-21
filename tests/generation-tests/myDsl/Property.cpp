@@ -20,9 +20,14 @@ void Property::setName(name_t _name)
 	m_name = _name;;
 }
 
-name_t Property::getName() const
+Property::name_t Property::getName() const
 {
 	return m_name;
+}
+
+Property::type_t Property::getType() const
+{
+	return e4c::returned(m_type);
 }
 
 void Property::setMany(many_t _many)
@@ -30,7 +35,7 @@ void Property::setMany(many_t _many)
 	m_many = _many;;
 }
 
-many_t Property::getMany() const
+Property::many_t Property::getMany() const
 {
 	return m_many;
 }

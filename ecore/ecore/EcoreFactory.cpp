@@ -6,7 +6,7 @@ using namespace ecore;
 
 EcoreFactory::EcoreFactory()
 {
-	m_ePackage = EcorePackage::_instance();
+	// m_ePackage = EcorePackage::_instance();
 	// std::bind(&EcoreFactory::createEAttribute, this);
 	// m_ePackage->getTag_EAttribute();
 	// std::bind(&EcoreFactory::createEAnnotation, this);

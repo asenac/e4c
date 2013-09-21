@@ -21,13 +21,13 @@ public:
 	
 	virtual ~EStructuralFeature();
 
-	typedef int changeable_t;
-	typedef int volatile__t;
-	typedef int transient_t;
-	typedef int defaultValueLiteral_t;
-	typedef int defaultValue_t;
-	typedef int unsettable_t;
-	typedef int derived_t;
+	typedef ::ecore::EBoolean changeable_t;
+	typedef ::ecore::EBoolean volatile__t;
+	typedef ::ecore::EBoolean transient_t;
+	typedef ::ecore::EString defaultValueLiteral_t;
+	typedef ::ecore::EJavaObject defaultValue_t;
+	typedef ::ecore::EBoolean unsettable_t;
+	typedef ::ecore::EBoolean derived_t;
 	typedef ecore::EClass_ptr eContainingClass_t;
 
 	
@@ -45,9 +45,9 @@ public:
 	unsettable_t getUnsettable() const;
 	void setDerived(derived_t _derived);
 	derived_t getDerived() const;
-	// TODO
+	eContainingClass_t getEContainingClass() const;
 
-	
+		
 protected:
 	EStructuralFeature();
 
@@ -58,8 +58,11 @@ protected:
 	defaultValue_t m_defaultValue;
 	unsettable_t m_unsettable;
 	derived_t m_derived;
-	eContainingClass_t m_eContainingClass;
+	ecore::EClass_ptr m_eContainingClass;
 
+	
+	friend class ::ecore::EClass;
+	void setEContainingClass(eContainingClass_t eContainingClass_);
 };
 
 } // ecore

@@ -17,5 +17,20 @@ ControlElement::~ControlElement()
 {
 }
 
+ControlElement::type_t ControlElement::getType() const
+{
+	return e4c::returned(m_type);
+}
+
+ControlElement::entryFlow_t ControlElement::getEntryFlow() const
+{
+	return e4c::returned(m_entryFlow);
+}
+
+ControlElement::codeElement_t ControlElement::getCodeElement() const
+{
+	return e4c::returned(m_codeElement);
+}
+
 
 

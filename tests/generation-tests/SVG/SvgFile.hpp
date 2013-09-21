@@ -23,17 +23,18 @@ public:
 	virtual ~SvgFile();
 
 	typedef SVG::Svg_ptr tag_t;
-	typedef std::vector < SVG::Element_ptr > elements_t;
+	typedef std::set < SVG::Element_ptr > elements_t;
 
 	
-	// TODO
-	// TODO
+	tag_t getTag() const;
+	elements_t getElements() const;
 
-	
+
+	SVG::Svg_ptr m_tag;
+	std::set < SVG::Element_ptr > m_elements;
+
+		
 protected:
-
-	tag_t m_tag;
-	elements_t m_elements;
 
 };
 

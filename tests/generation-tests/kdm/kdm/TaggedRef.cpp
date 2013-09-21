@@ -13,5 +13,10 @@ TaggedRef::~TaggedRef()
 {
 }
 
+TaggedRef::reference_t TaggedRef::getReference() const
+{
+	return e4c::returned(m_reference);
+}
+
 
 

@@ -22,17 +22,18 @@ public:
 	ModuleDef();
 	virtual ~ModuleDef();
 
-	typedef int prefix_t;
+	typedef ::ecore::EString prefix_t;
 
 	
 	void setPrefix(prefix_t _prefix);
 	prefix_t getPrefix() const;
 
-	
+		
 protected:
 
 	prefix_t m_prefix;
 
+	
 };
 
 } // idlmm

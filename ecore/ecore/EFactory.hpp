@@ -25,13 +25,16 @@ public:
 	typedef ecore::EPackage_ptr ePackage_t;
 
 	
-	// TODO
-
+	ePackage_t getEPackage() const;
 	
+	void setEPackage(ePackage_t ePackage_);
+
+		
 protected:
 
-	ePackage_t m_ePackage;
+	ecore::EPackage_ptr m_ePackage;
 
+	
 };
 
 } // ecore

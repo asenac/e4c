@@ -94,4 +94,7 @@
 #include <kdm/code/Includes.hpp>
 #include <kdm/code/HasValue.hpp>
 
+#include <kdm/code/CodeFactory.hpp>
+#include <kdm/code/CodePackage.hpp>
+
 #endif // EMF_CPP_KDM_CODE_INC_HPP

@@ -21,20 +21,25 @@ public:
 	
 	virtual ~Typed();
 
-	typedef std::unique_ptr < idlmm::IDLType > containedType_t;
+	typedef idlmm::IDLType_ptr containedType_t;
 	typedef idlmm::TypedefDef_ptr sharedType_t;
 
 	
-	// TODO
-	// TODO
-
+	containedType_t getContainedType() const;
+	void setContainedType(containedType_t containedType_);
+	containedType_t releaseContainedType();
+	sharedType_t getSharedType() const;
 	
+	void setSharedType(sharedType_t sharedType_);
+
+		
 protected:
 	Typed();
 
-	containedType_t m_containedType;
-	sharedType_t m_sharedType;
+	std::unique_ptr < idlmm::IDLType > m_containedType;
+	idlmm::TypedefDef_ptr m_sharedType;
 
+	
 };
 
 } // idlmm

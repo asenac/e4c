@@ -13,5 +13,10 @@ CompositeType::~CompositeType()
 {
 }
 
+CompositeType::itemUnit_t CompositeType::getItemUnit() const
+{
+	return e4c::returned(m_itemUnit);
+}
+
 
 

@@ -13,5 +13,10 @@ Parameter::~Parameter()
 {
 }
 
+Parameter::operation_t Parameter::getOperation() const
+{
+	return e4c::returned(m_operation);
+}
+
 
 

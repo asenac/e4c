@@ -21,17 +21,19 @@ public:
 	
 	virtual ~Container();
 
-	typedef boost::ptr_vector < idlmm::Contained > contains_t;
+	typedef std::vector < idlmm::Contained_ptr > contains_t;
 
 	
-	// TODO
+	contains_t getContains() const;
+	void addContains(idlmm::Contained_ptr contains_);
 
-	
+		
 protected:
 	Container();
 
-	contains_t m_contains;
+	std::vector < std::unique_ptr < idlmm::Contained > > m_contains;
 
+	
 };
 
 } // idlmm

@@ -22,19 +22,20 @@ public:
 	NVPair();
 	virtual ~NVPair();
 
-	typedef int name_t;
-	typedef std::unique_ptr < json::Value > value_t;
+	typedef ::ecore::EString name_t;
+	typedef json::Value_ptr value_t;
 
 	
 	void setName(name_t _name);
 	name_t getName() const;
-	// TODO
+	value_t getValue() const;
 
-	
-protected:
 
 	name_t m_name;
-	value_t m_value;
+	std::unique_ptr < json::Value > m_value;
+
+		
+protected:
 
 };
 

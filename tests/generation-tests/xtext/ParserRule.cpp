@@ -19,9 +19,14 @@ void ParserRule::setDefinesHiddenTokens(definesHiddenTokens_t _definesHiddenToke
 	m_definesHiddenTokens = _definesHiddenTokens;;
 }
 
-definesHiddenTokens_t ParserRule::getDefinesHiddenTokens() const
+ParserRule::definesHiddenTokens_t ParserRule::getDefinesHiddenTokens() const
 {
 	return m_definesHiddenTokens;
+}
+
+ParserRule::hiddenTokens_t ParserRule::getHiddenTokens() const
+{
+	return e4c::returned(m_hiddenTokens);
 }
 
 

@@ -18,7 +18,7 @@ void EStringToStringMapEntry::setKey(key_t _key)
 	m_key = _key;;
 }
 
-key_t EStringToStringMapEntry::getKey() const
+EStringToStringMapEntry::key_t EStringToStringMapEntry::getKey() const
 {
 	return m_key;
 }
@@ -28,7 +28,7 @@ void EStringToStringMapEntry::setValue(value_t _value)
 	m_value = _value;;
 }
 
-value_t EStringToStringMapEntry::getValue() const
+EStringToStringMapEntry::value_t EStringToStringMapEntry::getValue() const
 {
 	return m_value;
 }

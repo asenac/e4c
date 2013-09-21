@@ -24,16 +24,17 @@ public:
 	CommentUnit();
 	virtual ~CommentUnit();
 
-	typedef int text_t;
+	typedef ::kdm::core::String text_t;
 
 	
 	void setText(text_t _text);
 	text_t getText() const;
 
-	
-protected:
 
 	text_t m_text;
+
+		
+protected:
 
 };
 

@@ -24,22 +24,23 @@ public:
 	ActionElement();
 	virtual ~ActionElement();
 
-	typedef int kind_t;
-	typedef boost::ptr_set < kdm::code::AbstractCodeElement > codeElement_t;
-	typedef boost::ptr_vector < kdm::action::AbstractActionRelationship > actionRelation_t;
+	typedef ::kdm::core::String kind_t;
+	typedef std::set < kdm::code::AbstractCodeElement_ptr > codeElement_t;
+	typedef std::vector < kdm::action::AbstractActionRelationship_ptr > actionRelation_t;
 
 	
 	void setKind(kind_t _kind);
 	kind_t getKind() const;
-	// TODO
-	// TODO
+	codeElement_t getCodeElement() const;
+	actionRelation_t getActionRelation() const;
 
-	
-protected:
 
 	kind_t m_kind;
-	codeElement_t m_codeElement;
-	actionRelation_t m_actionRelation;
+	std::set < std::unique_ptr < kdm::code::AbstractCodeElement > > m_codeElement;
+	std::vector < std::unique_ptr < kdm::action::AbstractActionRelationship > > m_actionRelation;
+
+		
+protected:
 
 };
 

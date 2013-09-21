@@ -21,18 +21,19 @@ public:
 	
 	virtual ~IDLType();
 
-	typedef int typeCode_t;
+	typedef ::idlmm::ETypeCode typeCode_t;
 
 	
 	void setTypeCode(typeCode_t _typeCode);
 	typeCode_t getTypeCode() const;
 
-	
+		
 protected:
 	IDLType();
 
 	typeCode_t m_typeCode;
 
+	
 };
 
 } // idlmm

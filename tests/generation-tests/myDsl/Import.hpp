@@ -22,16 +22,17 @@ public:
 	Import();
 	virtual ~Import();
 
-	typedef int importURI_t;
+	typedef ::ecore::EString importURI_t;
 
 	
 	void setImportURI(importURI_t _importURI);
 	importURI_t getImportURI() const;
 
-	
-protected:
 
 	importURI_t m_importURI;
+
+		
+protected:
 
 };
 

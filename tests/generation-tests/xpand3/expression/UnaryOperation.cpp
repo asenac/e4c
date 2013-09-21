@@ -15,5 +15,15 @@ UnaryOperation::~UnaryOperation()
 {
 }
 
+UnaryOperation::operator_t UnaryOperation::getOperator() const
+{
+	return e4c::returned(m_operator);
+}
+
+UnaryOperation::operand_t UnaryOperation::getOperand() const
+{
+	return e4c::returned(m_operand);
+}
+
 
 

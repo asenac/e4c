@@ -22,16 +22,17 @@ public:
 	FontWeight();
 	virtual ~FontWeight();
 
-	typedef int bold_t;
+	typedef ::PrimitiveTypes::Boolean bold_t;
 
 	
 	void setBold(bold_t _bold);
 	bold_t getBold() const;
 
-	
-protected:
 
 	bold_t m_bold;
+
+		
+protected:
 
 };
 

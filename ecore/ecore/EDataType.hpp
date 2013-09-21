@@ -22,17 +22,18 @@ public:
 	EDataType();
 	virtual ~EDataType();
 
-	typedef int serializable_t;
+	typedef ::ecore::EBoolean serializable_t;
 
 	
 	void setSerializable(serializable_t _serializable);
 	serializable_t getSerializable() const;
 
-	
+		
 protected:
 
 	serializable_t m_serializable;
 
+	
 };
 
 } // ecore

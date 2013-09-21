@@ -21,9 +21,19 @@ void ActionElement::setKind(kind_t _kind)
 	m_kind = _kind;;
 }
 
-kind_t ActionElement::getKind() const
+ActionElement::kind_t ActionElement::getKind() const
 {
 	return m_kind;
+}
+
+ActionElement::codeElement_t ActionElement::getCodeElement() const
+{
+	return e4c::returned(m_codeElement);
+}
+
+ActionElement::actionRelation_t ActionElement::getActionRelation() const
+{
+	return e4c::returned(m_actionRelation);
 }
 
 

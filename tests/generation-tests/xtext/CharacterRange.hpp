@@ -22,18 +22,19 @@ public:
 	CharacterRange();
 	virtual ~CharacterRange();
 
-	typedef std::unique_ptr < xtext::Keyword > left_t;
-	typedef std::unique_ptr < xtext::Keyword > right_t;
+	typedef xtext::Keyword_ptr left_t;
+	typedef xtext::Keyword_ptr right_t;
 
 	
-	// TODO
-	// TODO
+	left_t getLeft() const;
+	right_t getRight() const;
 
-	
+
+	std::unique_ptr < xtext::Keyword > m_left;
+	std::unique_ptr < xtext::Keyword > m_right;
+
+		
 protected:
-
-	left_t m_left;
-	right_t m_right;
 
 };
 

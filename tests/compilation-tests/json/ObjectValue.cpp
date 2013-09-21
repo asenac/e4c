@@ -13,5 +13,10 @@ ObjectValue::~ObjectValue()
 {
 }
 
+ObjectValue::members_t ObjectValue::getMembers() const
+{
+	return e4c::returned(m_members);
+}
+
 
 

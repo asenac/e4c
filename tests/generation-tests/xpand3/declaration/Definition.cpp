@@ -13,5 +13,10 @@ Definition::~Definition()
 {
 }
 
+Definition::body_t Definition::getBody() const
+{
+	return e4c::returned(m_body);
+}
+
 
 

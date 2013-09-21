@@ -9,7 +9,85 @@ using namespace kdm::event;
 EventPackage::EventPackage()
 {
 	m_eFactoryInstance = EventFactory::_instance();
-	::ecore::EcoreFactor_ptr ecoreFactory = ::ecore::EcoreFactory::_instance();
+	::ecore::EcoreFactory_ptr ecoreFactory = ::ecore::EcoreFactory::_instance();
+	
+	::ecore::EClass_ptr EventModel_ = ecoreFactory->createEClass();
+	EventModel_->setName("EventModel");
+	// m_eClassifiers.push_back(EventModel_);
+	::ecore::EClass_ptr AbstractEventElement_ = ecoreFactory->createEClass();
+	AbstractEventElement_->setName("AbstractEventElement");
+	// m_eClassifiers.push_back(AbstractEventElement_);
+	::ecore::EClass_ptr Event_ = ecoreFactory->createEClass();
+	Event_->setName("Event");
+	// m_eClassifiers.push_back(Event_);
+	::ecore::EClass_ptr AbstractEventRelationship_ = ecoreFactory->createEClass();
+	AbstractEventRelationship_->setName("AbstractEventRelationship");
+	// m_eClassifiers.push_back(AbstractEventRelationship_);
+	::ecore::EClass_ptr EventRelationship_ = ecoreFactory->createEClass();
+	EventRelationship_->setName("EventRelationship");
+	// m_eClassifiers.push_back(EventRelationship_);
+	::ecore::EClass_ptr EventResource_ = ecoreFactory->createEClass();
+	EventResource_->setName("EventResource");
+	// m_eClassifiers.push_back(EventResource_);
+	::ecore::EClass_ptr State_ = ecoreFactory->createEClass();
+	State_->setName("State");
+	// m_eClassifiers.push_back(State_);
+	::ecore::EClass_ptr Transition_ = ecoreFactory->createEClass();
+	Transition_->setName("Transition");
+	// m_eClassifiers.push_back(Transition_);
+	::ecore::EClass_ptr OnEntry_ = ecoreFactory->createEClass();
+	OnEntry_->setName("OnEntry");
+	// m_eClassifiers.push_back(OnEntry_);
+	::ecore::EClass_ptr OnExit_ = ecoreFactory->createEClass();
+	OnExit_->setName("OnExit");
+	// m_eClassifiers.push_back(OnExit_);
+	::ecore::EClass_ptr EventAction_ = ecoreFactory->createEClass();
+	EventAction_->setName("EventAction");
+	// m_eClassifiers.push_back(EventAction_);
+	::ecore::EClass_ptr ReadsState_ = ecoreFactory->createEClass();
+	ReadsState_->setName("ReadsState");
+	// m_eClassifiers.push_back(ReadsState_);
+	::ecore::EClass_ptr ProducesEvent_ = ecoreFactory->createEClass();
+	ProducesEvent_->setName("ProducesEvent");
+	// m_eClassifiers.push_back(ProducesEvent_);
+	::ecore::EClass_ptr ConsumesEvent_ = ecoreFactory->createEClass();
+	ConsumesEvent_->setName("ConsumesEvent");
+	// m_eClassifiers.push_back(ConsumesEvent_);
+	::ecore::EClass_ptr NextState_ = ecoreFactory->createEClass();
+	NextState_->setName("NextState");
+	// m_eClassifiers.push_back(NextState_);
+	::ecore::EClass_ptr InitialState_ = ecoreFactory->createEClass();
+	InitialState_->setName("InitialState");
+	// m_eClassifiers.push_back(InitialState_);
+	::ecore::EClass_ptr EventElement_ = ecoreFactory->createEClass();
+	EventElement_->setName("EventElement");
+	// m_eClassifiers.push_back(EventElement_);
+	::ecore::EClass_ptr HasState_ = ecoreFactory->createEClass();
+	HasState_->setName("HasState");
+	// m_eClassifiers.push_back(HasState_);
+	
+	
+	// EventModel_->addESuperType(KDMModel_);
+	// AbstractEventElement_->addESuperType(KDMEntity_);
+	// Event_->addESuperType(AbstractEventElement_);
+	// AbstractEventRelationship_->addESuperType(KDMRelationship_);
+	// EventRelationship_->addESuperType(AbstractEventRelationship_);
+	// EventResource_->addESuperType(AbstractEventElement_);
+	// State_->addESuperType(EventResource_);
+	// Transition_->addESuperType(EventResource_);
+	// OnEntry_->addESuperType(Transition_);
+	// OnExit_->addESuperType(Transition_);
+	// EventAction_->addESuperType(AbstractEventElement_);
+	// ReadsState_->addESuperType(AbstractActionRelationship_);
+	// ProducesEvent_->addESuperType(AbstractActionRelationship_);
+	// ConsumesEvent_->addESuperType(AbstractEventRelationship_);
+	// NextState_->addESuperType(AbstractEventRelationship_);
+	// InitialState_->addESuperType(State_);
+	// EventElement_->addESuperType(AbstractEventElement_);
+	// HasState_->addESuperType(AbstractActionRelationship_);
+	
+	
+	
 	
 }
 

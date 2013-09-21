@@ -22,15 +22,16 @@ public:
 	NonTerminal();
 	virtual ~NonTerminal();
 
-	typedef boost::ptr_vector < tree::TreeNode > children_t;
+	typedef std::vector < tree::TreeNode_ptr > children_t;
 
 	
-	// TODO
+	children_t getChildren() const;
 
-	
+
+	std::vector < std::unique_ptr < tree::TreeNode > > m_children;
+
+		
 protected:
-
-	children_t m_children;
 
 };
 

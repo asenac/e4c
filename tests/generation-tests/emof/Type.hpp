@@ -24,13 +24,14 @@ public:
 	typedef emof::Package_ptr package_t;
 
 	
-	// TODO
+	package_t getPackage() const;
 
-	
+
+	emof::Package_ptr m_package;
+
+		
 protected:
 	Type();
-
-	package_t m_package;
 
 };
 

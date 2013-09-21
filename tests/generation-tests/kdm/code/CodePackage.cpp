@@ -9,389 +9,734 @@ using namespace kdm::code;
 CodePackage::CodePackage()
 {
 	m_eFactoryInstance = CodeFactory::_instance();
-	::ecore::EcoreFactor_ptr ecoreFactory = ::ecore::EcoreFactory::_instance();
+	::ecore::EcoreFactory_ptr ecoreFactory = ::ecore::EcoreFactory::_instance();
 	
-	// MethodKind
-	{
-	    ::ecore::EEnum_ptr ee = ecoreFactory->createEEnum();
-	    ee->setClassifierID(MethodKind);
-	    ee->setEPackage(this);
-	    ee->setName("MethodKind");
-	    ee->setSerializable(true);
-	    {
-	        ::ecore::EEnumLiteral_ptr el = ecoreFactory->createEEnumLiteral();
-	        el->setName("operator");
-	        el->setValue(MethodKind::operator);
-	        el->setLiteral("operator");
-	        el->setEEnum(ee);
-	        ee->getELiterals().push_back(el);
-	    }
-	    m_Classifiers.push_back(ee);
-	    {
-	        ::ecore::EEnumLiteral_ptr el = ecoreFactory->createEEnumLiteral();
-	        el->setName("destructor");
-	        el->setValue(MethodKind::destructor);
-	        el->setLiteral("destructor");
-	        el->setEEnum(ee);
-	        ee->getELiterals().push_back(el);
-	    }
-	    m_Classifiers.push_back(ee);
-	    {
-	        ::ecore::EEnumLiteral_ptr el = ecoreFactory->createEEnumLiteral();
-	        el->setName("method");
-	        el->setValue(MethodKind::method);
-	        el->setLiteral("method");
-	        el->setEEnum(ee);
-	        ee->getELiterals().push_back(el);
-	    }
-	    m_Classifiers.push_back(ee);
-	    {
-	        ::ecore::EEnumLiteral_ptr el = ecoreFactory->createEEnumLiteral();
-	        el->setName("abstract");
-	        el->setValue(MethodKind::abstract);
-	        el->setLiteral("abstract");
-	        el->setEEnum(ee);
-	        ee->getELiterals().push_back(el);
-	    }
-	    m_Classifiers.push_back(ee);
-	    {
-	        ::ecore::EEnumLiteral_ptr el = ecoreFactory->createEEnumLiteral();
-	        el->setName("virtual");
-	        el->setValue(MethodKind::virtual);
-	        el->setLiteral("virtual");
-	        el->setEEnum(ee);
-	        ee->getELiterals().push_back(el);
-	    }
-	    m_Classifiers.push_back(ee);
-	    {
-	        ::ecore::EEnumLiteral_ptr el = ecoreFactory->createEEnumLiteral();
-	        el->setName("unknown");
-	        el->setValue(MethodKind::unknown);
-	        el->setLiteral("unknown");
-	        el->setEEnum(ee);
-	        ee->getELiterals().push_back(el);
-	    }
-	    m_Classifiers.push_back(ee);
-	    {
-	        ::ecore::EEnumLiteral_ptr el = ecoreFactory->createEEnumLiteral();
-	        el->setName("constructor");
-	        el->setValue(MethodKind::constructor);
-	        el->setLiteral("constructor");
-	        el->setEEnum(ee);
-	        ee->getELiterals().push_back(el);
-	    }
-	    m_Classifiers.push_back(ee);
+	::ecore::EClass_ptr AbstractCodeElement_ = ecoreFactory->createEClass();
+	AbstractCodeElement_->setName("AbstractCodeElement");
+	// m_eClassifiers.push_back(AbstractCodeElement_);
+	::ecore::EClass_ptr CodeItem_ = ecoreFactory->createEClass();
+	CodeItem_->setName("CodeItem");
+	// m_eClassifiers.push_back(CodeItem_);
+	::ecore::EClass_ptr ComputationalObject_ = ecoreFactory->createEClass();
+	ComputationalObject_->setName("ComputationalObject");
+	// m_eClassifiers.push_back(ComputationalObject_);
+	::ecore::EClass_ptr ControlElement_ = ecoreFactory->createEClass();
+	ControlElement_->setName("ControlElement");
+	// m_eClassifiers.push_back(ControlElement_);
+	::ecore::EClass_ptr MethodUnit_ = ecoreFactory->createEClass();
+	MethodUnit_->setName("MethodUnit");
+	// m_eClassifiers.push_back(MethodUnit_);
+	::ecore::EClass_ptr Module_ = ecoreFactory->createEClass();
+	Module_->setName("Module");
+	// m_eClassifiers.push_back(Module_);
+	::ecore::EClass_ptr CodeAssembly_ = ecoreFactory->createEClass();
+	CodeAssembly_->setName("CodeAssembly");
+	// m_eClassifiers.push_back(CodeAssembly_);
+	::ecore::EClass_ptr CallableUnit_ = ecoreFactory->createEClass();
+	CallableUnit_->setName("CallableUnit");
+	// m_eClassifiers.push_back(CallableUnit_);
+	::ecore::EClass_ptr Datatype_ = ecoreFactory->createEClass();
+	Datatype_->setName("Datatype");
+	// m_eClassifiers.push_back(Datatype_);
+	::ecore::EClass_ptr TemplateUnit_ = ecoreFactory->createEClass();
+	TemplateUnit_->setName("TemplateUnit");
+	// m_eClassifiers.push_back(TemplateUnit_);
+	::ecore::EClass_ptr TemplateParameter_ = ecoreFactory->createEClass();
+	TemplateParameter_->setName("TemplateParameter");
+	// m_eClassifiers.push_back(TemplateParameter_);
+	::ecore::EClass_ptr AbstractCodeRelationship_ = ecoreFactory->createEClass();
+	AbstractCodeRelationship_->setName("AbstractCodeRelationship");
+	// m_eClassifiers.push_back(AbstractCodeRelationship_);
+	::ecore::EClass_ptr InstanceOf_ = ecoreFactory->createEClass();
+	InstanceOf_->setName("InstanceOf");
+	// m_eClassifiers.push_back(InstanceOf_);
+	::ecore::EClass_ptr CompilationUnit_ = ecoreFactory->createEClass();
+	CompilationUnit_->setName("CompilationUnit");
+	// m_eClassifiers.push_back(CompilationUnit_);
+	::ecore::EClass_ptr CodeModel_ = ecoreFactory->createEClass();
+	CodeModel_->setName("CodeModel");
+	// m_eClassifiers.push_back(CodeModel_);
+	::ecore::EClass_ptr DerivedType_ = ecoreFactory->createEClass();
+	DerivedType_->setName("DerivedType");
+	// m_eClassifiers.push_back(DerivedType_);
+	::ecore::EClass_ptr ArrayType_ = ecoreFactory->createEClass();
+	ArrayType_->setName("ArrayType");
+	// m_eClassifiers.push_back(ArrayType_);
+	::ecore::EClass_ptr PrimitiveType_ = ecoreFactory->createEClass();
+	PrimitiveType_->setName("PrimitiveType");
+	// m_eClassifiers.push_back(PrimitiveType_);
+	::ecore::EClass_ptr BooleanType_ = ecoreFactory->createEClass();
+	BooleanType_->setName("BooleanType");
+	// m_eClassifiers.push_back(BooleanType_);
+	::ecore::EClass_ptr CharType_ = ecoreFactory->createEClass();
+	CharType_->setName("CharType");
+	// m_eClassifiers.push_back(CharType_);
+	::ecore::EClass_ptr ClassUnit_ = ecoreFactory->createEClass();
+	ClassUnit_->setName("ClassUnit");
+	// m_eClassifiers.push_back(ClassUnit_);
+	::ecore::EClass_ptr CompositeType_ = ecoreFactory->createEClass();
+	CompositeType_->setName("CompositeType");
+	// m_eClassifiers.push_back(CompositeType_);
+	::ecore::EClass_ptr RecordType_ = ecoreFactory->createEClass();
+	RecordType_->setName("RecordType");
+	// m_eClassifiers.push_back(RecordType_);
+	::ecore::EClass_ptr EnumeratedType_ = ecoreFactory->createEClass();
+	EnumeratedType_->setName("EnumeratedType");
+	// m_eClassifiers.push_back(EnumeratedType_);
+	::ecore::EClass_ptr Extends_ = ecoreFactory->createEClass();
+	Extends_->setName("Extends");
+	// m_eClassifiers.push_back(Extends_);
+	::ecore::EClass_ptr ScaledType_ = ecoreFactory->createEClass();
+	ScaledType_->setName("ScaledType");
+	// m_eClassifiers.push_back(ScaledType_);
+	::ecore::EClass_ptr FloatType_ = ecoreFactory->createEClass();
+	FloatType_->setName("FloatType");
+	// m_eClassifiers.push_back(FloatType_);
+	::ecore::EClass_ptr HasType_ = ecoreFactory->createEClass();
+	HasType_->setName("HasType");
+	// m_eClassifiers.push_back(HasType_);
+	::ecore::EClass_ptr ImplementationOf_ = ecoreFactory->createEClass();
+	ImplementationOf_->setName("ImplementationOf");
+	// m_eClassifiers.push_back(ImplementationOf_);
+	::ecore::EClass_ptr Implements_ = ecoreFactory->createEClass();
+	Implements_->setName("Implements");
+	// m_eClassifiers.push_back(Implements_);
+	::ecore::EClass_ptr IntegerType_ = ecoreFactory->createEClass();
+	IntegerType_->setName("IntegerType");
+	// m_eClassifiers.push_back(IntegerType_);
+	::ecore::EClass_ptr InterfaceUnit_ = ecoreFactory->createEClass();
+	InterfaceUnit_->setName("InterfaceUnit");
+	// m_eClassifiers.push_back(InterfaceUnit_);
+	::ecore::EClass_ptr PointerType_ = ecoreFactory->createEClass();
+	PointerType_->setName("PointerType");
+	// m_eClassifiers.push_back(PointerType_);
+	::ecore::EClass_ptr DefinedType_ = ecoreFactory->createEClass();
+	DefinedType_->setName("DefinedType");
+	// m_eClassifiers.push_back(DefinedType_);
+	::ecore::EClass_ptr TypeUnit_ = ecoreFactory->createEClass();
+	TypeUnit_->setName("TypeUnit");
+	// m_eClassifiers.push_back(TypeUnit_);
+	::ecore::EClass_ptr RangeType_ = ecoreFactory->createEClass();
+	RangeType_->setName("RangeType");
+	// m_eClassifiers.push_back(RangeType_);
+	::ecore::EClass_ptr Signature_ = ecoreFactory->createEClass();
+	Signature_->setName("Signature");
+	// m_eClassifiers.push_back(Signature_);
+	::ecore::EClass_ptr DataElement_ = ecoreFactory->createEClass();
+	DataElement_->setName("DataElement");
+	// m_eClassifiers.push_back(DataElement_);
+	::ecore::EClass_ptr StringType_ = ecoreFactory->createEClass();
+	StringType_->setName("StringType");
+	// m_eClassifiers.push_back(StringType_);
+	::ecore::EClass_ptr ChoiceType_ = ecoreFactory->createEClass();
+	ChoiceType_->setName("ChoiceType");
+	// m_eClassifiers.push_back(ChoiceType_);
+	::ecore::EClass_ptr NamespaceUnit_ = ecoreFactory->createEClass();
+	NamespaceUnit_->setName("NamespaceUnit");
+	// m_eClassifiers.push_back(NamespaceUnit_);
+	::ecore::EClass_ptr VisibleIn_ = ecoreFactory->createEClass();
+	VisibleIn_->setName("VisibleIn");
+	// m_eClassifiers.push_back(VisibleIn_);
+	::ecore::EClass_ptr CommentUnit_ = ecoreFactory->createEClass();
+	CommentUnit_->setName("CommentUnit");
+	// m_eClassifiers.push_back(CommentUnit_);
+	::ecore::EClass_ptr SharedUnit_ = ecoreFactory->createEClass();
+	SharedUnit_->setName("SharedUnit");
+	// m_eClassifiers.push_back(SharedUnit_);
+	::ecore::EClass_ptr DecimalType_ = ecoreFactory->createEClass();
+	DecimalType_->setName("DecimalType");
+	// m_eClassifiers.push_back(DecimalType_);
+	::ecore::EClass_ptr DateType_ = ecoreFactory->createEClass();
+	DateType_->setName("DateType");
+	// m_eClassifiers.push_back(DateType_);
+	::ecore::EClass_ptr TimeType_ = ecoreFactory->createEClass();
+	TimeType_->setName("TimeType");
+	// m_eClassifiers.push_back(TimeType_);
+	::ecore::EClass_ptr VoidType_ = ecoreFactory->createEClass();
+	VoidType_->setName("VoidType");
+	// m_eClassifiers.push_back(VoidType_);
+	::ecore::EClass_ptr ValueElement_ = ecoreFactory->createEClass();
+	ValueElement_->setName("ValueElement");
+	// m_eClassifiers.push_back(ValueElement_);
+	::ecore::EClass_ptr Value_ = ecoreFactory->createEClass();
+	Value_->setName("Value");
+	// m_eClassifiers.push_back(Value_);
+	::ecore::EClass_ptr ValueList_ = ecoreFactory->createEClass();
+	ValueList_->setName("ValueList");
+	// m_eClassifiers.push_back(ValueList_);
+	::ecore::EClass_ptr StorableUnit_ = ecoreFactory->createEClass();
+	StorableUnit_->setName("StorableUnit");
+	// m_eClassifiers.push_back(StorableUnit_);
+	::ecore::EClass_ptr MemberUnit_ = ecoreFactory->createEClass();
+	MemberUnit_->setName("MemberUnit");
+	// m_eClassifiers.push_back(MemberUnit_);
+	::ecore::EClass_ptr ParameterUnit_ = ecoreFactory->createEClass();
+	ParameterUnit_->setName("ParameterUnit");
+	// m_eClassifiers.push_back(ParameterUnit_);
+	::ecore::EClass_ptr ItemUnit_ = ecoreFactory->createEClass();
+	ItemUnit_->setName("ItemUnit");
+	// m_eClassifiers.push_back(ItemUnit_);
+	::ecore::EClass_ptr IndexUnit_ = ecoreFactory->createEClass();
+	IndexUnit_->setName("IndexUnit");
+	// m_eClassifiers.push_back(IndexUnit_);
+	::ecore::EClass_ptr SynonymType_ = ecoreFactory->createEClass();
+	SynonymType_->setName("SynonymType");
+	// m_eClassifiers.push_back(SynonymType_);
+	::ecore::EClass_ptr SequenceType_ = ecoreFactory->createEClass();
+	SequenceType_->setName("SequenceType");
+	// m_eClassifiers.push_back(SequenceType_);
+	::ecore::EClass_ptr BagType_ = ecoreFactory->createEClass();
+	BagType_->setName("BagType");
+	// m_eClassifiers.push_back(BagType_);
+	::ecore::EClass_ptr SetType_ = ecoreFactory->createEClass();
+	SetType_->setName("SetType");
+	// m_eClassifiers.push_back(SetType_);
+	::ecore::EClass_ptr CodeElement_ = ecoreFactory->createEClass();
+	CodeElement_->setName("CodeElement");
+	// m_eClassifiers.push_back(CodeElement_);
+	::ecore::EClass_ptr CodeRelationship_ = ecoreFactory->createEClass();
+	CodeRelationship_->setName("CodeRelationship");
+	// m_eClassifiers.push_back(CodeRelationship_);
+	::ecore::EClass_ptr LanguageUnit_ = ecoreFactory->createEClass();
+	LanguageUnit_->setName("LanguageUnit");
+	// m_eClassifiers.push_back(LanguageUnit_);
+	::ecore::EClass_ptr OrdinalType_ = ecoreFactory->createEClass();
+	OrdinalType_->setName("OrdinalType");
+	// m_eClassifiers.push_back(OrdinalType_);
+	::ecore::EClass_ptr BitstringType_ = ecoreFactory->createEClass();
+	BitstringType_->setName("BitstringType");
+	// m_eClassifiers.push_back(BitstringType_);
+	::ecore::EClass_ptr OctetType_ = ecoreFactory->createEClass();
+	OctetType_->setName("OctetType");
+	// m_eClassifiers.push_back(OctetType_);
+	::ecore::EClass_ptr OctetstringType_ = ecoreFactory->createEClass();
+	OctetstringType_->setName("OctetstringType");
+	// m_eClassifiers.push_back(OctetstringType_);
+	::ecore::EClass_ptr BitType_ = ecoreFactory->createEClass();
+	BitType_->setName("BitType");
+	// m_eClassifiers.push_back(BitType_);
+	::ecore::EClass_ptr Imports_ = ecoreFactory->createEClass();
+	Imports_->setName("Imports");
+	// m_eClassifiers.push_back(Imports_);
+	::ecore::EClass_ptr Package_ = ecoreFactory->createEClass();
+	Package_->setName("Package");
+	// m_eClassifiers.push_back(Package_);
+	::ecore::EClass_ptr ParameterTo_ = ecoreFactory->createEClass();
+	ParameterTo_->setName("ParameterTo");
+	// m_eClassifiers.push_back(ParameterTo_);
+	::ecore::EClass_ptr TemplateType_ = ecoreFactory->createEClass();
+	TemplateType_->setName("TemplateType");
+	// m_eClassifiers.push_back(TemplateType_);
+	::ecore::EClass_ptr PreprocessorDirective_ = ecoreFactory->createEClass();
+	PreprocessorDirective_->setName("PreprocessorDirective");
+	// m_eClassifiers.push_back(PreprocessorDirective_);
+	::ecore::EClass_ptr MacroDirective_ = ecoreFactory->createEClass();
+	MacroDirective_->setName("MacroDirective");
+	// m_eClassifiers.push_back(MacroDirective_);
+	::ecore::EClass_ptr MacroUnit_ = ecoreFactory->createEClass();
+	MacroUnit_->setName("MacroUnit");
+	// m_eClassifiers.push_back(MacroUnit_);
+	::ecore::EClass_ptr ConditionalDirective_ = ecoreFactory->createEClass();
+	ConditionalDirective_->setName("ConditionalDirective");
+	// m_eClassifiers.push_back(ConditionalDirective_);
+	::ecore::EClass_ptr IncludeDirective_ = ecoreFactory->createEClass();
+	IncludeDirective_->setName("IncludeDirective");
+	// m_eClassifiers.push_back(IncludeDirective_);
+	::ecore::EClass_ptr VariantTo_ = ecoreFactory->createEClass();
+	VariantTo_->setName("VariantTo");
+	// m_eClassifiers.push_back(VariantTo_);
+	::ecore::EClass_ptr Expands_ = ecoreFactory->createEClass();
+	Expands_->setName("Expands");
+	// m_eClassifiers.push_back(Expands_);
+	::ecore::EClass_ptr Redefines_ = ecoreFactory->createEClass();
+	Redefines_->setName("Redefines");
+	// m_eClassifiers.push_back(Redefines_);
+	::ecore::EClass_ptr GeneratedFrom_ = ecoreFactory->createEClass();
+	GeneratedFrom_->setName("GeneratedFrom");
+	// m_eClassifiers.push_back(GeneratedFrom_);
+	::ecore::EClass_ptr Includes_ = ecoreFactory->createEClass();
+	Includes_->setName("Includes");
+	// m_eClassifiers.push_back(Includes_);
+	::ecore::EClass_ptr HasValue_ = ecoreFactory->createEClass();
+	HasValue_->setName("HasValue");
+	// m_eClassifiers.push_back(HasValue_);
+	
+	
+	// AbstractCodeElement_->addESuperType(KDMEntity_);
+	// CodeItem_->addESuperType(AbstractCodeElement_);
+	// ComputationalObject_->addESuperType(CodeItem_);
+	// ControlElement_->addESuperType(ComputationalObject_);
+	// MethodUnit_->addESuperType(ControlElement_);
+	// Module_->addESuperType(CodeItem_);
+	// CodeAssembly_->addESuperType(Module_);
+	// CallableUnit_->addESuperType(ControlElement_);
+	// Datatype_->addESuperType(CodeItem_);
+	// TemplateUnit_->addESuperType(Datatype_);
+	// TemplateParameter_->addESuperType(Datatype_);
+	// AbstractCodeRelationship_->addESuperType(KDMRelationship_);
+	// InstanceOf_->addESuperType(AbstractCodeRelationship_);
+	// CompilationUnit_->addESuperType(Module_);
+	// CodeModel_->addESuperType(KDMModel_);
+	// DerivedType_->addESuperType(Datatype_);
+	// ArrayType_->addESuperType(DerivedType_);
+	// PrimitiveType_->addESuperType(Datatype_);
+	// BooleanType_->addESuperType(PrimitiveType_);
+	// CharType_->addESuperType(PrimitiveType_);
+	// ClassUnit_->addESuperType(Datatype_);
+	// CompositeType_->addESuperType(Datatype_);
+	// RecordType_->addESuperType(CompositeType_);
+	// EnumeratedType_->addESuperType(Datatype_);
+	// Extends_->addESuperType(AbstractCodeRelationship_);
+	// ScaledType_->addESuperType(PrimitiveType_);
+	// FloatType_->addESuperType(PrimitiveType_);
+	// HasType_->addESuperType(AbstractCodeRelationship_);
+	// ImplementationOf_->addESuperType(AbstractCodeRelationship_);
+	// Implements_->addESuperType(AbstractCodeRelationship_);
+	// IntegerType_->addESuperType(PrimitiveType_);
+	// InterfaceUnit_->addESuperType(Datatype_);
+	// PointerType_->addESuperType(DerivedType_);
+	// DefinedType_->addESuperType(Datatype_);
+	// TypeUnit_->addESuperType(DefinedType_);
+	// RangeType_->addESuperType(DerivedType_);
+	// Signature_->addESuperType(Datatype_);
+	// DataElement_->addESuperType(ComputationalObject_);
+	// StringType_->addESuperType(PrimitiveType_);
+	// ChoiceType_->addESuperType(CompositeType_);
+	// NamespaceUnit_->addESuperType(CodeItem_);
+	// VisibleIn_->addESuperType(AbstractCodeRelationship_);
+	// CommentUnit_->addESuperType(ModelElement_);
+	// SharedUnit_->addESuperType(CompilationUnit_);
+	// DecimalType_->addESuperType(PrimitiveType_);
+	// DateType_->addESuperType(PrimitiveType_);
+	// TimeType_->addESuperType(PrimitiveType_);
+	// VoidType_->addESuperType(PrimitiveType_);
+	// ValueElement_->addESuperType(DataElement_);
+	// Value_->addESuperType(ValueElement_);
+	// ValueList_->addESuperType(ValueElement_);
+	// StorableUnit_->addESuperType(DataElement_);
+	// MemberUnit_->addESuperType(DataElement_);
+	// ParameterUnit_->addESuperType(DataElement_);
+	// ItemUnit_->addESuperType(DataElement_);
+	// IndexUnit_->addESuperType(DataElement_);
+	// SynonymType_->addESuperType(DefinedType_);
+	// SequenceType_->addESuperType(DerivedType_);
+	// BagType_->addESuperType(DerivedType_);
+	// SetType_->addESuperType(DerivedType_);
+	// CodeElement_->addESuperType(CodeItem_);
+	// CodeRelationship_->addESuperType(AbstractCodeRelationship_);
+	// LanguageUnit_->addESuperType(Module_);
+	// OrdinalType_->addESuperType(PrimitiveType_);
+	// BitstringType_->addESuperType(PrimitiveType_);
+	// OctetType_->addESuperType(PrimitiveType_);
+	// OctetstringType_->addESuperType(PrimitiveType_);
+	// BitType_->addESuperType(PrimitiveType_);
+	// Imports_->addESuperType(AbstractCodeRelationship_);
+	// Package_->addESuperType(Module_);
+	// ParameterTo_->addESuperType(AbstractCodeRelationship_);
+	// TemplateType_->addESuperType(Datatype_);
+	// PreprocessorDirective_->addESuperType(AbstractCodeElement_);
+	// MacroDirective_->addESuperType(PreprocessorDirective_);
+	// MacroUnit_->addESuperType(PreprocessorDirective_);
+	// ConditionalDirective_->addESuperType(PreprocessorDirective_);
+	// IncludeDirective_->addESuperType(PreprocessorDirective_);
+	// VariantTo_->addESuperType(AbstractCodeRelationship_);
+	// Expands_->addESuperType(AbstractCodeRelationship_);
+	// Redefines_->addESuperType(AbstractCodeRelationship_);
+	// GeneratedFrom_->addESuperType(AbstractCodeRelationship_);
+	// Includes_->addESuperType(AbstractCodeRelationship_);
+	// HasValue_->addESuperType(AbstractCodeRelationship_);
+	
+	
+	
+	
+    ::ecore::EEnum_ptr MethodKind_ = ecoreFactory->createEEnum();
+    MethodKind_->setName("MethodKind");
+    MethodKind_->setSerializable(true);
+    {
+        ::ecore::EEnumLiteral_ptr el = ecoreFactory->createEEnumLiteral();
+        el->setName("operator");
+        el->setValue(static_cast< ::ecore::EInt >(MethodKind::operator));
+        el->setLiteral("operator");
+        // el->m_eEnum = MethodKind_;
+        // MethodKind_->m_eLiterals.push_back(el);
     }
-	// ParameterKind
-	{
-	    ::ecore::EEnum_ptr ee = ecoreFactory->createEEnum();
-	    ee->setClassifierID(ParameterKind);
-	    ee->setEPackage(this);
-	    ee->setName("ParameterKind");
-	    ee->setSerializable(true);
-	    {
-	        ::ecore::EEnumLiteral_ptr el = ecoreFactory->createEEnumLiteral();
-	        el->setName("byReference");
-	        el->setValue(ParameterKind::byReference);
-	        el->setLiteral("byReference");
-	        el->setEEnum(ee);
-	        ee->getELiterals().push_back(el);
-	    }
-	    m_Classifiers.push_back(ee);
-	    {
-	        ::ecore::EEnumLiteral_ptr el = ecoreFactory->createEEnumLiteral();
-	        el->setName("unknown");
-	        el->setValue(ParameterKind::unknown);
-	        el->setLiteral("unknown");
-	        el->setEEnum(ee);
-	        ee->getELiterals().push_back(el);
-	    }
-	    m_Classifiers.push_back(ee);
-	    {
-	        ::ecore::EEnumLiteral_ptr el = ecoreFactory->createEEnumLiteral();
-	        el->setName("exception");
-	        el->setValue(ParameterKind::exception);
-	        el->setLiteral("exception");
-	        el->setEEnum(ee);
-	        ee->getELiterals().push_back(el);
-	    }
-	    m_Classifiers.push_back(ee);
-	    {
-	        ::ecore::EEnumLiteral_ptr el = ecoreFactory->createEEnumLiteral();
-	        el->setName("return");
-	        el->setValue(ParameterKind::return);
-	        el->setLiteral("return");
-	        el->setEEnum(ee);
-	        ee->getELiterals().push_back(el);
-	    }
-	    m_Classifiers.push_back(ee);
-	    {
-	        ::ecore::EEnumLiteral_ptr el = ecoreFactory->createEEnumLiteral();
-	        el->setName("byValue");
-	        el->setValue(ParameterKind::byValue);
-	        el->setLiteral("byValue");
-	        el->setEEnum(ee);
-	        ee->getELiterals().push_back(el);
-	    }
-	    m_Classifiers.push_back(ee);
-	    {
-	        ::ecore::EEnumLiteral_ptr el = ecoreFactory->createEEnumLiteral();
-	        el->setName("catchall");
-	        el->setValue(ParameterKind::catchall);
-	        el->setLiteral("catchall");
-	        el->setEEnum(ee);
-	        ee->getELiterals().push_back(el);
-	    }
-	    m_Classifiers.push_back(ee);
-	    {
-	        ::ecore::EEnumLiteral_ptr el = ecoreFactory->createEEnumLiteral();
-	        el->setName("byName");
-	        el->setValue(ParameterKind::byName);
-	        el->setLiteral("byName");
-	        el->setEEnum(ee);
-	        ee->getELiterals().push_back(el);
-	    }
-	    m_Classifiers.push_back(ee);
-	    {
-	        ::ecore::EEnumLiteral_ptr el = ecoreFactory->createEEnumLiteral();
-	        el->setName("throws");
-	        el->setValue(ParameterKind::throws);
-	        el->setLiteral("throws");
-	        el->setEEnum(ee);
-	        ee->getELiterals().push_back(el);
-	    }
-	    m_Classifiers.push_back(ee);
-	    {
-	        ::ecore::EEnumLiteral_ptr el = ecoreFactory->createEEnumLiteral();
-	        el->setName("variadic");
-	        el->setValue(ParameterKind::variadic);
-	        el->setLiteral("variadic");
-	        el->setEEnum(ee);
-	        ee->getELiterals().push_back(el);
-	    }
-	    m_Classifiers.push_back(ee);
+    // MethodKind_->m_ePackage = this;
+    // m_eClassifiers.push_back(MethodKind_);
+    {
+        ::ecore::EEnumLiteral_ptr el = ecoreFactory->createEEnumLiteral();
+        el->setName("destructor");
+        el->setValue(static_cast< ::ecore::EInt >(MethodKind::destructor));
+        el->setLiteral("destructor");
+        // el->m_eEnum = MethodKind_;
+        // MethodKind_->m_eLiterals.push_back(el);
     }
-	// ExportKind
-	{
-	    ::ecore::EEnum_ptr ee = ecoreFactory->createEEnum();
-	    ee->setClassifierID(ExportKind);
-	    ee->setEPackage(this);
-	    ee->setName("ExportKind");
-	    ee->setSerializable(true);
-	    {
-	        ::ecore::EEnumLiteral_ptr el = ecoreFactory->createEEnumLiteral();
-	        el->setName("private");
-	        el->setValue(ExportKind::private);
-	        el->setLiteral("private");
-	        el->setEEnum(ee);
-	        ee->getELiterals().push_back(el);
-	    }
-	    m_Classifiers.push_back(ee);
-	    {
-	        ::ecore::EEnumLiteral_ptr el = ecoreFactory->createEEnumLiteral();
-	        el->setName("unknown");
-	        el->setValue(ExportKind::unknown);
-	        el->setLiteral("unknown");
-	        el->setEEnum(ee);
-	        ee->getELiterals().push_back(el);
-	    }
-	    m_Classifiers.push_back(ee);
-	    {
-	        ::ecore::EEnumLiteral_ptr el = ecoreFactory->createEEnumLiteral();
-	        el->setName("public");
-	        el->setValue(ExportKind::public);
-	        el->setLiteral("public");
-	        el->setEEnum(ee);
-	        ee->getELiterals().push_back(el);
-	    }
-	    m_Classifiers.push_back(ee);
-	    {
-	        ::ecore::EEnumLiteral_ptr el = ecoreFactory->createEEnumLiteral();
-	        el->setName("protected");
-	        el->setValue(ExportKind::protected);
-	        el->setLiteral("protected");
-	        el->setEEnum(ee);
-	        ee->getELiterals().push_back(el);
-	    }
-	    m_Classifiers.push_back(ee);
-	    {
-	        ::ecore::EEnumLiteral_ptr el = ecoreFactory->createEEnumLiteral();
-	        el->setName("final");
-	        el->setValue(ExportKind::final);
-	        el->setLiteral("final");
-	        el->setEEnum(ee);
-	        ee->getELiterals().push_back(el);
-	    }
-	    m_Classifiers.push_back(ee);
+    // MethodKind_->m_ePackage = this;
+    // m_eClassifiers.push_back(MethodKind_);
+    {
+        ::ecore::EEnumLiteral_ptr el = ecoreFactory->createEEnumLiteral();
+        el->setName("method");
+        el->setValue(static_cast< ::ecore::EInt >(MethodKind::method));
+        el->setLiteral("method");
+        // el->m_eEnum = MethodKind_;
+        // MethodKind_->m_eLiterals.push_back(el);
     }
-	// StorableKind
-	{
-	    ::ecore::EEnum_ptr ee = ecoreFactory->createEEnum();
-	    ee->setClassifierID(StorableKind);
-	    ee->setEPackage(this);
-	    ee->setName("StorableKind");
-	    ee->setSerializable(true);
-	    {
-	        ::ecore::EEnumLiteral_ptr el = ecoreFactory->createEEnumLiteral();
-	        el->setName("global");
-	        el->setValue(StorableKind::global);
-	        el->setLiteral("global");
-	        el->setEEnum(ee);
-	        ee->getELiterals().push_back(el);
-	    }
-	    m_Classifiers.push_back(ee);
-	    {
-	        ::ecore::EEnumLiteral_ptr el = ecoreFactory->createEEnumLiteral();
-	        el->setName("external");
-	        el->setValue(StorableKind::external);
-	        el->setLiteral("external");
-	        el->setEEnum(ee);
-	        ee->getELiterals().push_back(el);
-	    }
-	    m_Classifiers.push_back(ee);
-	    {
-	        ::ecore::EEnumLiteral_ptr el = ecoreFactory->createEEnumLiteral();
-	        el->setName("static");
-	        el->setValue(StorableKind::static);
-	        el->setLiteral("static");
-	        el->setEEnum(ee);
-	        ee->getELiterals().push_back(el);
-	    }
-	    m_Classifiers.push_back(ee);
-	    {
-	        ::ecore::EEnumLiteral_ptr el = ecoreFactory->createEEnumLiteral();
-	        el->setName("unknown");
-	        el->setValue(StorableKind::unknown);
-	        el->setLiteral("unknown");
-	        el->setEEnum(ee);
-	        ee->getELiterals().push_back(el);
-	    }
-	    m_Classifiers.push_back(ee);
-	    {
-	        ::ecore::EEnumLiteral_ptr el = ecoreFactory->createEEnumLiteral();
-	        el->setName("register");
-	        el->setValue(StorableKind::register);
-	        el->setLiteral("register");
-	        el->setEEnum(ee);
-	        ee->getELiterals().push_back(el);
-	    }
-	    m_Classifiers.push_back(ee);
-	    {
-	        ::ecore::EEnumLiteral_ptr el = ecoreFactory->createEEnumLiteral();
-	        el->setName("local");
-	        el->setValue(StorableKind::local);
-	        el->setLiteral("local");
-	        el->setEEnum(ee);
-	        ee->getELiterals().push_back(el);
-	    }
-	    m_Classifiers.push_back(ee);
+    // MethodKind_->m_ePackage = this;
+    // m_eClassifiers.push_back(MethodKind_);
+    {
+        ::ecore::EEnumLiteral_ptr el = ecoreFactory->createEEnumLiteral();
+        el->setName("abstract");
+        el->setValue(static_cast< ::ecore::EInt >(MethodKind::abstract));
+        el->setLiteral("abstract");
+        // el->m_eEnum = MethodKind_;
+        // MethodKind_->m_eLiterals.push_back(el);
     }
-	// CallableKind
-	{
-	    ::ecore::EEnum_ptr ee = ecoreFactory->createEEnum();
-	    ee->setClassifierID(CallableKind);
-	    ee->setEPackage(this);
-	    ee->setName("CallableKind");
-	    ee->setSerializable(true);
-	    {
-	        ::ecore::EEnumLiteral_ptr el = ecoreFactory->createEEnumLiteral();
-	        el->setName("external");
-	        el->setValue(CallableKind::external);
-	        el->setLiteral("external");
-	        el->setEEnum(ee);
-	        ee->getELiterals().push_back(el);
-	    }
-	    m_Classifiers.push_back(ee);
-	    {
-	        ::ecore::EEnumLiteral_ptr el = ecoreFactory->createEEnumLiteral();
-	        el->setName("regular");
-	        el->setValue(CallableKind::regular);
-	        el->setLiteral("regular");
-	        el->setEEnum(ee);
-	        ee->getELiterals().push_back(el);
-	    }
-	    m_Classifiers.push_back(ee);
-	    {
-	        ::ecore::EEnumLiteral_ptr el = ecoreFactory->createEEnumLiteral();
-	        el->setName("stored");
-	        el->setValue(CallableKind::stored);
-	        el->setLiteral("stored");
-	        el->setEEnum(ee);
-	        ee->getELiterals().push_back(el);
-	    }
-	    m_Classifiers.push_back(ee);
-	    {
-	        ::ecore::EEnumLiteral_ptr el = ecoreFactory->createEEnumLiteral();
-	        el->setName("operator");
-	        el->setValue(CallableKind::operator);
-	        el->setLiteral("operator");
-	        el->setEEnum(ee);
-	        ee->getELiterals().push_back(el);
-	    }
-	    m_Classifiers.push_back(ee);
-	    {
-	        ::ecore::EEnumLiteral_ptr el = ecoreFactory->createEEnumLiteral();
-	        el->setName("unknown");
-	        el->setValue(CallableKind::unknown);
-	        el->setLiteral("unknown");
-	        el->setEEnum(ee);
-	        ee->getELiterals().push_back(el);
-	    }
-	    m_Classifiers.push_back(ee);
+    // MethodKind_->m_ePackage = this;
+    // m_eClassifiers.push_back(MethodKind_);
+    {
+        ::ecore::EEnumLiteral_ptr el = ecoreFactory->createEEnumLiteral();
+        el->setName("virtual");
+        el->setValue(static_cast< ::ecore::EInt >(MethodKind::virtual));
+        el->setLiteral("virtual");
+        // el->m_eEnum = MethodKind_;
+        // MethodKind_->m_eLiterals.push_back(el);
     }
-	// MacroKind
-	{
-	    ::ecore::EEnum_ptr ee = ecoreFactory->createEEnum();
-	    ee->setClassifierID(MacroKind);
-	    ee->setEPackage(this);
-	    ee->setName("MacroKind");
-	    ee->setSerializable(true);
-	    {
-	        ::ecore::EEnumLiteral_ptr el = ecoreFactory->createEEnumLiteral();
-	        el->setName("external");
-	        el->setValue(MacroKind::external);
-	        el->setLiteral("external");
-	        el->setEEnum(ee);
-	        ee->getELiterals().push_back(el);
-	    }
-	    m_Classifiers.push_back(ee);
-	    {
-	        ::ecore::EEnumLiteral_ptr el = ecoreFactory->createEEnumLiteral();
-	        el->setName("unknown");
-	        el->setValue(MacroKind::unknown);
-	        el->setLiteral("unknown");
-	        el->setEEnum(ee);
-	        ee->getELiterals().push_back(el);
-	    }
-	    m_Classifiers.push_back(ee);
-	    {
-	        ::ecore::EEnumLiteral_ptr el = ecoreFactory->createEEnumLiteral();
-	        el->setName("option");
-	        el->setValue(MacroKind::option);
-	        el->setLiteral("option");
-	        el->setEEnum(ee);
-	        ee->getELiterals().push_back(el);
-	    }
-	    m_Classifiers.push_back(ee);
-	    {
-	        ::ecore::EEnumLiteral_ptr el = ecoreFactory->createEEnumLiteral();
-	        el->setName("undefined");
-	        el->setValue(MacroKind::undefined);
-	        el->setLiteral("undefined");
-	        el->setEEnum(ee);
-	        ee->getELiterals().push_back(el);
-	    }
-	    m_Classifiers.push_back(ee);
-	    {
-	        ::ecore::EEnumLiteral_ptr el = ecoreFactory->createEEnumLiteral();
-	        el->setName("regular");
-	        el->setValue(MacroKind::regular);
-	        el->setLiteral("regular");
-	        el->setEEnum(ee);
-	        ee->getELiterals().push_back(el);
-	    }
-	    m_Classifiers.push_back(ee);
+    // MethodKind_->m_ePackage = this;
+    // m_eClassifiers.push_back(MethodKind_);
+    {
+        ::ecore::EEnumLiteral_ptr el = ecoreFactory->createEEnumLiteral();
+        el->setName("unknown");
+        el->setValue(static_cast< ::ecore::EInt >(MethodKind::unknown));
+        el->setLiteral("unknown");
+        // el->m_eEnum = MethodKind_;
+        // MethodKind_->m_eLiterals.push_back(el);
     }
+    // MethodKind_->m_ePackage = this;
+    // m_eClassifiers.push_back(MethodKind_);
+    {
+        ::ecore::EEnumLiteral_ptr el = ecoreFactory->createEEnumLiteral();
+        el->setName("constructor");
+        el->setValue(static_cast< ::ecore::EInt >(MethodKind::constructor));
+        el->setLiteral("constructor");
+        // el->m_eEnum = MethodKind_;
+        // MethodKind_->m_eLiterals.push_back(el);
+    }
+    // MethodKind_->m_ePackage = this;
+    // m_eClassifiers.push_back(MethodKind_);
+    ::ecore::EEnum_ptr ParameterKind_ = ecoreFactory->createEEnum();
+    ParameterKind_->setName("ParameterKind");
+    ParameterKind_->setSerializable(true);
+    {
+        ::ecore::EEnumLiteral_ptr el = ecoreFactory->createEEnumLiteral();
+        el->setName("byReference");
+        el->setValue(static_cast< ::ecore::EInt >(ParameterKind::byReference));
+        el->setLiteral("byReference");
+        // el->m_eEnum = ParameterKind_;
+        // ParameterKind_->m_eLiterals.push_back(el);
+    }
+    // ParameterKind_->m_ePackage = this;
+    // m_eClassifiers.push_back(ParameterKind_);
+    {
+        ::ecore::EEnumLiteral_ptr el = ecoreFactory->createEEnumLiteral();
+        el->setName("unknown");
+        el->setValue(static_cast< ::ecore::EInt >(ParameterKind::unknown));
+        el->setLiteral("unknown");
+        // el->m_eEnum = ParameterKind_;
+        // ParameterKind_->m_eLiterals.push_back(el);
+    }
+    // ParameterKind_->m_ePackage = this;
+    // m_eClassifiers.push_back(ParameterKind_);
+    {
+        ::ecore::EEnumLiteral_ptr el = ecoreFactory->createEEnumLiteral();
+        el->setName("exception");
+        el->setValue(static_cast< ::ecore::EInt >(ParameterKind::exception));
+        el->setLiteral("exception");
+        // el->m_eEnum = ParameterKind_;
+        // ParameterKind_->m_eLiterals.push_back(el);
+    }
+    // ParameterKind_->m_ePackage = this;
+    // m_eClassifiers.push_back(ParameterKind_);
+    {
+        ::ecore::EEnumLiteral_ptr el = ecoreFactory->createEEnumLiteral();
+        el->setName("return");
+        el->setValue(static_cast< ::ecore::EInt >(ParameterKind::return));
+        el->setLiteral("return");
+        // el->m_eEnum = ParameterKind_;
+        // ParameterKind_->m_eLiterals.push_back(el);
+    }
+    // ParameterKind_->m_ePackage = this;
+    // m_eClassifiers.push_back(ParameterKind_);
+    {
+        ::ecore::EEnumLiteral_ptr el = ecoreFactory->createEEnumLiteral();
+        el->setName("byValue");
+        el->setValue(static_cast< ::ecore::EInt >(ParameterKind::byValue));
+        el->setLiteral("byValue");
+        // el->m_eEnum = ParameterKind_;
+        // ParameterKind_->m_eLiterals.push_back(el);
+    }
+    // ParameterKind_->m_ePackage = this;
+    // m_eClassifiers.push_back(ParameterKind_);
+    {
+        ::ecore::EEnumLiteral_ptr el = ecoreFactory->createEEnumLiteral();
+        el->setName("catchall");
+        el->setValue(static_cast< ::ecore::EInt >(ParameterKind::catchall));
+        el->setLiteral("catchall");
+        // el->m_eEnum = ParameterKind_;
+        // ParameterKind_->m_eLiterals.push_back(el);
+    }
+    // ParameterKind_->m_ePackage = this;
+    // m_eClassifiers.push_back(ParameterKind_);
+    {
+        ::ecore::EEnumLiteral_ptr el = ecoreFactory->createEEnumLiteral();
+        el->setName("byName");
+        el->setValue(static_cast< ::ecore::EInt >(ParameterKind::byName));
+        el->setLiteral("byName");
+        // el->m_eEnum = ParameterKind_;
+        // ParameterKind_->m_eLiterals.push_back(el);
+    }
+    // ParameterKind_->m_ePackage = this;
+    // m_eClassifiers.push_back(ParameterKind_);
+    {
+        ::ecore::EEnumLiteral_ptr el = ecoreFactory->createEEnumLiteral();
+        el->setName("throws");
+        el->setValue(static_cast< ::ecore::EInt >(ParameterKind::throws));
+        el->setLiteral("throws");
+        // el->m_eEnum = ParameterKind_;
+        // ParameterKind_->m_eLiterals.push_back(el);
+    }
+    // ParameterKind_->m_ePackage = this;
+    // m_eClassifiers.push_back(ParameterKind_);
+    {
+        ::ecore::EEnumLiteral_ptr el = ecoreFactory->createEEnumLiteral();
+        el->setName("variadic");
+        el->setValue(static_cast< ::ecore::EInt >(ParameterKind::variadic));
+        el->setLiteral("variadic");
+        // el->m_eEnum = ParameterKind_;
+        // ParameterKind_->m_eLiterals.push_back(el);
+    }
+    // ParameterKind_->m_ePackage = this;
+    // m_eClassifiers.push_back(ParameterKind_);
+    ::ecore::EEnum_ptr ExportKind_ = ecoreFactory->createEEnum();
+    ExportKind_->setName("ExportKind");
+    ExportKind_->setSerializable(true);
+    {
+        ::ecore::EEnumLiteral_ptr el = ecoreFactory->createEEnumLiteral();
+        el->setName("private");
+        el->setValue(static_cast< ::ecore::EInt >(ExportKind::private));
+        el->setLiteral("private");
+        // el->m_eEnum = ExportKind_;
+        // ExportKind_->m_eLiterals.push_back(el);
+    }
+    // ExportKind_->m_ePackage = this;
+    // m_eClassifiers.push_back(ExportKind_);
+    {
+        ::ecore::EEnumLiteral_ptr el = ecoreFactory->createEEnumLiteral();
+        el->setName("unknown");
+        el->setValue(static_cast< ::ecore::EInt >(ExportKind::unknown));
+        el->setLiteral("unknown");
+        // el->m_eEnum = ExportKind_;
+        // ExportKind_->m_eLiterals.push_back(el);
+    }
+    // ExportKind_->m_ePackage = this;
+    // m_eClassifiers.push_back(ExportKind_);
+    {
+        ::ecore::EEnumLiteral_ptr el = ecoreFactory->createEEnumLiteral();
+        el->setName("public");
+        el->setValue(static_cast< ::ecore::EInt >(ExportKind::public));
+        el->setLiteral("public");
+        // el->m_eEnum = ExportKind_;
+        // ExportKind_->m_eLiterals.push_back(el);
+    }
+    // ExportKind_->m_ePackage = this;
+    // m_eClassifiers.push_back(ExportKind_);
+    {
+        ::ecore::EEnumLiteral_ptr el = ecoreFactory->createEEnumLiteral();
+        el->setName("protected");
+        el->setValue(static_cast< ::ecore::EInt >(ExportKind::protected));
+        el->setLiteral("protected");
+        // el->m_eEnum = ExportKind_;
+        // ExportKind_->m_eLiterals.push_back(el);
+    }
+    // ExportKind_->m_ePackage = this;
+    // m_eClassifiers.push_back(ExportKind_);
+    {
+        ::ecore::EEnumLiteral_ptr el = ecoreFactory->createEEnumLiteral();
+        el->setName("final");
+        el->setValue(static_cast< ::ecore::EInt >(ExportKind::final));
+        el->setLiteral("final");
+        // el->m_eEnum = ExportKind_;
+        // ExportKind_->m_eLiterals.push_back(el);
+    }
+    // ExportKind_->m_ePackage = this;
+    // m_eClassifiers.push_back(ExportKind_);
+    ::ecore::EEnum_ptr StorableKind_ = ecoreFactory->createEEnum();
+    StorableKind_->setName("StorableKind");
+    StorableKind_->setSerializable(true);
+    {
+        ::ecore::EEnumLiteral_ptr el = ecoreFactory->createEEnumLiteral();
+        el->setName("global");
+        el->setValue(static_cast< ::ecore::EInt >(StorableKind::global));
+        el->setLiteral("global");
+        // el->m_eEnum = StorableKind_;
+        // StorableKind_->m_eLiterals.push_back(el);
+    }
+    // StorableKind_->m_ePackage = this;
+    // m_eClassifiers.push_back(StorableKind_);
+    {
+        ::ecore::EEnumLiteral_ptr el = ecoreFactory->createEEnumLiteral();
+        el->setName("external");
+        el->setValue(static_cast< ::ecore::EInt >(StorableKind::external));
+        el->setLiteral("external");
+        // el->m_eEnum = StorableKind_;
+        // StorableKind_->m_eLiterals.push_back(el);
+    }
+    // StorableKind_->m_ePackage = this;
+    // m_eClassifiers.push_back(StorableKind_);
+    {
+        ::ecore::EEnumLiteral_ptr el = ecoreFactory->createEEnumLiteral();
+        el->setName("static");
+        el->setValue(static_cast< ::ecore::EInt >(StorableKind::static));
+        el->setLiteral("static");
+        // el->m_eEnum = StorableKind_;
+        // StorableKind_->m_eLiterals.push_back(el);
+    }
+    // StorableKind_->m_ePackage = this;
+    // m_eClassifiers.push_back(StorableKind_);
+    {
+        ::ecore::EEnumLiteral_ptr el = ecoreFactory->createEEnumLiteral();
+        el->setName("unknown");
+        el->setValue(static_cast< ::ecore::EInt >(StorableKind::unknown));
+        el->setLiteral("unknown");
+        // el->m_eEnum = StorableKind_;
+        // StorableKind_->m_eLiterals.push_back(el);
+    }
+    // StorableKind_->m_ePackage = this;
+    // m_eClassifiers.push_back(StorableKind_);
+    {
+        ::ecore::EEnumLiteral_ptr el = ecoreFactory->createEEnumLiteral();
+        el->setName("register");
+        el->setValue(static_cast< ::ecore::EInt >(StorableKind::register));
+        el->setLiteral("register");
+        // el->m_eEnum = StorableKind_;
+        // StorableKind_->m_eLiterals.push_back(el);
+    }
+    // StorableKind_->m_ePackage = this;
+    // m_eClassifiers.push_back(StorableKind_);
+    {
+        ::ecore::EEnumLiteral_ptr el = ecoreFactory->createEEnumLiteral();
+        el->setName("local");
+        el->setValue(static_cast< ::ecore::EInt >(StorableKind::local));
+        el->setLiteral("local");
+        // el->m_eEnum = StorableKind_;
+        // StorableKind_->m_eLiterals.push_back(el);
+    }
+    // StorableKind_->m_ePackage = this;
+    // m_eClassifiers.push_back(StorableKind_);
+    ::ecore::EEnum_ptr CallableKind_ = ecoreFactory->createEEnum();
+    CallableKind_->setName("CallableKind");
+    CallableKind_->setSerializable(true);
+    {
+        ::ecore::EEnumLiteral_ptr el = ecoreFactory->createEEnumLiteral();
+        el->setName("external");
+        el->setValue(static_cast< ::ecore::EInt >(CallableKind::external));
+        el->setLiteral("external");
+        // el->m_eEnum = CallableKind_;
+        // CallableKind_->m_eLiterals.push_back(el);
+    }
+    // CallableKind_->m_ePackage = this;
+    // m_eClassifiers.push_back(CallableKind_);
+    {
+        ::ecore::EEnumLiteral_ptr el = ecoreFactory->createEEnumLiteral();
+        el->setName("regular");
+        el->setValue(static_cast< ::ecore::EInt >(CallableKind::regular));
+        el->setLiteral("regular");
+        // el->m_eEnum = CallableKind_;
+        // CallableKind_->m_eLiterals.push_back(el);
+    }
+    // CallableKind_->m_ePackage = this;
+    // m_eClassifiers.push_back(CallableKind_);
+    {
+        ::ecore::EEnumLiteral_ptr el = ecoreFactory->createEEnumLiteral();
+        el->setName("stored");
+        el->setValue(static_cast< ::ecore::EInt >(CallableKind::stored));
+        el->setLiteral("stored");
+        // el->m_eEnum = CallableKind_;
+        // CallableKind_->m_eLiterals.push_back(el);
+    }
+    // CallableKind_->m_ePackage = this;
+    // m_eClassifiers.push_back(CallableKind_);
+    {
+        ::ecore::EEnumLiteral_ptr el = ecoreFactory->createEEnumLiteral();
+        el->setName("operator");
+        el->setValue(static_cast< ::ecore::EInt >(CallableKind::operator));
+        el->setLiteral("operator");
+        // el->m_eEnum = CallableKind_;
+        // CallableKind_->m_eLiterals.push_back(el);
+    }
+    // CallableKind_->m_ePackage = this;
+    // m_eClassifiers.push_back(CallableKind_);
+    {
+        ::ecore::EEnumLiteral_ptr el = ecoreFactory->createEEnumLiteral();
+        el->setName("unknown");
+        el->setValue(static_cast< ::ecore::EInt >(CallableKind::unknown));
+        el->setLiteral("unknown");
+        // el->m_eEnum = CallableKind_;
+        // CallableKind_->m_eLiterals.push_back(el);
+    }
+    // CallableKind_->m_ePackage = this;
+    // m_eClassifiers.push_back(CallableKind_);
+    ::ecore::EEnum_ptr MacroKind_ = ecoreFactory->createEEnum();
+    MacroKind_->setName("MacroKind");
+    MacroKind_->setSerializable(true);
+    {
+        ::ecore::EEnumLiteral_ptr el = ecoreFactory->createEEnumLiteral();
+        el->setName("external");
+        el->setValue(static_cast< ::ecore::EInt >(MacroKind::external));
+        el->setLiteral("external");
+        // el->m_eEnum = MacroKind_;
+        // MacroKind_->m_eLiterals.push_back(el);
+    }
+    // MacroKind_->m_ePackage = this;
+    // m_eClassifiers.push_back(MacroKind_);
+    {
+        ::ecore::EEnumLiteral_ptr el = ecoreFactory->createEEnumLiteral();
+        el->setName("unknown");
+        el->setValue(static_cast< ::ecore::EInt >(MacroKind::unknown));
+        el->setLiteral("unknown");
+        // el->m_eEnum = MacroKind_;
+        // MacroKind_->m_eLiterals.push_back(el);
+    }
+    // MacroKind_->m_ePackage = this;
+    // m_eClassifiers.push_back(MacroKind_);
+    {
+        ::ecore::EEnumLiteral_ptr el = ecoreFactory->createEEnumLiteral();
+        el->setName("option");
+        el->setValue(static_cast< ::ecore::EInt >(MacroKind::option));
+        el->setLiteral("option");
+        // el->m_eEnum = MacroKind_;
+        // MacroKind_->m_eLiterals.push_back(el);
+    }
+    // MacroKind_->m_ePackage = this;
+    // m_eClassifiers.push_back(MacroKind_);
+    {
+        ::ecore::EEnumLiteral_ptr el = ecoreFactory->createEEnumLiteral();
+        el->setName("undefined");
+        el->setValue(static_cast< ::ecore::EInt >(MacroKind::undefined));
+        el->setLiteral("undefined");
+        // el->m_eEnum = MacroKind_;
+        // MacroKind_->m_eLiterals.push_back(el);
+    }
+    // MacroKind_->m_ePackage = this;
+    // m_eClassifiers.push_back(MacroKind_);
+    {
+        ::ecore::EEnumLiteral_ptr el = ecoreFactory->createEEnumLiteral();
+        el->setName("regular");
+        el->setValue(static_cast< ::ecore::EInt >(MacroKind::regular));
+        el->setLiteral("regular");
+        // el->m_eEnum = MacroKind_;
+        // MacroKind_->m_eLiterals.push_back(el);
+    }
+    // MacroKind_->m_ePackage = this;
+    // m_eClassifiers.push_back(MacroKind_);
 }
 
 const CodePackage_ptr CodePackage::_instance()

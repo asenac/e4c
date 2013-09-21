@@ -24,18 +24,19 @@ public:
 	ChainExpression();
 	virtual ~ChainExpression();
 
-	typedef std::unique_ptr < xpand3::expression::AbstractExpression > first_t;
-	typedef std::unique_ptr < xpand3::expression::AbstractExpression > next_t;
+	typedef xpand3::expression::AbstractExpression_ptr first_t;
+	typedef xpand3::expression::AbstractExpression_ptr next_t;
 
 	
-	// TODO
-	// TODO
+	first_t getFirst() const;
+	next_t getNext() const;
 
-	
+
+	std::unique_ptr < xpand3::expression::AbstractExpression > m_first;
+	std::unique_ptr < xpand3::expression::AbstractExpression > m_next;
+
+		
 protected:
-
-	first_t m_first;
-	next_t m_next;
 
 };
 

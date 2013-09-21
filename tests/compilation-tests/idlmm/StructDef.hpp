@@ -22,16 +22,18 @@ public:
 	StructDef();
 	virtual ~StructDef();
 
-	typedef boost::ptr_vector < idlmm::Field > members_t;
+	typedef std::vector < idlmm::Field_ptr > members_t;
 
 	
-	// TODO
+	members_t getMembers() const;
+	void addMembers(idlmm::Field_ptr members_);
 
-	
+		
 protected:
 
-	members_t m_members;
+	std::vector < std::unique_ptr < idlmm::Field > > m_members;
 
+	
 };
 
 } // idlmm

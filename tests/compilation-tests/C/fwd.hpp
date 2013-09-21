@@ -2,6 +2,8 @@
 #define EMF_CPP_C_FWD_HPP
 
 
+#include <e4c/mapping.hpp>
+
 namespace C
 {
 

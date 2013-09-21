@@ -24,15 +24,16 @@ public:
 	InventoryModel();
 	virtual ~InventoryModel();
 
-	typedef boost::ptr_set < kdm::source::AbstractInventoryElement > inventoryElement_t;
+	typedef std::set < kdm::source::AbstractInventoryElement_ptr > inventoryElement_t;
 
 	
-	// TODO
+	inventoryElement_t getInventoryElement() const;
 
-	
+
+	std::set < std::unique_ptr < kdm::source::AbstractInventoryElement > > m_inventoryElement;
+
+		
 protected:
-
-	inventoryElement_t m_inventoryElement;
 
 };
 

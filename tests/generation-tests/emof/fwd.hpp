@@ -2,6 +2,8 @@
 #define EMF_CPP_EMOF_FWD_HPP
 
 
+#include <e4c/mapping.hpp>
+
 namespace emof
 {
 
@@ -12,11 +14,21 @@ class EmofFactory;
 typedef EmofFactory * EmofFactory_ptr;
 
 // Data types
-typedef int Boolean;
-typedef int Integer;
-typedef int Real;
-typedef int String;
-typedef int UnlimitedNatural;
+
+/*PROTECTED REGION ID(typedef_emof::Boolean) ENABLED START*/typedef int Boolean;
+/*PROTECTED REGION END*/
+
+/*PROTECTED REGION ID(typedef_emof::Integer) ENABLED START*/typedef int Integer;
+/*PROTECTED REGION END*/
+
+/*PROTECTED REGION ID(typedef_emof::Real) ENABLED START*/typedef int Real;
+/*PROTECTED REGION END*/
+
+/*PROTECTED REGION ID(typedef_emof::String) ENABLED START*/typedef int String;
+/*PROTECTED REGION END*/
+
+/*PROTECTED REGION ID(typedef_emof::UnlimitedNatural) ENABLED START*/typedef int UnlimitedNatural;
+/*PROTECTED REGION END*/
 
 
 // Classes

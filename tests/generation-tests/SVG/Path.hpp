@@ -22,10 +22,10 @@ public:
 	Path();
 	virtual ~Path();
 
-	typedef int pathLength_t;
-	typedef int d_t;
-	typedef int markerEnd_t;
-	typedef int markerStart_t;
+	typedef ::PrimitiveTypes::Double pathLength_t;
+	typedef ::PrimitiveTypes::String d_t;
+	typedef ::PrimitiveTypes::String markerEnd_t;
+	typedef ::PrimitiveTypes::String markerStart_t;
 
 	
 	void setPathLength(pathLength_t _pathLength);
@@ -37,13 +37,14 @@ public:
 	void setMarkerStart(markerStart_t _markerStart);
 	markerStart_t getMarkerStart() const;
 
-	
-protected:
 
 	pathLength_t m_pathLength;
 	d_t m_d;
 	markerEnd_t m_markerEnd;
 	markerStart_t m_markerStart;
+
+		
+protected:
 
 };
 

@@ -24,18 +24,19 @@ public:
 	UnaryOperation();
 	virtual ~UnaryOperation();
 
-	typedef std::unique_ptr < xpand3::Identifier > operator_t;
+	typedef xpand3::Identifier_ptr operator_t;
 	typedef xpand3::expression::AbstractExpression_ptr operand_t;
 
 	
-	// TODO
-	// TODO
+	operator_t getOperator() const;
+	operand_t getOperand() const;
 
-	
+
+	std::unique_ptr < xpand3::Identifier > m_operator;
+	xpand3::expression::AbstractExpression_ptr m_operand;
+
+		
 protected:
-
-	operator_t m_operator;
-	operand_t m_operand;
 
 };
 

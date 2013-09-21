@@ -17,7 +17,7 @@ void Keyword::setValue(value_t _value)
 	m_value = _value;;
 }
 
-value_t Keyword::getValue() const
+Keyword::value_t Keyword::getValue() const
 {
 	return m_value;
 }

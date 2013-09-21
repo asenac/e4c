@@ -19,4 +19,7 @@
 #include <kdm/structure/ArchitectureView.hpp>
 #include <kdm/structure/StructureElement.hpp>
 
+#include <kdm/structure/StructureFactory.hpp>
+#include <kdm/structure/StructurePackage.hpp>
+
 #endif // EMF_CPP_KDM_STRUCTURE_INC_HPP

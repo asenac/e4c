@@ -15,5 +15,15 @@ File::~File()
 {
 }
 
+File::imports_t File::getImports() const
+{
+	return e4c::returned(m_imports);
+}
+
+File::declarations_t File::getDeclarations() const
+{
+	return e4c::returned(m_declarations);
+}
+
 
 

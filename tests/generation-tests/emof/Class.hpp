@@ -22,25 +22,26 @@ public:
 	Class();
 	virtual ~Class();
 
-	typedef int isAbstract_t;
-	typedef boost::ptr_set < emof::Property > ownedAttribute_t;
-	typedef boost::ptr_set < emof::Operation > ownedOperation_t;
-	typedef std::vector < emof::Class_ptr > superClass_t;
+	typedef ::emof::Boolean isAbstract_t;
+	typedef std::set < emof::Property_ptr > ownedAttribute_t;
+	typedef std::set < emof::Operation_ptr > ownedOperation_t;
+	typedef std::set < emof::Class_ptr > superClass_t;
 
 	
 	void setIsAbstract(isAbstract_t _isAbstract);
 	isAbstract_t getIsAbstract() const;
-	// TODO
-	// TODO
-	// TODO
+	ownedAttribute_t getOwnedAttribute() const;
+	ownedOperation_t getOwnedOperation() const;
+	superClass_t getSuperClass() const;
 
-	
-protected:
 
 	isAbstract_t m_isAbstract;
-	ownedAttribute_t m_ownedAttribute;
-	ownedOperation_t m_ownedOperation;
-	superClass_t m_superClass;
+	std::set < std::unique_ptr < emof::Property > > m_ownedAttribute;
+	std::set < std::unique_ptr < emof::Operation > > m_ownedOperation;
+	std::set < emof::Class_ptr > m_superClass;
+
+		
+protected:
 
 };
 

@@ -17,7 +17,7 @@ void PlatformEvent::setKind(kind_t _kind)
 	m_kind = _kind;;
 }
 
-kind_t PlatformEvent::getKind() const
+PlatformEvent::kind_t PlatformEvent::getKind() const
 {
 	return m_kind;
 }

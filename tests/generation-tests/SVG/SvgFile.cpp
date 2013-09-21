@@ -15,5 +15,15 @@ SvgFile::~SvgFile()
 {
 }
 
+SvgFile::tag_t SvgFile::getTag() const
+{
+	return e4c::returned(m_tag);
+}
+
+SvgFile::elements_t SvgFile::getElements() const
+{
+	return e4c::returned(m_elements);
+}
+
 
 

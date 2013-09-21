@@ -9,7 +9,33 @@ using namespace myDsl;
 MyDslPackage::MyDslPackage()
 {
 	m_eFactoryInstance = MyDslFactory::_instance();
-	::ecore::EcoreFactor_ptr ecoreFactory = ::ecore::EcoreFactory::_instance();
+	::ecore::EcoreFactory_ptr ecoreFactory = ::ecore::EcoreFactory::_instance();
+	
+	::ecore::EClass_ptr Model_ = ecoreFactory->createEClass();
+	Model_->setName("Model");
+	// m_eClassifiers.push_back(Model_);
+	::ecore::EClass_ptr Import_ = ecoreFactory->createEClass();
+	Import_->setName("Import");
+	// m_eClassifiers.push_back(Import_);
+	::ecore::EClass_ptr Type_ = ecoreFactory->createEClass();
+	Type_->setName("Type");
+	// m_eClassifiers.push_back(Type_);
+	::ecore::EClass_ptr SimpleType_ = ecoreFactory->createEClass();
+	SimpleType_->setName("SimpleType");
+	// m_eClassifiers.push_back(SimpleType_);
+	::ecore::EClass_ptr Entity_ = ecoreFactory->createEClass();
+	Entity_->setName("Entity");
+	// m_eClassifiers.push_back(Entity_);
+	::ecore::EClass_ptr Property_ = ecoreFactory->createEClass();
+	Property_->setName("Property");
+	// m_eClassifiers.push_back(Property_);
+	
+	
+	// SimpleType_->addESuperType(Type_);
+	// Entity_->addESuperType(Type_);
+	
+	
+	
 	
 }
 

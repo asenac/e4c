@@ -9,7 +9,105 @@ using namespace xpand3::expression;
 ExpressionPackage::ExpressionPackage()
 {
 	m_eFactoryInstance = ExpressionFactory::_instance();
-	::ecore::EcoreFactor_ptr ecoreFactory = ::ecore::EcoreFactory::_instance();
+	::ecore::EcoreFactory_ptr ecoreFactory = ::ecore::EcoreFactory::_instance();
+	
+	::ecore::EClass_ptr AbstractExpression_ = ecoreFactory->createEClass();
+	AbstractExpression_->setName("AbstractExpression");
+	// m_eClassifiers.push_back(AbstractExpression_);
+	::ecore::EClass_ptr BooleanOperation_ = ecoreFactory->createEClass();
+	BooleanOperation_->setName("BooleanOperation");
+	// m_eClassifiers.push_back(BooleanOperation_);
+	::ecore::EClass_ptr Cast_ = ecoreFactory->createEClass();
+	Cast_->setName("Cast");
+	// m_eClassifiers.push_back(Cast_);
+	::ecore::EClass_ptr ChainExpression_ = ecoreFactory->createEClass();
+	ChainExpression_->setName("ChainExpression");
+	// m_eClassifiers.push_back(ChainExpression_);
+	::ecore::EClass_ptr ConstructorCallExpression_ = ecoreFactory->createEClass();
+	ConstructorCallExpression_->setName("ConstructorCallExpression");
+	// m_eClassifiers.push_back(ConstructorCallExpression_);
+	::ecore::EClass_ptr FeatureCall_ = ecoreFactory->createEClass();
+	FeatureCall_->setName("FeatureCall");
+	// m_eClassifiers.push_back(FeatureCall_);
+	::ecore::EClass_ptr CollectionExpression_ = ecoreFactory->createEClass();
+	CollectionExpression_->setName("CollectionExpression");
+	// m_eClassifiers.push_back(CollectionExpression_);
+	::ecore::EClass_ptr OperationCall_ = ecoreFactory->createEClass();
+	OperationCall_->setName("OperationCall");
+	// m_eClassifiers.push_back(OperationCall_);
+	::ecore::EClass_ptr TypeSelectExpression_ = ecoreFactory->createEClass();
+	TypeSelectExpression_->setName("TypeSelectExpression");
+	// m_eClassifiers.push_back(TypeSelectExpression_);
+	::ecore::EClass_ptr GlobalVarExpression_ = ecoreFactory->createEClass();
+	GlobalVarExpression_->setName("GlobalVarExpression");
+	// m_eClassifiers.push_back(GlobalVarExpression_);
+	::ecore::EClass_ptr IfExpression_ = ecoreFactory->createEClass();
+	IfExpression_->setName("IfExpression");
+	// m_eClassifiers.push_back(IfExpression_);
+	::ecore::EClass_ptr LetExpression_ = ecoreFactory->createEClass();
+	LetExpression_->setName("LetExpression");
+	// m_eClassifiers.push_back(LetExpression_);
+	::ecore::EClass_ptr ListLiteral_ = ecoreFactory->createEClass();
+	ListLiteral_->setName("ListLiteral");
+	// m_eClassifiers.push_back(ListLiteral_);
+	::ecore::EClass_ptr Literal_ = ecoreFactory->createEClass();
+	Literal_->setName("Literal");
+	// m_eClassifiers.push_back(Literal_);
+	::ecore::EClass_ptr BooleanLiteral_ = ecoreFactory->createEClass();
+	BooleanLiteral_->setName("BooleanLiteral");
+	// m_eClassifiers.push_back(BooleanLiteral_);
+	::ecore::EClass_ptr IntegerLiteral_ = ecoreFactory->createEClass();
+	IntegerLiteral_->setName("IntegerLiteral");
+	// m_eClassifiers.push_back(IntegerLiteral_);
+	::ecore::EClass_ptr NullLiteral_ = ecoreFactory->createEClass();
+	NullLiteral_->setName("NullLiteral");
+	// m_eClassifiers.push_back(NullLiteral_);
+	::ecore::EClass_ptr RealLiteral_ = ecoreFactory->createEClass();
+	RealLiteral_->setName("RealLiteral");
+	// m_eClassifiers.push_back(RealLiteral_);
+	::ecore::EClass_ptr StringLiteral_ = ecoreFactory->createEClass();
+	StringLiteral_->setName("StringLiteral");
+	// m_eClassifiers.push_back(StringLiteral_);
+	::ecore::EClass_ptr SwitchExpression_ = ecoreFactory->createEClass();
+	SwitchExpression_->setName("SwitchExpression");
+	// m_eClassifiers.push_back(SwitchExpression_);
+	::ecore::EClass_ptr Case_ = ecoreFactory->createEClass();
+	Case_->setName("Case");
+	// m_eClassifiers.push_back(Case_);
+	::ecore::EClass_ptr BinaryOperation_ = ecoreFactory->createEClass();
+	BinaryOperation_->setName("BinaryOperation");
+	// m_eClassifiers.push_back(BinaryOperation_);
+	::ecore::EClass_ptr UnaryOperation_ = ecoreFactory->createEClass();
+	UnaryOperation_->setName("UnaryOperation");
+	// m_eClassifiers.push_back(UnaryOperation_);
+	
+	
+	// AbstractExpression_->addESuperType(SyntaxElement_);
+	// BooleanOperation_->addESuperType(BinaryOperation_);
+	// Cast_->addESuperType(AbstractExpression_);
+	// ChainExpression_->addESuperType(AbstractExpression_);
+	// ConstructorCallExpression_->addESuperType(AbstractExpression_);
+	// FeatureCall_->addESuperType(AbstractExpression_);
+	// CollectionExpression_->addESuperType(FeatureCall_);
+	// OperationCall_->addESuperType(FeatureCall_);
+	// TypeSelectExpression_->addESuperType(FeatureCall_);
+	// GlobalVarExpression_->addESuperType(AbstractExpression_);
+	// IfExpression_->addESuperType(AbstractExpression_);
+	// LetExpression_->addESuperType(AbstractExpression_);
+	// ListLiteral_->addESuperType(AbstractExpression_);
+	// Literal_->addESuperType(AbstractExpression_);
+	// BooleanLiteral_->addESuperType(Literal_);
+	// IntegerLiteral_->addESuperType(Literal_);
+	// NullLiteral_->addESuperType(Literal_);
+	// RealLiteral_->addESuperType(Literal_);
+	// StringLiteral_->addESuperType(Literal_);
+	// SwitchExpression_->addESuperType(AbstractExpression_);
+	// Case_->addESuperType(SyntaxElement_);
+	// BinaryOperation_->addESuperType(AbstractExpression_);
+	// UnaryOperation_->addESuperType(AbstractExpression_);
+	
+	
+	
 	
 }
 

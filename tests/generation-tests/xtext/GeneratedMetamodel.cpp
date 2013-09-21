@@ -17,7 +17,7 @@ void GeneratedMetamodel::setName(name_t _name)
 	m_name = _name;;
 }
 
-name_t GeneratedMetamodel::getName() const
+GeneratedMetamodel::name_t GeneratedMetamodel::getName() const
 {
 	return m_name;
 }

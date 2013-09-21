@@ -15,5 +15,15 @@ CrossReference::~CrossReference()
 {
 }
 
+CrossReference::type_t CrossReference::getType() const
+{
+	return e4c::returned(m_type);
+}
+
+CrossReference::terminal_t CrossReference::getTerminal() const
+{
+	return e4c::returned(m_terminal);
+}
+
 
 

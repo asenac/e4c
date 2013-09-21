@@ -24,23 +24,24 @@ public:
 	SourceRef();
 	virtual ~SourceRef();
 
-	typedef boost::ptr_set < kdm::source::SourceRegion > region_t;
-	typedef int language_t;
-	typedef int snippet_t;
+	typedef std::set < kdm::source::SourceRegion_ptr > region_t;
+	typedef ::kdm::core::String language_t;
+	typedef ::kdm::core::String snippet_t;
 
 	
-	// TODO
+	region_t getRegion() const;
 	void setLanguage(language_t _language);
 	language_t getLanguage() const;
 	void setSnippet(snippet_t _snippet);
 	snippet_t getSnippet() const;
 
-	
-protected:
 
-	region_t m_region;
+	std::set < std::unique_ptr < kdm::source::SourceRegion > > m_region;
 	language_t m_language;
 	snippet_t m_snippet;
+
+		
+protected:
 
 };
 

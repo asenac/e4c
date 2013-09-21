@@ -14,12 +14,17 @@ ExtensionFamily::~ExtensionFamily()
 {
 }
 
+ExtensionFamily::stereotype_t ExtensionFamily::getStereotype() const
+{
+	return e4c::returned(m_stereotype);
+}
+
 void ExtensionFamily::setName(name_t _name)
 {
 	m_name = _name;;
 }
 
-name_t ExtensionFamily::getName() const
+ExtensionFamily::name_t ExtensionFamily::getName() const
 {
 	return m_name;
 }

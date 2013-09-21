@@ -17,7 +17,7 @@ void Directory::setPath(path_t _path)
 	m_path = _path;;
 }
 
-path_t Directory::getPath() const
+Directory::path_t Directory::getPath() const
 {
 	return m_path;
 }

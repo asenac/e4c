@@ -26,14 +26,15 @@ public:
 	typedef C::CSourceText_ptr source_t;
 
 	
-	// TODO
-	// TODO
+	type_t getType() const;
+	source_t getSource() const;
 
-	
+
+	C::CClassifier_ptr m_type;
+	C::CSourceText_ptr m_source;
+
+		
 protected:
-
-	type_t m_type;
-	source_t m_source;
 
 };
 

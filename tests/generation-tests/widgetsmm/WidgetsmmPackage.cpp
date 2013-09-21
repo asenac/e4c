@@ -9,7 +9,27 @@ using namespace widgetsmm;
 WidgetsmmPackage::WidgetsmmPackage()
 {
 	m_eFactoryInstance = WidgetsmmFactory::_instance();
-	::ecore::EcoreFactor_ptr ecoreFactory = ::ecore::EcoreFactory::_instance();
+	::ecore::EcoreFactory_ptr ecoreFactory = ::ecore::EcoreFactory::_instance();
+	
+	::ecore::EClass_ptr Widget_ = ecoreFactory->createEClass();
+	Widget_->setName("Widget");
+	// m_eClassifiers.push_back(Widget_);
+	::ecore::EClass_ptr ComboBox_ = ecoreFactory->createEClass();
+	ComboBox_->setName("ComboBox");
+	// m_eClassifiers.push_back(ComboBox_);
+	::ecore::EClass_ptr Window_ = ecoreFactory->createEClass();
+	Window_->setName("Window");
+	// m_eClassifiers.push_back(Window_);
+	::ecore::EClass_ptr Property_ = ecoreFactory->createEClass();
+	Property_->setName("Property");
+	// m_eClassifiers.push_back(Property_);
+	
+	
+	// ComboBox_->addESuperType(Widget_);
+	// Window_->addESuperType(Widget_);
+	
+	
+	
 	
 }
 

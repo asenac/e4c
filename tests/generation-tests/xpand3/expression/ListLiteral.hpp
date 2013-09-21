@@ -24,15 +24,16 @@ public:
 	ListLiteral();
 	virtual ~ListLiteral();
 
-	typedef boost::ptr_vector < xpand3::expression::AbstractExpression > elements_t;
+	typedef std::vector < xpand3::expression::AbstractExpression_ptr > elements_t;
 
 	
-	// TODO
+	elements_t getElements() const;
 
-	
+
+	std::vector < std::unique_ptr < xpand3::expression::AbstractExpression > > m_elements;
+
+		
 protected:
-
-	elements_t m_elements;
 
 };
 

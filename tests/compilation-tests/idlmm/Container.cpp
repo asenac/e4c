@@ -13,5 +13,17 @@ Container::~Container()
 {
 }
 
+Container::contains_t Container::getContains() const
+{
+	return e4c::returned(m_contains);
+}
+
+void Container::addContains(idlmm::Contained_ptr contains_)
+{
+	contains_->setDefinedIn(this);
+	m_contains.push_back(std::unique_ptr < idlmm::Contained >(contains_));
+}
+
+
 
 

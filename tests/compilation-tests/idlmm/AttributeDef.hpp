@@ -23,23 +23,26 @@ public:
 	AttributeDef();
 	virtual ~AttributeDef();
 
-	typedef std::set < idlmm::ExceptionDef_ptr > getRaises_t;
-	typedef std::set < idlmm::ExceptionDef_ptr > setRaises_t;
-	typedef int isReadonly_t;
+	typedef std::vector < idlmm::ExceptionDef_ptr > getRaises_t;
+	typedef std::vector < idlmm::ExceptionDef_ptr > setRaises_t;
+	typedef ::ecore::EBoolean isReadonly_t;
 
 	
-	// TODO
-	// TODO
+	getRaises_t getGetRaises() const;
+	
+	setRaises_t getSetRaises() const;
+	
 	void setIsReadonly(isReadonly_t _isReadonly);
 	isReadonly_t getIsReadonly() const;
 
-	
+		
 protected:
 
-	getRaises_t m_getRaises;
-	setRaises_t m_setRaises;
+	std::vector < idlmm::ExceptionDef_ptr > m_getRaises;
+	std::vector < idlmm::ExceptionDef_ptr > m_setRaises;
 	isReadonly_t m_isReadonly;
 
+	
 };
 
 } // idlmm

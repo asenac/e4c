@@ -22,8 +22,8 @@ public:
 	Scale();
 	virtual ~Scale();
 
-	typedef int sx_t;
-	typedef int sy_t;
+	typedef ::PrimitiveTypes::Double sx_t;
+	typedef ::PrimitiveTypes::Double sy_t;
 
 	
 	void setSx(sx_t _sx);
@@ -31,11 +31,12 @@ public:
 	void setSy(sy_t _sy);
 	sy_t getSy() const;
 
-	
-protected:
 
 	sx_t m_sx;
 	sy_t m_sy;
+
+		
+protected:
 
 };
 

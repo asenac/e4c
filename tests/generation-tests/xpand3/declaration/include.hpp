@@ -21,4 +21,7 @@
 #include <xpand3/declaration/CreateExtension.hpp>
 #include <xpand3/declaration/JavaExtension.hpp>
 
+#include <xpand3/declaration/DeclarationFactory.hpp>
+#include <xpand3/declaration/DeclarationPackage.hpp>
+
 #endif // EMF_CPP_XPAND3_DECLARATION_INC_HPP

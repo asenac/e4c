@@ -13,5 +13,10 @@ ExtendedValue::~ExtendedValue()
 {
 }
 
+ExtendedValue::tag_t ExtendedValue::getTag() const
+{
+	return e4c::returned(m_tag);
+}
+
 
 

@@ -24,8 +24,8 @@ public:
 	Attribute();
 	virtual ~Attribute();
 
-	typedef int tag_t;
-	typedef int value_t;
+	typedef ::kdm::core::String tag_t;
+	typedef ::kdm::core::String value_t;
 
 	
 	void setTag(tag_t _tag);
@@ -33,11 +33,12 @@ public:
 	void setValue(value_t _value);
 	value_t getValue() const;
 
-	
-protected:
 
 	tag_t m_tag;
 	value_t m_value;
+
+		
+protected:
 
 };
 

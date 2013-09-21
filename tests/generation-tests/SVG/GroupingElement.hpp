@@ -21,16 +21,17 @@ public:
 	
 	virtual ~GroupingElement();
 
-	typedef boost::ptr_vector < SVG::Element > groupContent_t;
+	typedef std::vector < SVG::Element_ptr > groupContent_t;
 
 	
-	// TODO
+	groupContent_t getGroupContent() const;
 
-	
+
+	std::vector < std::unique_ptr < SVG::Element > > m_groupContent;
+
+		
 protected:
 	GroupingElement();
-
-	groupContent_t m_groupContent;
 
 };
 

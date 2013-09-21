@@ -6,7 +6,7 @@ using namespace idlmm;
 
 IdlmmFactory::IdlmmFactory()
 {
-	m_ePackage = IdlmmPackage::_instance();
+	// m_ePackage = IdlmmPackage::_instance();
 	// std::bind(&IdlmmFactory::createInterfaceDef, this);
 	// m_ePackage->getTag_InterfaceDef();
 	// std::bind(&IdlmmFactory::createModuleDef, this);

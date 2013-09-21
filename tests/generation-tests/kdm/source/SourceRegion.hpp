@@ -25,15 +25,15 @@ public:
 	virtual ~SourceRegion();
 
 	typedef kdm::source::SourceFile_ptr file_t;
-	typedef int startLine_t;
-	typedef int startPosition_t;
-	typedef int endLine_t;
-	typedef int endPosition_t;
-	typedef int language_t;
-	typedef int path_t;
+	typedef ::kdm::core::Integer startLine_t;
+	typedef ::kdm::core::Integer startPosition_t;
+	typedef ::kdm::core::Integer endLine_t;
+	typedef ::kdm::core::Integer endPosition_t;
+	typedef ::kdm::core::String language_t;
+	typedef ::kdm::core::String path_t;
 
 	
-	// TODO
+	file_t getFile() const;
 	void setStartLine(startLine_t _startLine);
 	startLine_t getStartLine() const;
 	void setStartPosition(startPosition_t _startPosition);
@@ -47,16 +47,17 @@ public:
 	void setPath(path_t _path);
 	path_t getPath() const;
 
-	
-protected:
 
-	file_t m_file;
+	kdm::source::SourceFile_ptr m_file;
 	startLine_t m_startLine;
 	startPosition_t m_startPosition;
 	endLine_t m_endLine;
 	endPosition_t m_endPosition;
 	language_t m_language;
 	path_t m_path;
+
+		
+protected:
 
 };
 

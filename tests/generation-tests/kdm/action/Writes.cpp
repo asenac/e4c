@@ -15,5 +15,15 @@ Writes::~Writes()
 {
 }
 
+Writes::to_t Writes::getTo() const
+{
+	return e4c::returned(m_to);
+}
+
+Writes::from_t Writes::getFrom() const
+{
+	return e4c::returned(m_from);
+}
+
 
 

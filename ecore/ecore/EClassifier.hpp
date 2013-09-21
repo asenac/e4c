@@ -21,12 +21,12 @@ public:
 	
 	virtual ~EClassifier();
 
-	typedef int instanceClassName_t;
-	typedef int instanceClass_t;
-	typedef int defaultValue_t;
-	typedef int instanceTypeName_t;
+	typedef ::ecore::EString instanceClassName_t;
+	typedef ::ecore::EJavaClass instanceClass_t;
+	typedef ::ecore::EJavaObject defaultValue_t;
+	typedef ::ecore::EString instanceTypeName_t;
 	typedef ecore::EPackage_ptr ePackage_t;
-	typedef boost::ptr_vector < ecore::ETypeParameter > eTypeParameters_t;
+	typedef std::vector < ecore::ETypeParameter_ptr > eTypeParameters_t;
 
 	
 	void setInstanceClassName(instanceClassName_t _instanceClassName);
@@ -37,10 +37,11 @@ public:
 	defaultValue_t getDefaultValue() const;
 	void setInstanceTypeName(instanceTypeName_t _instanceTypeName);
 	instanceTypeName_t getInstanceTypeName() const;
-	// TODO
-	// TODO
+	ePackage_t getEPackage() const;
+	eTypeParameters_t getETypeParameters() const;
+	void addETypeParameters(ecore::ETypeParameter_ptr eTypeParameters_);
 
-	
+		
 protected:
 	EClassifier();
 
@@ -48,9 +49,12 @@ protected:
 	instanceClass_t m_instanceClass;
 	defaultValue_t m_defaultValue;
 	instanceTypeName_t m_instanceTypeName;
-	ePackage_t m_ePackage;
-	eTypeParameters_t m_eTypeParameters;
+	ecore::EPackage_ptr m_ePackage;
+	std::vector < std::unique_ptr < ecore::ETypeParameter > > m_eTypeParameters;
 
+	
+	friend class ::ecore::EPackage;
+	void setEPackage(ePackage_t ePackage_);
 };
 
 } // ecore

@@ -21,17 +21,19 @@ public:
 	
 	virtual ~EModelElement();
 
-	typedef boost::ptr_vector < ecore::EAnnotation > eAnnotations_t;
+	typedef std::vector < ecore::EAnnotation_ptr > eAnnotations_t;
 
 	
-	// TODO
+	eAnnotations_t getEAnnotations() const;
+	void addEAnnotations(ecore::EAnnotation_ptr eAnnotations_);
 
-	
+		
 protected:
 	EModelElement();
 
-	eAnnotations_t m_eAnnotations;
+	std::vector < std::unique_ptr < ecore::EAnnotation > > m_eAnnotations;
 
+	
 };
 
 } // ecore

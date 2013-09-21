@@ -22,32 +22,33 @@ public:
 	Grammar();
 	virtual ~Grammar();
 
-	typedef int name_t;
-	typedef std::set < xtext::Grammar_ptr > usedGrammars_t;
-	typedef int definesHiddenTokens_t;
-	typedef std::set < xtext::AbstractRule_ptr > hiddenTokens_t;
-	typedef boost::ptr_vector < xtext::AbstractMetamodelDeclaration > metamodelDeclarations_t;
-	typedef boost::ptr_vector < xtext::AbstractRule > rules_t;
+	typedef ::ecore::EString name_t;
+	typedef std::vector < xtext::Grammar_ptr > usedGrammars_t;
+	typedef ::ecore::EBoolean definesHiddenTokens_t;
+	typedef std::vector < xtext::AbstractRule_ptr > hiddenTokens_t;
+	typedef std::vector < xtext::AbstractMetamodelDeclaration_ptr > metamodelDeclarations_t;
+	typedef std::vector < xtext::AbstractRule_ptr > rules_t;
 
 	
 	void setName(name_t _name);
 	name_t getName() const;
-	// TODO
+	usedGrammars_t getUsedGrammars() const;
 	void setDefinesHiddenTokens(definesHiddenTokens_t _definesHiddenTokens);
 	definesHiddenTokens_t getDefinesHiddenTokens() const;
-	// TODO
-	// TODO
-	// TODO
+	hiddenTokens_t getHiddenTokens() const;
+	metamodelDeclarations_t getMetamodelDeclarations() const;
+	rules_t getRules() const;
 
-	
-protected:
 
 	name_t m_name;
-	usedGrammars_t m_usedGrammars;
+	std::vector < xtext::Grammar_ptr > m_usedGrammars;
 	definesHiddenTokens_t m_definesHiddenTokens;
-	hiddenTokens_t m_hiddenTokens;
-	metamodelDeclarations_t m_metamodelDeclarations;
-	rules_t m_rules;
+	std::vector < xtext::AbstractRule_ptr > m_hiddenTokens;
+	std::vector < std::unique_ptr < xtext::AbstractMetamodelDeclaration > > m_metamodelDeclarations;
+	std::vector < std::unique_ptr < xtext::AbstractRule > > m_rules;
+
+		
+protected:
 
 };
 

@@ -22,16 +22,17 @@ public:
 	Tspan();
 	virtual ~Tspan();
 
-	typedef int content_t;
+	typedef ::PrimitiveTypes::String content_t;
 
 	
 	void setContent(content_t _content);
 	content_t getContent() const;
 
-	
-protected:
 
 	content_t m_content;
+
+		
+protected:
 
 };
 

@@ -19,10 +19,21 @@ void Include::setImportURI(importURI_t _importURI)
 	m_importURI = _importURI;;
 }
 
-importURI_t Include::getImportURI() const
+Include::importURI_t Include::getImportURI() const
 {
 	return m_importURI;
 }
+
+Include::translationUnit_t Include::getTranslationUnit() const
+{
+	return e4c::returned(m_translationUnit);
+}
+
+void Include::setTranslationUnit(translationUnit_t translationUnit_)
+{
+	m_translationUnit = translationUnit_;
+}
+
 
 
 

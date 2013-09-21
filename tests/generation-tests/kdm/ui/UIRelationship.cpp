@@ -15,5 +15,15 @@ UIRelationship::~UIRelationship()
 {
 }
 
+UIRelationship::to_t UIRelationship::getTo() const
+{
+	return e4c::returned(m_to);
+}
+
+UIRelationship::from_t UIRelationship::getFrom() const
+{
+	return e4c::returned(m_from);
+}
+
 
 

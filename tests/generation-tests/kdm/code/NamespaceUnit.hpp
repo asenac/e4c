@@ -24,15 +24,16 @@ public:
 	NamespaceUnit();
 	virtual ~NamespaceUnit();
 
-	typedef std::vector < kdm::code::CodeItem_ptr > groupedCode_t;
+	typedef std::set < kdm::code::CodeItem_ptr > groupedCode_t;
 
 	
-	// TODO
+	groupedCode_t getGroupedCode() const;
 
-	
+
+	std::set < kdm::code::CodeItem_ptr > m_groupedCode;
+
+		
 protected:
-
-	groupedCode_t m_groupedCode;
 
 };
 

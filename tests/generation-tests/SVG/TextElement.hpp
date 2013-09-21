@@ -21,9 +21,9 @@ public:
 	
 	virtual ~TextElement();
 
-	typedef int rotate_t;
-	typedef int textLength_t;
-	typedef int fontSize_t;
+	typedef ::PrimitiveTypes::Double rotate_t;
+	typedef ::PrimitiveTypes::String textLength_t;
+	typedef ::PrimitiveTypes::String fontSize_t;
 
 	
 	void setRotate(rotate_t _rotate);
@@ -33,13 +33,14 @@ public:
 	void setFontSize(fontSize_t _fontSize);
 	fontSize_t getFontSize() const;
 
-	
-protected:
-	TextElement();
 
 	rotate_t m_rotate;
 	textLength_t m_textLength;
 	fontSize_t m_fontSize;
+
+		
+protected:
+	TextElement();
 
 };
 

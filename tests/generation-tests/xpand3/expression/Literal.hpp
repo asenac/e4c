@@ -23,16 +23,17 @@ public:
 	
 	virtual ~Literal();
 
-	typedef std::unique_ptr < xpand3::Identifier > literalValue_t;
+	typedef xpand3::Identifier_ptr literalValue_t;
 
 	
-	// TODO
+	literalValue_t getLiteralValue() const;
 
-	
+
+	std::unique_ptr < xpand3::Identifier > m_literalValue;
+
+		
 protected:
 	Literal();
-
-	literalValue_t m_literalValue;
 
 };
 

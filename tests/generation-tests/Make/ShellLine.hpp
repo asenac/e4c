@@ -22,8 +22,8 @@ public:
 	ShellLine();
 	virtual ~ShellLine();
 
-	typedef int command_t;
-	typedef int display_t;
+	typedef ::PrimitiveTypes::String command_t;
+	typedef ::PrimitiveTypes::Boolean display_t;
 	typedef Make::Rule_ptr ruleShellLine_t;
 
 	
@@ -31,14 +31,15 @@ public:
 	command_t getCommand() const;
 	void setDisplay(display_t _display);
 	display_t getDisplay() const;
-	// TODO
+	ruleShellLine_t getRuleShellLine() const;
 
-	
-protected:
 
 	command_t m_command;
 	display_t m_display;
-	ruleShellLine_t m_ruleShellLine;
+	Make::Rule_ptr m_ruleShellLine;
+
+		
+protected:
 
 };
 

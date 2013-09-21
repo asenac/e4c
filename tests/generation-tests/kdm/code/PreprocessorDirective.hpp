@@ -24,15 +24,16 @@ public:
 	PreprocessorDirective();
 	virtual ~PreprocessorDirective();
 
-	typedef boost::ptr_set < kdm::code::AbstractCodeElement > codeElement_t;
+	typedef std::set < kdm::code::AbstractCodeElement_ptr > codeElement_t;
 
 	
-	// TODO
+	codeElement_t getCodeElement() const;
 
-	
+
+	std::set < std::unique_ptr < kdm::code::AbstractCodeElement > > m_codeElement;
+
+		
 protected:
-
-	codeElement_t m_codeElement;
 
 };
 

@@ -17,5 +17,20 @@ AbstractCodeElement::~AbstractCodeElement()
 {
 }
 
+AbstractCodeElement::source_t AbstractCodeElement::getSource() const
+{
+	return e4c::returned(m_source);
+}
+
+AbstractCodeElement::comment_t AbstractCodeElement::getComment() const
+{
+	return e4c::returned(m_comment);
+}
+
+AbstractCodeElement::codeRelation_t AbstractCodeElement::getCodeRelation() const
+{
+	return e4c::returned(m_codeRelation);
+}
+
 
 

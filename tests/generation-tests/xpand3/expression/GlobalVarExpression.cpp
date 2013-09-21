@@ -13,5 +13,10 @@ GlobalVarExpression::~GlobalVarExpression()
 {
 }
 
+GlobalVarExpression::globalVarName_t GlobalVarExpression::getGlobalVarName() const
+{
+	return e4c::returned(m_globalVarName);
+}
+
 
 

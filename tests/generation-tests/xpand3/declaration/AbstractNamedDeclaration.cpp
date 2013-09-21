@@ -13,5 +13,10 @@ AbstractNamedDeclaration::~AbstractNamedDeclaration()
 {
 }
 
+AbstractNamedDeclaration::name_t AbstractNamedDeclaration::getName() const
+{
+	return e4c::returned(m_name);
+}
+
 
 

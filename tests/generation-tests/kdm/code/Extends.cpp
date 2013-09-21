@@ -14,5 +14,15 @@ Extends::~Extends()
 {
 }
 
+Extends::to_t Extends::getTo() const
+{
+	return e4c::returned(m_to);
+}
+
+Extends::from_t Extends::getFrom() const
+{
+	return e4c::returned(m_from);
+}
+
 
 

@@ -16,5 +16,20 @@ BinaryOperation::~BinaryOperation()
 {
 }
 
+BinaryOperation::left_t BinaryOperation::getLeft() const
+{
+	return e4c::returned(m_left);
+}
+
+BinaryOperation::right_t BinaryOperation::getRight() const
+{
+	return e4c::returned(m_right);
+}
+
+BinaryOperation::operator_t BinaryOperation::getOperator() const
+{
+	return e4c::returned(m_operator);
+}
+
 
 

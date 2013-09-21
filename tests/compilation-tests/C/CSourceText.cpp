@@ -18,7 +18,7 @@ void CSourceText::setSource(source_t _source)
 	m_source = _source;;
 }
 
-source_t CSourceText::getSource() const
+CSourceText::source_t CSourceText::getSource() const
 {
 	return m_source;
 }
@@ -28,7 +28,7 @@ void CSourceText::setFileName(fileName_t _fileName)
 	m_fileName = _fileName;;
 }
 
-fileName_t CSourceText::getFileName() const
+CSourceText::fileName_t CSourceText::getFileName() const
 {
 	return m_fileName;
 }

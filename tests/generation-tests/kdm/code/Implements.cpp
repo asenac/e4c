@@ -14,5 +14,15 @@ Implements::~Implements()
 {
 }
 
+Implements::to_t Implements::getTo() const
+{
+	return e4c::returned(m_to);
+}
+
+Implements::from_t Implements::getFrom() const
+{
+	return e4c::returned(m_from);
+}
+
 
 

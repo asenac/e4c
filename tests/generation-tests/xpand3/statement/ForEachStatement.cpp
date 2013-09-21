@@ -17,5 +17,25 @@ ForEachStatement::~ForEachStatement()
 {
 }
 
+ForEachStatement::target_t ForEachStatement::getTarget() const
+{
+	return e4c::returned(m_target);
+}
+
+ForEachStatement::separator_t ForEachStatement::getSeparator() const
+{
+	return e4c::returned(m_separator);
+}
+
+ForEachStatement::variable_t ForEachStatement::getVariable() const
+{
+	return e4c::returned(m_variable);
+}
+
+ForEachStatement::iteratorName_t ForEachStatement::getIteratorName() const
+{
+	return e4c::returned(m_iteratorName);
+}
+
 
 

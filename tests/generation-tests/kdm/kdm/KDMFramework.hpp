@@ -23,23 +23,24 @@ public:
 	
 	virtual ~KDMFramework();
 
-	typedef boost::ptr_set < kdm::kdm::Audit > audit_t;
-	typedef boost::ptr_set < kdm::kdm::ExtensionFamily > extensionFamily_t;
-	typedef int name_t;
+	typedef std::set < kdm::kdm::Audit_ptr > audit_t;
+	typedef std::set < kdm::kdm::ExtensionFamily_ptr > extensionFamily_t;
+	typedef ::kdm::core::String name_t;
 
 	
-	// TODO
-	// TODO
+	audit_t getAudit() const;
+	extensionFamily_t getExtensionFamily() const;
 	void setName(name_t _name);
 	name_t getName() const;
 
-	
+
+	std::set < std::unique_ptr < kdm::kdm::Audit > > m_audit;
+	std::set < std::unique_ptr < kdm::kdm::ExtensionFamily > > m_extensionFamily;
+	name_t m_name;
+
+		
 protected:
 	KDMFramework();
-
-	audit_t m_audit;
-	extensionFamily_t m_extensionFamily;
-	name_t m_name;
 
 };
 

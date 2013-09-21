@@ -13,5 +13,10 @@ DeployedComponent::~DeployedComponent()
 {
 }
 
+DeployedComponent::groupedCode_t DeployedComponent::getGroupedCode() const
+{
+	return e4c::returned(m_groupedCode);
+}
+
 
 

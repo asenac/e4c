@@ -13,5 +13,10 @@ EnumerationLiteral::~EnumerationLiteral()
 {
 }
 
+EnumerationLiteral::enumeration_t EnumerationLiteral::getEnumeration() const
+{
+	return e4c::returned(m_enumeration);
+}
+
 
 

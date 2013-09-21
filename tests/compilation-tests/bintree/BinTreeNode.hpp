@@ -23,24 +23,25 @@ public:
 	virtual ~BinTreeNode();
 
 	typedef bintree::BinTreeNode_ptr parent_t;
-	typedef std::unique_ptr < bintree::BinTreeNode > left_t;
-	typedef std::unique_ptr < bintree::BinTreeNode > right_t;
-	typedef int data_t;
+	typedef bintree::BinTreeNode_ptr left_t;
+	typedef bintree::BinTreeNode_ptr right_t;
+	typedef ::ecore::EString data_t;
 
 	
-	// TODO
-	// TODO
-	// TODO
+	parent_t getParent() const;
+	left_t getLeft() const;
+	right_t getRight() const;
 	void setData(data_t _data);
 	data_t getData() const;
 
-	
-protected:
 
-	parent_t m_parent;
-	left_t m_left;
-	right_t m_right;
+	bintree::BinTreeNode_ptr m_parent;
+	std::unique_ptr < bintree::BinTreeNode > m_left;
+	std::unique_ptr < bintree::BinTreeNode > m_right;
 	data_t m_data;
+
+		
+protected:
 
 };
 

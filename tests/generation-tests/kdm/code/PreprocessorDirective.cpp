@@ -13,5 +13,10 @@ PreprocessorDirective::~PreprocessorDirective()
 {
 }
 
+PreprocessorDirective::codeElement_t PreprocessorDirective::getCodeElement() const
+{
+	return e4c::returned(m_codeElement);
+}
+
 
 

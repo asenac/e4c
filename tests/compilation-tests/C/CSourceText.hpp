@@ -22,8 +22,8 @@ public:
 	CSourceText();
 	virtual ~CSourceText();
 
-	typedef int source_t;
-	typedef int fileName_t;
+	typedef ::PrimitiveTypes::String source_t;
+	typedef ::PrimitiveTypes::String fileName_t;
 
 	
 	void setSource(source_t _source);
@@ -31,11 +31,12 @@ public:
 	void setFileName(fileName_t _fileName);
 	fileName_t getFileName() const;
 
-	
-protected:
 
 	source_t m_source;
 	fileName_t m_fileName;
+
+		
+protected:
 
 };
 

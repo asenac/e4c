@@ -22,8 +22,8 @@ public:
 	Property();
 	virtual ~Property();
 
-	typedef int name_t;
-	typedef int value_t;
+	typedef :: name_t;
+	typedef :: value_t;
 
 	
 	void setName(name_t _name);
@@ -31,11 +31,12 @@ public:
 	void setValue(value_t _value);
 	value_t getValue() const;
 
-	
-protected:
 
 	name_t m_name;
 	value_t m_value;
+
+		
+protected:
 
 };
 

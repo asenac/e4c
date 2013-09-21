@@ -17,7 +17,7 @@ void Event::setKind(kind_t _kind)
 	m_kind = _kind;;
 }
 
-kind_t Event::getKind() const
+Event::kind_t Event::getKind() const
 {
 	return m_kind;
 }

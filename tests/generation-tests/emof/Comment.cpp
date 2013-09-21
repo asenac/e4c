@@ -13,5 +13,10 @@ Comment::~Comment()
 {
 }
 
+Comment::annotatedElement_t Comment::getAnnotatedElement() const
+{
+	return e4c::returned(m_annotatedElement);
+}
+
 
 

@@ -14,6 +14,8 @@
 #include <kdm/kdm/fwd.hpp>
 #include <kdm/ui/fwd.hpp>
 
+#include <e4c/mapping.hpp>
+
 namespace kdm
 {
 

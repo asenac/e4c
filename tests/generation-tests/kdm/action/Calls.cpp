@@ -15,5 +15,15 @@ Calls::~Calls()
 {
 }
 
+Calls::to_t Calls::getTo() const
+{
+	return e4c::returned(m_to);
+}
+
+Calls::from_t Calls::getFrom() const
+{
+	return e4c::returned(m_from);
+}
+
 
 

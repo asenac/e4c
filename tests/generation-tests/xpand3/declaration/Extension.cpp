@@ -21,9 +21,19 @@ void Extension::setCached(cached_t _cached)
 	m_cached = _cached;;
 }
 
-cached_t Extension::getCached() const
+Extension::cached_t Extension::getCached() const
 {
 	return m_cached;
+}
+
+Extension::body_t Extension::getBody() const
+{
+	return e4c::returned(m_body);
+}
+
+Extension::returnType_t Extension::getReturnType() const
+{
+	return e4c::returned(m_returnType);
 }
 
 

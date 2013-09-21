@@ -22,15 +22,16 @@ public:
 	Image();
 	virtual ~Image();
 
-	typedef std::vector < SVG::ReferencedFile_ptr > referee_t;
+	typedef std::set < SVG::ReferencedFile_ptr > referee_t;
 
 	
-	// TODO
+	referee_t getReferee() const;
 
-	
+
+	std::set < SVG::ReferencedFile_ptr > m_referee;
+
+		
 protected:
-
-	referee_t m_referee;
 
 };
 

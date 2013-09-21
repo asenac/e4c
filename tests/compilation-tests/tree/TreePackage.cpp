@@ -9,7 +9,24 @@ using namespace tree;
 TreePackage::TreePackage()
 {
 	m_eFactoryInstance = TreeFactory::_instance();
-	::ecore::EcoreFactor_ptr ecoreFactory = ::ecore::EcoreFactory::_instance();
+	::ecore::EcoreFactory_ptr ecoreFactory = ::ecore::EcoreFactory::_instance();
+	
+	::ecore::EClass_ptr TreeNode_ = ecoreFactory->createEClass();
+	TreeNode_->setName("TreeNode");
+	// m_eClassifiers.push_back(TreeNode_);
+	::ecore::EClass_ptr Leaf_ = ecoreFactory->createEClass();
+	Leaf_->setName("Leaf");
+	// m_eClassifiers.push_back(Leaf_);
+	::ecore::EClass_ptr NonTerminal_ = ecoreFactory->createEClass();
+	NonTerminal_->setName("NonTerminal");
+	// m_eClassifiers.push_back(NonTerminal_);
+	
+	
+	// Leaf_->addESuperType(TreeNode_);
+	// NonTerminal_->addESuperType(TreeNode_);
+	
+	
+	
 	
 }
 

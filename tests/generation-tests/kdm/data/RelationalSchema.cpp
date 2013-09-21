@@ -13,5 +13,10 @@ RelationalSchema::~RelationalSchema()
 {
 }
 
+RelationalSchema::codeElement_t RelationalSchema::getCodeElement() const
+{
+	return e4c::returned(m_codeElement);
+}
+
 
 

@@ -25,12 +25,13 @@ public:
 	typedef C::BehavioralFeature_ptr behavioralFeature_t;
 
 	
-	// TODO
+	behavioralFeature_t getBehavioralFeature() const;
 
-	
+
+	C::BehavioralFeature_ptr m_behavioralFeature;
+
+		
 protected:
-
-	behavioralFeature_t m_behavioralFeature;
 
 };
 

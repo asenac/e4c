@@ -22,22 +22,23 @@ public:
 	Makefile();
 	virtual ~Makefile();
 
-	typedef int name_t;
-	typedef std::unique_ptr < Make::Comment > comment_t;
-	typedef boost::ptr_vector < Make::Element > elements_t;
+	typedef ::PrimitiveTypes::String name_t;
+	typedef Make::Comment_ptr comment_t;
+	typedef std::vector < Make::Element_ptr > elements_t;
 
 	
 	void setName(name_t _name);
 	name_t getName() const;
-	// TODO
-	// TODO
+	comment_t getComment() const;
+	elements_t getElements() const;
 
-	
-protected:
 
 	name_t m_name;
-	comment_t m_comment;
-	elements_t m_elements;
+	std::unique_ptr < Make::Comment > m_comment;
+	std::vector < std::unique_ptr < Make::Element > > m_elements;
+
+		
+protected:
 
 };
 

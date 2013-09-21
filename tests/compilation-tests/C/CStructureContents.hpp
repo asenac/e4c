@@ -25,12 +25,13 @@ public:
 	typedef C::CStructured_ptr sc_container_t;
 
 	
-	// TODO
+	sc_container_t getSc_container() const;
 
-	
+
+	C::CStructured_ptr m_sc_container;
+
+		
 protected:
-
-	sc_container_t m_sc_container;
 
 };
 

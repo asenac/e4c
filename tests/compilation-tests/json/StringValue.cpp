@@ -17,7 +17,7 @@ void StringValue::setValue(value_t _value)
 	m_value = _value;;
 }
 
-value_t StringValue::getValue() const
+StringValue::value_t StringValue::getValue() const
 {
 	return m_value;
 }

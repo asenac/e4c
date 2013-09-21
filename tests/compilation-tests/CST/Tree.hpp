@@ -25,10 +25,11 @@ public:
 	
 	
 	
-	
-protected:
 
 	
+		
+protected:
+
 };
 
 } // CST

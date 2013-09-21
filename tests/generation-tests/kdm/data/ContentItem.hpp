@@ -25,17 +25,18 @@ public:
 	virtual ~ContentItem();
 
 	typedef kdm::data::ComplexContentType_ptr type_t;
-	typedef boost::ptr_set < kdm::data::AbstractContentElement > contentElement_t;
+	typedef std::set < kdm::data::AbstractContentElement_ptr > contentElement_t;
 
 	
-	// TODO
-	// TODO
+	type_t getType() const;
+	contentElement_t getContentElement() const;
 
-	
+
+	kdm::data::ComplexContentType_ptr m_type;
+	std::set < std::unique_ptr < kdm::data::AbstractContentElement > > m_contentElement;
+
+		
 protected:
-
-	type_t m_type;
-	contentElement_t m_contentElement;
 
 };
 

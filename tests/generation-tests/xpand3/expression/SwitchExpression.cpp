@@ -16,5 +16,20 @@ SwitchExpression::~SwitchExpression()
 {
 }
 
+SwitchExpression::switchExpr_t SwitchExpression::getSwitchExpr() const
+{
+	return e4c::returned(m_switchExpr);
+}
+
+SwitchExpression::defaultExpr_t SwitchExpression::getDefaultExpr() const
+{
+	return e4c::returned(m_defaultExpr);
+}
+
+SwitchExpression::cases_t SwitchExpression::getCases() const
+{
+	return e4c::returned(m_cases);
+}
+
 
 

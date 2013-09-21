@@ -23,19 +23,20 @@ public:
 	
 	virtual ~Element();
 
-	typedef boost::ptr_set < kdm::kdm::Attribute > attribute_t;
-	typedef boost::ptr_set < kdm::kdm::Annotation > annotation_t;
+	typedef std::set < kdm::kdm::Attribute_ptr > attribute_t;
+	typedef std::set < kdm::kdm::Annotation_ptr > annotation_t;
 
 	
-	// TODO
-	// TODO
+	attribute_t getAttribute() const;
+	annotation_t getAnnotation() const;
 
-	
+
+	std::set < std::unique_ptr < kdm::kdm::Attribute > > m_attribute;
+	std::set < std::unique_ptr < kdm::kdm::Annotation > > m_annotation;
+
+		
 protected:
 	Element();
-
-	attribute_t m_attribute;
-	annotation_t m_annotation;
 
 };
 

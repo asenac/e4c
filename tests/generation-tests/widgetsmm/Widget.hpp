@@ -23,25 +23,26 @@ public:
 	virtual ~Widget();
 
 	typedef widgetsmm::Window_ptr parent_t;
-	typedef boost::ptr_vector < widgetsmm::Property > properties_t;
-	typedef int name_t;
-	typedef int type_t;
+	typedef std::vector < widgetsmm::Property_ptr > properties_t;
+	typedef :: name_t;
+	typedef :: type_t;
 
 	
-	// TODO
-	// TODO
+	parent_t getParent() const;
+	properties_t getProperties() const;
 	void setName(name_t _name);
 	name_t getName() const;
 	void setType(type_t _type);
 	type_t getType() const;
 
-	
-protected:
 
-	parent_t m_parent;
-	properties_t m_properties;
+	widgetsmm::Window_ptr m_parent;
+	std::vector < std::unique_ptr < widgetsmm::Property > > m_properties;
 	name_t m_name;
 	type_t m_type;
+
+		
+protected:
 
 };
 

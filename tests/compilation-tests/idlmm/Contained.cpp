@@ -21,7 +21,7 @@ void Contained::setRepositoryId(repositoryId_t _repositoryId)
 	m_repositoryId = _repositoryId;;
 }
 
-repositoryId_t Contained::getRepositoryId() const
+Contained::repositoryId_t Contained::getRepositoryId() const
 {
 	return m_repositoryId;
 }
@@ -31,7 +31,7 @@ void Contained::setVersion(version_t _version)
 	m_version = _version;;
 }
 
-version_t Contained::getVersion() const
+Contained::version_t Contained::getVersion() const
 {
 	return m_version;
 }
@@ -41,10 +41,21 @@ void Contained::setAbsoluteName(absoluteName_t _absoluteName)
 	m_absoluteName = _absoluteName;;
 }
 
-absoluteName_t Contained::getAbsoluteName() const
+Contained::absoluteName_t Contained::getAbsoluteName() const
 {
 	return m_absoluteName;
 }
+
+Contained::definedIn_t Contained::getDefinedIn() const
+{
+	return e4c::returned(m_definedIn);
+}
+
+void Contained::setDefinedIn(definedIn_t definedIn_)
+{
+	m_definedIn = definedIn_;
+}
+
 
 
 

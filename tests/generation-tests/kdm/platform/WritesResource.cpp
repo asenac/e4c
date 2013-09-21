@@ -15,5 +15,15 @@ WritesResource::~WritesResource()
 {
 }
 
+WritesResource::to_t WritesResource::getTo() const
+{
+	return e4c::returned(m_to);
+}
+
+WritesResource::from_t WritesResource::getFrom() const
+{
+	return e4c::returned(m_from);
+}
+
 
 

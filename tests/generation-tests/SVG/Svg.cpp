@@ -18,12 +18,22 @@ Svg::~Svg()
 {
 }
 
+Svg::owner_SVG_t Svg::getOwner_SVG() const
+{
+	return e4c::returned(m_owner_SVG);
+}
+
+Svg::children_t Svg::getChildren() const
+{
+	return e4c::returned(m_children);
+}
+
 void Svg::setNamespace(namespace_t _namespace)
 {
 	m_namespace = _namespace;;
 }
 
-namespace_t Svg::getNamespace() const
+Svg::namespace_t Svg::getNamespace() const
 {
 	return m_namespace;
 }
@@ -33,7 +43,7 @@ void Svg::setVersion(version_t _version)
 	m_version = _version;;
 }
 
-version_t Svg::getVersion() const
+Svg::version_t Svg::getVersion() const
 {
 	return m_version;
 }
@@ -43,7 +53,7 @@ void Svg::setBaseProfile(baseProfile_t _baseProfile)
 	m_baseProfile = _baseProfile;;
 }
 
-baseProfile_t Svg::getBaseProfile() const
+Svg::baseProfile_t Svg::getBaseProfile() const
 {
 	return m_baseProfile;
 }

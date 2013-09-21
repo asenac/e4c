@@ -22,16 +22,18 @@ public:
 	ETypeParameter();
 	virtual ~ETypeParameter();
 
-	typedef boost::ptr_vector < ecore::EGenericType > eBounds_t;
+	typedef std::vector < ecore::EGenericType_ptr > eBounds_t;
 
 	
-	// TODO
+	eBounds_t getEBounds() const;
+	void addEBounds(ecore::EGenericType_ptr eBounds_);
 
-	
+		
 protected:
 
-	eBounds_t m_eBounds;
+	std::vector < std::unique_ptr < ecore::EGenericType > > m_eBounds;
 
+	
 };
 
 } // ecore

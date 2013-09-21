@@ -21,14 +21,14 @@ public:
 	
 	virtual ~ETypedElement();
 
-	typedef int ordered_t;
-	typedef int unique_t;
-	typedef int lowerBound_t;
-	typedef int upperBound_t;
-	typedef int many_t;
-	typedef int required_t;
+	typedef ::ecore::EBoolean ordered_t;
+	typedef ::ecore::EBoolean unique_t;
+	typedef ::ecore::EInt lowerBound_t;
+	typedef ::ecore::EInt upperBound_t;
+	typedef ::ecore::EBoolean many_t;
+	typedef ::ecore::EBoolean required_t;
 	typedef ecore::EClassifier_ptr eType_t;
-	typedef std::unique_ptr < ecore::EGenericType > eGenericType_t;
+	typedef ecore::EGenericType_ptr eGenericType_t;
 
 	
 	void setOrdered(ordered_t _ordered);
@@ -43,10 +43,14 @@ public:
 	many_t getMany() const;
 	void setRequired(required_t _required);
 	required_t getRequired() const;
-	// TODO
-	// TODO
-
+	eType_t getEType() const;
 	
+	void setEType(eType_t eType_);
+	eGenericType_t getEGenericType() const;
+	void setEGenericType(eGenericType_t eGenericType_);
+	eGenericType_t releaseEGenericType();
+
+		
 protected:
 	ETypedElement();
 
@@ -56,9 +60,10 @@ protected:
 	upperBound_t m_upperBound;
 	many_t m_many;
 	required_t m_required;
-	eType_t m_eType;
-	eGenericType_t m_eGenericType;
+	ecore::EClassifier_ptr m_eType;
+	std::unique_ptr < ecore::EGenericType > m_eGenericType;
 
+	
 };
 
 } // ecore

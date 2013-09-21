@@ -24,15 +24,16 @@ public:
 	ConstructorCallExpression();
 	virtual ~ConstructorCallExpression();
 
-	typedef std::unique_ptr < xpand3::Identifier > type_t;
+	typedef xpand3::Identifier_ptr type_t;
 
 	
-	// TODO
+	type_t getType() const;
 
-	
+
+	std::unique_ptr < xpand3::Identifier > m_type;
+
+		
 protected:
-
-	type_t m_type;
 
 };
 

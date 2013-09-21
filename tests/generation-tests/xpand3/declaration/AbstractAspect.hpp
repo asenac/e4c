@@ -23,20 +23,21 @@ public:
 	
 	virtual ~AbstractAspect();
 
-	typedef std::unique_ptr < xpand3::Identifier > pointcut_t;
-	typedef int wildparams_t;
+	typedef xpand3::Identifier_ptr pointcut_t;
+	typedef ::ecore::EBoolean wildparams_t;
 
 	
-	// TODO
+	pointcut_t getPointcut() const;
 	void setWildparams(wildparams_t _wildparams);
 	wildparams_t getWildparams() const;
 
-	
+
+	std::unique_ptr < xpand3::Identifier > m_pointcut;
+	wildparams_t m_wildparams;
+
+		
 protected:
 	AbstractAspect();
-
-	pointcut_t m_pointcut;
-	wildparams_t m_wildparams;
 
 };
 

@@ -22,9 +22,9 @@ public:
 	Rotate();
 	virtual ~Rotate();
 
-	typedef int angle_t;
-	typedef int cx_t;
-	typedef int cy_t;
+	typedef ::PrimitiveTypes::Double angle_t;
+	typedef ::PrimitiveTypes::Double cx_t;
+	typedef ::PrimitiveTypes::Double cy_t;
 
 	
 	void setAngle(angle_t _angle);
@@ -34,12 +34,13 @@ public:
 	void setCy(cy_t _cy);
 	cy_t getCy() const;
 
-	
-protected:
 
 	angle_t m_angle;
 	cx_t m_cx;
 	cy_t m_cy;
+
+		
+protected:
 
 };
 

@@ -43,7 +43,7 @@ using namespace «getFQN()»;
 
 «getFactory()»::«getFactory()»()
 {
-	m_ePackage = «getPackage()»::_instance();
+	// m_ePackage = «getPackage()»::_instance();
 	«FOREACH this.EClassifiers.typeSelect(EClass).select(e|!e.abstract) AS class-»
 	// std::bind(&«getFactory()»::create«class.getName()», this);
 	// m_ePackage->«class.getTagMethod()»();

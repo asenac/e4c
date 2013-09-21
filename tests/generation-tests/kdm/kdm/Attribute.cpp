@@ -18,7 +18,7 @@ void Attribute::setTag(tag_t _tag)
 	m_tag = _tag;;
 }
 
-tag_t Attribute::getTag() const
+Attribute::tag_t Attribute::getTag() const
 {
 	return m_tag;
 }
@@ -28,7 +28,7 @@ void Attribute::setValue(value_t _value)
 	m_value = _value;;
 }
 
-value_t Attribute::getValue() const
+Attribute::value_t Attribute::getValue() const
 {
 	return m_value;
 }

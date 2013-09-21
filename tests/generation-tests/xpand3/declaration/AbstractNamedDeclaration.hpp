@@ -23,16 +23,17 @@ public:
 	
 	virtual ~AbstractNamedDeclaration();
 
-	typedef std::unique_ptr < xpand3::Identifier > name_t;
+	typedef xpand3::Identifier_ptr name_t;
 
 	
-	// TODO
+	name_t getName() const;
 
-	
+
+	std::unique_ptr < xpand3::Identifier > m_name;
+
+		
 protected:
 	AbstractNamedDeclaration();
-
-	name_t m_name;
 
 };
 

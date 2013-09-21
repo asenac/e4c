@@ -19,9 +19,14 @@ void EventAction::setKind(kind_t _kind)
 	m_kind = _kind;;
 }
 
-kind_t EventAction::getKind() const
+EventAction::kind_t EventAction::getKind() const
 {
 	return m_kind;
+}
+
+EventAction::eventElement_t EventAction::getEventElement() const
+{
+	return e4c::returned(m_eventElement);
 }
 
 

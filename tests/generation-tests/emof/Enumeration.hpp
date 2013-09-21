@@ -22,15 +22,16 @@ public:
 	Enumeration();
 	virtual ~Enumeration();
 
-	typedef boost::ptr_vector < emof::EnumerationLiteral > ownedLiteral_t;
+	typedef std::vector < emof::EnumerationLiteral_ptr > ownedLiteral_t;
 
 	
-	// TODO
+	ownedLiteral_t getOwnedLiteral() const;
 
-	
+
+	std::vector < std::unique_ptr < emof::EnumerationLiteral > > m_ownedLiteral;
+
+		
 protected:
-
-	ownedLiteral_t m_ownedLiteral;
 
 };
 

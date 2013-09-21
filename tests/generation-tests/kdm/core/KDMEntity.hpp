@@ -23,17 +23,18 @@ public:
 	
 	virtual ~KDMEntity();
 
-	typedef int name_t;
+	typedef ::kdm::core::String name_t;
 
 	
 	void setName(name_t _name);
 	name_t getName() const;
 
-	
-protected:
-	KDMEntity();
 
 	name_t m_name;
+
+		
+protected:
+	KDMEntity();
 
 };
 

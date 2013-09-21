@@ -13,5 +13,10 @@ TemplateUnit::~TemplateUnit()
 {
 }
 
+TemplateUnit::codeElement_t TemplateUnit::getCodeElement() const
+{
+	return e4c::returned(m_codeElement);
+}
+
 
 

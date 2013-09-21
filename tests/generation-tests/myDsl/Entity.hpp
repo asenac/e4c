@@ -23,17 +23,18 @@ public:
 	virtual ~Entity();
 
 	typedef myDsl::Entity_ptr extends_t;
-	typedef boost::ptr_vector < myDsl::Property > properties_t;
+	typedef std::vector < myDsl::Property_ptr > properties_t;
 
 	
-	// TODO
-	// TODO
+	extends_t getExtends() const;
+	properties_t getProperties() const;
 
-	
+
+	myDsl::Entity_ptr m_extends;
+	std::vector < std::unique_ptr < myDsl::Property > > m_properties;
+
+		
 protected:
-
-	extends_t m_extends;
-	properties_t m_properties;
 
 };
 

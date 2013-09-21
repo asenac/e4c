@@ -13,5 +13,16 @@ ETypeParameter::~ETypeParameter()
 {
 }
 
+ETypeParameter::eBounds_t ETypeParameter::getEBounds() const
+{
+	return e4c::returned(m_eBounds);
+}
+
+void ETypeParameter::addEBounds(ecore::EGenericType_ptr eBounds_)
+{
+	m_eBounds.push_back(std::unique_ptr < ecore::EGenericType >(eBounds_));
+}
+
+
 
 

@@ -13,5 +13,10 @@ DeployedResource::~DeployedResource()
 {
 }
 
+DeployedResource::platformElement_t DeployedResource::getPlatformElement() const
+{
+	return e4c::returned(m_platformElement);
+}
+
 
 

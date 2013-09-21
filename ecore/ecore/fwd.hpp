@@ -2,6 +2,8 @@
 #define EMF_CPP_ECORE_FWD_HPP
 
 
+#include <e4c/mapping.hpp>
+
 namespace ecore
 {
 
@@ -12,39 +14,138 @@ class EcoreFactory;
 typedef EcoreFactory * EcoreFactory_ptr;
 
 // Data types
-typedef int EBigDecimal;
-typedef int EBigInteger;
-typedef int EBoolean;
+
+/*PROTECTED REGION ID(typedef_ecore::EBigDecimal) ENABLED START*/
+typedef double EBigDecimal;
+/*PROTECTED REGION END*/
+
+/*PROTECTED REGION ID(typedef_ecore::EBigInteger) ENABLED START*/
+typedef int64_t EBigInteger;
+/*PROTECTED REGION END*/
+
+/*PROTECTED REGION ID(typedef_ecore::EBoolean) ENABLED START*/
+typedef bool EBoolean;
+/*PROTECTED REGION END*/
+
+/*PROTECTED REGION ID(typedef_ecore::EBooleanObject) START*/
 typedef int EBooleanObject;
+/*PROTECTED REGION END*/
+
+/*PROTECTED REGION ID(typedef_ecore::EByte) START*/
 typedef int EByte;
+/*PROTECTED REGION END*/
+
+/*PROTECTED REGION ID(typedef_ecore::EByteArray) START*/
 typedef int EByteArray;
+/*PROTECTED REGION END*/
+
+/*PROTECTED REGION ID(typedef_ecore::EByteObject) START*/
 typedef int EByteObject;
+/*PROTECTED REGION END*/
+
+/*PROTECTED REGION ID(typedef_ecore::EChar) START*/
 typedef int EChar;
+/*PROTECTED REGION END*/
+
+/*PROTECTED REGION ID(typedef_ecore::ECharacterObject) START*/
 typedef int ECharacterObject;
+/*PROTECTED REGION END*/
+
+/*PROTECTED REGION ID(typedef_ecore::EDate) START*/
 typedef int EDate;
+/*PROTECTED REGION END*/
+
+/*PROTECTED REGION ID(typedef_ecore::EDiagnosticChain) START*/
 typedef int EDiagnosticChain;
+/*PROTECTED REGION END*/
+
+/*PROTECTED REGION ID(typedef_ecore::EDouble) START*/
 typedef int EDouble;
+/*PROTECTED REGION END*/
+
+/*PROTECTED REGION ID(typedef_ecore::EDoubleObject) START*/
 typedef int EDoubleObject;
+/*PROTECTED REGION END*/
+
+/*PROTECTED REGION ID(typedef_ecore::EEList) START*/
 typedef int EEList;
+/*PROTECTED REGION END*/
+
+/*PROTECTED REGION ID(typedef_ecore::EEnumerator) START*/
 typedef int EEnumerator;
+/*PROTECTED REGION END*/
+
+/*PROTECTED REGION ID(typedef_ecore::EFeatureMap) START*/
 typedef int EFeatureMap;
+/*PROTECTED REGION END*/
+
+/*PROTECTED REGION ID(typedef_ecore::EFeatureMapEntry) START*/
 typedef int EFeatureMapEntry;
-typedef int EFloat;
+/*PROTECTED REGION END*/
+
+/*PROTECTED REGION ID(typedef_ecore::EFloat) ENABLED START*/
+typedef float EFloat;
+/*PROTECTED REGION END*/
+
+/*PROTECTED REGION ID(typedef_ecore::EFloatObject) START*/
 typedef int EFloatObject;
-typedef int EInt;
+/*PROTECTED REGION END*/
+
+/*PROTECTED REGION ID(typedef_ecore::EInt) ENABLED START*/
+typedef int32_t EInt;
+/*PROTECTED REGION END*/
+
+/*PROTECTED REGION ID(typedef_ecore::EIntegerObject) START*/
 typedef int EIntegerObject;
+/*PROTECTED REGION END*/
+
+/*PROTECTED REGION ID(typedef_ecore::EJavaClass) START*/
 typedef int EJavaClass;
+/*PROTECTED REGION END*/
+
+/*PROTECTED REGION ID(typedef_ecore::EJavaObject) START*/
 typedef int EJavaObject;
+/*PROTECTED REGION END*/
+
+/*PROTECTED REGION ID(typedef_ecore::ELong) START*/
 typedef int ELong;
+/*PROTECTED REGION END*/
+
+/*PROTECTED REGION ID(typedef_ecore::ELongObject) START*/
 typedef int ELongObject;
+/*PROTECTED REGION END*/
+
+/*PROTECTED REGION ID(typedef_ecore::EMap) START*/
 typedef int EMap;
+/*PROTECTED REGION END*/
+
+/*PROTECTED REGION ID(typedef_ecore::EResource) START*/
 typedef int EResource;
+/*PROTECTED REGION END*/
+
+/*PROTECTED REGION ID(typedef_ecore::EResourceSet) START*/
 typedef int EResourceSet;
+/*PROTECTED REGION END*/
+
+/*PROTECTED REGION ID(typedef_ecore::EShort) START*/
 typedef int EShort;
+/*PROTECTED REGION END*/
+
+/*PROTECTED REGION ID(typedef_ecore::EShortObject) START*/
 typedef int EShortObject;
-typedef int EString;
+/*PROTECTED REGION END*/
+
+/*PROTECTED REGION ID(typedef_ecore::EString) ENABLED START*/
+typedef std::string EString;
+/*PROTECTED REGION END*/
+
+/*PROTECTED REGION ID(typedef_ecore::ETreeIterator) START*/
 typedef int ETreeIterator;
+/*PROTECTED REGION END*/
+
+/*PROTECTED REGION ID(typedef_ecore::EInvocationTargetException) START*/
 typedef int EInvocationTargetException;
+/*PROTECTED REGION END*/
 
 
 // Classes

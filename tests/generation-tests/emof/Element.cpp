@@ -15,5 +15,15 @@ Element::~Element()
 {
 }
 
+Element::ownedComment_t Element::getOwnedComment() const
+{
+	return e4c::returned(m_ownedComment);
+}
+
+Element::tag_t Element::getTag() const
+{
+	return e4c::returned(m_tag);
+}
+
 
 

@@ -20,4 +20,7 @@
 #include <kdm/kdm/TaggedRef.hpp>
 #include <kdm/kdm/TaggedValue.hpp>
 
+#include <kdm/kdm/KdmFactory.hpp>
+#include <kdm/kdm/KdmPackage.hpp>
+
 #endif // EMF_CPP_KDM_KDM_INC_HPP

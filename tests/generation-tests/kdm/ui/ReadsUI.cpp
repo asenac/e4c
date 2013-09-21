@@ -15,5 +15,15 @@ ReadsUI::~ReadsUI()
 {
 }
 
+ReadsUI::to_t ReadsUI::getTo() const
+{
+	return e4c::returned(m_to);
+}
+
+ReadsUI::from_t ReadsUI::getFrom() const
+{
+	return e4c::returned(m_from);
+}
+
 
 

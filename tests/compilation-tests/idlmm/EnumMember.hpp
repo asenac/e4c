@@ -25,13 +25,16 @@ public:
 	typedef idlmm::EnumDef_ptr enum_t;
 
 	
-	// TODO
+	enum_t getEnum() const;
 
-	
+		
 protected:
 
-	enum_t m_enum;
+	idlmm::EnumDef_ptr m_enum;
 
+	
+	friend class ::idlmm::EnumDef;
+	void setEnum(enum_t enum_);
 };
 
 } // idlmm

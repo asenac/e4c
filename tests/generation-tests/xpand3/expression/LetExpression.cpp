@@ -16,5 +16,20 @@ LetExpression::~LetExpression()
 {
 }
 
+LetExpression::varExpression_t LetExpression::getVarExpression() const
+{
+	return e4c::returned(m_varExpression);
+}
+
+LetExpression::targetExpression_t LetExpression::getTargetExpression() const
+{
+	return e4c::returned(m_targetExpression);
+}
+
+LetExpression::varName_t LetExpression::getVarName() const
+{
+	return e4c::returned(m_varName);
+}
+
 
 

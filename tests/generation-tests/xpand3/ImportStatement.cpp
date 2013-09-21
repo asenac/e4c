@@ -14,12 +14,17 @@ ImportStatement::~ImportStatement()
 {
 }
 
+ImportStatement::importedId_t ImportStatement::getImportedId() const
+{
+	return e4c::returned(m_importedId);
+}
+
 void ImportStatement::setExported(exported_t _exported)
 {
 	m_exported = _exported;;
 }
 
-exported_t ImportStatement::getExported() const
+ImportStatement::exported_t ImportStatement::getExported() const
 {
 	return m_exported;
 }

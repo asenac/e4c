@@ -13,5 +13,10 @@ Node::~Node()
 {
 }
 
+Node::children_t Node::getChildren() const
+{
+	return e4c::returned(m_children);
+}
+
 
 

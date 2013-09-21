@@ -14,5 +14,15 @@ DeclaredParameter::~DeclaredParameter()
 {
 }
 
+DeclaredParameter::name_t DeclaredParameter::getName() const
+{
+	return e4c::returned(m_name);
+}
+
+DeclaredParameter::type_t DeclaredParameter::getType() const
+{
+	return e4c::returned(m_type);
+}
+
 
 

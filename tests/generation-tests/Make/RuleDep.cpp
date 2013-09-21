@@ -13,5 +13,10 @@ RuleDep::~RuleDep()
 {
 }
 
+RuleDep::ruledep_t RuleDep::getRuledep() const
+{
+	return e4c::returned(m_ruledep);
+}
+
 
 

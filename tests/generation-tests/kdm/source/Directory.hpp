@@ -24,16 +24,17 @@ public:
 	Directory();
 	virtual ~Directory();
 
-	typedef int path_t;
+	typedef ::kdm::core::String path_t;
 
 	
 	void setPath(path_t _path);
 	path_t getPath() const;
 
-	
-protected:
 
 	path_t m_path;
+
+		
+protected:
 
 };
 

@@ -13,5 +13,10 @@ OperationCall::~OperationCall()
 {
 }
 
+OperationCall::params_t OperationCall::getParams() const
+{
+	return e4c::returned(m_params);
+}
+
 
 

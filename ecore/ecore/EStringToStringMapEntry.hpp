@@ -22,8 +22,8 @@ public:
 	EStringToStringMapEntry();
 	virtual ~EStringToStringMapEntry();
 
-	typedef int key_t;
-	typedef int value_t;
+	typedef ::ecore::EString key_t;
+	typedef ::ecore::EString value_t;
 
 	
 	void setKey(key_t _key);
@@ -31,12 +31,13 @@ public:
 	void setValue(value_t _value);
 	value_t getValue() const;
 
-	
+		
 protected:
 
 	key_t m_key;
 	value_t m_value;
 
+	
 };
 
 } // ecore

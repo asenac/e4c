@@ -17,7 +17,7 @@ void BagType::setSize(size_t _size)
 	m_size = _size;;
 }
 
-size_t BagType::getSize() const
+BagType::size_t BagType::getSize() const
 {
 	return m_size;
 }

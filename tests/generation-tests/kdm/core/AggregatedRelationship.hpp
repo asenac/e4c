@@ -26,23 +26,24 @@ public:
 
 	typedef kdm::core::KDMEntity_ptr from_t;
 	typedef kdm::core::KDMEntity_ptr to_t;
-	typedef std::vector < kdm::core::KDMRelationship_ptr > relation_t;
-	typedef int density_t;
+	typedef std::set < kdm::core::KDMRelationship_ptr > relation_t;
+	typedef ::kdm::core::Integer density_t;
 
 	
-	// TODO
-	// TODO
-	// TODO
+	from_t getFrom() const;
+	to_t getTo() const;
+	relation_t getRelation() const;
 	void setDensity(density_t _density);
 	density_t getDensity() const;
 
-	
-protected:
 
-	from_t m_from;
-	to_t m_to;
-	relation_t m_relation;
+	kdm::core::KDMEntity_ptr m_from;
+	kdm::core::KDMEntity_ptr m_to;
+	std::set < kdm::core::KDMRelationship_ptr > m_relation;
 	density_t m_density;
+
+		
+protected:
 
 };
 

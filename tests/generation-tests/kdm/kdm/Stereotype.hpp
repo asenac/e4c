@@ -24,23 +24,24 @@ public:
 	Stereotype();
 	virtual ~Stereotype();
 
-	typedef boost::ptr_set < kdm::kdm::TagDefinition > tag_t;
-	typedef int name_t;
-	typedef int type_t;
+	typedef std::set < kdm::kdm::TagDefinition_ptr > tag_t;
+	typedef ::kdm::core::String name_t;
+	typedef ::kdm::core::String type_t;
 
 	
-	// TODO
+	tag_t getTag() const;
 	void setName(name_t _name);
 	name_t getName() const;
 	void setType(type_t _type);
 	type_t getType() const;
 
-	
-protected:
 
-	tag_t m_tag;
+	std::set < std::unique_ptr < kdm::kdm::TagDefinition > > m_tag;
 	name_t m_name;
 	type_t m_type;
+
+		
+protected:
 
 };
 

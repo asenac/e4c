@@ -23,27 +23,30 @@ public:
 	OperationDef();
 	virtual ~OperationDef();
 
-	typedef boost::ptr_vector < idlmm::ParameterDef > parameters_t;
-	typedef int isOneway_t;
-	typedef int contexts_t;
-	typedef std::set < idlmm::ExceptionDef_ptr > canRaise_t;
+	typedef std::vector < idlmm::ParameterDef_ptr > parameters_t;
+	typedef ::ecore::EBoolean isOneway_t;
+	typedef ::ecore::EString contexts_t;
+	typedef std::vector < idlmm::ExceptionDef_ptr > canRaise_t;
 
 	
-	// TODO
+	parameters_t getParameters() const;
+	void addParameters(idlmm::ParameterDef_ptr parameters_);
 	void setIsOneway(isOneway_t _isOneway);
 	isOneway_t getIsOneway() const;
 	void setContexts(contexts_t _contexts);
 	contexts_t getContexts() const;
-	// TODO
-
+	canRaise_t getCanRaise() const;
 	
+
+		
 protected:
 
-	parameters_t m_parameters;
+	std::vector < std::unique_ptr < idlmm::ParameterDef > > m_parameters;
 	isOneway_t m_isOneway;
 	contexts_t m_contexts;
-	canRaise_t m_canRaise;
+	std::vector < idlmm::ExceptionDef_ptr > m_canRaise;
 
+	
 };
 
 } // idlmm

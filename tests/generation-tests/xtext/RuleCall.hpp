@@ -25,12 +25,13 @@ public:
 	typedef xtext::AbstractRule_ptr rule_t;
 
 	
-	// TODO
+	rule_t getRule() const;
 
-	
+
+	xtext::AbstractRule_ptr m_rule;
+
+		
 protected:
-
-	rule_t m_rule;
 
 };
 

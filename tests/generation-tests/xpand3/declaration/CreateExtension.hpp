@@ -27,12 +27,13 @@ public:
 	typedef xpand3::DeclaredParameter_ptr toBeCreated_t;
 
 	
-	// TODO
+	toBeCreated_t getToBeCreated() const;
 
-	
+
+	xpand3::DeclaredParameter_ptr m_toBeCreated;
+
+		
 protected:
-
-	toBeCreated_t m_toBeCreated;
 
 };
 

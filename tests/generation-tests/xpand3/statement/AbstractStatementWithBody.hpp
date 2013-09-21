@@ -23,16 +23,17 @@ public:
 	
 	virtual ~AbstractStatementWithBody();
 
-	typedef boost::ptr_vector < xpand3::statement::AbstractStatement > body_t;
+	typedef std::vector < xpand3::statement::AbstractStatement_ptr > body_t;
 
 	
-	// TODO
+	body_t getBody() const;
 
-	
+
+	std::vector < std::unique_ptr < xpand3::statement::AbstractStatement > > m_body;
+
+		
 protected:
 	AbstractStatementWithBody();
-
-	body_t m_body;
 
 };
 

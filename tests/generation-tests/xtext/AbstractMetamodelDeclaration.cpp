@@ -14,12 +14,17 @@ AbstractMetamodelDeclaration::~AbstractMetamodelDeclaration()
 {
 }
 
+AbstractMetamodelDeclaration::ePackage_t AbstractMetamodelDeclaration::getEPackage() const
+{
+	return e4c::returned(m_ePackage);
+}
+
 void AbstractMetamodelDeclaration::setAlias(alias_t _alias)
 {
 	m_alias = _alias;;
 }
 
-alias_t AbstractMetamodelDeclaration::getAlias() const
+AbstractMetamodelDeclaration::alias_t AbstractMetamodelDeclaration::getAlias() const
 {
 	return m_alias;
 }

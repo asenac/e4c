@@ -13,5 +13,10 @@ ExpressionStatement::~ExpressionStatement()
 {
 }
 
+ExpressionStatement::expression_t ExpressionStatement::getExpression() const
+{
+	return e4c::returned(m_expression);
+}
+
 
 

@@ -22,16 +22,17 @@ public:
 	GeneratedMetamodel();
 	virtual ~GeneratedMetamodel();
 
-	typedef int name_t;
+	typedef ::ecore::EString name_t;
 
 	
 	void setName(name_t _name);
 	name_t getName() const;
 
-	
-protected:
 
 	name_t m_name;
+
+		
+protected:
 
 };
 

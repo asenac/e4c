@@ -9,7 +9,53 @@ using namespace kdm::structure;
 StructurePackage::StructurePackage()
 {
 	m_eFactoryInstance = StructureFactory::_instance();
-	::ecore::EcoreFactor_ptr ecoreFactory = ::ecore::EcoreFactory::_instance();
+	::ecore::EcoreFactory_ptr ecoreFactory = ::ecore::EcoreFactory::_instance();
+	
+	::ecore::EClass_ptr AbstractStructureElement_ = ecoreFactory->createEClass();
+	AbstractStructureElement_->setName("AbstractStructureElement");
+	// m_eClassifiers.push_back(AbstractStructureElement_);
+	::ecore::EClass_ptr Subsystem_ = ecoreFactory->createEClass();
+	Subsystem_->setName("Subsystem");
+	// m_eClassifiers.push_back(Subsystem_);
+	::ecore::EClass_ptr Layer_ = ecoreFactory->createEClass();
+	Layer_->setName("Layer");
+	// m_eClassifiers.push_back(Layer_);
+	::ecore::EClass_ptr StructureModel_ = ecoreFactory->createEClass();
+	StructureModel_->setName("StructureModel");
+	// m_eClassifiers.push_back(StructureModel_);
+	::ecore::EClass_ptr Component_ = ecoreFactory->createEClass();
+	Component_->setName("Component");
+	// m_eClassifiers.push_back(Component_);
+	::ecore::EClass_ptr SoftwareSystem_ = ecoreFactory->createEClass();
+	SoftwareSystem_->setName("SoftwareSystem");
+	// m_eClassifiers.push_back(SoftwareSystem_);
+	::ecore::EClass_ptr AbstractStructureRelationship_ = ecoreFactory->createEClass();
+	AbstractStructureRelationship_->setName("AbstractStructureRelationship");
+	// m_eClassifiers.push_back(AbstractStructureRelationship_);
+	::ecore::EClass_ptr StructureRelationship_ = ecoreFactory->createEClass();
+	StructureRelationship_->setName("StructureRelationship");
+	// m_eClassifiers.push_back(StructureRelationship_);
+	::ecore::EClass_ptr ArchitectureView_ = ecoreFactory->createEClass();
+	ArchitectureView_->setName("ArchitectureView");
+	// m_eClassifiers.push_back(ArchitectureView_);
+	::ecore::EClass_ptr StructureElement_ = ecoreFactory->createEClass();
+	StructureElement_->setName("StructureElement");
+	// m_eClassifiers.push_back(StructureElement_);
+	
+	
+	// AbstractStructureElement_->addESuperType(KDMEntity_);
+	// Subsystem_->addESuperType(AbstractStructureElement_);
+	// Layer_->addESuperType(AbstractStructureElement_);
+	// StructureModel_->addESuperType(KDMModel_);
+	// Component_->addESuperType(AbstractStructureElement_);
+	// SoftwareSystem_->addESuperType(AbstractStructureElement_);
+	// AbstractStructureRelationship_->addESuperType(KDMRelationship_);
+	// StructureRelationship_->addESuperType(AbstractStructureRelationship_);
+	// ArchitectureView_->addESuperType(AbstractStructureElement_);
+	// StructureElement_->addESuperType(AbstractStructureElement_);
+	
+	
+	
 	
 }
 

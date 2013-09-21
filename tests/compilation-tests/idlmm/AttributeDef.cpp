@@ -15,12 +15,26 @@ AttributeDef::~AttributeDef()
 {
 }
 
+AttributeDef::getRaises_t AttributeDef::getGetRaises() const
+{
+	return e4c::returned(m_getRaises);
+}
+
+
+
+AttributeDef::setRaises_t AttributeDef::getSetRaises() const
+{
+	return e4c::returned(m_setRaises);
+}
+
+
+
 void AttributeDef::setIsReadonly(isReadonly_t _isReadonly)
 {
 	m_isReadonly = _isReadonly;;
 }
 
-isReadonly_t AttributeDef::getIsReadonly() const
+AttributeDef::isReadonly_t AttributeDef::getIsReadonly() const
 {
 	return m_isReadonly;
 }

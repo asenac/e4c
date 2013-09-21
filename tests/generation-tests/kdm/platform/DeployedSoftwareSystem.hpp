@@ -24,15 +24,16 @@ public:
 	DeployedSoftwareSystem();
 	virtual ~DeployedSoftwareSystem();
 
-	typedef std::vector < kdm::platform::DeployedComponent_ptr > groupedComponent_t;
+	typedef std::set < kdm::platform::DeployedComponent_ptr > groupedComponent_t;
 
 	
-	// TODO
+	groupedComponent_t getGroupedComponent() const;
 
-	
+
+	std::set < kdm::platform::DeployedComponent_ptr > m_groupedComponent;
+
+		
 protected:
-
-	groupedComponent_t m_groupedComponent;
 
 };
 

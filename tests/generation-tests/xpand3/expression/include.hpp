@@ -32,4 +32,7 @@
 #include <xpand3/expression/BinaryOperation.hpp>
 #include <xpand3/expression/UnaryOperation.hpp>
 
+#include <xpand3/expression/ExpressionFactory.hpp>
+#include <xpand3/expression/ExpressionPackage.hpp>
+
 #endif // EMF_CPP_XPAND3_EXPRESSION_INC_HPP

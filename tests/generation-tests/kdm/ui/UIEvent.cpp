@@ -17,7 +17,7 @@ void UIEvent::setKind(kind_t _kind)
 	m_kind = _kind;;
 }
 
-kind_t UIEvent::getKind() const
+UIEvent::kind_t UIEvent::getKind() const
 {
 	return m_kind;
 }

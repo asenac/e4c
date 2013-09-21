@@ -21,9 +21,19 @@ void AbstractRule::setName(name_t _name)
 	m_name = _name;;
 }
 
-name_t AbstractRule::getName() const
+AbstractRule::name_t AbstractRule::getName() const
 {
 	return m_name;
+}
+
+AbstractRule::type_t AbstractRule::getType() const
+{
+	return e4c::returned(m_type);
+}
+
+AbstractRule::alternatives_t AbstractRule::getAlternatives() const
+{
+	return e4c::returned(m_alternatives);
 }
 
 

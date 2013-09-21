@@ -13,5 +13,10 @@ DerivedType::~DerivedType()
 {
 }
 
+DerivedType::itemUnit_t DerivedType::getItemUnit() const
+{
+	return e4c::returned(m_itemUnit);
+}
+
 
 

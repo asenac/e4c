@@ -14,5 +14,15 @@ Imports::~Imports()
 {
 }
 
+Imports::to_t Imports::getTo() const
+{
+	return e4c::returned(m_to);
+}
+
+Imports::from_t Imports::getFrom() const
+{
+	return e4c::returned(m_from);
+}
+
 
 

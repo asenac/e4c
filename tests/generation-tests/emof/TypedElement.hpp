@@ -24,13 +24,14 @@ public:
 	typedef emof::Type_ptr type_t;
 
 	
-	// TODO
+	type_t getType() const;
 
-	
+
+	emof::Type_ptr m_type;
+
+		
 protected:
 	TypedElement();
-
-	type_t m_type;
 
 };
 

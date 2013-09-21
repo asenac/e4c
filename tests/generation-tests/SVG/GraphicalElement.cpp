@@ -17,7 +17,7 @@ void GraphicalElement::setStroke(stroke_t _stroke)
 	m_stroke = _stroke;;
 }
 
-stroke_t GraphicalElement::getStroke() const
+GraphicalElement::stroke_t GraphicalElement::getStroke() const
 {
 	return m_stroke;
 }

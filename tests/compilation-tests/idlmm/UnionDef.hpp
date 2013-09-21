@@ -22,22 +22,28 @@ public:
 	UnionDef();
 	virtual ~UnionDef();
 
-	typedef boost::ptr_vector < idlmm::UnionField > unionMembers_t;
-	typedef std::unique_ptr < idlmm::IDLType > containedDiscrim_t;
+	typedef std::vector < idlmm::UnionField_ptr > unionMembers_t;
+	typedef idlmm::IDLType_ptr containedDiscrim_t;
 	typedef idlmm::TypedefDef_ptr sharedDiscrim_t;
 
 	
-	// TODO
-	// TODO
-	// TODO
-
+	unionMembers_t getUnionMembers() const;
+	void addUnionMembers(idlmm::UnionField_ptr unionMembers_);
+	containedDiscrim_t getContainedDiscrim() const;
+	void setContainedDiscrim(containedDiscrim_t containedDiscrim_);
+	containedDiscrim_t releaseContainedDiscrim();
+	sharedDiscrim_t getSharedDiscrim() const;
 	
+	void setSharedDiscrim(sharedDiscrim_t sharedDiscrim_);
+
+		
 protected:
 
-	unionMembers_t m_unionMembers;
-	containedDiscrim_t m_containedDiscrim;
-	sharedDiscrim_t m_sharedDiscrim;
+	std::vector < std::unique_ptr < idlmm::UnionField > > m_unionMembers;
+	std::unique_ptr < idlmm::IDLType > m_containedDiscrim;
+	idlmm::TypedefDef_ptr m_sharedDiscrim;
 
+	
 };
 
 } // idlmm

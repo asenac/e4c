@@ -22,23 +22,26 @@ public:
 	TranslationUnit();
 	virtual ~TranslationUnit();
 
-	typedef boost::ptr_vector < idlmm::Contained > contains_t;
-	typedef int identifier_t;
-	typedef boost::ptr_vector < idlmm::Include > includes_t;
+	typedef std::vector < idlmm::Contained_ptr > contains_t;
+	typedef ::ecore::EString identifier_t;
+	typedef std::vector < idlmm::Include_ptr > includes_t;
 
 	
-	// TODO
+	contains_t getContains() const;
+	void addContains(idlmm::Contained_ptr contains_);
 	void setIdentifier(identifier_t _identifier);
 	identifier_t getIdentifier() const;
-	// TODO
+	includes_t getIncludes() const;
+	void addIncludes(idlmm::Include_ptr includes_);
 
-	
+		
 protected:
 
-	contains_t m_contains;
+	std::vector < std::unique_ptr < idlmm::Contained > > m_contains;
 	identifier_t m_identifier;
-	includes_t m_includes;
+	std::vector < std::unique_ptr < idlmm::Include > > m_includes;
 
+	
 };
 
 } // idlmm

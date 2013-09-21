@@ -23,27 +23,34 @@ public:
 	virtual ~EOperation();
 
 	typedef ecore::EClass_ptr eContainingClass_t;
-	typedef boost::ptr_vector < ecore::ETypeParameter > eTypeParameters_t;
-	typedef boost::ptr_vector < ecore::EParameter > eParameters_t;
-	typedef std::set < ecore::EClassifier_ptr > eExceptions_t;
-	typedef boost::ptr_vector < ecore::EGenericType > eGenericExceptions_t;
+	typedef std::vector < ecore::ETypeParameter_ptr > eTypeParameters_t;
+	typedef std::vector < ecore::EParameter_ptr > eParameters_t;
+	typedef std::vector < ecore::EClassifier_ptr > eExceptions_t;
+	typedef std::vector < ecore::EGenericType_ptr > eGenericExceptions_t;
 
 	
-	// TODO
-	// TODO
-	// TODO
-	// TODO
-	// TODO
-
+	eContainingClass_t getEContainingClass() const;
+	eTypeParameters_t getETypeParameters() const;
+	void addETypeParameters(ecore::ETypeParameter_ptr eTypeParameters_);
+	eParameters_t getEParameters() const;
+	void addEParameters(ecore::EParameter_ptr eParameters_);
+	eExceptions_t getEExceptions() const;
 	
+	eGenericExceptions_t getEGenericExceptions() const;
+	void addEGenericExceptions(ecore::EGenericType_ptr eGenericExceptions_);
+
+		
 protected:
 
-	eContainingClass_t m_eContainingClass;
-	eTypeParameters_t m_eTypeParameters;
-	eParameters_t m_eParameters;
-	eExceptions_t m_eExceptions;
-	eGenericExceptions_t m_eGenericExceptions;
+	ecore::EClass_ptr m_eContainingClass;
+	std::vector < std::unique_ptr < ecore::ETypeParameter > > m_eTypeParameters;
+	std::vector < std::unique_ptr < ecore::EParameter > > m_eParameters;
+	std::vector < ecore::EClassifier_ptr > m_eExceptions;
+	std::vector < std::unique_ptr < ecore::EGenericType > > m_eGenericExceptions;
 
+	
+	friend class ::ecore::EClass;
+	void setEContainingClass(eContainingClass_t eContainingClass_);
 };
 
 } // ecore

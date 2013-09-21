@@ -52,28 +52,42 @@ using namespace «getFQN()»;
 «getPackage()»::«getPackage()»()
 {
 	m_eFactoryInstance = «getFactory()»::_instance();
-	::ecore::EcoreFactor_ptr ecoreFactory = ::ecore::EcoreFactory::_instance();
+	«IF !eContents().isEmpty-»
+	::ecore::EcoreFactory_ptr ecoreFactory = ::ecore::EcoreFactory::_instance();
+	«ENDIF-»
+	
+	«FOREACH EClassifiers.typeSelect(EClass) AS cl-»
+	::ecore::EClass_ptr «cl.getName()»_ = ecoreFactory->createEClass();
+	«cl.getName()»_->setName("«cl.name»");
+	addEClassifiers(«cl.getName()»_);
+	«ENDFOREACH»
+	
+	«FOREACH EClassifiers.typeSelect(EClass) AS cl-»
+		«FOREACH cl.ESuperTypes AS s-»
+	// «cl.getName()»_->addESuperTypes(«s.getName()»_);
+		«ENDFOREACH-»
+	«ENDFOREACH»
+	
+	«FOREACH EClassifiers.typeSelect(EDataType).select(e|!EEnum.isInstance(e)) AS cl-»
+	::ecore::EDataType_ptr «cl.getName()»_ = ecoreFactory->createEDataType();
+	«cl.getName()»_->setName("«cl.name»");
+	addEClassifiers(«cl.getName()»_);
+	«ENDFOREACH»
 	
 	«FOREACH EClassifiers.typeSelect(EEnum) AS ee-»
-	// «ee.getName()»
-	{
-	    ::ecore::EEnum_ptr ee = ecoreFactory->createEEnum();
-	    ee->setClassifierID(«ee.getName()»);
-	    ee->setEPackage(this);
-	    ee->setName("«ee.name»");
-	    ee->setSerializable(«ee.serializable»);
+    ::ecore::EEnum_ptr «ee.getName()»_ = ecoreFactory->createEEnum();
+    «ee.getName()»_->setName("«ee.name»");
+    «ee.getName()»_->setSerializable(«ee.serializable»);
 	    «FOREACH ee.ELiterals AS el-»
-	    {
-	        ::ecore::EEnumLiteral_ptr el = ecoreFactory->createEEnumLiteral();
-	        el->setName("«el»");
-	        el->setValue(«ee.getName()»::«el»);
-	        el->setLiteral("«el»");
-	        el->setEEnum(ee);
-	        ee->getELiterals().push_back(el);
-	    }
-	    m_Classifiers.push_back(ee);
-	    «ENDFOREACH-»
+    {
+        ::ecore::EEnumLiteral_ptr el = ecoreFactory->createEEnumLiteral();
+        el->setName("«el»");
+        el->setValue(static_cast< ::ecore::EInt >(«ee.getName()»::«el»));
+        el->setLiteral("«el»");
+        «ee.getName()»_->addELiterals(el);
     }
+	    «ENDFOREACH-»
+	addEClassifiers(«ee.getName()»_);
 	«ENDFOREACH-»
 }
 

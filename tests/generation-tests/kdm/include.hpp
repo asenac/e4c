@@ -19,4 +19,7 @@
 #include <kdm/ui/include.hpp>
 
 
+#include <kdm/KdmFactory.hpp>
+#include <kdm/KdmPackage.hpp>
+
 #endif // EMF_CPP_KDM_INC_HPP

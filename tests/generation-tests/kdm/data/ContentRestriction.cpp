@@ -18,7 +18,7 @@ void ContentRestriction::setKind(kind_t _kind)
 	m_kind = _kind;;
 }
 
-kind_t ContentRestriction::getKind() const
+ContentRestriction::kind_t ContentRestriction::getKind() const
 {
 	return m_kind;
 }
@@ -28,7 +28,7 @@ void ContentRestriction::setValue(value_t _value)
 	m_value = _value;;
 }
 
-value_t ContentRestriction::getValue() const
+ContentRestriction::value_t ContentRestriction::getValue() const
 {
 	return m_value;
 }

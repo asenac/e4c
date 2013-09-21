@@ -24,15 +24,15 @@ public:
 	virtual ~Property();
 
 	typedef emof::Class_ptr class_t;
-	typedef int default_t;
-	typedef int isComposite_t;
-	typedef int isDerived_t;
-	typedef int isId_t;
-	typedef int isReadOnly_t;
+	typedef ::emof::String default_t;
+	typedef ::emof::Boolean isComposite_t;
+	typedef ::emof::Boolean isDerived_t;
+	typedef ::emof::Boolean isId_t;
+	typedef ::emof::Boolean isReadOnly_t;
 	typedef emof::Property_ptr opposite_t;
 
 	
-	// TODO
+	class_t getClass() const;
 	void setDefault(default_t _default);
 	default_t getDefault() const;
 	void setIsComposite(isComposite_t _isComposite);
@@ -43,18 +43,19 @@ public:
 	isId_t getIsId() const;
 	void setIsReadOnly(isReadOnly_t _isReadOnly);
 	isReadOnly_t getIsReadOnly() const;
-	// TODO
+	opposite_t getOpposite() const;
 
-	
-protected:
 
-	class_t m_class;
+	emof::Class_ptr m_class;
 	default_t m_default;
 	isComposite_t m_isComposite;
 	isDerived_t m_isDerived;
 	isId_t m_isId;
 	isReadOnly_t m_isReadOnly;
-	opposite_t m_opposite;
+	emof::Property_ptr m_opposite;
+
+		
+protected:
 
 };
 

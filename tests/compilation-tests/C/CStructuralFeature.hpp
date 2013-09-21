@@ -26,10 +26,11 @@ public:
 	
 	
 	
-	
-protected:
 
 	
+		
+protected:
+
 };
 
 } // C

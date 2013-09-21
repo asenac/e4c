@@ -13,5 +13,10 @@ StructureModel::~StructureModel()
 {
 }
 
+StructureModel::structureElement_t StructureModel::getStructureElement() const
+{
+	return e4c::returned(m_structureElement);
+}
+
 
 

@@ -21,19 +21,20 @@ public:
 	
 	virtual ~Element();
 
-	typedef boost::ptr_set < emof::Comment > ownedComment_t;
-	typedef std::vector < emof::Tag_ptr > tag_t;
+	typedef std::set < emof::Comment_ptr > ownedComment_t;
+	typedef std::set < emof::Tag_ptr > tag_t;
 
 	
-	// TODO
-	// TODO
+	ownedComment_t getOwnedComment() const;
+	tag_t getTag() const;
 
-	
+
+	std::set < std::unique_ptr < emof::Comment > > m_ownedComment;
+	std::set < emof::Tag_ptr > m_tag;
+
+		
 protected:
 	Element();
-
-	ownedComment_t m_ownedComment;
-	tag_t m_tag;
 
 };
 

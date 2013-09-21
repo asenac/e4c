@@ -18,7 +18,7 @@ void Coordinates::setX(x_t _x)
 	m_x = _x;;
 }
 
-x_t Coordinates::getX() const
+Coordinates::x_t Coordinates::getX() const
 {
 	return m_x;
 }
@@ -28,7 +28,7 @@ void Coordinates::setY(y_t _y)
 	m_y = _y;;
 }
 
-y_t Coordinates::getY() const
+Coordinates::y_t Coordinates::getY() const
 {
 	return m_y;
 }

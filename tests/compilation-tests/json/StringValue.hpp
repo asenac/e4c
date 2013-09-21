@@ -22,16 +22,17 @@ public:
 	StringValue();
 	virtual ~StringValue();
 
-	typedef int value_t;
+	typedef ::ecore::EString value_t;
 
 	
 	void setValue(value_t _value);
 	value_t getValue() const;
 
-	
-protected:
 
 	value_t m_value;
+
+		
+protected:
 
 };
 

@@ -9,7 +9,16 @@ using namespace bintree;
 BintreePackage::BintreePackage()
 {
 	m_eFactoryInstance = BintreeFactory::_instance();
-	::ecore::EcoreFactor_ptr ecoreFactory = ::ecore::EcoreFactory::_instance();
+	::ecore::EcoreFactory_ptr ecoreFactory = ::ecore::EcoreFactory::_instance();
+	
+	::ecore::EClass_ptr BinTreeNode_ = ecoreFactory->createEClass();
+	BinTreeNode_->setName("BinTreeNode");
+	// m_eClassifiers.push_back(BinTreeNode_);
+	
+	
+	
+	
+	
 	
 }
 

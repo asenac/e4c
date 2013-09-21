@@ -15,5 +15,15 @@ ConceptualRelationship::~ConceptualRelationship()
 {
 }
 
+ConceptualRelationship::to_t ConceptualRelationship::getTo() const
+{
+	return e4c::returned(m_to);
+}
+
+ConceptualRelationship::from_t ConceptualRelationship::getFrom() const
+{
+	return e4c::returned(m_from);
+}
+
 
 

@@ -17,7 +17,7 @@ void AbstractElement::setCardinality(cardinality_t _cardinality)
 	m_cardinality = _cardinality;;
 }
 
-cardinality_t AbstractElement::getCardinality() const
+AbstractElement::cardinality_t AbstractElement::getCardinality() const
 {
 	return m_cardinality;
 }

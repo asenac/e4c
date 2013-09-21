@@ -17,5 +17,20 @@ AbstractDataElement::~AbstractDataElement()
 {
 }
 
+AbstractDataElement::source_t AbstractDataElement::getSource() const
+{
+	return e4c::returned(m_source);
+}
+
+AbstractDataElement::dataRelation_t AbstractDataElement::getDataRelation() const
+{
+	return e4c::returned(m_dataRelation);
+}
+
+AbstractDataElement::abstraction_t AbstractDataElement::getAbstraction() const
+{
+	return e4c::returned(m_abstraction);
+}
+
 
 

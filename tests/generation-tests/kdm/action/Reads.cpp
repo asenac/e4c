@@ -15,5 +15,15 @@ Reads::~Reads()
 {
 }
 
+Reads::to_t Reads::getTo() const
+{
+	return e4c::returned(m_to);
+}
+
+Reads::from_t Reads::getFrom() const
+{
+	return e4c::returned(m_from);
+}
+
 
 

@@ -23,19 +23,20 @@ public:
 	
 	virtual ~ModelElement();
 
-	typedef std::vector < kdm::kdm::Stereotype_ptr > stereotype_t;
-	typedef boost::ptr_set < kdm::kdm::ExtendedValue > taggedValue_t;
+	typedef std::set < kdm::kdm::Stereotype_ptr > stereotype_t;
+	typedef std::set < kdm::kdm::ExtendedValue_ptr > taggedValue_t;
 
 	
-	// TODO
-	// TODO
+	stereotype_t getStereotype() const;
+	taggedValue_t getTaggedValue() const;
 
-	
+
+	std::set < kdm::kdm::Stereotype_ptr > m_stereotype;
+	std::set < std::unique_ptr < kdm::kdm::ExtendedValue > > m_taggedValue;
+
+		
 protected:
 	ModelElement();
-
-	stereotype_t m_stereotype;
-	taggedValue_t m_taggedValue;
 
 };
 

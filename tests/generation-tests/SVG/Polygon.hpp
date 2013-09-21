@@ -22,23 +22,24 @@ public:
 	Polygon();
 	virtual ~Polygon();
 
-	typedef std::set < SVG::Point_ptr > waypoints_t;
-	typedef int markerEnd_t;
-	typedef int markerStart_t;
+	typedef std::vector < SVG::Point_ptr > waypoints_t;
+	typedef ::PrimitiveTypes::String markerEnd_t;
+	typedef ::PrimitiveTypes::String markerStart_t;
 
 	
-	// TODO
+	waypoints_t getWaypoints() const;
 	void setMarkerEnd(markerEnd_t _markerEnd);
 	markerEnd_t getMarkerEnd() const;
 	void setMarkerStart(markerStart_t _markerStart);
 	markerStart_t getMarkerStart() const;
 
-	
-protected:
 
-	waypoints_t m_waypoints;
+	std::vector < SVG::Point_ptr > m_waypoints;
 	markerEnd_t m_markerEnd;
 	markerStart_t m_markerStart;
+
+		
+protected:
 
 };
 

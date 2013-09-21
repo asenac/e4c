@@ -22,18 +22,19 @@ public:
 	Model();
 	virtual ~Model();
 
-	typedef boost::ptr_vector < myDsl::Import > imports_t;
-	typedef boost::ptr_vector < myDsl::Type > elements_t;
+	typedef std::vector < myDsl::Import_ptr > imports_t;
+	typedef std::vector < myDsl::Type_ptr > elements_t;
 
 	
-	// TODO
-	// TODO
+	imports_t getImports() const;
+	elements_t getElements() const;
 
-	
+
+	std::vector < std::unique_ptr < myDsl::Import > > m_imports;
+	std::vector < std::unique_ptr < myDsl::Type > > m_elements;
+
+		
 protected:
-
-	imports_t m_imports;
-	elements_t m_elements;
 
 };
 

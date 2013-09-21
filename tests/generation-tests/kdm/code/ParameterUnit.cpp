@@ -18,7 +18,7 @@ void ParameterUnit::setKind(kind_t _kind)
 	m_kind = _kind;;
 }
 
-kind_t ParameterUnit::getKind() const
+ParameterUnit::kind_t ParameterUnit::getKind() const
 {
 	return m_kind;
 }
@@ -28,7 +28,7 @@ void ParameterUnit::setPos(pos_t _pos)
 	m_pos = _pos;;
 }
 
-pos_t ParameterUnit::getPos() const
+ParameterUnit::pos_t ParameterUnit::getPos() const
 {
 	return m_pos;
 }

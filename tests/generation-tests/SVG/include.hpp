@@ -46,4 +46,7 @@
 #include <SVG/ReferencedFile.hpp>
 #include <SVG/SvgFile.hpp>
 
+#include <SVG/SVGFactory.hpp>
+#include <SVG/SVGPackage.hpp>
+
 #endif // EMF_CPP_SVG_INC_HPP

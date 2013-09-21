@@ -24,15 +24,16 @@ public:
 	IndexElement();
 	virtual ~IndexElement();
 
-	typedef std::vector < kdm::code::ItemUnit_ptr > implementation_t;
+	typedef std::set < kdm::code::ItemUnit_ptr > implementation_t;
 
 	
-	// TODO
+	implementation_t getImplementation() const;
 
-	
+
+	std::set < kdm::code::ItemUnit_ptr > m_implementation;
+
+		
 protected:
-
-	implementation_t m_implementation;
 
 };
 

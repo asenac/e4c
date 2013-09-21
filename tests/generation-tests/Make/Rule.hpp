@@ -22,18 +22,19 @@ public:
 	Rule();
 	virtual ~Rule();
 
-	typedef boost::ptr_vector < Make::Dependency > dependencies_t;
-	typedef boost::ptr_vector < Make::ShellLine > shellLines_t;
+	typedef std::vector < Make::Dependency_ptr > dependencies_t;
+	typedef std::vector < Make::ShellLine_ptr > shellLines_t;
 
 	
-	// TODO
-	// TODO
+	dependencies_t getDependencies() const;
+	shellLines_t getShellLines() const;
 
-	
+
+	std::vector < std::unique_ptr < Make::Dependency > > m_dependencies;
+	std::vector < std::unique_ptr < Make::ShellLine > > m_shellLines;
+
+		
 protected:
-
-	dependencies_t m_dependencies;
-	shellLines_t m_shellLines;
 
 };
 

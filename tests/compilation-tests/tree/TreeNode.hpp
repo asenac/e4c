@@ -21,20 +21,21 @@ public:
 	
 	virtual ~TreeNode();
 
-	typedef int data_t;
+	typedef ::ecore::EString data_t;
 	typedef tree::TreeNode_ptr parent_t;
 
 	
 	void setData(data_t _data);
 	data_t getData() const;
-	// TODO
+	parent_t getParent() const;
 
-	
-protected:
-	TreeNode();
 
 	data_t m_data;
-	parent_t m_parent;
+	tree::TreeNode_ptr m_parent;
+
+		
+protected:
+	TreeNode();
 
 };
 

@@ -26,14 +26,15 @@ public:
 	typedef ecore::EClassifier_ptr classifier_t;
 
 	
-	// TODO
-	// TODO
+	metamodel_t getMetamodel() const;
+	classifier_t getClassifier() const;
 
-	
+
+	xtext::AbstractMetamodelDeclaration_ptr m_metamodel;
+	ecore::EClassifier_ptr m_classifier;
+
+		
 protected:
-
-	metamodel_t m_metamodel;
-	classifier_t m_classifier;
 
 };
 

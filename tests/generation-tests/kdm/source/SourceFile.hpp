@@ -24,8 +24,8 @@ public:
 	SourceFile();
 	virtual ~SourceFile();
 
-	typedef int language_t;
-	typedef int encoding_t;
+	typedef ::kdm::core::String language_t;
+	typedef ::kdm::core::String encoding_t;
 
 	
 	void setLanguage(language_t _language);
@@ -33,11 +33,12 @@ public:
 	void setEncoding(encoding_t _encoding);
 	encoding_t getEncoding() const;
 
-	
-protected:
 
 	language_t m_language;
 	encoding_t m_encoding;
+
+		
+protected:
 
 };
 

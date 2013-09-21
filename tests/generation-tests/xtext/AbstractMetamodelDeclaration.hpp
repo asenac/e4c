@@ -23,18 +23,19 @@ public:
 	virtual ~AbstractMetamodelDeclaration();
 
 	typedef ecore::EPackage_ptr ePackage_t;
-	typedef int alias_t;
+	typedef ::ecore::EString alias_t;
 
 	
-	// TODO
+	ePackage_t getEPackage() const;
 	void setAlias(alias_t _alias);
 	alias_t getAlias() const;
 
-	
-protected:
 
-	ePackage_t m_ePackage;
+	ecore::EPackage_ptr m_ePackage;
 	alias_t m_alias;
+
+		
+protected:
 
 };
 

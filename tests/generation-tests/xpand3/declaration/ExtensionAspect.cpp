@@ -13,5 +13,10 @@ ExtensionAspect::~ExtensionAspect()
 {
 }
 
+ExtensionAspect::expression_t ExtensionAspect::getExpression() const
+{
+	return e4c::returned(m_expression);
+}
+
 
 

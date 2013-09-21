@@ -13,5 +13,10 @@ Attribute::~Attribute()
 {
 }
 
+Attribute::attOwner_t Attribute::getAttOwner() const
+{
+	return e4c::returned(m_attOwner);
+}
+
 
 

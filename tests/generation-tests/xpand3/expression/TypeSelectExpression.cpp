@@ -13,5 +13,10 @@ TypeSelectExpression::~TypeSelectExpression()
 {
 }
 
+TypeSelectExpression::typeLiteral_t TypeSelectExpression::getTypeLiteral() const
+{
+	return e4c::returned(m_typeLiteral);
+}
+
 
 

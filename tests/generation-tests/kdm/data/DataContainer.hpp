@@ -24,15 +24,16 @@ public:
 	DataContainer();
 	virtual ~DataContainer();
 
-	typedef boost::ptr_set < kdm::data::DataResource > dataElement_t;
+	typedef std::set < kdm::data::DataResource_ptr > dataElement_t;
 
 	
-	// TODO
+	dataElement_t getDataElement() const;
 
-	
+
+	std::set < std::unique_ptr < kdm::data::DataResource > > m_dataElement;
+
+		
 protected:
-
-	dataElement_t m_dataElement;
 
 };
 

@@ -21,4 +21,7 @@
 #include <xpand3/statement/ProtectStatement.hpp>
 #include <xpand3/statement/TextStatement.hpp>
 
+#include <xpand3/statement/StatementFactory.hpp>
+#include <xpand3/statement/StatementPackage.hpp>
+
 #endif // EMF_CPP_XPAND3_STATEMENT_INC_HPP

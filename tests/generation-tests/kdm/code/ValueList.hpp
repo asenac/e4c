@@ -24,15 +24,16 @@ public:
 	ValueList();
 	virtual ~ValueList();
 
-	typedef boost::ptr_vector < kdm::code::ValueElement > valueElement_t;
+	typedef std::vector < kdm::code::ValueElement_ptr > valueElement_t;
 
 	
-	// TODO
+	valueElement_t getValueElement() const;
 
-	
+
+	std::vector < std::unique_ptr < kdm::code::ValueElement > > m_valueElement;
+
+		
 protected:
-
-	valueElement_t m_valueElement;
 
 };
 

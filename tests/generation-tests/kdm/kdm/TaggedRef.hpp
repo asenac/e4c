@@ -27,12 +27,13 @@ public:
 	typedef kdm::core::ModelElement_ptr reference_t;
 
 	
-	// TODO
+	reference_t getReference() const;
 
-	
+
+	kdm::core::ModelElement_ptr m_reference;
+
+		
 protected:
-
-	reference_t m_reference;
 
 };
 

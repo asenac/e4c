@@ -25,12 +25,13 @@ public:
 	typedef emof::Enumeration_ptr enumeration_t;
 
 	
-	// TODO
+	enumeration_t getEnumeration() const;
 
-	
+
+	emof::Enumeration_ptr m_enumeration;
+
+		
 protected:
-
-	enumeration_t m_enumeration;
 
 };
 

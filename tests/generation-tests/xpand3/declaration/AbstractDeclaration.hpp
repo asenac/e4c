@@ -23,26 +23,27 @@ public:
 	
 	virtual ~AbstractDeclaration();
 
-	typedef std::unique_ptr < xpand3::File > owner_t;
-	typedef boost::ptr_vector < xpand3::DeclaredParameter > params_t;
-	typedef int isPrivate_t;
-	typedef std::unique_ptr < xpand3::expression::AbstractExpression > guard_t;
+	typedef xpand3::File_ptr owner_t;
+	typedef std::vector < xpand3::DeclaredParameter_ptr > params_t;
+	typedef ::ecore::EBoolean isPrivate_t;
+	typedef xpand3::expression::AbstractExpression_ptr guard_t;
 
 	
-	// TODO
-	// TODO
+	owner_t getOwner() const;
+	params_t getParams() const;
 	void setIsPrivate(isPrivate_t _isPrivate);
 	isPrivate_t getIsPrivate() const;
-	// TODO
+	guard_t getGuard() const;
 
-	
+
+	std::unique_ptr < xpand3::File > m_owner;
+	std::vector < std::unique_ptr < xpand3::DeclaredParameter > > m_params;
+	isPrivate_t m_isPrivate;
+	std::unique_ptr < xpand3::expression::AbstractExpression > m_guard;
+
+		
 protected:
 	AbstractDeclaration();
-
-	owner_t m_owner;
-	params_t m_params;
-	isPrivate_t m_isPrivate;
-	guard_t m_guard;
 
 };
 

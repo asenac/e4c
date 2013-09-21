@@ -24,15 +24,16 @@ public:
 	ExtensionAspect();
 	virtual ~ExtensionAspect();
 
-	typedef std::unique_ptr < xpand3::expression::AbstractExpression > expression_t;
+	typedef xpand3::expression::AbstractExpression_ptr expression_t;
 
 	
-	// TODO
+	expression_t getExpression() const;
 
-	
+
+	std::unique_ptr < xpand3::expression::AbstractExpression > m_expression;
+
+		
 protected:
-
-	expression_t m_expression;
 
 };
 

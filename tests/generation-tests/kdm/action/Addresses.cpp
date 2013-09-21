@@ -15,5 +15,15 @@ Addresses::~Addresses()
 {
 }
 
+Addresses::to_t Addresses::getTo() const
+{
+	return e4c::returned(m_to);
+}
+
+Addresses::from_t Addresses::getFrom() const
+{
+	return e4c::returned(m_from);
+}
+
 
 

@@ -15,5 +15,15 @@ ManagesData::~ManagesData()
 {
 }
 
+ManagesData::to_t ManagesData::getTo() const
+{
+	return e4c::returned(m_to);
+}
+
+ManagesData::from_t ManagesData::getFrom() const
+{
+	return e4c::returned(m_from);
+}
+
 
 

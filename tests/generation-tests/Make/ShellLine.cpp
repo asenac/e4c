@@ -20,7 +20,7 @@ void ShellLine::setCommand(command_t _command)
 	m_command = _command;;
 }
 
-command_t ShellLine::getCommand() const
+ShellLine::command_t ShellLine::getCommand() const
 {
 	return m_command;
 }
@@ -30,9 +30,14 @@ void ShellLine::setDisplay(display_t _display)
 	m_display = _display;;
 }
 
-display_t ShellLine::getDisplay() const
+ShellLine::display_t ShellLine::getDisplay() const
 {
 	return m_display;
+}
+
+ShellLine::ruleShellLine_t ShellLine::getRuleShellLine() const
+{
+	return e4c::returned(m_ruleShellLine);
 }
 
 

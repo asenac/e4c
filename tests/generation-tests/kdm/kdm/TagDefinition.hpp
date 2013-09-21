@@ -24,8 +24,8 @@ public:
 	TagDefinition();
 	virtual ~TagDefinition();
 
-	typedef int tag_t;
-	typedef int type_t;
+	typedef ::kdm::core::String tag_t;
+	typedef ::kdm::core::String type_t;
 
 	
 	void setTag(tag_t _tag);
@@ -33,11 +33,12 @@ public:
 	void setType(type_t _type);
 	type_t getType() const;
 
-	
-protected:
 
 	tag_t m_tag;
 	type_t m_type;
+
+		
+protected:
 
 };
 

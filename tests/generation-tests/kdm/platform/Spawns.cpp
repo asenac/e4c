@@ -15,5 +15,15 @@ Spawns::~Spawns()
 {
 }
 
+Spawns::to_t Spawns::getTo() const
+{
+	return e4c::returned(m_to);
+}
+
+Spawns::from_t Spawns::getFrom() const
+{
+	return e4c::returned(m_from);
+}
+
 
 

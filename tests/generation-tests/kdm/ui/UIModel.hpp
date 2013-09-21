@@ -24,15 +24,16 @@ public:
 	UIModel();
 	virtual ~UIModel();
 
-	typedef boost::ptr_set < kdm::ui::AbstractUIElement > UIElement_t;
+	typedef std::set < kdm::ui::AbstractUIElement_ptr > UIElement_t;
 
 	
-	// TODO
+	UIElement_t getUIElement() const;
 
-	
+
+	std::set < std::unique_ptr < kdm::ui::AbstractUIElement > > m_UIElement;
+
+		
 protected:
-
-	UIElement_t m_UIElement;
 
 };
 

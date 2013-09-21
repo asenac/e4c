@@ -15,5 +15,15 @@ LetStatement::~LetStatement()
 {
 }
 
+LetStatement::varName_t LetStatement::getVarName() const
+{
+	return e4c::returned(m_varName);
+}
+
+LetStatement::varValue_t LetStatement::getVarValue() const
+{
+	return e4c::returned(m_varValue);
+}
+
 
 

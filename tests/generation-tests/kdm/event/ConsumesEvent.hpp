@@ -28,14 +28,15 @@ public:
 	typedef kdm::event::Transition_ptr from_t;
 
 	
-	// TODO
-	// TODO
+	to_t getTo() const;
+	from_t getFrom() const;
 
-	
+
+	kdm::event::Event_ptr m_to;
+	kdm::event::Transition_ptr m_from;
+
+		
 protected:
-
-	to_t m_to;
-	from_t m_from;
 
 };
 

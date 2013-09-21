@@ -17,7 +17,7 @@ void KDMEntity::setName(name_t _name)
 	m_name = _name;;
 }
 
-name_t KDMEntity::getName() const
+KDMEntity::name_t KDMEntity::getName() const
 {
 	return m_name;
 }

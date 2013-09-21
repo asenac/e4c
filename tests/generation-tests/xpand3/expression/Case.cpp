@@ -14,5 +14,15 @@ Case::~Case()
 {
 }
 
+Case::condition_t Case::getCondition() const
+{
+	return e4c::returned(m_condition);
+}
+
+Case::thenPart_t Case::getThenPart() const
+{
+	return e4c::returned(m_thenPart);
+}
+
 
 

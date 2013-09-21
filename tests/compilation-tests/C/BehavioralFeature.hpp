@@ -22,15 +22,16 @@ public:
 	BehavioralFeature();
 	virtual ~BehavioralFeature();
 
-	typedef boost::ptr_set < C::CParameter > parameters_t;
+	typedef std::set < C::CParameter_ptr > parameters_t;
 
 	
-	// TODO
+	parameters_t getParameters() const;
 
-	
+
+	std::set < std::unique_ptr < C::CParameter > > m_parameters;
+
+		
 protected:
-
-	parameters_t m_parameters;
 
 };
 

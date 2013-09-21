@@ -13,5 +13,10 @@ ResourceType::~ResourceType()
 {
 }
 
+ResourceType::platformElement_t ResourceType::getPlatformElement() const
+{
+	return e4c::returned(m_platformElement);
+}
+
 
 

@@ -45,4 +45,7 @@
 #include <idlmm/Constant.hpp>
 #include <idlmm/NamedElement.hpp>
 
+#include <idlmm/IdlmmFactory.hpp>
+#include <idlmm/IdlmmPackage.hpp>
+
 #endif // EMF_CPP_IDLMM_INC_HPP

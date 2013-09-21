@@ -24,15 +24,16 @@ public:
 	ComplexContentType();
 	virtual ~ComplexContentType();
 
-	typedef boost::ptr_vector < kdm::data::AbstractContentElement > contentElement_t;
+	typedef std::vector < kdm::data::AbstractContentElement_ptr > contentElement_t;
 
 	
-	// TODO
+	contentElement_t getContentElement() const;
 
-	
+
+	std::vector < std::unique_ptr < kdm::data::AbstractContentElement > > m_contentElement;
+
+		
 protected:
-
-	contentElement_t m_contentElement;
 
 };
 

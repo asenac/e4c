@@ -2,6 +2,8 @@
 #define EMF_CPP_KDM_CORE_FWD_HPP
 
 
+#include <e4c/mapping.hpp>
+
 namespace kdm
 {
 namespace core
@@ -14,9 +16,18 @@ class CoreFactory;
 typedef CoreFactory * CoreFactory_ptr;
 
 // Data types
+
+/*PROTECTED REGION ID(typedef_kdm::core::String) START*/
 typedef int String;
+/*PROTECTED REGION END*/
+
+/*PROTECTED REGION ID(typedef_kdm::core::Integer) START*/
 typedef int Integer;
+/*PROTECTED REGION END*/
+
+/*PROTECTED REGION ID(typedef_kdm::core::Boolean) START*/
 typedef int Boolean;
+/*PROTECTED REGION END*/
 
 
 // Classes

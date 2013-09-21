@@ -17,7 +17,7 @@ void CommentUnit::setText(text_t _text)
 	m_text = _text;;
 }
 
-text_t CommentUnit::getText() const
+CommentUnit::text_t CommentUnit::getText() const
 {
 	return m_text;
 }

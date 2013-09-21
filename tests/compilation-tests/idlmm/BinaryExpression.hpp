@@ -22,23 +22,28 @@ public:
 	BinaryExpression();
 	virtual ~BinaryExpression();
 
-	typedef std::unique_ptr < idlmm::Expression > left_t;
-	typedef std::unique_ptr < idlmm::Expression > right_t;
-	typedef int operator_t;
+	typedef idlmm::Expression_ptr left_t;
+	typedef idlmm::Expression_ptr right_t;
+	typedef ::ecore::EString operator_t;
 
 	
-	// TODO
-	// TODO
+	left_t getLeft() const;
+	void setLeft(left_t left_);
+	left_t releaseLeft();
+	right_t getRight() const;
+	void setRight(right_t right_);
+	right_t releaseRight();
 	void setOperator(operator_t _operator);
 	operator_t getOperator() const;
 
-	
+		
 protected:
 
-	left_t m_left;
-	right_t m_right;
+	std::unique_ptr < idlmm::Expression > m_left;
+	std::unique_ptr < idlmm::Expression > m_right;
 	operator_t m_operator;
 
+	
 };
 
 } // idlmm

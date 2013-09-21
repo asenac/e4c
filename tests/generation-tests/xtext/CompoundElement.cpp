@@ -13,5 +13,10 @@ CompoundElement::~CompoundElement()
 {
 }
 
+CompoundElement::elements_t CompoundElement::getElements() const
+{
+	return e4c::returned(m_elements);
+}
+
 
 

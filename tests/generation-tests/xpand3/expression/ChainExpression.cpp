@@ -14,5 +14,15 @@ ChainExpression::~ChainExpression()
 {
 }
 
+ChainExpression::first_t ChainExpression::getFirst() const
+{
+	return e4c::returned(m_first);
+}
+
+ChainExpression::next_t ChainExpression::getNext() const
+{
+	return e4c::returned(m_next);
+}
+
 
 

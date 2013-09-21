@@ -24,18 +24,19 @@ public:
 	FeatureCall();
 	virtual ~FeatureCall();
 
-	typedef std::unique_ptr < xpand3::expression::AbstractExpression > target_t;
-	typedef std::unique_ptr < xpand3::Identifier > name_t;
+	typedef xpand3::expression::AbstractExpression_ptr target_t;
+	typedef xpand3::Identifier_ptr name_t;
 
 	
-	// TODO
-	// TODO
+	target_t getTarget() const;
+	name_t getName() const;
 
-	
+
+	std::unique_ptr < xpand3::expression::AbstractExpression > m_target;
+	std::unique_ptr < xpand3::Identifier > m_name;
+
+		
 protected:
-
-	target_t m_target;
-	name_t m_name;
 
 };
 

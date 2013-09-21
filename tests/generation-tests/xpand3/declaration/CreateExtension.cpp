@@ -13,5 +13,10 @@ CreateExtension::~CreateExtension()
 {
 }
 
+CreateExtension::toBeCreated_t CreateExtension::getToBeCreated() const
+{
+	return e4c::returned(m_toBeCreated);
+}
+
 
 

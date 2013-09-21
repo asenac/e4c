@@ -19,5 +19,25 @@ AbstractUIElement::~AbstractUIElement()
 {
 }
 
+AbstractUIElement::source_t AbstractUIElement::getSource() const
+{
+	return e4c::returned(m_source);
+}
+
+AbstractUIElement::UIRelation_t AbstractUIElement::getUIRelation() const
+{
+	return e4c::returned(m_UIRelation);
+}
+
+AbstractUIElement::implementation_t AbstractUIElement::getImplementation() const
+{
+	return e4c::returned(m_implementation);
+}
+
+AbstractUIElement::abstraction_t AbstractUIElement::getAbstraction() const
+{
+	return e4c::returned(m_abstraction);
+}
+
 
 

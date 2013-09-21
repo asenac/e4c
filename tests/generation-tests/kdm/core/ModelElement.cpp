@@ -15,5 +15,15 @@ ModelElement::~ModelElement()
 {
 }
 
+ModelElement::stereotype_t ModelElement::getStereotype() const
+{
+	return e4c::returned(m_stereotype);
+}
+
+ModelElement::taggedValue_t ModelElement::getTaggedValue() const
+{
+	return e4c::returned(m_taggedValue);
+}
+
 
 

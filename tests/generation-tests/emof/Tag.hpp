@@ -22,23 +22,24 @@ public:
 	Tag();
 	virtual ~Tag();
 
-	typedef std::vector < emof::Element_ptr > element_t;
-	typedef int name_t;
-	typedef int value_t;
+	typedef std::set < emof::Element_ptr > element_t;
+	typedef ::emof::String name_t;
+	typedef ::emof::String value_t;
 
 	
-	// TODO
+	element_t getElement() const;
 	void setName(name_t _name);
 	name_t getName() const;
 	void setValue(value_t _value);
 	value_t getValue() const;
 
-	
-protected:
 
-	element_t m_element;
+	std::set < emof::Element_ptr > m_element;
 	name_t m_name;
 	value_t m_value;
+
+		
+protected:
 
 };
 

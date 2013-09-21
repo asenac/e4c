@@ -15,5 +15,15 @@ Loads::~Loads()
 {
 }
 
+Loads::to_t Loads::getTo() const
+{
+	return e4c::returned(m_to);
+}
+
+Loads::from_t Loads::getFrom() const
+{
+	return e4c::returned(m_from);
+}
+
 
 

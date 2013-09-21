@@ -22,18 +22,19 @@ public:
 	DeclaredParameter();
 	virtual ~DeclaredParameter();
 
-	typedef std::unique_ptr < xpand3::Identifier > name_t;
-	typedef std::unique_ptr < xpand3::Identifier > type_t;
+	typedef xpand3::Identifier_ptr name_t;
+	typedef xpand3::Identifier_ptr type_t;
 
 	
-	// TODO
-	// TODO
+	name_t getName() const;
+	type_t getType() const;
 
-	
+
+	std::unique_ptr < xpand3::Identifier > m_name;
+	std::unique_ptr < xpand3::Identifier > m_type;
+
+		
 protected:
-
-	name_t m_name;
-	type_t m_type;
 
 };
 

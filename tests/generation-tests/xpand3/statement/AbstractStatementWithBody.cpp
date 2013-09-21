@@ -13,5 +13,10 @@ AbstractStatementWithBody::~AbstractStatementWithBody()
 {
 }
 
+AbstractStatementWithBody::body_t AbstractStatementWithBody::getBody() const
+{
+	return e4c::returned(m_body);
+}
+
 
 

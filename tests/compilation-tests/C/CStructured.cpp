@@ -13,5 +13,10 @@ CStructured::~CStructured()
 {
 }
 
+CStructured::contains_t CStructured::getContains() const
+{
+	return e4c::returned(m_contains);
+}
+
 
 

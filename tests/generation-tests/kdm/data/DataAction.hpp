@@ -24,22 +24,23 @@ public:
 	DataAction();
 	virtual ~DataAction();
 
-	typedef int kind_t;
-	typedef std::vector < kdm::action::ActionElement_ptr > implementation_t;
-	typedef boost::ptr_set < kdm::data::DataEvent > dataElement_t;
+	typedef ::kdm::core::String kind_t;
+	typedef std::set < kdm::action::ActionElement_ptr > implementation_t;
+	typedef std::set < kdm::data::DataEvent_ptr > dataElement_t;
 
 	
 	void setKind(kind_t _kind);
 	kind_t getKind() const;
-	// TODO
-	// TODO
+	implementation_t getImplementation() const;
+	dataElement_t getDataElement() const;
 
-	
-protected:
 
 	kind_t m_kind;
-	implementation_t m_implementation;
-	dataElement_t m_dataElement;
+	std::set < kdm::action::ActionElement_ptr > m_implementation;
+	std::set < std::unique_ptr < kdm::data::DataEvent > > m_dataElement;
+
+		
+protected:
 
 };
 

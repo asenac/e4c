@@ -22,8 +22,8 @@ public:
 	Translate();
 	virtual ~Translate();
 
-	typedef int tx_t;
-	typedef int ty_t;
+	typedef ::PrimitiveTypes::Double tx_t;
+	typedef ::PrimitiveTypes::Double ty_t;
 
 	
 	void setTx(tx_t _tx);
@@ -31,11 +31,12 @@ public:
 	void setTy(ty_t _ty);
 	ty_t getTy() const;
 
-	
-protected:
 
 	tx_t m_tx;
 	ty_t m_ty;
+
+		
+protected:
 
 };
 

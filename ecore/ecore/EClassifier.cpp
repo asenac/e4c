@@ -24,7 +24,7 @@ void EClassifier::setInstanceClassName(instanceClassName_t _instanceClassName)
 	m_instanceClassName = _instanceClassName;;
 }
 
-instanceClassName_t EClassifier::getInstanceClassName() const
+EClassifier::instanceClassName_t EClassifier::getInstanceClassName() const
 {
 	return m_instanceClassName;
 }
@@ -34,7 +34,7 @@ void EClassifier::setInstanceClass(instanceClass_t _instanceClass)
 	m_instanceClass = _instanceClass;;
 }
 
-instanceClass_t EClassifier::getInstanceClass() const
+EClassifier::instanceClass_t EClassifier::getInstanceClass() const
 {
 	return m_instanceClass;
 }
@@ -44,7 +44,7 @@ void EClassifier::setDefaultValue(defaultValue_t _defaultValue)
 	m_defaultValue = _defaultValue;;
 }
 
-defaultValue_t EClassifier::getDefaultValue() const
+EClassifier::defaultValue_t EClassifier::getDefaultValue() const
 {
 	return m_defaultValue;
 }
@@ -54,10 +54,32 @@ void EClassifier::setInstanceTypeName(instanceTypeName_t _instanceTypeName)
 	m_instanceTypeName = _instanceTypeName;;
 }
 
-instanceTypeName_t EClassifier::getInstanceTypeName() const
+EClassifier::instanceTypeName_t EClassifier::getInstanceTypeName() const
 {
 	return m_instanceTypeName;
 }
+
+EClassifier::ePackage_t EClassifier::getEPackage() const
+{
+	return e4c::returned(m_ePackage);
+}
+
+void EClassifier::setEPackage(ePackage_t ePackage_)
+{
+	m_ePackage = ePackage_;
+}
+
+
+EClassifier::eTypeParameters_t EClassifier::getETypeParameters() const
+{
+	return e4c::returned(m_eTypeParameters);
+}
+
+void EClassifier::addETypeParameters(ecore::ETypeParameter_ptr eTypeParameters_)
+{
+	m_eTypeParameters.push_back(std::unique_ptr < ecore::ETypeParameter >(eTypeParameters_));
+}
+
 
 
 

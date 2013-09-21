@@ -15,5 +15,15 @@ CodeRelationship::~CodeRelationship()
 {
 }
 
+CodeRelationship::to_t CodeRelationship::getTo() const
+{
+	return e4c::returned(m_to);
+}
+
+CodeRelationship::from_t CodeRelationship::getFrom() const
+{
+	return e4c::returned(m_from);
+}
+
 
 

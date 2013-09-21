@@ -13,5 +13,10 @@ EventResource::~EventResource()
 {
 }
 
+EventResource::eventElement_t EventResource::getEventElement() const
+{
+	return e4c::returned(m_eventElement);
+}
+
 
 

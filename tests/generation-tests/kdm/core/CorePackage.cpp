@@ -9,7 +9,41 @@ using namespace kdm::core;
 CorePackage::CorePackage()
 {
 	m_eFactoryInstance = CoreFactory::_instance();
-	::ecore::EcoreFactor_ptr ecoreFactory = ::ecore::EcoreFactory::_instance();
+	::ecore::EcoreFactory_ptr ecoreFactory = ::ecore::EcoreFactory::_instance();
+	
+	::ecore::EClass_ptr Element_ = ecoreFactory->createEClass();
+	Element_->setName("Element");
+	// m_eClassifiers.push_back(Element_);
+	::ecore::EClass_ptr ModelElement_ = ecoreFactory->createEClass();
+	ModelElement_->setName("ModelElement");
+	// m_eClassifiers.push_back(ModelElement_);
+	::ecore::EClass_ptr KDMEntity_ = ecoreFactory->createEClass();
+	KDMEntity_->setName("KDMEntity");
+	// m_eClassifiers.push_back(KDMEntity_);
+	::ecore::EClass_ptr KDMRelationship_ = ecoreFactory->createEClass();
+	KDMRelationship_->setName("KDMRelationship");
+	// m_eClassifiers.push_back(KDMRelationship_);
+	::ecore::EClass_ptr AggregatedRelationship_ = ecoreFactory->createEClass();
+	AggregatedRelationship_->setName("AggregatedRelationship");
+	// m_eClassifiers.push_back(AggregatedRelationship_);
+	
+	
+	// ModelElement_->addESuperType(Element_);
+	// KDMEntity_->addESuperType(ModelElement_);
+	// KDMRelationship_->addESuperType(ModelElement_);
+	// AggregatedRelationship_->addESuperType(ModelElement_);
+	
+	
+	::ecore::EDataType_ptr String_ = ecoreFactory->createEDataType();
+	String_->setName("String");
+	// m_eClassifiers.push_back(String_);
+	::ecore::EDataType_ptr Integer_ = ecoreFactory->createEDataType();
+	Integer_->setName("Integer");
+	// m_eClassifiers.push_back(Integer_);
+	::ecore::EDataType_ptr Boolean_ = ecoreFactory->createEDataType();
+	Boolean_->setName("Boolean");
+	// m_eClassifiers.push_back(Boolean_);
+	
 	
 }
 

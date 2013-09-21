@@ -13,5 +13,10 @@ InventoryModel::~InventoryModel()
 {
 }
 
+InventoryModel::inventoryElement_t InventoryModel::getInventoryElement() const
+{
+	return e4c::returned(m_inventoryElement);
+}
+
 
 

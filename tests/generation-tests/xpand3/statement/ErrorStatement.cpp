@@ -13,5 +13,10 @@ ErrorStatement::~ErrorStatement()
 {
 }
 
+ErrorStatement::message_t ErrorStatement::getMessage() const
+{
+	return e4c::returned(m_message);
+}
+
 
 

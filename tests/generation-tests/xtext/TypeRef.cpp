@@ -15,5 +15,15 @@ TypeRef::~TypeRef()
 {
 }
 
+TypeRef::metamodel_t TypeRef::getMetamodel() const
+{
+	return e4c::returned(m_metamodel);
+}
+
+TypeRef::classifier_t TypeRef::getClassifier() const
+{
+	return e4c::returned(m_classifier);
+}
+
 
 

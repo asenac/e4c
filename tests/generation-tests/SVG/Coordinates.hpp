@@ -21,8 +21,8 @@ public:
 	
 	virtual ~Coordinates();
 
-	typedef int x_t;
-	typedef int y_t;
+	typedef ::PrimitiveTypes::Double x_t;
+	typedef ::PrimitiveTypes::Double y_t;
 
 	
 	void setX(x_t _x);
@@ -30,12 +30,13 @@ public:
 	void setY(y_t _y);
 	y_t getY() const;
 
-	
-protected:
-	Coordinates();
 
 	x_t m_x;
 	y_t m_y;
+
+		
+protected:
+	Coordinates();
 
 };
 

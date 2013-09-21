@@ -15,5 +15,15 @@ InstanceOf::~InstanceOf()
 {
 }
 
+InstanceOf::to_t InstanceOf::getTo() const
+{
+	return e4c::returned(m_to);
+}
+
+InstanceOf::from_t InstanceOf::getFrom() const
+{
+	return e4c::returned(m_from);
+}
+
 
 

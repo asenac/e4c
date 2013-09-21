@@ -22,19 +22,20 @@ public:
 	Window();
 	virtual ~Window();
 
-	typedef int title_t;
-	typedef boost::ptr_vector < widgetsmm::Widget > children_t;
+	typedef ::ecore::EString title_t;
+	typedef std::vector < widgetsmm::Widget_ptr > children_t;
 
 	
 	void setTitle(title_t _title);
 	title_t getTitle() const;
-	// TODO
+	children_t getChildren() const;
 
-	
-protected:
 
 	title_t m_title;
-	children_t m_children;
+	std::vector < std::unique_ptr < widgetsmm::Widget > > m_children;
+
+		
+protected:
 
 };
 

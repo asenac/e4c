@@ -16,12 +16,22 @@ Package::~Package()
 {
 }
 
+Package::nestedPackage_t Package::getNestedPackage() const
+{
+	return e4c::returned(m_nestedPackage);
+}
+
+Package::ownedType_t Package::getOwnedType() const
+{
+	return e4c::returned(m_ownedType);
+}
+
 void Package::setUri(uri_t _uri)
 {
 	m_uri = _uri;;
 }
 
-uri_t Package::getUri() const
+Package::uri_t Package::getUri() const
 {
 	return m_uri;
 }

@@ -13,5 +13,10 @@ IndexElement::~IndexElement()
 {
 }
 
+IndexElement::implementation_t IndexElement::getImplementation() const
+{
+	return e4c::returned(m_implementation);
+}
+
 
 

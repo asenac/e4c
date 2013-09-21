@@ -13,5 +13,10 @@ Image::~Image()
 {
 }
 
+Image::referee_t Image::getReferee() const
+{
+	return e4c::returned(m_referee);
+}
+
 
 

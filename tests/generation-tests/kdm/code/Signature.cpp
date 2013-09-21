@@ -13,5 +13,10 @@ Signature::~Signature()
 {
 }
 
+Signature::parameterUnit_t Signature::getParameterUnit() const
+{
+	return e4c::returned(m_parameterUnit);
+}
+
 
 

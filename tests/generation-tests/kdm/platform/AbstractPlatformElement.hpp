@@ -23,25 +23,26 @@ public:
 	
 	virtual ~AbstractPlatformElement();
 
-	typedef boost::ptr_set < kdm::source::SourceRef > source_t;
-	typedef boost::ptr_set < kdm::platform::AbstractPlatformRelationship > relation_t;
-	typedef boost::ptr_vector < kdm::action::ActionElement > abstraction_t;
-	typedef std::vector < kdm::code::AbstractCodeElement_ptr > implementation_t;
+	typedef std::set < kdm::source::SourceRef_ptr > source_t;
+	typedef std::set < kdm::platform::AbstractPlatformRelationship_ptr > relation_t;
+	typedef std::vector < kdm::action::ActionElement_ptr > abstraction_t;
+	typedef std::set < kdm::code::AbstractCodeElement_ptr > implementation_t;
 
 	
-	// TODO
-	// TODO
-	// TODO
-	// TODO
+	source_t getSource() const;
+	relation_t getRelation() const;
+	abstraction_t getAbstraction() const;
+	implementation_t getImplementation() const;
 
-	
+
+	std::set < std::unique_ptr < kdm::source::SourceRef > > m_source;
+	std::set < std::unique_ptr < kdm::platform::AbstractPlatformRelationship > > m_relation;
+	std::vector < std::unique_ptr < kdm::action::ActionElement > > m_abstraction;
+	std::set < kdm::code::AbstractCodeElement_ptr > m_implementation;
+
+		
 protected:
 	AbstractPlatformElement();
-
-	source_t m_source;
-	relation_t m_relation;
-	abstraction_t m_abstraction;
-	implementation_t m_implementation;
 
 };
 

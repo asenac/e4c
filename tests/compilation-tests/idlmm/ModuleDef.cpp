@@ -17,7 +17,7 @@ void ModuleDef::setPrefix(prefix_t _prefix)
 	m_prefix = _prefix;;
 }
 
-prefix_t ModuleDef::getPrefix() const
+ModuleDef::prefix_t ModuleDef::getPrefix() const
 {
 	return m_prefix;
 }

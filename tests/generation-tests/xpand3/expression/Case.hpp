@@ -24,18 +24,19 @@ public:
 	Case();
 	virtual ~Case();
 
-	typedef std::unique_ptr < xpand3::expression::AbstractExpression > condition_t;
-	typedef std::unique_ptr < xpand3::expression::AbstractExpression > thenPart_t;
+	typedef xpand3::expression::AbstractExpression_ptr condition_t;
+	typedef xpand3::expression::AbstractExpression_ptr thenPart_t;
 
 	
-	// TODO
-	// TODO
+	condition_t getCondition() const;
+	thenPart_t getThenPart() const;
 
-	
+
+	std::unique_ptr < xpand3::expression::AbstractExpression > m_condition;
+	std::unique_ptr < xpand3::expression::AbstractExpression > m_thenPart;
+
+		
 protected:
-
-	condition_t m_condition;
-	thenPart_t m_thenPart;
 
 };
 

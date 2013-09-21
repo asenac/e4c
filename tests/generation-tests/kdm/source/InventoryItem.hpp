@@ -24,8 +24,8 @@ public:
 	InventoryItem();
 	virtual ~InventoryItem();
 
-	typedef int version_t;
-	typedef int path_t;
+	typedef ::kdm::core::String version_t;
+	typedef ::kdm::core::String path_t;
 
 	
 	void setVersion(version_t _version);
@@ -33,11 +33,12 @@ public:
 	void setPath(path_t _path);
 	path_t getPath() const;
 
-	
-protected:
 
 	version_t m_version;
 	path_t m_path;
+
+		
+protected:
 
 };
 

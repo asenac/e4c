@@ -36,4 +36,7 @@
 #include <kdm/action/ExitFlow.hpp>
 #include <kdm/action/ExceptionFlow.hpp>
 
+#include <kdm/action/ActionFactory.hpp>
+#include <kdm/action/ActionPackage.hpp>
+
 #endif // EMF_CPP_KDM_ACTION_INC_HPP

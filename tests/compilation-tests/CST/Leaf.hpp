@@ -22,9 +22,9 @@ public:
 	Leaf();
 	virtual ~Leaf();
 
-	typedef int value_t;
-	typedef int pos_t;
-	typedef int line_t;
+	typedef ::ecore::EString value_t;
+	typedef ::ecore::EInt pos_t;
+	typedef ::ecore::EInt line_t;
 
 	
 	void setValue(value_t _value);
@@ -34,12 +34,13 @@ public:
 	void setLine(line_t _line);
 	line_t getLine() const;
 
-	
-protected:
 
 	value_t m_value;
 	pos_t m_pos;
 	line_t m_line;
+
+		
+protected:
 
 };
 

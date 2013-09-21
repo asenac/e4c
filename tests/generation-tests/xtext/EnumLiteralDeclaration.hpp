@@ -23,17 +23,18 @@ public:
 	virtual ~EnumLiteralDeclaration();
 
 	typedef ecore::EEnumLiteral_ptr enumLiteral_t;
-	typedef std::unique_ptr < xtext::Keyword > literal_t;
+	typedef xtext::Keyword_ptr literal_t;
 
 	
-	// TODO
-	// TODO
+	enumLiteral_t getEnumLiteral() const;
+	literal_t getLiteral() const;
 
-	
+
+	ecore::EEnumLiteral_ptr m_enumLiteral;
+	std::unique_ptr < xtext::Keyword > m_literal;
+
+		
 protected:
-
-	enumLiteral_t m_enumLiteral;
-	literal_t m_literal;
 
 };
 

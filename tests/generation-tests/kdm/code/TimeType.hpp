@@ -27,10 +27,11 @@ public:
 	
 	
 	
-	
-protected:
 
 	
+		
+protected:
+
 };
 
 } // code

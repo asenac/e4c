@@ -25,25 +25,26 @@ public:
 	virtual ~DataElement();
 
 	typedef kdm::code::Datatype_ptr type_t;
-	typedef int ext_t;
-	typedef int size_t;
-	typedef boost::ptr_set < kdm::code::Datatype > codeElement_t;
+	typedef ::kdm::core::String ext_t;
+	typedef ::kdm::core::Integer size_t;
+	typedef std::set < kdm::code::Datatype_ptr > codeElement_t;
 
 	
-	// TODO
+	type_t getType() const;
 	void setExt(ext_t _ext);
 	ext_t getExt() const;
 	void setSize(size_t _size);
 	size_t getSize() const;
-	// TODO
+	codeElement_t getCodeElement() const;
 
-	
-protected:
 
-	type_t m_type;
+	kdm::code::Datatype_ptr m_type;
 	ext_t m_ext;
 	size_t m_size;
-	codeElement_t m_codeElement;
+	std::set < std::unique_ptr < kdm::code::Datatype > > m_codeElement;
+
+		
+protected:
 
 };
 

@@ -24,15 +24,16 @@ public:
 	DeployedComponent();
 	virtual ~DeployedComponent();
 
-	typedef std::vector < kdm::code::Module_ptr > groupedCode_t;
+	typedef std::set < kdm::code::Module_ptr > groupedCode_t;
 
 	
-	// TODO
+	groupedCode_t getGroupedCode() const;
 
-	
+
+	std::set < kdm::code::Module_ptr > m_groupedCode;
+
+		
 protected:
-
-	groupedCode_t m_groupedCode;
 
 };
 

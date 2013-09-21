@@ -17,4 +17,7 @@
 #include <Make/RuleDep.hpp>
 #include <Make/FileDep.hpp>
 
+#include <Make/MakeFactory.hpp>
+#include <Make/MakePackage.hpp>
+
 #endif // EMF_CPP_MAKE_INC_HPP

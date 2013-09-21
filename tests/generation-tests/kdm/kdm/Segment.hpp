@@ -24,18 +24,19 @@ public:
 	Segment();
 	virtual ~Segment();
 
-	typedef boost::ptr_set < kdm::kdm::Segment > segment_t;
-	typedef boost::ptr_set < kdm::kdm::KDMModel > model_t;
+	typedef std::set < kdm::kdm::Segment_ptr > segment_t;
+	typedef std::set < kdm::kdm::KDMModel_ptr > model_t;
 
 	
-	// TODO
-	// TODO
+	segment_t getSegment() const;
+	model_t getModel() const;
 
-	
+
+	std::set < std::unique_ptr < kdm::kdm::Segment > > m_segment;
+	std::set < std::unique_ptr < kdm::kdm::KDMModel > > m_model;
+
+		
 protected:
-
-	segment_t m_segment;
-	model_t m_model;
 
 };
 

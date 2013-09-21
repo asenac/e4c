@@ -11,4 +11,7 @@
 #include <tree/Leaf.hpp>
 #include <tree/NonTerminal.hpp>
 
+#include <tree/TreeFactory.hpp>
+#include <tree/TreePackage.hpp>
+
 #endif // EMF_CPP_TREE_INC_HPP

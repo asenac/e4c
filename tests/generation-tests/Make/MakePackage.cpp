@@ -9,7 +9,44 @@ using namespace Make;
 MakePackage::MakePackage()
 {
 	m_eFactoryInstance = MakeFactory::_instance();
-	::ecore::EcoreFactor_ptr ecoreFactory = ::ecore::EcoreFactory::_instance();
+	::ecore::EcoreFactory_ptr ecoreFactory = ::ecore::EcoreFactory::_instance();
+	
+	::ecore::EClass_ptr Makefile_ = ecoreFactory->createEClass();
+	Makefile_->setName("Makefile");
+	// m_eClassifiers.push_back(Makefile_);
+	::ecore::EClass_ptr Element_ = ecoreFactory->createEClass();
+	Element_->setName("Element");
+	// m_eClassifiers.push_back(Element_);
+	::ecore::EClass_ptr Rule_ = ecoreFactory->createEClass();
+	Rule_->setName("Rule");
+	// m_eClassifiers.push_back(Rule_);
+	::ecore::EClass_ptr Macro_ = ecoreFactory->createEClass();
+	Macro_->setName("Macro");
+	// m_eClassifiers.push_back(Macro_);
+	::ecore::EClass_ptr ShellLine_ = ecoreFactory->createEClass();
+	ShellLine_->setName("ShellLine");
+	// m_eClassifiers.push_back(ShellLine_);
+	::ecore::EClass_ptr Comment_ = ecoreFactory->createEClass();
+	Comment_->setName("Comment");
+	// m_eClassifiers.push_back(Comment_);
+	::ecore::EClass_ptr Dependency_ = ecoreFactory->createEClass();
+	Dependency_->setName("Dependency");
+	// m_eClassifiers.push_back(Dependency_);
+	::ecore::EClass_ptr RuleDep_ = ecoreFactory->createEClass();
+	RuleDep_->setName("RuleDep");
+	// m_eClassifiers.push_back(RuleDep_);
+	::ecore::EClass_ptr FileDep_ = ecoreFactory->createEClass();
+	FileDep_->setName("FileDep");
+	// m_eClassifiers.push_back(FileDep_);
+	
+	
+	// Rule_->addESuperType(Element_);
+	// Macro_->addESuperType(Element_);
+	// RuleDep_->addESuperType(Dependency_);
+	// FileDep_->addESuperType(Dependency_);
+	
+	
+	
 	
 }
 

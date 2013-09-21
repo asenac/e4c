@@ -24,15 +24,16 @@ public:
 	XMLSchema();
 	virtual ~XMLSchema();
 
-	typedef boost::ptr_set < kdm::data::AbstractContentElement > contentElement_t;
+	typedef std::set < kdm::data::AbstractContentElement_ptr > contentElement_t;
 
 	
-	// TODO
+	contentElement_t getContentElement() const;
 
-	
+
+	std::set < std::unique_ptr < kdm::data::AbstractContentElement > > m_contentElement;
+
+		
 protected:
-
-	contentElement_t m_contentElement;
 
 };
 

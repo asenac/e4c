@@ -24,15 +24,16 @@ public:
 	DerivedType();
 	virtual ~DerivedType();
 
-	typedef std::unique_ptr < kdm::code::ItemUnit > itemUnit_t;
+	typedef kdm::code::ItemUnit_ptr itemUnit_t;
 
 	
-	// TODO
+	itemUnit_t getItemUnit() const;
 
-	
+
+	std::unique_ptr < kdm::code::ItemUnit > m_itemUnit;
+
+		
 protected:
-
-	itemUnit_t m_itemUnit;
 
 };
 

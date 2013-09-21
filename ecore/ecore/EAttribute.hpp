@@ -22,20 +22,23 @@ public:
 	EAttribute();
 	virtual ~EAttribute();
 
-	typedef int iD_t;
+	typedef ::ecore::EBoolean iD_t;
 	typedef ecore::EDataType_ptr eAttributeType_t;
 
 	
 	void setID(iD_t _iD);
 	iD_t getID() const;
-	// TODO
-
+	eAttributeType_t getEAttributeType() const;
 	
+	void setEAttributeType(eAttributeType_t eAttributeType_);
+
+		
 protected:
 
 	iD_t m_iD;
-	eAttributeType_t m_eAttributeType;
+	ecore::EDataType_ptr m_eAttributeType;
 
+	
 };
 
 } // ecore

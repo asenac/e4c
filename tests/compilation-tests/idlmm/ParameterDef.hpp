@@ -22,8 +22,8 @@ public:
 	ParameterDef();
 	virtual ~ParameterDef();
 
-	typedef int identifier_t;
-	typedef int direction_t;
+	typedef ::ecore::EString identifier_t;
+	typedef ::idlmm::ParameterMode direction_t;
 
 	
 	void setIdentifier(identifier_t _identifier);
@@ -31,12 +31,13 @@ public:
 	void setDirection(direction_t _direction);
 	direction_t getDirection() const;
 
-	
+		
 protected:
 
 	identifier_t m_identifier;
 	direction_t m_direction;
 
+	
 };
 
 } // idlmm

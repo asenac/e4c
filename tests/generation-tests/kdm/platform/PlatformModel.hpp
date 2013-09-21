@@ -24,15 +24,16 @@ public:
 	PlatformModel();
 	virtual ~PlatformModel();
 
-	typedef boost::ptr_set < kdm::platform::AbstractPlatformElement > platformElement_t;
+	typedef std::set < kdm::platform::AbstractPlatformElement_ptr > platformElement_t;
 
 	
-	// TODO
+	platformElement_t getPlatformElement() const;
 
-	
+
+	std::set < std::unique_ptr < kdm::platform::AbstractPlatformElement > > m_platformElement;
+
+		
 protected:
-
-	platformElement_t m_platformElement;
 
 };
 

@@ -24,15 +24,16 @@ public:
 	InterfaceUnit();
 	virtual ~InterfaceUnit();
 
-	typedef boost::ptr_vector < kdm::code::CodeItem > codeElement_t;
+	typedef std::vector < kdm::code::CodeItem_ptr > codeElement_t;
 
 	
-	// TODO
+	codeElement_t getCodeElement() const;
 
-	
+
+	std::vector < std::unique_ptr < kdm::code::CodeItem > > m_codeElement;
+
+		
 protected:
-
-	codeElement_t m_codeElement;
 
 };
 

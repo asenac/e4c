@@ -57,4 +57,7 @@
 #include <kdm/data/ContentElement.hpp>
 #include <kdm/data/ManagesData.hpp>
 
+#include <kdm/data/DataFactory.hpp>
+#include <kdm/data/DataPackage.hpp>
+
 #endif // EMF_CPP_KDM_DATA_INC_HPP

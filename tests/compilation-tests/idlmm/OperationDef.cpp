@@ -17,12 +17,23 @@ OperationDef::~OperationDef()
 {
 }
 
+OperationDef::parameters_t OperationDef::getParameters() const
+{
+	return e4c::returned(m_parameters);
+}
+
+void OperationDef::addParameters(idlmm::ParameterDef_ptr parameters_)
+{
+	m_parameters.push_back(std::unique_ptr < idlmm::ParameterDef >(parameters_));
+}
+
+
 void OperationDef::setIsOneway(isOneway_t _isOneway)
 {
 	m_isOneway = _isOneway;;
 }
 
-isOneway_t OperationDef::getIsOneway() const
+OperationDef::isOneway_t OperationDef::getIsOneway() const
 {
 	return m_isOneway;
 }
@@ -32,10 +43,17 @@ void OperationDef::setContexts(contexts_t _contexts)
 	m_contexts = _contexts;;
 }
 
-contexts_t OperationDef::getContexts() const
+OperationDef::contexts_t OperationDef::getContexts() const
 {
 	return m_contexts;
 }
+
+OperationDef::canRaise_t OperationDef::getCanRaise() const
+{
+	return e4c::returned(m_canRaise);
+}
+
+
 
 
 

@@ -14,5 +14,15 @@ HasValue::~HasValue()
 {
 }
 
+HasValue::to_t HasValue::getTo() const
+{
+	return e4c::returned(m_to);
+}
+
+HasValue::from_t HasValue::getFrom() const
+{
+	return e4c::returned(m_from);
+}
+
 
 

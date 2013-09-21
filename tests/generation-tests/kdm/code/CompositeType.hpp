@@ -24,15 +24,16 @@ public:
 	CompositeType();
 	virtual ~CompositeType();
 
-	typedef boost::ptr_vector < kdm::code::ItemUnit > itemUnit_t;
+	typedef std::vector < kdm::code::ItemUnit_ptr > itemUnit_t;
 
 	
-	// TODO
+	itemUnit_t getItemUnit() const;
 
-	
+
+	std::vector < std::unique_ptr < kdm::code::ItemUnit > > m_itemUnit;
+
+		
 protected:
-
-	itemUnit_t m_itemUnit;
 
 };
 

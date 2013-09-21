@@ -26,4 +26,7 @@
 #include <emof/TypedElement.hpp>
 #include <emof/URIExtent.hpp>
 
+#include <emof/EmofFactory.hpp>
+#include <emof/EmofPackage.hpp>
+
 #endif // EMF_CPP_EMOF_INC_HPP

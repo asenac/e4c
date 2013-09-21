@@ -23,25 +23,26 @@ public:
 	
 	virtual ~AbstractStructureElement();
 
-	typedef boost::ptr_set < kdm::core::AggregatedRelationship > aggregated_t;
-	typedef std::vector < kdm::core::KDMEntity_ptr > implementation_t;
-	typedef boost::ptr_set < kdm::structure::AbstractStructureElement > structureElement_t;
-	typedef boost::ptr_set < kdm::structure::AbstractStructureRelationship > structureRelationship_t;
+	typedef std::set < kdm::core::AggregatedRelationship_ptr > aggregated_t;
+	typedef std::set < kdm::core::KDMEntity_ptr > implementation_t;
+	typedef std::set < kdm::structure::AbstractStructureElement_ptr > structureElement_t;
+	typedef std::set < kdm::structure::AbstractStructureRelationship_ptr > structureRelationship_t;
 
 	
-	// TODO
-	// TODO
-	// TODO
-	// TODO
+	aggregated_t getAggregated() const;
+	implementation_t getImplementation() const;
+	structureElement_t getStructureElement() const;
+	structureRelationship_t getStructureRelationship() const;
 
-	
+
+	std::set < std::unique_ptr < kdm::core::AggregatedRelationship > > m_aggregated;
+	std::set < kdm::core::KDMEntity_ptr > m_implementation;
+	std::set < std::unique_ptr < kdm::structure::AbstractStructureElement > > m_structureElement;
+	std::set < std::unique_ptr < kdm::structure::AbstractStructureRelationship > > m_structureRelationship;
+
+		
 protected:
 	AbstractStructureElement();
-
-	aggregated_t m_aggregated;
-	implementation_t m_implementation;
-	structureElement_t m_structureElement;
-	structureRelationship_t m_structureRelationship;
 
 };
 

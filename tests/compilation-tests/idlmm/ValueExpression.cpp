@@ -17,7 +17,7 @@ void ValueExpression::setValue(value_t _value)
 	m_value = _value;;
 }
 
-value_t ValueExpression::getValue() const
+ValueExpression::value_t ValueExpression::getValue() const
 {
 	return m_value;
 }

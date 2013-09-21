@@ -13,5 +13,10 @@ UIModel::~UIModel()
 {
 }
 
+UIModel::UIElement_t UIModel::getUIElement() const
+{
+	return e4c::returned(m_UIElement);
+}
+
 
 

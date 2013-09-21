@@ -9,7 +9,57 @@ using namespace xpand3::statement;
 StatementPackage::StatementPackage()
 {
 	m_eFactoryInstance = StatementFactory::_instance();
-	::ecore::EcoreFactor_ptr ecoreFactory = ::ecore::EcoreFactory::_instance();
+	::ecore::EcoreFactory_ptr ecoreFactory = ::ecore::EcoreFactory::_instance();
+	
+	::ecore::EClass_ptr AbstractStatement_ = ecoreFactory->createEClass();
+	AbstractStatement_->setName("AbstractStatement");
+	// m_eClassifiers.push_back(AbstractStatement_);
+	::ecore::EClass_ptr ExpandStatement_ = ecoreFactory->createEClass();
+	ExpandStatement_->setName("ExpandStatement");
+	// m_eClassifiers.push_back(ExpandStatement_);
+	::ecore::EClass_ptr ExpressionStatement_ = ecoreFactory->createEClass();
+	ExpressionStatement_->setName("ExpressionStatement");
+	// m_eClassifiers.push_back(ExpressionStatement_);
+	::ecore::EClass_ptr ErrorStatement_ = ecoreFactory->createEClass();
+	ErrorStatement_->setName("ErrorStatement");
+	// m_eClassifiers.push_back(ErrorStatement_);
+	::ecore::EClass_ptr AbstractStatementWithBody_ = ecoreFactory->createEClass();
+	AbstractStatementWithBody_->setName("AbstractStatementWithBody");
+	// m_eClassifiers.push_back(AbstractStatementWithBody_);
+	::ecore::EClass_ptr FileStatement_ = ecoreFactory->createEClass();
+	FileStatement_->setName("FileStatement");
+	// m_eClassifiers.push_back(FileStatement_);
+	::ecore::EClass_ptr ForEachStatement_ = ecoreFactory->createEClass();
+	ForEachStatement_->setName("ForEachStatement");
+	// m_eClassifiers.push_back(ForEachStatement_);
+	::ecore::EClass_ptr IfStatement_ = ecoreFactory->createEClass();
+	IfStatement_->setName("IfStatement");
+	// m_eClassifiers.push_back(IfStatement_);
+	::ecore::EClass_ptr LetStatement_ = ecoreFactory->createEClass();
+	LetStatement_->setName("LetStatement");
+	// m_eClassifiers.push_back(LetStatement_);
+	::ecore::EClass_ptr ProtectStatement_ = ecoreFactory->createEClass();
+	ProtectStatement_->setName("ProtectStatement");
+	// m_eClassifiers.push_back(ProtectStatement_);
+	::ecore::EClass_ptr TextStatement_ = ecoreFactory->createEClass();
+	TextStatement_->setName("TextStatement");
+	// m_eClassifiers.push_back(TextStatement_);
+	
+	
+	// AbstractStatement_->addESuperType(SyntaxElement_);
+	// ExpandStatement_->addESuperType(AbstractStatement_);
+	// ExpressionStatement_->addESuperType(AbstractStatement_);
+	// ErrorStatement_->addESuperType(AbstractStatement_);
+	// AbstractStatementWithBody_->addESuperType(AbstractStatement_);
+	// FileStatement_->addESuperType(AbstractStatementWithBody_);
+	// ForEachStatement_->addESuperType(AbstractStatementWithBody_);
+	// IfStatement_->addESuperType(AbstractStatementWithBody_);
+	// LetStatement_->addESuperType(AbstractStatementWithBody_);
+	// ProtectStatement_->addESuperType(AbstractStatementWithBody_);
+	// TextStatement_->addESuperType(AbstractStatement_);
+	
+	
+	
 	
 }
 

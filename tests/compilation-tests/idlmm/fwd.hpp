@@ -2,6 +2,8 @@
 #define EMF_CPP_IDLMM_FWD_HPP
 
 
+#include <e4c/mapping.hpp>
+
 namespace idlmm
 {
 
@@ -12,36 +14,42 @@ class IdlmmFactory;
 typedef IdlmmFactory * IdlmmFactory_ptr;
 
 // Data types
-enum class ParameterMode 
+enum class ParameterMode : int
 {
-PARAM_IN,
-PARAM_OUT,
-PARAM_INOUT};
-enum class PrimitiveKind 
+	PARAM_IN,
+    PARAM_OUT,
+    PARAM_INOUT
+};
+enum class PrimitiveKind : int
 {
-PK_NULL,
-PK_VOID,
-PK_SHORT,
-PK_LONG,
-PK_USHORT,
-PK_ULONG,
-PK_FLOAT,
-PK_DOUBLE,
-PK_BOOLEAN,
-PK_CHAR,
-PK_OCTET,
-PK_ANY,
-PK_LONGDOUBLE,
-PK_WSTRING,
-PK_TYPECODE,
-PK_WCHAR,
-PK_PRINCIPAL,
-PK_STRING,
-PK_ULONGLONG,
-PK_OBJREF,
-PK_LONGLONG};
-typedef int EAny;
-typedef int ETypeCode;
+	PK_NULL,
+    PK_VOID,
+    PK_SHORT,
+    PK_LONG,
+    PK_USHORT,
+    PK_ULONG,
+    PK_FLOAT,
+    PK_DOUBLE,
+    PK_BOOLEAN,
+    PK_CHAR,
+    PK_OCTET,
+    PK_ANY,
+    PK_LONGDOUBLE,
+    PK_WSTRING,
+    PK_TYPECODE,
+    PK_WCHAR,
+    PK_PRINCIPAL,
+    PK_STRING,
+    PK_ULONGLONG,
+    PK_OBJREF,
+    PK_LONGLONG
+};
+
+/*PROTECTED REGION ID(typedef_idlmm::EAny) ENABLED START*/typedef int EAny;
+/*PROTECTED REGION END*/
+
+/*PROTECTED REGION ID(typedef_idlmm::ETypeCode) ENABLED START*/typedef int ETypeCode;
+/*PROTECTED REGION END*/
 
 
 // Classes

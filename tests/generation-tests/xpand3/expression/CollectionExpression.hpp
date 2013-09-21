@@ -24,18 +24,19 @@ public:
 	CollectionExpression();
 	virtual ~CollectionExpression();
 
-	typedef std::unique_ptr < xpand3::expression::AbstractExpression > closure_t;
-	typedef std::unique_ptr < xpand3::Identifier > eleName_t;
+	typedef xpand3::expression::AbstractExpression_ptr closure_t;
+	typedef xpand3::Identifier_ptr eleName_t;
 
 	
-	// TODO
-	// TODO
+	closure_t getClosure() const;
+	eleName_t getEleName() const;
 
-	
+
+	std::unique_ptr < xpand3::expression::AbstractExpression > m_closure;
+	std::unique_ptr < xpand3::Identifier > m_eleName;
+
+		
 protected:
-
-	closure_t m_closure;
-	eleName_t m_eleName;
 
 };
 

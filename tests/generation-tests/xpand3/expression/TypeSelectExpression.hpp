@@ -24,15 +24,16 @@ public:
 	TypeSelectExpression();
 	virtual ~TypeSelectExpression();
 
-	typedef std::unique_ptr < xpand3::Identifier > typeLiteral_t;
+	typedef xpand3::Identifier_ptr typeLiteral_t;
 
 	
-	// TODO
+	typeLiteral_t getTypeLiteral() const;
 
-	
+
+	std::unique_ptr < xpand3::Identifier > m_typeLiteral;
+
+		
 protected:
-
-	typeLiteral_t m_typeLiteral;
 
 };
 

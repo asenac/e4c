@@ -24,4 +24,7 @@
 #include <kdm/conceptual/ConceptualElement.hpp>
 #include <kdm/conceptual/ConceptualRole.hpp>
 
+#include <kdm/conceptual/ConceptualFactory.hpp>
+#include <kdm/conceptual/ConceptualPackage.hpp>
+
 #endif // EMF_CPP_KDM_CONCEPTUAL_INC_HPP

@@ -15,5 +15,15 @@ ManagesResource::~ManagesResource()
 {
 }
 
+ManagesResource::to_t ManagesResource::getTo() const
+{
+	return e4c::returned(m_to);
+}
+
+ManagesResource::from_t ManagesResource::getFrom() const
+{
+	return e4c::returned(m_from);
+}
+
 
 

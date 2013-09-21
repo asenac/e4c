@@ -23,22 +23,23 @@ public:
 	
 	virtual ~AbstractDataElement();
 
-	typedef boost::ptr_set < kdm::source::SourceRef > source_t;
-	typedef boost::ptr_set < kdm::data::AbstractDataRelationship > dataRelation_t;
-	typedef boost::ptr_vector < kdm::action::ActionElement > abstraction_t;
+	typedef std::set < kdm::source::SourceRef_ptr > source_t;
+	typedef std::set < kdm::data::AbstractDataRelationship_ptr > dataRelation_t;
+	typedef std::vector < kdm::action::ActionElement_ptr > abstraction_t;
 
 	
-	// TODO
-	// TODO
-	// TODO
+	source_t getSource() const;
+	dataRelation_t getDataRelation() const;
+	abstraction_t getAbstraction() const;
 
-	
+
+	std::set < std::unique_ptr < kdm::source::SourceRef > > m_source;
+	std::set < std::unique_ptr < kdm::data::AbstractDataRelationship > > m_dataRelation;
+	std::vector < std::unique_ptr < kdm::action::ActionElement > > m_abstraction;
+
+		
 protected:
 	AbstractDataElement();
-
-	source_t m_source;
-	dataRelation_t m_dataRelation;
-	abstraction_t m_abstraction;
 
 };
 

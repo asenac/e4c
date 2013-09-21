@@ -22,23 +22,24 @@ public:
 	Action();
 	virtual ~Action();
 
-	typedef std::unique_ptr < xtext::TypeRef > type_t;
-	typedef int feature_t;
-	typedef int operator_t;
+	typedef xtext::TypeRef_ptr type_t;
+	typedef ::ecore::EString feature_t;
+	typedef ::ecore::EString operator_t;
 
 	
-	// TODO
+	type_t getType() const;
 	void setFeature(feature_t _feature);
 	feature_t getFeature() const;
 	void setOperator(operator_t _operator);
 	operator_t getOperator() const;
 
-	
-protected:
 
-	type_t m_type;
+	std::unique_ptr < xtext::TypeRef > m_type;
 	feature_t m_feature;
 	operator_t m_operator;
+
+		
+protected:
 
 };
 

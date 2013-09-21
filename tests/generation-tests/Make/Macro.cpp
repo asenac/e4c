@@ -17,7 +17,7 @@ void Macro::setValue(value_t _value)
 	m_value = _value;;
 }
 
-value_t Macro::getValue() const
+Macro::value_t Macro::getValue() const
 {
 	return m_value;
 }

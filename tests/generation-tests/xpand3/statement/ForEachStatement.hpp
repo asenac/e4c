@@ -24,24 +24,25 @@ public:
 	ForEachStatement();
 	virtual ~ForEachStatement();
 
-	typedef std::unique_ptr < xpand3::expression::AbstractExpression > target_t;
-	typedef std::unique_ptr < xpand3::expression::AbstractExpression > separator_t;
-	typedef std::unique_ptr < xpand3::Identifier > variable_t;
-	typedef std::unique_ptr < xpand3::Identifier > iteratorName_t;
+	typedef xpand3::expression::AbstractExpression_ptr target_t;
+	typedef xpand3::expression::AbstractExpression_ptr separator_t;
+	typedef xpand3::Identifier_ptr variable_t;
+	typedef xpand3::Identifier_ptr iteratorName_t;
 
 	
-	// TODO
-	// TODO
-	// TODO
-	// TODO
+	target_t getTarget() const;
+	separator_t getSeparator() const;
+	variable_t getVariable() const;
+	iteratorName_t getIteratorName() const;
 
-	
+
+	std::unique_ptr < xpand3::expression::AbstractExpression > m_target;
+	std::unique_ptr < xpand3::expression::AbstractExpression > m_separator;
+	std::unique_ptr < xpand3::Identifier > m_variable;
+	std::unique_ptr < xpand3::Identifier > m_iteratorName;
+
+		
 protected:
-
-	target_t m_target;
-	separator_t m_separator;
-	variable_t m_variable;
-	iteratorName_t m_iteratorName;
 
 };
 

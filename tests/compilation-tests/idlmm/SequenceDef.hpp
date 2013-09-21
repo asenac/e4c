@@ -23,16 +23,19 @@ public:
 	SequenceDef();
 	virtual ~SequenceDef();
 
-	typedef std::unique_ptr < idlmm::Expression > bound_t;
+	typedef idlmm::Expression_ptr bound_t;
 
 	
-	// TODO
+	bound_t getBound() const;
+	void setBound(bound_t bound_);
+	bound_t releaseBound();
 
-	
+		
 protected:
 
-	bound_t m_bound;
+	std::unique_ptr < idlmm::Expression > m_bound;
 
+	
 };
 
 } // idlmm

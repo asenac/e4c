@@ -15,5 +15,15 @@ Rule::~Rule()
 {
 }
 
+Rule::dependencies_t Rule::getDependencies() const
+{
+	return e4c::returned(m_dependencies);
+}
+
+Rule::shellLines_t Rule::getShellLines() const
+{
+	return e4c::returned(m_shellLines);
+}
+
 
 

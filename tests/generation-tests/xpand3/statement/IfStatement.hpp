@@ -24,18 +24,19 @@ public:
 	IfStatement();
 	virtual ~IfStatement();
 
-	typedef std::unique_ptr < xpand3::expression::AbstractExpression > condition_t;
-	typedef std::unique_ptr < xpand3::statement::IfStatement > elseIf_t;
+	typedef xpand3::expression::AbstractExpression_ptr condition_t;
+	typedef xpand3::statement::IfStatement_ptr elseIf_t;
 
 	
-	// TODO
-	// TODO
+	condition_t getCondition() const;
+	elseIf_t getElseIf() const;
 
-	
+
+	std::unique_ptr < xpand3::expression::AbstractExpression > m_condition;
+	std::unique_ptr < xpand3::statement::IfStatement > m_elseIf;
+
+		
 protected:
-
-	condition_t m_condition;
-	elseIf_t m_elseIf;
 
 };
 

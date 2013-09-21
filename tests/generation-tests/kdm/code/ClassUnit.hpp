@@ -24,19 +24,20 @@ public:
 	ClassUnit();
 	virtual ~ClassUnit();
 
-	typedef int isAbstract_t;
-	typedef boost::ptr_vector < kdm::code::CodeItem > codeElement_t;
+	typedef ::kdm::core::Boolean isAbstract_t;
+	typedef std::vector < kdm::code::CodeItem_ptr > codeElement_t;
 
 	
 	void setIsAbstract(isAbstract_t _isAbstract);
 	isAbstract_t getIsAbstract() const;
-	// TODO
+	codeElement_t getCodeElement() const;
 
-	
-protected:
 
 	isAbstract_t m_isAbstract;
-	codeElement_t m_codeElement;
+	std::vector < std::unique_ptr < kdm::code::CodeItem > > m_codeElement;
+
+		
+protected:
 
 };
 

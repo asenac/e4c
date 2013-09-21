@@ -17,7 +17,7 @@ void DataEvent::setKind(kind_t _kind)
 	m_kind = _kind;;
 }
 
-kind_t DataEvent::getKind() const
+DataEvent::kind_t DataEvent::getKind() const
 {
 	return m_kind;
 }

@@ -24,15 +24,16 @@ public:
 	OperationCall();
 	virtual ~OperationCall();
 
-	typedef boost::ptr_vector < xpand3::expression::AbstractExpression > params_t;
+	typedef std::vector < xpand3::expression::AbstractExpression_ptr > params_t;
 
 	
-	// TODO
+	params_t getParams() const;
 
-	
+
+	std::vector < std::unique_ptr < xpand3::expression::AbstractExpression > > m_params;
+
+		
 protected:
-
-	params_t m_params;
 
 };
 

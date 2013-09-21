@@ -26,12 +26,13 @@ public:
 	typedef emof::Operation_ptr operation_t;
 
 	
-	// TODO
+	operation_t getOperation() const;
 
-	
+
+	emof::Operation_ptr m_operation;
+
+		
 protected:
-
-	operation_t m_operation;
 
 };
 

@@ -13,5 +13,10 @@ ColumnSet::~ColumnSet()
 {
 }
 
+ColumnSet::itemUnit_t ColumnSet::getItemUnit() const
+{
+	return e4c::returned(m_itemUnit);
+}
+
 
 

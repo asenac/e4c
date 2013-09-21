@@ -22,13 +22,13 @@ public:
 	Marker();
 	virtual ~Marker();
 
-	typedef int markerUnits_t;
-	typedef int refX_t;
-	typedef int refY_t;
-	typedef int markerWidth_t;
-	typedef int markerHeight_t;
-	typedef int orient_t;
-	typedef boost::ptr_set < SVG::Element > drawing_t;
+	typedef ::PrimitiveTypes::String markerUnits_t;
+	typedef ::PrimitiveTypes::Double refX_t;
+	typedef ::PrimitiveTypes::Double refY_t;
+	typedef ::PrimitiveTypes::Double markerWidth_t;
+	typedef ::PrimitiveTypes::Double markerHeight_t;
+	typedef ::PrimitiveTypes::String orient_t;
+	typedef std::set < SVG::Element_ptr > drawing_t;
 
 	
 	void setMarkerUnits(markerUnits_t _markerUnits);
@@ -43,10 +43,8 @@ public:
 	markerHeight_t getMarkerHeight() const;
 	void setOrient(orient_t _orient);
 	orient_t getOrient() const;
-	// TODO
+	drawing_t getDrawing() const;
 
-	
-protected:
 
 	markerUnits_t m_markerUnits;
 	refX_t m_refX;
@@ -54,7 +52,10 @@ protected:
 	markerWidth_t m_markerWidth;
 	markerHeight_t m_markerHeight;
 	orient_t m_orient;
-	drawing_t m_drawing;
+	std::set < std::unique_ptr < SVG::Element > > m_drawing;
+
+		
+protected:
 
 };
 

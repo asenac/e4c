@@ -22,22 +22,23 @@ public:
 	Package();
 	virtual ~Package();
 
-	typedef boost::ptr_set < emof::Package > nestedPackage_t;
-	typedef boost::ptr_set < emof::Type > ownedType_t;
-	typedef int uri_t;
+	typedef std::set < emof::Package_ptr > nestedPackage_t;
+	typedef std::set < emof::Type_ptr > ownedType_t;
+	typedef ::emof::String uri_t;
 
 	
-	// TODO
-	// TODO
+	nestedPackage_t getNestedPackage() const;
+	ownedType_t getOwnedType() const;
 	void setUri(uri_t _uri);
 	uri_t getUri() const;
 
-	
-protected:
 
-	nestedPackage_t m_nestedPackage;
-	ownedType_t m_ownedType;
+	std::set < std::unique_ptr < emof::Package > > m_nestedPackage;
+	std::set < std::unique_ptr < emof::Type > > m_ownedType;
 	uri_t m_uri;
+
+		
+protected:
 
 };
 

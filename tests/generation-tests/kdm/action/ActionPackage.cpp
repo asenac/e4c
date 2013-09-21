@@ -9,7 +9,113 @@ using namespace kdm::action;
 ActionPackage::ActionPackage()
 {
 	m_eFactoryInstance = ActionFactory::_instance();
-	::ecore::EcoreFactor_ptr ecoreFactory = ::ecore::EcoreFactory::_instance();
+	::ecore::EcoreFactory_ptr ecoreFactory = ::ecore::EcoreFactory::_instance();
+	
+	::ecore::EClass_ptr ActionElement_ = ecoreFactory->createEClass();
+	ActionElement_->setName("ActionElement");
+	// m_eClassifiers.push_back(ActionElement_);
+	::ecore::EClass_ptr AbstractActionRelationship_ = ecoreFactory->createEClass();
+	AbstractActionRelationship_->setName("AbstractActionRelationship");
+	// m_eClassifiers.push_back(AbstractActionRelationship_);
+	::ecore::EClass_ptr ControlFlow_ = ecoreFactory->createEClass();
+	ControlFlow_->setName("ControlFlow");
+	// m_eClassifiers.push_back(ControlFlow_);
+	::ecore::EClass_ptr Calls_ = ecoreFactory->createEClass();
+	Calls_->setName("Calls");
+	// m_eClassifiers.push_back(Calls_);
+	::ecore::EClass_ptr Creates_ = ecoreFactory->createEClass();
+	Creates_->setName("Creates");
+	// m_eClassifiers.push_back(Creates_);
+	::ecore::EClass_ptr Reads_ = ecoreFactory->createEClass();
+	Reads_->setName("Reads");
+	// m_eClassifiers.push_back(Reads_);
+	::ecore::EClass_ptr Writes_ = ecoreFactory->createEClass();
+	Writes_->setName("Writes");
+	// m_eClassifiers.push_back(Writes_);
+	::ecore::EClass_ptr CompliesTo_ = ecoreFactory->createEClass();
+	CompliesTo_->setName("CompliesTo");
+	// m_eClassifiers.push_back(CompliesTo_);
+	::ecore::EClass_ptr Flow_ = ecoreFactory->createEClass();
+	Flow_->setName("Flow");
+	// m_eClassifiers.push_back(Flow_);
+	::ecore::EClass_ptr TrueFlow_ = ecoreFactory->createEClass();
+	TrueFlow_->setName("TrueFlow");
+	// m_eClassifiers.push_back(TrueFlow_);
+	::ecore::EClass_ptr FalseFlow_ = ecoreFactory->createEClass();
+	FalseFlow_->setName("FalseFlow");
+	// m_eClassifiers.push_back(FalseFlow_);
+	::ecore::EClass_ptr GuardedFlow_ = ecoreFactory->createEClass();
+	GuardedFlow_->setName("GuardedFlow");
+	// m_eClassifiers.push_back(GuardedFlow_);
+	::ecore::EClass_ptr UsesType_ = ecoreFactory->createEClass();
+	UsesType_->setName("UsesType");
+	// m_eClassifiers.push_back(UsesType_);
+	::ecore::EClass_ptr Addresses_ = ecoreFactory->createEClass();
+	Addresses_->setName("Addresses");
+	// m_eClassifiers.push_back(Addresses_);
+	::ecore::EClass_ptr ActionRelationship_ = ecoreFactory->createEClass();
+	ActionRelationship_->setName("ActionRelationship");
+	// m_eClassifiers.push_back(ActionRelationship_);
+	::ecore::EClass_ptr Throws_ = ecoreFactory->createEClass();
+	Throws_->setName("Throws");
+	// m_eClassifiers.push_back(Throws_);
+	::ecore::EClass_ptr Dispatches_ = ecoreFactory->createEClass();
+	Dispatches_->setName("Dispatches");
+	// m_eClassifiers.push_back(Dispatches_);
+	::ecore::EClass_ptr EntryFlow_ = ecoreFactory->createEClass();
+	EntryFlow_->setName("EntryFlow");
+	// m_eClassifiers.push_back(EntryFlow_);
+	::ecore::EClass_ptr BlockUnit_ = ecoreFactory->createEClass();
+	BlockUnit_->setName("BlockUnit");
+	// m_eClassifiers.push_back(BlockUnit_);
+	::ecore::EClass_ptr ExceptionUnit_ = ecoreFactory->createEClass();
+	ExceptionUnit_->setName("ExceptionUnit");
+	// m_eClassifiers.push_back(ExceptionUnit_);
+	::ecore::EClass_ptr TryUnit_ = ecoreFactory->createEClass();
+	TryUnit_->setName("TryUnit");
+	// m_eClassifiers.push_back(TryUnit_);
+	::ecore::EClass_ptr FinallyUnit_ = ecoreFactory->createEClass();
+	FinallyUnit_->setName("FinallyUnit");
+	// m_eClassifiers.push_back(FinallyUnit_);
+	::ecore::EClass_ptr CatchUnit_ = ecoreFactory->createEClass();
+	CatchUnit_->setName("CatchUnit");
+	// m_eClassifiers.push_back(CatchUnit_);
+	::ecore::EClass_ptr ExitFlow_ = ecoreFactory->createEClass();
+	ExitFlow_->setName("ExitFlow");
+	// m_eClassifiers.push_back(ExitFlow_);
+	::ecore::EClass_ptr ExceptionFlow_ = ecoreFactory->createEClass();
+	ExceptionFlow_->setName("ExceptionFlow");
+	// m_eClassifiers.push_back(ExceptionFlow_);
+	
+	
+	// ActionElement_->addESuperType(AbstractCodeElement_);
+	// AbstractActionRelationship_->addESuperType(KDMRelationship_);
+	// ControlFlow_->addESuperType(AbstractActionRelationship_);
+	// Calls_->addESuperType(AbstractActionRelationship_);
+	// Creates_->addESuperType(AbstractActionRelationship_);
+	// Reads_->addESuperType(AbstractActionRelationship_);
+	// Writes_->addESuperType(AbstractActionRelationship_);
+	// CompliesTo_->addESuperType(AbstractActionRelationship_);
+	// Flow_->addESuperType(ControlFlow_);
+	// TrueFlow_->addESuperType(ControlFlow_);
+	// FalseFlow_->addESuperType(ControlFlow_);
+	// GuardedFlow_->addESuperType(ControlFlow_);
+	// UsesType_->addESuperType(AbstractActionRelationship_);
+	// Addresses_->addESuperType(AbstractActionRelationship_);
+	// ActionRelationship_->addESuperType(AbstractActionRelationship_);
+	// Throws_->addESuperType(AbstractActionRelationship_);
+	// Dispatches_->addESuperType(AbstractActionRelationship_);
+	// EntryFlow_->addESuperType(AbstractActionRelationship_);
+	// BlockUnit_->addESuperType(ActionElement_);
+	// ExceptionUnit_->addESuperType(BlockUnit_);
+	// TryUnit_->addESuperType(ExceptionUnit_);
+	// FinallyUnit_->addESuperType(ExceptionUnit_);
+	// CatchUnit_->addESuperType(ExceptionUnit_);
+	// ExitFlow_->addESuperType(AbstractActionRelationship_);
+	// ExceptionFlow_->addESuperType(AbstractActionRelationship_);
+	
+	
+	
 	
 }
 

@@ -2,6 +2,8 @@
 #define EMF_CPP_TREE_FWD_HPP
 
 
+#include <e4c/mapping.hpp>
+
 namespace tree
 {
 

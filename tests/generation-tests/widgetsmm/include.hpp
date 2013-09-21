@@ -13,4 +13,7 @@
 #include <widgetsmm/Window.hpp>
 #include <widgetsmm/Property.hpp>
 
+#include <widgetsmm/WidgetsmmFactory.hpp>
+#include <widgetsmm/WidgetsmmPackage.hpp>
+
 #endif // EMF_CPP_WIDGETSMM_INC_HPP

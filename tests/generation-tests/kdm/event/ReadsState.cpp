@@ -15,5 +15,15 @@ ReadsState::~ReadsState()
 {
 }
 
+ReadsState::to_t ReadsState::getTo() const
+{
+	return e4c::returned(m_to);
+}
+
+ReadsState::from_t ReadsState::getFrom() const
+{
+	return e4c::returned(m_from);
+}
+
 
 

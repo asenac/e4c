@@ -13,5 +13,10 @@ InterfaceUnit::~InterfaceUnit()
 {
 }
 
+InterfaceUnit::codeElement_t InterfaceUnit::getCodeElement() const
+{
+	return e4c::returned(m_codeElement);
+}
+
 
 

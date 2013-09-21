@@ -17,7 +17,7 @@ void CallableUnit::setKind(kind_t _kind)
 	m_kind = _kind;;
 }
 
-kind_t CallableUnit::getKind() const
+CallableUnit::kind_t CallableUnit::getKind() const
 {
 	return m_kind;
 }

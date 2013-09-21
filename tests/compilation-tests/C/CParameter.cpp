@@ -13,5 +13,10 @@ CParameter::~CParameter()
 {
 }
 
+CParameter::behavioralFeature_t CParameter::getBehavioralFeature() const
+{
+	return e4c::returned(m_behavioralFeature);
+}
+
 
 

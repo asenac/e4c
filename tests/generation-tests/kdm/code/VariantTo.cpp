@@ -14,5 +14,15 @@ VariantTo::~VariantTo()
 {
 }
 
+VariantTo::to_t VariantTo::getTo() const
+{
+	return e4c::returned(m_to);
+}
+
+VariantTo::from_t VariantTo::getFrom() const
+{
+	return e4c::returned(m_from);
+}
+
 
 

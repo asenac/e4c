@@ -24,18 +24,19 @@ public:
 	Cast();
 	virtual ~Cast();
 
-	typedef std::unique_ptr < xpand3::Identifier > type_t;
-	typedef std::unique_ptr < xpand3::expression::AbstractExpression > target_t;
+	typedef xpand3::Identifier_ptr type_t;
+	typedef xpand3::expression::AbstractExpression_ptr target_t;
 
 	
-	// TODO
-	// TODO
+	type_t getType() const;
+	target_t getTarget() const;
 
-	
+
+	std::unique_ptr < xpand3::Identifier > m_type;
+	std::unique_ptr < xpand3::expression::AbstractExpression > m_target;
+
+		
 protected:
-
-	type_t m_type;
-	target_t m_target;
 
 };
 

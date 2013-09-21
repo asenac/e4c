@@ -24,8 +24,8 @@ public:
 	TextStatement();
 	virtual ~TextStatement();
 
-	typedef int value_t;
-	typedef int deleteLine_t;
+	typedef ::ecore::EString value_t;
+	typedef ::ecore::EBoolean deleteLine_t;
 
 	
 	void setValue(value_t _value);
@@ -33,11 +33,12 @@ public:
 	void setDeleteLine(deleteLine_t _deleteLine);
 	deleteLine_t getDeleteLine() const;
 
-	
-protected:
 
 	value_t m_value;
 	deleteLine_t m_deleteLine;
+
+		
+protected:
 
 };
 

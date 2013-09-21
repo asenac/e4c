@@ -15,5 +15,15 @@ Dispatches::~Dispatches()
 {
 }
 
+Dispatches::to_t Dispatches::getTo() const
+{
+	return e4c::returned(m_to);
+}
+
+Dispatches::from_t Dispatches::getFrom() const
+{
+	return e4c::returned(m_from);
+}
+
 
 

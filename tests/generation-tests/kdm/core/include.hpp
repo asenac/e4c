@@ -13,4 +13,7 @@
 #include <kdm/core/KDMRelationship.hpp>
 #include <kdm/core/AggregatedRelationship.hpp>
 
+#include <kdm/core/CoreFactory.hpp>
+#include <kdm/core/CorePackage.hpp>
+
 #endif // EMF_CPP_KDM_CORE_INC_HPP

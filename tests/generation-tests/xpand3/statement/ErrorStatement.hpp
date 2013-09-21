@@ -24,15 +24,16 @@ public:
 	ErrorStatement();
 	virtual ~ErrorStatement();
 
-	typedef std::unique_ptr < xpand3::expression::AbstractExpression > message_t;
+	typedef xpand3::expression::AbstractExpression_ptr message_t;
 
 	
-	// TODO
+	message_t getMessage() const;
 
-	
+
+	std::unique_ptr < xpand3::expression::AbstractExpression > m_message;
+
+		
 protected:
-
-	message_t m_message;
 
 };
 

@@ -21,9 +21,19 @@ void DataAction::setKind(kind_t _kind)
 	m_kind = _kind;;
 }
 
-kind_t DataAction::getKind() const
+DataAction::kind_t DataAction::getKind() const
 {
 	return m_kind;
+}
+
+DataAction::implementation_t DataAction::getImplementation() const
+{
+	return e4c::returned(m_implementation);
+}
+
+DataAction::dataElement_t DataAction::getDataElement() const
+{
+	return e4c::returned(m_dataElement);
 }
 
 

@@ -22,19 +22,20 @@ public:
 	ParserRule();
 	virtual ~ParserRule();
 
-	typedef int definesHiddenTokens_t;
-	typedef std::set < xtext::AbstractRule_ptr > hiddenTokens_t;
+	typedef ::ecore::EBoolean definesHiddenTokens_t;
+	typedef std::vector < xtext::AbstractRule_ptr > hiddenTokens_t;
 
 	
 	void setDefinesHiddenTokens(definesHiddenTokens_t _definesHiddenTokens);
 	definesHiddenTokens_t getDefinesHiddenTokens() const;
-	// TODO
+	hiddenTokens_t getHiddenTokens() const;
 
-	
-protected:
 
 	definesHiddenTokens_t m_definesHiddenTokens;
-	hiddenTokens_t m_hiddenTokens;
+	std::vector < xtext::AbstractRule_ptr > m_hiddenTokens;
+
+		
+protected:
 
 };
 

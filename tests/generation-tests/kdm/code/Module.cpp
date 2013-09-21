@@ -13,5 +13,10 @@ Module::~Module()
 {
 }
 
+Module::codeElement_t Module::getCodeElement() const
+{
+	return e4c::returned(m_codeElement);
+}
+
 
 

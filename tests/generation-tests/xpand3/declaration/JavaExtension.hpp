@@ -24,21 +24,22 @@ public:
 	JavaExtension();
 	virtual ~JavaExtension();
 
-	typedef std::unique_ptr < xpand3::Identifier > javaType_t;
-	typedef std::unique_ptr < xpand3::Identifier > javaMethod_t;
-	typedef boost::ptr_vector < xpand3::Identifier > javaParamTypes_t;
+	typedef xpand3::Identifier_ptr javaType_t;
+	typedef xpand3::Identifier_ptr javaMethod_t;
+	typedef std::vector < xpand3::Identifier_ptr > javaParamTypes_t;
 
 	
-	// TODO
-	// TODO
-	// TODO
+	javaType_t getJavaType() const;
+	javaMethod_t getJavaMethod() const;
+	javaParamTypes_t getJavaParamTypes() const;
 
-	
+
+	std::unique_ptr < xpand3::Identifier > m_javaType;
+	std::unique_ptr < xpand3::Identifier > m_javaMethod;
+	std::vector < std::unique_ptr < xpand3::Identifier > > m_javaParamTypes;
+
+		
 protected:
-
-	javaType_t m_javaType;
-	javaMethod_t m_javaMethod;
-	javaParamTypes_t m_javaParamTypes;
 
 };
 

@@ -24,18 +24,19 @@ public:
 	virtual ~DefinedType();
 
 	typedef kdm::code::Datatype_ptr type_t;
-	typedef std::unique_ptr < kdm::code::Datatype > codeElement_t;
+	typedef kdm::code::Datatype_ptr codeElement_t;
 
 	
-	// TODO
-	// TODO
+	type_t getType() const;
+	codeElement_t getCodeElement() const;
 
-	
+
+	kdm::code::Datatype_ptr m_type;
+	std::unique_ptr < kdm::code::Datatype > m_codeElement;
+
+		
 protected:
 	DefinedType();
-
-	type_t m_type;
-	codeElement_t m_codeElement;
 
 };
 

@@ -24,18 +24,19 @@ public:
 	Machine();
 	virtual ~Machine();
 
-	typedef boost::ptr_set < kdm::platform::DeployedComponent > deployedComponent_t;
-	typedef boost::ptr_set < kdm::platform::DeployedResource > deployedResource_t;
+	typedef std::set < kdm::platform::DeployedComponent_ptr > deployedComponent_t;
+	typedef std::set < kdm::platform::DeployedResource_ptr > deployedResource_t;
 
 	
-	// TODO
-	// TODO
+	deployedComponent_t getDeployedComponent() const;
+	deployedResource_t getDeployedResource() const;
 
-	
+
+	std::set < std::unique_ptr < kdm::platform::DeployedComponent > > m_deployedComponent;
+	std::set < std::unique_ptr < kdm::platform::DeployedResource > > m_deployedResource;
+
+		
 protected:
-
-	deployedComponent_t m_deployedComponent;
-	deployedResource_t m_deployedResource;
 
 };
 

@@ -24,15 +24,16 @@ public:
 	GlobalVarExpression();
 	virtual ~GlobalVarExpression();
 
-	typedef std::unique_ptr < xpand3::Identifier > globalVarName_t;
+	typedef xpand3::Identifier_ptr globalVarName_t;
 
 	
-	// TODO
+	globalVarName_t getGlobalVarName() const;
 
-	
+
+	std::unique_ptr < xpand3::Identifier > m_globalVarName;
+
+		
 protected:
-
-	globalVarName_t m_globalVarName;
 
 };
 

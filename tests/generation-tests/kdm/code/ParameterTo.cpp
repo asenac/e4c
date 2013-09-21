@@ -15,5 +15,15 @@ ParameterTo::~ParameterTo()
 {
 }
 
+ParameterTo::to_t ParameterTo::getTo() const
+{
+	return e4c::returned(m_to);
+}
+
+ParameterTo::from_t ParameterTo::getFrom() const
+{
+	return e4c::returned(m_from);
+}
+
 
 

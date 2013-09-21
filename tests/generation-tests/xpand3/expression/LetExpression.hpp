@@ -24,21 +24,22 @@ public:
 	LetExpression();
 	virtual ~LetExpression();
 
-	typedef std::unique_ptr < xpand3::expression::AbstractExpression > varExpression_t;
-	typedef std::unique_ptr < xpand3::expression::AbstractExpression > targetExpression_t;
-	typedef std::unique_ptr < xpand3::Identifier > varName_t;
+	typedef xpand3::expression::AbstractExpression_ptr varExpression_t;
+	typedef xpand3::expression::AbstractExpression_ptr targetExpression_t;
+	typedef xpand3::Identifier_ptr varName_t;
 
 	
-	// TODO
-	// TODO
-	// TODO
+	varExpression_t getVarExpression() const;
+	targetExpression_t getTargetExpression() const;
+	varName_t getVarName() const;
 
-	
+
+	std::unique_ptr < xpand3::expression::AbstractExpression > m_varExpression;
+	std::unique_ptr < xpand3::expression::AbstractExpression > m_targetExpression;
+	std::unique_ptr < xpand3::Identifier > m_varName;
+
+		
 protected:
-
-	varExpression_t m_varExpression;
-	targetExpression_t m_targetExpression;
-	varName_t m_varName;
 
 };
 

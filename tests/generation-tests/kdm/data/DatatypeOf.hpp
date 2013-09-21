@@ -28,14 +28,15 @@ public:
 	typedef kdm::data::ComplexContentType_ptr from_t;
 
 	
-	// TODO
-	// TODO
+	to_t getTo() const;
+	from_t getFrom() const;
 
-	
+
+	kdm::code::Datatype_ptr m_to;
+	kdm::data::ComplexContentType_ptr m_from;
+
+		
 protected:
-
-	to_t m_to;
-	from_t m_from;
 
 };
 

@@ -22,23 +22,24 @@ public:
 	Line();
 	virtual ~Line();
 
-	typedef std::vector < SVG::Point_ptr > between_t;
-	typedef int markerEnd_t;
-	typedef int markerStart_t;
+	typedef std::set < SVG::Point_ptr > between_t;
+	typedef ::PrimitiveTypes::String markerEnd_t;
+	typedef ::PrimitiveTypes::String markerStart_t;
 
 	
-	// TODO
+	between_t getBetween() const;
 	void setMarkerEnd(markerEnd_t _markerEnd);
 	markerEnd_t getMarkerEnd() const;
 	void setMarkerStart(markerStart_t _markerStart);
 	markerStart_t getMarkerStart() const;
 
-	
-protected:
 
-	between_t m_between;
+	std::set < SVG::Point_ptr > m_between;
 	markerEnd_t m_markerEnd;
 	markerStart_t m_markerStart;
+
+		
+protected:
 
 };
 

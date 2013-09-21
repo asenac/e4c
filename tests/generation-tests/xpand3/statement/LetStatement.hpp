@@ -24,18 +24,19 @@ public:
 	LetStatement();
 	virtual ~LetStatement();
 
-	typedef std::unique_ptr < xpand3::Identifier > varName_t;
-	typedef std::unique_ptr < xpand3::expression::AbstractExpression > varValue_t;
+	typedef xpand3::Identifier_ptr varName_t;
+	typedef xpand3::expression::AbstractExpression_ptr varValue_t;
 
 	
-	// TODO
-	// TODO
+	varName_t getVarName() const;
+	varValue_t getVarValue() const;
 
-	
+
+	std::unique_ptr < xpand3::Identifier > m_varName;
+	std::unique_ptr < xpand3::expression::AbstractExpression > m_varValue;
+
+		
 protected:
-
-	varName_t m_varName;
-	varValue_t m_varValue;
 
 };
 

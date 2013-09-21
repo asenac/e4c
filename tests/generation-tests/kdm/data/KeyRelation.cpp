@@ -15,5 +15,15 @@ KeyRelation::~KeyRelation()
 {
 }
 
+KeyRelation::to_t KeyRelation::getTo() const
+{
+	return e4c::returned(m_to);
+}
+
+KeyRelation::from_t KeyRelation::getFrom() const
+{
+	return e4c::returned(m_from);
+}
+
 
 

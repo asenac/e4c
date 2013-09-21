@@ -13,5 +13,10 @@ AbstractInventoryElement::~AbstractInventoryElement()
 {
 }
 
+AbstractInventoryElement::inventoryRelation_t AbstractInventoryElement::getInventoryRelation() const
+{
+	return e4c::returned(m_inventoryRelation);
+}
+
 
 

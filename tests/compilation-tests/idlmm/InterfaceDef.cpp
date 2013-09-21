@@ -23,7 +23,7 @@ void InterfaceDef::setIsAbstract(isAbstract_t _isAbstract)
 	m_isAbstract = _isAbstract;;
 }
 
-isAbstract_t InterfaceDef::getIsAbstract() const
+InterfaceDef::isAbstract_t InterfaceDef::getIsAbstract() const
 {
 	return m_isAbstract;
 }
@@ -33,7 +33,7 @@ void InterfaceDef::setIsCustom(isCustom_t _isCustom)
 	m_isCustom = _isCustom;;
 }
 
-isCustom_t InterfaceDef::getIsCustom() const
+InterfaceDef::isCustom_t InterfaceDef::getIsCustom() const
 {
 	return m_isCustom;
 }
@@ -43,10 +43,28 @@ void InterfaceDef::setIsTruncatable(isTruncatable_t _isTruncatable)
 	m_isTruncatable = _isTruncatable;;
 }
 
-isTruncatable_t InterfaceDef::getIsTruncatable() const
+InterfaceDef::isTruncatable_t InterfaceDef::getIsTruncatable() const
 {
 	return m_isTruncatable;
 }
+
+InterfaceDef::derivesFrom_t InterfaceDef::getDerivesFrom() const
+{
+	return e4c::returned(m_derivesFrom);
+}
+
+
+
+InterfaceDef::forward_t InterfaceDef::getForward() const
+{
+	return e4c::returned(m_forward);
+}
+
+void InterfaceDef::setForward(forward_t forward_)
+{
+	m_forward = forward_;
+}
+
 
 
 

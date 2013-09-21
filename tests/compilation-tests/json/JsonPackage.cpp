@@ -9,7 +9,43 @@ using namespace json;
 JsonPackage::JsonPackage()
 {
 	m_eFactoryInstance = JsonFactory::_instance();
-	::ecore::EcoreFactor_ptr ecoreFactory = ::ecore::EcoreFactory::_instance();
+	::ecore::EcoreFactory_ptr ecoreFactory = ::ecore::EcoreFactory::_instance();
+	
+	::ecore::EClass_ptr ObjectValue_ = ecoreFactory->createEClass();
+	ObjectValue_->setName("ObjectValue");
+	// m_eClassifiers.push_back(ObjectValue_);
+	::ecore::EClass_ptr NVPair_ = ecoreFactory->createEClass();
+	NVPair_->setName("NVPair");
+	// m_eClassifiers.push_back(NVPair_);
+	::ecore::EClass_ptr Value_ = ecoreFactory->createEClass();
+	Value_->setName("Value");
+	// m_eClassifiers.push_back(Value_);
+	::ecore::EClass_ptr StringValue_ = ecoreFactory->createEClass();
+	StringValue_->setName("StringValue");
+	// m_eClassifiers.push_back(StringValue_);
+	::ecore::EClass_ptr NumberValue_ = ecoreFactory->createEClass();
+	NumberValue_->setName("NumberValue");
+	// m_eClassifiers.push_back(NumberValue_);
+	::ecore::EClass_ptr BooleanValue_ = ecoreFactory->createEClass();
+	BooleanValue_->setName("BooleanValue");
+	// m_eClassifiers.push_back(BooleanValue_);
+	::ecore::EClass_ptr ArrayValue_ = ecoreFactory->createEClass();
+	ArrayValue_->setName("ArrayValue");
+	// m_eClassifiers.push_back(ArrayValue_);
+	::ecore::EClass_ptr NullValue_ = ecoreFactory->createEClass();
+	NullValue_->setName("NullValue");
+	// m_eClassifiers.push_back(NullValue_);
+	
+	
+	// ObjectValue_->addESuperType(Value_);
+	// StringValue_->addESuperType(Value_);
+	// NumberValue_->addESuperType(Value_);
+	// BooleanValue_->addESuperType(Value_);
+	// ArrayValue_->addESuperType(Value_);
+	// NullValue_->addESuperType(Value_);
+	
+	
+	
 	
 }
 

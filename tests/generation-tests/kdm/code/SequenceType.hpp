@@ -24,16 +24,17 @@ public:
 	SequenceType();
 	virtual ~SequenceType();
 
-	typedef int size_t;
+	typedef ::kdm::core::Integer size_t;
 
 	
 	void setSize(size_t _size);
 	size_t getSize() const;
 
-	
-protected:
 
 	size_t m_size;
+
+		
+protected:
 
 };
 

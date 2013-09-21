@@ -24,15 +24,16 @@ public:
 	ConceptualContainer();
 	virtual ~ConceptualContainer();
 
-	typedef boost::ptr_set < kdm::conceptual::AbstractConceptualElement > conceptualElement_t;
+	typedef std::set < kdm::conceptual::AbstractConceptualElement_ptr > conceptualElement_t;
 
 	
-	// TODO
+	conceptualElement_t getConceptualElement() const;
 
-	
+
+	std::set < std::unique_ptr < kdm::conceptual::AbstractConceptualElement > > m_conceptualElement;
+
+		
 protected:
-
-	conceptualElement_t m_conceptualElement;
 
 };
 

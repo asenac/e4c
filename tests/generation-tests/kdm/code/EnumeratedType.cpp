@@ -13,5 +13,10 @@ EnumeratedType::~EnumeratedType()
 {
 }
 
+EnumeratedType::value_t EnumeratedType::getValue() const
+{
+	return e4c::returned(m_value);
+}
+
 
 

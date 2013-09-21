@@ -24,22 +24,23 @@ public:
 	Extension();
 	virtual ~Extension();
 
-	typedef int cached_t;
-	typedef std::unique_ptr < xpand3::expression::AbstractExpression > body_t;
-	typedef std::unique_ptr < xpand3::Identifier > returnType_t;
+	typedef ::ecore::EBoolean cached_t;
+	typedef xpand3::expression::AbstractExpression_ptr body_t;
+	typedef xpand3::Identifier_ptr returnType_t;
 
 	
 	void setCached(cached_t _cached);
 	cached_t getCached() const;
-	// TODO
-	// TODO
+	body_t getBody() const;
+	returnType_t getReturnType() const;
 
-	
-protected:
 
 	cached_t m_cached;
-	body_t m_body;
-	returnType_t m_returnType;
+	std::unique_ptr < xpand3::expression::AbstractExpression > m_body;
+	std::unique_ptr < xpand3::Identifier > m_returnType;
+
+		
+protected:
 
 };
 

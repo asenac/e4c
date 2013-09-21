@@ -17,4 +17,7 @@
 #include <xpand3/Identifier.hpp>
 #include <xpand3/DeclaredParameter.hpp>
 
+#include <xpand3/Xpand3Factory.hpp>
+#include <xpand3/Xpand3Package.hpp>
+
 #endif // EMF_CPP_XPAND3_INC_HPP

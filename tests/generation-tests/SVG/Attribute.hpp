@@ -21,16 +21,17 @@ public:
 	
 	virtual ~Attribute();
 
-	typedef std::vector < SVG::Element_ptr > attOwner_t;
+	typedef std::set < SVG::Element_ptr > attOwner_t;
 
 	
-	// TODO
+	attOwner_t getAttOwner() const;
 
-	
+
+	std::set < SVG::Element_ptr > m_attOwner;
+
+		
 protected:
 	Attribute();
-
-	attOwner_t m_attOwner;
 
 };
 

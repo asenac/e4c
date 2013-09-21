@@ -22,15 +22,16 @@ public:
 	CompoundElement();
 	virtual ~CompoundElement();
 
-	typedef boost::ptr_vector < xtext::AbstractElement > elements_t;
+	typedef std::vector < xtext::AbstractElement_ptr > elements_t;
 
 	
-	// TODO
+	elements_t getElements() const;
 
-	
+
+	std::vector < std::unique_ptr < xtext::AbstractElement > > m_elements;
+
+		
 protected:
-
-	elements_t m_elements;
 
 };
 

@@ -13,5 +13,10 @@ NamespaceUnit::~NamespaceUnit()
 {
 }
 
+NamespaceUnit::groupedCode_t NamespaceUnit::getGroupedCode() const
+{
+	return e4c::returned(m_groupedCode);
+}
+
 
 

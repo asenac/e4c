@@ -17,7 +17,7 @@ void IDLType::setTypeCode(typeCode_t _typeCode)
 	m_typeCode = _typeCode;;
 }
 
-typeCode_t IDLType::getTypeCode() const
+IDLType::typeCode_t IDLType::getTypeCode() const
 {
 	return m_typeCode;
 }

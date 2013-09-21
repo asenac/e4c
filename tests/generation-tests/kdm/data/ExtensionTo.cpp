@@ -14,5 +14,15 @@ ExtensionTo::~ExtensionTo()
 {
 }
 
+ExtensionTo::to_t ExtensionTo::getTo() const
+{
+	return e4c::returned(m_to);
+}
+
+ExtensionTo::from_t ExtensionTo::getFrom() const
+{
+	return e4c::returned(m_from);
+}
+
 
 

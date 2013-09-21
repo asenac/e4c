@@ -14,5 +14,15 @@ RestrictionOf::~RestrictionOf()
 {
 }
 
+RestrictionOf::to_t RestrictionOf::getTo() const
+{
+	return e4c::returned(m_to);
+}
+
+RestrictionOf::from_t RestrictionOf::getFrom() const
+{
+	return e4c::returned(m_from);
+}
+
 
 

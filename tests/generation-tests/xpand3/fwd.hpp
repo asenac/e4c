@@ -5,6 +5,8 @@
 #include <xpand3/statement/fwd.hpp>
 #include <xpand3/declaration/fwd.hpp>
 
+#include <e4c/mapping.hpp>
+
 namespace xpand3
 {
 

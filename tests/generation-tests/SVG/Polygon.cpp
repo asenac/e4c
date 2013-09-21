@@ -15,12 +15,17 @@ Polygon::~Polygon()
 {
 }
 
+Polygon::waypoints_t Polygon::getWaypoints() const
+{
+	return e4c::returned(m_waypoints);
+}
+
 void Polygon::setMarkerEnd(markerEnd_t _markerEnd)
 {
 	m_markerEnd = _markerEnd;;
 }
 
-markerEnd_t Polygon::getMarkerEnd() const
+Polygon::markerEnd_t Polygon::getMarkerEnd() const
 {
 	return m_markerEnd;
 }
@@ -30,7 +35,7 @@ void Polygon::setMarkerStart(markerStart_t _markerStart)
 	m_markerStart = _markerStart;;
 }
 
-markerStart_t Polygon::getMarkerStart() const
+Polygon::markerStart_t Polygon::getMarkerStart() const
 {
 	return m_markerStart;
 }

@@ -13,5 +13,10 @@ PlatformModel::~PlatformModel()
 {
 }
 
+PlatformModel::platformElement_t PlatformModel::getPlatformElement() const
+{
+	return e4c::returned(m_platformElement);
+}
+
 
 

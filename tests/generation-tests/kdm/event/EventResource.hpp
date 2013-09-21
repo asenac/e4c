@@ -24,15 +24,16 @@ public:
 	EventResource();
 	virtual ~EventResource();
 
-	typedef boost::ptr_set < kdm::event::AbstractEventElement > eventElement_t;
+	typedef std::set < kdm::event::AbstractEventElement_ptr > eventElement_t;
 
 	
-	// TODO
+	eventElement_t getEventElement() const;
 
-	
+
+	std::set < std::unique_ptr < kdm::event::AbstractEventElement > > m_eventElement;
+
+		
 protected:
-
-	eventElement_t m_eventElement;
 
 };
 

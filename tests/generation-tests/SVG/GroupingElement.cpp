@@ -13,5 +13,10 @@ GroupingElement::~GroupingElement()
 {
 }
 
+GroupingElement::groupContent_t GroupingElement::getGroupContent() const
+{
+	return e4c::returned(m_groupContent);
+}
+
 
 

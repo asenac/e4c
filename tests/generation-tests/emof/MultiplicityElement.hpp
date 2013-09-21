@@ -21,10 +21,10 @@ public:
 	
 	virtual ~MultiplicityElement();
 
-	typedef int isOrdered_t;
-	typedef int isUnique_t;
-	typedef int lower_t;
-	typedef int upper_t;
+	typedef ::emof::Boolean isOrdered_t;
+	typedef ::emof::Boolean isUnique_t;
+	typedef ::emof::Integer lower_t;
+	typedef ::emof::UnlimitedNatural upper_t;
 
 	
 	void setIsOrdered(isOrdered_t _isOrdered);
@@ -36,14 +36,15 @@ public:
 	void setUpper(upper_t _upper);
 	upper_t getUpper() const;
 
-	
-protected:
-	MultiplicityElement();
 
 	isOrdered_t m_isOrdered;
 	isUnique_t m_isUnique;
 	lower_t m_lower;
 	upper_t m_upper;
+
+		
+protected:
+	MultiplicityElement();
 
 };
 

@@ -15,5 +15,15 @@ WritesColumnSet::~WritesColumnSet()
 {
 }
 
+WritesColumnSet::to_t WritesColumnSet::getTo() const
+{
+	return e4c::returned(m_to);
+}
+
+WritesColumnSet::from_t WritesColumnSet::getFrom() const
+{
+	return e4c::returned(m_from);
+}
+
 
 

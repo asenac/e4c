@@ -24,8 +24,8 @@ public:
 	ParameterUnit();
 	virtual ~ParameterUnit();
 
-	typedef int kind_t;
-	typedef int pos_t;
+	typedef ::kdm::code::ParameterKind kind_t;
+	typedef ::kdm::core::Integer pos_t;
 
 	
 	void setKind(kind_t _kind);
@@ -33,11 +33,12 @@ public:
 	void setPos(pos_t _pos);
 	pos_t getPos() const;
 
-	
-protected:
 
 	kind_t m_kind;
 	pos_t m_pos;
+
+		
+protected:
 
 };
 

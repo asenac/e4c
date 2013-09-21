@@ -22,18 +22,19 @@ public:
 	File();
 	virtual ~File();
 
-	typedef boost::ptr_vector < xpand3::ImportStatement > imports_t;
-	typedef boost::ptr_vector < xpand3::declaration::AbstractDeclaration > declarations_t;
+	typedef std::vector < xpand3::ImportStatement_ptr > imports_t;
+	typedef std::vector < xpand3::declaration::AbstractDeclaration_ptr > declarations_t;
 
 	
-	// TODO
-	// TODO
+	imports_t getImports() const;
+	declarations_t getDeclarations() const;
 
-	
+
+	std::vector < std::unique_ptr < xpand3::ImportStatement > > m_imports;
+	std::vector < std::unique_ptr < xpand3::declaration::AbstractDeclaration > > m_declarations;
+
+		
 protected:
-
-	imports_t m_imports;
-	declarations_t m_declarations;
 
 };
 

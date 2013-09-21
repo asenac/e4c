@@ -17,7 +17,7 @@ void Identifier::setValue(value_t _value)
 	m_value = _value;;
 }
 
-value_t Identifier::getValue() const
+Identifier::value_t Identifier::getValue() const
 {
 	return m_value;
 }

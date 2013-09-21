@@ -24,15 +24,16 @@ public:
 	EnumeratedType();
 	virtual ~EnumeratedType();
 
-	typedef boost::ptr_vector < kdm::code::Value > value_t;
+	typedef std::vector < kdm::code::Value_ptr > value_t;
 
 	
-	// TODO
+	value_t getValue() const;
 
-	
+
+	std::vector < std::unique_ptr < kdm::code::Value > > m_value;
+
+		
 protected:
-
-	value_t m_value;
 
 };
 

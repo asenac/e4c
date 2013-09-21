@@ -21,18 +21,19 @@ public:
 	
 	virtual ~ENamedElement();
 
-	typedef int name_t;
+	typedef ::ecore::EString name_t;
 
 	
 	void setName(name_t _name);
 	name_t getName() const;
 
-	
+		
 protected:
 	ENamedElement();
 
 	name_t m_name;
 
+	
 };
 
 } // ecore

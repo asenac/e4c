@@ -22,8 +22,8 @@ public:
 	ComboBox();
 	virtual ~ComboBox();
 
-	typedef int count_t;
-	typedef int currentIndex_t;
+	typedef ::ecore::EInt count_t;
+	typedef ::ecore::EInt currentIndex_t;
 
 	
 	void setCount(count_t _count);
@@ -31,11 +31,12 @@ public:
 	void setCurrentIndex(currentIndex_t _currentIndex);
 	currentIndex_t getCurrentIndex() const;
 
-	
-protected:
 
 	count_t m_count;
 	currentIndex_t m_currentIndex;
+
+		
+protected:
 
 };
 

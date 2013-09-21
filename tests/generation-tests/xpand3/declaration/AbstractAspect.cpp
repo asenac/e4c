@@ -14,12 +14,17 @@ AbstractAspect::~AbstractAspect()
 {
 }
 
+AbstractAspect::pointcut_t AbstractAspect::getPointcut() const
+{
+	return e4c::returned(m_pointcut);
+}
+
 void AbstractAspect::setWildparams(wildparams_t _wildparams)
 {
 	m_wildparams = _wildparams;;
 }
 
-wildparams_t AbstractAspect::getWildparams() const
+AbstractAspect::wildparams_t AbstractAspect::getWildparams() const
 {
 	return m_wildparams;
 }

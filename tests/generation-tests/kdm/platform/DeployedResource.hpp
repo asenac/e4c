@@ -24,15 +24,16 @@ public:
 	DeployedResource();
 	virtual ~DeployedResource();
 
-	typedef boost::ptr_set < kdm::platform::ResourceType > platformElement_t;
+	typedef std::set < kdm::platform::ResourceType_ptr > platformElement_t;
 
 	
-	// TODO
+	platformElement_t getPlatformElement() const;
 
-	
+
+	std::set < std::unique_ptr < kdm::platform::ResourceType > > m_platformElement;
+
+		
 protected:
-
-	platformElement_t m_platformElement;
 
 };
 

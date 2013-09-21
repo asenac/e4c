@@ -18,7 +18,7 @@ void SourceFile::setLanguage(language_t _language)
 	m_language = _language;;
 }
 
-language_t SourceFile::getLanguage() const
+SourceFile::language_t SourceFile::getLanguage() const
 {
 	return m_language;
 }
@@ -28,7 +28,7 @@ void SourceFile::setEncoding(encoding_t _encoding)
 	m_encoding = _encoding;;
 }
 
-encoding_t SourceFile::getEncoding() const
+SourceFile::encoding_t SourceFile::getEncoding() const
 {
 	return m_encoding;
 }

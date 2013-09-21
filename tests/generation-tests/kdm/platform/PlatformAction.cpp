@@ -19,9 +19,14 @@ void PlatformAction::setKind(kind_t _kind)
 	m_kind = _kind;;
 }
 
-kind_t PlatformAction::getKind() const
+PlatformAction::kind_t PlatformAction::getKind() const
 {
 	return m_kind;
+}
+
+PlatformAction::platformElement_t PlatformAction::getPlatformElement() const
+{
+	return e4c::returned(m_platformElement);
 }
 
 

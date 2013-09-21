@@ -20,7 +20,7 @@ void Assignment::setFeature(feature_t _feature)
 	m_feature = _feature;;
 }
 
-feature_t Assignment::getFeature() const
+Assignment::feature_t Assignment::getFeature() const
 {
 	return m_feature;
 }
@@ -30,9 +30,14 @@ void Assignment::setOperator(operator_t _operator)
 	m_operator = _operator;;
 }
 
-operator_t Assignment::getOperator() const
+Assignment::operator_t Assignment::getOperator() const
 {
 	return m_operator;
+}
+
+Assignment::terminal_t Assignment::getTerminal() const
+{
+	return e4c::returned(m_terminal);
 }
 
 

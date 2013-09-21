@@ -15,5 +15,15 @@ ContentItem::~ContentItem()
 {
 }
 
+ContentItem::type_t ContentItem::getType() const
+{
+	return e4c::returned(m_type);
+}
+
+ContentItem::contentElement_t ContentItem::getContentElement() const
+{
+	return e4c::returned(m_contentElement);
+}
+
 
 

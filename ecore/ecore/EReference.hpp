@@ -22,12 +22,12 @@ public:
 	EReference();
 	virtual ~EReference();
 
-	typedef int containment_t;
-	typedef int container_t;
-	typedef int resolveProxies_t;
+	typedef ::ecore::EBoolean containment_t;
+	typedef ::ecore::EBoolean container_t;
+	typedef ::ecore::EBoolean resolveProxies_t;
 	typedef ecore::EReference_ptr eOpposite_t;
 	typedef ecore::EClass_ptr eReferenceType_t;
-	typedef std::set < ecore::EAttribute_ptr > eKeys_t;
+	typedef std::vector < ecore::EAttribute_ptr > eKeys_t;
 
 	
 	void setContainment(containment_t _containment);
@@ -36,20 +36,26 @@ public:
 	container_t getContainer() const;
 	void setResolveProxies(resolveProxies_t _resolveProxies);
 	resolveProxies_t getResolveProxies() const;
-	// TODO
-	// TODO
-	// TODO
-
+	eOpposite_t getEOpposite() const;
 	
+	void setEOpposite(eOpposite_t eOpposite_);
+	eReferenceType_t getEReferenceType() const;
+	
+	void setEReferenceType(eReferenceType_t eReferenceType_);
+	eKeys_t getEKeys() const;
+	
+
+		
 protected:
 
 	containment_t m_containment;
 	container_t m_container;
 	resolveProxies_t m_resolveProxies;
-	eOpposite_t m_eOpposite;
-	eReferenceType_t m_eReferenceType;
-	eKeys_t m_eKeys;
+	ecore::EReference_ptr m_eOpposite;
+	ecore::EClass_ptr m_eReferenceType;
+	std::vector < ecore::EAttribute_ptr > m_eKeys;
 
+	
 };
 
 } // ecore

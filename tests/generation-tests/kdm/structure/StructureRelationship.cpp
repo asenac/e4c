@@ -15,5 +15,15 @@ StructureRelationship::~StructureRelationship()
 {
 }
 
+StructureRelationship::to_t StructureRelationship::getTo() const
+{
+	return e4c::returned(m_to);
+}
+
+StructureRelationship::from_t StructureRelationship::getFrom() const
+{
+	return e4c::returned(m_from);
+}
+
 
 

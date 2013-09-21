@@ -27,12 +27,13 @@ public:
 	typedef kdm::conceptual::AbstractConceptualElement_ptr conceptualElement_t;
 
 	
-	// TODO
+	conceptualElement_t getConceptualElement() const;
 
-	
+
+	kdm::conceptual::AbstractConceptualElement_ptr m_conceptualElement;
+
+		
 protected:
-
-	conceptualElement_t m_conceptualElement;
 
 };
 

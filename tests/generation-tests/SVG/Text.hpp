@@ -22,8 +22,8 @@ public:
 	Text();
 	virtual ~Text();
 
-	typedef int lengthAdjust_t;
-	typedef int content_t;
+	typedef ::PrimitiveTypes::String lengthAdjust_t;
+	typedef ::PrimitiveTypes::String content_t;
 
 	
 	void setLengthAdjust(lengthAdjust_t _lengthAdjust);
@@ -31,11 +31,12 @@ public:
 	void setContent(content_t _content);
 	content_t getContent() const;
 
-	
-protected:
 
 	lengthAdjust_t m_lengthAdjust;
 	content_t m_content;
+
+		
+protected:
 
 };
 

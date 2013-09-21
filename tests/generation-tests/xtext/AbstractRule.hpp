@@ -22,22 +22,23 @@ public:
 	AbstractRule();
 	virtual ~AbstractRule();
 
-	typedef int name_t;
-	typedef std::unique_ptr < xtext::TypeRef > type_t;
-	typedef std::unique_ptr < xtext::AbstractElement > alternatives_t;
+	typedef ::ecore::EString name_t;
+	typedef xtext::TypeRef_ptr type_t;
+	typedef xtext::AbstractElement_ptr alternatives_t;
 
 	
 	void setName(name_t _name);
 	name_t getName() const;
-	// TODO
-	// TODO
+	type_t getType() const;
+	alternatives_t getAlternatives() const;
 
-	
-protected:
 
 	name_t m_name;
-	type_t m_type;
-	alternatives_t m_alternatives;
+	std::unique_ptr < xtext::TypeRef > m_type;
+	std::unique_ptr < xtext::AbstractElement > m_alternatives;
+
+		
+protected:
 
 };
 

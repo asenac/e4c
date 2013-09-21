@@ -9,7 +9,13 @@ using namespace kdm;
 KdmPackage::KdmPackage()
 {
 	m_eFactoryInstance = KdmFactory::_instance();
-	::ecore::EcoreFactor_ptr ecoreFactory = ::ecore::EcoreFactory::_instance();
+	::ecore::EcoreFactory_ptr ecoreFactory = ::ecore::EcoreFactory::_instance();
+	
+	
+	
+	
+	
+	
 	
 }
 

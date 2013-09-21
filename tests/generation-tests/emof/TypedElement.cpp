@@ -13,5 +13,10 @@ TypedElement::~TypedElement()
 {
 }
 
+TypedElement::type_t TypedElement::getType() const
+{
+	return e4c::returned(m_type);
+}
+
 
 

@@ -22,15 +22,15 @@ public:
 	Svg();
 	virtual ~Svg();
 
-	typedef std::vector < SVG::SvgFile_ptr > owner_SVG_t;
-	typedef boost::ptr_vector < SVG::Element > children_t;
-	typedef int namespace_t;
-	typedef int version_t;
-	typedef int baseProfile_t;
+	typedef std::set < SVG::SvgFile_ptr > owner_SVG_t;
+	typedef std::vector < SVG::Element_ptr > children_t;
+	typedef ::PrimitiveTypes::String namespace_t;
+	typedef ::PrimitiveTypes::String version_t;
+	typedef ::PrimitiveTypes::String baseProfile_t;
 
 	
-	// TODO
-	// TODO
+	owner_SVG_t getOwner_SVG() const;
+	children_t getChildren() const;
 	void setNamespace(namespace_t _namespace);
 	namespace_t getNamespace() const;
 	void setVersion(version_t _version);
@@ -38,14 +38,15 @@ public:
 	void setBaseProfile(baseProfile_t _baseProfile);
 	baseProfile_t getBaseProfile() const;
 
-	
-protected:
 
-	owner_SVG_t m_owner_SVG;
-	children_t m_children;
+	std::set < SVG::SvgFile_ptr > m_owner_SVG;
+	std::vector < std::unique_ptr < SVG::Element > > m_children;
 	namespace_t m_namespace;
 	version_t m_version;
 	baseProfile_t m_baseProfile;
+
+		
+protected:
 
 };
 

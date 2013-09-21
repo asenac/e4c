@@ -23,15 +23,16 @@ public:
 	CStructured();
 	virtual ~CStructured();
 
-	typedef boost::ptr_set < C::CStructureContents > contains_t;
+	typedef std::set < C::CStructureContents_ptr > contains_t;
 
 	
-	// TODO
+	contains_t getContains() const;
 
-	
+
+	std::set < std::unique_ptr < C::CStructureContents > > m_contains;
+
+		
 protected:
-
-	contains_t m_contains;
 
 };
 

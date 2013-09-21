@@ -14,5 +14,15 @@ ExitFlow::~ExitFlow()
 {
 }
 
+ExitFlow::to_t ExitFlow::getTo() const
+{
+	return e4c::returned(m_to);
+}
+
+ExitFlow::from_t ExitFlow::getFrom() const
+{
+	return e4c::returned(m_from);
+}
+
 
 

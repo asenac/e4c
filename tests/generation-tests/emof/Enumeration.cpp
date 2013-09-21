@@ -13,5 +13,10 @@ Enumeration::~Enumeration()
 {
 }
 
+Enumeration::ownedLiteral_t Enumeration::getOwnedLiteral() const
+{
+	return e4c::returned(m_ownedLiteral);
+}
+
 
 

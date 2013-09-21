@@ -25,7 +25,7 @@ void EReference::setContainment(containment_t _containment)
 	m_containment = _containment;;
 }
 
-containment_t EReference::getContainment() const
+EReference::containment_t EReference::getContainment() const
 {
 	return m_containment;
 }
@@ -35,7 +35,7 @@ void EReference::setContainer(container_t _container)
 	m_container = _container;;
 }
 
-container_t EReference::getContainer() const
+EReference::container_t EReference::getContainer() const
 {
 	return m_container;
 }
@@ -45,10 +45,39 @@ void EReference::setResolveProxies(resolveProxies_t _resolveProxies)
 	m_resolveProxies = _resolveProxies;;
 }
 
-resolveProxies_t EReference::getResolveProxies() const
+EReference::resolveProxies_t EReference::getResolveProxies() const
 {
 	return m_resolveProxies;
 }
+
+EReference::eOpposite_t EReference::getEOpposite() const
+{
+	return e4c::returned(m_eOpposite);
+}
+
+void EReference::setEOpposite(eOpposite_t eOpposite_)
+{
+	m_eOpposite = eOpposite_;
+}
+
+
+EReference::eReferenceType_t EReference::getEReferenceType() const
+{
+	return e4c::returned(m_eReferenceType);
+}
+
+void EReference::setEReferenceType(eReferenceType_t eReferenceType_)
+{
+	m_eReferenceType = eReferenceType_;
+}
+
+
+EReference::eKeys_t EReference::getEKeys() const
+{
+	return e4c::returned(m_eKeys);
+}
+
+
 
 
 

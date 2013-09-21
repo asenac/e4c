@@ -22,22 +22,23 @@ public:
 	Department();
 	virtual ~Department();
 
-	typedef boost::ptr_vector < company::Employee > employees_t;
+	typedef std::vector < company::Employee_ptr > employees_t;
 	typedef company::Employee_ptr manager_t;
-	typedef int number_t;
+	typedef ::ecore::EInt number_t;
 
 	
-	// TODO
-	// TODO
+	employees_t getEmployees() const;
+	manager_t getManager() const;
 	void setNumber(number_t _number);
 	number_t getNumber() const;
 
-	
-protected:
 
-	employees_t m_employees;
-	manager_t m_manager;
+	std::vector < std::unique_ptr < company::Employee > > m_employees;
+	company::Employee_ptr m_manager;
 	number_t m_number;
+
+		
+protected:
 
 };
 

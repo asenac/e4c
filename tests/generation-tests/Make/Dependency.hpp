@@ -24,11 +24,12 @@ public:
 	
 	
 	
+
 	
+		
 protected:
 	Dependency();
 
-	
 };
 
 } // Make

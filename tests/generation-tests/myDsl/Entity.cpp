@@ -15,5 +15,15 @@ Entity::~Entity()
 {
 }
 
+Entity::extends_t Entity::getExtends() const
+{
+	return e4c::returned(m_extends);
+}
+
+Entity::properties_t Entity::getProperties() const
+{
+	return e4c::returned(m_properties);
+}
+
 
 

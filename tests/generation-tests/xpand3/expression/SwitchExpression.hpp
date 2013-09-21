@@ -24,21 +24,22 @@ public:
 	SwitchExpression();
 	virtual ~SwitchExpression();
 
-	typedef std::unique_ptr < xpand3::expression::AbstractExpression > switchExpr_t;
-	typedef std::unique_ptr < xpand3::expression::AbstractExpression > defaultExpr_t;
-	typedef boost::ptr_vector < xpand3::expression::Case > cases_t;
+	typedef xpand3::expression::AbstractExpression_ptr switchExpr_t;
+	typedef xpand3::expression::AbstractExpression_ptr defaultExpr_t;
+	typedef std::vector < xpand3::expression::Case_ptr > cases_t;
 
 	
-	// TODO
-	// TODO
-	// TODO
+	switchExpr_t getSwitchExpr() const;
+	defaultExpr_t getDefaultExpr() const;
+	cases_t getCases() const;
 
-	
+
+	std::unique_ptr < xpand3::expression::AbstractExpression > m_switchExpr;
+	std::unique_ptr < xpand3::expression::AbstractExpression > m_defaultExpr;
+	std::vector < std::unique_ptr < xpand3::expression::Case > > m_cases;
+
+		
 protected:
-
-	switchExpr_t m_switchExpr;
-	defaultExpr_t m_defaultExpr;
-	cases_t m_cases;
 
 };
 

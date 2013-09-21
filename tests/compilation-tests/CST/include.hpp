@@ -12,4 +12,7 @@
 #include <CST/Node.hpp>
 #include <CST/Leaf.hpp>
 
+#include <CST/CSTFactory.hpp>
+#include <CST/CSTPackage.hpp>
+
 #endif // EMF_CPP_CST_INC_HPP

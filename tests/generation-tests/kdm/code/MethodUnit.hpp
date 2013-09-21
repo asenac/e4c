@@ -24,8 +24,8 @@ public:
 	MethodUnit();
 	virtual ~MethodUnit();
 
-	typedef int kind_t;
-	typedef int export__t;
+	typedef ::kdm::code::MethodKind kind_t;
+	typedef ::kdm::code::ExportKind export__t;
 
 	
 	void setKind(kind_t _kind);
@@ -33,11 +33,12 @@ public:
 	void setExport_(export__t _export_);
 	export__t getExport_() const;
 
-	
-protected:
 
 	kind_t m_kind;
 	export__t m_export_;
+
+		
+protected:
 
 };
 

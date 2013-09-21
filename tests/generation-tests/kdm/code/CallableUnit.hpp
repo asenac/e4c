@@ -24,16 +24,17 @@ public:
 	CallableUnit();
 	virtual ~CallableUnit();
 
-	typedef int kind_t;
+	typedef ::kdm::code::CallableKind kind_t;
 
 	
 	void setKind(kind_t _kind);
 	kind_t getKind() const;
 
-	
-protected:
 
 	kind_t m_kind;
+
+		
+protected:
 
 };
 

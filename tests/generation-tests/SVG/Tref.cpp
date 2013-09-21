@@ -13,5 +13,10 @@ Tref::~Tref()
 {
 }
 
+Tref::xlinkHref_t Tref::getXlinkHref() const
+{
+	return e4c::returned(m_xlinkHref);
+}
+
 
 

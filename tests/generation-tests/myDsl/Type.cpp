@@ -17,7 +17,7 @@ void Type::setName(name_t _name)
 	m_name = _name;;
 }
 
-name_t Type::getName() const
+Type::name_t Type::getName() const
 {
 	return m_name;
 }

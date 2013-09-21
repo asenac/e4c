@@ -21,9 +21,9 @@ public:
 	
 	virtual ~Contained();
 
-	typedef int repositoryId_t;
-	typedef int version_t;
-	typedef int absoluteName_t;
+	typedef ::ecore::EString repositoryId_t;
+	typedef ::ecore::EString version_t;
+	typedef ::ecore::EString absoluteName_t;
 	typedef idlmm::Container_ptr definedIn_t;
 
 	
@@ -33,17 +33,20 @@ public:
 	version_t getVersion() const;
 	void setAbsoluteName(absoluteName_t _absoluteName);
 	absoluteName_t getAbsoluteName() const;
-	// TODO
+	definedIn_t getDefinedIn() const;
 
-	
+		
 protected:
 	Contained();
 
 	repositoryId_t m_repositoryId;
 	version_t m_version;
 	absoluteName_t m_absoluteName;
-	definedIn_t m_definedIn;
+	idlmm::Container_ptr m_definedIn;
 
+	
+	friend class ::idlmm::Container;
+	void setDefinedIn(definedIn_t definedIn_);
 };
 
 } // idlmm

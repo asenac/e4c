@@ -24,21 +24,22 @@ public:
 	BinaryOperation();
 	virtual ~BinaryOperation();
 
-	typedef std::unique_ptr < xpand3::expression::AbstractExpression > left_t;
-	typedef std::unique_ptr < xpand3::expression::AbstractExpression > right_t;
-	typedef std::unique_ptr < xpand3::Identifier > operator_t;
+	typedef xpand3::expression::AbstractExpression_ptr left_t;
+	typedef xpand3::expression::AbstractExpression_ptr right_t;
+	typedef xpand3::Identifier_ptr operator_t;
 
 	
-	// TODO
-	// TODO
-	// TODO
+	left_t getLeft() const;
+	right_t getRight() const;
+	operator_t getOperator() const;
 
-	
+
+	std::unique_ptr < xpand3::expression::AbstractExpression > m_left;
+	std::unique_ptr < xpand3::expression::AbstractExpression > m_right;
+	std::unique_ptr < xpand3::Identifier > m_operator;
+
+		
 protected:
-
-	left_t m_left;
-	right_t m_right;
-	operator_t m_operator;
 
 };
 

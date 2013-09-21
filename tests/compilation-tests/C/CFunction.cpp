@@ -17,7 +17,7 @@ void CFunction::setIsVarArg(isVarArg_t _isVarArg)
 	m_isVarArg = _isVarArg;;
 }
 
-isVarArg_t CFunction::getIsVarArg() const
+CFunction::isVarArg_t CFunction::getIsVarArg() const
 {
 	return m_isVarArg;
 }

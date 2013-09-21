@@ -23,25 +23,26 @@ public:
 	
 	virtual ~AbstractConceptualElement();
 
-	typedef boost::ptr_set < kdm::source::SourceRef > source_t;
-	typedef std::vector < kdm::core::KDMEntity_ptr > implementation_t;
-	typedef boost::ptr_set < kdm::conceptual::AbstractConceptualRelationship > conceptualRelation_t;
-	typedef boost::ptr_set < kdm::action::ActionElement > abstraction_t;
+	typedef std::set < kdm::source::SourceRef_ptr > source_t;
+	typedef std::set < kdm::core::KDMEntity_ptr > implementation_t;
+	typedef std::set < kdm::conceptual::AbstractConceptualRelationship_ptr > conceptualRelation_t;
+	typedef std::set < kdm::action::ActionElement_ptr > abstraction_t;
 
 	
-	// TODO
-	// TODO
-	// TODO
-	// TODO
+	source_t getSource() const;
+	implementation_t getImplementation() const;
+	conceptualRelation_t getConceptualRelation() const;
+	abstraction_t getAbstraction() const;
 
-	
+
+	std::set < std::unique_ptr < kdm::source::SourceRef > > m_source;
+	std::set < kdm::core::KDMEntity_ptr > m_implementation;
+	std::set < std::unique_ptr < kdm::conceptual::AbstractConceptualRelationship > > m_conceptualRelation;
+	std::set < std::unique_ptr < kdm::action::ActionElement > > m_abstraction;
+
+		
 protected:
 	AbstractConceptualElement();
-
-	source_t m_source;
-	implementation_t m_implementation;
-	conceptualRelation_t m_conceptualRelation;
-	abstraction_t m_abstraction;
 
 };
 

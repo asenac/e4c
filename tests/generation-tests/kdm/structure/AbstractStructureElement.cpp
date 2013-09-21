@@ -19,5 +19,25 @@ AbstractStructureElement::~AbstractStructureElement()
 {
 }
 
+AbstractStructureElement::aggregated_t AbstractStructureElement::getAggregated() const
+{
+	return e4c::returned(m_aggregated);
+}
+
+AbstractStructureElement::implementation_t AbstractStructureElement::getImplementation() const
+{
+	return e4c::returned(m_implementation);
+}
+
+AbstractStructureElement::structureElement_t AbstractStructureElement::getStructureElement() const
+{
+	return e4c::returned(m_structureElement);
+}
+
+AbstractStructureElement::structureRelationship_t AbstractStructureElement::getStructureRelationship() const
+{
+	return e4c::returned(m_structureRelationship);
+}
+
 
 

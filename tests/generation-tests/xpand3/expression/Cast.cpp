@@ -15,5 +15,15 @@ Cast::~Cast()
 {
 }
 
+Cast::type_t Cast::getType() const
+{
+	return e4c::returned(m_type);
+}
+
+Cast::target_t Cast::getTarget() const
+{
+	return e4c::returned(m_target);
+}
+
 
 

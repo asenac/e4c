@@ -2,6 +2,8 @@
 #define EMF_CPP_KDM_PLATFORM_FWD_HPP
 
 
+#include <e4c/mapping.hpp>
+
 namespace kdm
 {
 namespace platform

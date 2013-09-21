@@ -15,5 +15,15 @@ CompliesTo::~CompliesTo()
 {
 }
 
+CompliesTo::to_t CompliesTo::getTo() const
+{
+	return e4c::returned(m_to);
+}
+
+CompliesTo::from_t CompliesTo::getFrom() const
+{
+	return e4c::returned(m_from);
+}
+
 
 

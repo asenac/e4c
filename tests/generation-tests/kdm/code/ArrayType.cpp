@@ -19,9 +19,14 @@ void ArrayType::setSize(size_t _size)
 	m_size = _size;;
 }
 
-size_t ArrayType::getSize() const
+ArrayType::size_t ArrayType::getSize() const
 {
 	return m_size;
+}
+
+ArrayType::indexUnit_t ArrayType::getIndexUnit() const
+{
+	return e4c::returned(m_indexUnit);
 }
 
 

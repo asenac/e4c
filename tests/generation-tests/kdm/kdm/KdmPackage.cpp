@@ -9,7 +9,61 @@ using namespace kdm::kdm;
 KdmPackage::KdmPackage()
 {
 	m_eFactoryInstance = KdmFactory::_instance();
-	::ecore::EcoreFactor_ptr ecoreFactory = ::ecore::EcoreFactory::_instance();
+	::ecore::EcoreFactory_ptr ecoreFactory = ::ecore::EcoreFactory::_instance();
+	
+	::ecore::EClass_ptr KDMFramework_ = ecoreFactory->createEClass();
+	KDMFramework_->setName("KDMFramework");
+	// m_eClassifiers.push_back(KDMFramework_);
+	::ecore::EClass_ptr KDMModel_ = ecoreFactory->createEClass();
+	KDMModel_->setName("KDMModel");
+	// m_eClassifiers.push_back(KDMModel_);
+	::ecore::EClass_ptr Audit_ = ecoreFactory->createEClass();
+	Audit_->setName("Audit");
+	// m_eClassifiers.push_back(Audit_);
+	::ecore::EClass_ptr Segment_ = ecoreFactory->createEClass();
+	Segment_->setName("Segment");
+	// m_eClassifiers.push_back(Segment_);
+	::ecore::EClass_ptr Attribute_ = ecoreFactory->createEClass();
+	Attribute_->setName("Attribute");
+	// m_eClassifiers.push_back(Attribute_);
+	::ecore::EClass_ptr Annotation_ = ecoreFactory->createEClass();
+	Annotation_->setName("Annotation");
+	// m_eClassifiers.push_back(Annotation_);
+	::ecore::EClass_ptr TagDefinition_ = ecoreFactory->createEClass();
+	TagDefinition_->setName("TagDefinition");
+	// m_eClassifiers.push_back(TagDefinition_);
+	::ecore::EClass_ptr ExtendedValue_ = ecoreFactory->createEClass();
+	ExtendedValue_->setName("ExtendedValue");
+	// m_eClassifiers.push_back(ExtendedValue_);
+	::ecore::EClass_ptr Stereotype_ = ecoreFactory->createEClass();
+	Stereotype_->setName("Stereotype");
+	// m_eClassifiers.push_back(Stereotype_);
+	::ecore::EClass_ptr ExtensionFamily_ = ecoreFactory->createEClass();
+	ExtensionFamily_->setName("ExtensionFamily");
+	// m_eClassifiers.push_back(ExtensionFamily_);
+	::ecore::EClass_ptr TaggedRef_ = ecoreFactory->createEClass();
+	TaggedRef_->setName("TaggedRef");
+	// m_eClassifiers.push_back(TaggedRef_);
+	::ecore::EClass_ptr TaggedValue_ = ecoreFactory->createEClass();
+	TaggedValue_->setName("TaggedValue");
+	// m_eClassifiers.push_back(TaggedValue_);
+	
+	
+	// KDMFramework_->addESuperType(ModelElement_);
+	// KDMModel_->addESuperType(KDMFramework_);
+	// Audit_->addESuperType(Element_);
+	// Segment_->addESuperType(KDMFramework_);
+	// Attribute_->addESuperType(Element_);
+	// Annotation_->addESuperType(Element_);
+	// TagDefinition_->addESuperType(Element_);
+	// ExtendedValue_->addESuperType(Element_);
+	// Stereotype_->addESuperType(Element_);
+	// ExtensionFamily_->addESuperType(Element_);
+	// TaggedRef_->addESuperType(ExtendedValue_);
+	// TaggedValue_->addESuperType(ExtendedValue_);
+	
+	
+	
 	
 }
 

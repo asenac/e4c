@@ -15,5 +15,15 @@ UsesType::~UsesType()
 {
 }
 
+UsesType::to_t UsesType::getTo() const
+{
+	return e4c::returned(m_to);
+}
+
+UsesType::from_t UsesType::getFrom() const
+{
+	return e4c::returned(m_from);
+}
+
 
 

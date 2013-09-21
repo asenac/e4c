@@ -9,7 +9,25 @@ using namespace PrimitiveTypes;
 PrimitiveTypesPackage::PrimitiveTypesPackage()
 {
 	m_eFactoryInstance = PrimitiveTypesFactory::_instance();
-	::ecore::EcoreFactor_ptr ecoreFactory = ::ecore::EcoreFactory::_instance();
+	::ecore::EcoreFactory_ptr ecoreFactory = ::ecore::EcoreFactory::_instance();
+	
+	
+	
+	
+	
+	::ecore::EDataType_ptr Integer_ = ecoreFactory->createEDataType();
+	Integer_->setName("Integer");
+	// m_eClassifiers.push_back(Integer_);
+	::ecore::EDataType_ptr String_ = ecoreFactory->createEDataType();
+	String_->setName("String");
+	// m_eClassifiers.push_back(String_);
+	::ecore::EDataType_ptr Boolean_ = ecoreFactory->createEDataType();
+	Boolean_->setName("Boolean");
+	// m_eClassifiers.push_back(Boolean_);
+	::ecore::EDataType_ptr Double_ = ecoreFactory->createEDataType();
+	Double_->setName("Double");
+	// m_eClassifiers.push_back(Double_);
+	
 	
 }
 

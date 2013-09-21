@@ -33,4 +33,7 @@
 #include <xtext/CharacterRange.hpp>
 #include <xtext/CompoundElement.hpp>
 
+#include <xtext/XtextFactory.hpp>
+#include <xtext/XtextPackage.hpp>
+
 #endif // EMF_CPP_XTEXT_INC_HPP

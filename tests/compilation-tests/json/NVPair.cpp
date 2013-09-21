@@ -19,9 +19,14 @@ void NVPair::setName(name_t _name)
 	m_name = _name;;
 }
 
-name_t NVPair::getName() const
+NVPair::name_t NVPair::getName() const
 {
 	return m_name;
+}
+
+NVPair::value_t NVPair::getValue() const
+{
+	return e4c::returned(m_value);
 }
 
 

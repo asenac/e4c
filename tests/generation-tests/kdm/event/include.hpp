@@ -30,4 +30,7 @@
 #include <kdm/event/EventElement.hpp>
 #include <kdm/event/HasState.hpp>
 
+#include <kdm/event/EventFactory.hpp>
+#include <kdm/event/EventPackage.hpp>
+
 #endif // EMF_CPP_KDM_EVENT_INC_HPP

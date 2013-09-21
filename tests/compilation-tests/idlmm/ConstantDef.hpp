@@ -24,16 +24,19 @@ public:
 	ConstantDef();
 	virtual ~ConstantDef();
 
-	typedef std::unique_ptr < idlmm::Expression > constValue_t;
+	typedef idlmm::Expression_ptr constValue_t;
 
 	
-	// TODO
+	constValue_t getConstValue() const;
+	void setConstValue(constValue_t constValue_);
+	constValue_t releaseConstValue();
 
-	
+		
 protected:
 
-	constValue_t m_constValue;
+	std::unique_ptr < idlmm::Expression > m_constValue;
 
+	
 };
 
 } // idlmm

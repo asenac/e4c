@@ -11,4 +11,7 @@
 #include <company/Department.hpp>
 #include <company/Company.hpp>
 
+#include <company/CompanyFactory.hpp>
+#include <company/CompanyPackage.hpp>
+
 #endif // EMF_CPP_COMPANY_INC_HPP

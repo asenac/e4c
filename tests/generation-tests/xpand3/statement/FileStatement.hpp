@@ -24,22 +24,23 @@ public:
 	FileStatement();
 	virtual ~FileStatement();
 
-	typedef std::unique_ptr < xpand3::expression::AbstractExpression > fileNameExpression_t;
-	typedef std::unique_ptr < xpand3::Identifier > outletNameIdentifier_t;
-	typedef int once_t;
+	typedef xpand3::expression::AbstractExpression_ptr fileNameExpression_t;
+	typedef xpand3::Identifier_ptr outletNameIdentifier_t;
+	typedef ::ecore::EBoolean once_t;
 
 	
-	// TODO
-	// TODO
+	fileNameExpression_t getFileNameExpression() const;
+	outletNameIdentifier_t getOutletNameIdentifier() const;
 	void setOnce(once_t _once);
 	once_t getOnce() const;
 
-	
-protected:
 
-	fileNameExpression_t m_fileNameExpression;
-	outletNameIdentifier_t m_outletNameIdentifier;
+	std::unique_ptr < xpand3::expression::AbstractExpression > m_fileNameExpression;
+	std::unique_ptr < xpand3::Identifier > m_outletNameIdentifier;
 	once_t m_once;
+
+		
+protected:
 
 };
 

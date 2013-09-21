@@ -23,22 +23,23 @@ public:
 	
 	virtual ~AbstractCodeElement();
 
-	typedef boost::ptr_set < kdm::source::SourceRef > source_t;
-	typedef boost::ptr_set < kdm::code::CommentUnit > comment_t;
-	typedef boost::ptr_set < kdm::code::AbstractCodeRelationship > codeRelation_t;
+	typedef std::set < kdm::source::SourceRef_ptr > source_t;
+	typedef std::set < kdm::code::CommentUnit_ptr > comment_t;
+	typedef std::set < kdm::code::AbstractCodeRelationship_ptr > codeRelation_t;
 
 	
-	// TODO
-	// TODO
-	// TODO
+	source_t getSource() const;
+	comment_t getComment() const;
+	codeRelation_t getCodeRelation() const;
 
-	
+
+	std::set < std::unique_ptr < kdm::source::SourceRef > > m_source;
+	std::set < std::unique_ptr < kdm::code::CommentUnit > > m_comment;
+	std::set < std::unique_ptr < kdm::code::AbstractCodeRelationship > > m_codeRelation;
+
+		
 protected:
 	AbstractCodeElement();
-
-	source_t m_source;
-	comment_t m_comment;
-	codeRelation_t m_codeRelation;
 
 };
 

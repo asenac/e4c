@@ -15,5 +15,15 @@ ProducesDataEvent::~ProducesDataEvent()
 {
 }
 
+ProducesDataEvent::to_t ProducesDataEvent::getTo() const
+{
+	return e4c::returned(m_to);
+}
+
+ProducesDataEvent::from_t ProducesDataEvent::getFrom() const
+{
+	return e4c::returned(m_from);
+}
+
 
 

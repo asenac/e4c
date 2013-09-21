@@ -24,9 +24,9 @@ public:
 	Audit();
 	virtual ~Audit();
 
-	typedef int description_t;
-	typedef int author_t;
-	typedef int date_t;
+	typedef ::kdm::core::String description_t;
+	typedef ::kdm::core::String author_t;
+	typedef ::kdm::core::String date_t;
 
 	
 	void setDescription(description_t _description);
@@ -36,12 +36,13 @@ public:
 	void setDate(date_t _date);
 	date_t getDate() const;
 
-	
-protected:
 
 	description_t m_description;
 	author_t m_author;
 	date_t m_date;
+
+		
+protected:
 
 };
 

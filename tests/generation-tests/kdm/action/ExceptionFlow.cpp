@@ -14,5 +14,15 @@ ExceptionFlow::~ExceptionFlow()
 {
 }
 
+ExceptionFlow::to_t ExceptionFlow::getTo() const
+{
+	return e4c::returned(m_to);
+}
+
+ExceptionFlow::from_t ExceptionFlow::getFrom() const
+{
+	return e4c::returned(m_from);
+}
+
 
 

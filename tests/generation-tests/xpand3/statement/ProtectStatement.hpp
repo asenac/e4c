@@ -24,25 +24,26 @@ public:
 	ProtectStatement();
 	virtual ~ProtectStatement();
 
-	typedef std::unique_ptr < xpand3::expression::AbstractExpression > commentStart_t;
-	typedef std::unique_ptr < xpand3::expression::AbstractExpression > commentEnd_t;
-	typedef std::unique_ptr < xpand3::expression::AbstractExpression > id_t;
-	typedef int disable_t;
+	typedef xpand3::expression::AbstractExpression_ptr commentStart_t;
+	typedef xpand3::expression::AbstractExpression_ptr commentEnd_t;
+	typedef xpand3::expression::AbstractExpression_ptr id_t;
+	typedef ::ecore::EBoolean disable_t;
 
 	
-	// TODO
-	// TODO
-	// TODO
+	commentStart_t getCommentStart() const;
+	commentEnd_t getCommentEnd() const;
+	id_t getId() const;
 	void setDisable(disable_t _disable);
 	disable_t getDisable() const;
 
-	
-protected:
 
-	commentStart_t m_commentStart;
-	commentEnd_t m_commentEnd;
-	id_t m_id;
+	std::unique_ptr < xpand3::expression::AbstractExpression > m_commentStart;
+	std::unique_ptr < xpand3::expression::AbstractExpression > m_commentEnd;
+	std::unique_ptr < xpand3::expression::AbstractExpression > m_id;
 	disable_t m_disable;
+
+		
+protected:
 
 };
 

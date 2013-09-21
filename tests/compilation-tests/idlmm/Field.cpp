@@ -17,7 +17,7 @@ void Field::setIdentifier(identifier_t _identifier)
 	m_identifier = _identifier;;
 }
 
-identifier_t Field::getIdentifier() const
+Field::identifier_t Field::getIdentifier() const
 {
 	return m_identifier;
 }

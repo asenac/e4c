@@ -22,15 +22,16 @@ public:
 	ObjectValue();
 	virtual ~ObjectValue();
 
-	typedef boost::ptr_vector < json::NVPair > members_t;
+	typedef std::vector < json::NVPair_ptr > members_t;
 
 	
-	// TODO
+	members_t getMembers() const;
 
-	
+
+	std::vector < std::unique_ptr < json::NVPair > > m_members;
+
+		
 protected:
-
-	members_t m_members;
 
 };
 

@@ -24,15 +24,16 @@ public:
 	StructureModel();
 	virtual ~StructureModel();
 
-	typedef boost::ptr_set < kdm::structure::AbstractStructureElement > structureElement_t;
+	typedef std::set < kdm::structure::AbstractStructureElement_ptr > structureElement_t;
 
 	
-	// TODO
+	structureElement_t getStructureElement() const;
 
-	
+
+	std::set < std::unique_ptr < kdm::structure::AbstractStructureElement > > m_structureElement;
+
+		
 protected:
-
-	structureElement_t m_structureElement;
 
 };
 

@@ -13,5 +13,10 @@ DefinitionAspect::~DefinitionAspect()
 {
 }
 
+DefinitionAspect::body_t DefinitionAspect::getBody() const
+{
+	return e4c::returned(m_body);
+}
+
 
 

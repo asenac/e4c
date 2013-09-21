@@ -13,5 +13,10 @@ DataContainer::~DataContainer()
 {
 }
 
+DataContainer::dataElement_t DataContainer::getDataElement() const
+{
+	return e4c::returned(m_dataElement);
+}
+
 
 

@@ -27,4 +27,7 @@
 #include <ecore/EGenericType.hpp>
 #include <ecore/ETypeParameter.hpp>
 
+#include <ecore/EcoreFactory.hpp>
+#include <ecore/EcorePackage.hpp>
+
 #endif // EMF_CPP_ECORE_INC_HPP

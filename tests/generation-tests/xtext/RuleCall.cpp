@@ -13,5 +13,10 @@ RuleCall::~RuleCall()
 {
 }
 
+RuleCall::rule_t RuleCall::getRule() const
+{
+	return e4c::returned(m_rule);
+}
+
 
 

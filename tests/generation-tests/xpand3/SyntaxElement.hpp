@@ -21,10 +21,10 @@ public:
 	
 	virtual ~SyntaxElement();
 
-	typedef int line_t;
-	typedef int start_t;
-	typedef int end_t;
-	typedef int fileName_t;
+	typedef ::ecore::EInt line_t;
+	typedef ::ecore::EInt start_t;
+	typedef ::ecore::EInt end_t;
+	typedef ::ecore::EString fileName_t;
 
 	
 	void setLine(line_t _line);
@@ -36,14 +36,15 @@ public:
 	void setFileName(fileName_t _fileName);
 	fileName_t getFileName() const;
 
-	
-protected:
-	SyntaxElement();
 
 	line_t m_line;
 	start_t m_start;
 	end_t m_end;
 	fileName_t m_fileName;
+
+		
+protected:
+	SyntaxElement();
 
 };
 

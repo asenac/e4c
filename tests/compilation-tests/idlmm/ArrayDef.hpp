@@ -23,20 +23,22 @@ public:
 	ArrayDef();
 	virtual ~ArrayDef();
 
-	typedef int name_t;
-	typedef boost::ptr_vector < idlmm::Expression > bounds_t;
+	typedef ::ecore::EString name_t;
+	typedef std::vector < idlmm::Expression_ptr > bounds_t;
 
 	
 	void setName(name_t _name);
 	name_t getName() const;
-	// TODO
+	bounds_t getBounds() const;
+	void addBounds(idlmm::Expression_ptr bounds_);
 
-	
+		
 protected:
 
 	name_t m_name;
-	bounds_t m_bounds;
+	std::vector < std::unique_ptr < idlmm::Expression > > m_bounds;
 
+	
 };
 
 } // idlmm

@@ -22,16 +22,17 @@ public:
 	Visibility();
 	virtual ~Visibility();
 
-	typedef int visible_t;
+	typedef ::PrimitiveTypes::Boolean visible_t;
 
 	
 	void setVisible(visible_t _visible);
 	visible_t getVisible() const;
 
-	
-protected:
 
 	visible_t m_visible;
+
+		
+protected:
 
 };
 

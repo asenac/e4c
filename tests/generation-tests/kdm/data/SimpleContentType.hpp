@@ -24,19 +24,20 @@ public:
 	SimpleContentType();
 	virtual ~SimpleContentType();
 
-	typedef std::vector < kdm::data::ComplexContentType_ptr > type_t;
-	typedef int kind_t;
+	typedef std::set < kdm::data::ComplexContentType_ptr > type_t;
+	typedef ::kdm::core::String kind_t;
 
 	
-	// TODO
+	type_t getType() const;
 	void setKind(kind_t _kind);
 	kind_t getKind() const;
 
-	
-protected:
 
-	type_t m_type;
+	std::set < kdm::data::ComplexContentType_ptr > m_type;
 	kind_t m_kind;
+
+		
+protected:
 
 };
 

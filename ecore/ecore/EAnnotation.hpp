@@ -22,29 +22,35 @@ public:
 	EAnnotation();
 	virtual ~EAnnotation();
 
-	typedef int source_t;
-	typedef boost::ptr_vector < ecore::EStringToStringMapEntry > details_t;
+	typedef ::ecore::EString source_t;
+	typedef std::vector < ecore::EStringToStringMapEntry_ptr > details_t;
 	typedef ecore::EModelElement_ptr eModelElement_t;
-	typedef boost::ptr_vector < ecore::EObject > contents_t;
-	typedef std::set < ecore::EObject_ptr > references_t;
+	typedef std::vector < ecore::EObject_ptr > contents_t;
+	typedef std::vector < ecore::EObject_ptr > references_t;
 
 	
 	void setSource(source_t _source);
 	source_t getSource() const;
-	// TODO
-	// TODO
-	// TODO
-	// TODO
-
+	details_t getDetails() const;
+	void addDetails(ecore::EStringToStringMapEntry_ptr details_);
+	eModelElement_t getEModelElement() const;
+	contents_t getContents() const;
+	void addContents(ecore::EObject_ptr contents_);
+	references_t getReferences() const;
 	
+
+		
 protected:
 
 	source_t m_source;
-	details_t m_details;
-	eModelElement_t m_eModelElement;
-	contents_t m_contents;
-	references_t m_references;
+	std::vector < std::unique_ptr < ecore::EStringToStringMapEntry > > m_details;
+	ecore::EModelElement_ptr m_eModelElement;
+	std::vector < std::unique_ptr < ecore::EObject > > m_contents;
+	std::vector < ecore::EObject_ptr > m_references;
 
+	
+	friend class ::ecore::EModelElement;
+	void setEModelElement(eModelElement_t eModelElement_);
 };
 
 } // ecore

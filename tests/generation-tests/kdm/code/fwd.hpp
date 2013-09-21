@@ -2,6 +2,8 @@
 #define EMF_CPP_KDM_CODE_FWD_HPP
 
 
+#include <e4c/mapping.hpp>
+
 namespace kdm
 {
 namespace code
@@ -14,55 +16,61 @@ class CodeFactory;
 typedef CodeFactory * CodeFactory_ptr;
 
 // Data types
-enum class MethodKind 
+enum class MethodKind : int
 {
-operator,
-destructor,
-method,
-abstract,
-virtual,
-unknown,
-constructor};
-enum class ParameterKind 
+	operator,
+    destructor,
+    method,
+    abstract,
+    virtual,
+    unknown,
+    constructor
+};
+enum class ParameterKind : int
 {
-byReference,
-unknown,
-exception,
-return,
-byValue,
-catchall,
-byName,
-throws,
-variadic};
-enum class ExportKind 
+	byReference,
+    unknown,
+    exception,
+    return,
+    byValue,
+    catchall,
+    byName,
+    throws,
+    variadic
+};
+enum class ExportKind : int
 {
-private,
-unknown,
-public,
-protected,
-final};
-enum class StorableKind 
+	private,
+    unknown,
+    public,
+    protected,
+    final
+};
+enum class StorableKind : int
 {
-global,
-external,
-static,
-unknown,
-register,
-local};
-enum class CallableKind 
+	global,
+    external,
+    static,
+    unknown,
+    register,
+    local
+};
+enum class CallableKind : int
 {
-external,
-regular,
-stored,
-operator,
-unknown};
-enum class MacroKind 
+	external,
+    regular,
+    stored,
+    operator,
+    unknown
+};
+enum class MacroKind : int
 {
-external,
-unknown,
-option,
-undefined,
-regular};
+	external,
+    unknown,
+    option,
+    undefined,
+    regular
+};
 
 
 // Classes

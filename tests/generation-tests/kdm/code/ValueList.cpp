@@ -13,5 +13,10 @@ ValueList::~ValueList()
 {
 }
 
+ValueList::valueElement_t ValueList::getValueElement() const
+{
+	return e4c::returned(m_valueElement);
+}
+
 
 

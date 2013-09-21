@@ -15,5 +15,15 @@ HasState::~HasState()
 {
 }
 
+HasState::to_t HasState::getTo() const
+{
+	return e4c::returned(m_to);
+}
+
+HasState::from_t HasState::getFrom() const
+{
+	return e4c::returned(m_from);
+}
+
 
 

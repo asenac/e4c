@@ -22,16 +22,17 @@ public:
 	BooleanValue();
 	virtual ~BooleanValue();
 
-	typedef int value_t;
+	typedef ::ecore::EBoolean value_t;
 
 	
 	void setValue(value_t _value);
 	value_t getValue() const;
 
-	
-protected:
 
 	value_t m_value;
+
+		
+protected:
 
 };
 

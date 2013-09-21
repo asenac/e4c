@@ -24,26 +24,27 @@ public:
 	Check();
 	virtual ~Check();
 
-	typedef int errorSeverity_t;
-	typedef std::unique_ptr < xpand3::expression::AbstractExpression > msg_t;
-	typedef std::unique_ptr < xpand3::expression::AbstractExpression > constraint_t;
-	typedef int feature_t;
+	typedef ::ecore::EBoolean errorSeverity_t;
+	typedef xpand3::expression::AbstractExpression_ptr msg_t;
+	typedef xpand3::expression::AbstractExpression_ptr constraint_t;
+	typedef ::ecore::EString feature_t;
 
 	
 	void setErrorSeverity(errorSeverity_t _errorSeverity);
 	errorSeverity_t getErrorSeverity() const;
-	// TODO
-	// TODO
+	msg_t getMsg() const;
+	constraint_t getConstraint() const;
 	void setFeature(feature_t _feature);
 	feature_t getFeature() const;
 
-	
-protected:
 
 	errorSeverity_t m_errorSeverity;
-	msg_t m_msg;
-	constraint_t m_constraint;
+	std::unique_ptr < xpand3::expression::AbstractExpression > m_msg;
+	std::unique_ptr < xpand3::expression::AbstractExpression > m_constraint;
 	feature_t m_feature;
+
+		
+protected:
 
 };
 

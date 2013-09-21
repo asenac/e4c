@@ -13,5 +13,10 @@ EventModel::~EventModel()
 {
 }
 
+EventModel::eventElement_t EventModel::getEventElement() const
+{
+	return e4c::returned(m_eventElement);
+}
+
 
 

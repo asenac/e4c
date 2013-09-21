@@ -17,5 +17,43 @@ UnionDef::~UnionDef()
 {
 }
 
+UnionDef::unionMembers_t UnionDef::getUnionMembers() const
+{
+	return e4c::returned(m_unionMembers);
+}
+
+void UnionDef::addUnionMembers(idlmm::UnionField_ptr unionMembers_)
+{
+	m_unionMembers.push_back(std::unique_ptr < idlmm::UnionField >(unionMembers_));
+}
+
+
+UnionDef::containedDiscrim_t UnionDef::getContainedDiscrim() const
+{
+	return e4c::returned(m_containedDiscrim);
+}
+
+void UnionDef::setContainedDiscrim(containedDiscrim_t containedDiscrim_)
+{
+	m_containedDiscrim.reset(containedDiscrim_);
+}
+
+UnionDef::containedDiscrim_t UnionDef::releaseContainedDiscrim()
+{
+	return m_containedDiscrim.release();
+}
+
+
+UnionDef::sharedDiscrim_t UnionDef::getSharedDiscrim() const
+{
+	return e4c::returned(m_sharedDiscrim);
+}
+
+void UnionDef::setSharedDiscrim(sharedDiscrim_t sharedDiscrim_)
+{
+	m_sharedDiscrim = sharedDiscrim_;
+}
+
+
 
 

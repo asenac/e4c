@@ -22,8 +22,8 @@ public:
 	Dimension();
 	virtual ~Dimension();
 
-	typedef int width_t;
-	typedef int height_t;
+	typedef ::PrimitiveTypes::Double width_t;
+	typedef ::PrimitiveTypes::Double height_t;
 
 	
 	void setWidth(width_t _width);
@@ -31,11 +31,12 @@ public:
 	void setHeight(height_t _height);
 	height_t getHeight() const;
 
-	
-protected:
 
 	width_t m_width;
 	height_t m_height;
+
+		
+protected:
 
 };
 

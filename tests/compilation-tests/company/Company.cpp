@@ -19,9 +19,14 @@ void Company::setName(name_t _name)
 	m_name = _name;;
 }
 
-name_t Company::getName() const
+Company::name_t Company::getName() const
 {
 	return m_name;
+}
+
+Company::departments_t Company::getDepartments() const
+{
+	return e4c::returned(m_departments);
 }
 
 

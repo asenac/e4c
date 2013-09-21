@@ -13,5 +13,16 @@ StructDef::~StructDef()
 {
 }
 
+StructDef::members_t StructDef::getMembers() const
+{
+	return e4c::returned(m_members);
+}
+
+void StructDef::addMembers(idlmm::Field_ptr members_)
+{
+	m_members.push_back(std::unique_ptr < idlmm::Field >(members_));
+}
+
+
 
 

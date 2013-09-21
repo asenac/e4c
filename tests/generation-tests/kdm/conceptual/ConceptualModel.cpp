@@ -13,5 +13,10 @@ ConceptualModel::~ConceptualModel()
 {
 }
 
+ConceptualModel::conceptualElement_t ConceptualModel::getConceptualElement() const
+{
+	return e4c::returned(m_conceptualElement);
+}
+
 
 

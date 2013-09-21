@@ -27,4 +27,7 @@
 #include <kdm/source/InventoryElement.hpp>
 #include <kdm/source/InventoryRelationship.hpp>
 
+#include <kdm/source/SourceFactory.hpp>
+#include <kdm/source/SourcePackage.hpp>
+
 #endif // EMF_CPP_KDM_SOURCE_INC_HPP

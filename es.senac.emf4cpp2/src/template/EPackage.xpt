@@ -28,6 +28,8 @@ namespace «getName()»
 #include <«e.getFwdFile()»>
 «ENDFOREACH-»
 
+#include <e4c/mapping.hpp>
+
 «EXPAND namespacesBegin FOR this»
 
 class «getPackage()»;
@@ -50,14 +52,16 @@ typedef «getFactory()» * «getFactory()»_ptr;
 «ENDFILE»
 «ENDDEFINE»
 
-«DEFINE generateFwd FOR EDataType-»
+«DEFINE generateFwd FOR EDataType»
+«PROTECT CSTART '/*' CEND '*/' ID "typedef_"+getFQN() DISABLE»
 typedef int «getName()»;
-«ENDDEFINE»
+«ENDPROTECT»
+«ENDDEFINE-»
 
 «DEFINE generateFwd FOR EEnum-»
-enum class «getName()» 
+enum class «getName()» : int
 {
-	«FOREACH ELiterals AS e SEPARATOR ",\n    "-»«e.literal»«ENDFOREACH-»
+	«FOREACH ELiterals AS e SEPARATOR ",\n    "»«e.literal»«ENDFOREACH»
 };
 «ENDDEFINE»
 
@@ -126,6 +130,9 @@ struct «getTagName()»
 «FOREACH getClasses() AS e-»
 #include <«e.getFilePrefix()».hpp>
 «ENDFOREACH-»
+
+#include <«getFilePrefix()»/«getFactory()».hpp>
+#include <«getFilePrefix()»/«getPackage()».hpp>
 
 #endif // «getHeader("INC")»
 «ENDFILE»

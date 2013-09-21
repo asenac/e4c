@@ -15,5 +15,15 @@ InventoryRelationship::~InventoryRelationship()
 {
 }
 
+InventoryRelationship::to_t InventoryRelationship::getTo() const
+{
+	return e4c::returned(m_to);
+}
+
+InventoryRelationship::from_t InventoryRelationship::getFrom() const
+{
+	return e4c::returned(m_from);
+}
+
 
 

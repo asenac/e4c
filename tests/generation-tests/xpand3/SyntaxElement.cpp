@@ -20,7 +20,7 @@ void SyntaxElement::setLine(line_t _line)
 	m_line = _line;;
 }
 
-line_t SyntaxElement::getLine() const
+SyntaxElement::line_t SyntaxElement::getLine() const
 {
 	return m_line;
 }
@@ -30,7 +30,7 @@ void SyntaxElement::setStart(start_t _start)
 	m_start = _start;;
 }
 
-start_t SyntaxElement::getStart() const
+SyntaxElement::start_t SyntaxElement::getStart() const
 {
 	return m_start;
 }
@@ -40,7 +40,7 @@ void SyntaxElement::setEnd(end_t _end)
 	m_end = _end;;
 }
 
-end_t SyntaxElement::getEnd() const
+SyntaxElement::end_t SyntaxElement::getEnd() const
 {
 	return m_end;
 }
@@ -50,7 +50,7 @@ void SyntaxElement::setFileName(fileName_t _fileName)
 	m_fileName = _fileName;;
 }
 
-fileName_t SyntaxElement::getFileName() const
+SyntaxElement::fileName_t SyntaxElement::getFileName() const
 {
 	return m_fileName;
 }

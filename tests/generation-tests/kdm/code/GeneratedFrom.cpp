@@ -15,5 +15,15 @@ GeneratedFrom::~GeneratedFrom()
 {
 }
 
+GeneratedFrom::to_t GeneratedFrom::getTo() const
+{
+	return e4c::returned(m_to);
+}
+
+GeneratedFrom::from_t GeneratedFrom::getFrom() const
+{
+	return e4c::returned(m_from);
+}
+
 
 

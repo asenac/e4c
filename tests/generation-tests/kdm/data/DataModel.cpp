@@ -13,5 +13,10 @@ DataModel::~DataModel()
 {
 }
 
+DataModel::dataElement_t DataModel::getDataElement() const
+{
+	return e4c::returned(m_dataElement);
+}
+
 
 

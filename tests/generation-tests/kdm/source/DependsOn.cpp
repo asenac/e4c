@@ -14,5 +14,15 @@ DependsOn::~DependsOn()
 {
 }
 
+DependsOn::to_t DependsOn::getTo() const
+{
+	return e4c::returned(m_to);
+}
+
+DependsOn::from_t DependsOn::getFrom() const
+{
+	return e4c::returned(m_from);
+}
+
 
 

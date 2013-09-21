@@ -31,4 +31,7 @@
 #include <kdm/ui/WritesUI.hpp>
 #include <kdm/ui/ManagesUI.hpp>
 
+#include <kdm/ui/UiFactory.hpp>
+#include <kdm/ui/UiPackage.hpp>
+
 #endif // EMF_CPP_KDM_UI_INC_HPP

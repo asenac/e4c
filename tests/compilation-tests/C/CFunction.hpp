@@ -22,16 +22,17 @@ public:
 	CFunction();
 	virtual ~CFunction();
 
-	typedef int isVarArg_t;
+	typedef ::PrimitiveTypes::Boolean isVarArg_t;
 
 	
 	void setIsVarArg(isVarArg_t _isVarArg);
 	isVarArg_t getIsVarArg() const;
 
-	
-protected:
 
 	isVarArg_t m_isVarArg;
+
+		
+protected:
 
 };
 

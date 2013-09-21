@@ -42,4 +42,7 @@
 #include <C/BehavioralFeature.hpp>
 #include <C/CFunction.hpp>
 
+#include <C/CFactory.hpp>
+#include <C/CPackage.hpp>
+
 #endif // EMF_CPP_C_INC_HPP

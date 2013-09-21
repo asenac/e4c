@@ -13,5 +13,10 @@ ConstructorCallExpression::~ConstructorCallExpression()
 {
 }
 
+ConstructorCallExpression::type_t ConstructorCallExpression::getType() const
+{
+	return e4c::returned(m_type);
+}
+
 
 

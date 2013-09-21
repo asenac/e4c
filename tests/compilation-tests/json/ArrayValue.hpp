@@ -22,15 +22,16 @@ public:
 	ArrayValue();
 	virtual ~ArrayValue();
 
-	typedef boost::ptr_vector < json::Value > values_t;
+	typedef std::vector < json::Value_ptr > values_t;
 
 	
-	// TODO
+	values_t getValues() const;
 
-	
+
+	std::vector < std::unique_ptr < json::Value > > m_values;
+
+		
 protected:
-
-	values_t m_values;
 
 };
 

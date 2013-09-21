@@ -24,19 +24,20 @@ public:
 	PlatformAction();
 	virtual ~PlatformAction();
 
-	typedef int kind_t;
-	typedef boost::ptr_set < kdm::platform::PlatformEvent > platformElement_t;
+	typedef ::kdm::core::String kind_t;
+	typedef std::set < kdm::platform::PlatformEvent_ptr > platformElement_t;
 
 	
 	void setKind(kind_t _kind);
 	kind_t getKind() const;
-	// TODO
+	platformElement_t getPlatformElement() const;
 
-	
-protected:
 
 	kind_t m_kind;
-	platformElement_t m_platformElement;
+	std::set < std::unique_ptr < kdm::platform::PlatformEvent > > m_platformElement;
+
+		
+protected:
 
 };
 

@@ -17,7 +17,7 @@ void Import::setImportURI(importURI_t _importURI)
 	m_importURI = _importURI;;
 }
 
-importURI_t Import::getImportURI() const
+Import::importURI_t Import::getImportURI() const
 {
 	return m_importURI;
 }

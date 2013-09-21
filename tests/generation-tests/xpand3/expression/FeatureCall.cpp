@@ -15,5 +15,15 @@ FeatureCall::~FeatureCall()
 {
 }
 
+FeatureCall::target_t FeatureCall::getTarget() const
+{
+	return e4c::returned(m_target);
+}
+
+FeatureCall::name_t FeatureCall::getName() const
+{
+	return e4c::returned(m_name);
+}
+
 
 

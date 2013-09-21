@@ -21,49 +21,50 @@ public:
 	
 	virtual ~Element();
 
-	typedef std::vector < SVG::SvgFile_ptr > owner_t;
-	typedef std::vector < SVG::Use_ptr > target_t;
-	typedef std::vector < SVG::Attribute_ptr > attribute_t;
-	typedef std::unique_ptr < SVG::Coordinates > position_t;
-	typedef std::unique_ptr < SVG::Dimension > size_t;
+	typedef std::set < SVG::SvgFile_ptr > owner_t;
+	typedef std::set < SVG::Use_ptr > target_t;
+	typedef std::set < SVG::Attribute_ptr > attribute_t;
+	typedef SVG::Coordinates_ptr position_t;
+	typedef SVG::Dimension_ptr size_t;
 	typedef SVG::Svg_ptr root_t;
-	typedef int fill_t;
-	typedef int viewBox_t;
+	typedef ::PrimitiveTypes::String fill_t;
+	typedef ::PrimitiveTypes::String viewBox_t;
 	typedef SVG::GroupingElement_ptr group_t;
-	typedef int identifier_t;
+	typedef ::PrimitiveTypes::String identifier_t;
 	typedef SVG::Marker_ptr drawsMarker_t;
 
 	
-	// TODO
-	// TODO
-	// TODO
-	// TODO
-	// TODO
-	// TODO
+	owner_t getOwner() const;
+	target_t getTarget() const;
+	attribute_t getAttribute() const;
+	position_t getPosition() const;
+	size_t getSize() const;
+	root_t getRoot() const;
 	void setFill(fill_t _fill);
 	fill_t getFill() const;
 	void setViewBox(viewBox_t _viewBox);
 	viewBox_t getViewBox() const;
-	// TODO
+	group_t getGroup() const;
 	void setIdentifier(identifier_t _identifier);
 	identifier_t getIdentifier() const;
-	// TODO
+	drawsMarker_t getDrawsMarker() const;
 
-	
-protected:
-	Element();
 
-	owner_t m_owner;
-	target_t m_target;
-	attribute_t m_attribute;
-	position_t m_position;
-	size_t m_size;
-	root_t m_root;
+	std::set < SVG::SvgFile_ptr > m_owner;
+	std::set < SVG::Use_ptr > m_target;
+	std::set < SVG::Attribute_ptr > m_attribute;
+	std::unique_ptr < SVG::Coordinates > m_position;
+	std::unique_ptr < SVG::Dimension > m_size;
+	SVG::Svg_ptr m_root;
 	fill_t m_fill;
 	viewBox_t m_viewBox;
-	group_t m_group;
+	SVG::GroupingElement_ptr m_group;
 	identifier_t m_identifier;
-	drawsMarker_t m_drawsMarker;
+	SVG::Marker_ptr m_drawsMarker;
+
+		
+protected:
+	Element();
 
 };
 

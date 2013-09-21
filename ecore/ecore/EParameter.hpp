@@ -25,13 +25,16 @@ public:
 	typedef ecore::EOperation_ptr eOperation_t;
 
 	
-	// TODO
+	eOperation_t getEOperation() const;
 
-	
+		
 protected:
 
-	eOperation_t m_eOperation;
+	ecore::EOperation_ptr m_eOperation;
 
+	
+	friend class ::ecore::EOperation;
+	void setEOperation(eOperation_t eOperation_);
 };
 
 } // ecore

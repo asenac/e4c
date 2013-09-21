@@ -18,7 +18,7 @@ void Dimension::setWidth(width_t _width)
 	m_width = _width;;
 }
 
-width_t Dimension::getWidth() const
+Dimension::width_t Dimension::getWidth() const
 {
 	return m_width;
 }
@@ -28,7 +28,7 @@ void Dimension::setHeight(height_t _height)
 	m_height = _height;;
 }
 
-height_t Dimension::getHeight() const
+Dimension::height_t Dimension::getHeight() const
 {
 	return m_height;
 }

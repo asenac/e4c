@@ -26,11 +26,12 @@ public:
 	
 	
 	
+
 	
+		
 protected:
 	AbstractEventRelationship();
 
-	
 };
 
 } // event

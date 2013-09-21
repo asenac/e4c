@@ -19,10 +19,21 @@ void ExceptionDef::setTypeCode(typeCode_t _typeCode)
 	m_typeCode = _typeCode;;
 }
 
-typeCode_t ExceptionDef::getTypeCode() const
+ExceptionDef::typeCode_t ExceptionDef::getTypeCode() const
 {
 	return m_typeCode;
 }
+
+ExceptionDef::members_t ExceptionDef::getMembers() const
+{
+	return e4c::returned(m_members);
+}
+
+void ExceptionDef::addMembers(idlmm::Field_ptr members_)
+{
+	m_members.push_back(std::unique_ptr < idlmm::Field >(members_));
+}
+
 
 
 

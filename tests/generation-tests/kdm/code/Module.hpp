@@ -24,15 +24,16 @@ public:
 	Module();
 	virtual ~Module();
 
-	typedef boost::ptr_vector < kdm::code::AbstractCodeElement > codeElement_t;
+	typedef std::vector < kdm::code::AbstractCodeElement_ptr > codeElement_t;
 
 	
-	// TODO
+	codeElement_t getCodeElement() const;
 
-	
+
+	std::vector < std::unique_ptr < kdm::code::AbstractCodeElement > > m_codeElement;
+
+		
 protected:
-
-	codeElement_t m_codeElement;
 
 };
 

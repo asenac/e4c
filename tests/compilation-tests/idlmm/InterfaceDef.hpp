@@ -23,10 +23,10 @@ public:
 	InterfaceDef();
 	virtual ~InterfaceDef();
 
-	typedef int isAbstract_t;
-	typedef int isCustom_t;
-	typedef int isTruncatable_t;
-	typedef std::set < idlmm::InterfaceDef_ptr > derivesFrom_t;
+	typedef ::ecore::EBoolean isAbstract_t;
+	typedef ::ecore::EBoolean isCustom_t;
+	typedef ::ecore::EBoolean isTruncatable_t;
+	typedef std::vector < idlmm::InterfaceDef_ptr > derivesFrom_t;
 	typedef idlmm::ForwardDef_ptr forward_t;
 
 	
@@ -36,18 +36,22 @@ public:
 	isCustom_t getIsCustom() const;
 	void setIsTruncatable(isTruncatable_t _isTruncatable);
 	isTruncatable_t getIsTruncatable() const;
-	// TODO
-	// TODO
-
+	derivesFrom_t getDerivesFrom() const;
 	
+	forward_t getForward() const;
+	
+	void setForward(forward_t forward_);
+
+		
 protected:
 
 	isAbstract_t m_isAbstract;
 	isCustom_t m_isCustom;
 	isTruncatable_t m_isTruncatable;
-	derivesFrom_t m_derivesFrom;
-	forward_t m_forward;
+	std::vector < idlmm::InterfaceDef_ptr > m_derivesFrom;
+	idlmm::ForwardDef_ptr m_forward;
 
+	
 };
 
 } // idlmm

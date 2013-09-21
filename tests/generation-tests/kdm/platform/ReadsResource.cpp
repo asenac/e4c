@@ -15,5 +15,15 @@ ReadsResource::~ReadsResource()
 {
 }
 
+ReadsResource::to_t ReadsResource::getTo() const
+{
+	return e4c::returned(m_to);
+}
+
+ReadsResource::from_t ReadsResource::getFrom() const
+{
+	return e4c::returned(m_from);
+}
+
 
 

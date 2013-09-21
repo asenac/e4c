@@ -22,15 +22,16 @@ public:
 	Comment();
 	virtual ~Comment();
 
-	typedef std::vector < emof::NamedElement_ptr > annotatedElement_t;
+	typedef std::set < emof::NamedElement_ptr > annotatedElement_t;
 
 	
-	// TODO
+	annotatedElement_t getAnnotatedElement() const;
 
-	
+
+	std::set < emof::NamedElement_ptr > m_annotatedElement;
+
+		
 protected:
-
-	annotatedElement_t m_annotatedElement;
 
 };
 

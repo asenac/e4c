@@ -9,7 +9,28 @@ using namespace CST;
 CSTPackage::CSTPackage()
 {
 	m_eFactoryInstance = CSTFactory::_instance();
-	::ecore::EcoreFactor_ptr ecoreFactory = ::ecore::EcoreFactory::_instance();
+	::ecore::EcoreFactory_ptr ecoreFactory = ::ecore::EcoreFactory::_instance();
+	
+	::ecore::EClass_ptr Tree_ = ecoreFactory->createEClass();
+	Tree_->setName("Tree");
+	// m_eClassifiers.push_back(Tree_);
+	::ecore::EClass_ptr Element_ = ecoreFactory->createEClass();
+	Element_->setName("Element");
+	// m_eClassifiers.push_back(Element_);
+	::ecore::EClass_ptr Node_ = ecoreFactory->createEClass();
+	Node_->setName("Node");
+	// m_eClassifiers.push_back(Node_);
+	::ecore::EClass_ptr Leaf_ = ecoreFactory->createEClass();
+	Leaf_->setName("Leaf");
+	// m_eClassifiers.push_back(Leaf_);
+	
+	
+	// Tree_->addESuperType(Node_);
+	// Node_->addESuperType(Element_);
+	// Leaf_->addESuperType(Element_);
+	
+	
+	
 	
 }
 

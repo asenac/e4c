@@ -22,19 +22,20 @@ public:
 	ImportStatement();
 	virtual ~ImportStatement();
 
-	typedef std::unique_ptr < xpand3::Identifier > importedId_t;
-	typedef int exported_t;
+	typedef xpand3::Identifier_ptr importedId_t;
+	typedef ::ecore::EBoolean exported_t;
 
 	
-	// TODO
+	importedId_t getImportedId() const;
 	void setExported(exported_t _exported);
 	exported_t getExported() const;
 
-	
-protected:
 
-	importedId_t m_importedId;
+	std::unique_ptr < xpand3::Identifier > m_importedId;
 	exported_t m_exported;
+
+		
+protected:
 
 };
 

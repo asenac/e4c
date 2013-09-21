@@ -22,17 +22,18 @@ public:
 	PrimitiveDef();
 	virtual ~PrimitiveDef();
 
-	typedef int kind_t;
+	typedef ::idlmm::PrimitiveKind kind_t;
 
 	
 	void setKind(kind_t _kind);
 	kind_t getKind() const;
 
-	
+		
 protected:
 
 	kind_t m_kind;
 
+	
 };
 
 } // idlmm

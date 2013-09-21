@@ -9,7 +9,32 @@ using namespace xpand3;
 Xpand3Package::Xpand3Package()
 {
 	m_eFactoryInstance = Xpand3Factory::_instance();
-	::ecore::EcoreFactor_ptr ecoreFactory = ::ecore::EcoreFactory::_instance();
+	::ecore::EcoreFactory_ptr ecoreFactory = ::ecore::EcoreFactory::_instance();
+	
+	::ecore::EClass_ptr SyntaxElement_ = ecoreFactory->createEClass();
+	SyntaxElement_->setName("SyntaxElement");
+	// m_eClassifiers.push_back(SyntaxElement_);
+	::ecore::EClass_ptr File_ = ecoreFactory->createEClass();
+	File_->setName("File");
+	// m_eClassifiers.push_back(File_);
+	::ecore::EClass_ptr ImportStatement_ = ecoreFactory->createEClass();
+	ImportStatement_->setName("ImportStatement");
+	// m_eClassifiers.push_back(ImportStatement_);
+	::ecore::EClass_ptr Identifier_ = ecoreFactory->createEClass();
+	Identifier_->setName("Identifier");
+	// m_eClassifiers.push_back(Identifier_);
+	::ecore::EClass_ptr DeclaredParameter_ = ecoreFactory->createEClass();
+	DeclaredParameter_->setName("DeclaredParameter");
+	// m_eClassifiers.push_back(DeclaredParameter_);
+	
+	
+	// File_->addESuperType(SyntaxElement_);
+	// ImportStatement_->addESuperType(SyntaxElement_);
+	// Identifier_->addESuperType(SyntaxElement_);
+	// DeclaredParameter_->addESuperType(SyntaxElement_);
+	
+	
+	
 	
 }
 

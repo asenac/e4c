@@ -21,17 +21,18 @@ public:
 	
 	virtual ~GraphicalElement();
 
-	typedef int stroke_t;
+	typedef ::PrimitiveTypes::String stroke_t;
 
 	
 	void setStroke(stroke_t _stroke);
 	stroke_t getStroke() const;
 
-	
-protected:
-	GraphicalElement();
 
 	stroke_t m_stroke;
+
+		
+protected:
+	GraphicalElement();
 
 };
 

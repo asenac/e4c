@@ -13,5 +13,10 @@ NonTerminal::~NonTerminal()
 {
 }
 
+NonTerminal::children_t NonTerminal::getChildren() const
+{
+	return e4c::returned(m_children);
+}
+
 
 

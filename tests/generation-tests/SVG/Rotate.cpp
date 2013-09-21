@@ -19,7 +19,7 @@ void Rotate::setAngle(angle_t _angle)
 	m_angle = _angle;;
 }
 
-angle_t Rotate::getAngle() const
+Rotate::angle_t Rotate::getAngle() const
 {
 	return m_angle;
 }
@@ -29,7 +29,7 @@ void Rotate::setCx(cx_t _cx)
 	m_cx = _cx;;
 }
 
-cx_t Rotate::getCx() const
+Rotate::cx_t Rotate::getCx() const
 {
 	return m_cx;
 }
@@ -39,7 +39,7 @@ void Rotate::setCy(cy_t _cy)
 	m_cy = _cy;;
 }
 
-cy_t Rotate::getCy() const
+Rotate::cy_t Rotate::getCy() const
 {
 	return m_cy;
 }

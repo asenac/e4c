@@ -24,16 +24,17 @@ public:
 	MemberUnit();
 	virtual ~MemberUnit();
 
-	typedef int export__t;
+	typedef ::kdm::code::ExportKind export__t;
 
 	
 	void setExport_(export__t _export_);
 	export__t getExport_() const;
 
-	
-protected:
 
 	export__t m_export_;
+
+		
+protected:
 
 };
 

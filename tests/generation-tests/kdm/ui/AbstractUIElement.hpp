@@ -23,25 +23,26 @@ public:
 	
 	virtual ~AbstractUIElement();
 
-	typedef boost::ptr_set < kdm::source::SourceRef > source_t;
-	typedef boost::ptr_set < kdm::ui::AbstractUIRelationship > UIRelation_t;
-	typedef std::vector < kdm::code::AbstractCodeElement_ptr > implementation_t;
-	typedef boost::ptr_vector < kdm::action::ActionElement > abstraction_t;
+	typedef std::set < kdm::source::SourceRef_ptr > source_t;
+	typedef std::set < kdm::ui::AbstractUIRelationship_ptr > UIRelation_t;
+	typedef std::set < kdm::code::AbstractCodeElement_ptr > implementation_t;
+	typedef std::vector < kdm::action::ActionElement_ptr > abstraction_t;
 
 	
-	// TODO
-	// TODO
-	// TODO
-	// TODO
+	source_t getSource() const;
+	UIRelation_t getUIRelation() const;
+	implementation_t getImplementation() const;
+	abstraction_t getAbstraction() const;
 
-	
+
+	std::set < std::unique_ptr < kdm::source::SourceRef > > m_source;
+	std::set < std::unique_ptr < kdm::ui::AbstractUIRelationship > > m_UIRelation;
+	std::set < kdm::code::AbstractCodeElement_ptr > m_implementation;
+	std::vector < std::unique_ptr < kdm::action::ActionElement > > m_abstraction;
+
+		
 protected:
 	AbstractUIElement();
-
-	source_t m_source;
-	UIRelation_t m_UIRelation;
-	implementation_t m_implementation;
-	abstraction_t m_abstraction;
 
 };
 

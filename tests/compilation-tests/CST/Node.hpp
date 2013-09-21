@@ -22,15 +22,16 @@ public:
 	Node();
 	virtual ~Node();
 
-	typedef boost::ptr_vector < CST::Element > children_t;
+	typedef std::vector < CST::Element_ptr > children_t;
 
 	
-	// TODO
+	children_t getChildren() const;
 
-	
+
+	std::vector < std::unique_ptr < CST::Element > > m_children;
+
+		
 protected:
-
-	children_t m_children;
 
 };
 

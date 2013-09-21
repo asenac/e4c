@@ -13,8 +13,61 @@ class EcorePackage : public ::ecore::EPackage
 {
 public:
     static const EcorePackage_ptr _instance();
+
+ 	::ecore::EClass_ptr getEAttribute() const;
+ 	::ecore::EClass_ptr getEAnnotation() const;
+ 	::ecore::EClass_ptr getEClass() const;
+ 	::ecore::EClass_ptr getEClassifier() const;
+ 	::ecore::EClass_ptr getEDataType() const;
+ 	::ecore::EClass_ptr getEEnum() const;
+ 	::ecore::EClass_ptr getEEnumLiteral() const;
+ 	::ecore::EClass_ptr getEFactory() const;
+ 	::ecore::EClass_ptr getEModelElement() const;
+ 	::ecore::EClass_ptr getENamedElement() const;
+ 	::ecore::EClass_ptr getEObject() const;
+ 	::ecore::EClass_ptr getEOperation() const;
+ 	::ecore::EClass_ptr getEPackage() const;
+ 	::ecore::EClass_ptr getEParameter() const;
+ 	::ecore::EClass_ptr getEReference() const;
+ 	::ecore::EClass_ptr getEStructuralFeature() const;
+ 	::ecore::EClass_ptr getETypedElement() const;
+ 	::ecore::EDataType_ptr getEBigDecimal() const;
+ 	::ecore::EDataType_ptr getEBigInteger() const;
+ 	::ecore::EDataType_ptr getEBoolean() const;
+ 	::ecore::EDataType_ptr getEBooleanObject() const;
+ 	::ecore::EDataType_ptr getEByte() const;
+ 	::ecore::EDataType_ptr getEByteArray() const;
+ 	::ecore::EDataType_ptr getEByteObject() const;
+ 	::ecore::EDataType_ptr getEChar() const;
+ 	::ecore::EDataType_ptr getECharacterObject() const;
+ 	::ecore::EDataType_ptr getEDate() const;
+ 	::ecore::EDataType_ptr getEDiagnosticChain() const;
+ 	::ecore::EDataType_ptr getEDouble() const;
+ 	::ecore::EDataType_ptr getEDoubleObject() const;
+ 	::ecore::EDataType_ptr getEEList() const;
+ 	::ecore::EDataType_ptr getEEnumerator() const;
+ 	::ecore::EDataType_ptr getEFeatureMap() const;
+ 	::ecore::EDataType_ptr getEFeatureMapEntry() const;
+ 	::ecore::EDataType_ptr getEFloat() const;
+ 	::ecore::EDataType_ptr getEFloatObject() const;
+ 	::ecore::EDataType_ptr getEInt() const;
+ 	::ecore::EDataType_ptr getEIntegerObject() const;
+ 	::ecore::EDataType_ptr getEJavaClass() const;
+ 	::ecore::EDataType_ptr getEJavaObject() const;
+ 	::ecore::EDataType_ptr getELong() const;
+ 	::ecore::EDataType_ptr getELongObject() const;
+ 	::ecore::EDataType_ptr getEMap() const;
+ 	::ecore::EDataType_ptr getEResource() const;
+ 	::ecore::EDataType_ptr getEResourceSet() const;
+ 	::ecore::EDataType_ptr getEShort() const;
+ 	::ecore::EDataType_ptr getEShortObject() const;
+ 	::ecore::EDataType_ptr getEString() const;
+ 	::ecore::EClass_ptr getEStringToStringMapEntry() const;
+ 	::ecore::EDataType_ptr getETreeIterator() const;
+ 	::ecore::EClass_ptr getEGenericType() const;
+ 	::ecore::EClass_ptr getETypeParameter() const;
+ 	::ecore::EDataType_ptr getEInvocationTargetException() const;
  
- 	// Classifiers
  	e4c::tag_t getTag_EAttribute() const;
  	e4c::tag_t getTag_EAnnotation() const;
  	e4c::tag_t getTag_EClass() const;
@@ -69,7 +122,6 @@ public:
  	e4c::tag_t getTag_ETypeParameter() const;
  	e4c::tag_t getTag_EInvocationTargetException() const;
  
- 	// Structural features
  	e4c::tag_t getTag_EAttribute__iD() const;
  	e4c::tag_t getTag_EAttribute__eAttributeType() const;
  	e4c::tag_t getTag_EAnnotation__source() const;
@@ -154,6 +206,60 @@ public:
 
 protected:
     EcorePackage();
+    
+ 	::ecore::EClass_ptr m_EAttribute;
+ 	::ecore::EClass_ptr m_EAnnotation;
+ 	::ecore::EClass_ptr m_EClass;
+ 	::ecore::EClass_ptr m_EClassifier;
+ 	::ecore::EClass_ptr m_EDataType;
+ 	::ecore::EClass_ptr m_EEnum;
+ 	::ecore::EClass_ptr m_EEnumLiteral;
+ 	::ecore::EClass_ptr m_EFactory;
+ 	::ecore::EClass_ptr m_EModelElement;
+ 	::ecore::EClass_ptr m_ENamedElement;
+ 	::ecore::EClass_ptr m_EObject;
+ 	::ecore::EClass_ptr m_EOperation;
+ 	::ecore::EClass_ptr m_EPackage;
+ 	::ecore::EClass_ptr m_EParameter;
+ 	::ecore::EClass_ptr m_EReference;
+ 	::ecore::EClass_ptr m_EStructuralFeature;
+ 	::ecore::EClass_ptr m_ETypedElement;
+ 	::ecore::EDataType_ptr m_EBigDecimal;
+ 	::ecore::EDataType_ptr m_EBigInteger;
+ 	::ecore::EDataType_ptr m_EBoolean;
+ 	::ecore::EDataType_ptr m_EBooleanObject;
+ 	::ecore::EDataType_ptr m_EByte;
+ 	::ecore::EDataType_ptr m_EByteArray;
+ 	::ecore::EDataType_ptr m_EByteObject;
+ 	::ecore::EDataType_ptr m_EChar;
+ 	::ecore::EDataType_ptr m_ECharacterObject;
+ 	::ecore::EDataType_ptr m_EDate;
+ 	::ecore::EDataType_ptr m_EDiagnosticChain;
+ 	::ecore::EDataType_ptr m_EDouble;
+ 	::ecore::EDataType_ptr m_EDoubleObject;
+ 	::ecore::EDataType_ptr m_EEList;
+ 	::ecore::EDataType_ptr m_EEnumerator;
+ 	::ecore::EDataType_ptr m_EFeatureMap;
+ 	::ecore::EDataType_ptr m_EFeatureMapEntry;
+ 	::ecore::EDataType_ptr m_EFloat;
+ 	::ecore::EDataType_ptr m_EFloatObject;
+ 	::ecore::EDataType_ptr m_EInt;
+ 	::ecore::EDataType_ptr m_EIntegerObject;
+ 	::ecore::EDataType_ptr m_EJavaClass;
+ 	::ecore::EDataType_ptr m_EJavaObject;
+ 	::ecore::EDataType_ptr m_ELong;
+ 	::ecore::EDataType_ptr m_ELongObject;
+ 	::ecore::EDataType_ptr m_EMap;
+ 	::ecore::EDataType_ptr m_EResource;
+ 	::ecore::EDataType_ptr m_EResourceSet;
+ 	::ecore::EDataType_ptr m_EShort;
+ 	::ecore::EDataType_ptr m_EShortObject;
+ 	::ecore::EDataType_ptr m_EString;
+ 	::ecore::EClass_ptr m_EStringToStringMapEntry;
+ 	::ecore::EDataType_ptr m_ETreeIterator;
+ 	::ecore::EClass_ptr m_EGenericType;
+ 	::ecore::EClass_ptr m_ETypeParameter;
+ 	::ecore::EDataType_ptr m_EInvocationTargetException;
 };
 
 } // ecore

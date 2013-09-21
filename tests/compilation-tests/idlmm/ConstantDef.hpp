@@ -14,7 +14,6 @@ namespace idlmm
 {
 
 
-// idlmm::ConstantDef
 class ConstantDef :  public virtual ::idlmm::Contained,  public virtual ::idlmm::Typed,  public virtual ::idlmm::Constant
 {
 public:

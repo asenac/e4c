@@ -12,7 +12,6 @@ namespace ecore
 {
 
 
-// ecore::EEnumLiteral
 class EEnumLiteral :  public virtual ::ecore::ENamedElement
 {
 public:

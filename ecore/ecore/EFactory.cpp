@@ -20,12 +20,12 @@ EFactory::ePackage_t EFactory::getEPackage() const
 
 void EFactory::setEPackage(ePackage_t ePackage_)
 {
-;
 	if (m_ePackage)
 		m_ePackage->setEFactoryInstance(0);
 	m_ePackage = ePackage_;
 	if (m_ePackage && m_ePackage->getEFactoryInstance() != this)
 		m_ePackage->setEFactoryInstance(this);
+	
 }
 
 

@@ -13,7 +13,6 @@ namespace idlmm
 {
 
 
-// idlmm::AliasDef
 class AliasDef :  public virtual ::idlmm::Typed,  public virtual ::idlmm::TypedefDef
 {
 public:

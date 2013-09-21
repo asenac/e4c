@@ -12,7 +12,6 @@ namespace idlmm
 {
 
 
-// idlmm::Field
 class Field :  public virtual ::idlmm::Typed
 {
 public:

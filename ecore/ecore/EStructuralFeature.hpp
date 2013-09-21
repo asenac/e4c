@@ -12,7 +12,6 @@ namespace ecore
 {
 
 
-// ecore::EStructuralFeature
 class EStructuralFeature :  public virtual ::ecore::ETypedElement
 {
 public:

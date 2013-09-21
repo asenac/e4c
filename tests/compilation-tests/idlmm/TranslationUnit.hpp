@@ -12,7 +12,6 @@ namespace idlmm
 {
 
 
-// idlmm::TranslationUnit
 class TranslationUnit :  public virtual ::idlmm::ModelElement
 {
 public:
@@ -29,10 +28,12 @@ public:
 	
 	contains_t getContains() const;
 	void addContains(idlmm::Contained_ptr contains_);
+	void addAllContains(const contains_t& contains_);
 	void setIdentifier(identifier_t _identifier);
 	identifier_t getIdentifier() const;
 	includes_t getIncludes() const;
 	void addIncludes(idlmm::Include_ptr includes_);
+	void addAllIncludes(const includes_t& includes_);
 
 		
 protected:

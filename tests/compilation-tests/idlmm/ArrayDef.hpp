@@ -13,7 +13,6 @@ namespace idlmm
 {
 
 
-// idlmm::ArrayDef
 class ArrayDef :  public virtual ::idlmm::Typed,  public virtual ::idlmm::IDLType
 {
 public:
@@ -31,6 +30,7 @@ public:
 	name_t getName() const;
 	bounds_t getBounds() const;
 	void addBounds(idlmm::Expression_ptr bounds_);
+	void addAllBounds(const bounds_t& bounds_);
 
 		
 protected:

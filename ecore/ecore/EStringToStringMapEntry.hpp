@@ -12,7 +12,6 @@ namespace ecore
 {
 
 
-// ecore::EStringToStringMapEntry
 class EStringToStringMapEntry
 {
 public:

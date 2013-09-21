@@ -13,8 +13,49 @@ class IdlmmPackage : public ::ecore::EPackage
 {
 public:
     static const IdlmmPackage_ptr _instance();
+
+ 	::ecore::EClass_ptr getModelElement() const;
+ 	::ecore::EClass_ptr getContainer() const;
+ 	::ecore::EClass_ptr getContained() const;
+ 	::ecore::EClass_ptr getInterfaceDef() const;
+ 	::ecore::EClass_ptr getModuleDef() const;
+ 	::ecore::EClass_ptr getIDLType() const;
+ 	::ecore::EClass_ptr getOperationDef() const;
+ 	::ecore::EClass_ptr getAttributeDef() const;
+ 	::ecore::EClass_ptr getConstantDef() const;
+ 	::ecore::EClass_ptr getTyped() const;
+ 	::ecore::EClass_ptr getParameterDef() const;
+ 	::ecore::EEnum_ptr getParameterMode() const;
+ 	::ecore::EClass_ptr getPrimitiveDef() const;
+ 	::ecore::EEnum_ptr getPrimitiveKind() const;
+ 	::ecore::EClass_ptr getExceptionDef() const;
+ 	::ecore::EDataType_ptr getEAny() const;
+ 	::ecore::EDataType_ptr getETypeCode() const;
+ 	::ecore::EClass_ptr getField() const;
+ 	::ecore::EClass_ptr getFixedDef() const;
+ 	::ecore::EClass_ptr getWstringDef() const;
+ 	::ecore::EClass_ptr getStringDef() const;
+ 	::ecore::EClass_ptr getAliasDef() const;
+ 	::ecore::EClass_ptr getArrayDef() const;
+ 	::ecore::EClass_ptr getSequenceDef() const;
+ 	::ecore::EClass_ptr getUnionField() const;
+ 	::ecore::EClass_ptr getTypedefDef() const;
+ 	::ecore::EClass_ptr getUnionDef() const;
+ 	::ecore::EClass_ptr getEnumDef() const;
+ 	::ecore::EClass_ptr getStructDef() const;
+ 	::ecore::EClass_ptr getTranslationUnit() const;
+ 	::ecore::EClass_ptr getInclude() const;
+ 	::ecore::EClass_ptr getExpression() const;
+ 	::ecore::EClass_ptr getBinaryExpression() const;
+ 	::ecore::EClass_ptr getUnaryExpression() const;
+ 	::ecore::EClass_ptr getLiteralExpression() const;
+ 	::ecore::EClass_ptr getConstantDefRef() const;
+ 	::ecore::EClass_ptr getValueExpression() const;
+ 	::ecore::EClass_ptr getForwardDef() const;
+ 	::ecore::EClass_ptr getEnumMember() const;
+ 	::ecore::EClass_ptr getConstant() const;
+ 	::ecore::EClass_ptr getNamedElement() const;
  
- 	// Classifiers
  	e4c::tag_t getTag_ModelElement() const;
  	e4c::tag_t getTag_Container() const;
  	e4c::tag_t getTag_Contained() const;
@@ -57,7 +98,6 @@ public:
  	e4c::tag_t getTag_Constant() const;
  	e4c::tag_t getTag_NamedElement() const;
  
- 	// Structural features
  	e4c::tag_t getTag_Container__contains() const;
  	e4c::tag_t getTag_Contained__repositoryId() const;
  	e4c::tag_t getTag_Contained__version() const;
@@ -118,6 +158,48 @@ public:
 
 protected:
     IdlmmPackage();
+    
+ 	::ecore::EClass_ptr m_ModelElement;
+ 	::ecore::EClass_ptr m_Container;
+ 	::ecore::EClass_ptr m_Contained;
+ 	::ecore::EClass_ptr m_InterfaceDef;
+ 	::ecore::EClass_ptr m_ModuleDef;
+ 	::ecore::EClass_ptr m_IDLType;
+ 	::ecore::EClass_ptr m_OperationDef;
+ 	::ecore::EClass_ptr m_AttributeDef;
+ 	::ecore::EClass_ptr m_ConstantDef;
+ 	::ecore::EClass_ptr m_Typed;
+ 	::ecore::EClass_ptr m_ParameterDef;
+ 	::ecore::EEnum_ptr m_ParameterMode;
+ 	::ecore::EClass_ptr m_PrimitiveDef;
+ 	::ecore::EEnum_ptr m_PrimitiveKind;
+ 	::ecore::EClass_ptr m_ExceptionDef;
+ 	::ecore::EDataType_ptr m_EAny;
+ 	::ecore::EDataType_ptr m_ETypeCode;
+ 	::ecore::EClass_ptr m_Field;
+ 	::ecore::EClass_ptr m_FixedDef;
+ 	::ecore::EClass_ptr m_WstringDef;
+ 	::ecore::EClass_ptr m_StringDef;
+ 	::ecore::EClass_ptr m_AliasDef;
+ 	::ecore::EClass_ptr m_ArrayDef;
+ 	::ecore::EClass_ptr m_SequenceDef;
+ 	::ecore::EClass_ptr m_UnionField;
+ 	::ecore::EClass_ptr m_TypedefDef;
+ 	::ecore::EClass_ptr m_UnionDef;
+ 	::ecore::EClass_ptr m_EnumDef;
+ 	::ecore::EClass_ptr m_StructDef;
+ 	::ecore::EClass_ptr m_TranslationUnit;
+ 	::ecore::EClass_ptr m_Include;
+ 	::ecore::EClass_ptr m_Expression;
+ 	::ecore::EClass_ptr m_BinaryExpression;
+ 	::ecore::EClass_ptr m_UnaryExpression;
+ 	::ecore::EClass_ptr m_LiteralExpression;
+ 	::ecore::EClass_ptr m_ConstantDefRef;
+ 	::ecore::EClass_ptr m_ValueExpression;
+ 	::ecore::EClass_ptr m_ForwardDef;
+ 	::ecore::EClass_ptr m_EnumMember;
+ 	::ecore::EClass_ptr m_Constant;
+ 	::ecore::EClass_ptr m_NamedElement;
 };
 
 } // idlmm

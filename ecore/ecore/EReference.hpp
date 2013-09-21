@@ -12,7 +12,6 @@ namespace ecore
 {
 
 
-// ecore::EReference
 class EReference :  public virtual ::ecore::EStructuralFeature
 {
 public:
@@ -43,6 +42,8 @@ public:
 	
 	void setEReferenceType(eReferenceType_t eReferenceType_);
 	eKeys_t getEKeys() const;
+	void addEKeys(ecore::EAttribute_ptr eKeys_);
+	void addAllEKeys(const eKeys_t& eKeys_);
 	
 
 		

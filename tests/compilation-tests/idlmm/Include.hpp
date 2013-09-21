@@ -12,7 +12,6 @@ namespace idlmm
 {
 
 
-// idlmm::Include
 class Include :  public virtual ::idlmm::ModelElement
 {
 public:

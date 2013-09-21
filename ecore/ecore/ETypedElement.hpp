@@ -12,7 +12,6 @@ namespace ecore
 {
 
 
-// ecore::ETypedElement
 class ETypedElement :  public virtual ::ecore::ENamedElement
 {
 public:

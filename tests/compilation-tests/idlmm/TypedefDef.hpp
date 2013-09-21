@@ -13,7 +13,6 @@ namespace idlmm
 {
 
 
-// idlmm::TypedefDef
 class TypedefDef :  public virtual ::idlmm::IDLType,  public virtual ::idlmm::Contained
 {
 public:

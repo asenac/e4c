@@ -64,6 +64,7 @@ EClassifier::ePackage_t EClassifier::getEPackage() const
 	return e4c::returned(m_ePackage);
 }
 
+
 void EClassifier::setEPackage(ePackage_t ePackage_)
 {
 	m_ePackage = ePackage_;
@@ -75,9 +76,16 @@ EClassifier::eTypeParameters_t EClassifier::getETypeParameters() const
 	return e4c::returned(m_eTypeParameters);
 }
 
+
 void EClassifier::addETypeParameters(ecore::ETypeParameter_ptr eTypeParameters_)
 {
 	m_eTypeParameters.push_back(std::unique_ptr < ecore::ETypeParameter >(eTypeParameters_));
+}
+
+void EClassifier::addAllETypeParameters(const eTypeParameters_t& eTypeParameters_)
+{
+	for (auto i = eTypeParameters_.begin(); i != eTypeParameters_.end(); i++)
+		addETypeParameters(*i);
 }
 
 

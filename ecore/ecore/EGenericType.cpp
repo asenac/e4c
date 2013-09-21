@@ -25,6 +25,7 @@ EGenericType::eUpperBound_t EGenericType::getEUpperBound() const
 	return e4c::returned(m_eUpperBound);
 }
 
+
 void EGenericType::setEUpperBound(eUpperBound_t eUpperBound_)
 {
 	m_eUpperBound.reset(eUpperBound_);
@@ -41,9 +42,16 @@ EGenericType::eTypeArguments_t EGenericType::getETypeArguments() const
 	return e4c::returned(m_eTypeArguments);
 }
 
+
 void EGenericType::addETypeArguments(ecore::EGenericType_ptr eTypeArguments_)
 {
 	m_eTypeArguments.push_back(std::unique_ptr < ecore::EGenericType >(eTypeArguments_));
+}
+
+void EGenericType::addAllETypeArguments(const eTypeArguments_t& eTypeArguments_)
+{
+	for (auto i = eTypeArguments_.begin(); i != eTypeArguments_.end(); i++)
+		addETypeArguments(*i);
 }
 
 
@@ -55,6 +63,7 @@ EGenericType::eRawType_t EGenericType::getERawType() const
 void EGenericType::setERawType(eRawType_t eRawType_)
 {
 	m_eRawType = eRawType_;
+	
 }
 
 
@@ -62,6 +71,7 @@ EGenericType::eLowerBound_t EGenericType::getELowerBound() const
 {
 	return e4c::returned(m_eLowerBound);
 }
+
 
 void EGenericType::setELowerBound(eLowerBound_t eLowerBound_)
 {
@@ -82,6 +92,7 @@ EGenericType::eTypeParameter_t EGenericType::getETypeParameter() const
 void EGenericType::setETypeParameter(eTypeParameter_t eTypeParameter_)
 {
 	m_eTypeParameter = eTypeParameter_;
+	
 }
 
 
@@ -93,6 +104,7 @@ EGenericType::eClassifier_t EGenericType::getEClassifier() const
 void EGenericType::setEClassifier(eClassifier_t eClassifier_)
 {
 	m_eClassifier = eClassifier_;
+	
 }
 
 

@@ -11,7 +11,6 @@ namespace ecore
 {
 
 
-// ecore::EObject
 class EObject
 {
 public:

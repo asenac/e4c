@@ -12,7 +12,6 @@ namespace idlmm
 {
 
 
-// idlmm::PrimitiveDef
 class PrimitiveDef :  public virtual ::idlmm::IDLType
 {
 public:

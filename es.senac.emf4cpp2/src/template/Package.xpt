@@ -18,19 +18,25 @@ class «getPackage()» : public ::ecore::EPackage
 {
 public:
     static const «getPackage()»_ptr _instance();
+
+  	«FOREACH EClassifiers AS e-»
+ 	::«e.eClass().getFQN()»_ptr get«e.getNameUpper()»() const;
+ 	«ENDFOREACH-»
  
- 	// Classifiers
   	«FOREACH EClassifiers AS e-»
  	e4c::tag_t «e.getTagMethod()»() const;
  	«ENDFOREACH-»
  
- 	// Structural features
  	«FOREACH getStructuralFeatures() AS e-»
  	e4c::tag_t «e.getTagMethod()»() const;
  	«ENDFOREACH-»
 
 protected:
     «getPackage()»();
+    
+     «FOREACH EClassifiers AS e-»
+ 	::«e.eClass().getFQN()»_ptr m_«e.getNameUpper()»;
+ 	«ENDFOREACH-»
 };
 
 «EXPAND template::EPackage::namespacesEnd FOR this»
@@ -56,39 +62,55 @@ using namespace «getFQN()»;
 	::ecore::EcoreFactory_ptr ecoreFactory = ::ecore::EcoreFactory::_instance();
 	«ENDIF-»
 	
-	«FOREACH EClassifiers.typeSelect(EClass) AS cl-»
-	::ecore::EClass_ptr «cl.getName()»_ = ecoreFactory->createEClass();
-	«cl.getName()»_->setName("«cl.name»");
-	addEClassifiers(«cl.getName()»_);
-	«ENDFOREACH»
-	
-	«FOREACH EClassifiers.typeSelect(EClass) AS cl-»
-		«FOREACH cl.ESuperTypes AS s-»
-	// «cl.getName()»_->addESuperTypes(«s.getName()»_);
-		«ENDFOREACH-»
-	«ENDFOREACH»
-	
-	«FOREACH EClassifiers.typeSelect(EDataType).select(e|!EEnum.isInstance(e)) AS cl-»
-	::ecore::EDataType_ptr «cl.getName()»_ = ecoreFactory->createEDataType();
-	«cl.getName()»_->setName("«cl.name»");
-	addEClassifiers(«cl.getName()»_);
+	«FOREACH EClassifiers AS cl-»
+	m_«cl.getName()» = ecoreFactory->create«cl.eClass().name»();
+	m_«cl.getName()»->setName("«cl.name»");
+	addEClassifiers(m_«cl.getName()»);
 	«ENDFOREACH»
 	
 	«FOREACH EClassifiers.typeSelect(EEnum) AS ee-»
-    ::ecore::EEnum_ptr «ee.getName()»_ = ecoreFactory->createEEnum();
-    «ee.getName()»_->setName("«ee.name»");
-    «ee.getName()»_->setSerializable(«ee.serializable»);
+    m_«ee.getName()»->setSerializable(«ee.serializable»);
 	    «FOREACH ee.ELiterals AS el-»
     {
-        ::ecore::EEnumLiteral_ptr el = ecoreFactory->createEEnumLiteral();
+        ::«el.eClass().getFQN()»_ptr el = ecoreFactory->createEEnumLiteral();
         el->setName("«el»");
         el->setValue(static_cast< ::ecore::EInt >(«ee.getName()»::«el»));
         el->setLiteral("«el»");
-        «ee.getName()»_->addELiterals(el);
+        m_«ee.getName()»->addELiterals(el);
     }
 	    «ENDFOREACH-»
-	addEClassifiers(«ee.getName()»_);
 	«ENDFOREACH-»
+	
+	«FOREACH EClassifiers.typeSelect(EClass) AS cl-»
+	    «FOREACH cl.EStructuralFeatures AS ef-»
+    {
+        ::«ef.eClass().getFQN()»_ptr ef = ecoreFactory->create«ef.eClass().getName()»();
+        ef->setName("«ef.name»");
+        m_«cl.getName()»->addEStructuralFeatures(ef);
+        m_«cl.getName()»->addEAllStructuralFeatures(ef);
+        m_«cl.getName()»->add«ef.eClass().getName()»s(ef);
+        m_«cl.getName()»->addEAll«ef.eClass().getName().replaceFirst("E", "")»s(ef);
+    }
+	    «ENDFOREACH-»
+	    «FOREACH cl.EOperations AS op-»
+    {
+        ::«op.eClass().getFQN()»_ptr op = ecoreFactory->create«op.eClass().getName()»();
+        op->setName("«op.name»");
+        m_«cl.getName()»->add«op.eClass().getName()»s(op);
+        m_«cl.getName()»->addEAll«op.eClass().getName().replaceFirst("E", "")»s(op);
+    }
+	    «ENDFOREACH-»
+	«ENDFOREACH-»
+	«REM»FIXME This assumes that a class can not have a super-type defined in other package«ENDREM»
+	«FOREACH EClassifiers.typeSelect(EClass) AS cl-»
+		«FOREACH cl.ESuperTypes AS s-»
+	m_«cl.getName()»->addESuperTypes(m_«s.getName()»);
+	m_«cl.getName()»->addAllEAllOperations(m_«s.getName()»->getEOperations());
+	m_«cl.getName()»->addAllEAllReferences(m_«s.getName()»->getEReferences());
+	m_«cl.getName()»->addAllEAllAttributes(m_«s.getName()»->getEAttributes());
+	m_«cl.getName()»->addAllEAllStructuralFeatures(m_«s.getName()»->getEStructuralFeatures());
+		«ENDFOREACH-»
+	«ENDFOREACH»
 }
 
 const «getPackage()»_ptr «getPackage()»::_instance()
@@ -98,6 +120,11 @@ const «getPackage()»_ptr «getPackage()»::_instance()
 }
 
   	«FOREACH EClassifiers AS e-»
+ecore::«e.eClass().name»_ptr «getPackage()»::get«e.getNameUpper()»() const
+{
+	return m_«e.getNameUpper()»;
+}
+  	
 e4c::tag_t «getPackage()»::«e.getTagMethod()»() const
 {
 	return e4c::tag< «e.getName()» >::get();

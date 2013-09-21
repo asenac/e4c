@@ -29,9 +29,16 @@ ExceptionDef::members_t ExceptionDef::getMembers() const
 	return e4c::returned(m_members);
 }
 
+
 void ExceptionDef::addMembers(idlmm::Field_ptr members_)
 {
 	m_members.push_back(std::unique_ptr < idlmm::Field >(members_));
+}
+
+void ExceptionDef::addAllMembers(const members_t& members_)
+{
+	for (auto i = members_.begin(); i != members_.end(); i++)
+		addMembers(*i);
 }
 
 

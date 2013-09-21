@@ -12,7 +12,6 @@ namespace idlmm
 {
 
 
-// idlmm::IDLType
 class IDLType :  public virtual ::idlmm::ModelElement
 {
 public:

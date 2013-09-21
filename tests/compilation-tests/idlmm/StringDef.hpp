@@ -12,7 +12,6 @@ namespace idlmm
 {
 
 
-// idlmm::StringDef
 class StringDef :  public virtual ::idlmm::IDLType
 {
 public:

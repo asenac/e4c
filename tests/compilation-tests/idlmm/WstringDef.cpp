@@ -18,6 +18,7 @@ WstringDef::bound_t WstringDef::getBound() const
 	return e4c::returned(m_bound);
 }
 
+
 void WstringDef::setBound(bound_t bound_)
 {
 	m_bound.reset(bound_);

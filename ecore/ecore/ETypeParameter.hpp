@@ -12,7 +12,6 @@ namespace ecore
 {
 
 
-// ecore::ETypeParameter
 class ETypeParameter :  public virtual ::ecore::ENamedElement
 {
 public:
@@ -27,6 +26,7 @@ public:
 	
 	eBounds_t getEBounds() const;
 	void addEBounds(ecore::EGenericType_ptr eBounds_);
+	void addAllEBounds(const eBounds_t& eBounds_);
 
 		
 protected:

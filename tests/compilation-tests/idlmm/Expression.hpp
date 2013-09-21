@@ -12,7 +12,6 @@ namespace idlmm
 {
 
 
-// idlmm::Expression
 class Expression :  public virtual ::idlmm::ModelElement
 {
 public:

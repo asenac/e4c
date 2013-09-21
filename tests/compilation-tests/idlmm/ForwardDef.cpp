@@ -21,6 +21,7 @@ ForwardDef::definition_t ForwardDef::getDefinition() const
 void ForwardDef::setDefinition(definition_t definition_)
 {
 	m_definition = definition_;
+	
 }
 
 

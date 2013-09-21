@@ -12,7 +12,6 @@ namespace idlmm
 {
 
 
-// idlmm::Typed
 class Typed :  public virtual ::idlmm::ModelElement
 {
 public:

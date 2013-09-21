@@ -12,7 +12,6 @@ namespace idlmm
 {
 
 
-// idlmm::Constant
 class Constant :  public virtual ::idlmm::Contained
 {
 public:

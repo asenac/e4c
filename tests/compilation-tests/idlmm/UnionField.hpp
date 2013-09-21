@@ -12,7 +12,6 @@ namespace idlmm
 {
 
 
-// idlmm::UnionField
 class UnionField :  public virtual ::idlmm::Typed
 {
 public:
@@ -30,6 +29,7 @@ public:
 	identifier_t getIdentifier() const;
 	label_t getLabel() const;
 	void addLabel(idlmm::Expression_ptr label_);
+	void addAllLabel(const label_t& label_);
 
 		
 protected:

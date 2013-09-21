@@ -12,7 +12,6 @@ namespace ecore
 {
 
 
-// ecore::EOperation
 class EOperation :  public virtual ::ecore::ETypedElement
 {
 public:
@@ -32,12 +31,17 @@ public:
 	eContainingClass_t getEContainingClass() const;
 	eTypeParameters_t getETypeParameters() const;
 	void addETypeParameters(ecore::ETypeParameter_ptr eTypeParameters_);
+	void addAllETypeParameters(const eTypeParameters_t& eTypeParameters_);
 	eParameters_t getEParameters() const;
 	void addEParameters(ecore::EParameter_ptr eParameters_);
+	void addAllEParameters(const eParameters_t& eParameters_);
 	eExceptions_t getEExceptions() const;
+	void addEExceptions(ecore::EClassifier_ptr eExceptions_);
+	void addAllEExceptions(const eExceptions_t& eExceptions_);
 	
 	eGenericExceptions_t getEGenericExceptions() const;
 	void addEGenericExceptions(ecore::EGenericType_ptr eGenericExceptions_);
+	void addAllEGenericExceptions(const eGenericExceptions_t& eGenericExceptions_);
 
 		
 protected:

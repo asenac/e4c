@@ -13,7 +13,6 @@ namespace idlmm
 {
 
 
-// idlmm::OperationDef
 class OperationDef :  public virtual ::idlmm::Contained,  public virtual ::idlmm::Typed
 {
 public:
@@ -31,11 +30,14 @@ public:
 	
 	parameters_t getParameters() const;
 	void addParameters(idlmm::ParameterDef_ptr parameters_);
+	void addAllParameters(const parameters_t& parameters_);
 	void setIsOneway(isOneway_t _isOneway);
 	isOneway_t getIsOneway() const;
 	void setContexts(contexts_t _contexts);
 	contexts_t getContexts() const;
 	canRaise_t getCanRaise() const;
+	void addCanRaise(idlmm::ExceptionDef_ptr canRaise_);
+	void addAllCanRaise(const canRaise_t& canRaise_);
 	
 
 		

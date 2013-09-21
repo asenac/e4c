@@ -12,7 +12,6 @@ namespace ecore
 {
 
 
-// ecore::EGenericType
 class EGenericType
 {
 public:
@@ -35,6 +34,7 @@ public:
 	eUpperBound_t releaseEUpperBound();
 	eTypeArguments_t getETypeArguments() const;
 	void addETypeArguments(ecore::EGenericType_ptr eTypeArguments_);
+	void addAllETypeArguments(const eTypeArguments_t& eTypeArguments_);
 	eRawType_t getERawType() const;
 	
 	void setERawType(eRawType_t eRawType_);

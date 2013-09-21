@@ -12,7 +12,6 @@ namespace idlmm
 {
 
 
-// idlmm::ModuleDef
 class ModuleDef :  public virtual ::idlmm::Container
 {
 public:

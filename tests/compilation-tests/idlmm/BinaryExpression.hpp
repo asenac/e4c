@@ -12,7 +12,6 @@ namespace idlmm
 {
 
 
-// idlmm::BinaryExpression
 class BinaryExpression :  public virtual ::idlmm::Expression
 {
 public:

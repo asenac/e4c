@@ -12,7 +12,6 @@ namespace ecore
 {
 
 
-// ecore::EClass
 class EClass :  public virtual ::ecore::EClassifier
 {
 public:
@@ -45,33 +44,56 @@ public:
 	void setInterface(interface_t _interface);
 	interface_t getInterface() const;
 	eSuperTypes_t getESuperTypes() const;
+	void addESuperTypes(ecore::EClass_ptr eSuperTypes_);
+	void addAllESuperTypes(const eSuperTypes_t& eSuperTypes_);
 	
 	eOperations_t getEOperations() const;
 	void addEOperations(ecore::EOperation_ptr eOperations_);
+	void addAllEOperations(const eOperations_t& eOperations_);
 	eAllAttributes_t getEAllAttributes() const;
+	void addEAllAttributes(ecore::EAttribute_ptr eAllAttributes_);
+	void addAllEAllAttributes(const eAllAttributes_t& eAllAttributes_);
 	
 	eAllReferences_t getEAllReferences() const;
+	void addEAllReferences(ecore::EReference_ptr eAllReferences_);
+	void addAllEAllReferences(const eAllReferences_t& eAllReferences_);
 	
 	eReferences_t getEReferences() const;
+	void addEReferences(ecore::EReference_ptr eReferences_);
+	void addAllEReferences(const eReferences_t& eReferences_);
 	
 	eAttributes_t getEAttributes() const;
+	void addEAttributes(ecore::EAttribute_ptr eAttributes_);
+	void addAllEAttributes(const eAttributes_t& eAttributes_);
 	
 	eAllContainments_t getEAllContainments() const;
+	void addEAllContainments(ecore::EReference_ptr eAllContainments_);
+	void addAllEAllContainments(const eAllContainments_t& eAllContainments_);
 	
 	eAllOperations_t getEAllOperations() const;
+	void addEAllOperations(ecore::EOperation_ptr eAllOperations_);
+	void addAllEAllOperations(const eAllOperations_t& eAllOperations_);
 	
 	eAllStructuralFeatures_t getEAllStructuralFeatures() const;
+	void addEAllStructuralFeatures(ecore::EStructuralFeature_ptr eAllStructuralFeatures_);
+	void addAllEAllStructuralFeatures(const eAllStructuralFeatures_t& eAllStructuralFeatures_);
 	
 	eAllSuperTypes_t getEAllSuperTypes() const;
+	void addEAllSuperTypes(ecore::EClass_ptr eAllSuperTypes_);
+	void addAllEAllSuperTypes(const eAllSuperTypes_t& eAllSuperTypes_);
 	
 	eIDAttribute_t getEIDAttribute() const;
 	
 	void setEIDAttribute(eIDAttribute_t eIDAttribute_);
 	eStructuralFeatures_t getEStructuralFeatures() const;
 	void addEStructuralFeatures(ecore::EStructuralFeature_ptr eStructuralFeatures_);
+	void addAllEStructuralFeatures(const eStructuralFeatures_t& eStructuralFeatures_);
 	eGenericSuperTypes_t getEGenericSuperTypes() const;
 	void addEGenericSuperTypes(ecore::EGenericType_ptr eGenericSuperTypes_);
+	void addAllEGenericSuperTypes(const eGenericSuperTypes_t& eGenericSuperTypes_);
 	eAllGenericSuperTypes_t getEAllGenericSuperTypes() const;
+	void addEAllGenericSuperTypes(ecore::EGenericType_ptr eAllGenericSuperTypes_);
+	void addAllEAllGenericSuperTypes(const eAllGenericSuperTypes_t& eAllGenericSuperTypes_);
 	
 
 		

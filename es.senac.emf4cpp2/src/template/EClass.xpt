@@ -23,7 +23,6 @@
 
 «EXPAND template::EPackage::namespacesBegin FOR EPackage»
 
-// «getFQN()»
 class «getName()»«IF !ESuperTypes.isEmpty» : «FOREACH ESuperTypes AS e SEPARATOR ", "» public virtual ::«e.getFQN()»«ENDFOREACH»«ENDIF»
 {
 public:
@@ -89,18 +88,21 @@ protected:
 
 «DEFINE generateAccessors FOR EReference-»
 	«getName()»_t get«getNameUpper()»() const;
+	«IF upperBound != 1-»
+	void add«getNameUpper()»(«getNoContaimentPtr()» «getName()»_);
+	void addAll«getNameUpper()»(const «getName()»_t& «getName()»_);
+	«ENDIF-»
 	«IF containment-»
 		«IF upperBound == 1-»
 	void set«getNameUpper()»(«getName()»_t «getName()»_);
 	«getName()»_t release«getNameUpper()»();
 		«ELSEIF ordered-»
-	void add«getNameUpper()»(«getNoContaimentPtr()» «getName()»_);
 		«ELSE-»
-	void add«getNameUpper()»(«getNoContaimentPtr()» «getName()»_);
 		«ENDIF-»
 	«ELSEIF !container»
 		«IF upperBound == 1-»
 	void set«getNameUpper()»(«getName()»_t «getName()»_);
+		«ELSEIF ordered-»
 		«ELSE-»
 		«ENDIF-»
 	«ENDIF-»
@@ -128,7 +130,7 @@ void «EContainingClass.getName()»::set«getNameUpper()»(«getName()»_t _«getName()
 }
 
 «IF containment-»
-	«IF upperBound == 1-»
+	«IF upperBound == 1-»«REM»Required upperBound == 1«ENDREM»
 void «EContainingClass.getName()»::set«getNameUpper()»(«getName()»_t «getName()»_)
 {
 	m_«getName()».reset(«getName()»_);
@@ -144,24 +146,22 @@ void «EContainingClass.getName()»::set«getNameUpper()»(«getName()»_t «getName()»
 	«ENDIF-»
 	return m_«getName()».release();
 }
-	«ELSEIF ordered-»
+	«ELSE-»«REM»Required upperBound == 1«ENDREM»
 void «EContainingClass.getName()»::add«getNameUpper()»(«getNoContaimentPtr()» «getName()»_)
 {
 	«IF EOpposite != null-»
 	«getName()»_->set«EOpposite.getNameUpper()»(this);
 	«ENDIF-»
-	m_«getName()».push_back(«getContaimentPtr()»(«getName()»_));
+	m_«getName()».«getInsertMethod()»(«getContaimentPtr()»(«getName()»_));
 }
-	«ELSE-»
-void «EContainingClass.getName()»::add«getNameUpper()»(«getNoContaimentPtr()» «getName()»_)
+
+void «EContainingClass.getName()»::addAll«getNameUpper()»(const «getName()»_t& «getName()»_)
 {
-	«IF EOpposite != null-»
-	«getName()»_->set«EOpposite.getNameUpper()»(this);
-	«ENDIF-»
-	m_«getName()».insert(«getContaimentPtr()»(«getName()»_));
+	for (auto i = «getName()»_.begin(); i != «getName()»_.end(); i++)
+		add«getNameUpper()»(*i);
 }
 	«ENDIF-»
-«ELSEIF container-»
+«ELSEIF container-»«REM»Protected method«ENDREM»
 void «EContainingClass.getName()»::set«getNameUpper()»(«getName()»_t «getName()»_)
 {
 	m_«getName()» = «getName()»_;
@@ -170,17 +170,33 @@ void «EContainingClass.getName()»::set«getNameUpper()»(«getName()»_t «getName()»
 	«IF upperBound == 1-»
 void «EContainingClass.getName()»::set«getNameUpper()»(«getName()»_t «getName()»_)
 {
-	«IF EOpposite != null && EOpposite.upperBound == 1-»;
+		«IF EOpposite != null && EOpposite.upperBound == 1-»
 	if (m_«getName()»)
 		m_«getName()»->set«EOpposite.getNameUpper()»(0);
-	«ENDIF-»
+		«ENDIF-»
 	m_«getName()» = «getName()»_;
-	«IF EOpposite != null && EOpposite.upperBound == 1-»
+		«IF EOpposite != null && EOpposite.upperBound == 1-»
 	if (m_«getName()» && m_«getName()»->get«EOpposite.getNameUpper()»() != this)
 		m_«getName()»->set«EOpposite.getNameUpper()»(this);
-	«ENDIF-»
+		«ENDIF-»
+	«REM»TODO Implement case when upperBound is greater than 1«ENDREM»
 }
 	«ELSE-»
+void «EContainingClass.getName()»::add«getNameUpper()»(«getNoContaimentPtr()» «getName()»_)
+{
+	m_«getName()».«getInsertMethod()»(«getName()»_);
+		«IF EOpposite != null && EOpposite.upperBound == 1-»
+	if («getName()»_ && «getName()»_->get«EOpposite.getNameUpper()»() != this)
+		«getName()»_->set«EOpposite.getNameUpper()»(this);
+		«ENDIF-»
+	«REM»TODO Implement case when upperBound is greater than 1«ENDREM»
+}
+
+void «EContainingClass.getName()»::addAll«getNameUpper()»(const «getName()»_t& «getName()»_)
+{
+	for (auto i = «getName()»_.begin(); i != «getName()»_.end(); i++)
+		add«getNameUpper()»(*i);
+}
 	«ENDIF-»
 «ENDIF»
 

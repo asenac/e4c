@@ -95,6 +95,7 @@ EStructuralFeature::eContainingClass_t EStructuralFeature::getEContainingClass()
 	return e4c::returned(m_eContainingClass);
 }
 
+
 void EStructuralFeature::setEContainingClass(eContainingClass_t eContainingClass_)
 {
 	m_eContainingClass = eContainingClass_;

@@ -12,7 +12,6 @@ namespace ecore
 {
 
 
-// ecore::EDataType
 class EDataType :  public virtual ::ecore::EClassifier
 {
 public:

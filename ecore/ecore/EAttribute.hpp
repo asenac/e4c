@@ -12,7 +12,6 @@ namespace ecore
 {
 
 
-// ecore::EAttribute
 class EAttribute :  public virtual ::ecore::EStructuralFeature
 {
 public:

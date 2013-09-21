@@ -12,7 +12,6 @@ namespace ecore
 {
 
 
-// ecore::EFactory
 class EFactory :  public virtual ::ecore::EModelElement
 {
 public:

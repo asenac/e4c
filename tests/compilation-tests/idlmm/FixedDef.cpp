@@ -19,6 +19,7 @@ FixedDef::digits_t FixedDef::getDigits() const
 	return e4c::returned(m_digits);
 }
 
+
 void FixedDef::setDigits(digits_t digits_)
 {
 	m_digits.reset(digits_);
@@ -34,6 +35,7 @@ FixedDef::scale_t FixedDef::getScale() const
 {
 	return e4c::returned(m_scale);
 }
+
 
 void FixedDef::setScale(scale_t scale_)
 {

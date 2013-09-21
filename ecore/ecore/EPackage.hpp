@@ -12,7 +12,6 @@ namespace ecore
 {
 
 
-// ecore::EPackage
 class EPackage :  public virtual ::ecore::ENamedElement
 {
 public:
@@ -39,8 +38,10 @@ public:
 	void setEFactoryInstance(eFactoryInstance_t eFactoryInstance_);
 	eClassifiers_t getEClassifiers() const;
 	void addEClassifiers(ecore::EClassifier_ptr eClassifiers_);
+	void addAllEClassifiers(const eClassifiers_t& eClassifiers_);
 	eSubpackages_t getESubpackages() const;
 	void addESubpackages(ecore::EPackage_ptr eSubpackages_);
+	void addAllESubpackages(const eSubpackages_t& eSubpackages_);
 	eSuperPackage_t getESuperPackage() const;
 
 		

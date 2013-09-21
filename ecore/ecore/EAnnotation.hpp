@@ -12,7 +12,6 @@ namespace ecore
 {
 
 
-// ecore::EAnnotation
 class EAnnotation :  public virtual ::ecore::EModelElement
 {
 public:
@@ -33,10 +32,14 @@ public:
 	source_t getSource() const;
 	details_t getDetails() const;
 	void addDetails(ecore::EStringToStringMapEntry_ptr details_);
+	void addAllDetails(const details_t& details_);
 	eModelElement_t getEModelElement() const;
 	contents_t getContents() const;
 	void addContents(ecore::EObject_ptr contents_);
+	void addAllContents(const contents_t& contents_);
 	references_t getReferences() const;
+	void addReferences(ecore::EObject_ptr references_);
+	void addAllReferences(const references_t& references_);
 	
 
 		

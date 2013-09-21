@@ -12,7 +12,6 @@ namespace idlmm
 {
 
 
-// idlmm::UnionDef
 class UnionDef :  public virtual ::idlmm::TypedefDef
 {
 public:
@@ -29,6 +28,7 @@ public:
 	
 	unionMembers_t getUnionMembers() const;
 	void addUnionMembers(idlmm::UnionField_ptr unionMembers_);
+	void addAllUnionMembers(const unionMembers_t& unionMembers_);
 	containedDiscrim_t getContainedDiscrim() const;
 	void setContainedDiscrim(containedDiscrim_t containedDiscrim_);
 	containedDiscrim_t releaseContainedDiscrim();

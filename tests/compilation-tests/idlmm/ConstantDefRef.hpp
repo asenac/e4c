@@ -12,7 +12,6 @@ namespace idlmm
 {
 
 
-// idlmm::ConstantDefRef
 class ConstantDefRef :  public virtual ::idlmm::LiteralExpression
 {
 public:

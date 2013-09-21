@@ -18,6 +18,7 @@ StringDef::bound_t StringDef::getBound() const
 	return e4c::returned(m_bound);
 }
 
+
 void StringDef::setBound(bound_t bound_)
 {
 	m_bound.reset(bound_);

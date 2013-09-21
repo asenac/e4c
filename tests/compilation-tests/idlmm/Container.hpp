@@ -12,7 +12,6 @@ namespace idlmm
 {
 
 
-// idlmm::Container
 class Container :  public virtual ::idlmm::Contained
 {
 public:
@@ -26,6 +25,7 @@ public:
 	
 	contains_t getContains() const;
 	void addContains(idlmm::Contained_ptr contains_);
+	void addAllContains(const contains_t& contains_);
 
 		
 protected:

@@ -29,9 +29,16 @@ UnionField::label_t UnionField::getLabel() const
 	return e4c::returned(m_label);
 }
 
+
 void UnionField::addLabel(idlmm::Expression_ptr label_)
 {
 	m_label.push_back(std::unique_ptr < idlmm::Expression >(label_));
+}
+
+void UnionField::addAllLabel(const label_t& label_)
+{
+	for (auto i = label_.begin(); i != label_.end(); i++)
+		addLabel(*i);
 }
 
 

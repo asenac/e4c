@@ -12,7 +12,6 @@ namespace idlmm
 {
 
 
-// idlmm::ValueExpression
 class ValueExpression :  public virtual ::idlmm::LiteralExpression
 {
 public:

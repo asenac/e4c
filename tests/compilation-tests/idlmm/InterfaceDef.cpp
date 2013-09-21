@@ -53,6 +53,17 @@ InterfaceDef::derivesFrom_t InterfaceDef::getDerivesFrom() const
 	return e4c::returned(m_derivesFrom);
 }
 
+void InterfaceDef::addDerivesFrom(idlmm::InterfaceDef_ptr derivesFrom_)
+{
+	m_derivesFrom.push_back(derivesFrom_);
+	
+}
+
+void InterfaceDef::addAllDerivesFrom(const derivesFrom_t& derivesFrom_)
+{
+	for (auto i = derivesFrom_.begin(); i != derivesFrom_.end(); i++)
+		addDerivesFrom(*i);
+}
 
 
 InterfaceDef::forward_t InterfaceDef::getForward() const
@@ -63,6 +74,7 @@ InterfaceDef::forward_t InterfaceDef::getForward() const
 void InterfaceDef::setForward(forward_t forward_)
 {
 	m_forward = forward_;
+	
 }
 
 

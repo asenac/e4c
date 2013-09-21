@@ -13,7 +13,6 @@ namespace idlmm
 {
 
 
-// idlmm::InterfaceDef
 class InterfaceDef :  public virtual ::idlmm::Container,  public virtual ::idlmm::TypedefDef
 {
 public:
@@ -37,6 +36,8 @@ public:
 	void setIsTruncatable(isTruncatable_t _isTruncatable);
 	isTruncatable_t getIsTruncatable() const;
 	derivesFrom_t getDerivesFrom() const;
+	void addDerivesFrom(idlmm::InterfaceDef_ptr derivesFrom_);
+	void addAllDerivesFrom(const derivesFrom_t& derivesFrom_);
 	
 	forward_t getForward() const;
 	

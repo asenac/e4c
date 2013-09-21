@@ -22,9 +22,16 @@ UnionDef::unionMembers_t UnionDef::getUnionMembers() const
 	return e4c::returned(m_unionMembers);
 }
 
+
 void UnionDef::addUnionMembers(idlmm::UnionField_ptr unionMembers_)
 {
 	m_unionMembers.push_back(std::unique_ptr < idlmm::UnionField >(unionMembers_));
+}
+
+void UnionDef::addAllUnionMembers(const unionMembers_t& unionMembers_)
+{
+	for (auto i = unionMembers_.begin(); i != unionMembers_.end(); i++)
+		addUnionMembers(*i);
 }
 
 
@@ -32,6 +39,7 @@ UnionDef::containedDiscrim_t UnionDef::getContainedDiscrim() const
 {
 	return e4c::returned(m_containedDiscrim);
 }
+
 
 void UnionDef::setContainedDiscrim(containedDiscrim_t containedDiscrim_)
 {
@@ -52,6 +60,7 @@ UnionDef::sharedDiscrim_t UnionDef::getSharedDiscrim() const
 void UnionDef::setSharedDiscrim(sharedDiscrim_t sharedDiscrim_)
 {
 	m_sharedDiscrim = sharedDiscrim_;
+	
 }
 
 

@@ -12,7 +12,6 @@ namespace idlmm
 {
 
 
-// idlmm::ExceptionDef
 class ExceptionDef :  public virtual ::idlmm::Contained
 {
 public:
@@ -30,6 +29,7 @@ public:
 	typeCode_t getTypeCode() const;
 	members_t getMembers() const;
 	void addMembers(idlmm::Field_ptr members_);
+	void addAllMembers(const members_t& members_);
 
 		
 protected:

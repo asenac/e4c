@@ -20,6 +20,7 @@ Typed::containedType_t Typed::getContainedType() const
 	return e4c::returned(m_containedType);
 }
 
+
 void Typed::setContainedType(containedType_t containedType_)
 {
 	m_containedType.reset(containedType_);
@@ -39,6 +40,7 @@ Typed::sharedType_t Typed::getSharedType() const
 void Typed::setSharedType(sharedType_t sharedType_)
 {
 	m_sharedType = sharedType_;
+	
 }
 
 

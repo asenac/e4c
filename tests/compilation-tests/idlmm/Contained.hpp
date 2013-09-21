@@ -12,7 +12,6 @@ namespace idlmm
 {
 
 
-// idlmm::Contained
 class Contained :  public virtual ::idlmm::NamedElement
 {
 public:

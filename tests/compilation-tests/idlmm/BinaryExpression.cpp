@@ -20,6 +20,7 @@ BinaryExpression::left_t BinaryExpression::getLeft() const
 	return e4c::returned(m_left);
 }
 
+
 void BinaryExpression::setLeft(left_t left_)
 {
 	m_left.reset(left_);
@@ -35,6 +36,7 @@ BinaryExpression::right_t BinaryExpression::getRight() const
 {
 	return e4c::returned(m_right);
 }
+
 
 void BinaryExpression::setRight(right_t right_)
 {

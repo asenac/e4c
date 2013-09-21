@@ -13,7 +13,6 @@ namespace idlmm
 {
 
 
-// idlmm::SequenceDef
 class SequenceDef :  public virtual ::idlmm::Typed,  public virtual ::idlmm::IDLType
 {
 public:

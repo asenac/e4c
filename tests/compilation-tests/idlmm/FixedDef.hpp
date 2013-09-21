@@ -12,7 +12,6 @@ namespace idlmm
 {
 
 
-// idlmm::FixedDef
 class FixedDef :  public virtual ::idlmm::IDLType
 {
 public:

@@ -21,6 +21,7 @@ ConstantDefRef::constant_t ConstantDefRef::getConstant() const
 void ConstantDefRef::setConstant(constant_t constant_)
 {
 	m_constant = constant_;
+	
 }
 
 

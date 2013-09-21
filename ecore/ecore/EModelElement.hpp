@@ -12,7 +12,6 @@ namespace ecore
 {
 
 
-// ecore::EModelElement
 class EModelElement
 {
 public:
@@ -26,6 +25,7 @@ public:
 	
 	eAnnotations_t getEAnnotations() const;
 	void addEAnnotations(ecore::EAnnotation_ptr eAnnotations_);
+	void addAllEAnnotations(const eAnnotations_t& eAnnotations_);
 
 		
 protected:

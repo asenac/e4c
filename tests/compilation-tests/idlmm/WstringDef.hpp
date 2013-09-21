@@ -12,7 +12,6 @@ namespace idlmm
 {
 
 
-// idlmm::WstringDef
 class WstringDef :  public virtual ::idlmm::IDLType
 {
 public:

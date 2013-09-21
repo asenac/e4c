@@ -12,7 +12,6 @@ namespace ecore
 {
 
 
-// ecore::EEnum
 class EEnum :  public virtual ::ecore::EDataType
 {
 public:
@@ -27,6 +26,7 @@ public:
 	
 	eLiterals_t getELiterals() const;
 	void addELiterals(ecore::EEnumLiteral_ptr eLiterals_);
+	void addAllELiterals(const eLiterals_t& eLiterals_);
 
 		
 protected:

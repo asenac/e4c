@@ -46,6 +46,9 @@ String getNoContaimentPtr(EReference this) :
 	EType.getFQN() + "_ptr"
 ;
 
+String getInsertMethod(EReference this) :
+	if ordered then "push_back" else "insert";
+
 String getReferenceType(EReference this) :
 	if upperBound == 1 then
 	(

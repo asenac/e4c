@@ -89,6 +89,7 @@ ETypedElement::eType_t ETypedElement::getEType() const
 void ETypedElement::setEType(eType_t eType_)
 {
 	m_eType = eType_;
+	
 }
 
 
@@ -96,6 +97,7 @@ ETypedElement::eGenericType_t ETypedElement::getEGenericType() const
 {
 	return e4c::returned(m_eGenericType);
 }
+
 
 void ETypedElement::setEGenericType(eGenericType_t eGenericType_)
 {

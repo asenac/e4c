@@ -12,7 +12,6 @@ namespace ecore
 {
 
 
-// ecore::EParameter
 class EParameter :  public virtual ::ecore::ETypedElement
 {
 public:

@@ -32,6 +32,7 @@ EAttribute::eAttributeType_t EAttribute::getEAttributeType() const
 void EAttribute::setEAttributeType(eAttributeType_t eAttributeType_)
 {
 	m_eAttributeType = eAttributeType_;
+	
 }
 
 

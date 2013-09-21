@@ -12,7 +12,6 @@ namespace ecore
 {
 
 
-// ecore::EClassifier
 class EClassifier :  public virtual ::ecore::ENamedElement
 {
 public:
@@ -40,6 +39,7 @@ public:
 	ePackage_t getEPackage() const;
 	eTypeParameters_t getETypeParameters() const;
 	void addETypeParameters(ecore::ETypeParameter_ptr eTypeParameters_);
+	void addAllETypeParameters(const eTypeParameters_t& eTypeParameters_);
 
 		
 protected:

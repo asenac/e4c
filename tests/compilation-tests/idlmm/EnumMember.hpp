@@ -12,7 +12,6 @@ namespace idlmm
 {
 
 
-// idlmm::EnumMember
 class EnumMember :  public virtual ::idlmm::Constant
 {
 public:

@@ -51,6 +51,7 @@ Contained::definedIn_t Contained::getDefinedIn() const
 	return e4c::returned(m_definedIn);
 }
 
+
 void Contained::setDefinedIn(definedIn_t definedIn_)
 {
 	m_definedIn = definedIn_;

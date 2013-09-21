@@ -58,6 +58,7 @@ EReference::eOpposite_t EReference::getEOpposite() const
 void EReference::setEOpposite(eOpposite_t eOpposite_)
 {
 	m_eOpposite = eOpposite_;
+	
 }
 
 
@@ -69,6 +70,7 @@ EReference::eReferenceType_t EReference::getEReferenceType() const
 void EReference::setEReferenceType(eReferenceType_t eReferenceType_)
 {
 	m_eReferenceType = eReferenceType_;
+	
 }
 
 
@@ -77,6 +79,17 @@ EReference::eKeys_t EReference::getEKeys() const
 	return e4c::returned(m_eKeys);
 }
 
+void EReference::addEKeys(ecore::EAttribute_ptr eKeys_)
+{
+	m_eKeys.push_back(eKeys_);
+	
+}
+
+void EReference::addAllEKeys(const eKeys_t& eKeys_)
+{
+	for (auto i = eKeys_.begin(); i != eKeys_.end(); i++)
+		addEKeys(*i);
+}
 
 
 

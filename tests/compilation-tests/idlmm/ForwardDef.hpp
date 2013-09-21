@@ -12,7 +12,6 @@ namespace idlmm
 {
 
 
-// idlmm::ForwardDef
 class ForwardDef :  public virtual ::idlmm::Contained
 {
 public:

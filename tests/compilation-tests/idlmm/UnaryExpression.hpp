@@ -12,7 +12,6 @@ namespace idlmm
 {
 
 
-// idlmm::UnaryExpression
 class UnaryExpression :  public virtual ::idlmm::Expression
 {
 public:

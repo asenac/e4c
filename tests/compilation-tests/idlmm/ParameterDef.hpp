@@ -12,7 +12,6 @@ namespace idlmm
 {
 
 
-// idlmm::ParameterDef
 class ParameterDef :  public virtual ::idlmm::Typed
 {
 public:

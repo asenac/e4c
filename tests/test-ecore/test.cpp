@@ -2,6 +2,7 @@
 #include <cassert>
 #include <iostream>
 #include <e4c/select.hpp>
+#include <e4c/detail/holder.ipp>
 
 using namespace ecore;
 
@@ -18,6 +19,12 @@ int main()
     {
         std::cout << (*i)->getName() << std::endl;
     }
+
+    e4c::holder h(e4c::create_holder(references));
+    std::cout << h.is_valid() << std::endl;
+
+    e4c::holder h2(e4c::create_holder(1));
+    std::cout << h2.is_valid() << std::endl;
 
     return 0;
 }

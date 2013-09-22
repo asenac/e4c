@@ -20,7 +20,7 @@ typedef double EBigDecimal;
 /*PROTECTED REGION END*/
 
 /*PROTECTED REGION ID(typedef_ecore::EBigInteger) ENABLED START*/
-typedef int64_t EBigInteger;
+typedef std::int64_t EBigInteger;
 /*PROTECTED REGION END*/
 
 /*PROTECTED REGION ID(typedef_ecore::EBoolean) ENABLED START*/
@@ -59,12 +59,12 @@ typedef int EDate;
 typedef int EDiagnosticChain;
 /*PROTECTED REGION END*/
 
-/*PROTECTED REGION ID(typedef_ecore::EDouble) START*/
-typedef int EDouble;
+/*PROTECTED REGION ID(typedef_ecore::EDouble) ENABLED START*/
+typedef double EDouble;
 /*PROTECTED REGION END*/
 
-/*PROTECTED REGION ID(typedef_ecore::EDoubleObject) START*/
-typedef int EDoubleObject;
+/*PROTECTED REGION ID(typedef_ecore::EDoubleObject) ENABLED START*/
+typedef e4c::holder EDoubleObject;
 /*PROTECTED REGION END*/
 
 /*PROTECTED REGION ID(typedef_ecore::EEList) START*/
@@ -87,32 +87,32 @@ typedef int EFeatureMapEntry;
 typedef float EFloat;
 /*PROTECTED REGION END*/
 
-/*PROTECTED REGION ID(typedef_ecore::EFloatObject) START*/
-typedef int EFloatObject;
+/*PROTECTED REGION ID(typedef_ecore::EFloatObject) ENABLED START*/
+typedef e4c::holder EFloatObject;
 /*PROTECTED REGION END*/
 
 /*PROTECTED REGION ID(typedef_ecore::EInt) ENABLED START*/
-typedef int32_t EInt;
+typedef std::int32_t EInt;
 /*PROTECTED REGION END*/
 
-/*PROTECTED REGION ID(typedef_ecore::EIntegerObject) START*/
-typedef int EIntegerObject;
+/*PROTECTED REGION ID(typedef_ecore::EIntegerObject) ENABLED START*/
+typedef e4c::holder EIntegerObject;
 /*PROTECTED REGION END*/
 
 /*PROTECTED REGION ID(typedef_ecore::EJavaClass) START*/
 typedef int EJavaClass;
 /*PROTECTED REGION END*/
 
-/*PROTECTED REGION ID(typedef_ecore::EJavaObject) START*/
-typedef int EJavaObject;
+/*PROTECTED REGION ID(typedef_ecore::EJavaObject) ENABLED START*/
+typedef e4c::holder EJavaObject;
 /*PROTECTED REGION END*/
 
-/*PROTECTED REGION ID(typedef_ecore::ELong) START*/
-typedef int ELong;
+/*PROTECTED REGION ID(typedef_ecore::ELong) ENABLED START*/
+typedef std::int32_t ELong;
 /*PROTECTED REGION END*/
 
-/*PROTECTED REGION ID(typedef_ecore::ELongObject) START*/
-typedef int ELongObject;
+/*PROTECTED REGION ID(typedef_ecore::ELongObject) ENABLED START*/
+typedef e4c::holder ELongObject;
 /*PROTECTED REGION END*/
 
 /*PROTECTED REGION ID(typedef_ecore::EMap) START*/
@@ -128,11 +128,11 @@ typedef int EResourceSet;
 /*PROTECTED REGION END*/
 
 /*PROTECTED REGION ID(typedef_ecore::EShort) START*/
-typedef int EShort;
+typedef std::int16_t EShort;
 /*PROTECTED REGION END*/
 
-/*PROTECTED REGION ID(typedef_ecore::EShortObject) START*/
-typedef int EShortObject;
+/*PROTECTED REGION ID(typedef_ecore::EShortObject) ENABLED START*/
+typedef e4c::holder EShortObject;
 /*PROTECTED REGION END*/
 
 /*PROTECTED REGION ID(typedef_ecore::EString) ENABLED START*/

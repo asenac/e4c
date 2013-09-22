@@ -5,6 +5,8 @@
 #include <set>
 #include <vector>
 #include <memory>
+#include <cstdint>
+#include <e4c/holder.hpp>
 
 namespace e4c 
 {

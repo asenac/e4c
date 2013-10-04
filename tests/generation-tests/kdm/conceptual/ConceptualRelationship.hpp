@@ -14,7 +14,6 @@ namespace conceptual
 {
 
 
-// kdm::conceptual::ConceptualRelationship
 class ConceptualRelationship :  public virtual ::kdm::conceptual::AbstractConceptualRelationship
 {
 public:
@@ -26,18 +25,30 @@ public:
 
 	typedef kdm::core::KDMEntity_ptr to_t;
 	typedef kdm::conceptual::AbstractConceptualElement_ptr from_t;
-
 	
 	to_t getTo() const;
+	void setTo(to_t to_);
 	from_t getFrom() const;
+	void setFrom(from_t from_);
+	
 
+	/*PROTECTED REGION ID(kdm::conceptual::ConceptualRelationship public) START*/
+	/*PROTECTED REGION END*/
+		
+protected:
+
+	friend class ConceptualPackage;
 
 	kdm::core::KDMEntity_ptr m_to;
 	kdm::conceptual::AbstractConceptualElement_ptr m_from;
 
-		
-protected:
-
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(kdm::conceptual::ConceptualRelationship protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // conceptual

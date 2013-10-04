@@ -14,7 +14,6 @@ namespace ui
 {
 
 
-// kdm::ui::Screen
 class Screen :  public virtual ::kdm::ui::UIDisplay
 {
 public:
@@ -26,12 +25,22 @@ public:
 
 	
 	
-	
 
-	
+	/*PROTECTED REGION ID(kdm::ui::Screen public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class UiPackage;
+
+	
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(kdm::ui::Screen protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // ui

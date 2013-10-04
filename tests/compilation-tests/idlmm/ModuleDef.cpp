@@ -10,10 +10,14 @@ using namespace idlmm;
 ModuleDef::ModuleDef() : 
 	m_prefix()
 {
+	/*PROTECTED REGION ID(ModuleDef constructor) START*/
+	/*PROTECTED REGION END*/
 }
 
 ModuleDef::~ModuleDef()
 {
+	/*PROTECTED REGION ID(ModuleDef destructor) START*/
+	/*PROTECTED REGION END*/
 }
 
 void ModuleDef::setPrefix(prefix_t _prefix)
@@ -25,7 +29,6 @@ ModuleDef::prefix_t ModuleDef::getPrefix() const
 {
 	return m_prefix;
 }
-
 
 
 

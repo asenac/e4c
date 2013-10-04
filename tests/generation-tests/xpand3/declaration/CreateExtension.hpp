@@ -14,7 +14,6 @@ namespace declaration
 {
 
 
-// xpand3::declaration::CreateExtension
 class CreateExtension :  public virtual ::xpand3::declaration::Extension
 {
 public:
@@ -25,16 +24,27 @@ public:
 	virtual ~CreateExtension();
 
 	typedef xpand3::DeclaredParameter_ptr toBeCreated_t;
-
 	
 	toBeCreated_t getToBeCreated() const;
+	void setToBeCreated(toBeCreated_t toBeCreated_);
+	
 
-
-	xpand3::DeclaredParameter_ptr m_toBeCreated;
-
+	/*PROTECTED REGION ID(xpand3::declaration::CreateExtension public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class DeclarationPackage;
+
+	xpand3::DeclaredParameter_ptr m_toBeCreated;
+
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(xpand3::declaration::CreateExtension protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // declaration

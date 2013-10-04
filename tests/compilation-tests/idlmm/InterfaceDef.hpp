@@ -37,9 +37,7 @@ public:
 	derivesFrom_t getDerivesFrom() const;
 	void addDerivesFrom(idlmm::InterfaceDef_ptr derivesFrom_);
 	void addAllDerivesFrom(const derivesFrom_t& derivesFrom_);
-	
 	forward_t getForward() const;
-	
 	void setForward(forward_t forward_);
 	
 

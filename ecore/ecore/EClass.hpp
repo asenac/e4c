@@ -45,44 +45,34 @@ public:
 	eSuperTypes_t getESuperTypes() const;
 	void addESuperTypes(ecore::EClass_ptr eSuperTypes_);
 	void addAllESuperTypes(const eSuperTypes_t& eSuperTypes_);
-	
 	eOperations_t getEOperations() const;
 	void addEOperations(ecore::EOperation_ptr eOperations_);
 	void addAllEOperations(const eOperations_t& eOperations_);
 	eAllAttributes_t getEAllAttributes() const;
 	void addEAllAttributes(ecore::EAttribute_ptr eAllAttributes_);
 	void addAllEAllAttributes(const eAllAttributes_t& eAllAttributes_);
-	
 	eAllReferences_t getEAllReferences() const;
 	void addEAllReferences(ecore::EReference_ptr eAllReferences_);
 	void addAllEAllReferences(const eAllReferences_t& eAllReferences_);
-	
 	eReferences_t getEReferences() const;
 	void addEReferences(ecore::EReference_ptr eReferences_);
 	void addAllEReferences(const eReferences_t& eReferences_);
-	
 	eAttributes_t getEAttributes() const;
 	void addEAttributes(ecore::EAttribute_ptr eAttributes_);
 	void addAllEAttributes(const eAttributes_t& eAttributes_);
-	
 	eAllContainments_t getEAllContainments() const;
 	void addEAllContainments(ecore::EReference_ptr eAllContainments_);
 	void addAllEAllContainments(const eAllContainments_t& eAllContainments_);
-	
 	eAllOperations_t getEAllOperations() const;
 	void addEAllOperations(ecore::EOperation_ptr eAllOperations_);
 	void addAllEAllOperations(const eAllOperations_t& eAllOperations_);
-	
 	eAllStructuralFeatures_t getEAllStructuralFeatures() const;
 	void addEAllStructuralFeatures(ecore::EStructuralFeature_ptr eAllStructuralFeatures_);
 	void addAllEAllStructuralFeatures(const eAllStructuralFeatures_t& eAllStructuralFeatures_);
-	
 	eAllSuperTypes_t getEAllSuperTypes() const;
 	void addEAllSuperTypes(ecore::EClass_ptr eAllSuperTypes_);
 	void addAllEAllSuperTypes(const eAllSuperTypes_t& eAllSuperTypes_);
-	
 	eIDAttribute_t getEIDAttribute() const;
-	
 	void setEIDAttribute(eIDAttribute_t eIDAttribute_);
 	eStructuralFeatures_t getEStructuralFeatures() const;
 	void addEStructuralFeatures(ecore::EStructuralFeature_ptr eStructuralFeatures_);
@@ -94,7 +84,6 @@ public:
 	void addEAllGenericSuperTypes(ecore::EGenericType_ptr eAllGenericSuperTypes_);
 	void addAllEAllGenericSuperTypes(const eAllGenericSuperTypes_t& eAllGenericSuperTypes_);
 	
-	
 	ecore::EBoolean isSuperTypeOf(ecore::EClass_ptr someClass);
 	ecore::EInt getFeatureCount();
 	ecore::EStructuralFeature_ptr getEStructuralFeature(ecore::EInt featureID);
@@ -105,7 +94,10 @@ public:
 	ecore::EInt getOperationID(ecore::EOperation_ptr operation);
 	ecore::EOperation_ptr getOverride(ecore::EOperation_ptr operation);
 
-	/*PROTECTED REGION ID(ecore::EClass public) START*/
+	/*PROTECTED REGION ID(ecore::EClass public) ENABLED START*/
+    void addFeatureAccesors(ecore::EStructuralFeature_ptr feature, e4c::get_t get, e4c::set_t set);
+    e4c::get_t getFeatureGet(ecore::EStructuralFeature_ptr feature);
+    e4c::set_t getFeatureSet(ecore::EStructuralFeature_ptr feature);
 	/*PROTECTED REGION END*/
 		
 protected:
@@ -134,7 +126,9 @@ protected:
 	
 	virtual ecore::EClass_ptr eClassImpl() const;
 	
-	/*PROTECTED REGION ID(ecore::EClass protected) START*/
+	/*PROTECTED REGION ID(ecore::EClass protected) ENABLED START*/
+    struct Impl;
+    Impl * m_impl;
 	/*PROTECTED REGION END*/
 };
 

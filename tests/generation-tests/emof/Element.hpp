@@ -12,7 +12,6 @@ namespace emof
 {
 
 
-// emof::Element
 class Element :  public virtual ::emof::Object
 {
 public:
@@ -23,19 +22,33 @@ public:
 
 	typedef std::set < emof::Comment_ptr > ownedComment_t;
 	typedef std::set < emof::Tag_ptr > tag_t;
-
 	
 	ownedComment_t getOwnedComment() const;
+	void addOwnedComment(emof::Comment_ptr ownedComment_);
+	void addAllOwnedComment(const ownedComment_t& ownedComment_);
 	tag_t getTag() const;
+	void addTag(emof::Tag_ptr tag_);
+	void addAllTag(const tag_t& tag_);
+	
 
-
-	std::set < std::unique_ptr < emof::Comment > > m_ownedComment;
-	std::set < emof::Tag_ptr > m_tag;
-
+	/*PROTECTED REGION ID(emof::Element public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 	Element();
 
+	friend class EmofPackage;
+
+	std::set < std::unique_ptr < emof::Comment > > m_ownedComment;
+	std::set < emof::Tag_ptr > m_tag;
+
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(emof::Element protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // emof

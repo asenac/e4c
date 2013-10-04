@@ -12,7 +12,6 @@ namespace SVG
 {
 
 
-// SVG::FontStyle
 class FontStyle :  public virtual ::SVG::Attribute
 {
 public:
@@ -23,17 +22,27 @@ public:
 	virtual ~FontStyle();
 
 	typedef ::PrimitiveTypes::Boolean italic_t;
-
 	
 	void setItalic(italic_t _italic);
 	italic_t getItalic() const;
+	
 
-
-	italic_t m_italic;
-
+	/*PROTECTED REGION ID(SVG::FontStyle public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class SVGPackage;
+
+	italic_t m_italic;
+
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(SVG::FontStyle protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // SVG

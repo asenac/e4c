@@ -17,10 +17,14 @@ EClassifier::EClassifier() :
     m_ePackage(),
     m_eTypeParameters()
 {
+	/*PROTECTED REGION ID(EClassifier constructor) START*/
+	/*PROTECTED REGION END*/
 }
 
 EClassifier::~EClassifier()
 {
+	/*PROTECTED REGION ID(EClassifier destructor) START*/
+	/*PROTECTED REGION END*/
 }
 
 void EClassifier::setInstanceClassName(instanceClassName_t _instanceClassName)
@@ -68,12 +72,10 @@ EClassifier::ePackage_t EClassifier::getEPackage() const
 	return e4c::returned(m_ePackage);
 }
 
-
 void EClassifier::setEPackage(ePackage_t ePackage_)
 {
 	m_ePackage = ePackage_;
 }
-
 
 EClassifier::eTypeParameters_t EClassifier::getETypeParameters() const
 {
@@ -91,8 +93,6 @@ void EClassifier::addAllETypeParameters(const eTypeParameters_t& eTypeParameters
 	for (auto i = eTypeParameters_.begin(); i != eTypeParameters_.end(); i++)
 		addETypeParameters(*i);
 }
-
-
 
 
 ecore::EBoolean EClassifier::isInstance(ecore::EJavaObject object)

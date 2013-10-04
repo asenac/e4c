@@ -14,7 +14,6 @@ namespace data
 {
 
 
-// kdm::data::DataModel
 class DataModel :  public virtual ::kdm::kdm::KDMModel
 {
 public:
@@ -25,16 +24,28 @@ public:
 	virtual ~DataModel();
 
 	typedef std::set < kdm::data::AbstractDataElement_ptr > dataElement_t;
-
 	
 	dataElement_t getDataElement() const;
+	void addDataElement(kdm::data::AbstractDataElement_ptr dataElement_);
+	void addAllDataElement(const dataElement_t& dataElement_);
+	
 
-
-	std::set < std::unique_ptr < kdm::data::AbstractDataElement > > m_dataElement;
-
+	/*PROTECTED REGION ID(kdm::data::DataModel public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class DataPackage;
+
+	std::set < std::unique_ptr < kdm::data::AbstractDataElement > > m_dataElement;
+
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(kdm::data::DataModel protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // data

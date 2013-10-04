@@ -6,7 +6,7 @@ using namespace kdm::source;
 
 SourceFactory::SourceFactory()
 {
-	m_ePackage = SourcePackage::_instance();
+	// m_ePackage = SourcePackage::_instance();
 	// std::bind(&SourceFactory::createSourceRef, this);
 	// m_ePackage->getTag_SourceRef();
 	// std::bind(&SourceFactory::createSourceRegion, this);

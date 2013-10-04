@@ -19,10 +19,14 @@ ETypedElement::ETypedElement() :
     m_eType(),
     m_eGenericType()
 {
+	/*PROTECTED REGION ID(ETypedElement constructor) START*/
+	/*PROTECTED REGION END*/
 }
 
 ETypedElement::~ETypedElement()
 {
+	/*PROTECTED REGION ID(ETypedElement destructor) START*/
+	/*PROTECTED REGION END*/
 }
 
 void ETypedElement::setOrdered(ordered_t _ordered)
@@ -92,10 +96,10 @@ ETypedElement::eType_t ETypedElement::getEType() const
 
 void ETypedElement::setEType(eType_t eType_)
 {
+	if (m_eType == eType_)
+		return;
 	m_eType = eType_;
-	
 }
-
 
 ETypedElement::eGenericType_t ETypedElement::getEGenericType() const
 {
@@ -112,8 +116,6 @@ ETypedElement::eGenericType_t ETypedElement::releaseEGenericType()
 {
 	return m_eGenericType.release();
 }
-
-
 
 
 

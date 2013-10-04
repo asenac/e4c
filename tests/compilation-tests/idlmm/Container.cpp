@@ -11,10 +11,14 @@ using namespace idlmm;
 Container::Container() : 
 	m_contains()
 {
+	/*PROTECTED REGION ID(Container constructor) START*/
+	/*PROTECTED REGION END*/
 }
 
 Container::~Container()
 {
+	/*PROTECTED REGION ID(Container destructor) START*/
+	/*PROTECTED REGION END*/
 }
 
 Container::contains_t Container::getContains() const
@@ -34,8 +38,6 @@ void Container::addAllContains(const contains_t& contains_)
 	for (auto i = contains_.begin(); i != contains_.end(); i++)
 		addContains(*i);
 }
-
-
 
 
 

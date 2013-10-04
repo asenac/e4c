@@ -14,7 +14,6 @@ namespace platform
 {
 
 
-// kdm::platform::MarshalledResource
 class MarshalledResource :  public virtual ::kdm::platform::ResourceType
 {
 public:
@@ -26,12 +25,22 @@ public:
 
 	
 	
-	
 
-	
+	/*PROTECTED REGION ID(kdm::platform::MarshalledResource public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class PlatformPackage;
+
+	
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(kdm::platform::MarshalledResource protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // platform

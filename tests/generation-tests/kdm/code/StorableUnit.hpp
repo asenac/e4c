@@ -14,7 +14,6 @@ namespace code
 {
 
 
-// kdm::code::StorableUnit
 class StorableUnit :  public virtual ::kdm::code::DataElement
 {
 public:
@@ -25,17 +24,27 @@ public:
 	virtual ~StorableUnit();
 
 	typedef ::kdm::code::StorableKind kind_t;
-
 	
 	void setKind(kind_t _kind);
 	kind_t getKind() const;
+	
 
-
-	kind_t m_kind;
-
+	/*PROTECTED REGION ID(kdm::code::StorableUnit public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class CodePackage;
+
+	kind_t m_kind;
+
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(kdm::code::StorableUnit protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // code

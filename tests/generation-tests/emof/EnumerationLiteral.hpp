@@ -12,7 +12,6 @@ namespace emof
 {
 
 
-// emof::EnumerationLiteral
 class EnumerationLiteral :  public virtual ::emof::NamedElement
 {
 public:
@@ -23,16 +22,28 @@ public:
 	virtual ~EnumerationLiteral();
 
 	typedef emof::Enumeration_ptr enumeration_t;
-
 	
 	enumeration_t getEnumeration() const;
+	
 
-
-	emof::Enumeration_ptr m_enumeration;
-
+	/*PROTECTED REGION ID(emof::EnumerationLiteral public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class EmofPackage;
+
+	emof::Enumeration_ptr m_enumeration;
+
+	
+	friend class ::emof::Enumeration;
+	void setEnumeration(enumeration_t enumeration_);
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(emof::EnumerationLiteral protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // emof

@@ -12,8 +12,7 @@ namespace SVG
 {
 
 
-// SVG::Dimension
-class Dimension
+class Dimension : ::ecore::EObject
 {
 public:
 
@@ -24,20 +23,30 @@ public:
 
 	typedef ::PrimitiveTypes::Double width_t;
 	typedef ::PrimitiveTypes::Double height_t;
-
 	
 	void setWidth(width_t _width);
 	width_t getWidth() const;
 	void setHeight(height_t _height);
 	height_t getHeight() const;
+	
 
+	/*PROTECTED REGION ID(SVG::Dimension public) START*/
+	/*PROTECTED REGION END*/
+		
+protected:
+
+	friend class SVGPackage;
 
 	width_t m_width;
 	height_t m_height;
 
-		
-protected:
-
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(SVG::Dimension protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // SVG

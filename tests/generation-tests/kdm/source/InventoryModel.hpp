@@ -14,7 +14,6 @@ namespace source
 {
 
 
-// kdm::source::InventoryModel
 class InventoryModel :  public virtual ::kdm::kdm::KDMModel
 {
 public:
@@ -25,16 +24,28 @@ public:
 	virtual ~InventoryModel();
 
 	typedef std::set < kdm::source::AbstractInventoryElement_ptr > inventoryElement_t;
-
 	
 	inventoryElement_t getInventoryElement() const;
+	void addInventoryElement(kdm::source::AbstractInventoryElement_ptr inventoryElement_);
+	void addAllInventoryElement(const inventoryElement_t& inventoryElement_);
+	
 
-
-	std::set < std::unique_ptr < kdm::source::AbstractInventoryElement > > m_inventoryElement;
-
+	/*PROTECTED REGION ID(kdm::source::InventoryModel public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class SourcePackage;
+
+	std::set < std::unique_ptr < kdm::source::AbstractInventoryElement > > m_inventoryElement;
+
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(kdm::source::InventoryModel protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // source

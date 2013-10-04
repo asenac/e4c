@@ -12,7 +12,6 @@ namespace C
 {
 
 
-// C::CUnsignedInt
 class CUnsignedInt :  public virtual ::C::CInt
 {
 public:
@@ -24,12 +23,22 @@ public:
 
 	
 	
-	
 
-	
+	/*PROTECTED REGION ID(C::CUnsignedInt public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class CPackage;
+
+	
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(C::CUnsignedInt protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // C

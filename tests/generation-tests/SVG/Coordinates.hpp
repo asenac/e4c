@@ -12,8 +12,7 @@ namespace SVG
 {
 
 
-// SVG::Coordinates
-class Coordinates
+class Coordinates : ::ecore::EObject
 {
 public:
 
@@ -23,21 +22,31 @@ public:
 
 	typedef ::PrimitiveTypes::Double x_t;
 	typedef ::PrimitiveTypes::Double y_t;
-
 	
 	void setX(x_t _x);
 	x_t getX() const;
 	void setY(y_t _y);
 	y_t getY() const;
+	
 
-
-	x_t m_x;
-	y_t m_y;
-
+	/*PROTECTED REGION ID(SVG::Coordinates public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 	Coordinates();
 
+	friend class SVGPackage;
+
+	x_t m_x;
+	y_t m_y;
+
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(SVG::Coordinates protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // SVG

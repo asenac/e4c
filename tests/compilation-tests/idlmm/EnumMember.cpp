@@ -11,10 +11,14 @@ using namespace idlmm;
 EnumMember::EnumMember() : 
 	m_enum()
 {
+	/*PROTECTED REGION ID(EnumMember constructor) START*/
+	/*PROTECTED REGION END*/
 }
 
 EnumMember::~EnumMember()
 {
+	/*PROTECTED REGION ID(EnumMember destructor) START*/
+	/*PROTECTED REGION END*/
 }
 
 EnumMember::enum_t EnumMember::getEnum() const
@@ -22,13 +26,10 @@ EnumMember::enum_t EnumMember::getEnum() const
 	return e4c::returned(m_enum);
 }
 
-
 void EnumMember::setEnum(enum_t enum_)
 {
 	m_enum = enum_;
 }
-
-
 
 
 

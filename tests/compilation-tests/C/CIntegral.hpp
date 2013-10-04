@@ -12,7 +12,6 @@ namespace C
 {
 
 
-// C::CIntegral
 class CIntegral :  public virtual ::C::CDataType
 {
 public:
@@ -24,12 +23,22 @@ public:
 
 	
 	
-	
 
-	
+	/*PROTECTED REGION ID(C::CIntegral public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class CPackage;
+
+	
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(C::CIntegral protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // C

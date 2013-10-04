@@ -6,7 +6,7 @@ using namespace company;
 
 CompanyFactory::CompanyFactory()
 {
-	m_ePackage = CompanyPackage::_instance();
+	// m_ePackage = CompanyPackage::_instance();
 	// std::bind(&CompanyFactory::createEmployee, this);
 	// m_ePackage->getTag_Employee();
 	// std::bind(&CompanyFactory::createDepartment, this);

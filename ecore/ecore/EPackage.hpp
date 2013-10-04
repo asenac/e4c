@@ -33,7 +33,6 @@ public:
 	void setNsPrefix(nsPrefix_t _nsPrefix);
 	nsPrefix_t getNsPrefix() const;
 	eFactoryInstance_t getEFactoryInstance() const;
-	
 	void setEFactoryInstance(eFactoryInstance_t eFactoryInstance_);
 	eClassifiers_t getEClassifiers() const;
 	void addEClassifiers(ecore::EClassifier_ptr eClassifiers_);

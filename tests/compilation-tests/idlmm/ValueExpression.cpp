@@ -10,10 +10,14 @@ using namespace idlmm;
 ValueExpression::ValueExpression() : 
 	m_value()
 {
+	/*PROTECTED REGION ID(ValueExpression constructor) START*/
+	/*PROTECTED REGION END*/
 }
 
 ValueExpression::~ValueExpression()
 {
+	/*PROTECTED REGION ID(ValueExpression destructor) START*/
+	/*PROTECTED REGION END*/
 }
 
 void ValueExpression::setValue(value_t _value)
@@ -25,7 +29,6 @@ ValueExpression::value_t ValueExpression::getValue() const
 {
 	return m_value;
 }
-
 
 
 

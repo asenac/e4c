@@ -14,7 +14,6 @@ namespace platform
 {
 
 
-// kdm::platform::Process
 class Process :  public virtual ::kdm::platform::RuntimeResource
 {
 public:
@@ -26,12 +25,22 @@ public:
 
 	
 	
-	
 
-	
+	/*PROTECTED REGION ID(kdm::platform::Process public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class PlatformPackage;
+
+	
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(kdm::platform::Process protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // platform

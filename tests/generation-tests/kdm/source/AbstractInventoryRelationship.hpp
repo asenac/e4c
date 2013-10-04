@@ -14,7 +14,6 @@ namespace source
 {
 
 
-// kdm::source::AbstractInventoryRelationship
 class AbstractInventoryRelationship :  public virtual ::kdm::core::KDMRelationship
 {
 public:
@@ -25,13 +24,23 @@ public:
 
 	
 	
-	
 
-	
+	/*PROTECTED REGION ID(kdm::source::AbstractInventoryRelationship public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 	AbstractInventoryRelationship();
 
+	friend class SourcePackage;
+
+	
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(kdm::source::AbstractInventoryRelationship protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // source

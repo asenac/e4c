@@ -18,10 +18,14 @@ EReference::EReference() :
     m_eReferenceType(),
     m_eKeys()
 {
+	/*PROTECTED REGION ID(EReference constructor) START*/
+	/*PROTECTED REGION END*/
 }
 
 EReference::~EReference()
 {
+	/*PROTECTED REGION ID(EReference destructor) START*/
+	/*PROTECTED REGION END*/
 }
 
 void EReference::setContainment(containment_t _containment)
@@ -61,10 +65,10 @@ EReference::eOpposite_t EReference::getEOpposite() const
 
 void EReference::setEOpposite(eOpposite_t eOpposite_)
 {
+	if (m_eOpposite == eOpposite_)
+		return;
 	m_eOpposite = eOpposite_;
-	
 }
-
 
 EReference::eReferenceType_t EReference::getEReferenceType() const
 {
@@ -73,10 +77,10 @@ EReference::eReferenceType_t EReference::getEReferenceType() const
 
 void EReference::setEReferenceType(eReferenceType_t eReferenceType_)
 {
+	if (m_eReferenceType == eReferenceType_)
+		return;
 	m_eReferenceType = eReferenceType_;
-	
 }
-
 
 EReference::eKeys_t EReference::getEKeys() const
 {
@@ -85,8 +89,9 @@ EReference::eKeys_t EReference::getEKeys() const
 
 void EReference::addEKeys(ecore::EAttribute_ptr eKeys_)
 {
+	if (e4c::contains(m_eKeys, eKeys_))
+		return;
 	m_eKeys.push_back(eKeys_);
-	
 }
 
 void EReference::addAllEKeys(const eKeys_t& eKeys_)
@@ -94,8 +99,6 @@ void EReference::addAllEKeys(const eKeys_t& eKeys_)
 	for (auto i = eKeys_.begin(); i != eKeys_.end(); i++)
 		addEKeys(*i);
 }
-
-
 
 
 

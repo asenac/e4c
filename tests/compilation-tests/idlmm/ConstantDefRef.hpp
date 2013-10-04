@@ -24,7 +24,6 @@ public:
 	typedef idlmm::Constant_ptr constant_t;
 	
 	constant_t getConstant() const;
-	
 	void setConstant(constant_t constant_);
 	
 

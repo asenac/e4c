@@ -1,17 +1,25 @@
 
 #include "TextElement.hpp"
+#include <SVG/SVGPackage.hpp>
 
 using namespace SVG;
+
+/*PROTECTED REGION ID(SVG::TextElement include) START*/
+/*PROTECTED REGION END*/
 
 TextElement::TextElement() : 
 	m_rotate(),
     m_textLength(),
     m_fontSize()
 {
+	/*PROTECTED REGION ID(TextElement constructor) START*/
+	/*PROTECTED REGION END*/
 }
 
 TextElement::~TextElement()
 {
+	/*PROTECTED REGION ID(TextElement destructor) START*/
+	/*PROTECTED REGION END*/
 }
 
 void TextElement::setRotate(rotate_t _rotate)
@@ -46,3 +54,11 @@ TextElement::fontSize_t TextElement::getFontSize() const
 
 
 
+/*PROTECTED REGION ID(SVG::TextElement implementation) START*/
+/*PROTECTED REGION END*/
+
+ecore::EClass_ptr TextElement::eClassImpl() const
+{
+	return SVGPackage::_instance()->getTextElement();
+}
+ 

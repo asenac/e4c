@@ -12,8 +12,7 @@ namespace Make
 {
 
 
-// Make::Element
-class Element
+class Element : ::ecore::EObject
 {
 public:
 
@@ -22,18 +21,28 @@ public:
 	virtual ~Element();
 
 	typedef ::PrimitiveTypes::String name_t;
-
 	
 	void setName(name_t _name);
 	name_t getName() const;
+	
 
-
-	name_t m_name;
-
+	/*PROTECTED REGION ID(Make::Element public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 	Element();
 
+	friend class MakePackage;
+
+	name_t m_name;
+
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(Make::Element protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // Make

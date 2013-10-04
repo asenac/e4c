@@ -24,7 +24,6 @@ public:
 	typedef idlmm::InterfaceDef_ptr definition_t;
 	
 	definition_t getDefinition() const;
-	
 	void setDefinition(definition_t definition_);
 	
 

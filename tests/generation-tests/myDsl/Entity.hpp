@@ -12,7 +12,6 @@ namespace myDsl
 {
 
 
-// myDsl::Entity
 class Entity :  public virtual ::myDsl::Type
 {
 public:
@@ -24,18 +23,31 @@ public:
 
 	typedef myDsl::Entity_ptr extends_t;
 	typedef std::vector < myDsl::Property_ptr > properties_t;
-
 	
 	extends_t getExtends() const;
+	void setExtends(extends_t extends_);
 	properties_t getProperties() const;
+	void addProperties(myDsl::Property_ptr properties_);
+	void addAllProperties(const properties_t& properties_);
+	
 
+	/*PROTECTED REGION ID(myDsl::Entity public) START*/
+	/*PROTECTED REGION END*/
+		
+protected:
+
+	friend class MyDslPackage;
 
 	myDsl::Entity_ptr m_extends;
 	std::vector < std::unique_ptr < myDsl::Property > > m_properties;
 
-		
-protected:
-
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(myDsl::Entity protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // myDsl

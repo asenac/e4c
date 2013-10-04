@@ -12,10 +12,14 @@ UnaryExpression::UnaryExpression() :
 	m_expression(),
     m_operator()
 {
+	/*PROTECTED REGION ID(UnaryExpression constructor) START*/
+	/*PROTECTED REGION END*/
 }
 
 UnaryExpression::~UnaryExpression()
 {
+	/*PROTECTED REGION ID(UnaryExpression destructor) START*/
+	/*PROTECTED REGION END*/
 }
 
 UnaryExpression::expression_t UnaryExpression::getExpression() const
@@ -34,7 +38,6 @@ UnaryExpression::expression_t UnaryExpression::releaseExpression()
 	return m_expression.release();
 }
 
-
 void UnaryExpression::setOperator(operator_t _operator)
 {
 	m_operator = _operator;;
@@ -44,7 +47,6 @@ UnaryExpression::operator_t UnaryExpression::getOperator() const
 {
 	return m_operator;
 }
-
 
 
 

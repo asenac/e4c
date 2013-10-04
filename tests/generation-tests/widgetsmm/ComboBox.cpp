@@ -1,16 +1,24 @@
 
 #include "ComboBox.hpp"
+#include <widgetsmm/WidgetsmmPackage.hpp>
 
 using namespace widgetsmm;
+
+/*PROTECTED REGION ID(widgetsmm::ComboBox include) START*/
+/*PROTECTED REGION END*/
 
 ComboBox::ComboBox() : 
 	m_count(),
     m_currentIndex()
 {
+	/*PROTECTED REGION ID(ComboBox constructor) START*/
+	/*PROTECTED REGION END*/
 }
 
 ComboBox::~ComboBox()
 {
+	/*PROTECTED REGION ID(ComboBox destructor) START*/
+	/*PROTECTED REGION END*/
 }
 
 void ComboBox::setCount(count_t _count)
@@ -35,3 +43,11 @@ ComboBox::currentIndex_t ComboBox::getCurrentIndex() const
 
 
 
+/*PROTECTED REGION ID(widgetsmm::ComboBox implementation) START*/
+/*PROTECTED REGION END*/
+
+ecore::EClass_ptr ComboBox::eClassImpl() const
+{
+	return WidgetsmmPackage::_instance()->getComboBox();
+}
+ 

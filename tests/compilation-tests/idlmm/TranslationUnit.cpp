@@ -14,10 +14,14 @@ TranslationUnit::TranslationUnit() :
     m_identifier(),
     m_includes()
 {
+	/*PROTECTED REGION ID(TranslationUnit constructor) START*/
+	/*PROTECTED REGION END*/
 }
 
 TranslationUnit::~TranslationUnit()
 {
+	/*PROTECTED REGION ID(TranslationUnit destructor) START*/
+	/*PROTECTED REGION END*/
 }
 
 TranslationUnit::contains_t TranslationUnit::getContains() const
@@ -36,7 +40,6 @@ void TranslationUnit::addAllContains(const contains_t& contains_)
 	for (auto i = contains_.begin(); i != contains_.end(); i++)
 		addContains(*i);
 }
-
 
 void TranslationUnit::setIdentifier(identifier_t _identifier)
 {
@@ -64,8 +67,6 @@ void TranslationUnit::addAllIncludes(const includes_t& includes_)
 	for (auto i = includes_.begin(); i != includes_.end(); i++)
 		addIncludes(*i);
 }
-
-
 
 
 

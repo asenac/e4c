@@ -12,8 +12,7 @@ namespace SVG
 {
 
 
-// SVG::Element
-class Element
+class Element : ::ecore::EObject
 {
 public:
 
@@ -32,13 +31,22 @@ public:
 	typedef SVG::GroupingElement_ptr group_t;
 	typedef ::PrimitiveTypes::String identifier_t;
 	typedef SVG::Marker_ptr drawsMarker_t;
-
 	
 	owner_t getOwner() const;
+	void addOwner(SVG::SvgFile_ptr owner_);
+	void addAllOwner(const owner_t& owner_);
 	target_t getTarget() const;
+	void addTarget(SVG::Use_ptr target_);
+	void addAllTarget(const target_t& target_);
 	attribute_t getAttribute() const;
+	void addAttribute(SVG::Attribute_ptr attribute_);
+	void addAllAttribute(const attribute_t& attribute_);
 	position_t getPosition() const;
+	void setPosition(position_t position_);
+	position_t releasePosition();
 	size_t getSize() const;
+	void setSize(size_t size_);
+	size_t releaseSize();
 	root_t getRoot() const;
 	void setFill(fill_t _fill);
 	fill_t getFill() const;
@@ -48,7 +56,15 @@ public:
 	void setIdentifier(identifier_t _identifier);
 	identifier_t getIdentifier() const;
 	drawsMarker_t getDrawsMarker() const;
+	
 
+	/*PROTECTED REGION ID(SVG::Element public) START*/
+	/*PROTECTED REGION END*/
+		
+protected:
+	Element();
+
+	friend class SVGPackage;
 
 	std::set < SVG::SvgFile_ptr > m_owner;
 	std::set < SVG::Use_ptr > m_target;
@@ -62,10 +78,19 @@ public:
 	identifier_t m_identifier;
 	SVG::Marker_ptr m_drawsMarker;
 
-		
-protected:
-	Element();
-
+	
+	friend class ::SVG::Svg;
+	void setRoot(root_t root_);
+	friend class ::SVG::GroupingElement;
+	void setGroup(group_t group_);
+	friend class ::SVG::Marker;
+	void setDrawsMarker(drawsMarker_t drawsMarker_);
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(SVG::Element protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // SVG

@@ -1,18 +1,26 @@
 
 #include "Assignment.hpp"
+#include <xtext/XtextPackage.hpp>
 #include <xtext/AbstractElement.hpp>
 
 using namespace xtext;
+
+/*PROTECTED REGION ID(xtext::Assignment include) START*/
+/*PROTECTED REGION END*/
 
 Assignment::Assignment() : 
 	m_feature(),
     m_operator(),
     m_terminal()
 {
+	/*PROTECTED REGION ID(Assignment constructor) START*/
+	/*PROTECTED REGION END*/
 }
 
 Assignment::~Assignment()
 {
+	/*PROTECTED REGION ID(Assignment destructor) START*/
+	/*PROTECTED REGION END*/
 }
 
 void Assignment::setFeature(feature_t _feature)
@@ -41,4 +49,23 @@ Assignment::terminal_t Assignment::getTerminal() const
 }
 
 
+void Assignment::setTerminal(terminal_t terminal_)
+{
+	m_terminal.reset(terminal_);
+}
 
+Assignment::terminal_t Assignment::releaseTerminal()
+{
+	return m_terminal.release();
+}
+
+
+
+/*PROTECTED REGION ID(xtext::Assignment implementation) START*/
+/*PROTECTED REGION END*/
+
+ecore::EClass_ptr Assignment::eClassImpl() const
+{
+	return XtextPackage::_instance()->getAssignment();
+}
+ 

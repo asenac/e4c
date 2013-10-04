@@ -18,10 +18,14 @@ EStructuralFeature::EStructuralFeature() :
     m_derived(),
     m_eContainingClass()
 {
+	/*PROTECTED REGION ID(EStructuralFeature constructor) START*/
+	/*PROTECTED REGION END*/
 }
 
 EStructuralFeature::~EStructuralFeature()
 {
+	/*PROTECTED REGION ID(EStructuralFeature destructor) START*/
+	/*PROTECTED REGION END*/
 }
 
 void EStructuralFeature::setChangeable(changeable_t _changeable)
@@ -99,13 +103,10 @@ EStructuralFeature::eContainingClass_t EStructuralFeature::getEContainingClass()
 	return e4c::returned(m_eContainingClass);
 }
 
-
 void EStructuralFeature::setEContainingClass(eContainingClass_t eContainingClass_)
 {
 	m_eContainingClass = eContainingClass_;
 }
-
-
 
 
 ecore::EInt EStructuralFeature::getFeatureID()

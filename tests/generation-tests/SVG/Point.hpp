@@ -12,7 +12,6 @@ namespace SVG
 {
 
 
-// SVG::Point
 class Point :  public virtual ::SVG::Shape
 {
 public:
@@ -24,12 +23,22 @@ public:
 
 	
 	
-	
 
-	
+	/*PROTECTED REGION ID(SVG::Point public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class SVGPackage;
+
+	
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(SVG::Point protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // SVG

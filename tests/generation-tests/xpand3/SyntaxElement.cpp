@@ -1,7 +1,11 @@
 
 #include "SyntaxElement.hpp"
+#include <xpand3/Xpand3Package.hpp>
 
 using namespace xpand3;
+
+/*PROTECTED REGION ID(xpand3::SyntaxElement include) START*/
+/*PROTECTED REGION END*/
 
 SyntaxElement::SyntaxElement() : 
 	m_line(),
@@ -9,10 +13,14 @@ SyntaxElement::SyntaxElement() :
     m_end(),
     m_fileName()
 {
+	/*PROTECTED REGION ID(SyntaxElement constructor) START*/
+	/*PROTECTED REGION END*/
 }
 
 SyntaxElement::~SyntaxElement()
 {
+	/*PROTECTED REGION ID(SyntaxElement destructor) START*/
+	/*PROTECTED REGION END*/
 }
 
 void SyntaxElement::setLine(line_t _line)
@@ -57,3 +65,11 @@ SyntaxElement::fileName_t SyntaxElement::getFileName() const
 
 
 
+/*PROTECTED REGION ID(xpand3::SyntaxElement implementation) START*/
+/*PROTECTED REGION END*/
+
+ecore::EClass_ptr SyntaxElement::eClassImpl() const
+{
+	return Xpand3Package::_instance()->getSyntaxElement();
+}
+ 

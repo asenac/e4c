@@ -14,7 +14,6 @@ namespace data
 {
 
 
-// kdm::data::ComplexContentType
 class ComplexContentType :  public virtual ::kdm::data::AbstractContentElement
 {
 public:
@@ -25,16 +24,28 @@ public:
 	virtual ~ComplexContentType();
 
 	typedef std::vector < kdm::data::AbstractContentElement_ptr > contentElement_t;
-
 	
 	contentElement_t getContentElement() const;
+	void addContentElement(kdm::data::AbstractContentElement_ptr contentElement_);
+	void addAllContentElement(const contentElement_t& contentElement_);
+	
 
-
-	std::vector < std::unique_ptr < kdm::data::AbstractContentElement > > m_contentElement;
-
+	/*PROTECTED REGION ID(kdm::data::ComplexContentType public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class DataPackage;
+
+	std::vector < std::unique_ptr < kdm::data::AbstractContentElement > > m_contentElement;
+
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(kdm::data::ComplexContentType protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // data

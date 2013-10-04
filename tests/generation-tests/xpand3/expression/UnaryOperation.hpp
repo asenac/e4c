@@ -14,7 +14,6 @@ namespace expression
 {
 
 
-// xpand3::expression::UnaryOperation
 class UnaryOperation :  public virtual ::xpand3::expression::AbstractExpression
 {
 public:
@@ -26,18 +25,31 @@ public:
 
 	typedef xpand3::Identifier_ptr operator_t;
 	typedef xpand3::expression::AbstractExpression_ptr operand_t;
-
 	
 	operator_t getOperator() const;
+	void setOperator(operator_t operator_);
+	operator_t releaseOperator();
 	operand_t getOperand() const;
+	void setOperand(operand_t operand_);
+	
 
+	/*PROTECTED REGION ID(xpand3::expression::UnaryOperation public) START*/
+	/*PROTECTED REGION END*/
+		
+protected:
+
+	friend class ExpressionPackage;
 
 	std::unique_ptr < xpand3::Identifier > m_operator;
 	xpand3::expression::AbstractExpression_ptr m_operand;
 
-		
-protected:
-
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(xpand3::expression::UnaryOperation protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // expression

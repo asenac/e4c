@@ -14,7 +14,6 @@ namespace data
 {
 
 
-// kdm::data::DataAction
 class DataAction :  public virtual ::kdm::data::AbstractDataElement
 {
 public:
@@ -27,21 +26,35 @@ public:
 	typedef ::kdm::core::String kind_t;
 	typedef std::set < kdm::action::ActionElement_ptr > implementation_t;
 	typedef std::set < kdm::data::DataEvent_ptr > dataElement_t;
-
 	
 	void setKind(kind_t _kind);
 	kind_t getKind() const;
 	implementation_t getImplementation() const;
+	void addImplementation(kdm::action::ActionElement_ptr implementation_);
+	void addAllImplementation(const implementation_t& implementation_);
 	dataElement_t getDataElement() const;
+	void addDataElement(kdm::data::DataEvent_ptr dataElement_);
+	void addAllDataElement(const dataElement_t& dataElement_);
+	
 
+	/*PROTECTED REGION ID(kdm::data::DataAction public) START*/
+	/*PROTECTED REGION END*/
+		
+protected:
+
+	friend class DataPackage;
 
 	kind_t m_kind;
 	std::set < kdm::action::ActionElement_ptr > m_implementation;
 	std::set < std::unique_ptr < kdm::data::DataEvent > > m_dataElement;
 
-		
-protected:
-
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(kdm::data::DataAction protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // data

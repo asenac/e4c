@@ -14,7 +14,6 @@ namespace code
 {
 
 
-// kdm::code::PointerType
 class PointerType :  public virtual ::kdm::code::DerivedType
 {
 public:
@@ -26,12 +25,22 @@ public:
 
 	
 	
-	
 
-	
+	/*PROTECTED REGION ID(kdm::code::PointerType public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class CodePackage;
+
+	
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(kdm::code::PointerType protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // code

@@ -6,7 +6,7 @@ using namespace bintree;
 
 BintreeFactory::BintreeFactory()
 {
-	m_ePackage = BintreePackage::_instance();
+	// m_ePackage = BintreePackage::_instance();
 	// std::bind(&BintreeFactory::createBinTreeNode, this);
 	// m_ePackage->getTag_BinTreeNode();
 }

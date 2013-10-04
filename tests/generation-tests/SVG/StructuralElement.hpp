@@ -12,7 +12,6 @@ namespace SVG
 {
 
 
-// SVG::StructuralElement
 class StructuralElement :  public virtual ::SVG::Element
 {
 public:
@@ -23,13 +22,23 @@ public:
 
 	
 	
-	
 
-	
+	/*PROTECTED REGION ID(SVG::StructuralElement public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 	StructuralElement();
 
+	friend class SVGPackage;
+
+	
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(SVG::StructuralElement protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // SVG

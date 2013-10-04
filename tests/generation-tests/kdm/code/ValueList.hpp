@@ -14,7 +14,6 @@ namespace code
 {
 
 
-// kdm::code::ValueList
 class ValueList :  public virtual ::kdm::code::ValueElement
 {
 public:
@@ -25,16 +24,28 @@ public:
 	virtual ~ValueList();
 
 	typedef std::vector < kdm::code::ValueElement_ptr > valueElement_t;
-
 	
 	valueElement_t getValueElement() const;
+	void addValueElement(kdm::code::ValueElement_ptr valueElement_);
+	void addAllValueElement(const valueElement_t& valueElement_);
+	
 
-
-	std::vector < std::unique_ptr < kdm::code::ValueElement > > m_valueElement;
-
+	/*PROTECTED REGION ID(kdm::code::ValueList public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class CodePackage;
+
+	std::vector < std::unique_ptr < kdm::code::ValueElement > > m_valueElement;
+
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(kdm::code::ValueList protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // code

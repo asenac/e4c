@@ -12,10 +12,14 @@ FixedDef::FixedDef() :
 	m_digits(),
     m_scale()
 {
+	/*PROTECTED REGION ID(FixedDef constructor) START*/
+	/*PROTECTED REGION END*/
 }
 
 FixedDef::~FixedDef()
 {
+	/*PROTECTED REGION ID(FixedDef destructor) START*/
+	/*PROTECTED REGION END*/
 }
 
 FixedDef::digits_t FixedDef::getDigits() const
@@ -34,7 +38,6 @@ FixedDef::digits_t FixedDef::releaseDigits()
 	return m_digits.release();
 }
 
-
 FixedDef::scale_t FixedDef::getScale() const
 {
 	return e4c::returned(m_scale);
@@ -50,8 +53,6 @@ FixedDef::scale_t FixedDef::releaseScale()
 {
 	return m_scale.release();
 }
-
-
 
 
 

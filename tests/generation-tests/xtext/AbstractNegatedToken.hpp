@@ -12,7 +12,6 @@ namespace xtext
 {
 
 
-// xtext::AbstractNegatedToken
 class AbstractNegatedToken :  public virtual ::xtext::AbstractElement
 {
 public:
@@ -23,16 +22,28 @@ public:
 	virtual ~AbstractNegatedToken();
 
 	typedef xtext::AbstractElement_ptr terminal_t;
-
 	
 	terminal_t getTerminal() const;
+	void setTerminal(terminal_t terminal_);
+	terminal_t releaseTerminal();
+	
 
-
-	std::unique_ptr < xtext::AbstractElement > m_terminal;
-
+	/*PROTECTED REGION ID(xtext::AbstractNegatedToken public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class XtextPackage;
+
+	std::unique_ptr < xtext::AbstractElement > m_terminal;
+
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(xtext::AbstractNegatedToken protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // xtext

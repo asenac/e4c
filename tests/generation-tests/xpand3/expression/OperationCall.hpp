@@ -14,7 +14,6 @@ namespace expression
 {
 
 
-// xpand3::expression::OperationCall
 class OperationCall :  public virtual ::xpand3::expression::FeatureCall
 {
 public:
@@ -25,16 +24,28 @@ public:
 	virtual ~OperationCall();
 
 	typedef std::vector < xpand3::expression::AbstractExpression_ptr > params_t;
-
 	
 	params_t getParams() const;
+	void addParams(xpand3::expression::AbstractExpression_ptr params_);
+	void addAllParams(const params_t& params_);
+	
 
-
-	std::vector < std::unique_ptr < xpand3::expression::AbstractExpression > > m_params;
-
+	/*PROTECTED REGION ID(xpand3::expression::OperationCall public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class ExpressionPackage;
+
+	std::vector < std::unique_ptr < xpand3::expression::AbstractExpression > > m_params;
+
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(xpand3::expression::OperationCall protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // expression

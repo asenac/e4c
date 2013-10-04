@@ -14,7 +14,6 @@ namespace code
 {
 
 
-// kdm::code::ComputationalObject
 class ComputationalObject :  public virtual ::kdm::code::CodeItem
 {
 public:
@@ -25,13 +24,23 @@ public:
 
 	
 	
-	
 
-	
+	/*PROTECTED REGION ID(kdm::code::ComputationalObject public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 	ComputationalObject();
 
+	friend class CodePackage;
+
+	
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(kdm::code::ComputationalObject protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // code

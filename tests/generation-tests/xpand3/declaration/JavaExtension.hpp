@@ -14,7 +14,6 @@ namespace declaration
 {
 
 
-// xpand3::declaration::JavaExtension
 class JavaExtension :  public virtual ::xpand3::declaration::AbstractNamedDeclaration
 {
 public:
@@ -27,20 +26,36 @@ public:
 	typedef xpand3::Identifier_ptr javaType_t;
 	typedef xpand3::Identifier_ptr javaMethod_t;
 	typedef std::vector < xpand3::Identifier_ptr > javaParamTypes_t;
-
 	
 	javaType_t getJavaType() const;
+	void setJavaType(javaType_t javaType_);
+	javaType_t releaseJavaType();
 	javaMethod_t getJavaMethod() const;
+	void setJavaMethod(javaMethod_t javaMethod_);
+	javaMethod_t releaseJavaMethod();
 	javaParamTypes_t getJavaParamTypes() const;
+	void addJavaParamTypes(xpand3::Identifier_ptr javaParamTypes_);
+	void addAllJavaParamTypes(const javaParamTypes_t& javaParamTypes_);
+	
 
+	/*PROTECTED REGION ID(xpand3::declaration::JavaExtension public) START*/
+	/*PROTECTED REGION END*/
+		
+protected:
+
+	friend class DeclarationPackage;
 
 	std::unique_ptr < xpand3::Identifier > m_javaType;
 	std::unique_ptr < xpand3::Identifier > m_javaMethod;
 	std::vector < std::unique_ptr < xpand3::Identifier > > m_javaParamTypes;
 
-		
-protected:
-
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(xpand3::declaration::JavaExtension protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // declaration

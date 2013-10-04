@@ -6,7 +6,7 @@ using namespace emof;
 
 EmofFactory::EmofFactory()
 {
-	m_ePackage = EmofPackage::_instance();
+	// m_ePackage = EmofPackage::_instance();
 	// std::bind(&EmofFactory::createClass, this);
 	// m_ePackage->getTag_Class();
 	// std::bind(&EmofFactory::createComment, this);

@@ -6,7 +6,7 @@ using namespace json;
 
 JsonFactory::JsonFactory()
 {
-	m_ePackage = JsonPackage::_instance();
+	// m_ePackage = JsonPackage::_instance();
 	// std::bind(&JsonFactory::createObjectValue, this);
 	// m_ePackage->getTag_ObjectValue();
 	// std::bind(&JsonFactory::createNVPair, this);

@@ -12,8 +12,7 @@ namespace xtext
 {
 
 
-// xtext::AbstractMetamodelDeclaration
-class AbstractMetamodelDeclaration
+class AbstractMetamodelDeclaration : ::ecore::EObject
 {
 public:
 
@@ -24,19 +23,30 @@ public:
 
 	typedef ecore::EPackage_ptr ePackage_t;
 	typedef ::ecore::EString alias_t;
-
 	
 	ePackage_t getEPackage() const;
+	void setEPackage(ePackage_t ePackage_);
 	void setAlias(alias_t _alias);
 	alias_t getAlias() const;
+	
 
+	/*PROTECTED REGION ID(xtext::AbstractMetamodelDeclaration public) START*/
+	/*PROTECTED REGION END*/
+		
+protected:
+
+	friend class XtextPackage;
 
 	ecore::EPackage_ptr m_ePackage;
 	alias_t m_alias;
 
-		
-protected:
-
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(xtext::AbstractMetamodelDeclaration protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // xtext

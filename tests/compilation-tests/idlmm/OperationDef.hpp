@@ -38,7 +38,6 @@ public:
 	void addCanRaise(idlmm::ExceptionDef_ptr canRaise_);
 	void addAllCanRaise(const canRaise_t& canRaise_);
 	
-	
 
 	/*PROTECTED REGION ID(idlmm::OperationDef public) START*/
 	/*PROTECTED REGION END*/

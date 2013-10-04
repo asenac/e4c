@@ -12,7 +12,6 @@ namespace xtext
 {
 
 
-// xtext::RuleCall
 class RuleCall :  public virtual ::xtext::AbstractElement
 {
 public:
@@ -23,16 +22,27 @@ public:
 	virtual ~RuleCall();
 
 	typedef xtext::AbstractRule_ptr rule_t;
-
 	
 	rule_t getRule() const;
+	void setRule(rule_t rule_);
+	
 
-
-	xtext::AbstractRule_ptr m_rule;
-
+	/*PROTECTED REGION ID(xtext::RuleCall public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class XtextPackage;
+
+	xtext::AbstractRule_ptr m_rule;
+
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(xtext::RuleCall protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // xtext

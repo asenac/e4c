@@ -11,10 +11,14 @@ using namespace ecore;
 EEnum::EEnum() : 
 	m_eLiterals()
 {
+	/*PROTECTED REGION ID(EEnum constructor) START*/
+	/*PROTECTED REGION END*/
 }
 
 EEnum::~EEnum()
 {
+	/*PROTECTED REGION ID(EEnum destructor) START*/
+	/*PROTECTED REGION END*/
 }
 
 EEnum::eLiterals_t EEnum::getELiterals() const
@@ -34,8 +38,6 @@ void EEnum::addAllELiterals(const eLiterals_t& eLiterals_)
 	for (auto i = eLiterals_.begin(); i != eLiterals_.end(); i++)
 		addELiterals(*i);
 }
-
-
 
 
 ecore::EEnumLiteral_ptr EEnum::getEEnumLiteral(ecore::EString name)

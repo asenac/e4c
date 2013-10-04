@@ -34,16 +34,13 @@ public:
 	void addETypeArguments(ecore::EGenericType_ptr eTypeArguments_);
 	void addAllETypeArguments(const eTypeArguments_t& eTypeArguments_);
 	eRawType_t getERawType() const;
-	
 	void setERawType(eRawType_t eRawType_);
 	eLowerBound_t getELowerBound() const;
 	void setELowerBound(eLowerBound_t eLowerBound_);
 	eLowerBound_t releaseELowerBound();
 	eTypeParameter_t getETypeParameter() const;
-	
 	void setETypeParameter(eTypeParameter_t eTypeParameter_);
 	eClassifier_t getEClassifier() const;
-	
 	void setEClassifier(eClassifier_t eClassifier_);
 	
 

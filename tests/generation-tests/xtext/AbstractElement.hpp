@@ -12,8 +12,7 @@ namespace xtext
 {
 
 
-// xtext::AbstractElement
-class AbstractElement
+class AbstractElement : ::ecore::EObject
 {
 public:
 
@@ -23,17 +22,27 @@ public:
 	virtual ~AbstractElement();
 
 	typedef ::ecore::EString cardinality_t;
-
 	
 	void setCardinality(cardinality_t _cardinality);
 	cardinality_t getCardinality() const;
+	
 
-
-	cardinality_t m_cardinality;
-
+	/*PROTECTED REGION ID(xtext::AbstractElement public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class XtextPackage;
+
+	cardinality_t m_cardinality;
+
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(xtext::AbstractElement protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // xtext

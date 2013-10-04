@@ -14,7 +14,6 @@ namespace declaration
 {
 
 
-// xpand3::declaration::AbstractAspect
 class AbstractAspect :  public virtual ::xpand3::declaration::AbstractDeclaration
 {
 public:
@@ -25,20 +24,32 @@ public:
 
 	typedef xpand3::Identifier_ptr pointcut_t;
 	typedef ::ecore::EBoolean wildparams_t;
-
 	
 	pointcut_t getPointcut() const;
+	void setPointcut(pointcut_t pointcut_);
+	pointcut_t releasePointcut();
 	void setWildparams(wildparams_t _wildparams);
 	wildparams_t getWildparams() const;
+	
 
-
-	std::unique_ptr < xpand3::Identifier > m_pointcut;
-	wildparams_t m_wildparams;
-
+	/*PROTECTED REGION ID(xpand3::declaration::AbstractAspect public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 	AbstractAspect();
 
+	friend class DeclarationPackage;
+
+	std::unique_ptr < xpand3::Identifier > m_pointcut;
+	wildparams_t m_wildparams;
+
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(xpand3::declaration::AbstractAspect protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // declaration

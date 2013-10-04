@@ -6,7 +6,7 @@ using namespace kdm::platform;
 
 PlatformFactory::PlatformFactory()
 {
-	m_ePackage = PlatformPackage::_instance();
+	// m_ePackage = PlatformPackage::_instance();
 	// std::bind(&PlatformFactory::createPlatformModel, this);
 	// m_ePackage->getTag_PlatformModel();
 	// std::bind(&PlatformFactory::createRequires, this);

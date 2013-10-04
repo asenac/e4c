@@ -10,10 +10,14 @@ using namespace idlmm;
 Field::Field() : 
 	m_identifier()
 {
+	/*PROTECTED REGION ID(Field constructor) START*/
+	/*PROTECTED REGION END*/
 }
 
 Field::~Field()
 {
+	/*PROTECTED REGION ID(Field destructor) START*/
+	/*PROTECTED REGION END*/
 }
 
 void Field::setIdentifier(identifier_t _identifier)
@@ -25,7 +29,6 @@ Field::identifier_t Field::getIdentifier() const
 {
 	return m_identifier;
 }
-
 
 
 

@@ -12,7 +12,6 @@ namespace xpand3
 {
 
 
-// xpand3::DeclaredParameter
 class DeclaredParameter :  public virtual ::xpand3::SyntaxElement
 {
 public:
@@ -24,18 +23,32 @@ public:
 
 	typedef xpand3::Identifier_ptr name_t;
 	typedef xpand3::Identifier_ptr type_t;
-
 	
 	name_t getName() const;
+	void setName(name_t name_);
+	name_t releaseName();
 	type_t getType() const;
+	void setType(type_t type_);
+	type_t releaseType();
+	
 
+	/*PROTECTED REGION ID(xpand3::DeclaredParameter public) START*/
+	/*PROTECTED REGION END*/
+		
+protected:
+
+	friend class Xpand3Package;
 
 	std::unique_ptr < xpand3::Identifier > m_name;
 	std::unique_ptr < xpand3::Identifier > m_type;
 
-		
-protected:
-
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(xpand3::DeclaredParameter protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // xpand3

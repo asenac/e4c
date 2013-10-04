@@ -13,10 +13,14 @@ AttributeDef::AttributeDef() :
     m_setRaises(),
     m_isReadonly()
 {
+	/*PROTECTED REGION ID(AttributeDef constructor) START*/
+	/*PROTECTED REGION END*/
 }
 
 AttributeDef::~AttributeDef()
 {
+	/*PROTECTED REGION ID(AttributeDef destructor) START*/
+	/*PROTECTED REGION END*/
 }
 
 AttributeDef::getRaises_t AttributeDef::getGetRaises() const
@@ -26,8 +30,9 @@ AttributeDef::getRaises_t AttributeDef::getGetRaises() const
 
 void AttributeDef::addGetRaises(idlmm::ExceptionDef_ptr getRaises_)
 {
+	if (e4c::contains(m_getRaises, getRaises_))
+		return;
 	m_getRaises.push_back(getRaises_);
-	
 }
 
 void AttributeDef::addAllGetRaises(const getRaises_t& getRaises_)
@@ -36,7 +41,6 @@ void AttributeDef::addAllGetRaises(const getRaises_t& getRaises_)
 		addGetRaises(*i);
 }
 
-
 AttributeDef::setRaises_t AttributeDef::getSetRaises() const
 {
 	return e4c::returned(m_setRaises);
@@ -44,8 +48,9 @@ AttributeDef::setRaises_t AttributeDef::getSetRaises() const
 
 void AttributeDef::addSetRaises(idlmm::ExceptionDef_ptr setRaises_)
 {
+	if (e4c::contains(m_setRaises, setRaises_))
+		return;
 	m_setRaises.push_back(setRaises_);
-	
 }
 
 void AttributeDef::addAllSetRaises(const setRaises_t& setRaises_)
@@ -53,7 +58,6 @@ void AttributeDef::addAllSetRaises(const setRaises_t& setRaises_)
 	for (auto i = setRaises_.begin(); i != setRaises_.end(); i++)
 		addSetRaises(*i);
 }
-
 
 void AttributeDef::setIsReadonly(isReadonly_t _isReadonly)
 {
@@ -64,7 +68,6 @@ AttributeDef::isReadonly_t AttributeDef::getIsReadonly() const
 {
 	return m_isReadonly;
 }
-
 
 
 

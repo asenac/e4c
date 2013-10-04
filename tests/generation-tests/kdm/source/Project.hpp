@@ -14,7 +14,6 @@ namespace source
 {
 
 
-// kdm::source::Project
 class Project :  public virtual ::kdm::source::InventoryContainer
 {
 public:
@@ -26,12 +25,22 @@ public:
 
 	
 	
-	
 
-	
+	/*PROTECTED REGION ID(kdm::source::Project public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class SourcePackage;
+
+	
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(kdm::source::Project protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // source

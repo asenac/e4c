@@ -6,7 +6,7 @@ using namespace tree;
 
 TreeFactory::TreeFactory()
 {
-	m_ePackage = TreePackage::_instance();
+	// m_ePackage = TreePackage::_instance();
 	// std::bind(&TreeFactory::createLeaf, this);
 	// m_ePackage->getTag_Leaf();
 	// std::bind(&TreeFactory::createNonTerminal, this);

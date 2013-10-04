@@ -12,7 +12,6 @@ namespace xtext
 {
 
 
-// xtext::ParserRule
 class ParserRule :  public virtual ::xtext::AbstractRule
 {
 public:
@@ -24,19 +23,31 @@ public:
 
 	typedef ::ecore::EBoolean definesHiddenTokens_t;
 	typedef std::vector < xtext::AbstractRule_ptr > hiddenTokens_t;
-
 	
 	void setDefinesHiddenTokens(definesHiddenTokens_t _definesHiddenTokens);
 	definesHiddenTokens_t getDefinesHiddenTokens() const;
 	hiddenTokens_t getHiddenTokens() const;
+	void addHiddenTokens(xtext::AbstractRule_ptr hiddenTokens_);
+	void addAllHiddenTokens(const hiddenTokens_t& hiddenTokens_);
+	
 
+	/*PROTECTED REGION ID(xtext::ParserRule public) START*/
+	/*PROTECTED REGION END*/
+		
+protected:
+
+	friend class XtextPackage;
 
 	definesHiddenTokens_t m_definesHiddenTokens;
 	std::vector < xtext::AbstractRule_ptr > m_hiddenTokens;
 
-		
-protected:
-
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(xtext::ParserRule protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // xtext

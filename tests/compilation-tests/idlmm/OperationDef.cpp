@@ -15,10 +15,14 @@ OperationDef::OperationDef() :
     m_contexts(),
     m_canRaise()
 {
+	/*PROTECTED REGION ID(OperationDef constructor) START*/
+	/*PROTECTED REGION END*/
 }
 
 OperationDef::~OperationDef()
 {
+	/*PROTECTED REGION ID(OperationDef destructor) START*/
+	/*PROTECTED REGION END*/
 }
 
 OperationDef::parameters_t OperationDef::getParameters() const
@@ -37,7 +41,6 @@ void OperationDef::addAllParameters(const parameters_t& parameters_)
 	for (auto i = parameters_.begin(); i != parameters_.end(); i++)
 		addParameters(*i);
 }
-
 
 void OperationDef::setIsOneway(isOneway_t _isOneway)
 {
@@ -66,8 +69,9 @@ OperationDef::canRaise_t OperationDef::getCanRaise() const
 
 void OperationDef::addCanRaise(idlmm::ExceptionDef_ptr canRaise_)
 {
+	if (e4c::contains(m_canRaise, canRaise_))
+		return;
 	m_canRaise.push_back(canRaise_);
-	
 }
 
 void OperationDef::addAllCanRaise(const canRaise_t& canRaise_)
@@ -75,8 +79,6 @@ void OperationDef::addAllCanRaise(const canRaise_t& canRaise_)
 	for (auto i = canRaise_.begin(); i != canRaise_.end(); i++)
 		addCanRaise(*i);
 }
-
-
 
 
 

@@ -11,6 +11,7 @@
 #include <e4c/tag.hpp>
 #include <ecore/EPackage.hpp>
 #include <«getFQN("/")»/fwd.hpp>
+#include <e4c/detail/holder.ipp>
 
 «EXPAND template::EPackage::namespacesBegin FOR this»
 
@@ -120,6 +121,18 @@ using namespace «getFQN()»;
 	m_«cl.getName()»->addAllEAllReferences(m_«s.getName()»->getEReferences());
 	m_«cl.getName()»->addAllEAllAttributes(m_«s.getName()»->getEAttributes());
 	m_«cl.getName()»->addAllEAllStructuralFeatures(m_«s.getName()»->getEStructuralFeatures());
+		«ENDFOREACH-»
+	«ENDFOREACH»
+	
+	«FOREACH EClassifiers.typeSelect(EClass) AS cl-»
+		«FOREACH cl.EStructuralFeatures AS ef-»
+	m_«cl.getName()»->addFeatureAccesors(m_«ef.getMember()», 
+		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< «cl.getFQN()»_ptr >(o)->get«ef.getNameUpper()»()); },
+			«IF ef.changeable-» 
+		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+			«ELSE-»
+		 e4c::set_t());
+		 	«ENDIF-»
 		«ENDFOREACH-»
 	«ENDFOREACH»
 }

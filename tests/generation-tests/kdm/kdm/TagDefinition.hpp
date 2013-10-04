@@ -14,7 +14,6 @@ namespace kdm
 {
 
 
-// kdm::kdm::TagDefinition
 class TagDefinition :  public virtual ::kdm::core::Element
 {
 public:
@@ -26,20 +25,30 @@ public:
 
 	typedef ::kdm::core::String tag_t;
 	typedef ::kdm::core::String type_t;
-
 	
 	void setTag(tag_t _tag);
 	tag_t getTag() const;
 	void setType(type_t _type);
 	type_t getType() const;
+	
 
+	/*PROTECTED REGION ID(kdm::kdm::TagDefinition public) START*/
+	/*PROTECTED REGION END*/
+		
+protected:
+
+	friend class KdmPackage;
 
 	tag_t m_tag;
 	type_t m_type;
 
-		
-protected:
-
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(kdm::kdm::TagDefinition protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // kdm

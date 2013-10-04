@@ -14,7 +14,6 @@ namespace event
 {
 
 
-// kdm::event::AbstractEventRelationship
 class AbstractEventRelationship :  public virtual ::kdm::core::KDMRelationship
 {
 public:
@@ -25,13 +24,23 @@ public:
 
 	
 	
-	
 
-	
+	/*PROTECTED REGION ID(kdm::event::AbstractEventRelationship public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 	AbstractEventRelationship();
 
+	friend class EventPackage;
+
+	
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(kdm::event::AbstractEventRelationship protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // event

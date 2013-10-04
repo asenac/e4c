@@ -6,7 +6,7 @@ using namespace Make;
 
 MakeFactory::MakeFactory()
 {
-	m_ePackage = MakePackage::_instance();
+	// m_ePackage = MakePackage::_instance();
 	// std::bind(&MakeFactory::createMakefile, this);
 	// m_ePackage->getTag_Makefile();
 	// std::bind(&MakeFactory::createRule, this);

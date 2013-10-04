@@ -12,10 +12,14 @@ EAttribute::EAttribute() :
 	m_iD(),
     m_eAttributeType()
 {
+	/*PROTECTED REGION ID(EAttribute constructor) START*/
+	/*PROTECTED REGION END*/
 }
 
 EAttribute::~EAttribute()
 {
+	/*PROTECTED REGION ID(EAttribute destructor) START*/
+	/*PROTECTED REGION END*/
 }
 
 void EAttribute::setID(iD_t _iD)
@@ -35,11 +39,10 @@ EAttribute::eAttributeType_t EAttribute::getEAttributeType() const
 
 void EAttribute::setEAttributeType(eAttributeType_t eAttributeType_)
 {
+	if (m_eAttributeType == eAttributeType_)
+		return;
 	m_eAttributeType = eAttributeType_;
-	
 }
-
-
 
 
 

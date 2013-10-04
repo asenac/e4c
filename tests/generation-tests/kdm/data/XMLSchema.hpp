@@ -14,7 +14,6 @@ namespace data
 {
 
 
-// kdm::data::XMLSchema
 class XMLSchema :  public virtual ::kdm::data::AbstractDataElement
 {
 public:
@@ -25,16 +24,28 @@ public:
 	virtual ~XMLSchema();
 
 	typedef std::set < kdm::data::AbstractContentElement_ptr > contentElement_t;
-
 	
 	contentElement_t getContentElement() const;
+	void addContentElement(kdm::data::AbstractContentElement_ptr contentElement_);
+	void addAllContentElement(const contentElement_t& contentElement_);
+	
 
-
-	std::set < std::unique_ptr < kdm::data::AbstractContentElement > > m_contentElement;
-
+	/*PROTECTED REGION ID(kdm::data::XMLSchema public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class DataPackage;
+
+	std::set < std::unique_ptr < kdm::data::AbstractContentElement > > m_contentElement;
+
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(kdm::data::XMLSchema protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // data

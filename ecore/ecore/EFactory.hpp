@@ -24,7 +24,6 @@ public:
 	typedef ecore::EPackage_ptr ePackage_t;
 	
 	ePackage_t getEPackage() const;
-	
 	void setEPackage(ePackage_t ePackage_);
 	
 	ecore::EObject_ptr create(ecore::EClass_ptr eClass);

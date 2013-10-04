@@ -6,7 +6,7 @@ using namespace widgetsmm;
 
 WidgetsmmFactory::WidgetsmmFactory()
 {
-	m_ePackage = WidgetsmmPackage::_instance();
+	// m_ePackage = WidgetsmmPackage::_instance();
 	// std::bind(&WidgetsmmFactory::createWidget, this);
 	// m_ePackage->getTag_Widget();
 	// std::bind(&WidgetsmmFactory::createComboBox, this);

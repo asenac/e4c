@@ -12,7 +12,6 @@ namespace xtext
 {
 
 
-// xtext::GeneratedMetamodel
 class GeneratedMetamodel :  public virtual ::xtext::AbstractMetamodelDeclaration
 {
 public:
@@ -23,17 +22,27 @@ public:
 	virtual ~GeneratedMetamodel();
 
 	typedef ::ecore::EString name_t;
-
 	
 	void setName(name_t _name);
 	name_t getName() const;
+	
 
-
-	name_t m_name;
-
+	/*PROTECTED REGION ID(xtext::GeneratedMetamodel public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class XtextPackage;
+
+	name_t m_name;
+
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(xtext::GeneratedMetamodel protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // xtext

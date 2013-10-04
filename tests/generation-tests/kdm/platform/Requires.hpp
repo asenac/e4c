@@ -14,7 +14,6 @@ namespace platform
 {
 
 
-// kdm::platform::Requires
 class Requires :  public virtual ::kdm::platform::AbstractPlatformRelationship
 {
 public:
@@ -26,18 +25,30 @@ public:
 
 	typedef kdm::platform::AbstractPlatformElement_ptr to_t;
 	typedef kdm::platform::DeployedComponent_ptr from_t;
-
 	
 	to_t getTo() const;
+	void setTo(to_t to_);
 	from_t getFrom() const;
+	void setFrom(from_t from_);
+	
 
+	/*PROTECTED REGION ID(kdm::platform::Requires public) START*/
+	/*PROTECTED REGION END*/
+		
+protected:
+
+	friend class PlatformPackage;
 
 	kdm::platform::AbstractPlatformElement_ptr m_to;
 	kdm::platform::DeployedComponent_ptr m_from;
 
-		
-protected:
-
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(kdm::platform::Requires protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // platform

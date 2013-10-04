@@ -1,7 +1,11 @@
 
 #include "MultiplicityElement.hpp"
+#include <emof/EmofPackage.hpp>
 
 using namespace emof;
+
+/*PROTECTED REGION ID(emof::MultiplicityElement include) START*/
+/*PROTECTED REGION END*/
 
 MultiplicityElement::MultiplicityElement() : 
 	m_isOrdered(),
@@ -9,10 +13,14 @@ MultiplicityElement::MultiplicityElement() :
     m_lower(),
     m_upper()
 {
+	/*PROTECTED REGION ID(MultiplicityElement constructor) START*/
+	/*PROTECTED REGION END*/
 }
 
 MultiplicityElement::~MultiplicityElement()
 {
+	/*PROTECTED REGION ID(MultiplicityElement destructor) START*/
+	/*PROTECTED REGION END*/
 }
 
 void MultiplicityElement::setIsOrdered(isOrdered_t _isOrdered)
@@ -57,3 +65,11 @@ MultiplicityElement::upper_t MultiplicityElement::getUpper() const
 
 
 
+/*PROTECTED REGION ID(emof::MultiplicityElement implementation) START*/
+/*PROTECTED REGION END*/
+
+ecore::EClass_ptr MultiplicityElement::eClassImpl() const
+{
+	return EmofPackage::_instance()->getMultiplicityElement();
+}
+ 

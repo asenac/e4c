@@ -12,8 +12,7 @@ namespace myDsl
 {
 
 
-// myDsl::Import
-class Import
+class Import : ::ecore::EObject
 {
 public:
 
@@ -23,17 +22,27 @@ public:
 	virtual ~Import();
 
 	typedef ::ecore::EString importURI_t;
-
 	
 	void setImportURI(importURI_t _importURI);
 	importURI_t getImportURI() const;
+	
 
-
-	importURI_t m_importURI;
-
+	/*PROTECTED REGION ID(myDsl::Import public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class MyDslPackage;
+
+	importURI_t m_importURI;
+
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(myDsl::Import protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // myDsl

@@ -14,7 +14,6 @@ namespace expression
 {
 
 
-// xpand3::expression::GlobalVarExpression
 class GlobalVarExpression :  public virtual ::xpand3::expression::AbstractExpression
 {
 public:
@@ -25,16 +24,28 @@ public:
 	virtual ~GlobalVarExpression();
 
 	typedef xpand3::Identifier_ptr globalVarName_t;
-
 	
 	globalVarName_t getGlobalVarName() const;
+	void setGlobalVarName(globalVarName_t globalVarName_);
+	globalVarName_t releaseGlobalVarName();
+	
 
-
-	std::unique_ptr < xpand3::Identifier > m_globalVarName;
-
+	/*PROTECTED REGION ID(xpand3::expression::GlobalVarExpression public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class ExpressionPackage;
+
+	std::unique_ptr < xpand3::Identifier > m_globalVarName;
+
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(xpand3::expression::GlobalVarExpression protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // expression

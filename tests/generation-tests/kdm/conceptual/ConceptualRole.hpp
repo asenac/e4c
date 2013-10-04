@@ -14,7 +14,6 @@ namespace conceptual
 {
 
 
-// kdm::conceptual::ConceptualRole
 class ConceptualRole :  public virtual ::kdm::conceptual::AbstractConceptualElement
 {
 public:
@@ -25,16 +24,27 @@ public:
 	virtual ~ConceptualRole();
 
 	typedef kdm::conceptual::AbstractConceptualElement_ptr conceptualElement_t;
-
 	
 	conceptualElement_t getConceptualElement() const;
+	void setConceptualElement(conceptualElement_t conceptualElement_);
+	
 
-
-	kdm::conceptual::AbstractConceptualElement_ptr m_conceptualElement;
-
+	/*PROTECTED REGION ID(kdm::conceptual::ConceptualRole public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class ConceptualPackage;
+
+	kdm::conceptual::AbstractConceptualElement_ptr m_conceptualElement;
+
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(kdm::conceptual::ConceptualRole protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // conceptual

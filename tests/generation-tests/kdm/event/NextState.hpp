@@ -14,7 +14,6 @@ namespace event
 {
 
 
-// kdm::event::NextState
 class NextState :  public virtual ::kdm::event::AbstractEventRelationship
 {
 public:
@@ -26,18 +25,30 @@ public:
 
 	typedef kdm::event::State_ptr to_t;
 	typedef kdm::event::Transition_ptr from_t;
-
 	
 	to_t getTo() const;
+	void setTo(to_t to_);
 	from_t getFrom() const;
+	void setFrom(from_t from_);
+	
 
+	/*PROTECTED REGION ID(kdm::event::NextState public) START*/
+	/*PROTECTED REGION END*/
+		
+protected:
+
+	friend class EventPackage;
 
 	kdm::event::State_ptr m_to;
 	kdm::event::Transition_ptr m_from;
 
-		
-protected:
-
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(kdm::event::NextState protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // event

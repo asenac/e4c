@@ -12,10 +12,14 @@ ArrayDef::ArrayDef() :
 	m_name(),
     m_bounds()
 {
+	/*PROTECTED REGION ID(ArrayDef constructor) START*/
+	/*PROTECTED REGION END*/
 }
 
 ArrayDef::~ArrayDef()
 {
+	/*PROTECTED REGION ID(ArrayDef destructor) START*/
+	/*PROTECTED REGION END*/
 }
 
 void ArrayDef::setName(name_t _name)
@@ -44,8 +48,6 @@ void ArrayDef::addAllBounds(const bounds_t& bounds_)
 	for (auto i = bounds_.begin(); i != bounds_.end(); i++)
 		addBounds(*i);
 }
-
-
 
 
 

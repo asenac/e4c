@@ -9,12 +9,15 @@ using namespace ecore;
 
 EObject::EObject()
 {
+	/*PROTECTED REGION ID(EObject constructor) START*/
+	/*PROTECTED REGION END*/
 }
 
 EObject::~EObject()
 {
+	/*PROTECTED REGION ID(EObject destructor) START*/
+	/*PROTECTED REGION END*/
 }
-
 
 
 ecore::EClass_ptr EObject::eClass()

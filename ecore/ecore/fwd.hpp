@@ -128,7 +128,7 @@ typedef int EResourceSet;
 /*PROTECTED REGION END*/
 
 /*PROTECTED REGION ID(typedef_ecore::EShort) START*/
-typedef std::int16_t EShort;
+typedef int EShort;
 /*PROTECTED REGION END*/
 
 /*PROTECTED REGION ID(typedef_ecore::EShortObject) ENABLED START*/

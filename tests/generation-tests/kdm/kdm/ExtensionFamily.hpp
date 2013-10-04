@@ -14,7 +14,6 @@ namespace kdm
 {
 
 
-// kdm::kdm::ExtensionFamily
 class ExtensionFamily :  public virtual ::kdm::core::Element
 {
 public:
@@ -26,19 +25,31 @@ public:
 
 	typedef std::set < kdm::kdm::Stereotype_ptr > stereotype_t;
 	typedef ::kdm::core::String name_t;
-
 	
 	stereotype_t getStereotype() const;
+	void addStereotype(kdm::kdm::Stereotype_ptr stereotype_);
+	void addAllStereotype(const stereotype_t& stereotype_);
 	void setName(name_t _name);
 	name_t getName() const;
+	
 
+	/*PROTECTED REGION ID(kdm::kdm::ExtensionFamily public) START*/
+	/*PROTECTED REGION END*/
+		
+protected:
+
+	friend class KdmPackage;
 
 	std::set < std::unique_ptr < kdm::kdm::Stereotype > > m_stereotype;
 	name_t m_name;
 
-		
-protected:
-
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(kdm::kdm::ExtensionFamily protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // kdm

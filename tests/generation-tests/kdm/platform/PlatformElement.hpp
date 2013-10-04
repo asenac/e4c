@@ -14,7 +14,6 @@ namespace platform
 {
 
 
-// kdm::platform::PlatformElement
 class PlatformElement :  public virtual ::kdm::platform::AbstractPlatformElement
 {
 public:
@@ -26,12 +25,22 @@ public:
 
 	
 	
-	
 
-	
+	/*PROTECTED REGION ID(kdm::platform::PlatformElement public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class PlatformPackage;
+
+	
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(kdm::platform::PlatformElement protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // platform

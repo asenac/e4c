@@ -12,7 +12,6 @@ namespace Make
 {
 
 
-// Make::RuleDep
 class RuleDep :  public virtual ::Make::Dependency
 {
 public:
@@ -23,16 +22,27 @@ public:
 	virtual ~RuleDep();
 
 	typedef Make::Rule_ptr ruledep_t;
-
 	
 	ruledep_t getRuledep() const;
+	void setRuledep(ruledep_t ruledep_);
+	
 
-
-	Make::Rule_ptr m_ruledep;
-
+	/*PROTECTED REGION ID(Make::RuleDep public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class MakePackage;
+
+	Make::Rule_ptr m_ruledep;
+
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(Make::RuleDep protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // Make

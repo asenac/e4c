@@ -6,7 +6,7 @@ using namespace myDsl;
 
 MyDslFactory::MyDslFactory()
 {
-	m_ePackage = MyDslPackage::_instance();
+	// m_ePackage = MyDslPackage::_instance();
 	// std::bind(&MyDslFactory::createModel, this);
 	// m_ePackage->getTag_Model();
 	// std::bind(&MyDslFactory::createImport, this);

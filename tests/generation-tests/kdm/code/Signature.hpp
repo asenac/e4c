@@ -14,7 +14,6 @@ namespace code
 {
 
 
-// kdm::code::Signature
 class Signature :  public virtual ::kdm::code::Datatype
 {
 public:
@@ -25,16 +24,28 @@ public:
 	virtual ~Signature();
 
 	typedef std::vector < kdm::code::ParameterUnit_ptr > parameterUnit_t;
-
 	
 	parameterUnit_t getParameterUnit() const;
+	void addParameterUnit(kdm::code::ParameterUnit_ptr parameterUnit_);
+	void addAllParameterUnit(const parameterUnit_t& parameterUnit_);
+	
 
-
-	std::vector < std::unique_ptr < kdm::code::ParameterUnit > > m_parameterUnit;
-
+	/*PROTECTED REGION ID(kdm::code::Signature public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class CodePackage;
+
+	std::vector < std::unique_ptr < kdm::code::ParameterUnit > > m_parameterUnit;
+
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(kdm::code::Signature protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // code

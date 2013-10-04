@@ -27,7 +27,6 @@ public:
 	void setContainedType(containedType_t containedType_);
 	containedType_t releaseContainedType();
 	sharedType_t getSharedType() const;
-	
 	void setSharedType(sharedType_t sharedType_);
 	
 

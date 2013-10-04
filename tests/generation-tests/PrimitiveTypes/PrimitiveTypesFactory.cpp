@@ -6,7 +6,7 @@ using namespace PrimitiveTypes;
 
 PrimitiveTypesFactory::PrimitiveTypesFactory()
 {
-	m_ePackage = PrimitiveTypesPackage::_instance();
+	// m_ePackage = PrimitiveTypesPackage::_instance();
 }
 
 const PrimitiveTypesFactory_ptr PrimitiveTypesFactory::_instance()

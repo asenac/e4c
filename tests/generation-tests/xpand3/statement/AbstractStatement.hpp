@@ -14,7 +14,6 @@ namespace statement
 {
 
 
-// xpand3::statement::AbstractStatement
 class AbstractStatement :  public virtual ::xpand3::SyntaxElement
 {
 public:
@@ -25,13 +24,23 @@ public:
 
 	
 	
-	
 
-	
+	/*PROTECTED REGION ID(xpand3::statement::AbstractStatement public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 	AbstractStatement();
 
+	friend class StatementPackage;
+
+	
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(xpand3::statement::AbstractStatement protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // statement

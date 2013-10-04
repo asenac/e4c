@@ -14,7 +14,6 @@ namespace action
 {
 
 
-// kdm::action::Flow
 class Flow :  public virtual ::kdm::action::ControlFlow
 {
 public:
@@ -26,12 +25,22 @@ public:
 
 	
 	
-	
 
-	
+	/*PROTECTED REGION ID(kdm::action::Flow public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class ActionPackage;
+
+	
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(kdm::action::Flow protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // action

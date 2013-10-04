@@ -6,7 +6,7 @@ using namespace SVG;
 
 SVGFactory::SVGFactory()
 {
-	m_ePackage = SVGPackage::_instance();
+	// m_ePackage = SVGPackage::_instance();
 	// std::bind(&SVGFactory::createImage, this);
 	// m_ePackage->getTag_Image();
 	// std::bind(&SVGFactory::createSvg, this);

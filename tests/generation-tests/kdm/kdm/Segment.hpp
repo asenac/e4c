@@ -14,7 +14,6 @@ namespace kdm
 {
 
 
-// kdm::kdm::Segment
 class Segment :  public virtual ::kdm::kdm::KDMFramework
 {
 public:
@@ -26,18 +25,32 @@ public:
 
 	typedef std::set < kdm::kdm::Segment_ptr > segment_t;
 	typedef std::set < kdm::kdm::KDMModel_ptr > model_t;
-
 	
 	segment_t getSegment() const;
+	void addSegment(kdm::kdm::Segment_ptr segment_);
+	void addAllSegment(const segment_t& segment_);
 	model_t getModel() const;
+	void addModel(kdm::kdm::KDMModel_ptr model_);
+	void addAllModel(const model_t& model_);
+	
 
+	/*PROTECTED REGION ID(kdm::kdm::Segment public) START*/
+	/*PROTECTED REGION END*/
+		
+protected:
+
+	friend class KdmPackage;
 
 	std::set < std::unique_ptr < kdm::kdm::Segment > > m_segment;
 	std::set < std::unique_ptr < kdm::kdm::KDMModel > > m_model;
 
-		
-protected:
-
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(kdm::kdm::Segment protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // kdm

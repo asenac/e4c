@@ -6,7 +6,7 @@ using namespace kdm::event;
 
 EventFactory::EventFactory()
 {
-	m_ePackage = EventPackage::_instance();
+	// m_ePackage = EventPackage::_instance();
 	// std::bind(&EventFactory::createEventModel, this);
 	// m_ePackage->getTag_EventModel();
 	// std::bind(&EventFactory::createEvent, this);

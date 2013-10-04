@@ -14,7 +14,6 @@ namespace action
 {
 
 
-// kdm::action::AbstractActionRelationship
 class AbstractActionRelationship :  public virtual ::kdm::core::KDMRelationship
 {
 public:
@@ -25,13 +24,23 @@ public:
 
 	
 	
-	
 
-	
+	/*PROTECTED REGION ID(kdm::action::AbstractActionRelationship public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 	AbstractActionRelationship();
 
+	friend class ActionPackage;
+
+	
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(kdm::action::AbstractActionRelationship protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // action

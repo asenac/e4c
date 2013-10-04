@@ -14,7 +14,6 @@ namespace code
 {
 
 
-// kdm::code::CodeItem
 class CodeItem :  public virtual ::kdm::code::AbstractCodeElement
 {
 public:
@@ -25,13 +24,23 @@ public:
 
 	
 	
-	
 
-	
+	/*PROTECTED REGION ID(kdm::code::CodeItem public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 	CodeItem();
 
+	friend class CodePackage;
+
+	
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(kdm::code::CodeItem protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // code

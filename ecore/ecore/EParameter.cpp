@@ -11,10 +11,14 @@ using namespace ecore;
 EParameter::EParameter() : 
 	m_eOperation()
 {
+	/*PROTECTED REGION ID(EParameter constructor) START*/
+	/*PROTECTED REGION END*/
 }
 
 EParameter::~EParameter()
 {
+	/*PROTECTED REGION ID(EParameter destructor) START*/
+	/*PROTECTED REGION END*/
 }
 
 EParameter::eOperation_t EParameter::getEOperation() const
@@ -22,13 +26,10 @@ EParameter::eOperation_t EParameter::getEOperation() const
 	return e4c::returned(m_eOperation);
 }
 
-
 void EParameter::setEOperation(eOperation_t eOperation_)
 {
 	m_eOperation = eOperation_;
 }
-
-
 
 
 

@@ -11,10 +11,14 @@ using namespace idlmm;
 EnumDef::EnumDef() : 
 	m_members()
 {
+	/*PROTECTED REGION ID(EnumDef constructor) START*/
+	/*PROTECTED REGION END*/
 }
 
 EnumDef::~EnumDef()
 {
+	/*PROTECTED REGION ID(EnumDef destructor) START*/
+	/*PROTECTED REGION END*/
 }
 
 EnumDef::members_t EnumDef::getMembers() const
@@ -34,8 +38,6 @@ void EnumDef::addAllMembers(const members_t& members_)
 	for (auto i = members_.begin(); i != members_.end(); i++)
 		addMembers(*i);
 }
-
-
 
 
 

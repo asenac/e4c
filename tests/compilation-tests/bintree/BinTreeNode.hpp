@@ -12,8 +12,7 @@ namespace bintree
 {
 
 
-// bintree::BinTreeNode
-class BinTreeNode
+class BinTreeNode : ::ecore::EObject
 {
 public:
 
@@ -26,23 +25,38 @@ public:
 	typedef bintree::BinTreeNode_ptr left_t;
 	typedef bintree::BinTreeNode_ptr right_t;
 	typedef ::ecore::EString data_t;
-
 	
 	parent_t getParent() const;
+	void setParent(parent_t parent_);
 	left_t getLeft() const;
+	void setLeft(left_t left_);
+	left_t releaseLeft();
 	right_t getRight() const;
+	void setRight(right_t right_);
+	right_t releaseRight();
 	void setData(data_t _data);
 	data_t getData() const;
+	
 
+	/*PROTECTED REGION ID(bintree::BinTreeNode public) START*/
+	/*PROTECTED REGION END*/
+		
+protected:
+
+	friend class BintreePackage;
 
 	bintree::BinTreeNode_ptr m_parent;
 	std::unique_ptr < bintree::BinTreeNode > m_left;
 	std::unique_ptr < bintree::BinTreeNode > m_right;
 	data_t m_data;
 
-		
-protected:
-
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(bintree::BinTreeNode protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // bintree

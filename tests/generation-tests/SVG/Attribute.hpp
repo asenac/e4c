@@ -12,8 +12,7 @@ namespace SVG
 {
 
 
-// SVG::Attribute
-class Attribute
+class Attribute : ::ecore::EObject
 {
 public:
 
@@ -22,17 +21,29 @@ public:
 	virtual ~Attribute();
 
 	typedef std::set < SVG::Element_ptr > attOwner_t;
-
 	
 	attOwner_t getAttOwner() const;
+	void addAttOwner(SVG::Element_ptr attOwner_);
+	void addAllAttOwner(const attOwner_t& attOwner_);
+	
 
-
-	std::set < SVG::Element_ptr > m_attOwner;
-
+	/*PROTECTED REGION ID(SVG::Attribute public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 	Attribute();
 
+	friend class SVGPackage;
+
+	std::set < SVG::Element_ptr > m_attOwner;
+
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(SVG::Attribute protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // SVG

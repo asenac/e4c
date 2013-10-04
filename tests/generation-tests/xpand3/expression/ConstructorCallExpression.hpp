@@ -14,7 +14,6 @@ namespace expression
 {
 
 
-// xpand3::expression::ConstructorCallExpression
 class ConstructorCallExpression :  public virtual ::xpand3::expression::AbstractExpression
 {
 public:
@@ -25,16 +24,28 @@ public:
 	virtual ~ConstructorCallExpression();
 
 	typedef xpand3::Identifier_ptr type_t;
-
 	
 	type_t getType() const;
+	void setType(type_t type_);
+	type_t releaseType();
+	
 
-
-	std::unique_ptr < xpand3::Identifier > m_type;
-
+	/*PROTECTED REGION ID(xpand3::expression::ConstructorCallExpression public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class ExpressionPackage;
+
+	std::unique_ptr < xpand3::Identifier > m_type;
+
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(xpand3::expression::ConstructorCallExpression protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // expression

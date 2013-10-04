@@ -12,8 +12,7 @@ namespace C
 {
 
 
-// C::BehavioralFeature
-class BehavioralFeature
+class BehavioralFeature : ::ecore::EObject
 {
 public:
 
@@ -23,16 +22,28 @@ public:
 	virtual ~BehavioralFeature();
 
 	typedef std::set < C::CParameter_ptr > parameters_t;
-
 	
 	parameters_t getParameters() const;
+	void addParameters(C::CParameter_ptr parameters_);
+	void addAllParameters(const parameters_t& parameters_);
+	
 
-
-	std::set < std::unique_ptr < C::CParameter > > m_parameters;
-
+	/*PROTECTED REGION ID(C::BehavioralFeature public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class CPackage;
+
+	std::set < std::unique_ptr < C::CParameter > > m_parameters;
+
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(C::BehavioralFeature protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // C

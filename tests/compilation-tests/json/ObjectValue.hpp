@@ -12,7 +12,6 @@ namespace json
 {
 
 
-// json::ObjectValue
 class ObjectValue :  public virtual ::json::Value
 {
 public:
@@ -23,16 +22,28 @@ public:
 	virtual ~ObjectValue();
 
 	typedef std::vector < json::NVPair_ptr > members_t;
-
 	
 	members_t getMembers() const;
+	void addMembers(json::NVPair_ptr members_);
+	void addAllMembers(const members_t& members_);
+	
 
-
-	std::vector < std::unique_ptr < json::NVPair > > m_members;
-
+	/*PROTECTED REGION ID(json::ObjectValue public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class JsonPackage;
+
+	std::vector < std::unique_ptr < json::NVPair > > m_members;
+
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(json::ObjectValue protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // json

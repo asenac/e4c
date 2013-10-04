@@ -12,7 +12,6 @@ namespace xtext
 {
 
 
-// xtext::CrossReference
 class CrossReference :  public virtual ::xtext::AbstractElement
 {
 public:
@@ -24,18 +23,32 @@ public:
 
 	typedef xtext::TypeRef_ptr type_t;
 	typedef xtext::AbstractElement_ptr terminal_t;
-
 	
 	type_t getType() const;
+	void setType(type_t type_);
+	type_t releaseType();
 	terminal_t getTerminal() const;
+	void setTerminal(terminal_t terminal_);
+	terminal_t releaseTerminal();
+	
 
+	/*PROTECTED REGION ID(xtext::CrossReference public) START*/
+	/*PROTECTED REGION END*/
+		
+protected:
+
+	friend class XtextPackage;
 
 	std::unique_ptr < xtext::TypeRef > m_type;
 	std::unique_ptr < xtext::AbstractElement > m_terminal;
 
-		
-protected:
-
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(xtext::CrossReference protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // xtext

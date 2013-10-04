@@ -13,7 +13,6 @@ namespace emof
 {
 
 
-// emof::Property
 class Property :  public virtual ::emof::TypedElement,  public virtual ::emof::MultiplicityElement
 {
 public:
@@ -30,7 +29,6 @@ public:
 	typedef ::emof::Boolean isId_t;
 	typedef ::emof::Boolean isReadOnly_t;
 	typedef emof::Property_ptr opposite_t;
-
 	
 	class_t getClass() const;
 	void setDefault(default_t _default);
@@ -44,7 +42,15 @@ public:
 	void setIsReadOnly(isReadOnly_t _isReadOnly);
 	isReadOnly_t getIsReadOnly() const;
 	opposite_t getOpposite() const;
+	void setOpposite(opposite_t opposite_);
+	
 
+	/*PROTECTED REGION ID(emof::Property public) START*/
+	/*PROTECTED REGION END*/
+		
+protected:
+
+	friend class EmofPackage;
 
 	emof::Class_ptr m_class;
 	default_t m_default;
@@ -54,9 +60,15 @@ public:
 	isReadOnly_t m_isReadOnly;
 	emof::Property_ptr m_opposite;
 
-		
-protected:
-
+	
+	friend class ::emof::Class;
+	void setClass(class_t class_);
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(emof::Property protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // emof

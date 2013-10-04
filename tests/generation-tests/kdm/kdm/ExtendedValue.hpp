@@ -14,7 +14,6 @@ namespace kdm
 {
 
 
-// kdm::kdm::ExtendedValue
 class ExtendedValue :  public virtual ::kdm::core::Element
 {
 public:
@@ -24,17 +23,28 @@ public:
 	virtual ~ExtendedValue();
 
 	typedef kdm::kdm::TagDefinition_ptr tag_t;
-
 	
 	tag_t getTag() const;
+	void setTag(tag_t tag_);
+	
 
-
-	kdm::kdm::TagDefinition_ptr m_tag;
-
+	/*PROTECTED REGION ID(kdm::kdm::ExtendedValue public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 	ExtendedValue();
 
+	friend class KdmPackage;
+
+	kdm::kdm::TagDefinition_ptr m_tag;
+
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(kdm::kdm::ExtendedValue protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // kdm

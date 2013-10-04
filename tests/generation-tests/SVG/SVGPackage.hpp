@@ -4,6 +4,7 @@
 #include <e4c/tag.hpp>
 #include <ecore/EPackage.hpp>
 #include <SVG/fwd.hpp>
+#include <e4c/detail/holder.ipp>
 
 namespace SVG
 {
@@ -13,8 +14,117 @@ class SVGPackage : public ::ecore::EPackage
 {
 public:
     static const SVGPackage_ptr _instance();
- 
- 	// Classifiers
+
+ 	::ecore::EClass_ptr getElement() const;
+ 	::ecore::EClass_ptr getStructuralElement() const;
+ 	::ecore::EClass_ptr getImage() const;
+ 	::ecore::EClass_ptr getSvg() const;
+ 	::ecore::EClass_ptr getGroupingElement() const;
+ 	::ecore::EClass_ptr getG() const;
+ 	::ecore::EClass_ptr getDefs() const;
+ 	::ecore::EClass_ptr getSymbol() const;
+ 	::ecore::EClass_ptr getUse() const;
+ 	::ecore::EClass_ptr getGraphicalElement() const;
+ 	::ecore::EClass_ptr getShape() const;
+ 	::ecore::EClass_ptr getTextElement() const;
+ 	::ecore::EClass_ptr getRect() const;
+ 	::ecore::EClass_ptr getCircle() const;
+ 	::ecore::EClass_ptr getEllipse() const;
+ 	::ecore::EClass_ptr getLine() const;
+ 	::ecore::EClass_ptr getPolyline() const;
+ 	::ecore::EClass_ptr getPolygon() const;
+ 	::ecore::EClass_ptr getPath() const;
+ 	::ecore::EClass_ptr getPoint() const;
+ 	::ecore::EClass_ptr getMarker() const;
+ 	::ecore::EClass_ptr getText() const;
+ 	::ecore::EClass_ptr getTspan() const;
+ 	::ecore::EClass_ptr getTref() const;
+ 	::ecore::EClass_ptr getAttribute() const;
+ 	::ecore::EClass_ptr getTransform() const;
+ 	::ecore::EClass_ptr getScale() const;
+ 	::ecore::EClass_ptr getTranslate() const;
+ 	::ecore::EClass_ptr getRotate() const;
+ 	::ecore::EClass_ptr getVisibility() const;
+ 	::ecore::EClass_ptr getFontWeight() const;
+ 	::ecore::EClass_ptr getFontStyle() const;
+ 	::ecore::EClass_ptr getDimension() const;
+ 	::ecore::EClass_ptr getCoordinates() const;
+ 	::ecore::EClass_ptr getRelativeCoord() const;
+ 	::ecore::EClass_ptr getAbsoluteCoord() const;
+ 	::ecore::EClass_ptr getReferencedFile() const;
+ 	::ecore::EClass_ptr getSvgFile() const;
+ 	
+ 	::ecore::EReference_ptr getElement__owner() const;
+ 	::ecore::EReference_ptr getElement__target() const;
+ 	::ecore::EReference_ptr getElement__attribute() const;
+ 	::ecore::EReference_ptr getElement__position() const;
+ 	::ecore::EReference_ptr getElement__size() const;
+ 	::ecore::EReference_ptr getElement__root() const;
+ 	::ecore::EAttribute_ptr getElement__fill() const;
+ 	::ecore::EAttribute_ptr getElement__viewBox() const;
+ 	::ecore::EReference_ptr getElement__group() const;
+ 	::ecore::EAttribute_ptr getElement__identifier() const;
+ 	::ecore::EReference_ptr getElement__drawsMarker() const;
+ 	::ecore::EReference_ptr getImage__referee() const;
+ 	::ecore::EReference_ptr getSvg__owner_SVG() const;
+ 	::ecore::EReference_ptr getSvg__children() const;
+ 	::ecore::EAttribute_ptr getSvg__namespace() const;
+ 	::ecore::EAttribute_ptr getSvg__version() const;
+ 	::ecore::EAttribute_ptr getSvg__baseProfile() const;
+ 	::ecore::EReference_ptr getGroupingElement__groupContent() const;
+ 	::ecore::EAttribute_ptr getG__name() const;
+ 	::ecore::EReference_ptr getUse__use() const;
+ 	::ecore::EAttribute_ptr getGraphicalElement__stroke() const;
+ 	::ecore::EAttribute_ptr getTextElement__rotate() const;
+ 	::ecore::EAttribute_ptr getTextElement__textLength() const;
+ 	::ecore::EAttribute_ptr getTextElement__fontSize() const;
+ 	::ecore::EAttribute_ptr getRect__rx() const;
+ 	::ecore::EAttribute_ptr getRect__ry() const;
+ 	::ecore::EReference_ptr getLine__between() const;
+ 	::ecore::EAttribute_ptr getLine__markerEnd() const;
+ 	::ecore::EAttribute_ptr getLine__markerStart() const;
+ 	::ecore::EReference_ptr getPolyline__waypoints() const;
+ 	::ecore::EAttribute_ptr getPolyline__strokeDashArray() const;
+ 	::ecore::EAttribute_ptr getPolyline__markerEnd() const;
+ 	::ecore::EAttribute_ptr getPolyline__markerStart() const;
+ 	::ecore::EReference_ptr getPolygon__waypoints() const;
+ 	::ecore::EAttribute_ptr getPolygon__markerEnd() const;
+ 	::ecore::EAttribute_ptr getPolygon__markerStart() const;
+ 	::ecore::EAttribute_ptr getPath__pathLength() const;
+ 	::ecore::EAttribute_ptr getPath__d() const;
+ 	::ecore::EAttribute_ptr getPath__markerEnd() const;
+ 	::ecore::EAttribute_ptr getPath__markerStart() const;
+ 	::ecore::EAttribute_ptr getMarker__markerUnits() const;
+ 	::ecore::EAttribute_ptr getMarker__refX() const;
+ 	::ecore::EAttribute_ptr getMarker__refY() const;
+ 	::ecore::EAttribute_ptr getMarker__markerWidth() const;
+ 	::ecore::EAttribute_ptr getMarker__markerHeight() const;
+ 	::ecore::EAttribute_ptr getMarker__orient() const;
+ 	::ecore::EReference_ptr getMarker__drawing() const;
+ 	::ecore::EAttribute_ptr getText__lengthAdjust() const;
+ 	::ecore::EAttribute_ptr getText__content() const;
+ 	::ecore::EAttribute_ptr getTspan__content() const;
+ 	::ecore::EReference_ptr getTref__xlinkHref() const;
+ 	::ecore::EReference_ptr getAttribute__attOwner() const;
+ 	::ecore::EAttribute_ptr getScale__sx() const;
+ 	::ecore::EAttribute_ptr getScale__sy() const;
+ 	::ecore::EAttribute_ptr getTranslate__tx() const;
+ 	::ecore::EAttribute_ptr getTranslate__ty() const;
+ 	::ecore::EAttribute_ptr getRotate__angle() const;
+ 	::ecore::EAttribute_ptr getRotate__cx() const;
+ 	::ecore::EAttribute_ptr getRotate__cy() const;
+ 	::ecore::EAttribute_ptr getVisibility__visible() const;
+ 	::ecore::EAttribute_ptr getFontWeight__bold() const;
+ 	::ecore::EAttribute_ptr getFontStyle__italic() const;
+ 	::ecore::EAttribute_ptr getDimension__width() const;
+ 	::ecore::EAttribute_ptr getDimension__height() const;
+ 	::ecore::EAttribute_ptr getCoordinates__x() const;
+ 	::ecore::EAttribute_ptr getCoordinates__y() const;
+ 	::ecore::EReference_ptr getReferencedFile__referer() const;
+ 	::ecore::EAttribute_ptr getReferencedFile__name() const;
+ 	::ecore::EReference_ptr getSvgFile__tag() const;
+ 	::ecore::EReference_ptr getSvgFile__elements() const;
+
  	e4c::tag_t getTag_Element() const;
  	e4c::tag_t getTag_StructuralElement() const;
  	e4c::tag_t getTag_Image() const;
@@ -54,7 +164,6 @@ public:
  	e4c::tag_t getTag_ReferencedFile() const;
  	e4c::tag_t getTag_SvgFile() const;
  
- 	// Structural features
  	e4c::tag_t getTag_Element__owner() const;
  	e4c::tag_t getTag_Element__target() const;
  	e4c::tag_t getTag_Element__attribute() const;
@@ -128,6 +237,115 @@ public:
 
 protected:
     SVGPackage();
+    
+ 	::ecore::EClass_ptr m_Element;
+ 	::ecore::EClass_ptr m_StructuralElement;
+ 	::ecore::EClass_ptr m_Image;
+ 	::ecore::EClass_ptr m_Svg;
+ 	::ecore::EClass_ptr m_GroupingElement;
+ 	::ecore::EClass_ptr m_G;
+ 	::ecore::EClass_ptr m_Defs;
+ 	::ecore::EClass_ptr m_Symbol;
+ 	::ecore::EClass_ptr m_Use;
+ 	::ecore::EClass_ptr m_GraphicalElement;
+ 	::ecore::EClass_ptr m_Shape;
+ 	::ecore::EClass_ptr m_TextElement;
+ 	::ecore::EClass_ptr m_Rect;
+ 	::ecore::EClass_ptr m_Circle;
+ 	::ecore::EClass_ptr m_Ellipse;
+ 	::ecore::EClass_ptr m_Line;
+ 	::ecore::EClass_ptr m_Polyline;
+ 	::ecore::EClass_ptr m_Polygon;
+ 	::ecore::EClass_ptr m_Path;
+ 	::ecore::EClass_ptr m_Point;
+ 	::ecore::EClass_ptr m_Marker;
+ 	::ecore::EClass_ptr m_Text;
+ 	::ecore::EClass_ptr m_Tspan;
+ 	::ecore::EClass_ptr m_Tref;
+ 	::ecore::EClass_ptr m_Attribute;
+ 	::ecore::EClass_ptr m_Transform;
+ 	::ecore::EClass_ptr m_Scale;
+ 	::ecore::EClass_ptr m_Translate;
+ 	::ecore::EClass_ptr m_Rotate;
+ 	::ecore::EClass_ptr m_Visibility;
+ 	::ecore::EClass_ptr m_FontWeight;
+ 	::ecore::EClass_ptr m_FontStyle;
+ 	::ecore::EClass_ptr m_Dimension;
+ 	::ecore::EClass_ptr m_Coordinates;
+ 	::ecore::EClass_ptr m_RelativeCoord;
+ 	::ecore::EClass_ptr m_AbsoluteCoord;
+ 	::ecore::EClass_ptr m_ReferencedFile;
+ 	::ecore::EClass_ptr m_SvgFile;
+ 	::ecore::EReference_ptr m_Element__owner;
+ 	::ecore::EReference_ptr m_Element__target;
+ 	::ecore::EReference_ptr m_Element__attribute;
+ 	::ecore::EReference_ptr m_Element__position;
+ 	::ecore::EReference_ptr m_Element__size;
+ 	::ecore::EReference_ptr m_Element__root;
+ 	::ecore::EAttribute_ptr m_Element__fill;
+ 	::ecore::EAttribute_ptr m_Element__viewBox;
+ 	::ecore::EReference_ptr m_Element__group;
+ 	::ecore::EAttribute_ptr m_Element__identifier;
+ 	::ecore::EReference_ptr m_Element__drawsMarker;
+ 	::ecore::EReference_ptr m_Image__referee;
+ 	::ecore::EReference_ptr m_Svg__owner_SVG;
+ 	::ecore::EReference_ptr m_Svg__children;
+ 	::ecore::EAttribute_ptr m_Svg__namespace;
+ 	::ecore::EAttribute_ptr m_Svg__version;
+ 	::ecore::EAttribute_ptr m_Svg__baseProfile;
+ 	::ecore::EReference_ptr m_GroupingElement__groupContent;
+ 	::ecore::EAttribute_ptr m_G__name;
+ 	::ecore::EReference_ptr m_Use__use;
+ 	::ecore::EAttribute_ptr m_GraphicalElement__stroke;
+ 	::ecore::EAttribute_ptr m_TextElement__rotate;
+ 	::ecore::EAttribute_ptr m_TextElement__textLength;
+ 	::ecore::EAttribute_ptr m_TextElement__fontSize;
+ 	::ecore::EAttribute_ptr m_Rect__rx;
+ 	::ecore::EAttribute_ptr m_Rect__ry;
+ 	::ecore::EReference_ptr m_Line__between;
+ 	::ecore::EAttribute_ptr m_Line__markerEnd;
+ 	::ecore::EAttribute_ptr m_Line__markerStart;
+ 	::ecore::EReference_ptr m_Polyline__waypoints;
+ 	::ecore::EAttribute_ptr m_Polyline__strokeDashArray;
+ 	::ecore::EAttribute_ptr m_Polyline__markerEnd;
+ 	::ecore::EAttribute_ptr m_Polyline__markerStart;
+ 	::ecore::EReference_ptr m_Polygon__waypoints;
+ 	::ecore::EAttribute_ptr m_Polygon__markerEnd;
+ 	::ecore::EAttribute_ptr m_Polygon__markerStart;
+ 	::ecore::EAttribute_ptr m_Path__pathLength;
+ 	::ecore::EAttribute_ptr m_Path__d;
+ 	::ecore::EAttribute_ptr m_Path__markerEnd;
+ 	::ecore::EAttribute_ptr m_Path__markerStart;
+ 	::ecore::EAttribute_ptr m_Marker__markerUnits;
+ 	::ecore::EAttribute_ptr m_Marker__refX;
+ 	::ecore::EAttribute_ptr m_Marker__refY;
+ 	::ecore::EAttribute_ptr m_Marker__markerWidth;
+ 	::ecore::EAttribute_ptr m_Marker__markerHeight;
+ 	::ecore::EAttribute_ptr m_Marker__orient;
+ 	::ecore::EReference_ptr m_Marker__drawing;
+ 	::ecore::EAttribute_ptr m_Text__lengthAdjust;
+ 	::ecore::EAttribute_ptr m_Text__content;
+ 	::ecore::EAttribute_ptr m_Tspan__content;
+ 	::ecore::EReference_ptr m_Tref__xlinkHref;
+ 	::ecore::EReference_ptr m_Attribute__attOwner;
+ 	::ecore::EAttribute_ptr m_Scale__sx;
+ 	::ecore::EAttribute_ptr m_Scale__sy;
+ 	::ecore::EAttribute_ptr m_Translate__tx;
+ 	::ecore::EAttribute_ptr m_Translate__ty;
+ 	::ecore::EAttribute_ptr m_Rotate__angle;
+ 	::ecore::EAttribute_ptr m_Rotate__cx;
+ 	::ecore::EAttribute_ptr m_Rotate__cy;
+ 	::ecore::EAttribute_ptr m_Visibility__visible;
+ 	::ecore::EAttribute_ptr m_FontWeight__bold;
+ 	::ecore::EAttribute_ptr m_FontStyle__italic;
+ 	::ecore::EAttribute_ptr m_Dimension__width;
+ 	::ecore::EAttribute_ptr m_Dimension__height;
+ 	::ecore::EAttribute_ptr m_Coordinates__x;
+ 	::ecore::EAttribute_ptr m_Coordinates__y;
+ 	::ecore::EReference_ptr m_ReferencedFile__referer;
+ 	::ecore::EAttribute_ptr m_ReferencedFile__name;
+ 	::ecore::EReference_ptr m_SvgFile__tag;
+ 	::ecore::EReference_ptr m_SvgFile__elements;
 };
 
 } // SVG

@@ -14,7 +14,6 @@ namespace code
 {
 
 
-// kdm::code::SetType
 class SetType :  public virtual ::kdm::code::DerivedType
 {
 public:
@@ -25,17 +24,27 @@ public:
 	virtual ~SetType();
 
 	typedef ::kdm::core::Integer size_t;
-
 	
 	void setSize(size_t _size);
 	size_t getSize() const;
+	
 
-
-	size_t m_size;
-
+	/*PROTECTED REGION ID(kdm::code::SetType public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class CodePackage;
+
+	size_t m_size;
+
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(kdm::code::SetType protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // code

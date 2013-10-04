@@ -14,7 +14,6 @@ namespace structure
 {
 
 
-// kdm::structure::StructureModel
 class StructureModel :  public virtual ::kdm::kdm::KDMModel
 {
 public:
@@ -25,16 +24,28 @@ public:
 	virtual ~StructureModel();
 
 	typedef std::set < kdm::structure::AbstractStructureElement_ptr > structureElement_t;
-
 	
 	structureElement_t getStructureElement() const;
+	void addStructureElement(kdm::structure::AbstractStructureElement_ptr structureElement_);
+	void addAllStructureElement(const structureElement_t& structureElement_);
+	
 
-
-	std::set < std::unique_ptr < kdm::structure::AbstractStructureElement > > m_structureElement;
-
+	/*PROTECTED REGION ID(kdm::structure::StructureModel public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class StructurePackage;
+
+	std::set < std::unique_ptr < kdm::structure::AbstractStructureElement > > m_structureElement;
+
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(kdm::structure::StructureModel protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // structure

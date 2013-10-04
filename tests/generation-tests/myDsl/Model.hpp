@@ -12,8 +12,7 @@ namespace myDsl
 {
 
 
-// myDsl::Model
-class Model
+class Model : ::ecore::EObject
 {
 public:
 
@@ -24,18 +23,32 @@ public:
 
 	typedef std::vector < myDsl::Import_ptr > imports_t;
 	typedef std::vector < myDsl::Type_ptr > elements_t;
-
 	
 	imports_t getImports() const;
+	void addImports(myDsl::Import_ptr imports_);
+	void addAllImports(const imports_t& imports_);
 	elements_t getElements() const;
+	void addElements(myDsl::Type_ptr elements_);
+	void addAllElements(const elements_t& elements_);
+	
 
+	/*PROTECTED REGION ID(myDsl::Model public) START*/
+	/*PROTECTED REGION END*/
+		
+protected:
+
+	friend class MyDslPackage;
 
 	std::vector < std::unique_ptr < myDsl::Import > > m_imports;
 	std::vector < std::unique_ptr < myDsl::Type > > m_elements;
 
-		
-protected:
-
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(myDsl::Model protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // myDsl

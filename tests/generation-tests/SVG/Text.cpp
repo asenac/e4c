@@ -1,16 +1,24 @@
 
 #include "Text.hpp"
+#include <SVG/SVGPackage.hpp>
 
 using namespace SVG;
+
+/*PROTECTED REGION ID(SVG::Text include) START*/
+/*PROTECTED REGION END*/
 
 Text::Text() : 
 	m_lengthAdjust(),
     m_content()
 {
+	/*PROTECTED REGION ID(Text constructor) START*/
+	/*PROTECTED REGION END*/
 }
 
 Text::~Text()
 {
+	/*PROTECTED REGION ID(Text destructor) START*/
+	/*PROTECTED REGION END*/
 }
 
 void Text::setLengthAdjust(lengthAdjust_t _lengthAdjust)
@@ -35,3 +43,11 @@ Text::content_t Text::getContent() const
 
 
 
+/*PROTECTED REGION ID(SVG::Text implementation) START*/
+/*PROTECTED REGION END*/
+
+ecore::EClass_ptr Text::eClassImpl() const
+{
+	return SVGPackage::_instance()->getText();
+}
+ 

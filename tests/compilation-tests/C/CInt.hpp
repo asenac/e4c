@@ -12,7 +12,6 @@ namespace C
 {
 
 
-// C::CInt
 class CInt :  public virtual ::C::CIntegral
 {
 public:
@@ -24,12 +23,22 @@ public:
 
 	
 	
-	
 
-	
+	/*PROTECTED REGION ID(C::CInt public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class CPackage;
+
+	
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(C::CInt protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // C

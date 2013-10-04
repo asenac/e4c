@@ -32,7 +32,6 @@ public:
 	void setContainedDiscrim(containedDiscrim_t containedDiscrim_);
 	containedDiscrim_t releaseContainedDiscrim();
 	sharedDiscrim_t getSharedDiscrim() const;
-	
 	void setSharedDiscrim(sharedDiscrim_t sharedDiscrim_);
 	
 

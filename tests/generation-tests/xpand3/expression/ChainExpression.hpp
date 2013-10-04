@@ -14,7 +14,6 @@ namespace expression
 {
 
 
-// xpand3::expression::ChainExpression
 class ChainExpression :  public virtual ::xpand3::expression::AbstractExpression
 {
 public:
@@ -26,18 +25,32 @@ public:
 
 	typedef xpand3::expression::AbstractExpression_ptr first_t;
 	typedef xpand3::expression::AbstractExpression_ptr next_t;
-
 	
 	first_t getFirst() const;
+	void setFirst(first_t first_);
+	first_t releaseFirst();
 	next_t getNext() const;
+	void setNext(next_t next_);
+	next_t releaseNext();
+	
 
+	/*PROTECTED REGION ID(xpand3::expression::ChainExpression public) START*/
+	/*PROTECTED REGION END*/
+		
+protected:
+
+	friend class ExpressionPackage;
 
 	std::unique_ptr < xpand3::expression::AbstractExpression > m_first;
 	std::unique_ptr < xpand3::expression::AbstractExpression > m_next;
 
-		
-protected:
-
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(xpand3::expression::ChainExpression protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // expression

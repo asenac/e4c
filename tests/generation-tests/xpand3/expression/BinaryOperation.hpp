@@ -14,7 +14,6 @@ namespace expression
 {
 
 
-// xpand3::expression::BinaryOperation
 class BinaryOperation :  public virtual ::xpand3::expression::AbstractExpression
 {
 public:
@@ -27,20 +26,36 @@ public:
 	typedef xpand3::expression::AbstractExpression_ptr left_t;
 	typedef xpand3::expression::AbstractExpression_ptr right_t;
 	typedef xpand3::Identifier_ptr operator_t;
-
 	
 	left_t getLeft() const;
+	void setLeft(left_t left_);
+	left_t releaseLeft();
 	right_t getRight() const;
+	void setRight(right_t right_);
+	right_t releaseRight();
 	operator_t getOperator() const;
+	void setOperator(operator_t operator_);
+	operator_t releaseOperator();
+	
 
+	/*PROTECTED REGION ID(xpand3::expression::BinaryOperation public) START*/
+	/*PROTECTED REGION END*/
+		
+protected:
+
+	friend class ExpressionPackage;
 
 	std::unique_ptr < xpand3::expression::AbstractExpression > m_left;
 	std::unique_ptr < xpand3::expression::AbstractExpression > m_right;
 	std::unique_ptr < xpand3::Identifier > m_operator;
 
-		
-protected:
-
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(xpand3::expression::BinaryOperation protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // expression

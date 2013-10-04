@@ -14,7 +14,6 @@ namespace data
 {
 
 
-// kdm::data::ChoiceContent
 class ChoiceContent :  public virtual ::kdm::data::ComplexContentType
 {
 public:
@@ -26,12 +25,22 @@ public:
 
 	
 	
-	
 
-	
+	/*PROTECTED REGION ID(kdm::data::ChoiceContent public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class DataPackage;
+
+	
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(kdm::data::ChoiceContent protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // data

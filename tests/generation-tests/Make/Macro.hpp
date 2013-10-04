@@ -12,7 +12,6 @@ namespace Make
 {
 
 
-// Make::Macro
 class Macro :  public virtual ::Make::Element
 {
 public:
@@ -23,17 +22,27 @@ public:
 	virtual ~Macro();
 
 	typedef ::PrimitiveTypes::String value_t;
-
 	
 	void setValue(value_t _value);
 	value_t getValue() const;
+	
 
-
-	value_t m_value;
-
+	/*PROTECTED REGION ID(Make::Macro public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class MakePackage;
+
+	value_t m_value;
+
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(Make::Macro protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // Make

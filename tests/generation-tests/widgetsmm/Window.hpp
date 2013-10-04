@@ -12,7 +12,6 @@ namespace widgetsmm
 {
 
 
-// widgetsmm::Window
 class Window :  public virtual ::widgetsmm::Widget
 {
 public:
@@ -24,19 +23,31 @@ public:
 
 	typedef ::ecore::EString title_t;
 	typedef std::vector < widgetsmm::Widget_ptr > children_t;
-
 	
 	void setTitle(title_t _title);
 	title_t getTitle() const;
 	children_t getChildren() const;
+	void addChildren(widgetsmm::Widget_ptr children_);
+	void addAllChildren(const children_t& children_);
+	
 
+	/*PROTECTED REGION ID(widgetsmm::Window public) START*/
+	/*PROTECTED REGION END*/
+		
+protected:
+
+	friend class WidgetsmmPackage;
 
 	title_t m_title;
 	std::vector < std::unique_ptr < widgetsmm::Widget > > m_children;
 
-		
-protected:
-
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(widgetsmm::Window protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // widgetsmm

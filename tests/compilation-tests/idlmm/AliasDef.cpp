@@ -9,12 +9,15 @@ using namespace idlmm;
 
 AliasDef::AliasDef()
 {
+	/*PROTECTED REGION ID(AliasDef constructor) START*/
+	/*PROTECTED REGION END*/
 }
 
 AliasDef::~AliasDef()
 {
+	/*PROTECTED REGION ID(AliasDef destructor) START*/
+	/*PROTECTED REGION END*/
 }
-
 
 
 

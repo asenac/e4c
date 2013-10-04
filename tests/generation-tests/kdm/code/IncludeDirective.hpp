@@ -14,7 +14,6 @@ namespace code
 {
 
 
-// kdm::code::IncludeDirective
 class IncludeDirective :  public virtual ::kdm::code::PreprocessorDirective
 {
 public:
@@ -26,12 +25,22 @@ public:
 
 	
 	
-	
 
-	
+	/*PROTECTED REGION ID(kdm::code::IncludeDirective public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class CodePackage;
+
+	
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(kdm::code::IncludeDirective protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // code

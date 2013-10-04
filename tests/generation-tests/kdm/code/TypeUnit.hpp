@@ -14,7 +14,6 @@ namespace code
 {
 
 
-// kdm::code::TypeUnit
 class TypeUnit :  public virtual ::kdm::code::DefinedType
 {
 public:
@@ -26,12 +25,22 @@ public:
 
 	
 	
-	
 
-	
+	/*PROTECTED REGION ID(kdm::code::TypeUnit public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class CodePackage;
+
+	
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(kdm::code::TypeUnit protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // code

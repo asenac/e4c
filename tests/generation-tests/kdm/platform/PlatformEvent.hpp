@@ -14,7 +14,6 @@ namespace platform
 {
 
 
-// kdm::platform::PlatformEvent
 class PlatformEvent :  public virtual ::kdm::platform::AbstractPlatformElement
 {
 public:
@@ -25,17 +24,27 @@ public:
 	virtual ~PlatformEvent();
 
 	typedef ::kdm::core::String kind_t;
-
 	
 	void setKind(kind_t _kind);
 	kind_t getKind() const;
+	
 
-
-	kind_t m_kind;
-
+	/*PROTECTED REGION ID(kdm::platform::PlatformEvent public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class PlatformPackage;
+
+	kind_t m_kind;
+
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(kdm::platform::PlatformEvent protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // platform

@@ -12,8 +12,7 @@ namespace Make
 {
 
 
-// Make::Dependency
-class Dependency
+class Dependency : ::ecore::EObject
 {
 public:
 
@@ -23,13 +22,23 @@ public:
 
 	
 	
-	
 
-	
+	/*PROTECTED REGION ID(Make::Dependency public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 	Dependency();
 
+	friend class MakePackage;
+
+	
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(Make::Dependency protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // Make

@@ -14,7 +14,6 @@ namespace data
 {
 
 
-// kdm::data::DataContainer
 class DataContainer :  public virtual ::kdm::data::DataResource
 {
 public:
@@ -25,16 +24,28 @@ public:
 	virtual ~DataContainer();
 
 	typedef std::set < kdm::data::DataResource_ptr > dataElement_t;
-
 	
 	dataElement_t getDataElement() const;
+	void addDataElement(kdm::data::DataResource_ptr dataElement_);
+	void addAllDataElement(const dataElement_t& dataElement_);
+	
 
-
-	std::set < std::unique_ptr < kdm::data::DataResource > > m_dataElement;
-
+	/*PROTECTED REGION ID(kdm::data::DataContainer public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class DataPackage;
+
+	std::set < std::unique_ptr < kdm::data::DataResource > > m_dataElement;
+
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(kdm::data::DataContainer protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // data

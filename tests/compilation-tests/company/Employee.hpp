@@ -12,8 +12,7 @@ namespace company
 {
 
 
-// company::Employee
-class Employee
+class Employee : ::ecore::EObject
 {
 public:
 
@@ -23,17 +22,27 @@ public:
 	virtual ~Employee();
 
 	typedef ::ecore::EString name_t;
-
 	
 	void setName(name_t _name);
 	name_t getName() const;
+	
 
-
-	name_t m_name;
-
+	/*PROTECTED REGION ID(company::Employee public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class CompanyPackage;
+
+	name_t m_name;
+
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(company::Employee protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // company

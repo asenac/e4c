@@ -14,7 +14,6 @@ namespace data
 {
 
 
-// kdm::data::ContentRestriction
 class ContentRestriction :  public virtual ::kdm::data::AbstractContentElement
 {
 public:
@@ -26,20 +25,30 @@ public:
 
 	typedef ::kdm::core::String kind_t;
 	typedef ::kdm::core::String value_t;
-
 	
 	void setKind(kind_t _kind);
 	kind_t getKind() const;
 	void setValue(value_t _value);
 	value_t getValue() const;
+	
 
+	/*PROTECTED REGION ID(kdm::data::ContentRestriction public) START*/
+	/*PROTECTED REGION END*/
+		
+protected:
+
+	friend class DataPackage;
 
 	kind_t m_kind;
 	value_t m_value;
 
-		
-protected:
-
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(kdm::data::ContentRestriction protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // data

@@ -16,10 +16,14 @@ InterfaceDef::InterfaceDef() :
     m_derivesFrom(),
     m_forward()
 {
+	/*PROTECTED REGION ID(InterfaceDef constructor) START*/
+	/*PROTECTED REGION END*/
 }
 
 InterfaceDef::~InterfaceDef()
 {
+	/*PROTECTED REGION ID(InterfaceDef destructor) START*/
+	/*PROTECTED REGION END*/
 }
 
 void InterfaceDef::setIsAbstract(isAbstract_t _isAbstract)
@@ -59,8 +63,9 @@ InterfaceDef::derivesFrom_t InterfaceDef::getDerivesFrom() const
 
 void InterfaceDef::addDerivesFrom(idlmm::InterfaceDef_ptr derivesFrom_)
 {
+	if (e4c::contains(m_derivesFrom, derivesFrom_))
+		return;
 	m_derivesFrom.push_back(derivesFrom_);
-	
 }
 
 void InterfaceDef::addAllDerivesFrom(const derivesFrom_t& derivesFrom_)
@@ -69,7 +74,6 @@ void InterfaceDef::addAllDerivesFrom(const derivesFrom_t& derivesFrom_)
 		addDerivesFrom(*i);
 }
 
-
 InterfaceDef::forward_t InterfaceDef::getForward() const
 {
 	return e4c::returned(m_forward);
@@ -77,11 +81,10 @@ InterfaceDef::forward_t InterfaceDef::getForward() const
 
 void InterfaceDef::setForward(forward_t forward_)
 {
+	if (m_forward == forward_)
+		return;
 	m_forward = forward_;
-	
 }
-
-
 
 
 

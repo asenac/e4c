@@ -12,7 +12,6 @@ namespace xtext
 {
 
 
-// xtext::Keyword
 class Keyword :  public virtual ::xtext::AbstractElement
 {
 public:
@@ -23,17 +22,27 @@ public:
 	virtual ~Keyword();
 
 	typedef ::ecore::EString value_t;
-
 	
 	void setValue(value_t _value);
 	value_t getValue() const;
+	
 
-
-	value_t m_value;
-
+	/*PROTECTED REGION ID(xtext::Keyword public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class XtextPackage;
+
+	value_t m_value;
+
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(xtext::Keyword protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // xtext

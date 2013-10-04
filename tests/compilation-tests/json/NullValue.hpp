@@ -12,7 +12,6 @@ namespace json
 {
 
 
-// json::NullValue
 class NullValue :  public virtual ::json::Value
 {
 public:
@@ -24,12 +23,22 @@ public:
 
 	
 	
-	
 
-	
+	/*PROTECTED REGION ID(json::NullValue public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class JsonPackage;
+
+	
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(json::NullValue protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // json

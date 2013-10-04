@@ -14,7 +14,6 @@ namespace code
 {
 
 
-// kdm::code::SynonymType
 class SynonymType :  public virtual ::kdm::code::DefinedType
 {
 public:
@@ -26,12 +25,22 @@ public:
 
 	
 	
-	
 
-	
+	/*PROTECTED REGION ID(kdm::code::SynonymType public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class CodePackage;
+
+	
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(kdm::code::SynonymType protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // code

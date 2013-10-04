@@ -12,7 +12,6 @@ namespace C
 {
 
 
-// C::CWChar
 class CWChar :  public virtual ::C::CChar
 {
 public:
@@ -24,12 +23,22 @@ public:
 
 	
 	
-	
 
-	
+	/*PROTECTED REGION ID(C::CWChar public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class CPackage;
+
+	
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(C::CWChar protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // C

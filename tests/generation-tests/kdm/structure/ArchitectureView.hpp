@@ -14,7 +14,6 @@ namespace structure
 {
 
 
-// kdm::structure::ArchitectureView
 class ArchitectureView :  public virtual ::kdm::structure::AbstractStructureElement
 {
 public:
@@ -26,12 +25,22 @@ public:
 
 	
 	
-	
 
-	
+	/*PROTECTED REGION ID(kdm::structure::ArchitectureView public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class StructurePackage;
+
+	
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(kdm::structure::ArchitectureView protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // structure

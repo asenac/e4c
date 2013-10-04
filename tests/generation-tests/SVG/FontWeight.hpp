@@ -12,7 +12,6 @@ namespace SVG
 {
 
 
-// SVG::FontWeight
 class FontWeight :  public virtual ::SVG::Attribute
 {
 public:
@@ -23,17 +22,27 @@ public:
 	virtual ~FontWeight();
 
 	typedef ::PrimitiveTypes::Boolean bold_t;
-
 	
 	void setBold(bold_t _bold);
 	bold_t getBold() const;
+	
 
-
-	bold_t m_bold;
-
+	/*PROTECTED REGION ID(SVG::FontWeight public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class SVGPackage;
+
+	bold_t m_bold;
+
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(SVG::FontWeight protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // SVG

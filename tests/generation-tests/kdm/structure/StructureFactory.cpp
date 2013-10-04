@@ -6,7 +6,7 @@ using namespace kdm::structure;
 
 StructureFactory::StructureFactory()
 {
-	m_ePackage = StructurePackage::_instance();
+	// m_ePackage = StructurePackage::_instance();
 	// std::bind(&StructureFactory::createSubsystem, this);
 	// m_ePackage->getTag_Subsystem();
 	// std::bind(&StructureFactory::createLayer, this);

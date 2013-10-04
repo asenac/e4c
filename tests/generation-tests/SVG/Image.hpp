@@ -12,7 +12,6 @@ namespace SVG
 {
 
 
-// SVG::Image
 class Image :  public virtual ::SVG::StructuralElement
 {
 public:
@@ -23,16 +22,28 @@ public:
 	virtual ~Image();
 
 	typedef std::set < SVG::ReferencedFile_ptr > referee_t;
-
 	
 	referee_t getReferee() const;
+	void addReferee(SVG::ReferencedFile_ptr referee_);
+	void addAllReferee(const referee_t& referee_);
+	
 
-
-	std::set < SVG::ReferencedFile_ptr > m_referee;
-
+	/*PROTECTED REGION ID(SVG::Image public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class SVGPackage;
+
+	std::set < SVG::ReferencedFile_ptr > m_referee;
+
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(SVG::Image protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // SVG

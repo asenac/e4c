@@ -11,10 +11,14 @@ using namespace ecore;
 ETypeParameter::ETypeParameter() : 
 	m_eBounds()
 {
+	/*PROTECTED REGION ID(ETypeParameter constructor) START*/
+	/*PROTECTED REGION END*/
 }
 
 ETypeParameter::~ETypeParameter()
 {
+	/*PROTECTED REGION ID(ETypeParameter destructor) START*/
+	/*PROTECTED REGION END*/
 }
 
 ETypeParameter::eBounds_t ETypeParameter::getEBounds() const
@@ -33,8 +37,6 @@ void ETypeParameter::addAllEBounds(const eBounds_t& eBounds_)
 	for (auto i = eBounds_.begin(); i != eBounds_.end(); i++)
 		addEBounds(*i);
 }
-
-
 
 
 

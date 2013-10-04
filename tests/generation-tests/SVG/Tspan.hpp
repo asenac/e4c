@@ -12,7 +12,6 @@ namespace SVG
 {
 
 
-// SVG::Tspan
 class Tspan :  public virtual ::SVG::TextElement
 {
 public:
@@ -23,17 +22,27 @@ public:
 	virtual ~Tspan();
 
 	typedef ::PrimitiveTypes::String content_t;
-
 	
 	void setContent(content_t _content);
 	content_t getContent() const;
+	
 
-
-	content_t m_content;
-
+	/*PROTECTED REGION ID(SVG::Tspan public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class SVGPackage;
+
+	content_t m_content;
+
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(SVG::Tspan protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // SVG

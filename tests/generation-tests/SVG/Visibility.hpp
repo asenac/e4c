@@ -12,7 +12,6 @@ namespace SVG
 {
 
 
-// SVG::Visibility
 class Visibility :  public virtual ::SVG::Attribute
 {
 public:
@@ -23,17 +22,27 @@ public:
 	virtual ~Visibility();
 
 	typedef ::PrimitiveTypes::Boolean visible_t;
-
 	
 	void setVisible(visible_t _visible);
 	visible_t getVisible() const;
+	
 
-
-	visible_t m_visible;
-
+	/*PROTECTED REGION ID(SVG::Visibility public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class SVGPackage;
+
+	visible_t m_visible;
+
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(SVG::Visibility protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // SVG

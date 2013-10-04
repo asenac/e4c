@@ -12,7 +12,6 @@ namespace C
 {
 
 
-// C::CField
 class CField :  public virtual ::C::CStructuralFeature
 {
 public:
@@ -24,12 +23,22 @@ public:
 
 	
 	
-	
 
-	
+	/*PROTECTED REGION ID(C::CField public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class CPackage;
+
+	
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(C::CField protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // C

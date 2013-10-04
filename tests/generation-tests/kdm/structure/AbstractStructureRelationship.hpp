@@ -14,7 +14,6 @@ namespace structure
 {
 
 
-// kdm::structure::AbstractStructureRelationship
 class AbstractStructureRelationship :  public virtual ::kdm::core::KDMRelationship
 {
 public:
@@ -25,13 +24,23 @@ public:
 
 	
 	
-	
 
-	
+	/*PROTECTED REGION ID(kdm::structure::AbstractStructureRelationship public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 	AbstractStructureRelationship();
 
+	friend class StructurePackage;
+
+	
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(kdm::structure::AbstractStructureRelationship protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // structure

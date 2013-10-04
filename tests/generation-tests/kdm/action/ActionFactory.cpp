@@ -6,7 +6,7 @@ using namespace kdm::action;
 
 ActionFactory::ActionFactory()
 {
-	m_ePackage = ActionPackage::_instance();
+	// m_ePackage = ActionPackage::_instance();
 	// std::bind(&ActionFactory::createActionElement, this);
 	// m_ePackage->getTag_ActionElement();
 	// std::bind(&ActionFactory::createControlFlow, this);

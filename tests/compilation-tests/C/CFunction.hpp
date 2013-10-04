@@ -12,7 +12,6 @@ namespace C
 {
 
 
-// C::CFunction
 class CFunction :  public virtual ::C::BehavioralFeature
 {
 public:
@@ -23,17 +22,27 @@ public:
 	virtual ~CFunction();
 
 	typedef ::PrimitiveTypes::Boolean isVarArg_t;
-
 	
 	void setIsVarArg(isVarArg_t _isVarArg);
 	isVarArg_t getIsVarArg() const;
+	
 
-
-	isVarArg_t m_isVarArg;
-
+	/*PROTECTED REGION ID(C::CFunction public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class CPackage;
+
+	isVarArg_t m_isVarArg;
+
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(C::CFunction protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // C

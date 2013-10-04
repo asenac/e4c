@@ -14,7 +14,6 @@ namespace expression
 {
 
 
-// xpand3::expression::IntegerLiteral
 class IntegerLiteral :  public virtual ::xpand3::expression::Literal
 {
 public:
@@ -26,12 +25,22 @@ public:
 
 	
 	
-	
 
-	
+	/*PROTECTED REGION ID(xpand3::expression::IntegerLiteral public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class ExpressionPackage;
+
+	
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(xpand3::expression::IntegerLiteral protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // expression

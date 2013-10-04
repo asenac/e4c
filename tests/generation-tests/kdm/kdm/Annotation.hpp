@@ -14,7 +14,6 @@ namespace kdm
 {
 
 
-// kdm::kdm::Annotation
 class Annotation :  public virtual ::kdm::core::Element
 {
 public:
@@ -25,17 +24,27 @@ public:
 	virtual ~Annotation();
 
 	typedef ::kdm::core::String text_t;
-
 	
 	void setText(text_t _text);
 	text_t getText() const;
+	
 
-
-	text_t m_text;
-
+	/*PROTECTED REGION ID(kdm::kdm::Annotation public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class KdmPackage;
+
+	text_t m_text;
+
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(kdm::kdm::Annotation protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // kdm

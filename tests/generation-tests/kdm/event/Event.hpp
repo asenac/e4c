@@ -14,7 +14,6 @@ namespace event
 {
 
 
-// kdm::event::Event
 class Event :  public virtual ::kdm::event::AbstractEventElement
 {
 public:
@@ -25,17 +24,27 @@ public:
 	virtual ~Event();
 
 	typedef ::kdm::core::String kind_t;
-
 	
 	void setKind(kind_t _kind);
 	kind_t getKind() const;
+	
 
-
-	kind_t m_kind;
-
+	/*PROTECTED REGION ID(kdm::event::Event public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class EventPackage;
+
+	kind_t m_kind;
+
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(kdm::event::Event protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // event

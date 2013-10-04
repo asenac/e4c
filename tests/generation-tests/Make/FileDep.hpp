@@ -12,7 +12,6 @@ namespace Make
 {
 
 
-// Make::FileDep
 class FileDep :  public virtual ::Make::Dependency
 {
 public:
@@ -23,17 +22,27 @@ public:
 	virtual ~FileDep();
 
 	typedef ::PrimitiveTypes::String name_t;
-
 	
 	void setName(name_t _name);
 	name_t getName() const;
+	
 
-
-	name_t m_name;
-
+	/*PROTECTED REGION ID(Make::FileDep public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class MakePackage;
+
+	name_t m_name;
+
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(Make::FileDep protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // Make

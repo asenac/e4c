@@ -2,6 +2,7 @@
 #define E4C_DETAIL_HOLDER_IPP
 
 #include <e4c/holder.hpp>
+#include <utility>
 
 namespace e4c 
 {
@@ -78,11 +79,12 @@ holder_impl_base * create_holder(const T& t)
     return new detail::holder_ref_impl< T >(t);
 }
 
-//template < typename T >
-//holder_impl_base * create_holder(T&& t)
-//{
-    //return new detail::holder_ref_impl< T >(t);
-//}
+template < typename T >
+holder_impl_base * create_holder(T&& t)
+{
+    return new detail::holder_ref_impl< T >(
+            std::forward< T >(t));
+}
 
 template < typename T >
 holder_impl_base * create_holder()

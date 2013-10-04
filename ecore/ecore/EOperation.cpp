@@ -19,10 +19,14 @@ EOperation::EOperation() :
     m_eExceptions(),
     m_eGenericExceptions()
 {
+	/*PROTECTED REGION ID(EOperation constructor) START*/
+	/*PROTECTED REGION END*/
 }
 
 EOperation::~EOperation()
 {
+	/*PROTECTED REGION ID(EOperation destructor) START*/
+	/*PROTECTED REGION END*/
 }
 
 EOperation::eContainingClass_t EOperation::getEContainingClass() const
@@ -30,12 +34,10 @@ EOperation::eContainingClass_t EOperation::getEContainingClass() const
 	return e4c::returned(m_eContainingClass);
 }
 
-
 void EOperation::setEContainingClass(eContainingClass_t eContainingClass_)
 {
 	m_eContainingClass = eContainingClass_;
 }
-
 
 EOperation::eTypeParameters_t EOperation::getETypeParameters() const
 {
@@ -53,7 +55,6 @@ void EOperation::addAllETypeParameters(const eTypeParameters_t& eTypeParameters_
 	for (auto i = eTypeParameters_.begin(); i != eTypeParameters_.end(); i++)
 		addETypeParameters(*i);
 }
-
 
 EOperation::eParameters_t EOperation::getEParameters() const
 {
@@ -73,7 +74,6 @@ void EOperation::addAllEParameters(const eParameters_t& eParameters_)
 		addEParameters(*i);
 }
 
-
 EOperation::eExceptions_t EOperation::getEExceptions() const
 {
 	return e4c::returned(m_eExceptions);
@@ -81,8 +81,9 @@ EOperation::eExceptions_t EOperation::getEExceptions() const
 
 void EOperation::addEExceptions(ecore::EClassifier_ptr eExceptions_)
 {
+	if (e4c::contains(m_eExceptions, eExceptions_))
+		return;
 	m_eExceptions.push_back(eExceptions_);
-	
 }
 
 void EOperation::addAllEExceptions(const eExceptions_t& eExceptions_)
@@ -90,7 +91,6 @@ void EOperation::addAllEExceptions(const eExceptions_t& eExceptions_)
 	for (auto i = eExceptions_.begin(); i != eExceptions_.end(); i++)
 		addEExceptions(*i);
 }
-
 
 EOperation::eGenericExceptions_t EOperation::getEGenericExceptions() const
 {
@@ -108,8 +108,6 @@ void EOperation::addAllEGenericExceptions(const eGenericExceptions_t& eGenericEx
 	for (auto i = eGenericExceptions_.begin(); i != eGenericExceptions_.end(); i++)
 		addEGenericExceptions(*i);
 }
-
-
 
 
 ecore::EInt EOperation::getOperationID()

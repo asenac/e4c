@@ -12,8 +12,7 @@ namespace xpand3
 {
 
 
-// xpand3::SyntaxElement
-class SyntaxElement
+class SyntaxElement : ::ecore::EObject
 {
 public:
 
@@ -25,7 +24,6 @@ public:
 	typedef ::ecore::EInt start_t;
 	typedef ::ecore::EInt end_t;
 	typedef ::ecore::EString fileName_t;
-
 	
 	void setLine(line_t _line);
 	line_t getLine() const;
@@ -35,17 +33,28 @@ public:
 	end_t getEnd() const;
 	void setFileName(fileName_t _fileName);
 	fileName_t getFileName() const;
+	
 
+	/*PROTECTED REGION ID(xpand3::SyntaxElement public) START*/
+	/*PROTECTED REGION END*/
+		
+protected:
+	SyntaxElement();
+
+	friend class Xpand3Package;
 
 	line_t m_line;
 	start_t m_start;
 	end_t m_end;
 	fileName_t m_fileName;
 
-		
-protected:
-	SyntaxElement();
-
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(xpand3::SyntaxElement protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // xpand3

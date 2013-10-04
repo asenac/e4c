@@ -11,10 +11,14 @@ using namespace idlmm;
 WstringDef::WstringDef() : 
 	m_bound()
 {
+	/*PROTECTED REGION ID(WstringDef constructor) START*/
+	/*PROTECTED REGION END*/
 }
 
 WstringDef::~WstringDef()
 {
+	/*PROTECTED REGION ID(WstringDef destructor) START*/
+	/*PROTECTED REGION END*/
 }
 
 WstringDef::bound_t WstringDef::getBound() const
@@ -32,8 +36,6 @@ WstringDef::bound_t WstringDef::releaseBound()
 {
 	return m_bound.release();
 }
-
-
 
 
 

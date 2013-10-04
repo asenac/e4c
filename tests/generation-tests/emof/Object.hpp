@@ -12,8 +12,7 @@ namespace emof
 {
 
 
-// emof::Object
-class Object
+class Object : ::ecore::EObject
 {
 public:
 
@@ -24,12 +23,22 @@ public:
 
 	
 	
-	
 
-	
+	/*PROTECTED REGION ID(emof::Object public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class EmofPackage;
+
+	
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(emof::Object protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // emof

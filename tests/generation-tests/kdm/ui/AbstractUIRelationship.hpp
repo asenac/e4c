@@ -14,7 +14,6 @@ namespace ui
 {
 
 
-// kdm::ui::AbstractUIRelationship
 class AbstractUIRelationship :  public virtual ::kdm::core::KDMRelationship
 {
 public:
@@ -25,13 +24,23 @@ public:
 
 	
 	
-	
 
-	
+	/*PROTECTED REGION ID(kdm::ui::AbstractUIRelationship public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 	AbstractUIRelationship();
 
+	friend class UiPackage;
+
+	
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(kdm::ui::AbstractUIRelationship protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // ui

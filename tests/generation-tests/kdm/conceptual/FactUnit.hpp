@@ -14,7 +14,6 @@ namespace conceptual
 {
 
 
-// kdm::conceptual::FactUnit
 class FactUnit :  public virtual ::kdm::conceptual::ConceptualContainer
 {
 public:
@@ -26,12 +25,22 @@ public:
 
 	
 	
-	
 
-	
+	/*PROTECTED REGION ID(kdm::conceptual::FactUnit public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class ConceptualPackage;
+
+	
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(kdm::conceptual::FactUnit protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // conceptual

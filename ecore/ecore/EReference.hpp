@@ -35,15 +35,12 @@ public:
 	void setResolveProxies(resolveProxies_t _resolveProxies);
 	resolveProxies_t getResolveProxies() const;
 	eOpposite_t getEOpposite() const;
-	
 	void setEOpposite(eOpposite_t eOpposite_);
 	eReferenceType_t getEReferenceType() const;
-	
 	void setEReferenceType(eReferenceType_t eReferenceType_);
 	eKeys_t getEKeys() const;
 	void addEKeys(ecore::EAttribute_ptr eKeys_);
 	void addAllEKeys(const eKeys_t& eKeys_);
-	
 	
 
 	/*PROTECTED REGION ID(ecore::EReference public) START*/

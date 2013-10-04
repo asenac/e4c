@@ -12,7 +12,6 @@ namespace C
 {
 
 
-// C::CUnion
 class CUnion :  public virtual ::C::CStructured
 {
 public:
@@ -24,12 +23,22 @@ public:
 
 	
 	
-	
 
-	
+	/*PROTECTED REGION ID(C::CUnion public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class CPackage;
+
+	
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(C::CUnion protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // C

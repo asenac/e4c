@@ -1,9 +1,13 @@
 
 #include "Property.hpp"
+#include <emof/EmofPackage.hpp>
 #include <emof/Class.hpp>
 #include <emof/Property.hpp>
 
 using namespace emof;
+
+/*PROTECTED REGION ID(emof::Property include) START*/
+/*PROTECTED REGION END*/
 
 Property::Property() : 
 	m_class(),
@@ -14,15 +18,24 @@ Property::Property() :
     m_isReadOnly(),
     m_opposite()
 {
+	/*PROTECTED REGION ID(Property constructor) START*/
+	/*PROTECTED REGION END*/
 }
 
 Property::~Property()
 {
+	/*PROTECTED REGION ID(Property destructor) START*/
+	/*PROTECTED REGION END*/
 }
 
 Property::class_t Property::getClass() const
 {
 	return e4c::returned(m_class);
+}
+
+void Property::setClass(class_t class_)
+{
+	m_class = class_;
 }
 
 void Property::setDefault(default_t _default)
@@ -80,5 +93,20 @@ Property::opposite_t Property::getOpposite() const
 	return e4c::returned(m_opposite);
 }
 
+void Property::setOpposite(opposite_t opposite_)
+{
+	if (m_opposite == opposite_)
+		return;
+	m_opposite = opposite_;
+}
 
 
+
+/*PROTECTED REGION ID(emof::Property implementation) START*/
+/*PROTECTED REGION END*/
+
+ecore::EClass_ptr Property::eClassImpl() const
+{
+	return EmofPackage::_instance()->getProperty();
+}
+ 

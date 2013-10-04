@@ -14,7 +14,6 @@ namespace data
 {
 
 
-// kdm::data::IndexElement
 class IndexElement :  public virtual ::kdm::data::DataResource
 {
 public:
@@ -25,16 +24,28 @@ public:
 	virtual ~IndexElement();
 
 	typedef std::set < kdm::code::ItemUnit_ptr > implementation_t;
-
 	
 	implementation_t getImplementation() const;
+	void addImplementation(kdm::code::ItemUnit_ptr implementation_);
+	void addAllImplementation(const implementation_t& implementation_);
+	
 
-
-	std::set < kdm::code::ItemUnit_ptr > m_implementation;
-
+	/*PROTECTED REGION ID(kdm::data::IndexElement public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class DataPackage;
+
+	std::set < kdm::code::ItemUnit_ptr > m_implementation;
+
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(kdm::data::IndexElement protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // data

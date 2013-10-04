@@ -9,12 +9,15 @@ using namespace idlmm;
 
 Expression::Expression()
 {
+	/*PROTECTED REGION ID(Expression constructor) START*/
+	/*PROTECTED REGION END*/
 }
 
 Expression::~Expression()
 {
+	/*PROTECTED REGION ID(Expression destructor) START*/
+	/*PROTECTED REGION END*/
 }
-
 
 
 

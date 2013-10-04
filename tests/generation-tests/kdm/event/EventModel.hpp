@@ -14,7 +14,6 @@ namespace event
 {
 
 
-// kdm::event::EventModel
 class EventModel :  public virtual ::kdm::kdm::KDMModel
 {
 public:
@@ -25,16 +24,28 @@ public:
 	virtual ~EventModel();
 
 	typedef std::set < kdm::event::AbstractEventElement_ptr > eventElement_t;
-
 	
 	eventElement_t getEventElement() const;
+	void addEventElement(kdm::event::AbstractEventElement_ptr eventElement_);
+	void addAllEventElement(const eventElement_t& eventElement_);
+	
 
-
-	std::set < std::unique_ptr < kdm::event::AbstractEventElement > > m_eventElement;
-
+	/*PROTECTED REGION ID(kdm::event::EventModel public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class EventPackage;
+
+	std::set < std::unique_ptr < kdm::event::AbstractEventElement > > m_eventElement;
+
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(kdm::event::EventModel protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // event

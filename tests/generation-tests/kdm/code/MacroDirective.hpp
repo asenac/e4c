@@ -14,7 +14,6 @@ namespace code
 {
 
 
-// kdm::code::MacroDirective
 class MacroDirective :  public virtual ::kdm::code::PreprocessorDirective
 {
 public:
@@ -26,12 +25,22 @@ public:
 
 	
 	
-	
 
-	
+	/*PROTECTED REGION ID(kdm::code::MacroDirective public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class CodePackage;
+
+	
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(kdm::code::MacroDirective protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // code

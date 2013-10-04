@@ -14,7 +14,6 @@ namespace conceptual
 {
 
 
-// kdm::conceptual::AbstractConceptualRelationship
 class AbstractConceptualRelationship :  public virtual ::kdm::core::KDMRelationship
 {
 public:
@@ -25,13 +24,23 @@ public:
 
 	
 	
-	
 
-	
+	/*PROTECTED REGION ID(kdm::conceptual::AbstractConceptualRelationship public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 	AbstractConceptualRelationship();
 
+	friend class ConceptualPackage;
+
+	
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(kdm::conceptual::AbstractConceptualRelationship protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // conceptual

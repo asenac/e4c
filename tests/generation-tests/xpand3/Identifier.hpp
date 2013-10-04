@@ -12,7 +12,6 @@ namespace xpand3
 {
 
 
-// xpand3::Identifier
 class Identifier :  public virtual ::xpand3::SyntaxElement
 {
 public:
@@ -23,17 +22,27 @@ public:
 	virtual ~Identifier();
 
 	typedef ::ecore::EString value_t;
-
 	
 	void setValue(value_t _value);
 	value_t getValue() const;
+	
 
-
-	value_t m_value;
-
+	/*PROTECTED REGION ID(xpand3::Identifier public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class Xpand3Package;
+
+	value_t m_value;
+
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(xpand3::Identifier protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // xpand3

@@ -14,7 +14,6 @@ namespace declaration
 {
 
 
-// xpand3::declaration::ExtensionAspect
 class ExtensionAspect :  public virtual ::xpand3::declaration::AbstractAspect
 {
 public:
@@ -25,16 +24,28 @@ public:
 	virtual ~ExtensionAspect();
 
 	typedef xpand3::expression::AbstractExpression_ptr expression_t;
-
 	
 	expression_t getExpression() const;
+	void setExpression(expression_t expression_);
+	expression_t releaseExpression();
+	
 
-
-	std::unique_ptr < xpand3::expression::AbstractExpression > m_expression;
-
+	/*PROTECTED REGION ID(xpand3::declaration::ExtensionAspect public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class DeclarationPackage;
+
+	std::unique_ptr < xpand3::expression::AbstractExpression > m_expression;
+
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(xpand3::declaration::ExtensionAspect protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // declaration

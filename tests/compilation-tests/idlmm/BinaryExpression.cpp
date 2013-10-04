@@ -13,10 +13,14 @@ BinaryExpression::BinaryExpression() :
     m_right(),
     m_operator()
 {
+	/*PROTECTED REGION ID(BinaryExpression constructor) START*/
+	/*PROTECTED REGION END*/
 }
 
 BinaryExpression::~BinaryExpression()
 {
+	/*PROTECTED REGION ID(BinaryExpression destructor) START*/
+	/*PROTECTED REGION END*/
 }
 
 BinaryExpression::left_t BinaryExpression::getLeft() const
@@ -35,7 +39,6 @@ BinaryExpression::left_t BinaryExpression::releaseLeft()
 	return m_left.release();
 }
 
-
 BinaryExpression::right_t BinaryExpression::getRight() const
 {
 	return e4c::returned(m_right);
@@ -52,7 +55,6 @@ BinaryExpression::right_t BinaryExpression::releaseRight()
 	return m_right.release();
 }
 
-
 void BinaryExpression::setOperator(operator_t _operator)
 {
 	m_operator = _operator;;
@@ -62,7 +64,6 @@ BinaryExpression::operator_t BinaryExpression::getOperator() const
 {
 	return m_operator;
 }
-
 
 
 

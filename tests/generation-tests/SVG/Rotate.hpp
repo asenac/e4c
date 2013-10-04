@@ -12,7 +12,6 @@ namespace SVG
 {
 
 
-// SVG::Rotate
 class Rotate :  public virtual ::SVG::Transform
 {
 public:
@@ -25,7 +24,6 @@ public:
 	typedef ::PrimitiveTypes::Double angle_t;
 	typedef ::PrimitiveTypes::Double cx_t;
 	typedef ::PrimitiveTypes::Double cy_t;
-
 	
 	void setAngle(angle_t _angle);
 	angle_t getAngle() const;
@@ -33,15 +31,26 @@ public:
 	cx_t getCx() const;
 	void setCy(cy_t _cy);
 	cy_t getCy() const;
+	
 
+	/*PROTECTED REGION ID(SVG::Rotate public) START*/
+	/*PROTECTED REGION END*/
+		
+protected:
+
+	friend class SVGPackage;
 
 	angle_t m_angle;
 	cx_t m_cx;
 	cy_t m_cy;
 
-		
-protected:
-
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(SVG::Rotate protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // SVG

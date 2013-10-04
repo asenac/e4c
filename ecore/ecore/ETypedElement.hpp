@@ -42,7 +42,6 @@ public:
 	void setRequired(required_t _required);
 	required_t getRequired() const;
 	eType_t getEType() const;
-	
 	void setEType(eType_t eType_);
 	eGenericType_t getEGenericType() const;
 	void setEGenericType(eGenericType_t eGenericType_);

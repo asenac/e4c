@@ -6,7 +6,7 @@ using namespace C;
 
 CFactory::CFactory()
 {
-	m_ePackage = CPackage::_instance();
+	// m_ePackage = CPackage::_instance();
 	// std::bind(&CFactory::createCDataType, this);
 	// m_ePackage->getTag_CDataType();
 	// std::bind(&CFactory::createCIntegral, this);

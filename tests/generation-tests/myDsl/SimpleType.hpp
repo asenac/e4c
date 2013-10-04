@@ -12,7 +12,6 @@ namespace myDsl
 {
 
 
-// myDsl::SimpleType
 class SimpleType :  public virtual ::myDsl::Type
 {
 public:
@@ -24,12 +23,22 @@ public:
 
 	
 	
-	
 
-	
+	/*PROTECTED REGION ID(myDsl::SimpleType public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class MyDslPackage;
+
+	
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(myDsl::SimpleType protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // myDsl

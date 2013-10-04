@@ -12,7 +12,6 @@ namespace SVG
 {
 
 
-// SVG::Circle
 class Circle :  public virtual ::SVG::Shape
 {
 public:
@@ -24,12 +23,22 @@ public:
 
 	
 	
-	
 
-	
+	/*PROTECTED REGION ID(SVG::Circle public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class SVGPackage;
+
+	
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(SVG::Circle protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // SVG

@@ -14,7 +14,6 @@ namespace expression
 {
 
 
-// xpand3::expression::Case
 class Case :  public virtual ::xpand3::SyntaxElement
 {
 public:
@@ -26,18 +25,32 @@ public:
 
 	typedef xpand3::expression::AbstractExpression_ptr condition_t;
 	typedef xpand3::expression::AbstractExpression_ptr thenPart_t;
-
 	
 	condition_t getCondition() const;
+	void setCondition(condition_t condition_);
+	condition_t releaseCondition();
 	thenPart_t getThenPart() const;
+	void setThenPart(thenPart_t thenPart_);
+	thenPart_t releaseThenPart();
+	
 
+	/*PROTECTED REGION ID(xpand3::expression::Case public) START*/
+	/*PROTECTED REGION END*/
+		
+protected:
+
+	friend class ExpressionPackage;
 
 	std::unique_ptr < xpand3::expression::AbstractExpression > m_condition;
 	std::unique_ptr < xpand3::expression::AbstractExpression > m_thenPart;
 
-		
-protected:
-
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(xpand3::expression::Case protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // expression

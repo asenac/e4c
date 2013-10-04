@@ -14,7 +14,6 @@ namespace ui
 {
 
 
-// kdm::ui::UIModel
 class UIModel :  public virtual ::kdm::kdm::KDMModel
 {
 public:
@@ -25,16 +24,28 @@ public:
 	virtual ~UIModel();
 
 	typedef std::set < kdm::ui::AbstractUIElement_ptr > UIElement_t;
-
 	
 	UIElement_t getUIElement() const;
+	void addUIElement(kdm::ui::AbstractUIElement_ptr UIElement_);
+	void addAllUIElement(const UIElement_t& UIElement_);
+	
 
-
-	std::set < std::unique_ptr < kdm::ui::AbstractUIElement > > m_UIElement;
-
+	/*PROTECTED REGION ID(kdm::ui::UIModel public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class UiPackage;
+
+	std::set < std::unique_ptr < kdm::ui::AbstractUIElement > > m_UIElement;
+
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(kdm::ui::UIModel protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // ui

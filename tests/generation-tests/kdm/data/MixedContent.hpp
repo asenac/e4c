@@ -14,7 +14,6 @@ namespace data
 {
 
 
-// kdm::data::MixedContent
 class MixedContent :  public virtual ::kdm::data::ComplexContentType
 {
 public:
@@ -26,12 +25,22 @@ public:
 
 	
 	
-	
 
-	
+	/*PROTECTED REGION ID(kdm::data::MixedContent public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class DataPackage;
+
+	
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(kdm::data::MixedContent protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // data

@@ -17,10 +17,14 @@ EAnnotation::EAnnotation() :
     m_contents(),
     m_references()
 {
+	/*PROTECTED REGION ID(EAnnotation constructor) START*/
+	/*PROTECTED REGION END*/
 }
 
 EAnnotation::~EAnnotation()
 {
+	/*PROTECTED REGION ID(EAnnotation destructor) START*/
+	/*PROTECTED REGION END*/
 }
 
 void EAnnotation::setSource(source_t _source)
@@ -50,18 +54,15 @@ void EAnnotation::addAllDetails(const details_t& details_)
 		addDetails(*i);
 }
 
-
 EAnnotation::eModelElement_t EAnnotation::getEModelElement() const
 {
 	return e4c::returned(m_eModelElement);
 }
 
-
 void EAnnotation::setEModelElement(eModelElement_t eModelElement_)
 {
 	m_eModelElement = eModelElement_;
 }
-
 
 EAnnotation::contents_t EAnnotation::getContents() const
 {
@@ -80,7 +81,6 @@ void EAnnotation::addAllContents(const contents_t& contents_)
 		addContents(*i);
 }
 
-
 EAnnotation::references_t EAnnotation::getReferences() const
 {
 	return e4c::returned(m_references);
@@ -88,8 +88,9 @@ EAnnotation::references_t EAnnotation::getReferences() const
 
 void EAnnotation::addReferences(ecore::EObject_ptr references_)
 {
+	if (e4c::contains(m_references, references_))
+		return;
 	m_references.push_back(references_);
-	
 }
 
 void EAnnotation::addAllReferences(const references_t& references_)
@@ -97,8 +98,6 @@ void EAnnotation::addAllReferences(const references_t& references_)
 	for (auto i = references_.begin(); i != references_.end(); i++)
 		addReferences(*i);
 }
-
-
 
 
 

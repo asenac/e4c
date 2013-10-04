@@ -12,7 +12,6 @@ namespace json
 {
 
 
-// json::NumberValue
 class NumberValue :  public virtual ::json::Value
 {
 public:
@@ -23,17 +22,27 @@ public:
 	virtual ~NumberValue();
 
 	typedef ::ecore::EDouble value_t;
-
 	
 	void setValue(value_t _value);
 	value_t getValue() const;
+	
 
-
-	value_t m_value;
-
+	/*PROTECTED REGION ID(json::NumberValue public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class JsonPackage;
+
+	value_t m_value;
+
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(json::NumberValue protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // json

@@ -12,7 +12,6 @@ namespace SVG
 {
 
 
-// SVG::Ellipse
 class Ellipse :  public virtual ::SVG::Shape
 {
 public:
@@ -24,12 +23,22 @@ public:
 
 	
 	
-	
 
-	
+	/*PROTECTED REGION ID(SVG::Ellipse public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class SVGPackage;
+
+	
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(SVG::Ellipse protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // SVG

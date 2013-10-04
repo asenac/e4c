@@ -12,8 +12,7 @@ namespace CST
 {
 
 
-// CST::Element
-class Element
+class Element : ::ecore::EObject
 {
 public:
 
@@ -23,17 +22,27 @@ public:
 	virtual ~Element();
 
 	typedef ::ecore::EString kind_t;
-
 	
 	void setKind(kind_t _kind);
 	kind_t getKind() const;
+	
 
-
-	kind_t m_kind;
-
+	/*PROTECTED REGION ID(CST::Element public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class CSTPackage;
+
+	kind_t m_kind;
+
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(CST::Element protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // CST

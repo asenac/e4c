@@ -14,7 +14,6 @@ namespace data
 {
 
 
-// kdm::data::SeqContent
 class SeqContent :  public virtual ::kdm::data::ComplexContentType
 {
 public:
@@ -26,12 +25,22 @@ public:
 
 	
 	
-	
 
-	
+	/*PROTECTED REGION ID(kdm::data::SeqContent public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class DataPackage;
+
+	
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(kdm::data::SeqContent protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // data

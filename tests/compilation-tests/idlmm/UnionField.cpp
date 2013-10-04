@@ -12,10 +12,14 @@ UnionField::UnionField() :
 	m_identifier(),
     m_label()
 {
+	/*PROTECTED REGION ID(UnionField constructor) START*/
+	/*PROTECTED REGION END*/
 }
 
 UnionField::~UnionField()
 {
+	/*PROTECTED REGION ID(UnionField destructor) START*/
+	/*PROTECTED REGION END*/
 }
 
 void UnionField::setIdentifier(identifier_t _identifier)
@@ -44,8 +48,6 @@ void UnionField::addAllLabel(const label_t& label_)
 	for (auto i = label_.begin(); i != label_.end(); i++)
 		addLabel(*i);
 }
-
-
 
 
 

@@ -14,7 +14,6 @@ namespace source
 {
 
 
-// kdm::source::SourceRegion
 class SourceRegion :  public virtual ::kdm::core::Element
 {
 public:
@@ -31,9 +30,9 @@ public:
 	typedef ::kdm::core::Integer endPosition_t;
 	typedef ::kdm::core::String language_t;
 	typedef ::kdm::core::String path_t;
-
 	
 	file_t getFile() const;
+	void setFile(file_t file_);
 	void setStartLine(startLine_t _startLine);
 	startLine_t getStartLine() const;
 	void setStartPosition(startPosition_t _startPosition);
@@ -46,7 +45,14 @@ public:
 	language_t getLanguage() const;
 	void setPath(path_t _path);
 	path_t getPath() const;
+	
 
+	/*PROTECTED REGION ID(kdm::source::SourceRegion public) START*/
+	/*PROTECTED REGION END*/
+		
+protected:
+
+	friend class SourcePackage;
 
 	kdm::source::SourceFile_ptr m_file;
 	startLine_t m_startLine;
@@ -56,9 +62,13 @@ public:
 	language_t m_language;
 	path_t m_path;
 
-		
-protected:
-
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(kdm::source::SourceRegion protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // source

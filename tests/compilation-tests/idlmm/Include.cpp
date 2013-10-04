@@ -12,10 +12,14 @@ Include::Include() :
 	m_importURI(),
     m_translationUnit()
 {
+	/*PROTECTED REGION ID(Include constructor) START*/
+	/*PROTECTED REGION END*/
 }
 
 Include::~Include()
 {
+	/*PROTECTED REGION ID(Include destructor) START*/
+	/*PROTECTED REGION END*/
 }
 
 void Include::setImportURI(importURI_t _importURI)
@@ -35,11 +39,10 @@ Include::translationUnit_t Include::getTranslationUnit() const
 
 void Include::setTranslationUnit(translationUnit_t translationUnit_)
 {
+	if (m_translationUnit == translationUnit_)
+		return;
 	m_translationUnit = translationUnit_;
-	
 }
-
-
 
 
 

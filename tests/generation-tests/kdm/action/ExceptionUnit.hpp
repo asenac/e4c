@@ -14,7 +14,6 @@ namespace action
 {
 
 
-// kdm::action::ExceptionUnit
 class ExceptionUnit :  public virtual ::kdm::action::BlockUnit
 {
 public:
@@ -26,12 +25,22 @@ public:
 
 	
 	
-	
 
-	
+	/*PROTECTED REGION ID(kdm::action::ExceptionUnit public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class ActionPackage;
+
+	
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(kdm::action::ExceptionUnit protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // action

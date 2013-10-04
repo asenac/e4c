@@ -1,16 +1,24 @@
 
 #include "TagDefinition.hpp"
+#include <kdm/kdm/KdmPackage.hpp>
 
 using namespace kdm::kdm;
+
+/*PROTECTED REGION ID(kdm::kdm::TagDefinition include) START*/
+/*PROTECTED REGION END*/
 
 TagDefinition::TagDefinition() : 
 	m_tag(),
     m_type()
 {
+	/*PROTECTED REGION ID(TagDefinition constructor) START*/
+	/*PROTECTED REGION END*/
 }
 
 TagDefinition::~TagDefinition()
 {
+	/*PROTECTED REGION ID(TagDefinition destructor) START*/
+	/*PROTECTED REGION END*/
 }
 
 void TagDefinition::setTag(tag_t _tag)
@@ -35,3 +43,11 @@ TagDefinition::type_t TagDefinition::getType() const
 
 
 
+/*PROTECTED REGION ID(kdm::kdm::TagDefinition implementation) START*/
+/*PROTECTED REGION END*/
+
+ecore::EClass_ptr TagDefinition::eClassImpl() const
+{
+	return KdmPackage::_instance()->getTagDefinition();
+}
+ 

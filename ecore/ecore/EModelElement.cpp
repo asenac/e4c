@@ -11,10 +11,14 @@ using namespace ecore;
 EModelElement::EModelElement() : 
 	m_eAnnotations()
 {
+	/*PROTECTED REGION ID(EModelElement constructor) START*/
+	/*PROTECTED REGION END*/
 }
 
 EModelElement::~EModelElement()
 {
+	/*PROTECTED REGION ID(EModelElement destructor) START*/
+	/*PROTECTED REGION END*/
 }
 
 EModelElement::eAnnotations_t EModelElement::getEAnnotations() const
@@ -34,8 +38,6 @@ void EModelElement::addAllEAnnotations(const eAnnotations_t& eAnnotations_)
 	for (auto i = eAnnotations_.begin(); i != eAnnotations_.end(); i++)
 		addEAnnotations(*i);
 }
-
-
 
 
 ecore::EAnnotation_ptr EModelElement::getEAnnotation(ecore::EString source)

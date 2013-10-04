@@ -14,7 +14,6 @@ namespace ui
 {
 
 
-// kdm::ui::UIField
 class UIField :  public virtual ::kdm::ui::UIResource
 {
 public:
@@ -26,12 +25,22 @@ public:
 
 	
 	
-	
 
-	
+	/*PROTECTED REGION ID(kdm::ui::UIField public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class UiPackage;
+
+	
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(kdm::ui::UIField protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // ui

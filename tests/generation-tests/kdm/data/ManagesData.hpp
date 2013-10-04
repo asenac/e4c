@@ -14,7 +14,6 @@ namespace data
 {
 
 
-// kdm::data::ManagesData
 class ManagesData :  public virtual ::kdm::action::AbstractActionRelationship
 {
 public:
@@ -26,18 +25,30 @@ public:
 
 	typedef kdm::data::AbstractDataElement_ptr to_t;
 	typedef kdm::action::ActionElement_ptr from_t;
-
 	
 	to_t getTo() const;
+	void setTo(to_t to_);
 	from_t getFrom() const;
+	void setFrom(from_t from_);
+	
 
+	/*PROTECTED REGION ID(kdm::data::ManagesData public) START*/
+	/*PROTECTED REGION END*/
+		
+protected:
+
+	friend class DataPackage;
 
 	kdm::data::AbstractDataElement_ptr m_to;
 	kdm::action::ActionElement_ptr m_from;
 
-		
-protected:
-
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(kdm::data::ManagesData protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // data

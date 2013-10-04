@@ -14,7 +14,6 @@ namespace code
 {
 
 
-// kdm::code::EnumeratedType
 class EnumeratedType :  public virtual ::kdm::code::Datatype
 {
 public:
@@ -25,16 +24,28 @@ public:
 	virtual ~EnumeratedType();
 
 	typedef std::vector < kdm::code::Value_ptr > value_t;
-
 	
 	value_t getValue() const;
+	void addValue(kdm::code::Value_ptr value_);
+	void addAllValue(const value_t& value_);
+	
 
-
-	std::vector < std::unique_ptr < kdm::code::Value > > m_value;
-
+	/*PROTECTED REGION ID(kdm::code::EnumeratedType public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class CodePackage;
+
+	std::vector < std::unique_ptr < kdm::code::Value > > m_value;
+
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(kdm::code::EnumeratedType protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // code

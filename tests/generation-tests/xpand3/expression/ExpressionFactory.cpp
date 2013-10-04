@@ -6,7 +6,7 @@ using namespace xpand3::expression;
 
 ExpressionFactory::ExpressionFactory()
 {
-	m_ePackage = ExpressionPackage::_instance();
+	// m_ePackage = ExpressionPackage::_instance();
 	// std::bind(&ExpressionFactory::createBooleanOperation, this);
 	// m_ePackage->getTag_BooleanOperation();
 	// std::bind(&ExpressionFactory::createCast, this);

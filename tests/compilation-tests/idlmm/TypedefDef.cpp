@@ -9,12 +9,15 @@ using namespace idlmm;
 
 TypedefDef::TypedefDef()
 {
+	/*PROTECTED REGION ID(TypedefDef constructor) START*/
+	/*PROTECTED REGION END*/
 }
 
 TypedefDef::~TypedefDef()
 {
+	/*PROTECTED REGION ID(TypedefDef destructor) START*/
+	/*PROTECTED REGION END*/
 }
-
 
 
 

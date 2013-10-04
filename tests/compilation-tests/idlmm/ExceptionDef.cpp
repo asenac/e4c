@@ -12,10 +12,14 @@ ExceptionDef::ExceptionDef() :
 	m_typeCode(),
     m_members()
 {
+	/*PROTECTED REGION ID(ExceptionDef constructor) START*/
+	/*PROTECTED REGION END*/
 }
 
 ExceptionDef::~ExceptionDef()
 {
+	/*PROTECTED REGION ID(ExceptionDef destructor) START*/
+	/*PROTECTED REGION END*/
 }
 
 void ExceptionDef::setTypeCode(typeCode_t _typeCode)
@@ -44,8 +48,6 @@ void ExceptionDef::addAllMembers(const members_t& members_)
 	for (auto i = members_.begin(); i != members_.end(); i++)
 		addMembers(*i);
 }
-
-
 
 
 

@@ -10,10 +10,14 @@ using namespace idlmm;
 IDLType::IDLType() : 
 	m_typeCode()
 {
+	/*PROTECTED REGION ID(IDLType constructor) START*/
+	/*PROTECTED REGION END*/
 }
 
 IDLType::~IDLType()
 {
+	/*PROTECTED REGION ID(IDLType destructor) START*/
+	/*PROTECTED REGION END*/
 }
 
 void IDLType::setTypeCode(typeCode_t _typeCode)
@@ -25,7 +29,6 @@ IDLType::typeCode_t IDLType::getTypeCode() const
 {
 	return m_typeCode;
 }
-
 
 
 

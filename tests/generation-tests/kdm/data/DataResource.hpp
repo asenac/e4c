@@ -14,7 +14,6 @@ namespace data
 {
 
 
-// kdm::data::DataResource
 class DataResource :  public virtual ::kdm::data::AbstractDataElement
 {
 public:
@@ -26,12 +25,22 @@ public:
 
 	
 	
-	
 
-	
+	/*PROTECTED REGION ID(kdm::data::DataResource public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class DataPackage;
+
+	
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(kdm::data::DataResource protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // data

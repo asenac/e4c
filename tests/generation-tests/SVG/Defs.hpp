@@ -12,7 +12,6 @@ namespace SVG
 {
 
 
-// SVG::Defs
 class Defs :  public virtual ::SVG::GroupingElement
 {
 public:
@@ -24,12 +23,22 @@ public:
 
 	
 	
-	
 
-	
+	/*PROTECTED REGION ID(SVG::Defs public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class SVGPackage;
+
+	
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(SVG::Defs protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // SVG

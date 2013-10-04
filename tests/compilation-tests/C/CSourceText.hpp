@@ -12,8 +12,7 @@ namespace C
 {
 
 
-// C::CSourceText
-class CSourceText
+class CSourceText : ::ecore::EObject
 {
 public:
 
@@ -24,20 +23,30 @@ public:
 
 	typedef ::PrimitiveTypes::String source_t;
 	typedef ::PrimitiveTypes::String fileName_t;
-
 	
 	void setSource(source_t _source);
 	source_t getSource() const;
 	void setFileName(fileName_t _fileName);
 	fileName_t getFileName() const;
+	
 
+	/*PROTECTED REGION ID(C::CSourceText public) START*/
+	/*PROTECTED REGION END*/
+		
+protected:
+
+	friend class CPackage;
 
 	source_t m_source;
 	fileName_t m_fileName;
 
-		
-protected:
-
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(C::CSourceText protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // C

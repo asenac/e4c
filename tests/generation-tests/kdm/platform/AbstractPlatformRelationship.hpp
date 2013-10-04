@@ -14,7 +14,6 @@ namespace platform
 {
 
 
-// kdm::platform::AbstractPlatformRelationship
 class AbstractPlatformRelationship :  public virtual ::kdm::core::KDMRelationship
 {
 public:
@@ -25,13 +24,23 @@ public:
 
 	
 	
-	
 
-	
+	/*PROTECTED REGION ID(kdm::platform::AbstractPlatformRelationship public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 	AbstractPlatformRelationship();
 
+	friend class PlatformPackage;
+
+	
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(kdm::platform::AbstractPlatformRelationship protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // platform

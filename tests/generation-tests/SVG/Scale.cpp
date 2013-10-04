@@ -1,16 +1,24 @@
 
 #include "Scale.hpp"
+#include <SVG/SVGPackage.hpp>
 
 using namespace SVG;
+
+/*PROTECTED REGION ID(SVG::Scale include) START*/
+/*PROTECTED REGION END*/
 
 Scale::Scale() : 
 	m_sx(),
     m_sy()
 {
+	/*PROTECTED REGION ID(Scale constructor) START*/
+	/*PROTECTED REGION END*/
 }
 
 Scale::~Scale()
 {
+	/*PROTECTED REGION ID(Scale destructor) START*/
+	/*PROTECTED REGION END*/
 }
 
 void Scale::setSx(sx_t _sx)
@@ -35,3 +43,11 @@ Scale::sy_t Scale::getSy() const
 
 
 
+/*PROTECTED REGION ID(SVG::Scale implementation) START*/
+/*PROTECTED REGION END*/
+
+ecore::EClass_ptr Scale::eClassImpl() const
+{
+	return SVGPackage::_instance()->getScale();
+}
+ 

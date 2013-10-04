@@ -1,8 +1,12 @@
 
 #include "SourceRegion.hpp"
+#include <kdm/source/SourcePackage.hpp>
 #include <kdm/source/SourceFile.hpp>
 
 using namespace kdm::source;
+
+/*PROTECTED REGION ID(kdm::source::SourceRegion include) START*/
+/*PROTECTED REGION END*/
 
 SourceRegion::SourceRegion() : 
 	m_file(),
@@ -13,15 +17,26 @@ SourceRegion::SourceRegion() :
     m_language(),
     m_path()
 {
+	/*PROTECTED REGION ID(SourceRegion constructor) START*/
+	/*PROTECTED REGION END*/
 }
 
 SourceRegion::~SourceRegion()
 {
+	/*PROTECTED REGION ID(SourceRegion destructor) START*/
+	/*PROTECTED REGION END*/
 }
 
 SourceRegion::file_t SourceRegion::getFile() const
 {
 	return e4c::returned(m_file);
+}
+
+void SourceRegion::setFile(file_t file_)
+{
+	if (m_file == file_)
+		return;
+	m_file = file_;
 }
 
 void SourceRegion::setStartLine(startLine_t _startLine)
@@ -86,3 +101,11 @@ SourceRegion::path_t SourceRegion::getPath() const
 
 
 
+/*PROTECTED REGION ID(kdm::source::SourceRegion implementation) START*/
+/*PROTECTED REGION END*/
+
+ecore::EClass_ptr SourceRegion::eClassImpl() const
+{
+	return SourcePackage::_instance()->getSourceRegion();
+}
+ 

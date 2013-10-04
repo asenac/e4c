@@ -14,7 +14,6 @@ namespace data
 {
 
 
-// kdm::data::RelationalSchema
 class RelationalSchema :  public virtual ::kdm::data::DataContainer
 {
 public:
@@ -25,16 +24,28 @@ public:
 	virtual ~RelationalSchema();
 
 	typedef std::set < kdm::code::CodeItem_ptr > codeElement_t;
-
 	
 	codeElement_t getCodeElement() const;
+	void addCodeElement(kdm::code::CodeItem_ptr codeElement_);
+	void addAllCodeElement(const codeElement_t& codeElement_);
+	
 
-
-	std::set < std::unique_ptr < kdm::code::CodeItem > > m_codeElement;
-
+	/*PROTECTED REGION ID(kdm::data::RelationalSchema public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class DataPackage;
+
+	std::set < std::unique_ptr < kdm::code::CodeItem > > m_codeElement;
+
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(kdm::data::RelationalSchema protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // data

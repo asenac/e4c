@@ -14,7 +14,6 @@ namespace expression
 {
 
 
-// xpand3::expression::ListLiteral
 class ListLiteral :  public virtual ::xpand3::expression::AbstractExpression
 {
 public:
@@ -25,16 +24,28 @@ public:
 	virtual ~ListLiteral();
 
 	typedef std::vector < xpand3::expression::AbstractExpression_ptr > elements_t;
-
 	
 	elements_t getElements() const;
+	void addElements(xpand3::expression::AbstractExpression_ptr elements_);
+	void addAllElements(const elements_t& elements_);
+	
 
-
-	std::vector < std::unique_ptr < xpand3::expression::AbstractExpression > > m_elements;
-
+	/*PROTECTED REGION ID(xpand3::expression::ListLiteral public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class ExpressionPackage;
+
+	std::vector < std::unique_ptr < xpand3::expression::AbstractExpression > > m_elements;
+
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(xpand3::expression::ListLiteral protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // expression

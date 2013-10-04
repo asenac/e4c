@@ -11,10 +11,14 @@ using namespace idlmm;
 SequenceDef::SequenceDef() : 
 	m_bound()
 {
+	/*PROTECTED REGION ID(SequenceDef constructor) START*/
+	/*PROTECTED REGION END*/
 }
 
 SequenceDef::~SequenceDef()
 {
+	/*PROTECTED REGION ID(SequenceDef destructor) START*/
+	/*PROTECTED REGION END*/
 }
 
 SequenceDef::bound_t SequenceDef::getBound() const
@@ -32,8 +36,6 @@ SequenceDef::bound_t SequenceDef::releaseBound()
 {
 	return m_bound.release();
 }
-
-
 
 
 

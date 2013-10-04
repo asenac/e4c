@@ -12,7 +12,6 @@ namespace SVG
 {
 
 
-// SVG::AbsoluteCoord
 class AbsoluteCoord :  public virtual ::SVG::Coordinates
 {
 public:
@@ -24,12 +23,22 @@ public:
 
 	
 	
-	
 
-	
+	/*PROTECTED REGION ID(SVG::AbsoluteCoord public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class SVGPackage;
+
+	
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(SVG::AbsoluteCoord protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // SVG

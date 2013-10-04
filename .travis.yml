@@ -1,4 +1,4 @@
 before_install:
 - sudo apt-get update -qq
 - sudo apt-get install -qq libboost-all-dev valgrind
-script: cmake . && make generator all && make -C tests generate-examples rebuild_cache all test 
+script: cmake . && make generator regenerate rebuild_cache all && make -C tests all test 

@@ -15,10 +15,14 @@ UnionDef::UnionDef() :
     m_containedDiscrim(),
     m_sharedDiscrim()
 {
+	/*PROTECTED REGION ID(UnionDef constructor) START*/
+	/*PROTECTED REGION END*/
 }
 
 UnionDef::~UnionDef()
 {
+	/*PROTECTED REGION ID(UnionDef destructor) START*/
+	/*PROTECTED REGION END*/
 }
 
 UnionDef::unionMembers_t UnionDef::getUnionMembers() const
@@ -38,7 +42,6 @@ void UnionDef::addAllUnionMembers(const unionMembers_t& unionMembers_)
 		addUnionMembers(*i);
 }
 
-
 UnionDef::containedDiscrim_t UnionDef::getContainedDiscrim() const
 {
 	return e4c::returned(m_containedDiscrim);
@@ -55,7 +58,6 @@ UnionDef::containedDiscrim_t UnionDef::releaseContainedDiscrim()
 	return m_containedDiscrim.release();
 }
 
-
 UnionDef::sharedDiscrim_t UnionDef::getSharedDiscrim() const
 {
 	return e4c::returned(m_sharedDiscrim);
@@ -63,11 +65,10 @@ UnionDef::sharedDiscrim_t UnionDef::getSharedDiscrim() const
 
 void UnionDef::setSharedDiscrim(sharedDiscrim_t sharedDiscrim_)
 {
+	if (m_sharedDiscrim == sharedDiscrim_)
+		return;
 	m_sharedDiscrim = sharedDiscrim_;
-	
 }
-
-
 
 
 

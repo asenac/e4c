@@ -14,7 +14,6 @@ namespace declaration
 {
 
 
-// xpand3::declaration::Definition
 class Definition :  public virtual ::xpand3::declaration::AbstractNamedDeclaration
 {
 public:
@@ -25,16 +24,28 @@ public:
 	virtual ~Definition();
 
 	typedef std::vector < xpand3::statement::AbstractStatement_ptr > body_t;
-
 	
 	body_t getBody() const;
+	void addBody(xpand3::statement::AbstractStatement_ptr body_);
+	void addAllBody(const body_t& body_);
+	
 
-
-	std::vector < std::unique_ptr < xpand3::statement::AbstractStatement > > m_body;
-
+	/*PROTECTED REGION ID(xpand3::declaration::Definition public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class DeclarationPackage;
+
+	std::vector < std::unique_ptr < xpand3::statement::AbstractStatement > > m_body;
+
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(xpand3::declaration::Definition protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // declaration

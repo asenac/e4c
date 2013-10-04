@@ -10,10 +10,14 @@ using namespace idlmm;
 NamedElement::NamedElement() : 
 	m_identifier()
 {
+	/*PROTECTED REGION ID(NamedElement constructor) START*/
+	/*PROTECTED REGION END*/
 }
 
 NamedElement::~NamedElement()
 {
+	/*PROTECTED REGION ID(NamedElement destructor) START*/
+	/*PROTECTED REGION END*/
 }
 
 void NamedElement::setIdentifier(identifier_t _identifier)
@@ -25,7 +29,6 @@ NamedElement::identifier_t NamedElement::getIdentifier() const
 {
 	return m_identifier;
 }
-
 
 
 

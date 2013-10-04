@@ -12,7 +12,6 @@ namespace C
 {
 
 
-// C::CFloat
 class CFloat :  public virtual ::C::CFloating
 {
 public:
@@ -24,12 +23,22 @@ public:
 
 	
 	
-	
 
-	
+	/*PROTECTED REGION ID(C::CFloat public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class CPackage;
+
+	
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(C::CFloat protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // C

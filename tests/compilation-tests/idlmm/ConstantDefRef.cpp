@@ -11,10 +11,14 @@ using namespace idlmm;
 ConstantDefRef::ConstantDefRef() : 
 	m_constant()
 {
+	/*PROTECTED REGION ID(ConstantDefRef constructor) START*/
+	/*PROTECTED REGION END*/
 }
 
 ConstantDefRef::~ConstantDefRef()
 {
+	/*PROTECTED REGION ID(ConstantDefRef destructor) START*/
+	/*PROTECTED REGION END*/
 }
 
 ConstantDefRef::constant_t ConstantDefRef::getConstant() const
@@ -24,11 +28,10 @@ ConstantDefRef::constant_t ConstantDefRef::getConstant() const
 
 void ConstantDefRef::setConstant(constant_t constant_)
 {
+	if (m_constant == constant_)
+		return;
 	m_constant = constant_;
-	
 }
-
-
 
 
 

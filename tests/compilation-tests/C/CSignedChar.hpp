@@ -12,7 +12,6 @@ namespace C
 {
 
 
-// C::CSignedChar
 class CSignedChar :  public virtual ::C::CChar
 {
 public:
@@ -24,12 +23,22 @@ public:
 
 	
 	
-	
 
-	
+	/*PROTECTED REGION ID(C::CSignedChar public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class CPackage;
+
+	
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(C::CSignedChar protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // C

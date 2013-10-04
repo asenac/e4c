@@ -14,7 +14,6 @@ namespace code
 {
 
 
-// kdm::code::CommentUnit
 class CommentUnit :  public virtual ::kdm::core::ModelElement
 {
 public:
@@ -25,17 +24,27 @@ public:
 	virtual ~CommentUnit();
 
 	typedef ::kdm::core::String text_t;
-
 	
 	void setText(text_t _text);
 	text_t getText() const;
+	
 
-
-	text_t m_text;
-
+	/*PROTECTED REGION ID(kdm::code::CommentUnit public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class CodePackage;
+
+	text_t m_text;
+
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(kdm::code::CommentUnit protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // code

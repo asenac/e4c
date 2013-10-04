@@ -12,7 +12,6 @@ namespace SVG
 {
 
 
-// SVG::Tref
 class Tref :  public virtual ::SVG::TextElement
 {
 public:
@@ -23,16 +22,27 @@ public:
 	virtual ~Tref();
 
 	typedef SVG::TextElement_ptr xlinkHref_t;
-
 	
 	xlinkHref_t getXlinkHref() const;
+	void setXlinkHref(xlinkHref_t xlinkHref_);
+	
 
-
-	SVG::TextElement_ptr m_xlinkHref;
-
+	/*PROTECTED REGION ID(SVG::Tref public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class SVGPackage;
+
+	SVG::TextElement_ptr m_xlinkHref;
+
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(SVG::Tref protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // SVG

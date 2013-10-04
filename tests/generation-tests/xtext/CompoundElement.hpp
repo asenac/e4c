@@ -12,7 +12,6 @@ namespace xtext
 {
 
 
-// xtext::CompoundElement
 class CompoundElement :  public virtual ::xtext::AbstractElement
 {
 public:
@@ -23,16 +22,28 @@ public:
 	virtual ~CompoundElement();
 
 	typedef std::vector < xtext::AbstractElement_ptr > elements_t;
-
 	
 	elements_t getElements() const;
+	void addElements(xtext::AbstractElement_ptr elements_);
+	void addAllElements(const elements_t& elements_);
+	
 
-
-	std::vector < std::unique_ptr < xtext::AbstractElement > > m_elements;
-
+	/*PROTECTED REGION ID(xtext::CompoundElement public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class XtextPackage;
+
+	std::vector < std::unique_ptr < xtext::AbstractElement > > m_elements;
+
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(xtext::CompoundElement protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // xtext

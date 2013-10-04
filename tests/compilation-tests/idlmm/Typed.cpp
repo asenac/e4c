@@ -13,10 +13,14 @@ Typed::Typed() :
 	m_containedType(),
     m_sharedType()
 {
+	/*PROTECTED REGION ID(Typed constructor) START*/
+	/*PROTECTED REGION END*/
 }
 
 Typed::~Typed()
 {
+	/*PROTECTED REGION ID(Typed destructor) START*/
+	/*PROTECTED REGION END*/
 }
 
 Typed::containedType_t Typed::getContainedType() const
@@ -35,7 +39,6 @@ Typed::containedType_t Typed::releaseContainedType()
 	return m_containedType.release();
 }
 
-
 Typed::sharedType_t Typed::getSharedType() const
 {
 	return e4c::returned(m_sharedType);
@@ -43,11 +46,10 @@ Typed::sharedType_t Typed::getSharedType() const
 
 void Typed::setSharedType(sharedType_t sharedType_)
 {
+	if (m_sharedType == sharedType_)
+		return;
 	m_sharedType = sharedType_;
-	
 }
-
-
 
 
 

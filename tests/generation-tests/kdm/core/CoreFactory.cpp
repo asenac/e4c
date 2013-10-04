@@ -6,7 +6,7 @@ using namespace kdm::core;
 
 CoreFactory::CoreFactory()
 {
-	m_ePackage = CorePackage::_instance();
+	// m_ePackage = CorePackage::_instance();
 	// std::bind(&CoreFactory::createAggregatedRelationship, this);
 	// m_ePackage->getTag_AggregatedRelationship();
 }

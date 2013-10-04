@@ -12,7 +12,6 @@ namespace emof
 {
 
 
-// emof::URIExtent
 class URIExtent :  public virtual ::emof::Extent
 {
 public:
@@ -24,12 +23,22 @@ public:
 
 	
 	
-	
 
-	
+	/*PROTECTED REGION ID(emof::URIExtent public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class EmofPackage;
+
+	
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(emof::URIExtent protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // emof

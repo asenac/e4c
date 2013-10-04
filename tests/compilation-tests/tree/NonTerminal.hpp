@@ -12,7 +12,6 @@ namespace tree
 {
 
 
-// tree::NonTerminal
 class NonTerminal :  public virtual ::tree::TreeNode
 {
 public:
@@ -23,16 +22,28 @@ public:
 	virtual ~NonTerminal();
 
 	typedef std::vector < tree::TreeNode_ptr > children_t;
-
 	
 	children_t getChildren() const;
+	void addChildren(tree::TreeNode_ptr children_);
+	void addAllChildren(const children_t& children_);
+	
 
-
-	std::vector < std::unique_ptr < tree::TreeNode > > m_children;
-
+	/*PROTECTED REGION ID(tree::NonTerminal public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class TreePackage;
+
+	std::vector < std::unique_ptr < tree::TreeNode > > m_children;
+
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(tree::NonTerminal protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // tree

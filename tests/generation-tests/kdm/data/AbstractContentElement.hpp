@@ -14,7 +14,6 @@ namespace data
 {
 
 
-// kdm::data::AbstractContentElement
 class AbstractContentElement :  public virtual ::kdm::data::AbstractDataElement
 {
 public:
@@ -25,13 +24,23 @@ public:
 
 	
 	
-	
 
-	
+	/*PROTECTED REGION ID(kdm::data::AbstractContentElement public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 	AbstractContentElement();
 
+	friend class DataPackage;
+
+	
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(kdm::data::AbstractContentElement protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // data

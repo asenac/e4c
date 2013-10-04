@@ -4,6 +4,7 @@
 #include <e4c/tag.hpp>
 #include <ecore/EPackage.hpp>
 #include <idlmm/fwd.hpp>
+#include <e4c/detail/holder.ipp>
 
 namespace idlmm
 {

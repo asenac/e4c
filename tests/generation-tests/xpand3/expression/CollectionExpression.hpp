@@ -14,7 +14,6 @@ namespace expression
 {
 
 
-// xpand3::expression::CollectionExpression
 class CollectionExpression :  public virtual ::xpand3::expression::FeatureCall
 {
 public:
@@ -26,18 +25,32 @@ public:
 
 	typedef xpand3::expression::AbstractExpression_ptr closure_t;
 	typedef xpand3::Identifier_ptr eleName_t;
-
 	
 	closure_t getClosure() const;
+	void setClosure(closure_t closure_);
+	closure_t releaseClosure();
 	eleName_t getEleName() const;
+	void setEleName(eleName_t eleName_);
+	eleName_t releaseEleName();
+	
 
+	/*PROTECTED REGION ID(xpand3::expression::CollectionExpression public) START*/
+	/*PROTECTED REGION END*/
+		
+protected:
+
+	friend class ExpressionPackage;
 
 	std::unique_ptr < xpand3::expression::AbstractExpression > m_closure;
 	std::unique_ptr < xpand3::Identifier > m_eleName;
 
-		
-protected:
-
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(xpand3::expression::CollectionExpression protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // expression

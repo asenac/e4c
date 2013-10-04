@@ -6,7 +6,7 @@ using namespace xpand3::statement;
 
 StatementFactory::StatementFactory()
 {
-	m_ePackage = StatementPackage::_instance();
+	// m_ePackage = StatementPackage::_instance();
 	// std::bind(&StatementFactory::createExpandStatement, this);
 	// m_ePackage->getTag_ExpandStatement();
 	// std::bind(&StatementFactory::createExpressionStatement, this);

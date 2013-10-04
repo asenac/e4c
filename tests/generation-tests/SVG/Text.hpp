@@ -12,7 +12,6 @@ namespace SVG
 {
 
 
-// SVG::Text
 class Text :  public virtual ::SVG::TextElement
 {
 public:
@@ -24,20 +23,30 @@ public:
 
 	typedef ::PrimitiveTypes::String lengthAdjust_t;
 	typedef ::PrimitiveTypes::String content_t;
-
 	
 	void setLengthAdjust(lengthAdjust_t _lengthAdjust);
 	lengthAdjust_t getLengthAdjust() const;
 	void setContent(content_t _content);
 	content_t getContent() const;
+	
 
+	/*PROTECTED REGION ID(SVG::Text public) START*/
+	/*PROTECTED REGION END*/
+		
+protected:
+
+	friend class SVGPackage;
 
 	lengthAdjust_t m_lengthAdjust;
 	content_t m_content;
 
-		
-protected:
-
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(SVG::Text protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // SVG

@@ -14,7 +14,6 @@ namespace source
 {
 
 
-// kdm::source::InventoryElement
 class InventoryElement :  public virtual ::kdm::source::AbstractInventoryElement
 {
 public:
@@ -26,12 +25,22 @@ public:
 
 	
 	
-	
 
-	
+	/*PROTECTED REGION ID(kdm::source::InventoryElement public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class SourcePackage;
+
+	
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(kdm::source::InventoryElement protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // source

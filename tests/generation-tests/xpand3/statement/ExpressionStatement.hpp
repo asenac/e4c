@@ -14,7 +14,6 @@ namespace statement
 {
 
 
-// xpand3::statement::ExpressionStatement
 class ExpressionStatement :  public virtual ::xpand3::statement::AbstractStatement
 {
 public:
@@ -25,16 +24,28 @@ public:
 	virtual ~ExpressionStatement();
 
 	typedef xpand3::expression::AbstractExpression_ptr expression_t;
-
 	
 	expression_t getExpression() const;
+	void setExpression(expression_t expression_);
+	expression_t releaseExpression();
+	
 
-
-	std::unique_ptr < xpand3::expression::AbstractExpression > m_expression;
-
+	/*PROTECTED REGION ID(xpand3::statement::ExpressionStatement public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class StatementPackage;
+
+	std::unique_ptr < xpand3::expression::AbstractExpression > m_expression;
+
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(xpand3::statement::ExpressionStatement protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // statement

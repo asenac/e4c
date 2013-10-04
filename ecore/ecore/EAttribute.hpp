@@ -27,7 +27,6 @@ public:
 	void setID(iD_t _iD);
 	iD_t getID() const;
 	eAttributeType_t getEAttributeType() const;
-	
 	void setEAttributeType(eAttributeType_t eAttributeType_);
 	
 

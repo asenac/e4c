@@ -6,7 +6,7 @@ using namespace kdm::data;
 
 DataFactory::DataFactory()
 {
-	m_ePackage = DataPackage::_instance();
+	// m_ePackage = DataPackage::_instance();
 	// std::bind(&DataFactory::createDataModel, this);
 	// m_ePackage->getTag_DataModel();
 	// std::bind(&DataFactory::createDataResource, this);

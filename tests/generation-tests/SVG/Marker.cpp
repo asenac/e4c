@@ -1,8 +1,12 @@
 
 #include "Marker.hpp"
+#include <SVG/SVGPackage.hpp>
 #include <SVG/Element.hpp>
 
 using namespace SVG;
+
+/*PROTECTED REGION ID(SVG::Marker include) START*/
+/*PROTECTED REGION END*/
 
 Marker::Marker() : 
 	m_markerUnits(),
@@ -13,10 +17,14 @@ Marker::Marker() :
     m_orient(),
     m_drawing()
 {
+	/*PROTECTED REGION ID(Marker constructor) START*/
+	/*PROTECTED REGION END*/
 }
 
 Marker::~Marker()
 {
+	/*PROTECTED REGION ID(Marker destructor) START*/
+	/*PROTECTED REGION END*/
 }
 
 void Marker::setMarkerUnits(markerUnits_t _markerUnits)
@@ -85,4 +93,25 @@ Marker::drawing_t Marker::getDrawing() const
 }
 
 
+void Marker::addDrawing(SVG::Element_ptr drawing_)
+{
+	drawing_->setDrawsMarker(this);
+	m_drawing.insert(std::unique_ptr < SVG::Element >(drawing_));
+}
 
+void Marker::addAllDrawing(const drawing_t& drawing_)
+{
+	for (auto i = drawing_.begin(); i != drawing_.end(); i++)
+		addDrawing(*i);
+}
+
+
+
+/*PROTECTED REGION ID(SVG::Marker implementation) START*/
+/*PROTECTED REGION END*/
+
+ecore::EClass_ptr Marker::eClassImpl() const
+{
+	return SVGPackage::_instance()->getMarker();
+}
+ 

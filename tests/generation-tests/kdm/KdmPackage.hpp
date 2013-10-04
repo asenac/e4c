@@ -4,6 +4,7 @@
 #include <e4c/tag.hpp>
 #include <ecore/EPackage.hpp>
 #include <kdm/fwd.hpp>
+#include <e4c/detail/holder.ipp>
 
 namespace kdm
 {
@@ -13,13 +14,14 @@ class KdmPackage : public ::ecore::EPackage
 {
 public:
     static const KdmPackage_ptr _instance();
+
+ 	
+
  
- 	// Classifiers
- 
- 	// Structural features
 
 protected:
     KdmPackage();
+    
 };
 
 } // kdm

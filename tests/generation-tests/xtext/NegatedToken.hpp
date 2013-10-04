@@ -12,7 +12,6 @@ namespace xtext
 {
 
 
-// xtext::NegatedToken
 class NegatedToken :  public virtual ::xtext::AbstractNegatedToken
 {
 public:
@@ -24,12 +23,22 @@ public:
 
 	
 	
-	
 
-	
+	/*PROTECTED REGION ID(xtext::NegatedToken public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class XtextPackage;
+
+	
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(xtext::NegatedToken protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // xtext

@@ -14,7 +14,6 @@ namespace core
 {
 
 
-// kdm::core::KDMRelationship
 class KDMRelationship :  public virtual ::kdm::core::ModelElement
 {
 public:
@@ -25,13 +24,25 @@ public:
 
 	
 	
-	
+	kdm::core::KDMEntity_ptr getTo();
+	kdm::core::KDMEntity_ptr getFrom();
 
-	
+	/*PROTECTED REGION ID(kdm::core::KDMRelationship public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 	KDMRelationship();
 
+	friend class CorePackage;
+
+	
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(kdm::core::KDMRelationship protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // core

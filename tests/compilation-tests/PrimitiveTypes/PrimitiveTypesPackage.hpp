@@ -4,6 +4,7 @@
 #include <e4c/tag.hpp>
 #include <ecore/EPackage.hpp>
 #include <PrimitiveTypes/fwd.hpp>
+#include <e4c/detail/holder.ipp>
 
 namespace PrimitiveTypes
 {
@@ -13,17 +14,26 @@ class PrimitiveTypesPackage : public ::ecore::EPackage
 {
 public:
     static const PrimitiveTypesPackage_ptr _instance();
- 
- 	// Classifiers
+
+ 	::ecore::EDataType_ptr getInteger() const;
+ 	::ecore::EDataType_ptr getString() const;
+ 	::ecore::EDataType_ptr getBoolean() const;
+ 	::ecore::EDataType_ptr getDouble() const;
+ 	
+
  	e4c::tag_t getTag_Integer() const;
  	e4c::tag_t getTag_String() const;
  	e4c::tag_t getTag_Boolean() const;
  	e4c::tag_t getTag_Double() const;
  
- 	// Structural features
 
 protected:
     PrimitiveTypesPackage();
+    
+ 	::ecore::EDataType_ptr m_Integer;
+ 	::ecore::EDataType_ptr m_String;
+ 	::ecore::EDataType_ptr m_Boolean;
+ 	::ecore::EDataType_ptr m_Double;
 };
 
 } // PrimitiveTypes

@@ -11,10 +11,14 @@ using namespace idlmm;
 ConstantDef::ConstantDef() : 
 	m_constValue()
 {
+	/*PROTECTED REGION ID(ConstantDef constructor) START*/
+	/*PROTECTED REGION END*/
 }
 
 ConstantDef::~ConstantDef()
 {
+	/*PROTECTED REGION ID(ConstantDef destructor) START*/
+	/*PROTECTED REGION END*/
 }
 
 ConstantDef::constValue_t ConstantDef::getConstValue() const
@@ -32,8 +36,6 @@ ConstantDef::constValue_t ConstantDef::releaseConstValue()
 {
 	return m_constValue.release();
 }
-
-
 
 
 

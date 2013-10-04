@@ -14,7 +14,6 @@ namespace code
 {
 
 
-// kdm::code::MacroUnit
 class MacroUnit :  public virtual ::kdm::code::PreprocessorDirective
 {
 public:
@@ -25,17 +24,27 @@ public:
 	virtual ~MacroUnit();
 
 	typedef ::kdm::code::MacroKind kind_t;
-
 	
 	void setKind(kind_t _kind);
 	kind_t getKind() const;
+	
 
-
-	kind_t m_kind;
-
+	/*PROTECTED REGION ID(kdm::code::MacroUnit public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class CodePackage;
+
+	kind_t m_kind;
+
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(kdm::code::MacroUnit protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // code

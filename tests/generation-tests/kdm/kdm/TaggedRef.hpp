@@ -14,7 +14,6 @@ namespace kdm
 {
 
 
-// kdm::kdm::TaggedRef
 class TaggedRef :  public virtual ::kdm::kdm::ExtendedValue
 {
 public:
@@ -25,16 +24,27 @@ public:
 	virtual ~TaggedRef();
 
 	typedef kdm::core::ModelElement_ptr reference_t;
-
 	
 	reference_t getReference() const;
+	void setReference(reference_t reference_);
+	
 
-
-	kdm::core::ModelElement_ptr m_reference;
-
+	/*PROTECTED REGION ID(kdm::kdm::TaggedRef public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class KdmPackage;
+
+	kdm::core::ModelElement_ptr m_reference;
+
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(kdm::kdm::TaggedRef protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // kdm

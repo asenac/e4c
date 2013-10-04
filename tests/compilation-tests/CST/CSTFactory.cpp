@@ -6,7 +6,7 @@ using namespace CST;
 
 CSTFactory::CSTFactory()
 {
-	m_ePackage = CSTPackage::_instance();
+	// m_ePackage = CSTPackage::_instance();
 	// std::bind(&CSTFactory::createTree, this);
 	// m_ePackage->getTag_Tree();
 	// std::bind(&CSTFactory::createElement, this);

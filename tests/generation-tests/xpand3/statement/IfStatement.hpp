@@ -14,7 +14,6 @@ namespace statement
 {
 
 
-// xpand3::statement::IfStatement
 class IfStatement :  public virtual ::xpand3::statement::AbstractStatementWithBody
 {
 public:
@@ -26,18 +25,32 @@ public:
 
 	typedef xpand3::expression::AbstractExpression_ptr condition_t;
 	typedef xpand3::statement::IfStatement_ptr elseIf_t;
-
 	
 	condition_t getCondition() const;
+	void setCondition(condition_t condition_);
+	condition_t releaseCondition();
 	elseIf_t getElseIf() const;
+	void setElseIf(elseIf_t elseIf_);
+	elseIf_t releaseElseIf();
+	
 
+	/*PROTECTED REGION ID(xpand3::statement::IfStatement public) START*/
+	/*PROTECTED REGION END*/
+		
+protected:
+
+	friend class StatementPackage;
 
 	std::unique_ptr < xpand3::expression::AbstractExpression > m_condition;
 	std::unique_ptr < xpand3::statement::IfStatement > m_elseIf;
 
-		
-protected:
-
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(xpand3::statement::IfStatement protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // statement

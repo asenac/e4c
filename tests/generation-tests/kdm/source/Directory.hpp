@@ -14,7 +14,6 @@ namespace source
 {
 
 
-// kdm::source::Directory
 class Directory :  public virtual ::kdm::source::InventoryContainer
 {
 public:
@@ -25,17 +24,27 @@ public:
 	virtual ~Directory();
 
 	typedef ::kdm::core::String path_t;
-
 	
 	void setPath(path_t _path);
 	path_t getPath() const;
+	
 
-
-	path_t m_path;
-
+	/*PROTECTED REGION ID(kdm::source::Directory public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class SourcePackage;
+
+	path_t m_path;
+
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(kdm::source::Directory protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // source

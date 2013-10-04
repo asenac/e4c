@@ -14,7 +14,6 @@ namespace platform
 {
 
 
-// kdm::platform::ExternalActor
 class ExternalActor :  public virtual ::kdm::platform::PlatformAction
 {
 public:
@@ -26,12 +25,22 @@ public:
 
 	
 	
-	
 
-	
+	/*PROTECTED REGION ID(kdm::platform::ExternalActor public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class PlatformPackage;
+
+	
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(kdm::platform::ExternalActor protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // platform

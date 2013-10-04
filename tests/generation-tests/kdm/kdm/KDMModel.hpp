@@ -14,7 +14,6 @@ namespace kdm
 {
 
 
-// kdm::kdm::KDMModel
 class KDMModel :  public virtual ::kdm::kdm::KDMFramework
 {
 public:
@@ -25,13 +24,23 @@ public:
 
 	
 	
-	
 
-	
+	/*PROTECTED REGION ID(kdm::kdm::KDMModel public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 	KDMModel();
 
+	friend class KdmPackage;
+
+	
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(kdm::kdm::KDMModel protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // kdm

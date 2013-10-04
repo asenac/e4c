@@ -9,12 +9,15 @@ using namespace idlmm;
 
 LiteralExpression::LiteralExpression()
 {
+	/*PROTECTED REGION ID(LiteralExpression constructor) START*/
+	/*PROTECTED REGION END*/
 }
 
 LiteralExpression::~LiteralExpression()
 {
+	/*PROTECTED REGION ID(LiteralExpression destructor) START*/
+	/*PROTECTED REGION END*/
 }
-
 
 
 

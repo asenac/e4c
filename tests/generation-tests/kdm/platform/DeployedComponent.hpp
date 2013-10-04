@@ -14,7 +14,6 @@ namespace platform
 {
 
 
-// kdm::platform::DeployedComponent
 class DeployedComponent :  public virtual ::kdm::platform::AbstractPlatformElement
 {
 public:
@@ -25,16 +24,28 @@ public:
 	virtual ~DeployedComponent();
 
 	typedef std::set < kdm::code::Module_ptr > groupedCode_t;
-
 	
 	groupedCode_t getGroupedCode() const;
+	void addGroupedCode(kdm::code::Module_ptr groupedCode_);
+	void addAllGroupedCode(const groupedCode_t& groupedCode_);
+	
 
-
-	std::set < kdm::code::Module_ptr > m_groupedCode;
-
+	/*PROTECTED REGION ID(kdm::platform::DeployedComponent public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class PlatformPackage;
+
+	std::set < kdm::code::Module_ptr > m_groupedCode;
+
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(kdm::platform::DeployedComponent protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // platform

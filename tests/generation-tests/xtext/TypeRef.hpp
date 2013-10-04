@@ -12,8 +12,7 @@ namespace xtext
 {
 
 
-// xtext::TypeRef
-class TypeRef
+class TypeRef : ::ecore::EObject
 {
 public:
 
@@ -24,18 +23,30 @@ public:
 
 	typedef xtext::AbstractMetamodelDeclaration_ptr metamodel_t;
 	typedef ecore::EClassifier_ptr classifier_t;
-
 	
 	metamodel_t getMetamodel() const;
+	void setMetamodel(metamodel_t metamodel_);
 	classifier_t getClassifier() const;
+	void setClassifier(classifier_t classifier_);
+	
 
+	/*PROTECTED REGION ID(xtext::TypeRef public) START*/
+	/*PROTECTED REGION END*/
+		
+protected:
+
+	friend class XtextPackage;
 
 	xtext::AbstractMetamodelDeclaration_ptr m_metamodel;
 	ecore::EClassifier_ptr m_classifier;
 
-		
-protected:
-
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(xtext::TypeRef protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // xtext

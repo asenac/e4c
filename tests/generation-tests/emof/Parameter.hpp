@@ -13,7 +13,6 @@ namespace emof
 {
 
 
-// emof::Parameter
 class Parameter :  public virtual ::emof::TypedElement,  public virtual ::emof::MultiplicityElement
 {
 public:
@@ -24,16 +23,28 @@ public:
 	virtual ~Parameter();
 
 	typedef emof::Operation_ptr operation_t;
-
 	
 	operation_t getOperation() const;
+	
 
-
-	emof::Operation_ptr m_operation;
-
+	/*PROTECTED REGION ID(emof::Parameter public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class EmofPackage;
+
+	emof::Operation_ptr m_operation;
+
+	
+	friend class ::emof::Operation;
+	void setOperation(operation_t operation_);
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(emof::Parameter protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // emof

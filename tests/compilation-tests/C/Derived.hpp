@@ -12,7 +12,6 @@ namespace C
 {
 
 
-// C::Derived
 class Derived :  public virtual ::C::CClassifier
 {
 public:
@@ -24,12 +23,22 @@ public:
 
 	
 	
-	
 
-	
+	/*PROTECTED REGION ID(C::Derived public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class CPackage;
+
+	
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(C::Derived protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // C

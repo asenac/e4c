@@ -1,7 +1,11 @@
 
 #include "Path.hpp"
+#include <SVG/SVGPackage.hpp>
 
 using namespace SVG;
+
+/*PROTECTED REGION ID(SVG::Path include) START*/
+/*PROTECTED REGION END*/
 
 Path::Path() : 
 	m_pathLength(),
@@ -9,10 +13,14 @@ Path::Path() :
     m_markerEnd(),
     m_markerStart()
 {
+	/*PROTECTED REGION ID(Path constructor) START*/
+	/*PROTECTED REGION END*/
 }
 
 Path::~Path()
 {
+	/*PROTECTED REGION ID(Path destructor) START*/
+	/*PROTECTED REGION END*/
 }
 
 void Path::setPathLength(pathLength_t _pathLength)
@@ -57,3 +65,11 @@ Path::markerStart_t Path::getMarkerStart() const
 
 
 
+/*PROTECTED REGION ID(SVG::Path implementation) START*/
+/*PROTECTED REGION END*/
+
+ecore::EClass_ptr Path::eClassImpl() const
+{
+	return SVGPackage::_instance()->getPath();
+}
+ 

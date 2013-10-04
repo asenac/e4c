@@ -14,7 +14,6 @@ namespace platform
 {
 
 
-// kdm::platform::PlatformModel
 class PlatformModel :  public virtual ::kdm::kdm::KDMModel
 {
 public:
@@ -25,16 +24,28 @@ public:
 	virtual ~PlatformModel();
 
 	typedef std::set < kdm::platform::AbstractPlatformElement_ptr > platformElement_t;
-
 	
 	platformElement_t getPlatformElement() const;
+	void addPlatformElement(kdm::platform::AbstractPlatformElement_ptr platformElement_);
+	void addAllPlatformElement(const platformElement_t& platformElement_);
+	
 
-
-	std::set < std::unique_ptr < kdm::platform::AbstractPlatformElement > > m_platformElement;
-
+	/*PROTECTED REGION ID(kdm::platform::PlatformModel public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class PlatformPackage;
+
+	std::set < std::unique_ptr < kdm::platform::AbstractPlatformElement > > m_platformElement;
+
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(kdm::platform::PlatformModel protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // platform

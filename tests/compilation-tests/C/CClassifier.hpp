@@ -12,8 +12,7 @@ namespace C
 {
 
 
-// C::CClassifier
-class CClassifier
+class CClassifier : ::ecore::EObject
 {
 public:
 
@@ -24,12 +23,22 @@ public:
 
 	
 	
-	
 
-	
+	/*PROTECTED REGION ID(C::CClassifier public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class CPackage;
+
+	
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(C::CClassifier protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // C

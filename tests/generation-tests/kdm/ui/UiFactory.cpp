@@ -6,7 +6,7 @@ using namespace kdm::ui;
 
 UiFactory::UiFactory()
 {
-	m_ePackage = UiPackage::_instance();
+	// m_ePackage = UiPackage::_instance();
 	// std::bind(&UiFactory::createUIResource, this);
 	// m_ePackage->getTag_UIResource();
 	// std::bind(&UiFactory::createUIDisplay, this);

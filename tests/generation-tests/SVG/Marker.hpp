@@ -12,7 +12,6 @@ namespace SVG
 {
 
 
-// SVG::Marker
 class Marker :  public virtual ::SVG::Shape
 {
 public:
@@ -29,7 +28,6 @@ public:
 	typedef ::PrimitiveTypes::Double markerHeight_t;
 	typedef ::PrimitiveTypes::String orient_t;
 	typedef std::set < SVG::Element_ptr > drawing_t;
-
 	
 	void setMarkerUnits(markerUnits_t _markerUnits);
 	markerUnits_t getMarkerUnits() const;
@@ -44,7 +42,16 @@ public:
 	void setOrient(orient_t _orient);
 	orient_t getOrient() const;
 	drawing_t getDrawing() const;
+	void addDrawing(SVG::Element_ptr drawing_);
+	void addAllDrawing(const drawing_t& drawing_);
+	
 
+	/*PROTECTED REGION ID(SVG::Marker public) START*/
+	/*PROTECTED REGION END*/
+		
+protected:
+
+	friend class SVGPackage;
 
 	markerUnits_t m_markerUnits;
 	refX_t m_refX;
@@ -54,9 +61,13 @@ public:
 	orient_t m_orient;
 	std::set < std::unique_ptr < SVG::Element > > m_drawing;
 
-		
-protected:
-
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(SVG::Marker protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // SVG

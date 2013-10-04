@@ -12,7 +12,6 @@ namespace C
 {
 
 
-// C::CBitField
 class CBitField :  public virtual ::C::CDataType
 {
 public:
@@ -24,12 +23,22 @@ public:
 
 	
 	
-	
 
-	
+	/*PROTECTED REGION ID(C::CBitField public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class CPackage;
+
+	
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(C::CBitField protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // C

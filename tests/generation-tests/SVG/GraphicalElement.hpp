@@ -12,7 +12,6 @@ namespace SVG
 {
 
 
-// SVG::GraphicalElement
 class GraphicalElement :  public virtual ::SVG::Element
 {
 public:
@@ -22,18 +21,28 @@ public:
 	virtual ~GraphicalElement();
 
 	typedef ::PrimitiveTypes::String stroke_t;
-
 	
 	void setStroke(stroke_t _stroke);
 	stroke_t getStroke() const;
+	
 
-
-	stroke_t m_stroke;
-
+	/*PROTECTED REGION ID(SVG::GraphicalElement public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 	GraphicalElement();
 
+	friend class SVGPackage;
+
+	stroke_t m_stroke;
+
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(SVG::GraphicalElement protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // SVG

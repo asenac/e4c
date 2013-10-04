@@ -9,12 +9,15 @@ using namespace idlmm;
 
 ModelElement::ModelElement()
 {
+	/*PROTECTED REGION ID(ModelElement constructor) START*/
+	/*PROTECTED REGION END*/
 }
 
 ModelElement::~ModelElement()
 {
+	/*PROTECTED REGION ID(ModelElement destructor) START*/
+	/*PROTECTED REGION END*/
 }
-
 
 
 

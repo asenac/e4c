@@ -27,7 +27,6 @@ public:
 	void setImportURI(importURI_t _importURI);
 	importURI_t getImportURI() const;
 	translationUnit_t getTranslationUnit() const;
-	
 	void setTranslationUnit(translationUnit_t translationUnit_);
 	
 

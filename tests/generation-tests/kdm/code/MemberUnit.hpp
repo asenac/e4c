@@ -14,7 +14,6 @@ namespace code
 {
 
 
-// kdm::code::MemberUnit
 class MemberUnit :  public virtual ::kdm::code::DataElement
 {
 public:
@@ -25,17 +24,27 @@ public:
 	virtual ~MemberUnit();
 
 	typedef ::kdm::code::ExportKind export__t;
-
 	
 	void setExport_(export__t _export_);
 	export__t getExport_() const;
+	
 
-
-	export__t m_export_;
-
+	/*PROTECTED REGION ID(kdm::code::MemberUnit public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class CodePackage;
+
+	export__t m_export_;
+
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(kdm::code::MemberUnit protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // code

@@ -14,7 +14,6 @@ namespace ui
 {
 
 
-// kdm::ui::Report
 class Report :  public virtual ::kdm::ui::UIDisplay
 {
 public:
@@ -26,12 +25,22 @@ public:
 
 	
 	
-	
 
-	
+	/*PROTECTED REGION ID(kdm::ui::Report public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class UiPackage;
+
+	
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(kdm::ui::Report protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // ui

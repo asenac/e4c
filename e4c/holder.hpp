@@ -20,8 +20,8 @@ typedef std::shared_ptr< holder_impl_base > holder_impl_ptr;
 template < typename T >
 holder_impl_base * create_holder(const T& t);
 
-//template < typename T >
-//holder_impl_base * create_holder(T&& t);
+template < typename T >
+holder_impl_base * create_holder(T&& t);
 
 template < typename T >
 holder_impl_base * create_holder();

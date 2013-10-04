@@ -12,7 +12,6 @@ namespace C
 {
 
 
-// C::CDouble
 class CDouble :  public virtual ::C::CFloating
 {
 public:
@@ -24,12 +23,22 @@ public:
 
 	
 	
-	
 
-	
+	/*PROTECTED REGION ID(C::CDouble public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class CPackage;
+
+	
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(C::CDouble protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // C

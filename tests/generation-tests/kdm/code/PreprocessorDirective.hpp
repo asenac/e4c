@@ -14,7 +14,6 @@ namespace code
 {
 
 
-// kdm::code::PreprocessorDirective
 class PreprocessorDirective :  public virtual ::kdm::code::AbstractCodeElement
 {
 public:
@@ -25,16 +24,28 @@ public:
 	virtual ~PreprocessorDirective();
 
 	typedef std::set < kdm::code::AbstractCodeElement_ptr > codeElement_t;
-
 	
 	codeElement_t getCodeElement() const;
+	void addCodeElement(kdm::code::AbstractCodeElement_ptr codeElement_);
+	void addAllCodeElement(const codeElement_t& codeElement_);
+	
 
-
-	std::set < std::unique_ptr < kdm::code::AbstractCodeElement > > m_codeElement;
-
+	/*PROTECTED REGION ID(kdm::code::PreprocessorDirective public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class CodePackage;
+
+	std::set < std::unique_ptr < kdm::code::AbstractCodeElement > > m_codeElement;
+
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(kdm::code::PreprocessorDirective protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // code

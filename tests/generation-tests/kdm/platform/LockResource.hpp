@@ -14,7 +14,6 @@ namespace platform
 {
 
 
-// kdm::platform::LockResource
 class LockResource :  public virtual ::kdm::platform::ResourceType
 {
 public:
@@ -26,12 +25,22 @@ public:
 
 	
 	
-	
 
-	
+	/*PROTECTED REGION ID(kdm::platform::LockResource public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class PlatformPackage;
+
+	
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(kdm::platform::LockResource protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // platform

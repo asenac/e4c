@@ -6,7 +6,7 @@ using namespace kdm::conceptual;
 
 ConceptualFactory::ConceptualFactory()
 {
-	m_ePackage = ConceptualPackage::_instance();
+	// m_ePackage = ConceptualPackage::_instance();
 	// std::bind(&ConceptualFactory::createConceptualModel, this);
 	// m_ePackage->getTag_ConceptualModel();
 	// std::bind(&ConceptualFactory::createTermUnit, this);

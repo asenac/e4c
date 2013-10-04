@@ -14,7 +14,6 @@ namespace code
 {
 
 
-// kdm::code::Implements
 class Implements :  public virtual ::kdm::code::AbstractCodeRelationship
 {
 public:
@@ -26,18 +25,30 @@ public:
 
 	typedef kdm::code::CodeItem_ptr to_t;
 	typedef kdm::code::CodeItem_ptr from_t;
-
 	
 	to_t getTo() const;
+	void setTo(to_t to_);
 	from_t getFrom() const;
+	void setFrom(from_t from_);
+	
 
+	/*PROTECTED REGION ID(kdm::code::Implements public) START*/
+	/*PROTECTED REGION END*/
+		
+protected:
+
+	friend class CodePackage;
 
 	kdm::code::CodeItem_ptr m_to;
 	kdm::code::CodeItem_ptr m_from;
 
-		
-protected:
-
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(kdm::code::Implements protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // code

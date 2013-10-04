@@ -11,10 +11,14 @@ ParameterDef::ParameterDef() :
 	m_identifier(),
     m_direction()
 {
+	/*PROTECTED REGION ID(ParameterDef constructor) START*/
+	/*PROTECTED REGION END*/
 }
 
 ParameterDef::~ParameterDef()
 {
+	/*PROTECTED REGION ID(ParameterDef destructor) START*/
+	/*PROTECTED REGION END*/
 }
 
 void ParameterDef::setIdentifier(identifier_t _identifier)
@@ -36,7 +40,6 @@ ParameterDef::direction_t ParameterDef::getDirection() const
 {
 	return m_direction;
 }
-
 
 
 

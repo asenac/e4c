@@ -12,7 +12,6 @@ namespace C
 {
 
 
-// C::CStruct
 class CStruct :  public virtual ::C::CStructured
 {
 public:
@@ -24,12 +23,22 @@ public:
 
 	
 	
-	
 
-	
+	/*PROTECTED REGION ID(C::CStruct public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class CPackage;
+
+	
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(C::CStruct protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // C

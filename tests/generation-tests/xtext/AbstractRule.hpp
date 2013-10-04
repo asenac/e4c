@@ -12,8 +12,7 @@ namespace xtext
 {
 
 
-// xtext::AbstractRule
-class AbstractRule
+class AbstractRule : ::ecore::EObject
 {
 public:
 
@@ -25,21 +24,35 @@ public:
 	typedef ::ecore::EString name_t;
 	typedef xtext::TypeRef_ptr type_t;
 	typedef xtext::AbstractElement_ptr alternatives_t;
-
 	
 	void setName(name_t _name);
 	name_t getName() const;
 	type_t getType() const;
+	void setType(type_t type_);
+	type_t releaseType();
 	alternatives_t getAlternatives() const;
+	void setAlternatives(alternatives_t alternatives_);
+	alternatives_t releaseAlternatives();
+	
 
+	/*PROTECTED REGION ID(xtext::AbstractRule public) START*/
+	/*PROTECTED REGION END*/
+		
+protected:
+
+	friend class XtextPackage;
 
 	name_t m_name;
 	std::unique_ptr < xtext::TypeRef > m_type;
 	std::unique_ptr < xtext::AbstractElement > m_alternatives;
 
-		
-protected:
-
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(xtext::AbstractRule protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // xtext

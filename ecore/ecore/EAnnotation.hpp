@@ -40,7 +40,6 @@ public:
 	void addReferences(ecore::EObject_ptr references_);
 	void addAllReferences(const references_t& references_);
 	
-	
 
 	/*PROTECTED REGION ID(ecore::EAnnotation public) START*/
 	/*PROTECTED REGION END*/

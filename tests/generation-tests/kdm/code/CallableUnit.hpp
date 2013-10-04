@@ -14,7 +14,6 @@ namespace code
 {
 
 
-// kdm::code::CallableUnit
 class CallableUnit :  public virtual ::kdm::code::ControlElement
 {
 public:
@@ -25,17 +24,27 @@ public:
 	virtual ~CallableUnit();
 
 	typedef ::kdm::code::CallableKind kind_t;
-
 	
 	void setKind(kind_t _kind);
 	kind_t getKind() const;
+	
 
-
-	kind_t m_kind;
-
+	/*PROTECTED REGION ID(kdm::code::CallableUnit public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class CodePackage;
+
+	kind_t m_kind;
+
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(kdm::code::CallableUnit protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // code

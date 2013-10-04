@@ -9,12 +9,15 @@ using namespace idlmm;
 
 Constant::Constant()
 {
+	/*PROTECTED REGION ID(Constant constructor) START*/
+	/*PROTECTED REGION END*/
 }
 
 Constant::~Constant()
 {
+	/*PROTECTED REGION ID(Constant destructor) START*/
+	/*PROTECTED REGION END*/
 }
-
 
 
 

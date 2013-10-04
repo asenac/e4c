@@ -11,10 +11,14 @@ EStringToStringMapEntry::EStringToStringMapEntry() :
 	m_key(),
     m_value()
 {
+	/*PROTECTED REGION ID(EStringToStringMapEntry constructor) START*/
+	/*PROTECTED REGION END*/
 }
 
 EStringToStringMapEntry::~EStringToStringMapEntry()
 {
+	/*PROTECTED REGION ID(EStringToStringMapEntry destructor) START*/
+	/*PROTECTED REGION END*/
 }
 
 void EStringToStringMapEntry::setKey(key_t _key)
@@ -36,7 +40,6 @@ EStringToStringMapEntry::value_t EStringToStringMapEntry::getValue() const
 {
 	return m_value;
 }
-
 
 
 

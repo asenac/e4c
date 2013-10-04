@@ -12,7 +12,6 @@ namespace tree
 {
 
 
-// tree::Leaf
 class Leaf :  public virtual ::tree::TreeNode
 {
 public:
@@ -24,12 +23,22 @@ public:
 
 	
 	
-	
 
-	
+	/*PROTECTED REGION ID(tree::Leaf public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class TreePackage;
+
+	
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(tree::Leaf protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // tree

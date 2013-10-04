@@ -12,7 +12,6 @@ namespace xtext
 {
 
 
-// xtext::TerminalRule
 class TerminalRule :  public virtual ::xtext::AbstractRule
 {
 public:
@@ -24,12 +23,22 @@ public:
 
 	
 	
-	
 
-	
+	/*PROTECTED REGION ID(xtext::TerminalRule public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class XtextPackage;
+
+	
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(xtext::TerminalRule protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // xtext

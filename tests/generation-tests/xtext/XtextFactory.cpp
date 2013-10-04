@@ -6,7 +6,7 @@ using namespace xtext;
 
 XtextFactory::XtextFactory()
 {
-	m_ePackage = XtextPackage::_instance();
+	// m_ePackage = XtextPackage::_instance();
 	// std::bind(&XtextFactory::createGrammar, this);
 	// m_ePackage->getTag_Grammar();
 	// std::bind(&XtextFactory::createAbstractRule, this);

@@ -12,7 +12,6 @@ namespace SVG
 {
 
 
-// SVG::Svg
 class Svg :  public virtual ::SVG::StructuralElement
 {
 public:
@@ -27,17 +26,27 @@ public:
 	typedef ::PrimitiveTypes::String namespace_t;
 	typedef ::PrimitiveTypes::String version_t;
 	typedef ::PrimitiveTypes::String baseProfile_t;
-
 	
 	owner_SVG_t getOwner_SVG() const;
+	void addOwner_SVG(SVG::SvgFile_ptr owner_SVG_);
+	void addAllOwner_SVG(const owner_SVG_t& owner_SVG_);
 	children_t getChildren() const;
+	void addChildren(SVG::Element_ptr children_);
+	void addAllChildren(const children_t& children_);
 	void setNamespace(namespace_t _namespace);
 	namespace_t getNamespace() const;
 	void setVersion(version_t _version);
 	version_t getVersion() const;
 	void setBaseProfile(baseProfile_t _baseProfile);
 	baseProfile_t getBaseProfile() const;
+	
 
+	/*PROTECTED REGION ID(SVG::Svg public) START*/
+	/*PROTECTED REGION END*/
+		
+protected:
+
+	friend class SVGPackage;
 
 	std::set < SVG::SvgFile_ptr > m_owner_SVG;
 	std::vector < std::unique_ptr < SVG::Element > > m_children;
@@ -45,9 +54,13 @@ public:
 	version_t m_version;
 	baseProfile_t m_baseProfile;
 
-		
-protected:
-
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(SVG::Svg protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // SVG

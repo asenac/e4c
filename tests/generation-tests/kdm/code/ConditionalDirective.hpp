@@ -14,7 +14,6 @@ namespace code
 {
 
 
-// kdm::code::ConditionalDirective
 class ConditionalDirective :  public virtual ::kdm::code::PreprocessorDirective
 {
 public:
@@ -26,12 +25,22 @@ public:
 
 	
 	
-	
 
-	
+	/*PROTECTED REGION ID(kdm::code::ConditionalDirective public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class CodePackage;
+
+	
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(kdm::code::ConditionalDirective protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // code

@@ -14,10 +14,14 @@ EEnumLiteral::EEnumLiteral() :
     m_literal(),
     m_eEnum()
 {
+	/*PROTECTED REGION ID(EEnumLiteral constructor) START*/
+	/*PROTECTED REGION END*/
 }
 
 EEnumLiteral::~EEnumLiteral()
 {
+	/*PROTECTED REGION ID(EEnumLiteral destructor) START*/
+	/*PROTECTED REGION END*/
 }
 
 void EEnumLiteral::setValue(value_t _value)
@@ -55,13 +59,10 @@ EEnumLiteral::eEnum_t EEnumLiteral::getEEnum() const
 	return e4c::returned(m_eEnum);
 }
 
-
 void EEnumLiteral::setEEnum(eEnum_t eEnum_)
 {
 	m_eEnum = eEnum_;
 }
-
-
 
 
 

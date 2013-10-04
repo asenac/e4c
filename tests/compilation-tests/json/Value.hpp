@@ -12,8 +12,7 @@ namespace json
 {
 
 
-// json::Value
-class Value
+class Value : ::ecore::EObject
 {
 public:
 
@@ -23,13 +22,23 @@ public:
 
 	
 	
-	
 
-	
+	/*PROTECTED REGION ID(json::Value public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 	Value();
 
+	friend class JsonPackage;
+
+	
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(json::Value protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // json

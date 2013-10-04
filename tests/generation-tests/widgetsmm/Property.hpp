@@ -12,8 +12,7 @@ namespace widgetsmm
 {
 
 
-// widgetsmm::Property
-class Property
+class Property : ::ecore::EObject
 {
 public:
 
@@ -24,20 +23,30 @@ public:
 
 	typedef :: name_t;
 	typedef :: value_t;
-
 	
 	void setName(name_t _name);
 	name_t getName() const;
 	void setValue(value_t _value);
 	value_t getValue() const;
+	
 
+	/*PROTECTED REGION ID(widgetsmm::Property public) START*/
+	/*PROTECTED REGION END*/
+		
+protected:
+
+	friend class WidgetsmmPackage;
 
 	name_t m_name;
 	value_t m_value;
 
-		
-protected:
-
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(widgetsmm::Property protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // widgetsmm

@@ -12,7 +12,6 @@ namespace SVG
 {
 
 
-// SVG::Path
 class Path :  public virtual ::SVG::Shape
 {
 public:
@@ -26,7 +25,6 @@ public:
 	typedef ::PrimitiveTypes::String d_t;
 	typedef ::PrimitiveTypes::String markerEnd_t;
 	typedef ::PrimitiveTypes::String markerStart_t;
-
 	
 	void setPathLength(pathLength_t _pathLength);
 	pathLength_t getPathLength() const;
@@ -36,16 +34,27 @@ public:
 	markerEnd_t getMarkerEnd() const;
 	void setMarkerStart(markerStart_t _markerStart);
 	markerStart_t getMarkerStart() const;
+	
 
+	/*PROTECTED REGION ID(SVG::Path public) START*/
+	/*PROTECTED REGION END*/
+		
+protected:
+
+	friend class SVGPackage;
 
 	pathLength_t m_pathLength;
 	d_t m_d;
 	markerEnd_t m_markerEnd;
 	markerStart_t m_markerStart;
 
-		
-protected:
-
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(SVG::Path protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // SVG

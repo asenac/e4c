@@ -12,8 +12,7 @@ namespace Make
 {
 
 
-// Make::Comment
-class Comment
+class Comment : ::ecore::EObject
 {
 public:
 
@@ -23,17 +22,27 @@ public:
 	virtual ~Comment();
 
 	typedef ::PrimitiveTypes::String text_t;
-
 	
 	void setText(text_t _text);
 	text_t getText() const;
+	
 
-
-	text_t m_text;
-
+	/*PROTECTED REGION ID(Make::Comment public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class MakePackage;
+
+	text_t m_text;
+
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(Make::Comment protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // Make

@@ -14,7 +14,6 @@ namespace action
 {
 
 
-// kdm::action::TrueFlow
 class TrueFlow :  public virtual ::kdm::action::ControlFlow
 {
 public:
@@ -26,12 +25,22 @@ public:
 
 	
 	
-	
 
-	
+	/*PROTECTED REGION ID(kdm::action::TrueFlow public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class ActionPackage;
+
+	
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(kdm::action::TrueFlow protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // action

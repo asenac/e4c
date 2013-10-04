@@ -6,7 +6,7 @@ using namespace xpand3::declaration;
 
 DeclarationFactory::DeclarationFactory()
 {
-	m_ePackage = DeclarationPackage::_instance();
+	// m_ePackage = DeclarationPackage::_instance();
 	// std::bind(&DeclarationFactory::createDefinition, this);
 	// m_ePackage->getTag_Definition();
 	// std::bind(&DeclarationFactory::createExtension, this);

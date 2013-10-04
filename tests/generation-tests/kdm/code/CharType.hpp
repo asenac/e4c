@@ -14,7 +14,6 @@ namespace code
 {
 
 
-// kdm::code::CharType
 class CharType :  public virtual ::kdm::code::PrimitiveType
 {
 public:
@@ -26,12 +25,22 @@ public:
 
 	
 	
-	
 
-	
+	/*PROTECTED REGION ID(kdm::code::CharType public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class CodePackage;
+
+	
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(kdm::code::CharType protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // code

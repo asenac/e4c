@@ -12,7 +12,6 @@ namespace CST
 {
 
 
-// CST::Tree
 class Tree :  public virtual ::CST::Node
 {
 public:
@@ -24,12 +23,22 @@ public:
 
 	
 	
-	
 
-	
+	/*PROTECTED REGION ID(CST::Tree public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class CSTPackage;
+
+	
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(CST::Tree protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // CST

@@ -14,7 +14,6 @@ namespace data
 {
 
 
-// kdm::data::Index
 class Index :  public virtual ::kdm::data::IndexElement
 {
 public:
@@ -26,12 +25,22 @@ public:
 
 	
 	
-	
 
-	
+	/*PROTECTED REGION ID(kdm::data::Index public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class DataPackage;
+
+	
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(kdm::data::Index protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // data

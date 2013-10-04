@@ -14,7 +14,6 @@ namespace kdm
 {
 
 
-// kdm::kdm::Audit
 class Audit :  public virtual ::kdm::core::Element
 {
 public:
@@ -27,7 +26,6 @@ public:
 	typedef ::kdm::core::String description_t;
 	typedef ::kdm::core::String author_t;
 	typedef ::kdm::core::String date_t;
-
 	
 	void setDescription(description_t _description);
 	description_t getDescription() const;
@@ -35,15 +33,26 @@ public:
 	author_t getAuthor() const;
 	void setDate(date_t _date);
 	date_t getDate() const;
+	
 
+	/*PROTECTED REGION ID(kdm::kdm::Audit public) START*/
+	/*PROTECTED REGION END*/
+		
+protected:
+
+	friend class KdmPackage;
 
 	description_t m_description;
 	author_t m_author;
 	date_t m_date;
 
-		
-protected:
-
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(kdm::kdm::Audit protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // kdm

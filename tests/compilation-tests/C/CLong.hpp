@@ -12,7 +12,6 @@ namespace C
 {
 
 
-// C::CLong
 class CLong :  public virtual ::C::CInt
 {
 public:
@@ -24,12 +23,22 @@ public:
 
 	
 	
-	
 
-	
+	/*PROTECTED REGION ID(C::CLong public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class CPackage;
+
+	
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(C::CLong protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // C

@@ -11,10 +11,14 @@ using namespace idlmm;
 ForwardDef::ForwardDef() : 
 	m_definition()
 {
+	/*PROTECTED REGION ID(ForwardDef constructor) START*/
+	/*PROTECTED REGION END*/
 }
 
 ForwardDef::~ForwardDef()
 {
+	/*PROTECTED REGION ID(ForwardDef destructor) START*/
+	/*PROTECTED REGION END*/
 }
 
 ForwardDef::definition_t ForwardDef::getDefinition() const
@@ -24,11 +28,10 @@ ForwardDef::definition_t ForwardDef::getDefinition() const
 
 void ForwardDef::setDefinition(definition_t definition_)
 {
+	if (m_definition == definition_)
+		return;
 	m_definition = definition_;
-	
 }
-
-
 
 
 

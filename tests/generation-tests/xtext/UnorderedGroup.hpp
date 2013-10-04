@@ -12,7 +12,6 @@ namespace xtext
 {
 
 
-// xtext::UnorderedGroup
 class UnorderedGroup :  public virtual ::xtext::CompoundElement
 {
 public:
@@ -24,12 +23,22 @@ public:
 
 	
 	
-	
 
-	
+	/*PROTECTED REGION ID(xtext::UnorderedGroup public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class XtextPackage;
+
+	
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(xtext::UnorderedGroup protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // xtext

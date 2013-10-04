@@ -12,8 +12,7 @@ namespace myDsl
 {
 
 
-// myDsl::Type
-class Type
+class Type : ::ecore::EObject
 {
 public:
 
@@ -23,17 +22,27 @@ public:
 	virtual ~Type();
 
 	typedef ::ecore::EString name_t;
-
 	
 	void setName(name_t _name);
 	name_t getName() const;
+	
 
-
-	name_t m_name;
-
+	/*PROTECTED REGION ID(myDsl::Type public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class MyDslPackage;
+
+	name_t m_name;
+
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(myDsl::Type protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // myDsl

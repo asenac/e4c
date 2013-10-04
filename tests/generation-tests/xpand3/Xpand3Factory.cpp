@@ -6,7 +6,7 @@ using namespace xpand3;
 
 Xpand3Factory::Xpand3Factory()
 {
-	m_ePackage = Xpand3Package::_instance();
+	// m_ePackage = Xpand3Package::_instance();
 	// std::bind(&Xpand3Factory::createFile, this);
 	// m_ePackage->getTag_File();
 	// std::bind(&Xpand3Factory::createImportStatement, this);

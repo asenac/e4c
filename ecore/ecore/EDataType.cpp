@@ -10,10 +10,14 @@ using namespace ecore;
 EDataType::EDataType() : 
 	m_serializable()
 {
+	/*PROTECTED REGION ID(EDataType constructor) START*/
+	/*PROTECTED REGION END*/
 }
 
 EDataType::~EDataType()
 {
+	/*PROTECTED REGION ID(EDataType destructor) START*/
+	/*PROTECTED REGION END*/
 }
 
 void EDataType::setSerializable(serializable_t _serializable)
@@ -25,7 +29,6 @@ EDataType::serializable_t EDataType::getSerializable() const
 {
 	return m_serializable;
 }
-
 
 
 

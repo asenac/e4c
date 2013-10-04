@@ -14,7 +14,6 @@ namespace data
 {
 
 
-// kdm::data::RelationalView
 class RelationalView :  public virtual ::kdm::data::ColumnSet
 {
 public:
@@ -26,12 +25,22 @@ public:
 
 	
 	
-	
 
-	
+	/*PROTECTED REGION ID(kdm::data::RelationalView public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class DataPackage;
+
+	
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(kdm::data::RelationalView protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // data

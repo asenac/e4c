@@ -37,7 +37,6 @@ public:
 	eExceptions_t getEExceptions() const;
 	void addEExceptions(ecore::EClassifier_ptr eExceptions_);
 	void addAllEExceptions(const eExceptions_t& eExceptions_);
-	
 	eGenericExceptions_t getEGenericExceptions() const;
 	void addEGenericExceptions(ecore::EGenericType_ptr eGenericExceptions_);
 	void addAllEGenericExceptions(const eGenericExceptions_t& eGenericExceptions_);

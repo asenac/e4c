@@ -12,8 +12,7 @@ namespace emof
 {
 
 
-// emof::MultiplicityElement
-class MultiplicityElement
+class MultiplicityElement : ::ecore::EObject
 {
 public:
 
@@ -25,7 +24,6 @@ public:
 	typedef ::emof::Boolean isUnique_t;
 	typedef ::emof::Integer lower_t;
 	typedef ::emof::UnlimitedNatural upper_t;
-
 	
 	void setIsOrdered(isOrdered_t _isOrdered);
 	isOrdered_t getIsOrdered() const;
@@ -35,17 +33,28 @@ public:
 	lower_t getLower() const;
 	void setUpper(upper_t _upper);
 	upper_t getUpper() const;
+	
 
+	/*PROTECTED REGION ID(emof::MultiplicityElement public) START*/
+	/*PROTECTED REGION END*/
+		
+protected:
+	MultiplicityElement();
+
+	friend class EmofPackage;
 
 	isOrdered_t m_isOrdered;
 	isUnique_t m_isUnique;
 	lower_t m_lower;
 	upper_t m_upper;
 
-		
-protected:
-	MultiplicityElement();
-
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(emof::MultiplicityElement protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // emof

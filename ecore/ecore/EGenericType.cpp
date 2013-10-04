@@ -18,10 +18,14 @@ EGenericType::EGenericType() :
     m_eTypeParameter(),
     m_eClassifier()
 {
+	/*PROTECTED REGION ID(EGenericType constructor) START*/
+	/*PROTECTED REGION END*/
 }
 
 EGenericType::~EGenericType()
 {
+	/*PROTECTED REGION ID(EGenericType destructor) START*/
+	/*PROTECTED REGION END*/
 }
 
 EGenericType::eUpperBound_t EGenericType::getEUpperBound() const
@@ -40,7 +44,6 @@ EGenericType::eUpperBound_t EGenericType::releaseEUpperBound()
 	return m_eUpperBound.release();
 }
 
-
 EGenericType::eTypeArguments_t EGenericType::getETypeArguments() const
 {
 	return e4c::returned(m_eTypeArguments);
@@ -58,7 +61,6 @@ void EGenericType::addAllETypeArguments(const eTypeArguments_t& eTypeArguments_)
 		addETypeArguments(*i);
 }
 
-
 EGenericType::eRawType_t EGenericType::getERawType() const
 {
 	return e4c::returned(m_eRawType);
@@ -66,10 +68,10 @@ EGenericType::eRawType_t EGenericType::getERawType() const
 
 void EGenericType::setERawType(eRawType_t eRawType_)
 {
+	if (m_eRawType == eRawType_)
+		return;
 	m_eRawType = eRawType_;
-	
 }
-
 
 EGenericType::eLowerBound_t EGenericType::getELowerBound() const
 {
@@ -87,7 +89,6 @@ EGenericType::eLowerBound_t EGenericType::releaseELowerBound()
 	return m_eLowerBound.release();
 }
 
-
 EGenericType::eTypeParameter_t EGenericType::getETypeParameter() const
 {
 	return e4c::returned(m_eTypeParameter);
@@ -95,10 +96,10 @@ EGenericType::eTypeParameter_t EGenericType::getETypeParameter() const
 
 void EGenericType::setETypeParameter(eTypeParameter_t eTypeParameter_)
 {
+	if (m_eTypeParameter == eTypeParameter_)
+		return;
 	m_eTypeParameter = eTypeParameter_;
-	
 }
-
 
 EGenericType::eClassifier_t EGenericType::getEClassifier() const
 {
@@ -107,11 +108,10 @@ EGenericType::eClassifier_t EGenericType::getEClassifier() const
 
 void EGenericType::setEClassifier(eClassifier_t eClassifier_)
 {
+	if (m_eClassifier == eClassifier_)
+		return;
 	m_eClassifier = eClassifier_;
-	
 }
-
-
 
 
 

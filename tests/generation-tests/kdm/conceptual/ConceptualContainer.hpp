@@ -14,7 +14,6 @@ namespace conceptual
 {
 
 
-// kdm::conceptual::ConceptualContainer
 class ConceptualContainer :  public virtual ::kdm::conceptual::AbstractConceptualElement
 {
 public:
@@ -25,16 +24,28 @@ public:
 	virtual ~ConceptualContainer();
 
 	typedef std::set < kdm::conceptual::AbstractConceptualElement_ptr > conceptualElement_t;
-
 	
 	conceptualElement_t getConceptualElement() const;
+	void addConceptualElement(kdm::conceptual::AbstractConceptualElement_ptr conceptualElement_);
+	void addAllConceptualElement(const conceptualElement_t& conceptualElement_);
+	
 
-
-	std::set < std::unique_ptr < kdm::conceptual::AbstractConceptualElement > > m_conceptualElement;
-
+	/*PROTECTED REGION ID(kdm::conceptual::ConceptualContainer public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class ConceptualPackage;
+
+	std::set < std::unique_ptr < kdm::conceptual::AbstractConceptualElement > > m_conceptualElement;
+
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(kdm::conceptual::ConceptualContainer protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // conceptual

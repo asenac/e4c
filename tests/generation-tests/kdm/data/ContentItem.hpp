@@ -14,7 +14,6 @@ namespace data
 {
 
 
-// kdm::data::ContentItem
 class ContentItem :  public virtual ::kdm::data::AbstractContentElement
 {
 public:
@@ -26,18 +25,31 @@ public:
 
 	typedef kdm::data::ComplexContentType_ptr type_t;
 	typedef std::set < kdm::data::AbstractContentElement_ptr > contentElement_t;
-
 	
 	type_t getType() const;
+	void setType(type_t type_);
 	contentElement_t getContentElement() const;
+	void addContentElement(kdm::data::AbstractContentElement_ptr contentElement_);
+	void addAllContentElement(const contentElement_t& contentElement_);
+	
 
+	/*PROTECTED REGION ID(kdm::data::ContentItem public) START*/
+	/*PROTECTED REGION END*/
+		
+protected:
+
+	friend class DataPackage;
 
 	kdm::data::ComplexContentType_ptr m_type;
 	std::set < std::unique_ptr < kdm::data::AbstractContentElement > > m_contentElement;
 
-		
-protected:
-
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(kdm::data::ContentItem protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // data

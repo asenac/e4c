@@ -12,7 +12,6 @@ namespace emof
 {
 
 
-// emof::DataType
 class DataType :  public virtual ::emof::Type
 {
 public:
@@ -24,12 +23,22 @@ public:
 
 	
 	
-	
 
-	
+	/*PROTECTED REGION ID(emof::DataType public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class EmofPackage;
+
+	
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(emof::DataType protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // emof

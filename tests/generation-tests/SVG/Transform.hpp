@@ -12,7 +12,6 @@ namespace SVG
 {
 
 
-// SVG::Transform
 class Transform :  public virtual ::SVG::Attribute
 {
 public:
@@ -23,13 +22,23 @@ public:
 
 	
 	
-	
 
-	
+	/*PROTECTED REGION ID(SVG::Transform public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 	Transform();
 
+	friend class SVGPackage;
+
+	
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(SVG::Transform protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // SVG

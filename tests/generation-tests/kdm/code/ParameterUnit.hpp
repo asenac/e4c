@@ -14,7 +14,6 @@ namespace code
 {
 
 
-// kdm::code::ParameterUnit
 class ParameterUnit :  public virtual ::kdm::code::DataElement
 {
 public:
@@ -26,20 +25,30 @@ public:
 
 	typedef ::kdm::code::ParameterKind kind_t;
 	typedef ::kdm::core::Integer pos_t;
-
 	
 	void setKind(kind_t _kind);
 	kind_t getKind() const;
 	void setPos(pos_t _pos);
 	pos_t getPos() const;
+	
 
+	/*PROTECTED REGION ID(kdm::code::ParameterUnit public) START*/
+	/*PROTECTED REGION END*/
+		
+protected:
+
+	friend class CodePackage;
 
 	kind_t m_kind;
 	pos_t m_pos;
 
-		
-protected:
-
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(kdm::code::ParameterUnit protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // code

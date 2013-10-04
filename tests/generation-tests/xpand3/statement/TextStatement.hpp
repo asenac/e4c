@@ -14,7 +14,6 @@ namespace statement
 {
 
 
-// xpand3::statement::TextStatement
 class TextStatement :  public virtual ::xpand3::statement::AbstractStatement
 {
 public:
@@ -26,20 +25,30 @@ public:
 
 	typedef ::ecore::EString value_t;
 	typedef ::ecore::EBoolean deleteLine_t;
-
 	
 	void setValue(value_t _value);
 	value_t getValue() const;
 	void setDeleteLine(deleteLine_t _deleteLine);
 	deleteLine_t getDeleteLine() const;
+	
 
+	/*PROTECTED REGION ID(xpand3::statement::TextStatement public) START*/
+	/*PROTECTED REGION END*/
+		
+protected:
+
+	friend class StatementPackage;
 
 	value_t m_value;
 	deleteLine_t m_deleteLine;
 
-		
-protected:
-
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(xpand3::statement::TextStatement protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // statement

@@ -1,16 +1,24 @@
 
 #include "Rect.hpp"
+#include <SVG/SVGPackage.hpp>
 
 using namespace SVG;
+
+/*PROTECTED REGION ID(SVG::Rect include) START*/
+/*PROTECTED REGION END*/
 
 Rect::Rect() : 
 	m_rx(),
     m_ry()
 {
+	/*PROTECTED REGION ID(Rect constructor) START*/
+	/*PROTECTED REGION END*/
 }
 
 Rect::~Rect()
 {
+	/*PROTECTED REGION ID(Rect destructor) START*/
+	/*PROTECTED REGION END*/
 }
 
 void Rect::setRx(rx_t _rx)
@@ -35,3 +43,11 @@ Rect::ry_t Rect::getRy() const
 
 
 
+/*PROTECTED REGION ID(SVG::Rect implementation) START*/
+/*PROTECTED REGION END*/
+
+ecore::EClass_ptr Rect::eClassImpl() const
+{
+	return SVGPackage::_instance()->getRect();
+}
+ 

@@ -10,7 +10,42 @@
 
 using namespace ecore;
 
-/*PROTECTED REGION ID(ecore::EClass include) START*/
+/*PROTECTED REGION ID(ecore::EClass include) ENABLED START*/
+#include <map>
+
+struct EClass::Impl
+{
+    typedef std::map< ecore::EStructuralFeature_ptr, e4c::get_t >
+        gets_t;
+    typedef std::map< ecore::EStructuralFeature_ptr, e4c::set_t >
+        sets_t;
+
+    gets_t gets;
+    sets_t sets;
+};
+
+void EClass::addFeatureAccesors(ecore::EStructuralFeature_ptr feature, 
+        e4c::get_t g, e4c::set_t s)
+{
+    if (g) m_impl->gets[feature] = g;
+    if (s) m_impl->sets[feature] = s;
+}
+
+e4c::get_t EClass::getFeatureGet(ecore::EStructuralFeature_ptr feature)
+{
+    Impl::gets_t::iterator it = m_impl->gets.find(feature);
+    if (it != m_impl->gets.end())
+        return it->second;
+    return e4c::get_t();
+}
+
+e4c::set_t EClass::getFeatureSet(ecore::EStructuralFeature_ptr feature)
+{
+    Impl::sets_t::iterator it = m_impl->sets.find(feature);
+    if (it != m_impl->sets.end())
+        return it->second;
+    return e4c::set_t();
+}
 /*PROTECTED REGION END*/
 
 EClass::EClass() : 
@@ -31,10 +66,16 @@ EClass::EClass() :
     m_eGenericSuperTypes(),
     m_eAllGenericSuperTypes()
 {
+	/*PROTECTED REGION ID(EClass constructor) ENABLED START*/
+    m_impl = new Impl();
+	/*PROTECTED REGION END*/
 }
 
 EClass::~EClass()
 {
+	/*PROTECTED REGION ID(EClass destructor) ENABLED START*/
+    delete m_impl;
+	/*PROTECTED REGION END*/
 }
 
 void EClass::setAbstract(abstract_t _abstract)
@@ -64,8 +105,9 @@ EClass::eSuperTypes_t EClass::getESuperTypes() const
 
 void EClass::addESuperTypes(ecore::EClass_ptr eSuperTypes_)
 {
+	if (e4c::contains(m_eSuperTypes, eSuperTypes_))
+		return;
 	m_eSuperTypes.push_back(eSuperTypes_);
-	
 }
 
 void EClass::addAllESuperTypes(const eSuperTypes_t& eSuperTypes_)
@@ -73,7 +115,6 @@ void EClass::addAllESuperTypes(const eSuperTypes_t& eSuperTypes_)
 	for (auto i = eSuperTypes_.begin(); i != eSuperTypes_.end(); i++)
 		addESuperTypes(*i);
 }
-
 
 EClass::eOperations_t EClass::getEOperations() const
 {
@@ -93,7 +134,6 @@ void EClass::addAllEOperations(const eOperations_t& eOperations_)
 		addEOperations(*i);
 }
 
-
 EClass::eAllAttributes_t EClass::getEAllAttributes() const
 {
 	return e4c::returned(m_eAllAttributes);
@@ -101,8 +141,9 @@ EClass::eAllAttributes_t EClass::getEAllAttributes() const
 
 void EClass::addEAllAttributes(ecore::EAttribute_ptr eAllAttributes_)
 {
+	if (e4c::contains(m_eAllAttributes, eAllAttributes_))
+		return;
 	m_eAllAttributes.push_back(eAllAttributes_);
-	
 }
 
 void EClass::addAllEAllAttributes(const eAllAttributes_t& eAllAttributes_)
@@ -111,7 +152,6 @@ void EClass::addAllEAllAttributes(const eAllAttributes_t& eAllAttributes_)
 		addEAllAttributes(*i);
 }
 
-
 EClass::eAllReferences_t EClass::getEAllReferences() const
 {
 	return e4c::returned(m_eAllReferences);
@@ -119,8 +159,9 @@ EClass::eAllReferences_t EClass::getEAllReferences() const
 
 void EClass::addEAllReferences(ecore::EReference_ptr eAllReferences_)
 {
+	if (e4c::contains(m_eAllReferences, eAllReferences_))
+		return;
 	m_eAllReferences.push_back(eAllReferences_);
-	
 }
 
 void EClass::addAllEAllReferences(const eAllReferences_t& eAllReferences_)
@@ -129,7 +170,6 @@ void EClass::addAllEAllReferences(const eAllReferences_t& eAllReferences_)
 		addEAllReferences(*i);
 }
 
-
 EClass::eReferences_t EClass::getEReferences() const
 {
 	return e4c::returned(m_eReferences);
@@ -137,8 +177,9 @@ EClass::eReferences_t EClass::getEReferences() const
 
 void EClass::addEReferences(ecore::EReference_ptr eReferences_)
 {
+	if (e4c::contains(m_eReferences, eReferences_))
+		return;
 	m_eReferences.push_back(eReferences_);
-	
 }
 
 void EClass::addAllEReferences(const eReferences_t& eReferences_)
@@ -147,7 +188,6 @@ void EClass::addAllEReferences(const eReferences_t& eReferences_)
 		addEReferences(*i);
 }
 
-
 EClass::eAttributes_t EClass::getEAttributes() const
 {
 	return e4c::returned(m_eAttributes);
@@ -155,8 +195,9 @@ EClass::eAttributes_t EClass::getEAttributes() const
 
 void EClass::addEAttributes(ecore::EAttribute_ptr eAttributes_)
 {
+	if (e4c::contains(m_eAttributes, eAttributes_))
+		return;
 	m_eAttributes.push_back(eAttributes_);
-	
 }
 
 void EClass::addAllEAttributes(const eAttributes_t& eAttributes_)
@@ -165,7 +206,6 @@ void EClass::addAllEAttributes(const eAttributes_t& eAttributes_)
 		addEAttributes(*i);
 }
 
-
 EClass::eAllContainments_t EClass::getEAllContainments() const
 {
 	return e4c::returned(m_eAllContainments);
@@ -173,8 +213,9 @@ EClass::eAllContainments_t EClass::getEAllContainments() const
 
 void EClass::addEAllContainments(ecore::EReference_ptr eAllContainments_)
 {
+	if (e4c::contains(m_eAllContainments, eAllContainments_))
+		return;
 	m_eAllContainments.push_back(eAllContainments_);
-	
 }
 
 void EClass::addAllEAllContainments(const eAllContainments_t& eAllContainments_)
@@ -183,7 +224,6 @@ void EClass::addAllEAllContainments(const eAllContainments_t& eAllContainments_)
 		addEAllContainments(*i);
 }
 
-
 EClass::eAllOperations_t EClass::getEAllOperations() const
 {
 	return e4c::returned(m_eAllOperations);
@@ -191,8 +231,9 @@ EClass::eAllOperations_t EClass::getEAllOperations() const
 
 void EClass::addEAllOperations(ecore::EOperation_ptr eAllOperations_)
 {
+	if (e4c::contains(m_eAllOperations, eAllOperations_))
+		return;
 	m_eAllOperations.push_back(eAllOperations_);
-	
 }
 
 void EClass::addAllEAllOperations(const eAllOperations_t& eAllOperations_)
@@ -201,7 +242,6 @@ void EClass::addAllEAllOperations(const eAllOperations_t& eAllOperations_)
 		addEAllOperations(*i);
 }
 
-
 EClass::eAllStructuralFeatures_t EClass::getEAllStructuralFeatures() const
 {
 	return e4c::returned(m_eAllStructuralFeatures);
@@ -209,8 +249,9 @@ EClass::eAllStructuralFeatures_t EClass::getEAllStructuralFeatures() const
 
 void EClass::addEAllStructuralFeatures(ecore::EStructuralFeature_ptr eAllStructuralFeatures_)
 {
+	if (e4c::contains(m_eAllStructuralFeatures, eAllStructuralFeatures_))
+		return;
 	m_eAllStructuralFeatures.push_back(eAllStructuralFeatures_);
-	
 }
 
 void EClass::addAllEAllStructuralFeatures(const eAllStructuralFeatures_t& eAllStructuralFeatures_)
@@ -219,7 +260,6 @@ void EClass::addAllEAllStructuralFeatures(const eAllStructuralFeatures_t& eAllSt
 		addEAllStructuralFeatures(*i);
 }
 
-
 EClass::eAllSuperTypes_t EClass::getEAllSuperTypes() const
 {
 	return e4c::returned(m_eAllSuperTypes);
@@ -227,8 +267,9 @@ EClass::eAllSuperTypes_t EClass::getEAllSuperTypes() const
 
 void EClass::addEAllSuperTypes(ecore::EClass_ptr eAllSuperTypes_)
 {
+	if (e4c::contains(m_eAllSuperTypes, eAllSuperTypes_))
+		return;
 	m_eAllSuperTypes.push_back(eAllSuperTypes_);
-	
 }
 
 void EClass::addAllEAllSuperTypes(const eAllSuperTypes_t& eAllSuperTypes_)
@@ -237,7 +278,6 @@ void EClass::addAllEAllSuperTypes(const eAllSuperTypes_t& eAllSuperTypes_)
 		addEAllSuperTypes(*i);
 }
 
-
 EClass::eIDAttribute_t EClass::getEIDAttribute() const
 {
 	return e4c::returned(m_eIDAttribute);
@@ -245,10 +285,10 @@ EClass::eIDAttribute_t EClass::getEIDAttribute() const
 
 void EClass::setEIDAttribute(eIDAttribute_t eIDAttribute_)
 {
+	if (m_eIDAttribute == eIDAttribute_)
+		return;
 	m_eIDAttribute = eIDAttribute_;
-	
 }
-
 
 EClass::eStructuralFeatures_t EClass::getEStructuralFeatures() const
 {
@@ -268,7 +308,6 @@ void EClass::addAllEStructuralFeatures(const eStructuralFeatures_t& eStructuralF
 		addEStructuralFeatures(*i);
 }
 
-
 EClass::eGenericSuperTypes_t EClass::getEGenericSuperTypes() const
 {
 	return e4c::returned(m_eGenericSuperTypes);
@@ -286,7 +325,6 @@ void EClass::addAllEGenericSuperTypes(const eGenericSuperTypes_t& eGenericSuperT
 		addEGenericSuperTypes(*i);
 }
 
-
 EClass::eAllGenericSuperTypes_t EClass::getEAllGenericSuperTypes() const
 {
 	return e4c::returned(m_eAllGenericSuperTypes);
@@ -294,8 +332,9 @@ EClass::eAllGenericSuperTypes_t EClass::getEAllGenericSuperTypes() const
 
 void EClass::addEAllGenericSuperTypes(ecore::EGenericType_ptr eAllGenericSuperTypes_)
 {
+	if (e4c::contains(m_eAllGenericSuperTypes, eAllGenericSuperTypes_))
+		return;
 	m_eAllGenericSuperTypes.push_back(eAllGenericSuperTypes_);
-	
 }
 
 void EClass::addAllEAllGenericSuperTypes(const eAllGenericSuperTypes_t& eAllGenericSuperTypes_)
@@ -303,8 +342,6 @@ void EClass::addAllEAllGenericSuperTypes(const eAllGenericSuperTypes_t& eAllGene
 	for (auto i = eAllGenericSuperTypes_.begin(); i != eAllGenericSuperTypes_.end(); i++)
 		addEAllGenericSuperTypes(*i);
 }
-
-
 
 
 ecore::EBoolean EClass::isSuperTypeOf(ecore::EClass_ptr someClass)

@@ -12,7 +12,6 @@ namespace C
 {
 
 
-// C::CParameter
 class CParameter :  public virtual ::C::CTypedElement
 {
 public:
@@ -23,16 +22,28 @@ public:
 	virtual ~CParameter();
 
 	typedef C::BehavioralFeature_ptr behavioralFeature_t;
-
 	
 	behavioralFeature_t getBehavioralFeature() const;
+	
 
-
-	C::BehavioralFeature_ptr m_behavioralFeature;
-
+	/*PROTECTED REGION ID(C::CParameter public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class CPackage;
+
+	C::BehavioralFeature_ptr m_behavioralFeature;
+
+	
+	friend class ::C::BehavioralFeature;
+	void setBehavioralFeature(behavioralFeature_t behavioralFeature_);
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(C::CParameter protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // C

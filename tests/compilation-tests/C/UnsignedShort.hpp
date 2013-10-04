@@ -12,7 +12,6 @@ namespace C
 {
 
 
-// C::UnsignedShort
 class UnsignedShort :  public virtual ::C::CUnsignedInt
 {
 public:
@@ -24,12 +23,22 @@ public:
 
 	
 	
-	
 
-	
+	/*PROTECTED REGION ID(C::UnsignedShort public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class CPackage;
+
+	
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(C::UnsignedShort protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // C

@@ -12,7 +12,6 @@ namespace emof
 {
 
 
-// emof::Type
 class Type :  public virtual ::emof::NamedElement
 {
 public:
@@ -22,17 +21,29 @@ public:
 	virtual ~Type();
 
 	typedef emof::Package_ptr package_t;
-
 	
 	package_t getPackage() const;
+	
 
-
-	emof::Package_ptr m_package;
-
+	/*PROTECTED REGION ID(emof::Type public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 	Type();
 
+	friend class EmofPackage;
+
+	emof::Package_ptr m_package;
+
+	
+	friend class ::emof::Package;
+	void setPackage(package_t package_);
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(emof::Type protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // emof

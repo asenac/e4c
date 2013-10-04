@@ -14,7 +14,6 @@ namespace data
 {
 
 
-// kdm::data::DataEvent
 class DataEvent :  public virtual ::kdm::data::DataResource
 {
 public:
@@ -25,17 +24,27 @@ public:
 	virtual ~DataEvent();
 
 	typedef ::kdm::core::String kind_t;
-
 	
 	void setKind(kind_t _kind);
 	kind_t getKind() const;
+	
 
-
-	kind_t m_kind;
-
+	/*PROTECTED REGION ID(kdm::data::DataEvent public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class DataPackage;
+
+	kind_t m_kind;
+
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(kdm::data::DataEvent protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // data

@@ -1,16 +1,24 @@
 
 #include "Translate.hpp"
+#include <SVG/SVGPackage.hpp>
 
 using namespace SVG;
+
+/*PROTECTED REGION ID(SVG::Translate include) START*/
+/*PROTECTED REGION END*/
 
 Translate::Translate() : 
 	m_tx(),
     m_ty()
 {
+	/*PROTECTED REGION ID(Translate constructor) START*/
+	/*PROTECTED REGION END*/
 }
 
 Translate::~Translate()
 {
+	/*PROTECTED REGION ID(Translate destructor) START*/
+	/*PROTECTED REGION END*/
 }
 
 void Translate::setTx(tx_t _tx)
@@ -35,3 +43,11 @@ Translate::ty_t Translate::getTy() const
 
 
 
+/*PROTECTED REGION ID(SVG::Translate implementation) START*/
+/*PROTECTED REGION END*/
+
+ecore::EClass_ptr Translate::eClassImpl() const
+{
+	return SVGPackage::_instance()->getTranslate();
+}
+ 

@@ -114,7 +114,7 @@ protected:
 		«ELSEIF ordered-»
 		«ELSE-»
 		«ENDIF-»
-	«ELSEIF !container»
+	«ELSEIF !container-»
 		«IF upperBound == 1-»
 	void set«getNameUpper()»(«getName()»_t «getName()»_);
 		«ELSEIF ordered-»
@@ -149,24 +149,24 @@ void «EContainingClass.getName()»::set«getNameUpper()»(«getName()»_t _«getName()
 void «EContainingClass.getName()»::set«getNameUpper()»(«getName()»_t «getName()»_)
 {
 	m_«getName()».reset(«getName()»_);
-	«IF EOpposite != null-»
+		«IF EOpposite != null-»
 	m_«getName()»->set«EOpposite.getNameUpper()»(this);
-	«ENDIF-»
+		«ENDIF-»
 }
 
 «EContainingClass.getName()»::«getName()»_t «EContainingClass.getName()»::release«getNameUpper()»()
 {
-	«IF EOpposite != null-»
+		«IF EOpposite != null-»
 	m_«getName()»->set«EOpposite.getNameUpper()»(0);
-	«ENDIF-»
+		«ENDIF-»
 	return m_«getName()».release();
 }
-	«ELSE-»«REM»Required upperBound == 1«ENDREM»
+	«ELSE-»«REM»Required EOpposite.upperBound == 1«ENDREM»
 void «EContainingClass.getName()»::add«getNameUpper()»(«getNoContaimentPtr()» «getName()»_)
 {
-	«IF EOpposite != null-»
+		«IF EOpposite != null-»
 	«getName()»_->set«EOpposite.getNameUpper()»(this);
-	«ENDIF-»
+		«ENDIF-»
 	m_«getName()».«getInsertMethod()»(«getContaimentPtr()»(«getName()»_));
 }
 
@@ -176,7 +176,7 @@ void «EContainingClass.getName()»::addAll«getNameUpper()»(const «getName()»_t& «
 		add«getNameUpper()»(*i);
 }
 	«ENDIF-»
-«ELSEIF container-»«REM»Protected method«ENDREM»
+«ELSEIF container-»«REM»Protected method«ENDREM-»
 void «EContainingClass.getName()»::set«getNameUpper()»(«getName()»_t «getName()»_)
 {
 	m_«getName()» = «getName()»_;
@@ -185,26 +185,36 @@ void «EContainingClass.getName()»::set«getNameUpper()»(«getName()»_t «getName()»
 	«IF upperBound == 1-»
 void «EContainingClass.getName()»::set«getNameUpper()»(«getName()»_t «getName()»_)
 {
+	if (m_«getName()» == «getName()»_)
+		return;
 		«IF EOpposite != null && EOpposite.upperBound == 1-»
 	if (m_«getName()»)
 		m_«getName()»->set«EOpposite.getNameUpper()»(0);
+		«ELSEIF EOpposite != null-»
+	«REM»TODO Implement case when upperBound is greater than 1«ENDREM-»
+	if (m_«getName()»)
+		; // TODO remove me
 		«ENDIF-»
 	m_«getName()» = «getName()»_;
 		«IF EOpposite != null && EOpposite.upperBound == 1-»
-	if (m_«getName()» && m_«getName()»->get«EOpposite.getNameUpper()»() != this)
+	if (m_«getName()»)
 		m_«getName()»->set«EOpposite.getNameUpper()»(this);
+		«ELSEIF EOpposite != null-»
+	if (m_«getName()»)
+		m_«getName()»->add«EOpposite.getNameUpper()»(this);
 		«ENDIF-»
-	«REM»TODO Implement case when upperBound is greater than 1«ENDREM»
 }
 	«ELSE-»
 void «EContainingClass.getName()»::add«getNameUpper()»(«getNoContaimentPtr()» «getName()»_)
 {
+	if (e4c::contains(m_«getName()», «getName()»_))
+		return;
 	m_«getName()».«getInsertMethod()»(«getName()»_);
 		«IF EOpposite != null && EOpposite.upperBound == 1-»
-	if («getName()»_ && «getName()»_->get«EOpposite.getNameUpper()»() != this)
-		«getName()»_->set«EOpposite.getNameUpper()»(this);
+	«getName()»_->set«EOpposite.getNameUpper()»(this);
+		«ELSEIF EOpposite != null-»
+	«getName()»_->add«EOpposite.getNameUpper()»(this);
 		«ENDIF-»
-	«REM»TODO Implement case when upperBound is greater than 1«ENDREM»
 }
 
 void «EContainingClass.getName()»::addAll«getNameUpper()»(const «getName()»_t& «getName()»_)
@@ -213,7 +223,7 @@ void «EContainingClass.getName()»::addAll«getNameUpper()»(const «getName()»_t& «
 		add«getNameUpper()»(*i);
 }
 	«ENDIF-»
-«ENDIF»
+«ENDIF-»
 
 «ENDDEFINE»
 
@@ -235,13 +245,17 @@ using namespace «EPackage.getFQN()»;
 «getName()»::«getName()»()«IF !EStructuralFeatures.isEmpty-» : 
 	«FOREACH EStructuralFeatures AS e SEPARATOR ",\n    "»m_«e.getName()»()«ENDFOREACH»«ENDIF»
 {
+	«PROTECT CSTART '/*' CEND '*/' ID getName() + " constructor" DISABLE»
+	«ENDPROTECT»
 }
 
 «getName()»::~«getName()»()
 {
+	«PROTECT CSTART '/*' CEND '*/' ID getName() + " destructor" DISABLE»
+	«ENDPROTECT»
 }
 
-«EXPAND generateAccessorsImpl FOREACH EStructuralFeatures»
+«EXPAND generateAccessorsImpl FOREACH EStructuralFeatures-»
 
 «FOREACH EOperations AS o-»
 «o.getSignature(true)»

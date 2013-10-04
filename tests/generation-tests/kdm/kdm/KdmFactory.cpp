@@ -6,7 +6,7 @@ using namespace kdm::kdm;
 
 KdmFactory::KdmFactory()
 {
-	m_ePackage = KdmPackage::_instance();
+	// m_ePackage = KdmPackage::_instance();
 	// std::bind(&KdmFactory::createAudit, this);
 	// m_ePackage->getTag_Audit();
 	// std::bind(&KdmFactory::createSegment, this);

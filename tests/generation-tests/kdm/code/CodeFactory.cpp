@@ -6,7 +6,7 @@ using namespace kdm::code;
 
 CodeFactory::CodeFactory()
 {
-	m_ePackage = CodePackage::_instance();
+	// m_ePackage = CodePackage::_instance();
 	// std::bind(&CodeFactory::createControlElement, this);
 	// m_ePackage->getTag_ControlElement();
 	// std::bind(&CodeFactory::createMethodUnit, this);

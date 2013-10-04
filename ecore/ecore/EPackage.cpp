@@ -18,10 +18,14 @@ EPackage::EPackage() :
     m_eSubpackages(),
     m_eSuperPackage()
 {
+	/*PROTECTED REGION ID(EPackage constructor) START*/
+	/*PROTECTED REGION END*/
 }
 
 EPackage::~EPackage()
 {
+	/*PROTECTED REGION ID(EPackage destructor) START*/
+	/*PROTECTED REGION END*/
 }
 
 void EPackage::setNsURI(nsURI_t _nsURI)
@@ -51,14 +55,14 @@ EPackage::eFactoryInstance_t EPackage::getEFactoryInstance() const
 
 void EPackage::setEFactoryInstance(eFactoryInstance_t eFactoryInstance_)
 {
+	if (m_eFactoryInstance == eFactoryInstance_)
+		return;
 	if (m_eFactoryInstance)
 		m_eFactoryInstance->setEPackage(0);
 	m_eFactoryInstance = eFactoryInstance_;
-	if (m_eFactoryInstance && m_eFactoryInstance->getEPackage() != this)
+	if (m_eFactoryInstance)
 		m_eFactoryInstance->setEPackage(this);
-	
 }
-
 
 EPackage::eClassifiers_t EPackage::getEClassifiers() const
 {
@@ -78,7 +82,6 @@ void EPackage::addAllEClassifiers(const eClassifiers_t& eClassifiers_)
 		addEClassifiers(*i);
 }
 
-
 EPackage::eSubpackages_t EPackage::getESubpackages() const
 {
 	return e4c::returned(m_eSubpackages);
@@ -97,19 +100,15 @@ void EPackage::addAllESubpackages(const eSubpackages_t& eSubpackages_)
 		addESubpackages(*i);
 }
 
-
 EPackage::eSuperPackage_t EPackage::getESuperPackage() const
 {
 	return e4c::returned(m_eSuperPackage);
 }
 
-
 void EPackage::setESuperPackage(eSuperPackage_t eSuperPackage_)
 {
 	m_eSuperPackage = eSuperPackage_;
 }
-
-
 
 
 ecore::EClassifier_ptr EPackage::getEClassifier(ecore::EString name)

@@ -13,7 +13,6 @@ namespace C
 {
 
 
-// C::CStructuralFeature
 class CStructuralFeature :  public virtual ::C::CStructureContents,  public virtual ::C::CTypedElement
 {
 public:
@@ -25,12 +24,22 @@ public:
 
 	
 	
-	
 
-	
+	/*PROTECTED REGION ID(C::CStructuralFeature public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class CPackage;
+
+	
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(C::CStructuralFeature protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // C

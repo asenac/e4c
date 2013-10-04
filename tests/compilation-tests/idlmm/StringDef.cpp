@@ -11,10 +11,14 @@ using namespace idlmm;
 StringDef::StringDef() : 
 	m_bound()
 {
+	/*PROTECTED REGION ID(StringDef constructor) START*/
+	/*PROTECTED REGION END*/
 }
 
 StringDef::~StringDef()
 {
+	/*PROTECTED REGION ID(StringDef destructor) START*/
+	/*PROTECTED REGION END*/
 }
 
 StringDef::bound_t StringDef::getBound() const
@@ -32,8 +36,6 @@ StringDef::bound_t StringDef::releaseBound()
 {
 	return m_bound.release();
 }
-
-
 
 
 

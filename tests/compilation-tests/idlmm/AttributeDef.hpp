@@ -29,11 +29,9 @@ public:
 	getRaises_t getGetRaises() const;
 	void addGetRaises(idlmm::ExceptionDef_ptr getRaises_);
 	void addAllGetRaises(const getRaises_t& getRaises_);
-	
 	setRaises_t getSetRaises() const;
 	void addSetRaises(idlmm::ExceptionDef_ptr setRaises_);
 	void addAllSetRaises(const setRaises_t& setRaises_);
-	
 	void setIsReadonly(isReadonly_t _isReadonly);
 	isReadonly_t getIsReadonly() const;
 	

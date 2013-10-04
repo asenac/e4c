@@ -26,6 +26,10 @@ int main()
     e4c::holder h2(e4c::create_holder(1));
     std::cout << h2.is_valid() << std::endl;
 
+    std::function< e4c::holder(ecore::EObject_ptr) > get = [](ecore::EObject_ptr o) { 
+        return e4c::create_holder(dynamic_cast< ecore::EClass_ptr >(o)->getEAllStructuralFeatures());
+    };
+
     return 0;
 }
 

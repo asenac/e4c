@@ -12,7 +12,6 @@ namespace xtext
 {
 
 
-// xtext::Group
 class Group :  public virtual ::xtext::CompoundElement
 {
 public:
@@ -24,12 +23,22 @@ public:
 
 	
 	
-	
 
-	
+	/*PROTECTED REGION ID(xtext::Group public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class XtextPackage;
+
+	
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(xtext::Group protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // xtext

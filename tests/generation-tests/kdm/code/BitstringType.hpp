@@ -14,7 +14,6 @@ namespace code
 {
 
 
-// kdm::code::BitstringType
 class BitstringType :  public virtual ::kdm::code::PrimitiveType
 {
 public:
@@ -26,12 +25,22 @@ public:
 
 	
 	
-	
 
-	
+	/*PROTECTED REGION ID(kdm::code::BitstringType public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class CodePackage;
+
+	
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(kdm::code::BitstringType protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // code

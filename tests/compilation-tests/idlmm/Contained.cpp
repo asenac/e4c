@@ -14,10 +14,14 @@ Contained::Contained() :
     m_absoluteName(),
     m_definedIn()
 {
+	/*PROTECTED REGION ID(Contained constructor) START*/
+	/*PROTECTED REGION END*/
 }
 
 Contained::~Contained()
 {
+	/*PROTECTED REGION ID(Contained destructor) START*/
+	/*PROTECTED REGION END*/
 }
 
 void Contained::setRepositoryId(repositoryId_t _repositoryId)
@@ -55,13 +59,10 @@ Contained::definedIn_t Contained::getDefinedIn() const
 	return e4c::returned(m_definedIn);
 }
 
-
 void Contained::setDefinedIn(definedIn_t definedIn_)
 {
 	m_definedIn = definedIn_;
 }
-
-
 
 
 

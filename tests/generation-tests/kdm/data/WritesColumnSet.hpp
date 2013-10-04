@@ -14,7 +14,6 @@ namespace data
 {
 
 
-// kdm::data::WritesColumnSet
 class WritesColumnSet :  public virtual ::kdm::action::AbstractActionRelationship
 {
 public:
@@ -26,18 +25,30 @@ public:
 
 	typedef kdm::data::ColumnSet_ptr to_t;
 	typedef kdm::action::ActionElement_ptr from_t;
-
 	
 	to_t getTo() const;
+	void setTo(to_t to_);
 	from_t getFrom() const;
+	void setFrom(from_t from_);
+	
 
+	/*PROTECTED REGION ID(kdm::data::WritesColumnSet public) START*/
+	/*PROTECTED REGION END*/
+		
+protected:
+
+	friend class DataPackage;
 
 	kdm::data::ColumnSet_ptr m_to;
 	kdm::action::ActionElement_ptr m_from;
 
-		
-protected:
-
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(kdm::data::WritesColumnSet protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // data

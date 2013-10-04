@@ -14,7 +14,6 @@ namespace code
 {
 
 
-// kdm::code::ArrayType
 class ArrayType :  public virtual ::kdm::code::DerivedType
 {
 public:
@@ -26,19 +25,31 @@ public:
 
 	typedef ::kdm::core::Integer size_t;
 	typedef kdm::code::IndexUnit_ptr indexUnit_t;
-
 	
 	void setSize(size_t _size);
 	size_t getSize() const;
 	indexUnit_t getIndexUnit() const;
+	void setIndexUnit(indexUnit_t indexUnit_);
+	indexUnit_t releaseIndexUnit();
+	
 
+	/*PROTECTED REGION ID(kdm::code::ArrayType public) START*/
+	/*PROTECTED REGION END*/
+		
+protected:
+
+	friend class CodePackage;
 
 	size_t m_size;
 	std::unique_ptr < kdm::code::IndexUnit > m_indexUnit;
 
-		
-protected:
-
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(kdm::code::ArrayType protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // code

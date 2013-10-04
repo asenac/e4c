@@ -14,7 +14,6 @@ namespace event
 {
 
 
-// kdm::event::InitialState
 class InitialState :  public virtual ::kdm::event::State
 {
 public:
@@ -26,12 +25,22 @@ public:
 
 	
 	
-	
 
-	
+	/*PROTECTED REGION ID(kdm::event::InitialState public) START*/
+	/*PROTECTED REGION END*/
 		
 protected:
 
+	friend class EventPackage;
+
+	
+	
+	
+	
+	virtual ecore::EClass_ptr eClassImpl() const;
+	
+	/*PROTECTED REGION ID(kdm::event::InitialState protected) START*/
+	/*PROTECTED REGION END*/
 };
 
 } // event

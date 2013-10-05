@@ -995,176 +995,527 @@ IdlmmPackage::IdlmmPackage()
 	
 	
 	m_Container->addFeatureAccesors(m_Container__contains, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< idlmm::Container_ptr >(o)->getContains()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< idlmm::Container_ptr >(o)->getContains()); 
+		},
+		[](ecore::EObject_ptr o, e4c::holder h) {
+			typedef std::vector< ecore::EObject_ptr > type_t;
+			const type_t& val = h.to_value< type_t >();
+			idlmm::Container_ptr eo = dynamic_cast< idlmm::Container_ptr >(o);
+			eo->clearContains();
+			eo->addAllContains(e4c::select< idlmm::Contained >(val));
+		});
 	m_Contained->addFeatureAccesors(m_Contained__repositoryId, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< idlmm::Contained_ptr >(o)->getRepositoryId()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< idlmm::Contained_ptr >(o)->getRepositoryId()); 
+		},
+		[](ecore::EObject_ptr o, e4c::holder h) {
+			typedef idlmm::Contained::repositoryId_t type_t;
+			const type_t& val = h.to_value< type_t >();
+			dynamic_cast< idlmm::Contained_ptr >(o)->setRepositoryId(val);
+		});
 	m_Contained->addFeatureAccesors(m_Contained__version, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< idlmm::Contained_ptr >(o)->getVersion()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< idlmm::Contained_ptr >(o)->getVersion()); 
+		},
+		[](ecore::EObject_ptr o, e4c::holder h) {
+			typedef idlmm::Contained::version_t type_t;
+			const type_t& val = h.to_value< type_t >();
+			dynamic_cast< idlmm::Contained_ptr >(o)->setVersion(val);
+		});
 	m_Contained->addFeatureAccesors(m_Contained__absoluteName, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< idlmm::Contained_ptr >(o)->getAbsoluteName()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< idlmm::Contained_ptr >(o)->getAbsoluteName()); 
+		},
+		[](ecore::EObject_ptr o, e4c::holder h) {
+			typedef idlmm::Contained::absoluteName_t type_t;
+			const type_t& val = h.to_value< type_t >();
+			dynamic_cast< idlmm::Contained_ptr >(o)->setAbsoluteName(val);
+		});
 	m_Contained->addFeatureAccesors(m_Contained__definedIn, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< idlmm::Contained_ptr >(o)->getDefinedIn()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< idlmm::Contained_ptr >(o)->getDefinedIn()); 
+		},
+		[](ecore::EObject_ptr o, e4c::holder h) {
+			idlmm::Container_ptr val = dynamic_cast< idlmm::Container_ptr >(h.to_value< ecore::EObject_ptr >());
+			dynamic_cast< idlmm::Contained_ptr >(o)->setDefinedIn(val);
+		});
 	m_InterfaceDef->addFeatureAccesors(m_InterfaceDef__isAbstract, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< idlmm::InterfaceDef_ptr >(o)->getIsAbstract()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< idlmm::InterfaceDef_ptr >(o)->getIsAbstract()); 
+		},
+		[](ecore::EObject_ptr o, e4c::holder h) {
+			typedef idlmm::InterfaceDef::isAbstract_t type_t;
+			const type_t& val = h.to_value< type_t >();
+			dynamic_cast< idlmm::InterfaceDef_ptr >(o)->setIsAbstract(val);
+		});
 	m_InterfaceDef->addFeatureAccesors(m_InterfaceDef__isCustom, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< idlmm::InterfaceDef_ptr >(o)->getIsCustom()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< idlmm::InterfaceDef_ptr >(o)->getIsCustom()); 
+		},
+		[](ecore::EObject_ptr o, e4c::holder h) {
+			typedef idlmm::InterfaceDef::isCustom_t type_t;
+			const type_t& val = h.to_value< type_t >();
+			dynamic_cast< idlmm::InterfaceDef_ptr >(o)->setIsCustom(val);
+		});
 	m_InterfaceDef->addFeatureAccesors(m_InterfaceDef__isTruncatable, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< idlmm::InterfaceDef_ptr >(o)->getIsTruncatable()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< idlmm::InterfaceDef_ptr >(o)->getIsTruncatable()); 
+		},
+		[](ecore::EObject_ptr o, e4c::holder h) {
+			typedef idlmm::InterfaceDef::isTruncatable_t type_t;
+			const type_t& val = h.to_value< type_t >();
+			dynamic_cast< idlmm::InterfaceDef_ptr >(o)->setIsTruncatable(val);
+		});
 	m_InterfaceDef->addFeatureAccesors(m_InterfaceDef__derivesFrom, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< idlmm::InterfaceDef_ptr >(o)->getDerivesFrom()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< idlmm::InterfaceDef_ptr >(o)->getDerivesFrom()); 
+		},
+		[](ecore::EObject_ptr o, e4c::holder h) {
+			typedef std::vector< ecore::EObject_ptr > type_t;
+			const type_t& val = h.to_value< type_t >();
+			idlmm::InterfaceDef_ptr eo = dynamic_cast< idlmm::InterfaceDef_ptr >(o);
+			eo->clearDerivesFrom();
+			eo->addAllDerivesFrom(e4c::select< idlmm::InterfaceDef >(val));
+		});
 	m_InterfaceDef->addFeatureAccesors(m_InterfaceDef__forward, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< idlmm::InterfaceDef_ptr >(o)->getForward()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< idlmm::InterfaceDef_ptr >(o)->getForward()); 
+		},
+		[](ecore::EObject_ptr o, e4c::holder h) {
+			idlmm::ForwardDef_ptr val = dynamic_cast< idlmm::ForwardDef_ptr >(h.to_value< ecore::EObject_ptr >());
+			dynamic_cast< idlmm::InterfaceDef_ptr >(o)->setForward(val);
+		});
 	m_ModuleDef->addFeatureAccesors(m_ModuleDef__prefix, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< idlmm::ModuleDef_ptr >(o)->getPrefix()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< idlmm::ModuleDef_ptr >(o)->getPrefix()); 
+		},
+		[](ecore::EObject_ptr o, e4c::holder h) {
+			typedef idlmm::ModuleDef::prefix_t type_t;
+			const type_t& val = h.to_value< type_t >();
+			dynamic_cast< idlmm::ModuleDef_ptr >(o)->setPrefix(val);
+		});
 	m_IDLType->addFeatureAccesors(m_IDLType__typeCode, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< idlmm::IDLType_ptr >(o)->getTypeCode()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< idlmm::IDLType_ptr >(o)->getTypeCode()); 
+		},
+		[](ecore::EObject_ptr o, e4c::holder h) {
+			typedef idlmm::IDLType::typeCode_t type_t;
+			const type_t& val = h.to_value< type_t >();
+			dynamic_cast< idlmm::IDLType_ptr >(o)->setTypeCode(val);
+		});
 	m_OperationDef->addFeatureAccesors(m_OperationDef__parameters, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< idlmm::OperationDef_ptr >(o)->getParameters()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< idlmm::OperationDef_ptr >(o)->getParameters()); 
+		},
+		[](ecore::EObject_ptr o, e4c::holder h) {
+			typedef std::vector< ecore::EObject_ptr > type_t;
+			const type_t& val = h.to_value< type_t >();
+			idlmm::OperationDef_ptr eo = dynamic_cast< idlmm::OperationDef_ptr >(o);
+			eo->clearParameters();
+			eo->addAllParameters(e4c::select< idlmm::ParameterDef >(val));
+		});
 	m_OperationDef->addFeatureAccesors(m_OperationDef__isOneway, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< idlmm::OperationDef_ptr >(o)->getIsOneway()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< idlmm::OperationDef_ptr >(o)->getIsOneway()); 
+		},
+		[](ecore::EObject_ptr o, e4c::holder h) {
+			typedef idlmm::OperationDef::isOneway_t type_t;
+			const type_t& val = h.to_value< type_t >();
+			dynamic_cast< idlmm::OperationDef_ptr >(o)->setIsOneway(val);
+		});
 	m_OperationDef->addFeatureAccesors(m_OperationDef__contexts, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< idlmm::OperationDef_ptr >(o)->getContexts()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< idlmm::OperationDef_ptr >(o)->getContexts()); 
+		},
+		[](ecore::EObject_ptr o, e4c::holder h) {
+			typedef idlmm::OperationDef::contexts_t type_t;
+			const type_t& val = h.to_value< type_t >();
+			dynamic_cast< idlmm::OperationDef_ptr >(o)->setContexts(val);
+		});
 	m_OperationDef->addFeatureAccesors(m_OperationDef__canRaise, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< idlmm::OperationDef_ptr >(o)->getCanRaise()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< idlmm::OperationDef_ptr >(o)->getCanRaise()); 
+		},
+		[](ecore::EObject_ptr o, e4c::holder h) {
+			typedef std::vector< ecore::EObject_ptr > type_t;
+			const type_t& val = h.to_value< type_t >();
+			idlmm::OperationDef_ptr eo = dynamic_cast< idlmm::OperationDef_ptr >(o);
+			eo->clearCanRaise();
+			eo->addAllCanRaise(e4c::select< idlmm::ExceptionDef >(val));
+		});
 	m_AttributeDef->addFeatureAccesors(m_AttributeDef__getRaises, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< idlmm::AttributeDef_ptr >(o)->getGetRaises()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< idlmm::AttributeDef_ptr >(o)->getGetRaises()); 
+		},
+		[](ecore::EObject_ptr o, e4c::holder h) {
+			typedef std::vector< ecore::EObject_ptr > type_t;
+			const type_t& val = h.to_value< type_t >();
+			idlmm::AttributeDef_ptr eo = dynamic_cast< idlmm::AttributeDef_ptr >(o);
+			eo->clearGetRaises();
+			eo->addAllGetRaises(e4c::select< idlmm::ExceptionDef >(val));
+		});
 	m_AttributeDef->addFeatureAccesors(m_AttributeDef__setRaises, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< idlmm::AttributeDef_ptr >(o)->getSetRaises()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< idlmm::AttributeDef_ptr >(o)->getSetRaises()); 
+		},
+		[](ecore::EObject_ptr o, e4c::holder h) {
+			typedef std::vector< ecore::EObject_ptr > type_t;
+			const type_t& val = h.to_value< type_t >();
+			idlmm::AttributeDef_ptr eo = dynamic_cast< idlmm::AttributeDef_ptr >(o);
+			eo->clearSetRaises();
+			eo->addAllSetRaises(e4c::select< idlmm::ExceptionDef >(val));
+		});
 	m_AttributeDef->addFeatureAccesors(m_AttributeDef__isReadonly, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< idlmm::AttributeDef_ptr >(o)->getIsReadonly()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< idlmm::AttributeDef_ptr >(o)->getIsReadonly()); 
+		},
+		[](ecore::EObject_ptr o, e4c::holder h) {
+			typedef idlmm::AttributeDef::isReadonly_t type_t;
+			const type_t& val = h.to_value< type_t >();
+			dynamic_cast< idlmm::AttributeDef_ptr >(o)->setIsReadonly(val);
+		});
 	m_ConstantDef->addFeatureAccesors(m_ConstantDef__constValue, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< idlmm::ConstantDef_ptr >(o)->getConstValue()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< idlmm::ConstantDef_ptr >(o)->getConstValue()); 
+		},
+		[](ecore::EObject_ptr o, e4c::holder h) {
+			idlmm::Expression_ptr val = dynamic_cast< idlmm::Expression_ptr >(h.to_value< ecore::EObject_ptr >());
+			dynamic_cast< idlmm::ConstantDef_ptr >(o)->setConstValue(val);
+		});
 	m_Typed->addFeatureAccesors(m_Typed__containedType, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< idlmm::Typed_ptr >(o)->getContainedType()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< idlmm::Typed_ptr >(o)->getContainedType()); 
+		},
+		[](ecore::EObject_ptr o, e4c::holder h) {
+			idlmm::IDLType_ptr val = dynamic_cast< idlmm::IDLType_ptr >(h.to_value< ecore::EObject_ptr >());
+			dynamic_cast< idlmm::Typed_ptr >(o)->setContainedType(val);
+		});
 	m_Typed->addFeatureAccesors(m_Typed__sharedType, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< idlmm::Typed_ptr >(o)->getSharedType()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< idlmm::Typed_ptr >(o)->getSharedType()); 
+		},
+		[](ecore::EObject_ptr o, e4c::holder h) {
+			idlmm::TypedefDef_ptr val = dynamic_cast< idlmm::TypedefDef_ptr >(h.to_value< ecore::EObject_ptr >());
+			dynamic_cast< idlmm::Typed_ptr >(o)->setSharedType(val);
+		});
 	m_ParameterDef->addFeatureAccesors(m_ParameterDef__identifier, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< idlmm::ParameterDef_ptr >(o)->getIdentifier()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< idlmm::ParameterDef_ptr >(o)->getIdentifier()); 
+		},
+		[](ecore::EObject_ptr o, e4c::holder h) {
+			typedef idlmm::ParameterDef::identifier_t type_t;
+			const type_t& val = h.to_value< type_t >();
+			dynamic_cast< idlmm::ParameterDef_ptr >(o)->setIdentifier(val);
+		});
 	m_ParameterDef->addFeatureAccesors(m_ParameterDef__direction, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< idlmm::ParameterDef_ptr >(o)->getDirection()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< idlmm::ParameterDef_ptr >(o)->getDirection()); 
+		},
+		[](ecore::EObject_ptr o, e4c::holder h) {
+			typedef idlmm::ParameterDef::direction_t type_t;
+			const type_t& val = h.to_value< type_t >();
+			dynamic_cast< idlmm::ParameterDef_ptr >(o)->setDirection(val);
+		});
 	m_PrimitiveDef->addFeatureAccesors(m_PrimitiveDef__kind, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< idlmm::PrimitiveDef_ptr >(o)->getKind()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< idlmm::PrimitiveDef_ptr >(o)->getKind()); 
+		},
+		[](ecore::EObject_ptr o, e4c::holder h) {
+			typedef idlmm::PrimitiveDef::kind_t type_t;
+			const type_t& val = h.to_value< type_t >();
+			dynamic_cast< idlmm::PrimitiveDef_ptr >(o)->setKind(val);
+		});
 	m_ExceptionDef->addFeatureAccesors(m_ExceptionDef__typeCode, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< idlmm::ExceptionDef_ptr >(o)->getTypeCode()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< idlmm::ExceptionDef_ptr >(o)->getTypeCode()); 
+		},
+		[](ecore::EObject_ptr o, e4c::holder h) {
+			typedef idlmm::ExceptionDef::typeCode_t type_t;
+			const type_t& val = h.to_value< type_t >();
+			dynamic_cast< idlmm::ExceptionDef_ptr >(o)->setTypeCode(val);
+		});
 	m_ExceptionDef->addFeatureAccesors(m_ExceptionDef__members, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< idlmm::ExceptionDef_ptr >(o)->getMembers()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< idlmm::ExceptionDef_ptr >(o)->getMembers()); 
+		},
+		[](ecore::EObject_ptr o, e4c::holder h) {
+			typedef std::vector< ecore::EObject_ptr > type_t;
+			const type_t& val = h.to_value< type_t >();
+			idlmm::ExceptionDef_ptr eo = dynamic_cast< idlmm::ExceptionDef_ptr >(o);
+			eo->clearMembers();
+			eo->addAllMembers(e4c::select< idlmm::Field >(val));
+		});
 	m_Field->addFeatureAccesors(m_Field__identifier, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< idlmm::Field_ptr >(o)->getIdentifier()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< idlmm::Field_ptr >(o)->getIdentifier()); 
+		},
+		[](ecore::EObject_ptr o, e4c::holder h) {
+			typedef idlmm::Field::identifier_t type_t;
+			const type_t& val = h.to_value< type_t >();
+			dynamic_cast< idlmm::Field_ptr >(o)->setIdentifier(val);
+		});
 	m_FixedDef->addFeatureAccesors(m_FixedDef__digits, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< idlmm::FixedDef_ptr >(o)->getDigits()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< idlmm::FixedDef_ptr >(o)->getDigits()); 
+		},
+		[](ecore::EObject_ptr o, e4c::holder h) {
+			idlmm::Expression_ptr val = dynamic_cast< idlmm::Expression_ptr >(h.to_value< ecore::EObject_ptr >());
+			dynamic_cast< idlmm::FixedDef_ptr >(o)->setDigits(val);
+		});
 	m_FixedDef->addFeatureAccesors(m_FixedDef__scale, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< idlmm::FixedDef_ptr >(o)->getScale()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< idlmm::FixedDef_ptr >(o)->getScale()); 
+		},
+		[](ecore::EObject_ptr o, e4c::holder h) {
+			idlmm::Expression_ptr val = dynamic_cast< idlmm::Expression_ptr >(h.to_value< ecore::EObject_ptr >());
+			dynamic_cast< idlmm::FixedDef_ptr >(o)->setScale(val);
+		});
 	m_WstringDef->addFeatureAccesors(m_WstringDef__bound, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< idlmm::WstringDef_ptr >(o)->getBound()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< idlmm::WstringDef_ptr >(o)->getBound()); 
+		},
+		[](ecore::EObject_ptr o, e4c::holder h) {
+			idlmm::Expression_ptr val = dynamic_cast< idlmm::Expression_ptr >(h.to_value< ecore::EObject_ptr >());
+			dynamic_cast< idlmm::WstringDef_ptr >(o)->setBound(val);
+		});
 	m_StringDef->addFeatureAccesors(m_StringDef__bound, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< idlmm::StringDef_ptr >(o)->getBound()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< idlmm::StringDef_ptr >(o)->getBound()); 
+		},
+		[](ecore::EObject_ptr o, e4c::holder h) {
+			idlmm::Expression_ptr val = dynamic_cast< idlmm::Expression_ptr >(h.to_value< ecore::EObject_ptr >());
+			dynamic_cast< idlmm::StringDef_ptr >(o)->setBound(val);
+		});
 	m_ArrayDef->addFeatureAccesors(m_ArrayDef__name, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< idlmm::ArrayDef_ptr >(o)->getName()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< idlmm::ArrayDef_ptr >(o)->getName()); 
+		},
+		[](ecore::EObject_ptr o, e4c::holder h) {
+			typedef idlmm::ArrayDef::name_t type_t;
+			const type_t& val = h.to_value< type_t >();
+			dynamic_cast< idlmm::ArrayDef_ptr >(o)->setName(val);
+		});
 	m_ArrayDef->addFeatureAccesors(m_ArrayDef__bounds, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< idlmm::ArrayDef_ptr >(o)->getBounds()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< idlmm::ArrayDef_ptr >(o)->getBounds()); 
+		},
+		[](ecore::EObject_ptr o, e4c::holder h) {
+			typedef std::vector< ecore::EObject_ptr > type_t;
+			const type_t& val = h.to_value< type_t >();
+			idlmm::ArrayDef_ptr eo = dynamic_cast< idlmm::ArrayDef_ptr >(o);
+			eo->clearBounds();
+			eo->addAllBounds(e4c::select< idlmm::Expression >(val));
+		});
 	m_SequenceDef->addFeatureAccesors(m_SequenceDef__bound, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< idlmm::SequenceDef_ptr >(o)->getBound()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< idlmm::SequenceDef_ptr >(o)->getBound()); 
+		},
+		[](ecore::EObject_ptr o, e4c::holder h) {
+			idlmm::Expression_ptr val = dynamic_cast< idlmm::Expression_ptr >(h.to_value< ecore::EObject_ptr >());
+			dynamic_cast< idlmm::SequenceDef_ptr >(o)->setBound(val);
+		});
 	m_UnionField->addFeatureAccesors(m_UnionField__identifier, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< idlmm::UnionField_ptr >(o)->getIdentifier()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< idlmm::UnionField_ptr >(o)->getIdentifier()); 
+		},
+		[](ecore::EObject_ptr o, e4c::holder h) {
+			typedef idlmm::UnionField::identifier_t type_t;
+			const type_t& val = h.to_value< type_t >();
+			dynamic_cast< idlmm::UnionField_ptr >(o)->setIdentifier(val);
+		});
 	m_UnionField->addFeatureAccesors(m_UnionField__label, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< idlmm::UnionField_ptr >(o)->getLabel()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< idlmm::UnionField_ptr >(o)->getLabel()); 
+		},
+		[](ecore::EObject_ptr o, e4c::holder h) {
+			typedef std::vector< ecore::EObject_ptr > type_t;
+			const type_t& val = h.to_value< type_t >();
+			idlmm::UnionField_ptr eo = dynamic_cast< idlmm::UnionField_ptr >(o);
+			eo->clearLabel();
+			eo->addAllLabel(e4c::select< idlmm::Expression >(val));
+		});
 	m_UnionDef->addFeatureAccesors(m_UnionDef__unionMembers, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< idlmm::UnionDef_ptr >(o)->getUnionMembers()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< idlmm::UnionDef_ptr >(o)->getUnionMembers()); 
+		},
+		[](ecore::EObject_ptr o, e4c::holder h) {
+			typedef std::vector< ecore::EObject_ptr > type_t;
+			const type_t& val = h.to_value< type_t >();
+			idlmm::UnionDef_ptr eo = dynamic_cast< idlmm::UnionDef_ptr >(o);
+			eo->clearUnionMembers();
+			eo->addAllUnionMembers(e4c::select< idlmm::UnionField >(val));
+		});
 	m_UnionDef->addFeatureAccesors(m_UnionDef__containedDiscrim, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< idlmm::UnionDef_ptr >(o)->getContainedDiscrim()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< idlmm::UnionDef_ptr >(o)->getContainedDiscrim()); 
+		},
+		[](ecore::EObject_ptr o, e4c::holder h) {
+			idlmm::IDLType_ptr val = dynamic_cast< idlmm::IDLType_ptr >(h.to_value< ecore::EObject_ptr >());
+			dynamic_cast< idlmm::UnionDef_ptr >(o)->setContainedDiscrim(val);
+		});
 	m_UnionDef->addFeatureAccesors(m_UnionDef__sharedDiscrim, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< idlmm::UnionDef_ptr >(o)->getSharedDiscrim()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< idlmm::UnionDef_ptr >(o)->getSharedDiscrim()); 
+		},
+		[](ecore::EObject_ptr o, e4c::holder h) {
+			idlmm::TypedefDef_ptr val = dynamic_cast< idlmm::TypedefDef_ptr >(h.to_value< ecore::EObject_ptr >());
+			dynamic_cast< idlmm::UnionDef_ptr >(o)->setSharedDiscrim(val);
+		});
 	m_EnumDef->addFeatureAccesors(m_EnumDef__members, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< idlmm::EnumDef_ptr >(o)->getMembers()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< idlmm::EnumDef_ptr >(o)->getMembers()); 
+		},
+		[](ecore::EObject_ptr o, e4c::holder h) {
+			typedef std::vector< ecore::EObject_ptr > type_t;
+			const type_t& val = h.to_value< type_t >();
+			idlmm::EnumDef_ptr eo = dynamic_cast< idlmm::EnumDef_ptr >(o);
+			eo->clearMembers();
+			eo->addAllMembers(e4c::select< idlmm::EnumMember >(val));
+		});
 	m_StructDef->addFeatureAccesors(m_StructDef__members, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< idlmm::StructDef_ptr >(o)->getMembers()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< idlmm::StructDef_ptr >(o)->getMembers()); 
+		},
+		[](ecore::EObject_ptr o, e4c::holder h) {
+			typedef std::vector< ecore::EObject_ptr > type_t;
+			const type_t& val = h.to_value< type_t >();
+			idlmm::StructDef_ptr eo = dynamic_cast< idlmm::StructDef_ptr >(o);
+			eo->clearMembers();
+			eo->addAllMembers(e4c::select< idlmm::Field >(val));
+		});
 	m_TranslationUnit->addFeatureAccesors(m_TranslationUnit__contains, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< idlmm::TranslationUnit_ptr >(o)->getContains()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< idlmm::TranslationUnit_ptr >(o)->getContains()); 
+		},
+		[](ecore::EObject_ptr o, e4c::holder h) {
+			typedef std::vector< ecore::EObject_ptr > type_t;
+			const type_t& val = h.to_value< type_t >();
+			idlmm::TranslationUnit_ptr eo = dynamic_cast< idlmm::TranslationUnit_ptr >(o);
+			eo->clearContains();
+			eo->addAllContains(e4c::select< idlmm::Contained >(val));
+		});
 	m_TranslationUnit->addFeatureAccesors(m_TranslationUnit__identifier, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< idlmm::TranslationUnit_ptr >(o)->getIdentifier()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< idlmm::TranslationUnit_ptr >(o)->getIdentifier()); 
+		},
+		[](ecore::EObject_ptr o, e4c::holder h) {
+			typedef idlmm::TranslationUnit::identifier_t type_t;
+			const type_t& val = h.to_value< type_t >();
+			dynamic_cast< idlmm::TranslationUnit_ptr >(o)->setIdentifier(val);
+		});
 	m_TranslationUnit->addFeatureAccesors(m_TranslationUnit__includes, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< idlmm::TranslationUnit_ptr >(o)->getIncludes()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< idlmm::TranslationUnit_ptr >(o)->getIncludes()); 
+		},
+		[](ecore::EObject_ptr o, e4c::holder h) {
+			typedef std::vector< ecore::EObject_ptr > type_t;
+			const type_t& val = h.to_value< type_t >();
+			idlmm::TranslationUnit_ptr eo = dynamic_cast< idlmm::TranslationUnit_ptr >(o);
+			eo->clearIncludes();
+			eo->addAllIncludes(e4c::select< idlmm::Include >(val));
+		});
 	m_Include->addFeatureAccesors(m_Include__importURI, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< idlmm::Include_ptr >(o)->getImportURI()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< idlmm::Include_ptr >(o)->getImportURI()); 
+		},
+		[](ecore::EObject_ptr o, e4c::holder h) {
+			typedef idlmm::Include::importURI_t type_t;
+			const type_t& val = h.to_value< type_t >();
+			dynamic_cast< idlmm::Include_ptr >(o)->setImportURI(val);
+		});
 	m_Include->addFeatureAccesors(m_Include__translationUnit, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< idlmm::Include_ptr >(o)->getTranslationUnit()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< idlmm::Include_ptr >(o)->getTranslationUnit()); 
+		},
+		[](ecore::EObject_ptr o, e4c::holder h) {
+			idlmm::TranslationUnit_ptr val = dynamic_cast< idlmm::TranslationUnit_ptr >(h.to_value< ecore::EObject_ptr >());
+			dynamic_cast< idlmm::Include_ptr >(o)->setTranslationUnit(val);
+		});
 	m_BinaryExpression->addFeatureAccesors(m_BinaryExpression__left, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< idlmm::BinaryExpression_ptr >(o)->getLeft()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< idlmm::BinaryExpression_ptr >(o)->getLeft()); 
+		},
+		[](ecore::EObject_ptr o, e4c::holder h) {
+			idlmm::Expression_ptr val = dynamic_cast< idlmm::Expression_ptr >(h.to_value< ecore::EObject_ptr >());
+			dynamic_cast< idlmm::BinaryExpression_ptr >(o)->setLeft(val);
+		});
 	m_BinaryExpression->addFeatureAccesors(m_BinaryExpression__right, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< idlmm::BinaryExpression_ptr >(o)->getRight()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< idlmm::BinaryExpression_ptr >(o)->getRight()); 
+		},
+		[](ecore::EObject_ptr o, e4c::holder h) {
+			idlmm::Expression_ptr val = dynamic_cast< idlmm::Expression_ptr >(h.to_value< ecore::EObject_ptr >());
+			dynamic_cast< idlmm::BinaryExpression_ptr >(o)->setRight(val);
+		});
 	m_BinaryExpression->addFeatureAccesors(m_BinaryExpression__operator, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< idlmm::BinaryExpression_ptr >(o)->getOperator()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< idlmm::BinaryExpression_ptr >(o)->getOperator()); 
+		},
+		[](ecore::EObject_ptr o, e4c::holder h) {
+			typedef idlmm::BinaryExpression::operator_t type_t;
+			const type_t& val = h.to_value< type_t >();
+			dynamic_cast< idlmm::BinaryExpression_ptr >(o)->setOperator(val);
+		});
 	m_UnaryExpression->addFeatureAccesors(m_UnaryExpression__expression, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< idlmm::UnaryExpression_ptr >(o)->getExpression()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< idlmm::UnaryExpression_ptr >(o)->getExpression()); 
+		},
+		[](ecore::EObject_ptr o, e4c::holder h) {
+			idlmm::Expression_ptr val = dynamic_cast< idlmm::Expression_ptr >(h.to_value< ecore::EObject_ptr >());
+			dynamic_cast< idlmm::UnaryExpression_ptr >(o)->setExpression(val);
+		});
 	m_UnaryExpression->addFeatureAccesors(m_UnaryExpression__operator, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< idlmm::UnaryExpression_ptr >(o)->getOperator()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< idlmm::UnaryExpression_ptr >(o)->getOperator()); 
+		},
+		[](ecore::EObject_ptr o, e4c::holder h) {
+			typedef idlmm::UnaryExpression::operator_t type_t;
+			const type_t& val = h.to_value< type_t >();
+			dynamic_cast< idlmm::UnaryExpression_ptr >(o)->setOperator(val);
+		});
 	m_ConstantDefRef->addFeatureAccesors(m_ConstantDefRef__constant, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< idlmm::ConstantDefRef_ptr >(o)->getConstant()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< idlmm::ConstantDefRef_ptr >(o)->getConstant()); 
+		},
+		[](ecore::EObject_ptr o, e4c::holder h) {
+			idlmm::Constant_ptr val = dynamic_cast< idlmm::Constant_ptr >(h.to_value< ecore::EObject_ptr >());
+			dynamic_cast< idlmm::ConstantDefRef_ptr >(o)->setConstant(val);
+		});
 	m_ValueExpression->addFeatureAccesors(m_ValueExpression__value, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< idlmm::ValueExpression_ptr >(o)->getValue()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< idlmm::ValueExpression_ptr >(o)->getValue()); 
+		},
+		[](ecore::EObject_ptr o, e4c::holder h) {
+			typedef idlmm::ValueExpression::value_t type_t;
+			const type_t& val = h.to_value< type_t >();
+			dynamic_cast< idlmm::ValueExpression_ptr >(o)->setValue(val);
+		});
 	m_ForwardDef->addFeatureAccesors(m_ForwardDef__definition, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< idlmm::ForwardDef_ptr >(o)->getDefinition()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< idlmm::ForwardDef_ptr >(o)->getDefinition()); 
+		},
+		[](ecore::EObject_ptr o, e4c::holder h) {
+			idlmm::InterfaceDef_ptr val = dynamic_cast< idlmm::InterfaceDef_ptr >(h.to_value< ecore::EObject_ptr >());
+			dynamic_cast< idlmm::ForwardDef_ptr >(o)->setDefinition(val);
+		});
 	m_EnumMember->addFeatureAccesors(m_EnumMember__enum, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< idlmm::EnumMember_ptr >(o)->getEnum()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< idlmm::EnumMember_ptr >(o)->getEnum()); 
+		},
+		[](ecore::EObject_ptr o, e4c::holder h) {
+			idlmm::EnumDef_ptr val = dynamic_cast< idlmm::EnumDef_ptr >(h.to_value< ecore::EObject_ptr >());
+			dynamic_cast< idlmm::EnumMember_ptr >(o)->setEnum(val);
+		});
 	m_NamedElement->addFeatureAccesors(m_NamedElement__identifier, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< idlmm::NamedElement_ptr >(o)->getIdentifier()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< idlmm::NamedElement_ptr >(o)->getIdentifier()); 
+		},
+		[](ecore::EObject_ptr o, e4c::holder h) {
+			typedef idlmm::NamedElement::identifier_t type_t;
+			const type_t& val = h.to_value< type_t >();
+			dynamic_cast< idlmm::NamedElement_ptr >(o)->setIdentifier(val);
+		});
 	
 }
 

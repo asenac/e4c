@@ -1,4 +1,3 @@
-
 #include "SequenceDef.hpp"
 #include <idlmm/IdlmmPackage.hpp>
 #include <idlmm/Expression.hpp>
@@ -25,7 +24,6 @@ SequenceDef::bound_t SequenceDef::getBound() const
 {
 	return e4c::returned(m_bound);
 }
-
 
 void SequenceDef::setBound(bound_t bound_)
 {

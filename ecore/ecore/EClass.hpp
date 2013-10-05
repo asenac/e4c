@@ -1,4 +1,3 @@
-
 #ifndef EMF_CPP_ECORE_ECLASS__HPP
 #define EMF_CPP_ECORE_ECLASS__HPP
 
@@ -45,44 +44,70 @@ public:
 	eSuperTypes_t getESuperTypes() const;
 	void addESuperTypes(ecore::EClass_ptr eSuperTypes_);
 	void addAllESuperTypes(const eSuperTypes_t& eSuperTypes_);
+	void removeESuperTypes(ecore::EClass_ptr eSuperTypes_);
+	void clearESuperTypes();
 	eOperations_t getEOperations() const;
 	void addEOperations(ecore::EOperation_ptr eOperations_);
 	void addAllEOperations(const eOperations_t& eOperations_);
+	void removeEOperations(ecore::EOperation_ptr eOperations_);
+	void clearEOperations();
 	eAllAttributes_t getEAllAttributes() const;
 	void addEAllAttributes(ecore::EAttribute_ptr eAllAttributes_);
 	void addAllEAllAttributes(const eAllAttributes_t& eAllAttributes_);
+	void removeEAllAttributes(ecore::EAttribute_ptr eAllAttributes_);
+	void clearEAllAttributes();
 	eAllReferences_t getEAllReferences() const;
 	void addEAllReferences(ecore::EReference_ptr eAllReferences_);
 	void addAllEAllReferences(const eAllReferences_t& eAllReferences_);
+	void removeEAllReferences(ecore::EReference_ptr eAllReferences_);
+	void clearEAllReferences();
 	eReferences_t getEReferences() const;
 	void addEReferences(ecore::EReference_ptr eReferences_);
 	void addAllEReferences(const eReferences_t& eReferences_);
+	void removeEReferences(ecore::EReference_ptr eReferences_);
+	void clearEReferences();
 	eAttributes_t getEAttributes() const;
 	void addEAttributes(ecore::EAttribute_ptr eAttributes_);
 	void addAllEAttributes(const eAttributes_t& eAttributes_);
+	void removeEAttributes(ecore::EAttribute_ptr eAttributes_);
+	void clearEAttributes();
 	eAllContainments_t getEAllContainments() const;
 	void addEAllContainments(ecore::EReference_ptr eAllContainments_);
 	void addAllEAllContainments(const eAllContainments_t& eAllContainments_);
+	void removeEAllContainments(ecore::EReference_ptr eAllContainments_);
+	void clearEAllContainments();
 	eAllOperations_t getEAllOperations() const;
 	void addEAllOperations(ecore::EOperation_ptr eAllOperations_);
 	void addAllEAllOperations(const eAllOperations_t& eAllOperations_);
+	void removeEAllOperations(ecore::EOperation_ptr eAllOperations_);
+	void clearEAllOperations();
 	eAllStructuralFeatures_t getEAllStructuralFeatures() const;
 	void addEAllStructuralFeatures(ecore::EStructuralFeature_ptr eAllStructuralFeatures_);
 	void addAllEAllStructuralFeatures(const eAllStructuralFeatures_t& eAllStructuralFeatures_);
+	void removeEAllStructuralFeatures(ecore::EStructuralFeature_ptr eAllStructuralFeatures_);
+	void clearEAllStructuralFeatures();
 	eAllSuperTypes_t getEAllSuperTypes() const;
 	void addEAllSuperTypes(ecore::EClass_ptr eAllSuperTypes_);
 	void addAllEAllSuperTypes(const eAllSuperTypes_t& eAllSuperTypes_);
+	void removeEAllSuperTypes(ecore::EClass_ptr eAllSuperTypes_);
+	void clearEAllSuperTypes();
 	eIDAttribute_t getEIDAttribute() const;
 	void setEIDAttribute(eIDAttribute_t eIDAttribute_);
 	eStructuralFeatures_t getEStructuralFeatures() const;
 	void addEStructuralFeatures(ecore::EStructuralFeature_ptr eStructuralFeatures_);
 	void addAllEStructuralFeatures(const eStructuralFeatures_t& eStructuralFeatures_);
+	void removeEStructuralFeatures(ecore::EStructuralFeature_ptr eStructuralFeatures_);
+	void clearEStructuralFeatures();
 	eGenericSuperTypes_t getEGenericSuperTypes() const;
 	void addEGenericSuperTypes(ecore::EGenericType_ptr eGenericSuperTypes_);
 	void addAllEGenericSuperTypes(const eGenericSuperTypes_t& eGenericSuperTypes_);
+	void removeEGenericSuperTypes(ecore::EGenericType_ptr eGenericSuperTypes_);
+	void clearEGenericSuperTypes();
 	eAllGenericSuperTypes_t getEAllGenericSuperTypes() const;
 	void addEAllGenericSuperTypes(ecore::EGenericType_ptr eAllGenericSuperTypes_);
 	void addAllEAllGenericSuperTypes(const eAllGenericSuperTypes_t& eAllGenericSuperTypes_);
+	void removeEAllGenericSuperTypes(ecore::EGenericType_ptr eAllGenericSuperTypes_);
+	void clearEAllGenericSuperTypes();
 	
 	ecore::EBoolean isSuperTypeOf(ecore::EClass_ptr someClass);
 	ecore::EInt getFeatureCount();

@@ -1,4 +1,3 @@
-
 #include "Typed.hpp"
 #include <idlmm/IdlmmPackage.hpp>
 #include <idlmm/IDLType.hpp>
@@ -28,7 +27,6 @@ Typed::containedType_t Typed::getContainedType() const
 	return e4c::returned(m_containedType);
 }
 
-
 void Typed::setContainedType(containedType_t containedType_)
 {
 	m_containedType.reset(containedType_);
@@ -43,7 +41,6 @@ Typed::sharedType_t Typed::getSharedType() const
 {
 	return e4c::returned(m_sharedType);
 }
-
 void Typed::setSharedType(sharedType_t sharedType_)
 {
 	if (m_sharedType == sharedType_)

@@ -1,4 +1,3 @@
-
 #include "ConstantDefRef.hpp"
 #include <idlmm/IdlmmPackage.hpp>
 #include <idlmm/Constant.hpp>
@@ -25,7 +24,6 @@ ConstantDefRef::constant_t ConstantDefRef::getConstant() const
 {
 	return e4c::returned(m_constant);
 }
-
 void ConstantDefRef::setConstant(constant_t constant_)
 {
 	if (m_constant == constant_)

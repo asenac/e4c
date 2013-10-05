@@ -1,4 +1,3 @@
-
 #include "EStringToStringMapEntry.hpp"
 #include <ecore/EcorePackage.hpp>
 

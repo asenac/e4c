@@ -1167,248 +1167,662 @@ EcorePackage::EcorePackage()
 	
 	
 	m_EAttribute->addFeatureAccesors(m_EAttribute__iD, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< ecore::EAttribute_ptr >(o)->getID()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< ecore::EAttribute_ptr >(o)->getID()); 
+		},
+		[](ecore::EObject_ptr o, e4c::holder h) {
+			typedef ecore::EAttribute::iD_t type_t;
+			const type_t& val = h.to_value< type_t >();
+			dynamic_cast< ecore::EAttribute_ptr >(o)->setID(val);
+		});
 	m_EAttribute->addFeatureAccesors(m_EAttribute__eAttributeType, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< ecore::EAttribute_ptr >(o)->getEAttributeType()); },
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< ecore::EAttribute_ptr >(o)->getEAttributeType()); 
+		},
 		 e4c::set_t());
 	m_EAnnotation->addFeatureAccesors(m_EAnnotation__source, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< ecore::EAnnotation_ptr >(o)->getSource()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< ecore::EAnnotation_ptr >(o)->getSource()); 
+		},
+		[](ecore::EObject_ptr o, e4c::holder h) {
+			typedef ecore::EAnnotation::source_t type_t;
+			const type_t& val = h.to_value< type_t >();
+			dynamic_cast< ecore::EAnnotation_ptr >(o)->setSource(val);
+		});
 	m_EAnnotation->addFeatureAccesors(m_EAnnotation__details, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< ecore::EAnnotation_ptr >(o)->getDetails()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< ecore::EAnnotation_ptr >(o)->getDetails()); 
+		},
+		[](ecore::EObject_ptr o, e4c::holder h) {
+			typedef std::vector< ecore::EObject_ptr > type_t;
+			const type_t& val = h.to_value< type_t >();
+			ecore::EAnnotation_ptr eo = dynamic_cast< ecore::EAnnotation_ptr >(o);
+			eo->clearDetails();
+			eo->addAllDetails(e4c::select< ecore::EStringToStringMapEntry >(val));
+		});
 	m_EAnnotation->addFeatureAccesors(m_EAnnotation__eModelElement, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< ecore::EAnnotation_ptr >(o)->getEModelElement()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< ecore::EAnnotation_ptr >(o)->getEModelElement()); 
+		},
+		[](ecore::EObject_ptr o, e4c::holder h) {
+			ecore::EModelElement_ptr val = dynamic_cast< ecore::EModelElement_ptr >(h.to_value< ecore::EObject_ptr >());
+			dynamic_cast< ecore::EAnnotation_ptr >(o)->setEModelElement(val);
+		});
 	m_EAnnotation->addFeatureAccesors(m_EAnnotation__contents, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< ecore::EAnnotation_ptr >(o)->getContents()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< ecore::EAnnotation_ptr >(o)->getContents()); 
+		},
+		[](ecore::EObject_ptr o, e4c::holder h) {
+			typedef std::vector< ecore::EObject_ptr > type_t;
+			const type_t& val = h.to_value< type_t >();
+			ecore::EAnnotation_ptr eo = dynamic_cast< ecore::EAnnotation_ptr >(o);
+			eo->clearContents();
+			eo->addAllContents(e4c::select< ecore::EObject >(val));
+		});
 	m_EAnnotation->addFeatureAccesors(m_EAnnotation__references, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< ecore::EAnnotation_ptr >(o)->getReferences()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< ecore::EAnnotation_ptr >(o)->getReferences()); 
+		},
+		[](ecore::EObject_ptr o, e4c::holder h) {
+			typedef std::vector< ecore::EObject_ptr > type_t;
+			const type_t& val = h.to_value< type_t >();
+			ecore::EAnnotation_ptr eo = dynamic_cast< ecore::EAnnotation_ptr >(o);
+			eo->clearReferences();
+			eo->addAllReferences(e4c::select< ecore::EObject >(val));
+		});
 	m_EClass->addFeatureAccesors(m_EClass__abstract, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< ecore::EClass_ptr >(o)->getAbstract()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< ecore::EClass_ptr >(o)->getAbstract()); 
+		},
+		[](ecore::EObject_ptr o, e4c::holder h) {
+			typedef ecore::EClass::abstract_t type_t;
+			const type_t& val = h.to_value< type_t >();
+			dynamic_cast< ecore::EClass_ptr >(o)->setAbstract(val);
+		});
 	m_EClass->addFeatureAccesors(m_EClass__interface, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< ecore::EClass_ptr >(o)->getInterface()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< ecore::EClass_ptr >(o)->getInterface()); 
+		},
+		[](ecore::EObject_ptr o, e4c::holder h) {
+			typedef ecore::EClass::interface_t type_t;
+			const type_t& val = h.to_value< type_t >();
+			dynamic_cast< ecore::EClass_ptr >(o)->setInterface(val);
+		});
 	m_EClass->addFeatureAccesors(m_EClass__eSuperTypes, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< ecore::EClass_ptr >(o)->getESuperTypes()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< ecore::EClass_ptr >(o)->getESuperTypes()); 
+		},
+		[](ecore::EObject_ptr o, e4c::holder h) {
+			typedef std::vector< ecore::EObject_ptr > type_t;
+			const type_t& val = h.to_value< type_t >();
+			ecore::EClass_ptr eo = dynamic_cast< ecore::EClass_ptr >(o);
+			eo->clearESuperTypes();
+			eo->addAllESuperTypes(e4c::select< ecore::EClass >(val));
+		});
 	m_EClass->addFeatureAccesors(m_EClass__eOperations, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< ecore::EClass_ptr >(o)->getEOperations()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< ecore::EClass_ptr >(o)->getEOperations()); 
+		},
+		[](ecore::EObject_ptr o, e4c::holder h) {
+			typedef std::vector< ecore::EObject_ptr > type_t;
+			const type_t& val = h.to_value< type_t >();
+			ecore::EClass_ptr eo = dynamic_cast< ecore::EClass_ptr >(o);
+			eo->clearEOperations();
+			eo->addAllEOperations(e4c::select< ecore::EOperation >(val));
+		});
 	m_EClass->addFeatureAccesors(m_EClass__eAllAttributes, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< ecore::EClass_ptr >(o)->getEAllAttributes()); },
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< ecore::EClass_ptr >(o)->getEAllAttributes()); 
+		},
 		 e4c::set_t());
 	m_EClass->addFeatureAccesors(m_EClass__eAllReferences, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< ecore::EClass_ptr >(o)->getEAllReferences()); },
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< ecore::EClass_ptr >(o)->getEAllReferences()); 
+		},
 		 e4c::set_t());
 	m_EClass->addFeatureAccesors(m_EClass__eReferences, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< ecore::EClass_ptr >(o)->getEReferences()); },
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< ecore::EClass_ptr >(o)->getEReferences()); 
+		},
 		 e4c::set_t());
 	m_EClass->addFeatureAccesors(m_EClass__eAttributes, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< ecore::EClass_ptr >(o)->getEAttributes()); },
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< ecore::EClass_ptr >(o)->getEAttributes()); 
+		},
 		 e4c::set_t());
 	m_EClass->addFeatureAccesors(m_EClass__eAllContainments, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< ecore::EClass_ptr >(o)->getEAllContainments()); },
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< ecore::EClass_ptr >(o)->getEAllContainments()); 
+		},
 		 e4c::set_t());
 	m_EClass->addFeatureAccesors(m_EClass__eAllOperations, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< ecore::EClass_ptr >(o)->getEAllOperations()); },
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< ecore::EClass_ptr >(o)->getEAllOperations()); 
+		},
 		 e4c::set_t());
 	m_EClass->addFeatureAccesors(m_EClass__eAllStructuralFeatures, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< ecore::EClass_ptr >(o)->getEAllStructuralFeatures()); },
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< ecore::EClass_ptr >(o)->getEAllStructuralFeatures()); 
+		},
 		 e4c::set_t());
 	m_EClass->addFeatureAccesors(m_EClass__eAllSuperTypes, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< ecore::EClass_ptr >(o)->getEAllSuperTypes()); },
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< ecore::EClass_ptr >(o)->getEAllSuperTypes()); 
+		},
 		 e4c::set_t());
 	m_EClass->addFeatureAccesors(m_EClass__eIDAttribute, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< ecore::EClass_ptr >(o)->getEIDAttribute()); },
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< ecore::EClass_ptr >(o)->getEIDAttribute()); 
+		},
 		 e4c::set_t());
 	m_EClass->addFeatureAccesors(m_EClass__eStructuralFeatures, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< ecore::EClass_ptr >(o)->getEStructuralFeatures()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< ecore::EClass_ptr >(o)->getEStructuralFeatures()); 
+		},
+		[](ecore::EObject_ptr o, e4c::holder h) {
+			typedef std::vector< ecore::EObject_ptr > type_t;
+			const type_t& val = h.to_value< type_t >();
+			ecore::EClass_ptr eo = dynamic_cast< ecore::EClass_ptr >(o);
+			eo->clearEStructuralFeatures();
+			eo->addAllEStructuralFeatures(e4c::select< ecore::EStructuralFeature >(val));
+		});
 	m_EClass->addFeatureAccesors(m_EClass__eGenericSuperTypes, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< ecore::EClass_ptr >(o)->getEGenericSuperTypes()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< ecore::EClass_ptr >(o)->getEGenericSuperTypes()); 
+		},
+		[](ecore::EObject_ptr o, e4c::holder h) {
+			typedef std::vector< ecore::EObject_ptr > type_t;
+			const type_t& val = h.to_value< type_t >();
+			ecore::EClass_ptr eo = dynamic_cast< ecore::EClass_ptr >(o);
+			eo->clearEGenericSuperTypes();
+			eo->addAllEGenericSuperTypes(e4c::select< ecore::EGenericType >(val));
+		});
 	m_EClass->addFeatureAccesors(m_EClass__eAllGenericSuperTypes, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< ecore::EClass_ptr >(o)->getEAllGenericSuperTypes()); },
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< ecore::EClass_ptr >(o)->getEAllGenericSuperTypes()); 
+		},
 		 e4c::set_t());
 	m_EClassifier->addFeatureAccesors(m_EClassifier__instanceClassName, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< ecore::EClassifier_ptr >(o)->getInstanceClassName()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< ecore::EClassifier_ptr >(o)->getInstanceClassName()); 
+		},
+		[](ecore::EObject_ptr o, e4c::holder h) {
+			typedef ecore::EClassifier::instanceClassName_t type_t;
+			const type_t& val = h.to_value< type_t >();
+			dynamic_cast< ecore::EClassifier_ptr >(o)->setInstanceClassName(val);
+		});
 	m_EClassifier->addFeatureAccesors(m_EClassifier__instanceClass, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< ecore::EClassifier_ptr >(o)->getInstanceClass()); },
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< ecore::EClassifier_ptr >(o)->getInstanceClass()); 
+		},
 		 e4c::set_t());
 	m_EClassifier->addFeatureAccesors(m_EClassifier__defaultValue, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< ecore::EClassifier_ptr >(o)->getDefaultValue()); },
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< ecore::EClassifier_ptr >(o)->getDefaultValue()); 
+		},
 		 e4c::set_t());
 	m_EClassifier->addFeatureAccesors(m_EClassifier__instanceTypeName, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< ecore::EClassifier_ptr >(o)->getInstanceTypeName()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< ecore::EClassifier_ptr >(o)->getInstanceTypeName()); 
+		},
+		[](ecore::EObject_ptr o, e4c::holder h) {
+			typedef ecore::EClassifier::instanceTypeName_t type_t;
+			const type_t& val = h.to_value< type_t >();
+			dynamic_cast< ecore::EClassifier_ptr >(o)->setInstanceTypeName(val);
+		});
 	m_EClassifier->addFeatureAccesors(m_EClassifier__ePackage, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< ecore::EClassifier_ptr >(o)->getEPackage()); },
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< ecore::EClassifier_ptr >(o)->getEPackage()); 
+		},
 		 e4c::set_t());
 	m_EClassifier->addFeatureAccesors(m_EClassifier__eTypeParameters, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< ecore::EClassifier_ptr >(o)->getETypeParameters()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< ecore::EClassifier_ptr >(o)->getETypeParameters()); 
+		},
+		[](ecore::EObject_ptr o, e4c::holder h) {
+			typedef std::vector< ecore::EObject_ptr > type_t;
+			const type_t& val = h.to_value< type_t >();
+			ecore::EClassifier_ptr eo = dynamic_cast< ecore::EClassifier_ptr >(o);
+			eo->clearETypeParameters();
+			eo->addAllETypeParameters(e4c::select< ecore::ETypeParameter >(val));
+		});
 	m_EDataType->addFeatureAccesors(m_EDataType__serializable, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< ecore::EDataType_ptr >(o)->getSerializable()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< ecore::EDataType_ptr >(o)->getSerializable()); 
+		},
+		[](ecore::EObject_ptr o, e4c::holder h) {
+			typedef ecore::EDataType::serializable_t type_t;
+			const type_t& val = h.to_value< type_t >();
+			dynamic_cast< ecore::EDataType_ptr >(o)->setSerializable(val);
+		});
 	m_EEnum->addFeatureAccesors(m_EEnum__eLiterals, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< ecore::EEnum_ptr >(o)->getELiterals()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< ecore::EEnum_ptr >(o)->getELiterals()); 
+		},
+		[](ecore::EObject_ptr o, e4c::holder h) {
+			typedef std::vector< ecore::EObject_ptr > type_t;
+			const type_t& val = h.to_value< type_t >();
+			ecore::EEnum_ptr eo = dynamic_cast< ecore::EEnum_ptr >(o);
+			eo->clearELiterals();
+			eo->addAllELiterals(e4c::select< ecore::EEnumLiteral >(val));
+		});
 	m_EEnumLiteral->addFeatureAccesors(m_EEnumLiteral__value, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< ecore::EEnumLiteral_ptr >(o)->getValue()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< ecore::EEnumLiteral_ptr >(o)->getValue()); 
+		},
+		[](ecore::EObject_ptr o, e4c::holder h) {
+			typedef ecore::EEnumLiteral::value_t type_t;
+			const type_t& val = h.to_value< type_t >();
+			dynamic_cast< ecore::EEnumLiteral_ptr >(o)->setValue(val);
+		});
 	m_EEnumLiteral->addFeatureAccesors(m_EEnumLiteral__instance, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< ecore::EEnumLiteral_ptr >(o)->getInstance()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< ecore::EEnumLiteral_ptr >(o)->getInstance()); 
+		},
+		[](ecore::EObject_ptr o, e4c::holder h) {
+			typedef ecore::EEnumLiteral::instance_t type_t;
+			const type_t& val = h.to_value< type_t >();
+			dynamic_cast< ecore::EEnumLiteral_ptr >(o)->setInstance(val);
+		});
 	m_EEnumLiteral->addFeatureAccesors(m_EEnumLiteral__literal, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< ecore::EEnumLiteral_ptr >(o)->getLiteral()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< ecore::EEnumLiteral_ptr >(o)->getLiteral()); 
+		},
+		[](ecore::EObject_ptr o, e4c::holder h) {
+			typedef ecore::EEnumLiteral::literal_t type_t;
+			const type_t& val = h.to_value< type_t >();
+			dynamic_cast< ecore::EEnumLiteral_ptr >(o)->setLiteral(val);
+		});
 	m_EEnumLiteral->addFeatureAccesors(m_EEnumLiteral__eEnum, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< ecore::EEnumLiteral_ptr >(o)->getEEnum()); },
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< ecore::EEnumLiteral_ptr >(o)->getEEnum()); 
+		},
 		 e4c::set_t());
 	m_EFactory->addFeatureAccesors(m_EFactory__ePackage, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< ecore::EFactory_ptr >(o)->getEPackage()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< ecore::EFactory_ptr >(o)->getEPackage()); 
+		},
+		[](ecore::EObject_ptr o, e4c::holder h) {
+			ecore::EPackage_ptr val = dynamic_cast< ecore::EPackage_ptr >(h.to_value< ecore::EObject_ptr >());
+			dynamic_cast< ecore::EFactory_ptr >(o)->setEPackage(val);
+		});
 	m_EModelElement->addFeatureAccesors(m_EModelElement__eAnnotations, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< ecore::EModelElement_ptr >(o)->getEAnnotations()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< ecore::EModelElement_ptr >(o)->getEAnnotations()); 
+		},
+		[](ecore::EObject_ptr o, e4c::holder h) {
+			typedef std::vector< ecore::EObject_ptr > type_t;
+			const type_t& val = h.to_value< type_t >();
+			ecore::EModelElement_ptr eo = dynamic_cast< ecore::EModelElement_ptr >(o);
+			eo->clearEAnnotations();
+			eo->addAllEAnnotations(e4c::select< ecore::EAnnotation >(val));
+		});
 	m_ENamedElement->addFeatureAccesors(m_ENamedElement__name, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< ecore::ENamedElement_ptr >(o)->getName()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< ecore::ENamedElement_ptr >(o)->getName()); 
+		},
+		[](ecore::EObject_ptr o, e4c::holder h) {
+			typedef ecore::ENamedElement::name_t type_t;
+			const type_t& val = h.to_value< type_t >();
+			dynamic_cast< ecore::ENamedElement_ptr >(o)->setName(val);
+		});
 	m_EOperation->addFeatureAccesors(m_EOperation__eContainingClass, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< ecore::EOperation_ptr >(o)->getEContainingClass()); },
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< ecore::EOperation_ptr >(o)->getEContainingClass()); 
+		},
 		 e4c::set_t());
 	m_EOperation->addFeatureAccesors(m_EOperation__eTypeParameters, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< ecore::EOperation_ptr >(o)->getETypeParameters()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< ecore::EOperation_ptr >(o)->getETypeParameters()); 
+		},
+		[](ecore::EObject_ptr o, e4c::holder h) {
+			typedef std::vector< ecore::EObject_ptr > type_t;
+			const type_t& val = h.to_value< type_t >();
+			ecore::EOperation_ptr eo = dynamic_cast< ecore::EOperation_ptr >(o);
+			eo->clearETypeParameters();
+			eo->addAllETypeParameters(e4c::select< ecore::ETypeParameter >(val));
+		});
 	m_EOperation->addFeatureAccesors(m_EOperation__eParameters, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< ecore::EOperation_ptr >(o)->getEParameters()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< ecore::EOperation_ptr >(o)->getEParameters()); 
+		},
+		[](ecore::EObject_ptr o, e4c::holder h) {
+			typedef std::vector< ecore::EObject_ptr > type_t;
+			const type_t& val = h.to_value< type_t >();
+			ecore::EOperation_ptr eo = dynamic_cast< ecore::EOperation_ptr >(o);
+			eo->clearEParameters();
+			eo->addAllEParameters(e4c::select< ecore::EParameter >(val));
+		});
 	m_EOperation->addFeatureAccesors(m_EOperation__eExceptions, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< ecore::EOperation_ptr >(o)->getEExceptions()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< ecore::EOperation_ptr >(o)->getEExceptions()); 
+		},
+		[](ecore::EObject_ptr o, e4c::holder h) {
+			typedef std::vector< ecore::EObject_ptr > type_t;
+			const type_t& val = h.to_value< type_t >();
+			ecore::EOperation_ptr eo = dynamic_cast< ecore::EOperation_ptr >(o);
+			eo->clearEExceptions();
+			eo->addAllEExceptions(e4c::select< ecore::EClassifier >(val));
+		});
 	m_EOperation->addFeatureAccesors(m_EOperation__eGenericExceptions, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< ecore::EOperation_ptr >(o)->getEGenericExceptions()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< ecore::EOperation_ptr >(o)->getEGenericExceptions()); 
+		},
+		[](ecore::EObject_ptr o, e4c::holder h) {
+			typedef std::vector< ecore::EObject_ptr > type_t;
+			const type_t& val = h.to_value< type_t >();
+			ecore::EOperation_ptr eo = dynamic_cast< ecore::EOperation_ptr >(o);
+			eo->clearEGenericExceptions();
+			eo->addAllEGenericExceptions(e4c::select< ecore::EGenericType >(val));
+		});
 	m_EPackage->addFeatureAccesors(m_EPackage__nsURI, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< ecore::EPackage_ptr >(o)->getNsURI()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< ecore::EPackage_ptr >(o)->getNsURI()); 
+		},
+		[](ecore::EObject_ptr o, e4c::holder h) {
+			typedef ecore::EPackage::nsURI_t type_t;
+			const type_t& val = h.to_value< type_t >();
+			dynamic_cast< ecore::EPackage_ptr >(o)->setNsURI(val);
+		});
 	m_EPackage->addFeatureAccesors(m_EPackage__nsPrefix, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< ecore::EPackage_ptr >(o)->getNsPrefix()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< ecore::EPackage_ptr >(o)->getNsPrefix()); 
+		},
+		[](ecore::EObject_ptr o, e4c::holder h) {
+			typedef ecore::EPackage::nsPrefix_t type_t;
+			const type_t& val = h.to_value< type_t >();
+			dynamic_cast< ecore::EPackage_ptr >(o)->setNsPrefix(val);
+		});
 	m_EPackage->addFeatureAccesors(m_EPackage__eFactoryInstance, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< ecore::EPackage_ptr >(o)->getEFactoryInstance()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< ecore::EPackage_ptr >(o)->getEFactoryInstance()); 
+		},
+		[](ecore::EObject_ptr o, e4c::holder h) {
+			ecore::EFactory_ptr val = dynamic_cast< ecore::EFactory_ptr >(h.to_value< ecore::EObject_ptr >());
+			dynamic_cast< ecore::EPackage_ptr >(o)->setEFactoryInstance(val);
+		});
 	m_EPackage->addFeatureAccesors(m_EPackage__eClassifiers, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< ecore::EPackage_ptr >(o)->getEClassifiers()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< ecore::EPackage_ptr >(o)->getEClassifiers()); 
+		},
+		[](ecore::EObject_ptr o, e4c::holder h) {
+			typedef std::vector< ecore::EObject_ptr > type_t;
+			const type_t& val = h.to_value< type_t >();
+			ecore::EPackage_ptr eo = dynamic_cast< ecore::EPackage_ptr >(o);
+			eo->clearEClassifiers();
+			eo->addAllEClassifiers(e4c::select< ecore::EClassifier >(val));
+		});
 	m_EPackage->addFeatureAccesors(m_EPackage__eSubpackages, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< ecore::EPackage_ptr >(o)->getESubpackages()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< ecore::EPackage_ptr >(o)->getESubpackages()); 
+		},
+		[](ecore::EObject_ptr o, e4c::holder h) {
+			typedef std::vector< ecore::EObject_ptr > type_t;
+			const type_t& val = h.to_value< type_t >();
+			ecore::EPackage_ptr eo = dynamic_cast< ecore::EPackage_ptr >(o);
+			eo->clearESubpackages();
+			eo->addAllESubpackages(e4c::select< ecore::EPackage >(val));
+		});
 	m_EPackage->addFeatureAccesors(m_EPackage__eSuperPackage, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< ecore::EPackage_ptr >(o)->getESuperPackage()); },
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< ecore::EPackage_ptr >(o)->getESuperPackage()); 
+		},
 		 e4c::set_t());
 	m_EParameter->addFeatureAccesors(m_EParameter__eOperation, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< ecore::EParameter_ptr >(o)->getEOperation()); },
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< ecore::EParameter_ptr >(o)->getEOperation()); 
+		},
 		 e4c::set_t());
 	m_EReference->addFeatureAccesors(m_EReference__containment, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< ecore::EReference_ptr >(o)->getContainment()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< ecore::EReference_ptr >(o)->getContainment()); 
+		},
+		[](ecore::EObject_ptr o, e4c::holder h) {
+			typedef ecore::EReference::containment_t type_t;
+			const type_t& val = h.to_value< type_t >();
+			dynamic_cast< ecore::EReference_ptr >(o)->setContainment(val);
+		});
 	m_EReference->addFeatureAccesors(m_EReference__container, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< ecore::EReference_ptr >(o)->getContainer()); },
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< ecore::EReference_ptr >(o)->getContainer()); 
+		},
 		 e4c::set_t());
 	m_EReference->addFeatureAccesors(m_EReference__resolveProxies, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< ecore::EReference_ptr >(o)->getResolveProxies()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< ecore::EReference_ptr >(o)->getResolveProxies()); 
+		},
+		[](ecore::EObject_ptr o, e4c::holder h) {
+			typedef ecore::EReference::resolveProxies_t type_t;
+			const type_t& val = h.to_value< type_t >();
+			dynamic_cast< ecore::EReference_ptr >(o)->setResolveProxies(val);
+		});
 	m_EReference->addFeatureAccesors(m_EReference__eOpposite, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< ecore::EReference_ptr >(o)->getEOpposite()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< ecore::EReference_ptr >(o)->getEOpposite()); 
+		},
+		[](ecore::EObject_ptr o, e4c::holder h) {
+			ecore::EReference_ptr val = dynamic_cast< ecore::EReference_ptr >(h.to_value< ecore::EObject_ptr >());
+			dynamic_cast< ecore::EReference_ptr >(o)->setEOpposite(val);
+		});
 	m_EReference->addFeatureAccesors(m_EReference__eReferenceType, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< ecore::EReference_ptr >(o)->getEReferenceType()); },
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< ecore::EReference_ptr >(o)->getEReferenceType()); 
+		},
 		 e4c::set_t());
 	m_EReference->addFeatureAccesors(m_EReference__eKeys, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< ecore::EReference_ptr >(o)->getEKeys()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< ecore::EReference_ptr >(o)->getEKeys()); 
+		},
+		[](ecore::EObject_ptr o, e4c::holder h) {
+			typedef std::vector< ecore::EObject_ptr > type_t;
+			const type_t& val = h.to_value< type_t >();
+			ecore::EReference_ptr eo = dynamic_cast< ecore::EReference_ptr >(o);
+			eo->clearEKeys();
+			eo->addAllEKeys(e4c::select< ecore::EAttribute >(val));
+		});
 	m_EStructuralFeature->addFeatureAccesors(m_EStructuralFeature__changeable, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< ecore::EStructuralFeature_ptr >(o)->getChangeable()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< ecore::EStructuralFeature_ptr >(o)->getChangeable()); 
+		},
+		[](ecore::EObject_ptr o, e4c::holder h) {
+			typedef ecore::EStructuralFeature::changeable_t type_t;
+			const type_t& val = h.to_value< type_t >();
+			dynamic_cast< ecore::EStructuralFeature_ptr >(o)->setChangeable(val);
+		});
 	m_EStructuralFeature->addFeatureAccesors(m_EStructuralFeature__volatile, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< ecore::EStructuralFeature_ptr >(o)->getVolatile_()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< ecore::EStructuralFeature_ptr >(o)->getVolatile_()); 
+		},
+		[](ecore::EObject_ptr o, e4c::holder h) {
+			typedef ecore::EStructuralFeature::volatile__t type_t;
+			const type_t& val = h.to_value< type_t >();
+			dynamic_cast< ecore::EStructuralFeature_ptr >(o)->setVolatile_(val);
+		});
 	m_EStructuralFeature->addFeatureAccesors(m_EStructuralFeature__transient, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< ecore::EStructuralFeature_ptr >(o)->getTransient()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< ecore::EStructuralFeature_ptr >(o)->getTransient()); 
+		},
+		[](ecore::EObject_ptr o, e4c::holder h) {
+			typedef ecore::EStructuralFeature::transient_t type_t;
+			const type_t& val = h.to_value< type_t >();
+			dynamic_cast< ecore::EStructuralFeature_ptr >(o)->setTransient(val);
+		});
 	m_EStructuralFeature->addFeatureAccesors(m_EStructuralFeature__defaultValueLiteral, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< ecore::EStructuralFeature_ptr >(o)->getDefaultValueLiteral()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< ecore::EStructuralFeature_ptr >(o)->getDefaultValueLiteral()); 
+		},
+		[](ecore::EObject_ptr o, e4c::holder h) {
+			typedef ecore::EStructuralFeature::defaultValueLiteral_t type_t;
+			const type_t& val = h.to_value< type_t >();
+			dynamic_cast< ecore::EStructuralFeature_ptr >(o)->setDefaultValueLiteral(val);
+		});
 	m_EStructuralFeature->addFeatureAccesors(m_EStructuralFeature__defaultValue, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< ecore::EStructuralFeature_ptr >(o)->getDefaultValue()); },
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< ecore::EStructuralFeature_ptr >(o)->getDefaultValue()); 
+		},
 		 e4c::set_t());
 	m_EStructuralFeature->addFeatureAccesors(m_EStructuralFeature__unsettable, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< ecore::EStructuralFeature_ptr >(o)->getUnsettable()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< ecore::EStructuralFeature_ptr >(o)->getUnsettable()); 
+		},
+		[](ecore::EObject_ptr o, e4c::holder h) {
+			typedef ecore::EStructuralFeature::unsettable_t type_t;
+			const type_t& val = h.to_value< type_t >();
+			dynamic_cast< ecore::EStructuralFeature_ptr >(o)->setUnsettable(val);
+		});
 	m_EStructuralFeature->addFeatureAccesors(m_EStructuralFeature__derived, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< ecore::EStructuralFeature_ptr >(o)->getDerived()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< ecore::EStructuralFeature_ptr >(o)->getDerived()); 
+		},
+		[](ecore::EObject_ptr o, e4c::holder h) {
+			typedef ecore::EStructuralFeature::derived_t type_t;
+			const type_t& val = h.to_value< type_t >();
+			dynamic_cast< ecore::EStructuralFeature_ptr >(o)->setDerived(val);
+		});
 	m_EStructuralFeature->addFeatureAccesors(m_EStructuralFeature__eContainingClass, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< ecore::EStructuralFeature_ptr >(o)->getEContainingClass()); },
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< ecore::EStructuralFeature_ptr >(o)->getEContainingClass()); 
+		},
 		 e4c::set_t());
 	m_ETypedElement->addFeatureAccesors(m_ETypedElement__ordered, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< ecore::ETypedElement_ptr >(o)->getOrdered()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< ecore::ETypedElement_ptr >(o)->getOrdered()); 
+		},
+		[](ecore::EObject_ptr o, e4c::holder h) {
+			typedef ecore::ETypedElement::ordered_t type_t;
+			const type_t& val = h.to_value< type_t >();
+			dynamic_cast< ecore::ETypedElement_ptr >(o)->setOrdered(val);
+		});
 	m_ETypedElement->addFeatureAccesors(m_ETypedElement__unique, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< ecore::ETypedElement_ptr >(o)->getUnique()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< ecore::ETypedElement_ptr >(o)->getUnique()); 
+		},
+		[](ecore::EObject_ptr o, e4c::holder h) {
+			typedef ecore::ETypedElement::unique_t type_t;
+			const type_t& val = h.to_value< type_t >();
+			dynamic_cast< ecore::ETypedElement_ptr >(o)->setUnique(val);
+		});
 	m_ETypedElement->addFeatureAccesors(m_ETypedElement__lowerBound, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< ecore::ETypedElement_ptr >(o)->getLowerBound()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< ecore::ETypedElement_ptr >(o)->getLowerBound()); 
+		},
+		[](ecore::EObject_ptr o, e4c::holder h) {
+			typedef ecore::ETypedElement::lowerBound_t type_t;
+			const type_t& val = h.to_value< type_t >();
+			dynamic_cast< ecore::ETypedElement_ptr >(o)->setLowerBound(val);
+		});
 	m_ETypedElement->addFeatureAccesors(m_ETypedElement__upperBound, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< ecore::ETypedElement_ptr >(o)->getUpperBound()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< ecore::ETypedElement_ptr >(o)->getUpperBound()); 
+		},
+		[](ecore::EObject_ptr o, e4c::holder h) {
+			typedef ecore::ETypedElement::upperBound_t type_t;
+			const type_t& val = h.to_value< type_t >();
+			dynamic_cast< ecore::ETypedElement_ptr >(o)->setUpperBound(val);
+		});
 	m_ETypedElement->addFeatureAccesors(m_ETypedElement__many, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< ecore::ETypedElement_ptr >(o)->getMany()); },
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< ecore::ETypedElement_ptr >(o)->getMany()); 
+		},
 		 e4c::set_t());
 	m_ETypedElement->addFeatureAccesors(m_ETypedElement__required, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< ecore::ETypedElement_ptr >(o)->getRequired()); },
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< ecore::ETypedElement_ptr >(o)->getRequired()); 
+		},
 		 e4c::set_t());
 	m_ETypedElement->addFeatureAccesors(m_ETypedElement__eType, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< ecore::ETypedElement_ptr >(o)->getEType()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< ecore::ETypedElement_ptr >(o)->getEType()); 
+		},
+		[](ecore::EObject_ptr o, e4c::holder h) {
+			ecore::EClassifier_ptr val = dynamic_cast< ecore::EClassifier_ptr >(h.to_value< ecore::EObject_ptr >());
+			dynamic_cast< ecore::ETypedElement_ptr >(o)->setEType(val);
+		});
 	m_ETypedElement->addFeatureAccesors(m_ETypedElement__eGenericType, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< ecore::ETypedElement_ptr >(o)->getEGenericType()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< ecore::ETypedElement_ptr >(o)->getEGenericType()); 
+		},
+		[](ecore::EObject_ptr o, e4c::holder h) {
+			ecore::EGenericType_ptr val = dynamic_cast< ecore::EGenericType_ptr >(h.to_value< ecore::EObject_ptr >());
+			dynamic_cast< ecore::ETypedElement_ptr >(o)->setEGenericType(val);
+		});
 	m_EStringToStringMapEntry->addFeatureAccesors(m_EStringToStringMapEntry__key, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< ecore::EStringToStringMapEntry_ptr >(o)->getKey()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< ecore::EStringToStringMapEntry_ptr >(o)->getKey()); 
+		},
+		[](ecore::EObject_ptr o, e4c::holder h) {
+			typedef ecore::EStringToStringMapEntry::key_t type_t;
+			const type_t& val = h.to_value< type_t >();
+			dynamic_cast< ecore::EStringToStringMapEntry_ptr >(o)->setKey(val);
+		});
 	m_EStringToStringMapEntry->addFeatureAccesors(m_EStringToStringMapEntry__value, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< ecore::EStringToStringMapEntry_ptr >(o)->getValue()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< ecore::EStringToStringMapEntry_ptr >(o)->getValue()); 
+		},
+		[](ecore::EObject_ptr o, e4c::holder h) {
+			typedef ecore::EStringToStringMapEntry::value_t type_t;
+			const type_t& val = h.to_value< type_t >();
+			dynamic_cast< ecore::EStringToStringMapEntry_ptr >(o)->setValue(val);
+		});
 	m_EGenericType->addFeatureAccesors(m_EGenericType__eUpperBound, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< ecore::EGenericType_ptr >(o)->getEUpperBound()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< ecore::EGenericType_ptr >(o)->getEUpperBound()); 
+		},
+		[](ecore::EObject_ptr o, e4c::holder h) {
+			ecore::EGenericType_ptr val = dynamic_cast< ecore::EGenericType_ptr >(h.to_value< ecore::EObject_ptr >());
+			dynamic_cast< ecore::EGenericType_ptr >(o)->setEUpperBound(val);
+		});
 	m_EGenericType->addFeatureAccesors(m_EGenericType__eTypeArguments, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< ecore::EGenericType_ptr >(o)->getETypeArguments()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< ecore::EGenericType_ptr >(o)->getETypeArguments()); 
+		},
+		[](ecore::EObject_ptr o, e4c::holder h) {
+			typedef std::vector< ecore::EObject_ptr > type_t;
+			const type_t& val = h.to_value< type_t >();
+			ecore::EGenericType_ptr eo = dynamic_cast< ecore::EGenericType_ptr >(o);
+			eo->clearETypeArguments();
+			eo->addAllETypeArguments(e4c::select< ecore::EGenericType >(val));
+		});
 	m_EGenericType->addFeatureAccesors(m_EGenericType__eRawType, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< ecore::EGenericType_ptr >(o)->getERawType()); },
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< ecore::EGenericType_ptr >(o)->getERawType()); 
+		},
 		 e4c::set_t());
 	m_EGenericType->addFeatureAccesors(m_EGenericType__eLowerBound, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< ecore::EGenericType_ptr >(o)->getELowerBound()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< ecore::EGenericType_ptr >(o)->getELowerBound()); 
+		},
+		[](ecore::EObject_ptr o, e4c::holder h) {
+			ecore::EGenericType_ptr val = dynamic_cast< ecore::EGenericType_ptr >(h.to_value< ecore::EObject_ptr >());
+			dynamic_cast< ecore::EGenericType_ptr >(o)->setELowerBound(val);
+		});
 	m_EGenericType->addFeatureAccesors(m_EGenericType__eTypeParameter, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< ecore::EGenericType_ptr >(o)->getETypeParameter()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< ecore::EGenericType_ptr >(o)->getETypeParameter()); 
+		},
+		[](ecore::EObject_ptr o, e4c::holder h) {
+			ecore::ETypeParameter_ptr val = dynamic_cast< ecore::ETypeParameter_ptr >(h.to_value< ecore::EObject_ptr >());
+			dynamic_cast< ecore::EGenericType_ptr >(o)->setETypeParameter(val);
+		});
 	m_EGenericType->addFeatureAccesors(m_EGenericType__eClassifier, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< ecore::EGenericType_ptr >(o)->getEClassifier()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< ecore::EGenericType_ptr >(o)->getEClassifier()); 
+		},
+		[](ecore::EObject_ptr o, e4c::holder h) {
+			ecore::EClassifier_ptr val = dynamic_cast< ecore::EClassifier_ptr >(h.to_value< ecore::EObject_ptr >());
+			dynamic_cast< ecore::EGenericType_ptr >(o)->setEClassifier(val);
+		});
 	m_ETypeParameter->addFeatureAccesors(m_ETypeParameter__eBounds, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< ecore::ETypeParameter_ptr >(o)->getEBounds()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< ecore::ETypeParameter_ptr >(o)->getEBounds()); 
+		},
+		[](ecore::EObject_ptr o, e4c::holder h) {
+			typedef std::vector< ecore::EObject_ptr > type_t;
+			const type_t& val = h.to_value< type_t >();
+			ecore::ETypeParameter_ptr eo = dynamic_cast< ecore::ETypeParameter_ptr >(o);
+			eo->clearEBounds();
+			eo->addAllEBounds(e4c::select< ecore::EGenericType >(val));
+		});
 	
 }
 

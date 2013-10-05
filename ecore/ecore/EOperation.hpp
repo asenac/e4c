@@ -1,4 +1,3 @@
-
 #ifndef EMF_CPP_ECORE_EOPERATION__HPP
 #define EMF_CPP_ECORE_EOPERATION__HPP
 
@@ -31,15 +30,23 @@ public:
 	eTypeParameters_t getETypeParameters() const;
 	void addETypeParameters(ecore::ETypeParameter_ptr eTypeParameters_);
 	void addAllETypeParameters(const eTypeParameters_t& eTypeParameters_);
+	void removeETypeParameters(ecore::ETypeParameter_ptr eTypeParameters_);
+	void clearETypeParameters();
 	eParameters_t getEParameters() const;
 	void addEParameters(ecore::EParameter_ptr eParameters_);
 	void addAllEParameters(const eParameters_t& eParameters_);
+	void removeEParameters(ecore::EParameter_ptr eParameters_);
+	void clearEParameters();
 	eExceptions_t getEExceptions() const;
 	void addEExceptions(ecore::EClassifier_ptr eExceptions_);
 	void addAllEExceptions(const eExceptions_t& eExceptions_);
+	void removeEExceptions(ecore::EClassifier_ptr eExceptions_);
+	void clearEExceptions();
 	eGenericExceptions_t getEGenericExceptions() const;
 	void addEGenericExceptions(ecore::EGenericType_ptr eGenericExceptions_);
 	void addAllEGenericExceptions(const eGenericExceptions_t& eGenericExceptions_);
+	void removeEGenericExceptions(ecore::EGenericType_ptr eGenericExceptions_);
+	void clearEGenericExceptions();
 	
 	ecore::EInt getOperationID();
 	ecore::EBoolean isOverrideOf(ecore::EOperation_ptr someOperation);

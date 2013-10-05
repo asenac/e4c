@@ -1,4 +1,3 @@
-
 #include "ConstantDef.hpp"
 #include <idlmm/IdlmmPackage.hpp>
 #include <idlmm/Expression.hpp>
@@ -25,7 +24,6 @@ ConstantDef::constValue_t ConstantDef::getConstValue() const
 {
 	return e4c::returned(m_constValue);
 }
-
 
 void ConstantDef::setConstValue(constValue_t constValue_)
 {

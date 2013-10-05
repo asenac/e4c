@@ -1,4 +1,3 @@
-
 #include "ExceptionDef.hpp"
 #include <idlmm/IdlmmPackage.hpp>
 #include <idlmm/Field.hpp>
@@ -37,9 +36,9 @@ ExceptionDef::members_t ExceptionDef::getMembers() const
 	return e4c::returned(m_members);
 }
 
-
 void ExceptionDef::addMembers(idlmm::Field_ptr members_)
 {
+	assert(members_);
 	m_members.push_back(std::unique_ptr < idlmm::Field >(members_));
 }
 
@@ -47,6 +46,17 @@ void ExceptionDef::addAllMembers(const members_t& members_)
 {
 	for (auto i = members_.begin(); i != members_.end(); i++)
 		addMembers(*i);
+}
+
+void ExceptionDef::removeMembers(idlmm::Field_ptr members_)
+{
+	assert(members_);
+	e4c::remove(m_members, members_);
+}
+
+void ExceptionDef::clearMembers()
+{
+	m_members.clear();
 }
 
 

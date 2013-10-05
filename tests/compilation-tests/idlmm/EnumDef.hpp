@@ -1,4 +1,3 @@
-
 #ifndef EMF_CPP_IDLMM_ENUMDEF__HPP
 #define EMF_CPP_IDLMM_ENUMDEF__HPP
 
@@ -26,6 +25,8 @@ public:
 	members_t getMembers() const;
 	void addMembers(idlmm::EnumMember_ptr members_);
 	void addAllMembers(const members_t& members_);
+	void removeMembers(idlmm::EnumMember_ptr members_);
+	void clearMembers();
 	
 
 	/*PROTECTED REGION ID(idlmm::EnumDef public) START*/

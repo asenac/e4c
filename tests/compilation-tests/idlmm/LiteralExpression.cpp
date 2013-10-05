@@ -1,4 +1,3 @@
-
 #include "LiteralExpression.hpp"
 #include <idlmm/IdlmmPackage.hpp>
 

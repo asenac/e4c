@@ -1,4 +1,3 @@
-
 #include "ENamedElement.hpp"
 #include <ecore/EcorePackage.hpp>
 

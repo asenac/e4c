@@ -1,4 +1,3 @@
-
 #include "EEnum.hpp"
 #include <ecore/EcorePackage.hpp>
 #include <ecore/EEnumLiteral.hpp>
@@ -26,9 +25,9 @@ EEnum::eLiterals_t EEnum::getELiterals() const
 	return e4c::returned(m_eLiterals);
 }
 
-
 void EEnum::addELiterals(ecore::EEnumLiteral_ptr eLiterals_)
 {
+	assert(eLiterals_);
 	eLiterals_->setEEnum(this);
 	m_eLiterals.push_back(std::unique_ptr < ecore::EEnumLiteral >(eLiterals_));
 }
@@ -37,6 +36,17 @@ void EEnum::addAllELiterals(const eLiterals_t& eLiterals_)
 {
 	for (auto i = eLiterals_.begin(); i != eLiterals_.end(); i++)
 		addELiterals(*i);
+}
+
+void EEnum::removeELiterals(ecore::EEnumLiteral_ptr eLiterals_)
+{
+	assert(eLiterals_);
+	e4c::remove(m_eLiterals, eLiterals_);
+}
+
+void EEnum::clearELiterals()
+{
+	m_eLiterals.clear();
 }
 
 

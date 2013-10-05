@@ -1,4 +1,3 @@
-
 #ifndef EMF_CPP_IDLMM_TRANSLATIONUNIT__HPP
 #define EMF_CPP_IDLMM_TRANSLATIONUNIT__HPP
 
@@ -28,11 +27,15 @@ public:
 	contains_t getContains() const;
 	void addContains(idlmm::Contained_ptr contains_);
 	void addAllContains(const contains_t& contains_);
+	void removeContains(idlmm::Contained_ptr contains_);
+	void clearContains();
 	void setIdentifier(identifier_t _identifier);
 	identifier_t getIdentifier() const;
 	includes_t getIncludes() const;
 	void addIncludes(idlmm::Include_ptr includes_);
 	void addAllIncludes(const includes_t& includes_);
+	void removeIncludes(idlmm::Include_ptr includes_);
+	void clearIncludes();
 	
 
 	/*PROTECTED REGION ID(idlmm::TranslationUnit public) START*/

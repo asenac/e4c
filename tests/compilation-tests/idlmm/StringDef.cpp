@@ -1,4 +1,3 @@
-
 #include "StringDef.hpp"
 #include <idlmm/IdlmmPackage.hpp>
 #include <idlmm/Expression.hpp>
@@ -25,7 +24,6 @@ StringDef::bound_t StringDef::getBound() const
 {
 	return e4c::returned(m_bound);
 }
-
 
 void StringDef::setBound(bound_t bound_)
 {

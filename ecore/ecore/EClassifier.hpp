@@ -1,4 +1,3 @@
-
 #ifndef EMF_CPP_ECORE_ECLASSIFIER__HPP
 #define EMF_CPP_ECORE_ECLASSIFIER__HPP
 
@@ -39,6 +38,8 @@ public:
 	eTypeParameters_t getETypeParameters() const;
 	void addETypeParameters(ecore::ETypeParameter_ptr eTypeParameters_);
 	void addAllETypeParameters(const eTypeParameters_t& eTypeParameters_);
+	void removeETypeParameters(ecore::ETypeParameter_ptr eTypeParameters_);
+	void clearETypeParameters();
 	
 	ecore::EBoolean isInstance(ecore::EJavaObject object);
 	ecore::EInt getClassifierID();

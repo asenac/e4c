@@ -1,4 +1,3 @@
-
 #include "StructDef.hpp"
 #include <idlmm/IdlmmPackage.hpp>
 #include <idlmm/Field.hpp>
@@ -26,9 +25,9 @@ StructDef::members_t StructDef::getMembers() const
 	return e4c::returned(m_members);
 }
 
-
 void StructDef::addMembers(idlmm::Field_ptr members_)
 {
+	assert(members_);
 	m_members.push_back(std::unique_ptr < idlmm::Field >(members_));
 }
 
@@ -36,6 +35,17 @@ void StructDef::addAllMembers(const members_t& members_)
 {
 	for (auto i = members_.begin(); i != members_.end(); i++)
 		addMembers(*i);
+}
+
+void StructDef::removeMembers(idlmm::Field_ptr members_)
+{
+	assert(members_);
+	e4c::remove(m_members, members_);
+}
+
+void StructDef::clearMembers()
+{
+	m_members.clear();
 }
 
 

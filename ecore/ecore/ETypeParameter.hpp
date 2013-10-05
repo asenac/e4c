@@ -1,4 +1,3 @@
-
 #ifndef EMF_CPP_ECORE_ETYPEPARAMETER__HPP
 #define EMF_CPP_ECORE_ETYPEPARAMETER__HPP
 
@@ -26,6 +25,8 @@ public:
 	eBounds_t getEBounds() const;
 	void addEBounds(ecore::EGenericType_ptr eBounds_);
 	void addAllEBounds(const eBounds_t& eBounds_);
+	void removeEBounds(ecore::EGenericType_ptr eBounds_);
+	void clearEBounds();
 	
 
 	/*PROTECTED REGION ID(ecore::ETypeParameter public) START*/

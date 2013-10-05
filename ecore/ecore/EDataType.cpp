@@ -1,4 +1,3 @@
-
 #include "EDataType.hpp"
 #include <ecore/EcorePackage.hpp>
 

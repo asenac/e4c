@@ -1,4 +1,3 @@
-
 #ifndef EMF_CPP_IDLMM_INTERFACEDEF__HPP
 #define EMF_CPP_IDLMM_INTERFACEDEF__HPP
 
@@ -37,6 +36,8 @@ public:
 	derivesFrom_t getDerivesFrom() const;
 	void addDerivesFrom(idlmm::InterfaceDef_ptr derivesFrom_);
 	void addAllDerivesFrom(const derivesFrom_t& derivesFrom_);
+	void removeDerivesFrom(idlmm::InterfaceDef_ptr derivesFrom_);
+	void clearDerivesFrom();
 	forward_t getForward() const;
 	void setForward(forward_t forward_);
 	

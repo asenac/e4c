@@ -1,4 +1,3 @@
-
 #include "IDLType.hpp"
 #include <idlmm/IdlmmPackage.hpp>
 

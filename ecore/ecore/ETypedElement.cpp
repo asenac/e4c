@@ -1,4 +1,3 @@
-
 #include "ETypedElement.hpp"
 #include <ecore/EcorePackage.hpp>
 #include <ecore/EClassifier.hpp>
@@ -93,7 +92,6 @@ ETypedElement::eType_t ETypedElement::getEType() const
 {
 	return e4c::returned(m_eType);
 }
-
 void ETypedElement::setEType(eType_t eType_)
 {
 	if (m_eType == eType_)
@@ -105,7 +103,6 @@ ETypedElement::eGenericType_t ETypedElement::getEGenericType() const
 {
 	return e4c::returned(m_eGenericType);
 }
-
 
 void ETypedElement::setEGenericType(eGenericType_t eGenericType_)
 {

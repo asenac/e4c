@@ -1,4 +1,3 @@
-
 #include "EObject.hpp"
 #include <ecore/EcorePackage.hpp>
 

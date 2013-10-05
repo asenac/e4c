@@ -1,4 +1,3 @@
-
 #include "UnaryExpression.hpp"
 #include <idlmm/IdlmmPackage.hpp>
 #include <idlmm/Expression.hpp>
@@ -26,7 +25,6 @@ UnaryExpression::expression_t UnaryExpression::getExpression() const
 {
 	return e4c::returned(m_expression);
 }
-
 
 void UnaryExpression::setExpression(expression_t expression_)
 {

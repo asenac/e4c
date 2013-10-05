@@ -1,4 +1,3 @@
-
 #ifndef EMF_CPP_ECORE_EENUM__HPP
 #define EMF_CPP_ECORE_EENUM__HPP
 
@@ -26,6 +25,8 @@ public:
 	eLiterals_t getELiterals() const;
 	void addELiterals(ecore::EEnumLiteral_ptr eLiterals_);
 	void addAllELiterals(const eLiterals_t& eLiterals_);
+	void removeELiterals(ecore::EEnumLiteral_ptr eLiterals_);
+	void clearELiterals();
 	
 	ecore::EEnumLiteral_ptr getEEnumLiteral(ecore::EString name);
 	ecore::EEnumLiteral_ptr getEEnumLiteral(ecore::EInt value);

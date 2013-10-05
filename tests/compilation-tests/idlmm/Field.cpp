@@ -1,4 +1,3 @@
-
 #include "Field.hpp"
 #include <idlmm/IdlmmPackage.hpp>
 

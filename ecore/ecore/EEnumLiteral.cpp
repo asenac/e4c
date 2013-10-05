@@ -1,4 +1,3 @@
-
 #include "EEnumLiteral.hpp"
 #include <ecore/EcorePackage.hpp>
 #include <ecore/EEnum.hpp>
@@ -58,7 +57,6 @@ EEnumLiteral::eEnum_t EEnumLiteral::getEEnum() const
 {
 	return e4c::returned(m_eEnum);
 }
-
 void EEnumLiteral::setEEnum(eEnum_t eEnum_)
 {
 	m_eEnum = eEnum_;

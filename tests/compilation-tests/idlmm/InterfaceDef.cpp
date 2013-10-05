@@ -1,4 +1,3 @@
-
 #include "InterfaceDef.hpp"
 #include <idlmm/IdlmmPackage.hpp>
 #include <idlmm/InterfaceDef.hpp>
@@ -60,9 +59,9 @@ InterfaceDef::derivesFrom_t InterfaceDef::getDerivesFrom() const
 {
 	return e4c::returned(m_derivesFrom);
 }
-
 void InterfaceDef::addDerivesFrom(idlmm::InterfaceDef_ptr derivesFrom_)
 {
+	assert(derivesFrom_);
 	if (e4c::contains(m_derivesFrom, derivesFrom_))
 		return;
 	m_derivesFrom.push_back(derivesFrom_);
@@ -74,11 +73,21 @@ void InterfaceDef::addAllDerivesFrom(const derivesFrom_t& derivesFrom_)
 		addDerivesFrom(*i);
 }
 
+void InterfaceDef::removeDerivesFrom(idlmm::InterfaceDef_ptr derivesFrom_)
+{
+	assert(derivesFrom_);
+	e4c::remove(m_derivesFrom, derivesFrom_);
+}
+
+void InterfaceDef::clearDerivesFrom()
+{
+	m_derivesFrom.clear();
+}
+
 InterfaceDef::forward_t InterfaceDef::getForward() const
 {
 	return e4c::returned(m_forward);
 }
-
 void InterfaceDef::setForward(forward_t forward_)
 {
 	if (m_forward == forward_)

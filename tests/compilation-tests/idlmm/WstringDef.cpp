@@ -1,4 +1,3 @@
-
 #include "WstringDef.hpp"
 #include <idlmm/IdlmmPackage.hpp>
 #include <idlmm/Expression.hpp>
@@ -25,7 +24,6 @@ WstringDef::bound_t WstringDef::getBound() const
 {
 	return e4c::returned(m_bound);
 }
-
 
 void WstringDef::setBound(bound_t bound_)
 {

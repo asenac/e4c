@@ -1,4 +1,3 @@
-
 #include "EFactory.hpp"
 #include <ecore/EcorePackage.hpp>
 #include <ecore/EPackage.hpp>
@@ -25,7 +24,6 @@ EFactory::ePackage_t EFactory::getEPackage() const
 {
 	return e4c::returned(m_ePackage);
 }
-
 void EFactory::setEPackage(ePackage_t ePackage_)
 {
 	if (m_ePackage == ePackage_)

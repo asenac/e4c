@@ -1,4 +1,3 @@
-
 #ifndef EMF_CPP_IDLMM_UNIONDEF__HPP
 #define EMF_CPP_IDLMM_UNIONDEF__HPP
 
@@ -28,6 +27,8 @@ public:
 	unionMembers_t getUnionMembers() const;
 	void addUnionMembers(idlmm::UnionField_ptr unionMembers_);
 	void addAllUnionMembers(const unionMembers_t& unionMembers_);
+	void removeUnionMembers(idlmm::UnionField_ptr unionMembers_);
+	void clearUnionMembers();
 	containedDiscrim_t getContainedDiscrim() const;
 	void setContainedDiscrim(containedDiscrim_t containedDiscrim_);
 	containedDiscrim_t releaseContainedDiscrim();

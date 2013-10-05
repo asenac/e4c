@@ -1,4 +1,3 @@
-
 #include "EParameter.hpp"
 #include <ecore/EcorePackage.hpp>
 #include <ecore/EOperation.hpp>
@@ -25,7 +24,6 @@ EParameter::eOperation_t EParameter::getEOperation() const
 {
 	return e4c::returned(m_eOperation);
 }
-
 void EParameter::setEOperation(eOperation_t eOperation_)
 {
 	m_eOperation = eOperation_;

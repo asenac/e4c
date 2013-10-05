@@ -1,4 +1,3 @@
-
 #include "UnionDef.hpp"
 #include <idlmm/IdlmmPackage.hpp>
 #include <idlmm/UnionField.hpp>
@@ -30,9 +29,9 @@ UnionDef::unionMembers_t UnionDef::getUnionMembers() const
 	return e4c::returned(m_unionMembers);
 }
 
-
 void UnionDef::addUnionMembers(idlmm::UnionField_ptr unionMembers_)
 {
+	assert(unionMembers_);
 	m_unionMembers.push_back(std::unique_ptr < idlmm::UnionField >(unionMembers_));
 }
 
@@ -42,11 +41,21 @@ void UnionDef::addAllUnionMembers(const unionMembers_t& unionMembers_)
 		addUnionMembers(*i);
 }
 
+void UnionDef::removeUnionMembers(idlmm::UnionField_ptr unionMembers_)
+{
+	assert(unionMembers_);
+	e4c::remove(m_unionMembers, unionMembers_);
+}
+
+void UnionDef::clearUnionMembers()
+{
+	m_unionMembers.clear();
+}
+
 UnionDef::containedDiscrim_t UnionDef::getContainedDiscrim() const
 {
 	return e4c::returned(m_containedDiscrim);
 }
-
 
 void UnionDef::setContainedDiscrim(containedDiscrim_t containedDiscrim_)
 {
@@ -62,7 +71,6 @@ UnionDef::sharedDiscrim_t UnionDef::getSharedDiscrim() const
 {
 	return e4c::returned(m_sharedDiscrim);
 }
-
 void UnionDef::setSharedDiscrim(sharedDiscrim_t sharedDiscrim_)
 {
 	if (m_sharedDiscrim == sharedDiscrim_)

@@ -1,4 +1,3 @@
-
 #ifndef EMF_CPP_ECORE_EMODELELEMENT__HPP
 #define EMF_CPP_ECORE_EMODELELEMENT__HPP
 
@@ -24,6 +23,8 @@ public:
 	eAnnotations_t getEAnnotations() const;
 	void addEAnnotations(ecore::EAnnotation_ptr eAnnotations_);
 	void addAllEAnnotations(const eAnnotations_t& eAnnotations_);
+	void removeEAnnotations(ecore::EAnnotation_ptr eAnnotations_);
+	void clearEAnnotations();
 	
 	ecore::EAnnotation_ptr getEAnnotation(ecore::EString source);
 

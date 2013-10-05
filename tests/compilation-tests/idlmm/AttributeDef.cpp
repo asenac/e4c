@@ -1,4 +1,3 @@
-
 #include "AttributeDef.hpp"
 #include <idlmm/IdlmmPackage.hpp>
 #include <idlmm/ExceptionDef.hpp>
@@ -27,9 +26,9 @@ AttributeDef::getRaises_t AttributeDef::getGetRaises() const
 {
 	return e4c::returned(m_getRaises);
 }
-
 void AttributeDef::addGetRaises(idlmm::ExceptionDef_ptr getRaises_)
 {
+	assert(getRaises_);
 	if (e4c::contains(m_getRaises, getRaises_))
 		return;
 	m_getRaises.push_back(getRaises_);
@@ -41,13 +40,24 @@ void AttributeDef::addAllGetRaises(const getRaises_t& getRaises_)
 		addGetRaises(*i);
 }
 
+void AttributeDef::removeGetRaises(idlmm::ExceptionDef_ptr getRaises_)
+{
+	assert(getRaises_);
+	e4c::remove(m_getRaises, getRaises_);
+}
+
+void AttributeDef::clearGetRaises()
+{
+	m_getRaises.clear();
+}
+
 AttributeDef::setRaises_t AttributeDef::getSetRaises() const
 {
 	return e4c::returned(m_setRaises);
 }
-
 void AttributeDef::addSetRaises(idlmm::ExceptionDef_ptr setRaises_)
 {
+	assert(setRaises_);
 	if (e4c::contains(m_setRaises, setRaises_))
 		return;
 	m_setRaises.push_back(setRaises_);
@@ -57,6 +67,17 @@ void AttributeDef::addAllSetRaises(const setRaises_t& setRaises_)
 {
 	for (auto i = setRaises_.begin(); i != setRaises_.end(); i++)
 		addSetRaises(*i);
+}
+
+void AttributeDef::removeSetRaises(idlmm::ExceptionDef_ptr setRaises_)
+{
+	assert(setRaises_);
+	e4c::remove(m_setRaises, setRaises_);
+}
+
+void AttributeDef::clearSetRaises()
+{
+	m_setRaises.clear();
 }
 
 void AttributeDef::setIsReadonly(isReadonly_t _isReadonly)

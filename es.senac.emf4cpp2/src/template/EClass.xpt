@@ -6,7 +6,7 @@
 «REM»Header«ENDREM»
 
 «DEFINE generateHeader FOR EClass-»
-«FILE getFilePrefix() + ".hpp"»
+«FILE getFilePrefix() + ".hpp"-»
 #ifndef «getHeader()»
 #define «getHeader()»
 
@@ -106,6 +106,8 @@ protected:
 	«IF upperBound != 1-»
 	void add«getNameUpper()»(«getNoContaimentPtr()» «getName()»_);
 	void addAll«getNameUpper()»(const «getName()»_t& «getName()»_);
+	void remove«getNameUpper()»(«getNoContaimentPtr()» «getName()»_);
+	void clear«getNameUpper()»();
 	«ENDIF-»
 	«IF containment-»
 		«IF upperBound == 1-»
@@ -143,7 +145,6 @@ void «EContainingClass.getName()»::set«getNameUpper()»(«getName()»_t _«getName()
 {
 	return e4c::returned(m_«getName()»);
 }
-
 «IF containment-»
 	«IF upperBound == 1-»«REM»Required upperBound == 1«ENDREM»
 void «EContainingClass.getName()»::set«getNameUpper()»(«getName()»_t «getName()»_)
@@ -164,6 +165,7 @@ void «EContainingClass.getName()»::set«getNameUpper()»(«getName()»_t «getName()»
 	«ELSE-»«REM»Required EOpposite.upperBound == 1«ENDREM»
 void «EContainingClass.getName()»::add«getNameUpper()»(«getNoContaimentPtr()» «getName()»_)
 {
+	assert(«getName()»_);
 		«IF EOpposite != null-»
 	«getName()»_->set«EOpposite.getNameUpper()»(this);
 		«ENDIF-»
@@ -174,6 +176,17 @@ void «EContainingClass.getName()»::addAll«getNameUpper()»(const «getName()»_t& «
 {
 	for (auto i = «getName()»_.begin(); i != «getName()»_.end(); i++)
 		add«getNameUpper()»(*i);
+}
+
+void «EContainingClass.getName()»::remove«getNameUpper()»(«getNoContaimentPtr()» «getName()»_)
+{
+	assert(«getName()»_);
+	e4c::remove(m_«getName()», «getName()»_);
+}
+
+void «EContainingClass.getName()»::clear«getNameUpper()»()
+{
+	m_«getName()».clear();
 }
 	«ENDIF-»
 «ELSEIF container-»«REM»Protected method«ENDREM-»
@@ -191,9 +204,8 @@ void «EContainingClass.getName()»::set«getNameUpper()»(«getName()»_t «getName()»
 	if (m_«getName()»)
 		m_«getName()»->set«EOpposite.getNameUpper()»(0);
 		«ELSEIF EOpposite != null-»
-	«REM»TODO Implement case when upperBound is greater than 1«ENDREM-»
 	if (m_«getName()»)
-		; // TODO remove me
+		m_«getName()»->remove«EOpposite.getNameUpper()»(this);
 		«ENDIF-»
 	m_«getName()» = «getName()»_;
 		«IF EOpposite != null && EOpposite.upperBound == 1-»
@@ -207,6 +219,7 @@ void «EContainingClass.getName()»::set«getNameUpper()»(«getName()»_t «getName()»
 	«ELSE-»
 void «EContainingClass.getName()»::add«getNameUpper()»(«getNoContaimentPtr()» «getName()»_)
 {
+	assert(«getName()»_);
 	if (e4c::contains(m_«getName()», «getName()»_))
 		return;
 	m_«getName()».«getInsertMethod()»(«getName()»_);
@@ -222,6 +235,36 @@ void «EContainingClass.getName()»::addAll«getNameUpper()»(const «getName()»_t& «
 	for (auto i = «getName()»_.begin(); i != «getName()»_.end(); i++)
 		add«getNameUpper()»(*i);
 }
+
+void «EContainingClass.getName()»::remove«getNameUpper()»(«getNoContaimentPtr()» «getName()»_)
+{
+	assert(«getName()»_);
+		«IF EOpposite != null && EOpposite.upperBound == 1-»
+	if (e4c::remove(m_«getName()», «getName()»_))
+		«getName()»_->set«EOpposite.getNameUpper()»(0);
+		«ELSEIF EOpposite != null-»
+	if (e4c::remove(m_«getName()», «getName()»_))
+		«getName()»_->remove«EOpposite.getNameUpper()»(this);
+		«ELSE-»
+	e4c::remove(m_«getName()», «getName()»_);
+		«ENDIF-»
+}
+
+void «EContainingClass.getName()»::clear«getNameUpper()»()
+{
+	«IF EOpposite != null-»
+	const «getName()»_t old(std::move(m_«getName()»));
+	for (auto i = old.begin(); i != old.end(); ++i) {
+		«IF EOpposite.upperBound == 1-»
+		(*i)->set«EOpposite.getNameUpper()»(0);
+		«ELSE-»
+		(*i)->remove«EOpposite.getNameUpper()»(this);
+		«ENDIF-»	
+	}
+	«ELSE-»
+	m_«getName()».clear();
+	«ENDIF-»
+}
 	«ENDIF-»
 «ENDIF-»
 
@@ -230,7 +273,7 @@ void «EContainingClass.getName()»::addAll«getNameUpper()»(const «getName()»_t& «
 «REM»Impl«ENDREM»
 
 «DEFINE generateImpl FOR EClass-»
-«FILE getFilePrefix() + ".cpp"»
+«FILE getFilePrefix() + ".cpp"-»
 #include "«getName()».hpp"
 #include <«EPackage.getFilePrefix()»/«EPackage.getPackage()».hpp>
 «FOREACH EStructuralFeatures.typeSelect(EReference).EReferenceType.toSet() AS e-»

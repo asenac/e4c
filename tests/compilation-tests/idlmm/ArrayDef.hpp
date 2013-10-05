@@ -1,4 +1,3 @@
-
 #ifndef EMF_CPP_IDLMM_ARRAYDEF__HPP
 #define EMF_CPP_IDLMM_ARRAYDEF__HPP
 
@@ -30,6 +29,8 @@ public:
 	bounds_t getBounds() const;
 	void addBounds(idlmm::Expression_ptr bounds_);
 	void addAllBounds(const bounds_t& bounds_);
+	void removeBounds(idlmm::Expression_ptr bounds_);
+	void clearBounds();
 	
 
 	/*PROTECTED REGION ID(idlmm::ArrayDef public) START*/

@@ -1,4 +1,3 @@
-
 #include "EAttribute.hpp"
 #include <ecore/EcorePackage.hpp>
 #include <ecore/EDataType.hpp>
@@ -36,7 +35,6 @@ EAttribute::eAttributeType_t EAttribute::getEAttributeType() const
 {
 	return e4c::returned(m_eAttributeType);
 }
-
 void EAttribute::setEAttributeType(eAttributeType_t eAttributeType_)
 {
 	if (m_eAttributeType == eAttributeType_)

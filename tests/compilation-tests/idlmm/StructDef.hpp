@@ -1,4 +1,3 @@
-
 #ifndef EMF_CPP_IDLMM_STRUCTDEF__HPP
 #define EMF_CPP_IDLMM_STRUCTDEF__HPP
 
@@ -26,6 +25,8 @@ public:
 	members_t getMembers() const;
 	void addMembers(idlmm::Field_ptr members_);
 	void addAllMembers(const members_t& members_);
+	void removeMembers(idlmm::Field_ptr members_);
+	void clearMembers();
 	
 
 	/*PROTECTED REGION ID(idlmm::StructDef public) START*/

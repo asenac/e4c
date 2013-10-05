@@ -1,4 +1,3 @@
-
 #ifndef EMF_CPP_IDLMM_CONTAINER__HPP
 #define EMF_CPP_IDLMM_CONTAINER__HPP
 
@@ -25,6 +24,8 @@ public:
 	contains_t getContains() const;
 	void addContains(idlmm::Contained_ptr contains_);
 	void addAllContains(const contains_t& contains_);
+	void removeContains(idlmm::Contained_ptr contains_);
+	void clearContains();
 	
 
 	/*PROTECTED REGION ID(idlmm::Container public) START*/

@@ -1,4 +1,3 @@
-
 #include "EPackage.hpp"
 #include <ecore/EcorePackage.hpp>
 #include <ecore/EFactory.hpp>
@@ -52,7 +51,6 @@ EPackage::eFactoryInstance_t EPackage::getEFactoryInstance() const
 {
 	return e4c::returned(m_eFactoryInstance);
 }
-
 void EPackage::setEFactoryInstance(eFactoryInstance_t eFactoryInstance_)
 {
 	if (m_eFactoryInstance == eFactoryInstance_)
@@ -69,9 +67,9 @@ EPackage::eClassifiers_t EPackage::getEClassifiers() const
 	return e4c::returned(m_eClassifiers);
 }
 
-
 void EPackage::addEClassifiers(ecore::EClassifier_ptr eClassifiers_)
 {
+	assert(eClassifiers_);
 	eClassifiers_->setEPackage(this);
 	m_eClassifiers.push_back(std::unique_ptr < ecore::EClassifier >(eClassifiers_));
 }
@@ -82,14 +80,25 @@ void EPackage::addAllEClassifiers(const eClassifiers_t& eClassifiers_)
 		addEClassifiers(*i);
 }
 
+void EPackage::removeEClassifiers(ecore::EClassifier_ptr eClassifiers_)
+{
+	assert(eClassifiers_);
+	e4c::remove(m_eClassifiers, eClassifiers_);
+}
+
+void EPackage::clearEClassifiers()
+{
+	m_eClassifiers.clear();
+}
+
 EPackage::eSubpackages_t EPackage::getESubpackages() const
 {
 	return e4c::returned(m_eSubpackages);
 }
 
-
 void EPackage::addESubpackages(ecore::EPackage_ptr eSubpackages_)
 {
+	assert(eSubpackages_);
 	eSubpackages_->setESuperPackage(this);
 	m_eSubpackages.push_back(std::unique_ptr < ecore::EPackage >(eSubpackages_));
 }
@@ -100,11 +109,21 @@ void EPackage::addAllESubpackages(const eSubpackages_t& eSubpackages_)
 		addESubpackages(*i);
 }
 
+void EPackage::removeESubpackages(ecore::EPackage_ptr eSubpackages_)
+{
+	assert(eSubpackages_);
+	e4c::remove(m_eSubpackages, eSubpackages_);
+}
+
+void EPackage::clearESubpackages()
+{
+	m_eSubpackages.clear();
+}
+
 EPackage::eSuperPackage_t EPackage::getESuperPackage() const
 {
 	return e4c::returned(m_eSuperPackage);
 }
-
 void EPackage::setESuperPackage(eSuperPackage_t eSuperPackage_)
 {
 	m_eSuperPackage = eSuperPackage_;

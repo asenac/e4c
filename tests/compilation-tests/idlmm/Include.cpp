@@ -1,4 +1,3 @@
-
 #include "Include.hpp"
 #include <idlmm/IdlmmPackage.hpp>
 #include <idlmm/TranslationUnit.hpp>
@@ -36,7 +35,6 @@ Include::translationUnit_t Include::getTranslationUnit() const
 {
 	return e4c::returned(m_translationUnit);
 }
-
 void Include::setTranslationUnit(translationUnit_t translationUnit_)
 {
 	if (m_translationUnit == translationUnit_)

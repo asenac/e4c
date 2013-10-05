@@ -1,4 +1,3 @@
-
 #ifndef EMF_CPP_ECORE_EREFERENCE__HPP
 #define EMF_CPP_ECORE_EREFERENCE__HPP
 
@@ -41,6 +40,8 @@ public:
 	eKeys_t getEKeys() const;
 	void addEKeys(ecore::EAttribute_ptr eKeys_);
 	void addAllEKeys(const eKeys_t& eKeys_);
+	void removeEKeys(ecore::EAttribute_ptr eKeys_);
+	void clearEKeys();
 	
 
 	/*PROTECTED REGION ID(ecore::EReference public) START*/

@@ -1,4 +1,3 @@
-
 #ifndef EMF_CPP_ECORE_EPACKAGE__HPP
 #define EMF_CPP_ECORE_EPACKAGE__HPP
 
@@ -37,9 +36,13 @@ public:
 	eClassifiers_t getEClassifiers() const;
 	void addEClassifiers(ecore::EClassifier_ptr eClassifiers_);
 	void addAllEClassifiers(const eClassifiers_t& eClassifiers_);
+	void removeEClassifiers(ecore::EClassifier_ptr eClassifiers_);
+	void clearEClassifiers();
 	eSubpackages_t getESubpackages() const;
 	void addESubpackages(ecore::EPackage_ptr eSubpackages_);
 	void addAllESubpackages(const eSubpackages_t& eSubpackages_);
+	void removeESubpackages(ecore::EPackage_ptr eSubpackages_);
+	void clearESubpackages();
 	eSuperPackage_t getESuperPackage() const;
 	
 	ecore::EClassifier_ptr getEClassifier(ecore::EString name);

@@ -1,4 +1,3 @@
-
 #include "NamedElement.hpp"
 #include <idlmm/IdlmmPackage.hpp>
 

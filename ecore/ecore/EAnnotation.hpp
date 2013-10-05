@@ -1,4 +1,3 @@
-
 #ifndef EMF_CPP_ECORE_EANNOTATION__HPP
 #define EMF_CPP_ECORE_EANNOTATION__HPP
 
@@ -32,13 +31,19 @@ public:
 	details_t getDetails() const;
 	void addDetails(ecore::EStringToStringMapEntry_ptr details_);
 	void addAllDetails(const details_t& details_);
+	void removeDetails(ecore::EStringToStringMapEntry_ptr details_);
+	void clearDetails();
 	eModelElement_t getEModelElement() const;
 	contents_t getContents() const;
 	void addContents(ecore::EObject_ptr contents_);
 	void addAllContents(const contents_t& contents_);
+	void removeContents(ecore::EObject_ptr contents_);
+	void clearContents();
 	references_t getReferences() const;
 	void addReferences(ecore::EObject_ptr references_);
 	void addAllReferences(const references_t& references_);
+	void removeReferences(ecore::EObject_ptr references_);
+	void clearReferences();
 	
 
 	/*PROTECTED REGION ID(ecore::EAnnotation public) START*/

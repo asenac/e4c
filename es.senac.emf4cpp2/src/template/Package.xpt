@@ -127,9 +127,13 @@ using namespace «getFQN()»;
 	«FOREACH EClassifiers.typeSelect(EClass) AS cl-»
 		«FOREACH cl.EStructuralFeatures AS ef-»
 	m_«cl.getName()»->addFeatureAccesors(m_«ef.getMember()», 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< «cl.getFQN()»_ptr >(o)->get«ef.getNameUpper()»()); },
+		[](ecore::EObject_ptr o) { 
+			return e4c::create_holder(dynamic_cast< «cl.getFQN()»_ptr >(o)->get«ef.getNameUpper()»()); 
+		},
 			«IF ef.changeable-» 
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+		[](ecore::EObject_ptr o, e4c::holder h) {
+			«EXPAND setter FOR ef-»
+		});
 			«ELSE-»
 		 e4c::set_t());
 		 	«ENDIF-»
@@ -173,4 +177,23 @@ extern "C" ::ecore::EPackage_ptr e4c_«getFQN("_")»()
 	return ::«getFQN()»::«getPackage()»::_instance();
 }
 «ENDFILE»
+«ENDDEFINE»
+
+«DEFINE setter FOR EStructuralFeature-»«ENDDEFINE»
+«DEFINE setter FOR EAttribute-»
+			typedef «EContainingClass.getFQN()»::«getName()»_t type_t;
+			const type_t& val = h.to_value< type_t >();
+			dynamic_cast< «EContainingClass.getFQN()»_ptr >(o)->set«getNameUpper()»(val);
+«ENDDEFINE»
+«DEFINE setter FOR EReference-»
+	«IF upperBound == 1-»
+			«EType.getFQN()»_ptr val = dynamic_cast< «EType.getFQN()»_ptr >(h.to_value< ecore::EObject_ptr >());
+			dynamic_cast< «EContainingClass.getFQN()»_ptr >(o)->set«getNameUpper()»(val);
+	«ELSE-»
+			typedef std::vector< ecore::EObject_ptr > type_t;
+			const type_t& val = h.to_value< type_t >();
+			«EContainingClass.getFQN()»_ptr eo = dynamic_cast< «EContainingClass.getFQN()»_ptr >(o);
+			eo->clear«getNameUpper()»();
+			eo->addAll«getNameUpper()»(e4c::select< «EType.getFQN()» >(val));
+	«ENDIF-»
 «ENDDEFINE»

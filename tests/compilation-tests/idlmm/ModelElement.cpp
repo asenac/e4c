@@ -1,4 +1,3 @@
-
 #include "ModelElement.hpp"
 #include <idlmm/IdlmmPackage.hpp>
 

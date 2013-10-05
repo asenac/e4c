@@ -1,4 +1,3 @@
-
 #include "ValueExpression.hpp"
 #include <idlmm/IdlmmPackage.hpp>
 

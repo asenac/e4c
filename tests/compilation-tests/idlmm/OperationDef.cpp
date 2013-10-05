@@ -1,4 +1,3 @@
-
 #include "OperationDef.hpp"
 #include <idlmm/IdlmmPackage.hpp>
 #include <idlmm/ParameterDef.hpp>
@@ -30,9 +29,9 @@ OperationDef::parameters_t OperationDef::getParameters() const
 	return e4c::returned(m_parameters);
 }
 
-
 void OperationDef::addParameters(idlmm::ParameterDef_ptr parameters_)
 {
+	assert(parameters_);
 	m_parameters.push_back(std::unique_ptr < idlmm::ParameterDef >(parameters_));
 }
 
@@ -40,6 +39,17 @@ void OperationDef::addAllParameters(const parameters_t& parameters_)
 {
 	for (auto i = parameters_.begin(); i != parameters_.end(); i++)
 		addParameters(*i);
+}
+
+void OperationDef::removeParameters(idlmm::ParameterDef_ptr parameters_)
+{
+	assert(parameters_);
+	e4c::remove(m_parameters, parameters_);
+}
+
+void OperationDef::clearParameters()
+{
+	m_parameters.clear();
 }
 
 void OperationDef::setIsOneway(isOneway_t _isOneway)
@@ -66,9 +76,9 @@ OperationDef::canRaise_t OperationDef::getCanRaise() const
 {
 	return e4c::returned(m_canRaise);
 }
-
 void OperationDef::addCanRaise(idlmm::ExceptionDef_ptr canRaise_)
 {
+	assert(canRaise_);
 	if (e4c::contains(m_canRaise, canRaise_))
 		return;
 	m_canRaise.push_back(canRaise_);
@@ -78,6 +88,17 @@ void OperationDef::addAllCanRaise(const canRaise_t& canRaise_)
 {
 	for (auto i = canRaise_.begin(); i != canRaise_.end(); i++)
 		addCanRaise(*i);
+}
+
+void OperationDef::removeCanRaise(idlmm::ExceptionDef_ptr canRaise_)
+{
+	assert(canRaise_);
+	e4c::remove(m_canRaise, canRaise_);
+}
+
+void OperationDef::clearCanRaise()
+{
+	m_canRaise.clear();
 }
 
 

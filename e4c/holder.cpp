@@ -21,7 +21,6 @@ holder_impl_base::~holder_impl_base()
 {
 }
 
-
 holder::holder()
 {
 }

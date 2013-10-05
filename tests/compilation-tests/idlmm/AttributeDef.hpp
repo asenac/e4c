@@ -1,4 +1,3 @@
-
 #ifndef EMF_CPP_IDLMM_ATTRIBUTEDEF__HPP
 #define EMF_CPP_IDLMM_ATTRIBUTEDEF__HPP
 
@@ -29,9 +28,13 @@ public:
 	getRaises_t getGetRaises() const;
 	void addGetRaises(idlmm::ExceptionDef_ptr getRaises_);
 	void addAllGetRaises(const getRaises_t& getRaises_);
+	void removeGetRaises(idlmm::ExceptionDef_ptr getRaises_);
+	void clearGetRaises();
 	setRaises_t getSetRaises() const;
 	void addSetRaises(idlmm::ExceptionDef_ptr setRaises_);
 	void addAllSetRaises(const setRaises_t& setRaises_);
+	void removeSetRaises(idlmm::ExceptionDef_ptr setRaises_);
+	void clearSetRaises();
 	void setIsReadonly(isReadonly_t _isReadonly);
 	isReadonly_t getIsReadonly() const;
 	

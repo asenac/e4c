@@ -1,4 +1,3 @@
-
 #include "EOperation.hpp"
 #include <ecore/EcorePackage.hpp>
 #include <ecore/EClass.hpp>
@@ -33,7 +32,6 @@ EOperation::eContainingClass_t EOperation::getEContainingClass() const
 {
 	return e4c::returned(m_eContainingClass);
 }
-
 void EOperation::setEContainingClass(eContainingClass_t eContainingClass_)
 {
 	m_eContainingClass = eContainingClass_;
@@ -44,9 +42,9 @@ EOperation::eTypeParameters_t EOperation::getETypeParameters() const
 	return e4c::returned(m_eTypeParameters);
 }
 
-
 void EOperation::addETypeParameters(ecore::ETypeParameter_ptr eTypeParameters_)
 {
+	assert(eTypeParameters_);
 	m_eTypeParameters.push_back(std::unique_ptr < ecore::ETypeParameter >(eTypeParameters_));
 }
 
@@ -56,14 +54,25 @@ void EOperation::addAllETypeParameters(const eTypeParameters_t& eTypeParameters_
 		addETypeParameters(*i);
 }
 
+void EOperation::removeETypeParameters(ecore::ETypeParameter_ptr eTypeParameters_)
+{
+	assert(eTypeParameters_);
+	e4c::remove(m_eTypeParameters, eTypeParameters_);
+}
+
+void EOperation::clearETypeParameters()
+{
+	m_eTypeParameters.clear();
+}
+
 EOperation::eParameters_t EOperation::getEParameters() const
 {
 	return e4c::returned(m_eParameters);
 }
 
-
 void EOperation::addEParameters(ecore::EParameter_ptr eParameters_)
 {
+	assert(eParameters_);
 	eParameters_->setEOperation(this);
 	m_eParameters.push_back(std::unique_ptr < ecore::EParameter >(eParameters_));
 }
@@ -74,13 +83,24 @@ void EOperation::addAllEParameters(const eParameters_t& eParameters_)
 		addEParameters(*i);
 }
 
+void EOperation::removeEParameters(ecore::EParameter_ptr eParameters_)
+{
+	assert(eParameters_);
+	e4c::remove(m_eParameters, eParameters_);
+}
+
+void EOperation::clearEParameters()
+{
+	m_eParameters.clear();
+}
+
 EOperation::eExceptions_t EOperation::getEExceptions() const
 {
 	return e4c::returned(m_eExceptions);
 }
-
 void EOperation::addEExceptions(ecore::EClassifier_ptr eExceptions_)
 {
+	assert(eExceptions_);
 	if (e4c::contains(m_eExceptions, eExceptions_))
 		return;
 	m_eExceptions.push_back(eExceptions_);
@@ -92,14 +112,25 @@ void EOperation::addAllEExceptions(const eExceptions_t& eExceptions_)
 		addEExceptions(*i);
 }
 
+void EOperation::removeEExceptions(ecore::EClassifier_ptr eExceptions_)
+{
+	assert(eExceptions_);
+	e4c::remove(m_eExceptions, eExceptions_);
+}
+
+void EOperation::clearEExceptions()
+{
+	m_eExceptions.clear();
+}
+
 EOperation::eGenericExceptions_t EOperation::getEGenericExceptions() const
 {
 	return e4c::returned(m_eGenericExceptions);
 }
 
-
 void EOperation::addEGenericExceptions(ecore::EGenericType_ptr eGenericExceptions_)
 {
+	assert(eGenericExceptions_);
 	m_eGenericExceptions.push_back(std::unique_ptr < ecore::EGenericType >(eGenericExceptions_));
 }
 
@@ -107,6 +138,17 @@ void EOperation::addAllEGenericExceptions(const eGenericExceptions_t& eGenericEx
 {
 	for (auto i = eGenericExceptions_.begin(); i != eGenericExceptions_.end(); i++)
 		addEGenericExceptions(*i);
+}
+
+void EOperation::removeEGenericExceptions(ecore::EGenericType_ptr eGenericExceptions_)
+{
+	assert(eGenericExceptions_);
+	e4c::remove(m_eGenericExceptions, eGenericExceptions_);
+}
+
+void EOperation::clearEGenericExceptions()
+{
+	m_eGenericExceptions.clear();
 }
 
 

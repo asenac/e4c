@@ -1,4 +1,3 @@
-
 #ifndef EMF_CPP_IDLMM_UNIONFIELD__HPP
 #define EMF_CPP_IDLMM_UNIONFIELD__HPP
 
@@ -29,6 +28,8 @@ public:
 	label_t getLabel() const;
 	void addLabel(idlmm::Expression_ptr label_);
 	void addAllLabel(const label_t& label_);
+	void removeLabel(idlmm::Expression_ptr label_);
+	void clearLabel();
 	
 
 	/*PROTECTED REGION ID(idlmm::UnionField public) START*/

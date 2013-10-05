@@ -1,4 +1,3 @@
-
 #ifndef EMF_CPP_IDLMM_OPERATIONDEF__HPP
 #define EMF_CPP_IDLMM_OPERATIONDEF__HPP
 
@@ -30,6 +29,8 @@ public:
 	parameters_t getParameters() const;
 	void addParameters(idlmm::ParameterDef_ptr parameters_);
 	void addAllParameters(const parameters_t& parameters_);
+	void removeParameters(idlmm::ParameterDef_ptr parameters_);
+	void clearParameters();
 	void setIsOneway(isOneway_t _isOneway);
 	isOneway_t getIsOneway() const;
 	void setContexts(contexts_t _contexts);
@@ -37,6 +38,8 @@ public:
 	canRaise_t getCanRaise() const;
 	void addCanRaise(idlmm::ExceptionDef_ptr canRaise_);
 	void addAllCanRaise(const canRaise_t& canRaise_);
+	void removeCanRaise(idlmm::ExceptionDef_ptr canRaise_);
+	void clearCanRaise();
 	
 
 	/*PROTECTED REGION ID(idlmm::OperationDef public) START*/

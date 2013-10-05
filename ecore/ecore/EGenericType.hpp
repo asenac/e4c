@@ -1,4 +1,3 @@
-
 #ifndef EMF_CPP_ECORE_EGENERICTYPE__HPP
 #define EMF_CPP_ECORE_EGENERICTYPE__HPP
 
@@ -33,6 +32,8 @@ public:
 	eTypeArguments_t getETypeArguments() const;
 	void addETypeArguments(ecore::EGenericType_ptr eTypeArguments_);
 	void addAllETypeArguments(const eTypeArguments_t& eTypeArguments_);
+	void removeETypeArguments(ecore::EGenericType_ptr eTypeArguments_);
+	void clearETypeArguments();
 	eRawType_t getERawType() const;
 	void setERawType(eRawType_t eRawType_);
 	eLowerBound_t getELowerBound() const;

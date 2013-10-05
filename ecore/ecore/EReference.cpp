@@ -1,4 +1,3 @@
-
 #include "EReference.hpp"
 #include <ecore/EcorePackage.hpp>
 #include <ecore/EReference.hpp>
@@ -62,7 +61,6 @@ EReference::eOpposite_t EReference::getEOpposite() const
 {
 	return e4c::returned(m_eOpposite);
 }
-
 void EReference::setEOpposite(eOpposite_t eOpposite_)
 {
 	if (m_eOpposite == eOpposite_)
@@ -74,7 +72,6 @@ EReference::eReferenceType_t EReference::getEReferenceType() const
 {
 	return e4c::returned(m_eReferenceType);
 }
-
 void EReference::setEReferenceType(eReferenceType_t eReferenceType_)
 {
 	if (m_eReferenceType == eReferenceType_)
@@ -86,9 +83,9 @@ EReference::eKeys_t EReference::getEKeys() const
 {
 	return e4c::returned(m_eKeys);
 }
-
 void EReference::addEKeys(ecore::EAttribute_ptr eKeys_)
 {
+	assert(eKeys_);
 	if (e4c::contains(m_eKeys, eKeys_))
 		return;
 	m_eKeys.push_back(eKeys_);
@@ -98,6 +95,17 @@ void EReference::addAllEKeys(const eKeys_t& eKeys_)
 {
 	for (auto i = eKeys_.begin(); i != eKeys_.end(); i++)
 		addEKeys(*i);
+}
+
+void EReference::removeEKeys(ecore::EAttribute_ptr eKeys_)
+{
+	assert(eKeys_);
+	e4c::remove(m_eKeys, eKeys_);
+}
+
+void EReference::clearEKeys()
+{
+	m_eKeys.clear();
 }
 
 

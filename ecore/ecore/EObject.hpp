@@ -1,4 +1,3 @@
-
 #ifndef EMF_CPP_ECORE_EOBJECT__HPP
 #define EMF_CPP_ECORE_EOBJECT__HPP
 

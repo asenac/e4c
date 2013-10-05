@@ -1,4 +1,3 @@
-
 #include "EnumMember.hpp"
 #include <idlmm/IdlmmPackage.hpp>
 #include <idlmm/EnumDef.hpp>
@@ -25,7 +24,6 @@ EnumMember::enum_t EnumMember::getEnum() const
 {
 	return e4c::returned(m_enum);
 }
-
 void EnumMember::setEnum(enum_t enum_)
 {
 	m_enum = enum_;

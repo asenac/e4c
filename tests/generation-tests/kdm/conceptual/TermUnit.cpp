@@ -9,14 +9,14 @@ using namespace kdm::conceptual;
 
 TermUnit::TermUnit()
 {
-	/*PROTECTED REGION ID(TermUnit constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(TermUnit constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 TermUnit::~TermUnit()
 {
-	/*PROTECTED REGION ID(TermUnit destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(TermUnit destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ TermUnit::~TermUnit()
 
 ecore::EClass_ptr TermUnit::eClassImpl() const
 {
-	return ConceptualPackage::_instance()->getTermUnit();
+    return ConceptualPackage::_instance()->getTermUnit();
 }
- 
+

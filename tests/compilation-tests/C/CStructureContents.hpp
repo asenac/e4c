@@ -16,34 +16,34 @@ class CStructureContents : ::ecore::EObject
 {
 public:
 
-	typedef CStructureContents_ptr ptr_type;
-	
-	CStructureContents();
-	virtual ~CStructureContents();
+    typedef CStructureContents_ptr ptr_type;
 
-	typedef C::CStructured_ptr sc_container_t;
-	
-	sc_container_t getSc_container() const;
-	
+    CStructureContents();
+    virtual ~CStructureContents();
 
-	/*PROTECTED REGION ID(C::CStructureContents public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef C::CStructured_ptr sc_container_t;
+
+    sc_container_t getSc_container() const;
+
+
+    /*PROTECTED REGION ID(C::CStructureContents public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class CPackage;
+    friend class CPackage;
 
-	C::CStructured_ptr m_sc_container;
+    C::CStructured_ptr m_sc_container;
 
-	
-	friend class ::C::CStructured;
-	void setSc_container(sc_container_t sc_container_);
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(C::CStructureContents protected) START*/
-	/*PROTECTED REGION END*/
+
+    friend class ::C::CStructured;
+    void setSc_container(sc_container_t sc_container_);
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(C::CStructureContents protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // C

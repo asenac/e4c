@@ -18,29 +18,29 @@ class RuntimeResource :  public virtual ::kdm::platform::ResourceType
 {
 public:
 
-	typedef RuntimeResource_ptr ptr_type;
-	
-	RuntimeResource();
-	virtual ~RuntimeResource();
+    typedef RuntimeResource_ptr ptr_type;
 
-	
-	
+    RuntimeResource();
+    virtual ~RuntimeResource();
 
-	/*PROTECTED REGION ID(kdm::platform::RuntimeResource public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(kdm::platform::RuntimeResource public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class PlatformPackage;
+    friend class PlatformPackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::platform::RuntimeResource protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::platform::RuntimeResource protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // platform

@@ -9,14 +9,14 @@ using namespace xpand3::expression;
 
 IntegerLiteral::IntegerLiteral()
 {
-	/*PROTECTED REGION ID(IntegerLiteral constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(IntegerLiteral constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 IntegerLiteral::~IntegerLiteral()
 {
-	/*PROTECTED REGION ID(IntegerLiteral destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(IntegerLiteral destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ IntegerLiteral::~IntegerLiteral()
 
 ecore::EClass_ptr IntegerLiteral::eClassImpl() const
 {
-	return ExpressionPackage::_instance()->getIntegerLiteral();
+    return ExpressionPackage::_instance()->getIntegerLiteral();
 }
- 
+

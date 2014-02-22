@@ -16,29 +16,29 @@ class CUnion :  public virtual ::C::CStructured
 {
 public:
 
-	typedef CUnion_ptr ptr_type;
-	
-	CUnion();
-	virtual ~CUnion();
+    typedef CUnion_ptr ptr_type;
 
-	
-	
+    CUnion();
+    virtual ~CUnion();
 
-	/*PROTECTED REGION ID(C::CUnion public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(C::CUnion public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class CPackage;
+    friend class CPackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(C::CUnion protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(C::CUnion protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // C

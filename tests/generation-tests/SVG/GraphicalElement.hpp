@@ -16,33 +16,33 @@ class GraphicalElement :  public virtual ::SVG::Element
 {
 public:
 
-	typedef GraphicalElement_ptr ptr_type;
-	
-	virtual ~GraphicalElement();
+    typedef GraphicalElement_ptr ptr_type;
 
-	typedef ::PrimitiveTypes::String stroke_t;
-	
-	void setStroke(stroke_t _stroke);
-	stroke_t getStroke() const;
-	
+    virtual ~GraphicalElement();
 
-	/*PROTECTED REGION ID(SVG::GraphicalElement public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef ::PrimitiveTypes::String stroke_t;
+
+    void setStroke(stroke_t _stroke);
+    stroke_t getStroke() const;
+
+
+    /*PROTECTED REGION ID(SVG::GraphicalElement public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
-	GraphicalElement();
+    GraphicalElement();
 
-	friend class SVGPackage;
+    friend class SVGPackage;
 
-	stroke_t m_stroke;
+    stroke_t m_stroke;
 
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(SVG::GraphicalElement protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(SVG::GraphicalElement protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // SVG

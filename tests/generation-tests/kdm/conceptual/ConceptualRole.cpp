@@ -8,29 +8,29 @@ using namespace kdm::conceptual;
 /*PROTECTED REGION ID(kdm::conceptual::ConceptualRole include) START*/
 /*PROTECTED REGION END*/
 
-ConceptualRole::ConceptualRole() : 
-	m_conceptualElement()
+ConceptualRole::ConceptualRole() :
+    m_conceptualElement()
 {
-	/*PROTECTED REGION ID(ConceptualRole constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(ConceptualRole constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 ConceptualRole::~ConceptualRole()
 {
-	/*PROTECTED REGION ID(ConceptualRole destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(ConceptualRole destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 ConceptualRole::conceptualElement_t ConceptualRole::getConceptualElement() const
 {
-	return e4c::returned(m_conceptualElement);
+    return e4c::returned(m_conceptualElement);
 }
 
 void ConceptualRole::setConceptualElement(conceptualElement_t conceptualElement_)
 {
-	if (m_conceptualElement == conceptualElement_)
-		return;
-	m_conceptualElement = conceptualElement_;
+    if (m_conceptualElement == conceptualElement_)
+        return;
+    m_conceptualElement = conceptualElement_;
 }
 
 
@@ -40,6 +40,6 @@ void ConceptualRole::setConceptualElement(conceptualElement_t conceptualElement_
 
 ecore::EClass_ptr ConceptualRole::eClassImpl() const
 {
-	return ConceptualPackage::_instance()->getConceptualRole();
+    return ConceptualPackage::_instance()->getConceptualRole();
 }
- 
+

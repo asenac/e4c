@@ -18,29 +18,29 @@ class VoidType :  public virtual ::kdm::code::PrimitiveType
 {
 public:
 
-	typedef VoidType_ptr ptr_type;
-	
-	VoidType();
-	virtual ~VoidType();
+    typedef VoidType_ptr ptr_type;
 
-	
-	
+    VoidType();
+    virtual ~VoidType();
 
-	/*PROTECTED REGION ID(kdm::code::VoidType public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(kdm::code::VoidType public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class CodePackage;
+    friend class CodePackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::code::VoidType protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::code::VoidType protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // code

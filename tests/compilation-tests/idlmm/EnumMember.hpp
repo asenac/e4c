@@ -15,34 +15,34 @@ class EnumMember :  public virtual ::idlmm::Constant
 {
 public:
 
-	typedef EnumMember_ptr ptr_type;
-	
-	EnumMember();
-	virtual ~EnumMember();
+    typedef EnumMember_ptr ptr_type;
 
-	typedef idlmm::EnumDef_ptr enum_t;
-	
-	enum_t getEnum() const;
-	
+    EnumMember();
+    virtual ~EnumMember();
 
-	/*PROTECTED REGION ID(idlmm::EnumMember public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef idlmm::EnumDef_ptr enum_t;
+
+    enum_t getEnum() const;
+
+
+    /*PROTECTED REGION ID(idlmm::EnumMember public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class IdlmmPackage;
+    friend class IdlmmPackage;
 
-	idlmm::EnumDef_ptr m_enum;
+    idlmm::EnumDef_ptr m_enum;
 
-	
-	friend class ::idlmm::EnumDef;
-	void setEnum(enum_t enum_);
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(idlmm::EnumMember protected) START*/
-	/*PROTECTED REGION END*/
+
+    friend class ::idlmm::EnumDef;
+    void setEnum(enum_t enum_);
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(idlmm::EnumMember protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // idlmm

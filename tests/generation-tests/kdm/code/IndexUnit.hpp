@@ -18,29 +18,29 @@ class IndexUnit :  public virtual ::kdm::code::DataElement
 {
 public:
 
-	typedef IndexUnit_ptr ptr_type;
-	
-	IndexUnit();
-	virtual ~IndexUnit();
+    typedef IndexUnit_ptr ptr_type;
 
-	
-	
+    IndexUnit();
+    virtual ~IndexUnit();
 
-	/*PROTECTED REGION ID(kdm::code::IndexUnit public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(kdm::code::IndexUnit public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class CodePackage;
+    friend class CodePackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::code::IndexUnit protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::code::IndexUnit protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // code

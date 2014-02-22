@@ -18,29 +18,29 @@ class RelationalTable :  public virtual ::kdm::data::ColumnSet
 {
 public:
 
-	typedef RelationalTable_ptr ptr_type;
-	
-	RelationalTable();
-	virtual ~RelationalTable();
+    typedef RelationalTable_ptr ptr_type;
 
-	
-	
+    RelationalTable();
+    virtual ~RelationalTable();
 
-	/*PROTECTED REGION ID(kdm::data::RelationalTable public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(kdm::data::RelationalTable public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class DataPackage;
+    friend class DataPackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::data::RelationalTable protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::data::RelationalTable protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // data

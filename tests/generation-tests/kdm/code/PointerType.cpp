@@ -9,14 +9,14 @@ using namespace kdm::code;
 
 PointerType::PointerType()
 {
-	/*PROTECTED REGION ID(PointerType constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(PointerType constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 PointerType::~PointerType()
 {
-	/*PROTECTED REGION ID(PointerType destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(PointerType destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ PointerType::~PointerType()
 
 ecore::EClass_ptr PointerType::eClassImpl() const
 {
-	return CodePackage::_instance()->getPointerType();
+    return CodePackage::_instance()->getPointerType();
 }
- 
+

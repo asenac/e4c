@@ -16,33 +16,33 @@ class Tspan :  public virtual ::SVG::TextElement
 {
 public:
 
-	typedef Tspan_ptr ptr_type;
-	
-	Tspan();
-	virtual ~Tspan();
+    typedef Tspan_ptr ptr_type;
 
-	typedef ::PrimitiveTypes::String content_t;
-	
-	void setContent(content_t _content);
-	content_t getContent() const;
-	
+    Tspan();
+    virtual ~Tspan();
 
-	/*PROTECTED REGION ID(SVG::Tspan public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef ::PrimitiveTypes::String content_t;
+
+    void setContent(content_t _content);
+    content_t getContent() const;
+
+
+    /*PROTECTED REGION ID(SVG::Tspan public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class SVGPackage;
+    friend class SVGPackage;
 
-	content_t m_content;
+    content_t m_content;
 
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(SVG::Tspan protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(SVG::Tspan protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // SVG

@@ -16,29 +16,29 @@ class Transform :  public virtual ::SVG::Attribute
 {
 public:
 
-	typedef Transform_ptr ptr_type;
-	
-	virtual ~Transform();
+    typedef Transform_ptr ptr_type;
 
-	
-	
+    virtual ~Transform();
 
-	/*PROTECTED REGION ID(SVG::Transform public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(SVG::Transform public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
-	Transform();
+    Transform();
 
-	friend class SVGPackage;
+    friend class SVGPackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(SVG::Transform protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(SVG::Transform protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // SVG

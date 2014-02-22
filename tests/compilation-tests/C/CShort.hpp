@@ -16,29 +16,29 @@ class CShort :  public virtual ::C::CInt
 {
 public:
 
-	typedef CShort_ptr ptr_type;
-	
-	CShort();
-	virtual ~CShort();
+    typedef CShort_ptr ptr_type;
 
-	
-	
+    CShort();
+    virtual ~CShort();
 
-	/*PROTECTED REGION ID(C::CShort public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(C::CShort public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class CPackage;
+    friend class CPackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(C::CShort protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(C::CShort protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // C

@@ -16,33 +16,33 @@ class NamedElement :  public virtual ::emof::Element
 {
 public:
 
-	typedef NamedElement_ptr ptr_type;
-	
-	virtual ~NamedElement();
+    typedef NamedElement_ptr ptr_type;
 
-	typedef ::emof::String name_t;
-	
-	void setName(name_t _name);
-	name_t getName() const;
-	
+    virtual ~NamedElement();
 
-	/*PROTECTED REGION ID(emof::NamedElement public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef ::emof::String name_t;
+
+    void setName(name_t _name);
+    name_t getName() const;
+
+
+    /*PROTECTED REGION ID(emof::NamedElement public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
-	NamedElement();
+    NamedElement();
 
-	friend class EmofPackage;
+    friend class EmofPackage;
 
-	name_t m_name;
+    name_t m_name;
 
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(emof::NamedElement protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(emof::NamedElement protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // emof

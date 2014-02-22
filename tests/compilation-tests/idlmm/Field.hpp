@@ -15,33 +15,33 @@ class Field :  public virtual ::idlmm::Typed
 {
 public:
 
-	typedef Field_ptr ptr_type;
-	
-	Field();
-	virtual ~Field();
+    typedef Field_ptr ptr_type;
 
-	typedef ::ecore::EString identifier_t;
-	
-	void setIdentifier(identifier_t _identifier);
-	identifier_t getIdentifier() const;
-	
+    Field();
+    virtual ~Field();
 
-	/*PROTECTED REGION ID(idlmm::Field public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef ::ecore::EString identifier_t;
+
+    void setIdentifier(identifier_t _identifier);
+    identifier_t getIdentifier() const;
+
+
+    /*PROTECTED REGION ID(idlmm::Field public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class IdlmmPackage;
+    friend class IdlmmPackage;
 
-	identifier_t m_identifier;
+    identifier_t m_identifier;
 
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(idlmm::Field protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(idlmm::Field protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // idlmm

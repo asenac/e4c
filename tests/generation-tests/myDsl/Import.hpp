@@ -16,33 +16,33 @@ class Import : ::ecore::EObject
 {
 public:
 
-	typedef Import_ptr ptr_type;
-	
-	Import();
-	virtual ~Import();
+    typedef Import_ptr ptr_type;
 
-	typedef ::ecore::EString importURI_t;
-	
-	void setImportURI(importURI_t _importURI);
-	importURI_t getImportURI() const;
-	
+    Import();
+    virtual ~Import();
 
-	/*PROTECTED REGION ID(myDsl::Import public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef ::ecore::EString importURI_t;
+
+    void setImportURI(importURI_t _importURI);
+    importURI_t getImportURI() const;
+
+
+    /*PROTECTED REGION ID(myDsl::Import public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class MyDslPackage;
+    friend class MyDslPackage;
 
-	importURI_t m_importURI;
+    importURI_t m_importURI;
 
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(myDsl::Import protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(myDsl::Import protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // myDsl

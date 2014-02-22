@@ -18,29 +18,29 @@ class CompilationUnit :  public virtual ::kdm::code::Module
 {
 public:
 
-	typedef CompilationUnit_ptr ptr_type;
-	
-	CompilationUnit();
-	virtual ~CompilationUnit();
+    typedef CompilationUnit_ptr ptr_type;
 
-	
-	
+    CompilationUnit();
+    virtual ~CompilationUnit();
 
-	/*PROTECTED REGION ID(kdm::code::CompilationUnit public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(kdm::code::CompilationUnit public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class CodePackage;
+    friend class CodePackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::code::CompilationUnit protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::code::CompilationUnit protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // code

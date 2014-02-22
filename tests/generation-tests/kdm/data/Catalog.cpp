@@ -9,14 +9,14 @@ using namespace kdm::data;
 
 Catalog::Catalog()
 {
-	/*PROTECTED REGION ID(Catalog constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(Catalog constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 Catalog::~Catalog()
 {
-	/*PROTECTED REGION ID(Catalog destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(Catalog destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ Catalog::~Catalog()
 
 ecore::EClass_ptr Catalog::eClassImpl() const
 {
-	return DataPackage::_instance()->getCatalog();
+    return DataPackage::_instance()->getCatalog();
 }
- 
+

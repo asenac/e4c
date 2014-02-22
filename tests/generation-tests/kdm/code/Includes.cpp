@@ -9,42 +9,42 @@ using namespace kdm::code;
 /*PROTECTED REGION ID(kdm::code::Includes include) START*/
 /*PROTECTED REGION END*/
 
-Includes::Includes() : 
-	m_to(),
+Includes::Includes() :
+    m_to(),
     m_from()
 {
-	/*PROTECTED REGION ID(Includes constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(Includes constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 Includes::~Includes()
 {
-	/*PROTECTED REGION ID(Includes destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(Includes destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 Includes::to_t Includes::getTo() const
 {
-	return e4c::returned(m_to);
+    return e4c::returned(m_to);
 }
 
 void Includes::setTo(to_t to_)
 {
-	if (m_to == to_)
-		return;
-	m_to = to_;
+    if (m_to == to_)
+        return;
+    m_to = to_;
 }
 
 Includes::from_t Includes::getFrom() const
 {
-	return e4c::returned(m_from);
+    return e4c::returned(m_from);
 }
 
 void Includes::setFrom(from_t from_)
 {
-	if (m_from == from_)
-		return;
-	m_from = from_;
+    if (m_from == from_)
+        return;
+    m_from = from_;
 }
 
 
@@ -54,6 +54,6 @@ void Includes::setFrom(from_t from_)
 
 ecore::EClass_ptr Includes::eClassImpl() const
 {
-	return CodePackage::_instance()->getIncludes();
+    return CodePackage::_instance()->getIncludes();
 }
- 
+

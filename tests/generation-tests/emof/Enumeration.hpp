@@ -16,34 +16,34 @@ class Enumeration :  public virtual ::emof::DataType
 {
 public:
 
-	typedef Enumeration_ptr ptr_type;
-	
-	Enumeration();
-	virtual ~Enumeration();
+    typedef Enumeration_ptr ptr_type;
 
-	typedef std::vector < emof::EnumerationLiteral_ptr > ownedLiteral_t;
-	
-	ownedLiteral_t getOwnedLiteral() const;
-	void addOwnedLiteral(emof::EnumerationLiteral_ptr ownedLiteral_);
-	void addAllOwnedLiteral(const ownedLiteral_t& ownedLiteral_);
-	
+    Enumeration();
+    virtual ~Enumeration();
 
-	/*PROTECTED REGION ID(emof::Enumeration public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef std::vector < emof::EnumerationLiteral_ptr > ownedLiteral_t;
+
+    ownedLiteral_t getOwnedLiteral() const;
+    void addOwnedLiteral(emof::EnumerationLiteral_ptr ownedLiteral_);
+    void addAllOwnedLiteral(const ownedLiteral_t& ownedLiteral_);
+
+
+    /*PROTECTED REGION ID(emof::Enumeration public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class EmofPackage;
+    friend class EmofPackage;
 
-	std::vector < std::unique_ptr < emof::EnumerationLiteral > > m_ownedLiteral;
+    std::vector < std::unique_ptr < emof::EnumerationLiteral > > m_ownedLiteral;
 
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(emof::Enumeration protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(emof::Enumeration protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // emof

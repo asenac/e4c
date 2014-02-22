@@ -16,34 +16,34 @@ class CompoundElement :  public virtual ::xtext::AbstractElement
 {
 public:
 
-	typedef CompoundElement_ptr ptr_type;
-	
-	CompoundElement();
-	virtual ~CompoundElement();
+    typedef CompoundElement_ptr ptr_type;
 
-	typedef std::vector < xtext::AbstractElement_ptr > elements_t;
-	
-	elements_t getElements() const;
-	void addElements(xtext::AbstractElement_ptr elements_);
-	void addAllElements(const elements_t& elements_);
-	
+    CompoundElement();
+    virtual ~CompoundElement();
 
-	/*PROTECTED REGION ID(xtext::CompoundElement public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef std::vector < xtext::AbstractElement_ptr > elements_t;
+
+    elements_t getElements() const;
+    void addElements(xtext::AbstractElement_ptr elements_);
+    void addAllElements(const elements_t& elements_);
+
+
+    /*PROTECTED REGION ID(xtext::CompoundElement public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class XtextPackage;
+    friend class XtextPackage;
 
-	std::vector < std::unique_ptr < xtext::AbstractElement > > m_elements;
+    std::vector < std::unique_ptr < xtext::AbstractElement > > m_elements;
 
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(xtext::CompoundElement protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(xtext::CompoundElement protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // xtext

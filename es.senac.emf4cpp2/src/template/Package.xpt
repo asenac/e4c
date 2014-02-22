@@ -20,31 +20,31 @@ class «getPackage()» : public ::ecore::EPackage
 public:
     static const «getPackage()»_ptr _instance();
 
-  	«FOREACH EClassifiers AS e-»
- 	::«e.eClass().getFQN()»_ptr get«e.getNameUpper()»() const;
- 	«ENDFOREACH-»
- 	
- 	«FOREACH getStructuralFeatures() AS e-»
- 	::«e.eClass().getFQN()»_ptr get«e.getMember()»() const;
- 	«ENDFOREACH-»
+      «FOREACH EClassifiers AS e-»
+     ::«e.eClass().getFQN()»_ptr get«e.getNameUpper()»() const;
+     «ENDFOREACH-»
 
-  	«FOREACH EClassifiers AS e-»
- 	e4c::tag_t «e.getTagMethod()»() const;
- 	«ENDFOREACH-»
- 
- 	«FOREACH getStructuralFeatures() AS e-»
- 	e4c::tag_t «e.getTagMethod()»() const;
- 	«ENDFOREACH-»
+     «FOREACH getStructuralFeatures() AS e-»
+     ::«e.eClass().getFQN()»_ptr get«e.getMember()»() const;
+     «ENDFOREACH-»
+
+      «FOREACH EClassifiers AS e-»
+     e4c::tag_t «e.getTagMethod()»() const;
+     «ENDFOREACH-»
+
+     «FOREACH getStructuralFeatures() AS e-»
+     e4c::tag_t «e.getTagMethod()»() const;
+     «ENDFOREACH-»
 
 protected:
     «getPackage()»();
-    
+
      «FOREACH EClassifiers AS e-»
- 	::«e.eClass().getFQN()»_ptr m_«e.getNameUpper()»;
- 	«ENDFOREACH-»
-  	«FOREACH getStructuralFeatures() AS e-»
- 	::«e.eClass().getFQN()»_ptr m_«e.getMember()»;
- 	«ENDFOREACH-»
+     ::«e.eClass().getFQN()»_ptr m_«e.getNameUpper()»;
+     «ENDFOREACH-»
+      «FOREACH getStructuralFeatures() AS e-»
+     ::«e.eClass().getFQN()»_ptr m_«e.getMember()»;
+     «ENDFOREACH-»
 };
 
 «EXPAND template::EPackage::namespacesEnd FOR this»
@@ -65,24 +65,24 @@ using namespace «getFQN()»;
 
 «getPackage()»::«getPackage()»()
 {
-	m_eFactoryInstance = «getFactory()»::_instance();
-	«IF !eContents().isEmpty-»
-	::ecore::EcoreFactory_ptr ecoreFactory = ::ecore::EcoreFactory::_instance();
-	«ENDIF-»
-	
-	«REM»FIXME subpackages«ENDREM»
-	
-	«FOREACH EClassifiers AS cl-»
-	m_«cl.getName()» = ecoreFactory->create«cl.eClass().name»();
-	m_«cl.getName()»->setName("«cl.name»");
-	addEClassifiers(m_«cl.getName()»);
-	«ENDFOREACH-»
+    m_eFactoryInstance = «getFactory()»::_instance();
+    «IF !eContents().isEmpty-»
+    ::ecore::EcoreFactory_ptr ecoreFactory = ::ecore::EcoreFactory::_instance();
+    «ENDIF-»
 
-	«FOREACH EClassifiers.typeSelect(EDataType) AS ee-»
+    «REM»FIXME subpackages«ENDREM»
+
+    «FOREACH EClassifiers AS cl-»
+    m_«cl.getName()» = ecoreFactory->create«cl.eClass().name»();
+    m_«cl.getName()»->setName("«cl.name»");
+    addEClassifiers(m_«cl.getName()»);
+    «ENDFOREACH-»
+
+    «FOREACH EClassifiers.typeSelect(EDataType) AS ee-»
     m_«ee.getName()»->setSerializable(«ee.serializable»);
-    «ENDFOREACH-»	
-	«FOREACH EClassifiers.typeSelect(EEnum) AS ee-»
-	    «FOREACH ee.ELiterals AS el-»
+    «ENDFOREACH-»
+    «FOREACH EClassifiers.typeSelect(EEnum) AS ee-»
+        «FOREACH ee.ELiterals AS el-»
     {
         ::«el.eClass().getFQN()»_ptr el = ecoreFactory->createEEnumLiteral();
         el->setName("«el»");
@@ -90,11 +90,11 @@ using namespace «getFQN()»;
         el->setLiteral("«el»");
         m_«ee.getName()»->addELiterals(el);
     }
-	    «ENDFOREACH-»
-	«ENDFOREACH-»
-	
-	«FOREACH EClassifiers.typeSelect(EClass) AS cl-»
-	    «FOREACH cl.EStructuralFeatures AS ef-»
+        «ENDFOREACH-»
+    «ENDFOREACH-»
+
+    «FOREACH EClassifiers.typeSelect(EClass) AS cl-»
+        «FOREACH cl.EStructuralFeatures AS ef-»
     {
         m_«ef.getMember()» = ecoreFactory->create«ef.eClass().getName()»();
         m_«ef.getMember()»->setName("«ef.name»");
@@ -103,97 +103,97 @@ using namespace «getFQN()»;
         m_«cl.getName()»->add«ef.eClass().getName()»s(m_«ef.getMember()»);
         m_«cl.getName()»->addEAll«ef.eClass().getName().replaceFirst("E", "")»s(m_«ef.getMember()»);
     }
-	    «ENDFOREACH-»
-	    «FOREACH cl.EOperations AS op-»
+        «ENDFOREACH-»
+        «FOREACH cl.EOperations AS op-»
     {
         ::«op.eClass().getFQN()»_ptr op = ecoreFactory->create«op.eClass().getName()»();
         op->setName("«op.name»");
         m_«cl.getName()»->add«op.eClass().getName()»s(op);
         m_«cl.getName()»->addEAll«op.eClass().getName().replaceFirst("E", "")»s(op);
     }
-	    «ENDFOREACH-»
-	«ENDFOREACH-»
-	«REM»FIXME This assumes that a class can not have a super-type defined in other package«ENDREM»
-	«FOREACH EClassifiers.typeSelect(EClass) AS cl-»
-		«FOREACH cl.ESuperTypes AS s-»
-	m_«cl.getName()»->addESuperTypes(m_«s.getName()»);
-	m_«cl.getName()»->addAllEAllOperations(m_«s.getName()»->getEOperations());
-	m_«cl.getName()»->addAllEAllReferences(m_«s.getName()»->getEReferences());
-	m_«cl.getName()»->addAllEAllAttributes(m_«s.getName()»->getEAttributes());
-	m_«cl.getName()»->addAllEAllStructuralFeatures(m_«s.getName()»->getEStructuralFeatures());
-		«ENDFOREACH-»
-	«ENDFOREACH»
-	
-	«FOREACH EClassifiers.typeSelect(EClass) AS cl-»
-		«FOREACH cl.EStructuralFeatures AS ef-»
-	m_«cl.getName()»->addFeatureAccesors(m_«ef.getMember()», 
-		[](ecore::EObject_ptr o) { 
-			return e4c::create_holder(dynamic_cast< «cl.getFQN()»_ptr >(o)->get«ef.getNameUpper()»()); 
-		},
-			«IF ef.changeable-» 
-		[](ecore::EObject_ptr o, e4c::holder h) {
-			«EXPAND setter FOR ef-»
-		});
-			«ELSE-»
-		 e4c::set_t());
-		 	«ENDIF-»
-		«ENDFOREACH-»
-	«ENDFOREACH»
+        «ENDFOREACH-»
+    «ENDFOREACH-»
+    «REM»FIXME This assumes that a class can not have a super-type defined in other package«ENDREM»
+    «FOREACH EClassifiers.typeSelect(EClass) AS cl-»
+        «FOREACH cl.ESuperTypes AS s-»
+    m_«cl.getName()»->addESuperTypes(m_«s.getName()»);
+    m_«cl.getName()»->addAllEAllOperations(m_«s.getName()»->getEOperations());
+    m_«cl.getName()»->addAllEAllReferences(m_«s.getName()»->getEReferences());
+    m_«cl.getName()»->addAllEAllAttributes(m_«s.getName()»->getEAttributes());
+    m_«cl.getName()»->addAllEAllStructuralFeatures(m_«s.getName()»->getEStructuralFeatures());
+        «ENDFOREACH-»
+    «ENDFOREACH»
+
+    «FOREACH EClassifiers.typeSelect(EClass) AS cl-»
+        «FOREACH cl.EStructuralFeatures AS ef-»
+    m_«cl.getName()»->addFeatureAccesors(m_«ef.getMember()»,
+        [](ecore::EObject_ptr o) {
+            return e4c::create_holder(dynamic_cast< «cl.getFQN()»_ptr >(o)->get«ef.getNameUpper()»());
+        },
+            «IF ef.changeable-»
+        [](ecore::EObject_ptr o, e4c::holder h) {
+            «EXPAND setter FOR ef-»
+        });
+            «ELSE-»
+         e4c::set_t());
+             «ENDIF-»
+        «ENDFOREACH-»
+    «ENDFOREACH»
 }
 
 const «getPackage()»_ptr «getPackage()»::_instance()
 {
-	static «getPackage()» __instance;
-	return &__instance;
+    static «getPackage()» __instance;
+    return &__instance;
 }
 
-  	«FOREACH EClassifiers AS e-»
+      «FOREACH EClassifiers AS e-»
 «e.eClass().getFQN()»_ptr «getPackage()»::get«e.getNameUpper()»() const
 {
-	return m_«e.getNameUpper()»;
+    return m_«e.getNameUpper()»;
 }
-  	
+
 e4c::tag_t «getPackage()»::«e.getTagMethod()»() const
 {
-	return e4c::tag< «e.getName()» >::get();
+    return e4c::tag< «e.getName()» >::get();
 }
- 
- 	«ENDFOREACH-»
- 	«FOREACH getStructuralFeatures() AS e-»
+
+     «ENDFOREACH-»
+     «FOREACH getStructuralFeatures() AS e-»
 e4c::tag_t «getPackage()»::«e.getTagMethod()»() const
 {
-	return e4c::tag< «e.getTagName()» >::get();
+    return e4c::tag< «e.getTagName()» >::get();
 }
 
 «e.eClass().getFQN()»_ptr «getPackage()»::get«e.getMember()»() const
 {
-	return m_«e.getMember()»;
+    return m_«e.getMember()»;
 }
 
- 	«ENDFOREACH-»
+     «ENDFOREACH-»
 
 extern "C" ::ecore::EPackage_ptr e4c_«getFQN("_")»()
 {
-	return ::«getFQN()»::«getPackage()»::_instance();
+    return ::«getFQN()»::«getPackage()»::_instance();
 }
 «ENDFILE»
 «ENDDEFINE»
 
 «DEFINE setter FOR EStructuralFeature-»«ENDDEFINE»
 «DEFINE setter FOR EAttribute-»
-			typedef «EContainingClass.getFQN()»::«getName()»_t type_t;
-			const type_t& val = h.to_value< type_t >();
-			dynamic_cast< «EContainingClass.getFQN()»_ptr >(o)->set«getNameUpper()»(val);
+            typedef «EContainingClass.getFQN()»::«getName()»_t type_t;
+            const type_t& val = h.to_value< type_t >();
+            dynamic_cast< «EContainingClass.getFQN()»_ptr >(o)->set«getNameUpper()»(val);
 «ENDDEFINE»
 «DEFINE setter FOR EReference-»
-	«IF upperBound == 1-»
-			«EType.getFQN()»_ptr val = dynamic_cast< «EType.getFQN()»_ptr >(h.to_value< ecore::EObject_ptr >());
-			dynamic_cast< «EContainingClass.getFQN()»_ptr >(o)->set«getNameUpper()»(val);
-	«ELSE-»
-			typedef std::vector< ecore::EObject_ptr > type_t;
-			const type_t& val = h.to_value< type_t >();
-			«EContainingClass.getFQN()»_ptr eo = dynamic_cast< «EContainingClass.getFQN()»_ptr >(o);
-			eo->clear«getNameUpper()»();
-			eo->addAll«getNameUpper()»(e4c::select< «EType.getFQN()» >(val));
-	«ENDIF-»
+    «IF upperBound == 1-»
+            «EType.getFQN()»_ptr val = dynamic_cast< «EType.getFQN()»_ptr >(h.to_value< ecore::EObject_ptr >());
+            dynamic_cast< «EContainingClass.getFQN()»_ptr >(o)->set«getNameUpper()»(val);
+    «ELSE-»
+            typedef std::vector< ecore::EObject_ptr > type_t;
+            const type_t& val = h.to_value< type_t >();
+            «EContainingClass.getFQN()»_ptr eo = dynamic_cast< «EContainingClass.getFQN()»_ptr >(o);
+            eo->clear«getNameUpper()»();
+            eo->addAll«getNameUpper()»(e4c::select< «EType.getFQN()» >(val));
+    «ENDIF-»
 «ENDDEFINE»

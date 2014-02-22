@@ -18,29 +18,29 @@ class AbstractInventoryRelationship :  public virtual ::kdm::core::KDMRelationsh
 {
 public:
 
-	typedef AbstractInventoryRelationship_ptr ptr_type;
-	
-	virtual ~AbstractInventoryRelationship();
+    typedef AbstractInventoryRelationship_ptr ptr_type;
 
-	
-	
+    virtual ~AbstractInventoryRelationship();
 
-	/*PROTECTED REGION ID(kdm::source::AbstractInventoryRelationship public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(kdm::source::AbstractInventoryRelationship public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
-	AbstractInventoryRelationship();
+    AbstractInventoryRelationship();
 
-	friend class SourcePackage;
+    friend class SourcePackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::source::AbstractInventoryRelationship protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::source::AbstractInventoryRelationship protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // source

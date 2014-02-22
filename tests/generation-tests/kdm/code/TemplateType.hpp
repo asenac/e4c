@@ -18,29 +18,29 @@ class TemplateType :  public virtual ::kdm::code::Datatype
 {
 public:
 
-	typedef TemplateType_ptr ptr_type;
-	
-	TemplateType();
-	virtual ~TemplateType();
+    typedef TemplateType_ptr ptr_type;
 
-	
-	
+    TemplateType();
+    virtual ~TemplateType();
 
-	/*PROTECTED REGION ID(kdm::code::TemplateType public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(kdm::code::TemplateType public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class CodePackage;
+    friend class CodePackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::code::TemplateType protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::code::TemplateType protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // code

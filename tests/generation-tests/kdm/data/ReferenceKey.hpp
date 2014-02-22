@@ -18,29 +18,29 @@ class ReferenceKey :  public virtual ::kdm::data::IndexElement
 {
 public:
 
-	typedef ReferenceKey_ptr ptr_type;
-	
-	ReferenceKey();
-	virtual ~ReferenceKey();
+    typedef ReferenceKey_ptr ptr_type;
 
-	
-	
+    ReferenceKey();
+    virtual ~ReferenceKey();
 
-	/*PROTECTED REGION ID(kdm::data::ReferenceKey public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(kdm::data::ReferenceKey public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class DataPackage;
+    friend class DataPackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::data::ReferenceKey protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::data::ReferenceKey protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // data

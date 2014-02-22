@@ -9,14 +9,14 @@ using namespace kdm::event;
 
 Transition::Transition()
 {
-	/*PROTECTED REGION ID(Transition constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(Transition constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 Transition::~Transition()
 {
-	/*PROTECTED REGION ID(Transition destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(Transition destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ Transition::~Transition()
 
 ecore::EClass_ptr Transition::eClassImpl() const
 {
-	return EventPackage::_instance()->getTransition();
+    return EventPackage::_instance()->getTransition();
 }
- 
+

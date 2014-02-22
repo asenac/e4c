@@ -18,29 +18,29 @@ class ExecutableFile :  public virtual ::kdm::source::InventoryItem
 {
 public:
 
-	typedef ExecutableFile_ptr ptr_type;
-	
-	ExecutableFile();
-	virtual ~ExecutableFile();
+    typedef ExecutableFile_ptr ptr_type;
 
-	
-	
+    ExecutableFile();
+    virtual ~ExecutableFile();
 
-	/*PROTECTED REGION ID(kdm::source::ExecutableFile public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(kdm::source::ExecutableFile public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class SourcePackage;
+    friend class SourcePackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::source::ExecutableFile protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::source::ExecutableFile protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // source

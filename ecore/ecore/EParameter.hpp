@@ -15,34 +15,34 @@ class EParameter :  public virtual ::ecore::ETypedElement
 {
 public:
 
-	typedef EParameter_ptr ptr_type;
-	
-	EParameter();
-	virtual ~EParameter();
+    typedef EParameter_ptr ptr_type;
 
-	typedef ecore::EOperation_ptr eOperation_t;
-	
-	eOperation_t getEOperation() const;
-	
+    EParameter();
+    virtual ~EParameter();
 
-	/*PROTECTED REGION ID(ecore::EParameter public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef ecore::EOperation_ptr eOperation_t;
+
+    eOperation_t getEOperation() const;
+
+
+    /*PROTECTED REGION ID(ecore::EParameter public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class EcorePackage;
+    friend class EcorePackage;
 
-	ecore::EOperation_ptr m_eOperation;
+    ecore::EOperation_ptr m_eOperation;
 
-	
-	friend class ::ecore::EOperation;
-	void setEOperation(eOperation_t eOperation_);
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(ecore::EParameter protected) START*/
-	/*PROTECTED REGION END*/
+
+    friend class ::ecore::EOperation;
+    void setEOperation(eOperation_t eOperation_);
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(ecore::EParameter protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // ecore

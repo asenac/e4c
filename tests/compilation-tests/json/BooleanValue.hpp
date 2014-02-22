@@ -16,33 +16,33 @@ class BooleanValue :  public virtual ::json::Value
 {
 public:
 
-	typedef BooleanValue_ptr ptr_type;
-	
-	BooleanValue();
-	virtual ~BooleanValue();
+    typedef BooleanValue_ptr ptr_type;
 
-	typedef ::ecore::EBoolean value_t;
-	
-	void setValue(value_t _value);
-	value_t getValue() const;
-	
+    BooleanValue();
+    virtual ~BooleanValue();
 
-	/*PROTECTED REGION ID(json::BooleanValue public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef ::ecore::EBoolean value_t;
+
+    void setValue(value_t _value);
+    value_t getValue() const;
+
+
+    /*PROTECTED REGION ID(json::BooleanValue public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class JsonPackage;
+    friend class JsonPackage;
 
-	value_t m_value;
+    value_t m_value;
 
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(json::BooleanValue protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(json::BooleanValue protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // json

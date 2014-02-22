@@ -9,14 +9,14 @@ using namespace kdm::code;
 
 ChoiceType::ChoiceType()
 {
-	/*PROTECTED REGION ID(ChoiceType constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(ChoiceType constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 ChoiceType::~ChoiceType()
 {
-	/*PROTECTED REGION ID(ChoiceType destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(ChoiceType destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ ChoiceType::~ChoiceType()
 
 ecore::EClass_ptr ChoiceType::eClassImpl() const
 {
-	return CodePackage::_instance()->getChoiceType();
+    return CodePackage::_instance()->getChoiceType();
 }
- 
+

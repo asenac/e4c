@@ -9,14 +9,14 @@ using namespace kdm::code;
 
 IndexUnit::IndexUnit()
 {
-	/*PROTECTED REGION ID(IndexUnit constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(IndexUnit constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 IndexUnit::~IndexUnit()
 {
-	/*PROTECTED REGION ID(IndexUnit destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(IndexUnit destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ IndexUnit::~IndexUnit()
 
 ecore::EClass_ptr IndexUnit::eClassImpl() const
 {
-	return CodePackage::_instance()->getIndexUnit();
+    return CodePackage::_instance()->getIndexUnit();
 }
- 
+

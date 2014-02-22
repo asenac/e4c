@@ -9,14 +9,14 @@ using namespace kdm::ui;
 
 AbstractUIRelationship::AbstractUIRelationship()
 {
-	/*PROTECTED REGION ID(AbstractUIRelationship constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(AbstractUIRelationship constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 AbstractUIRelationship::~AbstractUIRelationship()
 {
-	/*PROTECTED REGION ID(AbstractUIRelationship destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(AbstractUIRelationship destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ AbstractUIRelationship::~AbstractUIRelationship()
 
 ecore::EClass_ptr AbstractUIRelationship::eClassImpl() const
 {
-	return UiPackage::_instance()->getAbstractUIRelationship();
+    return UiPackage::_instance()->getAbstractUIRelationship();
 }
- 
+

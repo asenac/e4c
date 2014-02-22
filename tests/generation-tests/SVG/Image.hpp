@@ -16,34 +16,34 @@ class Image :  public virtual ::SVG::StructuralElement
 {
 public:
 
-	typedef Image_ptr ptr_type;
-	
-	Image();
-	virtual ~Image();
+    typedef Image_ptr ptr_type;
 
-	typedef std::set < SVG::ReferencedFile_ptr > referee_t;
-	
-	referee_t getReferee() const;
-	void addReferee(SVG::ReferencedFile_ptr referee_);
-	void addAllReferee(const referee_t& referee_);
-	
+    Image();
+    virtual ~Image();
 
-	/*PROTECTED REGION ID(SVG::Image public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef std::set < SVG::ReferencedFile_ptr > referee_t;
+
+    referee_t getReferee() const;
+    void addReferee(SVG::ReferencedFile_ptr referee_);
+    void addAllReferee(const referee_t& referee_);
+
+
+    /*PROTECTED REGION ID(SVG::Image public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class SVGPackage;
+    friend class SVGPackage;
 
-	std::set < SVG::ReferencedFile_ptr > m_referee;
+    std::set < SVG::ReferencedFile_ptr > m_referee;
 
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(SVG::Image protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(SVG::Image protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // SVG

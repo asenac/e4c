@@ -9,14 +9,14 @@ using namespace xtext;
 
 ReferencedMetamodel::ReferencedMetamodel()
 {
-	/*PROTECTED REGION ID(ReferencedMetamodel constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(ReferencedMetamodel constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 ReferencedMetamodel::~ReferencedMetamodel()
 {
-	/*PROTECTED REGION ID(ReferencedMetamodel destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(ReferencedMetamodel destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ ReferencedMetamodel::~ReferencedMetamodel()
 
 ecore::EClass_ptr ReferencedMetamodel::eClassImpl() const
 {
-	return XtextPackage::_instance()->getReferencedMetamodel();
+    return XtextPackage::_instance()->getReferencedMetamodel();
 }
- 
+

@@ -18,37 +18,37 @@ class Requires :  public virtual ::kdm::platform::AbstractPlatformRelationship
 {
 public:
 
-	typedef Requires_ptr ptr_type;
-	
-	Requires();
-	virtual ~Requires();
+    typedef Requires_ptr ptr_type;
 
-	typedef kdm::platform::AbstractPlatformElement_ptr to_t;
-	typedef kdm::platform::DeployedComponent_ptr from_t;
-	
-	to_t getTo() const;
-	void setTo(to_t to_);
-	from_t getFrom() const;
-	void setFrom(from_t from_);
-	
+    Requires();
+    virtual ~Requires();
 
-	/*PROTECTED REGION ID(kdm::platform::Requires public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef kdm::platform::AbstractPlatformElement_ptr to_t;
+    typedef kdm::platform::DeployedComponent_ptr from_t;
+
+    to_t getTo() const;
+    void setTo(to_t to_);
+    from_t getFrom() const;
+    void setFrom(from_t from_);
+
+
+    /*PROTECTED REGION ID(kdm::platform::Requires public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class PlatformPackage;
+    friend class PlatformPackage;
 
-	kdm::platform::AbstractPlatformElement_ptr m_to;
-	kdm::platform::DeployedComponent_ptr m_from;
+    kdm::platform::AbstractPlatformElement_ptr m_to;
+    kdm::platform::DeployedComponent_ptr m_from;
 
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::platform::Requires protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::platform::Requires protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // platform

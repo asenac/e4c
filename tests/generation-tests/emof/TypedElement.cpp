@@ -8,29 +8,29 @@ using namespace emof;
 /*PROTECTED REGION ID(emof::TypedElement include) START*/
 /*PROTECTED REGION END*/
 
-TypedElement::TypedElement() : 
-	m_type()
+TypedElement::TypedElement() :
+    m_type()
 {
-	/*PROTECTED REGION ID(TypedElement constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(TypedElement constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 TypedElement::~TypedElement()
 {
-	/*PROTECTED REGION ID(TypedElement destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(TypedElement destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 TypedElement::type_t TypedElement::getType() const
 {
-	return e4c::returned(m_type);
+    return e4c::returned(m_type);
 }
 
 void TypedElement::setType(type_t type_)
 {
-	if (m_type == type_)
-		return;
-	m_type = type_;
+    if (m_type == type_)
+        return;
+    m_type = type_;
 }
 
 
@@ -40,6 +40,6 @@ void TypedElement::setType(type_t type_)
 
 ecore::EClass_ptr TypedElement::eClassImpl() const
 {
-	return EmofPackage::_instance()->getTypedElement();
+    return EmofPackage::_instance()->getTypedElement();
 }
- 
+

@@ -9,14 +9,14 @@ using namespace kdm::action;
 
 ExceptionUnit::ExceptionUnit()
 {
-	/*PROTECTED REGION ID(ExceptionUnit constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(ExceptionUnit constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 ExceptionUnit::~ExceptionUnit()
 {
-	/*PROTECTED REGION ID(ExceptionUnit destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(ExceptionUnit destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ ExceptionUnit::~ExceptionUnit()
 
 ecore::EClass_ptr ExceptionUnit::eClassImpl() const
 {
-	return ActionPackage::_instance()->getExceptionUnit();
+    return ActionPackage::_instance()->getExceptionUnit();
 }
- 
+

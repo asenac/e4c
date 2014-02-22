@@ -18,29 +18,29 @@ class DateType :  public virtual ::kdm::code::PrimitiveType
 {
 public:
 
-	typedef DateType_ptr ptr_type;
-	
-	DateType();
-	virtual ~DateType();
+    typedef DateType_ptr ptr_type;
 
-	
-	
+    DateType();
+    virtual ~DateType();
 
-	/*PROTECTED REGION ID(kdm::code::DateType public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(kdm::code::DateType public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class CodePackage;
+    friend class CodePackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::code::DateType protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::code::DateType protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // code

@@ -18,34 +18,34 @@ class ConstructorCallExpression :  public virtual ::xpand3::expression::Abstract
 {
 public:
 
-	typedef ConstructorCallExpression_ptr ptr_type;
-	
-	ConstructorCallExpression();
-	virtual ~ConstructorCallExpression();
+    typedef ConstructorCallExpression_ptr ptr_type;
 
-	typedef xpand3::Identifier_ptr type_t;
-	
-	type_t getType() const;
-	void setType(type_t type_);
-	type_t releaseType();
-	
+    ConstructorCallExpression();
+    virtual ~ConstructorCallExpression();
 
-	/*PROTECTED REGION ID(xpand3::expression::ConstructorCallExpression public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef xpand3::Identifier_ptr type_t;
+
+    type_t getType() const;
+    void setType(type_t type_);
+    type_t releaseType();
+
+
+    /*PROTECTED REGION ID(xpand3::expression::ConstructorCallExpression public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class ExpressionPackage;
+    friend class ExpressionPackage;
 
-	std::unique_ptr < xpand3::Identifier > m_type;
+    std::unique_ptr < xpand3::Identifier > m_type;
 
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(xpand3::expression::ConstructorCallExpression protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(xpand3::expression::ConstructorCallExpression protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // expression

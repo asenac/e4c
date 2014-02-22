@@ -18,34 +18,34 @@ class ConceptualContainer :  public virtual ::kdm::conceptual::AbstractConceptua
 {
 public:
 
-	typedef ConceptualContainer_ptr ptr_type;
-	
-	ConceptualContainer();
-	virtual ~ConceptualContainer();
+    typedef ConceptualContainer_ptr ptr_type;
 
-	typedef std::set < kdm::conceptual::AbstractConceptualElement_ptr > conceptualElement_t;
-	
-	conceptualElement_t getConceptualElement() const;
-	void addConceptualElement(kdm::conceptual::AbstractConceptualElement_ptr conceptualElement_);
-	void addAllConceptualElement(const conceptualElement_t& conceptualElement_);
-	
+    ConceptualContainer();
+    virtual ~ConceptualContainer();
 
-	/*PROTECTED REGION ID(kdm::conceptual::ConceptualContainer public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef std::set < kdm::conceptual::AbstractConceptualElement_ptr > conceptualElement_t;
+
+    conceptualElement_t getConceptualElement() const;
+    void addConceptualElement(kdm::conceptual::AbstractConceptualElement_ptr conceptualElement_);
+    void addAllConceptualElement(const conceptualElement_t& conceptualElement_);
+
+
+    /*PROTECTED REGION ID(kdm::conceptual::ConceptualContainer public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class ConceptualPackage;
+    friend class ConceptualPackage;
 
-	std::set < std::unique_ptr < kdm::conceptual::AbstractConceptualElement > > m_conceptualElement;
+    std::set < std::unique_ptr < kdm::conceptual::AbstractConceptualElement > > m_conceptualElement;
 
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::conceptual::ConceptualContainer protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::conceptual::ConceptualContainer protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // conceptual

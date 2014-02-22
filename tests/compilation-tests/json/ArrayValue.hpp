@@ -16,34 +16,34 @@ class ArrayValue :  public virtual ::json::Value
 {
 public:
 
-	typedef ArrayValue_ptr ptr_type;
-	
-	ArrayValue();
-	virtual ~ArrayValue();
+    typedef ArrayValue_ptr ptr_type;
 
-	typedef std::vector < json::Value_ptr > values_t;
-	
-	values_t getValues() const;
-	void addValues(json::Value_ptr values_);
-	void addAllValues(const values_t& values_);
-	
+    ArrayValue();
+    virtual ~ArrayValue();
 
-	/*PROTECTED REGION ID(json::ArrayValue public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef std::vector < json::Value_ptr > values_t;
+
+    values_t getValues() const;
+    void addValues(json::Value_ptr values_);
+    void addAllValues(const values_t& values_);
+
+
+    /*PROTECTED REGION ID(json::ArrayValue public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class JsonPackage;
+    friend class JsonPackage;
 
-	std::vector < std::unique_ptr < json::Value > > m_values;
+    std::vector < std::unique_ptr < json::Value > > m_values;
 
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(json::ArrayValue protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(json::ArrayValue protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // json

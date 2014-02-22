@@ -15,29 +15,29 @@ class ModelElement : ::ecore::EObject
 {
 public:
 
-	typedef ModelElement_ptr ptr_type;
-	
-	virtual ~ModelElement();
+    typedef ModelElement_ptr ptr_type;
 
-	
-	
+    virtual ~ModelElement();
 
-	/*PROTECTED REGION ID(idlmm::ModelElement public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(idlmm::ModelElement public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
-	ModelElement();
+    ModelElement();
 
-	friend class IdlmmPackage;
+    friend class IdlmmPackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(idlmm::ModelElement protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(idlmm::ModelElement protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // idlmm

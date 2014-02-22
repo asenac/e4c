@@ -9,14 +9,14 @@ using namespace xpand3::statement;
 
 AbstractStatement::AbstractStatement()
 {
-	/*PROTECTED REGION ID(AbstractStatement constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(AbstractStatement constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 AbstractStatement::~AbstractStatement()
 {
-	/*PROTECTED REGION ID(AbstractStatement destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(AbstractStatement destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ AbstractStatement::~AbstractStatement()
 
 ecore::EClass_ptr AbstractStatement::eClassImpl() const
 {
-	return StatementPackage::_instance()->getAbstractStatement();
+    return StatementPackage::_instance()->getAbstractStatement();
 }
- 
+

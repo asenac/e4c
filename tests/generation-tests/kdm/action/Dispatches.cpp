@@ -9,42 +9,42 @@ using namespace kdm::action;
 /*PROTECTED REGION ID(kdm::action::Dispatches include) START*/
 /*PROTECTED REGION END*/
 
-Dispatches::Dispatches() : 
-	m_to(),
+Dispatches::Dispatches() :
+    m_to(),
     m_from()
 {
-	/*PROTECTED REGION ID(Dispatches constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(Dispatches constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 Dispatches::~Dispatches()
 {
-	/*PROTECTED REGION ID(Dispatches destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(Dispatches destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 Dispatches::to_t Dispatches::getTo() const
 {
-	return e4c::returned(m_to);
+    return e4c::returned(m_to);
 }
 
 void Dispatches::setTo(to_t to_)
 {
-	if (m_to == to_)
-		return;
-	m_to = to_;
+    if (m_to == to_)
+        return;
+    m_to = to_;
 }
 
 Dispatches::from_t Dispatches::getFrom() const
 {
-	return e4c::returned(m_from);
+    return e4c::returned(m_from);
 }
 
 void Dispatches::setFrom(from_t from_)
 {
-	if (m_from == from_)
-		return;
-	m_from = from_;
+    if (m_from == from_)
+        return;
+    m_from = from_;
 }
 
 
@@ -54,6 +54,6 @@ void Dispatches::setFrom(from_t from_)
 
 ecore::EClass_ptr Dispatches::eClassImpl() const
 {
-	return ActionPackage::_instance()->getDispatches();
+    return ActionPackage::_instance()->getDispatches();
 }
- 
+

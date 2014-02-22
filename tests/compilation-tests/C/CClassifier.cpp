@@ -9,14 +9,14 @@ using namespace C;
 
 CClassifier::CClassifier()
 {
-	/*PROTECTED REGION ID(CClassifier constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(CClassifier constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 CClassifier::~CClassifier()
 {
-	/*PROTECTED REGION ID(CClassifier destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(CClassifier destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ CClassifier::~CClassifier()
 
 ecore::EClass_ptr CClassifier::eClassImpl() const
 {
-	return CPackage::_instance()->getCClassifier();
+    return CPackage::_instance()->getCClassifier();
 }
- 
+

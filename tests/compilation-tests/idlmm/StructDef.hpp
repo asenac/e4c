@@ -15,36 +15,36 @@ class StructDef :  public virtual ::idlmm::TypedefDef
 {
 public:
 
-	typedef StructDef_ptr ptr_type;
-	
-	StructDef();
-	virtual ~StructDef();
+    typedef StructDef_ptr ptr_type;
 
-	typedef std::vector < idlmm::Field_ptr > members_t;
-	
-	members_t getMembers() const;
-	void addMembers(idlmm::Field_ptr members_);
-	void addAllMembers(const members_t& members_);
-	void removeMembers(idlmm::Field_ptr members_);
-	void clearMembers();
-	
+    StructDef();
+    virtual ~StructDef();
 
-	/*PROTECTED REGION ID(idlmm::StructDef public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef std::vector < idlmm::Field_ptr > members_t;
+
+    members_t getMembers() const;
+    void addMembers(idlmm::Field_ptr members_);
+    void addAllMembers(const members_t& members_);
+    void removeMembers(idlmm::Field_ptr members_);
+    void clearMembers();
+
+
+    /*PROTECTED REGION ID(idlmm::StructDef public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class IdlmmPackage;
+    friend class IdlmmPackage;
 
-	std::vector < std::unique_ptr < idlmm::Field > > m_members;
+    std::vector < std::unique_ptr < idlmm::Field > > m_members;
 
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(idlmm::StructDef protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(idlmm::StructDef protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // idlmm

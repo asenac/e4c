@@ -18,29 +18,29 @@ class CodeAssembly :  public virtual ::kdm::code::Module
 {
 public:
 
-	typedef CodeAssembly_ptr ptr_type;
-	
-	CodeAssembly();
-	virtual ~CodeAssembly();
+    typedef CodeAssembly_ptr ptr_type;
 
-	
-	
+    CodeAssembly();
+    virtual ~CodeAssembly();
 
-	/*PROTECTED REGION ID(kdm::code::CodeAssembly public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(kdm::code::CodeAssembly public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class CodePackage;
+    friend class CodePackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::code::CodeAssembly protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::code::CodeAssembly protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // code

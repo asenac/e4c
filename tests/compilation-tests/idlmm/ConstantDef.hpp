@@ -17,34 +17,34 @@ class ConstantDef :  public virtual ::idlmm::Contained,  public virtual ::idlmm:
 {
 public:
 
-	typedef ConstantDef_ptr ptr_type;
-	
-	ConstantDef();
-	virtual ~ConstantDef();
+    typedef ConstantDef_ptr ptr_type;
 
-	typedef idlmm::Expression_ptr constValue_t;
-	
-	constValue_t getConstValue() const;
-	void setConstValue(constValue_t constValue_);
-	constValue_t releaseConstValue();
-	
+    ConstantDef();
+    virtual ~ConstantDef();
 
-	/*PROTECTED REGION ID(idlmm::ConstantDef public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef idlmm::Expression_ptr constValue_t;
+
+    constValue_t getConstValue() const;
+    void setConstValue(constValue_t constValue_);
+    constValue_t releaseConstValue();
+
+
+    /*PROTECTED REGION ID(idlmm::ConstantDef public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class IdlmmPackage;
+    friend class IdlmmPackage;
 
-	std::unique_ptr < idlmm::Expression > m_constValue;
+    std::unique_ptr < idlmm::Expression > m_constValue;
 
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(idlmm::ConstantDef protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(idlmm::ConstantDef protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // idlmm

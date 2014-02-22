@@ -7,43 +7,43 @@ using namespace idlmm;
 /*PROTECTED REGION ID(idlmm::UnaryExpression include) START*/
 /*PROTECTED REGION END*/
 
-UnaryExpression::UnaryExpression() : 
-	m_expression(),
+UnaryExpression::UnaryExpression() :
+    m_expression(),
     m_operator()
 {
-	/*PROTECTED REGION ID(UnaryExpression constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(UnaryExpression constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 UnaryExpression::~UnaryExpression()
 {
-	/*PROTECTED REGION ID(UnaryExpression destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(UnaryExpression destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 UnaryExpression::expression_t UnaryExpression::getExpression() const
 {
-	return e4c::returned(m_expression);
+    return e4c::returned(m_expression);
 }
 
 void UnaryExpression::setExpression(expression_t expression_)
 {
-	m_expression.reset(expression_);
+    m_expression.reset(expression_);
 }
 
 UnaryExpression::expression_t UnaryExpression::releaseExpression()
 {
-	return m_expression.release();
+    return m_expression.release();
 }
 
 void UnaryExpression::setOperator(operator_t _operator)
 {
-	m_operator = _operator;;
+    m_operator = _operator;;
 }
 
 UnaryExpression::operator_t UnaryExpression::getOperator() const
 {
-	return m_operator;
+    return m_operator;
 }
 
 
@@ -53,6 +53,6 @@ UnaryExpression::operator_t UnaryExpression::getOperator() const
 
 ecore::EClass_ptr UnaryExpression::eClassImpl() const
 {
-	return IdlmmPackage::_instance()->getUnaryExpression();
+    return IdlmmPackage::_instance()->getUnaryExpression();
 }
- 
+

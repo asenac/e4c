@@ -18,29 +18,29 @@ class TypeUnit :  public virtual ::kdm::code::DefinedType
 {
 public:
 
-	typedef TypeUnit_ptr ptr_type;
-	
-	TypeUnit();
-	virtual ~TypeUnit();
+    typedef TypeUnit_ptr ptr_type;
 
-	
-	
+    TypeUnit();
+    virtual ~TypeUnit();
 
-	/*PROTECTED REGION ID(kdm::code::TypeUnit public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(kdm::code::TypeUnit public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class CodePackage;
+    friend class CodePackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::code::TypeUnit protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::code::TypeUnit protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // code

@@ -9,14 +9,14 @@ using namespace kdm::platform;
 
 Thread::Thread()
 {
-	/*PROTECTED REGION ID(Thread constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(Thread constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 Thread::~Thread()
 {
-	/*PROTECTED REGION ID(Thread destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(Thread destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ Thread::~Thread()
 
 ecore::EClass_ptr Thread::eClassImpl() const
 {
-	return PlatformPackage::_instance()->getThread();
+    return PlatformPackage::_instance()->getThread();
 }
- 
+

@@ -8,34 +8,34 @@ using namespace kdm::event;
 /*PROTECTED REGION ID(kdm::event::EventResource include) START*/
 /*PROTECTED REGION END*/
 
-EventResource::EventResource() : 
-	m_eventElement()
+EventResource::EventResource() :
+    m_eventElement()
 {
-	/*PROTECTED REGION ID(EventResource constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(EventResource constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 EventResource::~EventResource()
 {
-	/*PROTECTED REGION ID(EventResource destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(EventResource destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 EventResource::eventElement_t EventResource::getEventElement() const
 {
-	return e4c::returned(m_eventElement);
+    return e4c::returned(m_eventElement);
 }
 
 
 void EventResource::addEventElement(kdm::event::AbstractEventElement_ptr eventElement_)
 {
-	m_eventElement.insert(std::unique_ptr < kdm::event::AbstractEventElement >(eventElement_));
+    m_eventElement.insert(std::unique_ptr < kdm::event::AbstractEventElement >(eventElement_));
 }
 
 void EventResource::addAllEventElement(const eventElement_t& eventElement_)
 {
-	for (auto i = eventElement_.begin(); i != eventElement_.end(); i++)
-		addEventElement(*i);
+    for (auto i = eventElement_.begin(); i != eventElement_.end(); i++)
+        addEventElement(*i);
 }
 
 
@@ -45,6 +45,6 @@ void EventResource::addAllEventElement(const eventElement_t& eventElement_)
 
 ecore::EClass_ptr EventResource::eClassImpl() const
 {
-	return EventPackage::_instance()->getEventResource();
+    return EventPackage::_instance()->getEventResource();
 }
- 
+

@@ -15,38 +15,38 @@ class Typed :  public virtual ::idlmm::ModelElement
 {
 public:
 
-	typedef Typed_ptr ptr_type;
-	
-	virtual ~Typed();
+    typedef Typed_ptr ptr_type;
 
-	typedef idlmm::IDLType_ptr containedType_t;
-	typedef idlmm::TypedefDef_ptr sharedType_t;
-	
-	containedType_t getContainedType() const;
-	void setContainedType(containedType_t containedType_);
-	containedType_t releaseContainedType();
-	sharedType_t getSharedType() const;
-	void setSharedType(sharedType_t sharedType_);
-	
+    virtual ~Typed();
 
-	/*PROTECTED REGION ID(idlmm::Typed public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef idlmm::IDLType_ptr containedType_t;
+    typedef idlmm::TypedefDef_ptr sharedType_t;
+
+    containedType_t getContainedType() const;
+    void setContainedType(containedType_t containedType_);
+    containedType_t releaseContainedType();
+    sharedType_t getSharedType() const;
+    void setSharedType(sharedType_t sharedType_);
+
+
+    /*PROTECTED REGION ID(idlmm::Typed public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
-	Typed();
+    Typed();
 
-	friend class IdlmmPackage;
+    friend class IdlmmPackage;
 
-	std::unique_ptr < idlmm::IDLType > m_containedType;
-	idlmm::TypedefDef_ptr m_sharedType;
+    std::unique_ptr < idlmm::IDLType > m_containedType;
+    idlmm::TypedefDef_ptr m_sharedType;
 
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(idlmm::Typed protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(idlmm::Typed protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // idlmm

@@ -18,29 +18,29 @@ class DataManager :  public virtual ::kdm::platform::ResourceType
 {
 public:
 
-	typedef DataManager_ptr ptr_type;
-	
-	DataManager();
-	virtual ~DataManager();
+    typedef DataManager_ptr ptr_type;
 
-	
-	
+    DataManager();
+    virtual ~DataManager();
 
-	/*PROTECTED REGION ID(kdm::platform::DataManager public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(kdm::platform::DataManager public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class PlatformPackage;
+    friend class PlatformPackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::platform::DataManager protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::platform::DataManager protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // platform

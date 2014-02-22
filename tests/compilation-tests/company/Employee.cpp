@@ -7,27 +7,27 @@ using namespace company;
 /*PROTECTED REGION ID(company::Employee include) START*/
 /*PROTECTED REGION END*/
 
-Employee::Employee() : 
-	m_name()
+Employee::Employee() :
+    m_name()
 {
-	/*PROTECTED REGION ID(Employee constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(Employee constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 Employee::~Employee()
 {
-	/*PROTECTED REGION ID(Employee destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(Employee destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 void Employee::setName(name_t _name)
 {
-	m_name = _name;;
+    m_name = _name;;
 }
 
 Employee::name_t Employee::getName() const
 {
-	return m_name;
+    return m_name;
 }
 
 
@@ -37,6 +37,6 @@ Employee::name_t Employee::getName() const
 
 ecore::EClass_ptr Employee::eClassImpl() const
 {
-	return CompanyPackage::_instance()->getEmployee();
+    return CompanyPackage::_instance()->getEmployee();
 }
- 
+

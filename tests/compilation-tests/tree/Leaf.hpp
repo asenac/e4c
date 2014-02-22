@@ -16,29 +16,29 @@ class Leaf :  public virtual ::tree::TreeNode
 {
 public:
 
-	typedef Leaf_ptr ptr_type;
-	
-	Leaf();
-	virtual ~Leaf();
+    typedef Leaf_ptr ptr_type;
 
-	
-	
+    Leaf();
+    virtual ~Leaf();
 
-	/*PROTECTED REGION ID(tree::Leaf public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(tree::Leaf public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class TreePackage;
+    friend class TreePackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(tree::Leaf protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(tree::Leaf protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // tree

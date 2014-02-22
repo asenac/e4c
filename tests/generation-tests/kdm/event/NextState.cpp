@@ -9,42 +9,42 @@ using namespace kdm::event;
 /*PROTECTED REGION ID(kdm::event::NextState include) START*/
 /*PROTECTED REGION END*/
 
-NextState::NextState() : 
-	m_to(),
+NextState::NextState() :
+    m_to(),
     m_from()
 {
-	/*PROTECTED REGION ID(NextState constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(NextState constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 NextState::~NextState()
 {
-	/*PROTECTED REGION ID(NextState destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(NextState destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 NextState::to_t NextState::getTo() const
 {
-	return e4c::returned(m_to);
+    return e4c::returned(m_to);
 }
 
 void NextState::setTo(to_t to_)
 {
-	if (m_to == to_)
-		return;
-	m_to = to_;
+    if (m_to == to_)
+        return;
+    m_to = to_;
 }
 
 NextState::from_t NextState::getFrom() const
 {
-	return e4c::returned(m_from);
+    return e4c::returned(m_from);
 }
 
 void NextState::setFrom(from_t from_)
 {
-	if (m_from == from_)
-		return;
-	m_from = from_;
+    if (m_from == from_)
+        return;
+    m_from = from_;
 }
 
 
@@ -54,6 +54,6 @@ void NextState::setFrom(from_t from_)
 
 ecore::EClass_ptr NextState::eClassImpl() const
 {
-	return EventPackage::_instance()->getNextState();
+    return EventPackage::_instance()->getNextState();
 }
- 
+

@@ -16,34 +16,34 @@ class ObjectValue :  public virtual ::json::Value
 {
 public:
 
-	typedef ObjectValue_ptr ptr_type;
-	
-	ObjectValue();
-	virtual ~ObjectValue();
+    typedef ObjectValue_ptr ptr_type;
 
-	typedef std::vector < json::NVPair_ptr > members_t;
-	
-	members_t getMembers() const;
-	void addMembers(json::NVPair_ptr members_);
-	void addAllMembers(const members_t& members_);
-	
+    ObjectValue();
+    virtual ~ObjectValue();
 
-	/*PROTECTED REGION ID(json::ObjectValue public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef std::vector < json::NVPair_ptr > members_t;
+
+    members_t getMembers() const;
+    void addMembers(json::NVPair_ptr members_);
+    void addAllMembers(const members_t& members_);
+
+
+    /*PROTECTED REGION ID(json::ObjectValue public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class JsonPackage;
+    friend class JsonPackage;
 
-	std::vector < std::unique_ptr < json::NVPair > > m_members;
+    std::vector < std::unique_ptr < json::NVPair > > m_members;
 
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(json::ObjectValue protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(json::ObjectValue protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // json

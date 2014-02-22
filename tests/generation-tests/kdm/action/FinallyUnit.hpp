@@ -18,29 +18,29 @@ class FinallyUnit :  public virtual ::kdm::action::ExceptionUnit
 {
 public:
 
-	typedef FinallyUnit_ptr ptr_type;
-	
-	FinallyUnit();
-	virtual ~FinallyUnit();
+    typedef FinallyUnit_ptr ptr_type;
 
-	
-	
+    FinallyUnit();
+    virtual ~FinallyUnit();
 
-	/*PROTECTED REGION ID(kdm::action::FinallyUnit public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(kdm::action::FinallyUnit public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class ActionPackage;
+    friend class ActionPackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::action::FinallyUnit protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::action::FinallyUnit protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // action

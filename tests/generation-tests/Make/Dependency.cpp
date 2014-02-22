@@ -9,14 +9,14 @@ using namespace Make;
 
 Dependency::Dependency()
 {
-	/*PROTECTED REGION ID(Dependency constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(Dependency constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 Dependency::~Dependency()
 {
-	/*PROTECTED REGION ID(Dependency destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(Dependency destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ Dependency::~Dependency()
 
 ecore::EClass_ptr Dependency::eClassImpl() const
 {
-	return MakePackage::_instance()->getDependency();
+    return MakePackage::_instance()->getDependency();
 }
- 
+

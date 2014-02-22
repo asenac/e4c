@@ -9,42 +9,42 @@ using namespace kdm::action;
 /*PROTECTED REGION ID(kdm::action::Writes include) START*/
 /*PROTECTED REGION END*/
 
-Writes::Writes() : 
-	m_to(),
+Writes::Writes() :
+    m_to(),
     m_from()
 {
-	/*PROTECTED REGION ID(Writes constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(Writes constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 Writes::~Writes()
 {
-	/*PROTECTED REGION ID(Writes destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(Writes destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 Writes::to_t Writes::getTo() const
 {
-	return e4c::returned(m_to);
+    return e4c::returned(m_to);
 }
 
 void Writes::setTo(to_t to_)
 {
-	if (m_to == to_)
-		return;
-	m_to = to_;
+    if (m_to == to_)
+        return;
+    m_to = to_;
 }
 
 Writes::from_t Writes::getFrom() const
 {
-	return e4c::returned(m_from);
+    return e4c::returned(m_from);
 }
 
 void Writes::setFrom(from_t from_)
 {
-	if (m_from == from_)
-		return;
-	m_from = from_;
+    if (m_from == from_)
+        return;
+    m_from = from_;
 }
 
 
@@ -54,6 +54,6 @@ void Writes::setFrom(from_t from_)
 
 ecore::EClass_ptr Writes::eClassImpl() const
 {
-	return ActionPackage::_instance()->getWrites();
+    return ActionPackage::_instance()->getWrites();
 }
- 
+

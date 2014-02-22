@@ -9,14 +9,14 @@ using namespace kdm::platform;
 
 DataManager::DataManager()
 {
-	/*PROTECTED REGION ID(DataManager constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(DataManager constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 DataManager::~DataManager()
 {
-	/*PROTECTED REGION ID(DataManager destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(DataManager destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ DataManager::~DataManager()
 
 ecore::EClass_ptr DataManager::eClassImpl() const
 {
-	return PlatformPackage::_instance()->getDataManager();
+    return PlatformPackage::_instance()->getDataManager();
 }
- 
+

@@ -16,33 +16,33 @@ class Visibility :  public virtual ::SVG::Attribute
 {
 public:
 
-	typedef Visibility_ptr ptr_type;
-	
-	Visibility();
-	virtual ~Visibility();
+    typedef Visibility_ptr ptr_type;
 
-	typedef ::PrimitiveTypes::Boolean visible_t;
-	
-	void setVisible(visible_t _visible);
-	visible_t getVisible() const;
-	
+    Visibility();
+    virtual ~Visibility();
 
-	/*PROTECTED REGION ID(SVG::Visibility public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef ::PrimitiveTypes::Boolean visible_t;
+
+    void setVisible(visible_t _visible);
+    visible_t getVisible() const;
+
+
+    /*PROTECTED REGION ID(SVG::Visibility public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class SVGPackage;
+    friend class SVGPackage;
 
-	visible_t m_visible;
+    visible_t m_visible;
 
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(SVG::Visibility protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(SVG::Visibility protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // SVG

@@ -18,29 +18,29 @@ class RecordFile :  public virtual ::kdm::data::ColumnSet
 {
 public:
 
-	typedef RecordFile_ptr ptr_type;
-	
-	RecordFile();
-	virtual ~RecordFile();
+    typedef RecordFile_ptr ptr_type;
 
-	
-	
+    RecordFile();
+    virtual ~RecordFile();
 
-	/*PROTECTED REGION ID(kdm::data::RecordFile public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(kdm::data::RecordFile public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class DataPackage;
+    friend class DataPackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::data::RecordFile protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::data::RecordFile protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // data

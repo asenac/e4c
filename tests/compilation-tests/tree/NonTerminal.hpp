@@ -16,34 +16,34 @@ class NonTerminal :  public virtual ::tree::TreeNode
 {
 public:
 
-	typedef NonTerminal_ptr ptr_type;
-	
-	NonTerminal();
-	virtual ~NonTerminal();
+    typedef NonTerminal_ptr ptr_type;
 
-	typedef std::vector < tree::TreeNode_ptr > children_t;
-	
-	children_t getChildren() const;
-	void addChildren(tree::TreeNode_ptr children_);
-	void addAllChildren(const children_t& children_);
-	
+    NonTerminal();
+    virtual ~NonTerminal();
 
-	/*PROTECTED REGION ID(tree::NonTerminal public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef std::vector < tree::TreeNode_ptr > children_t;
+
+    children_t getChildren() const;
+    void addChildren(tree::TreeNode_ptr children_);
+    void addAllChildren(const children_t& children_);
+
+
+    /*PROTECTED REGION ID(tree::NonTerminal public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class TreePackage;
+    friend class TreePackage;
 
-	std::vector < std::unique_ptr < tree::TreeNode > > m_children;
+    std::vector < std::unique_ptr < tree::TreeNode > > m_children;
 
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(tree::NonTerminal protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(tree::NonTerminal protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // tree

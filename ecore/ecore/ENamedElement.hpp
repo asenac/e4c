@@ -15,33 +15,33 @@ class ENamedElement :  public virtual ::ecore::EModelElement
 {
 public:
 
-	typedef ENamedElement_ptr ptr_type;
-	
-	virtual ~ENamedElement();
+    typedef ENamedElement_ptr ptr_type;
 
-	typedef ::ecore::EString name_t;
-	
-	void setName(name_t _name);
-	name_t getName() const;
-	
+    virtual ~ENamedElement();
 
-	/*PROTECTED REGION ID(ecore::ENamedElement public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef ::ecore::EString name_t;
+
+    void setName(name_t _name);
+    name_t getName() const;
+
+
+    /*PROTECTED REGION ID(ecore::ENamedElement public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
-	ENamedElement();
+    ENamedElement();
 
-	friend class EcorePackage;
+    friend class EcorePackage;
 
-	name_t m_name;
+    name_t m_name;
 
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(ecore::ENamedElement protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(ecore::ENamedElement protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // ecore

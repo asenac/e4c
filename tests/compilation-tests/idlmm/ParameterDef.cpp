@@ -6,38 +6,38 @@ using namespace idlmm;
 /*PROTECTED REGION ID(idlmm::ParameterDef include) START*/
 /*PROTECTED REGION END*/
 
-ParameterDef::ParameterDef() : 
-	m_identifier(),
+ParameterDef::ParameterDef() :
+    m_identifier(),
     m_direction()
 {
-	/*PROTECTED REGION ID(ParameterDef constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(ParameterDef constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 ParameterDef::~ParameterDef()
 {
-	/*PROTECTED REGION ID(ParameterDef destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(ParameterDef destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 void ParameterDef::setIdentifier(identifier_t _identifier)
 {
-	m_identifier = _identifier;;
+    m_identifier = _identifier;;
 }
 
 ParameterDef::identifier_t ParameterDef::getIdentifier() const
 {
-	return m_identifier;
+    return m_identifier;
 }
 
 void ParameterDef::setDirection(direction_t _direction)
 {
-	m_direction = _direction;;
+    m_direction = _direction;;
 }
 
 ParameterDef::direction_t ParameterDef::getDirection() const
 {
-	return m_direction;
+    return m_direction;
 }
 
 
@@ -47,6 +47,6 @@ ParameterDef::direction_t ParameterDef::getDirection() const
 
 ecore::EClass_ptr ParameterDef::eClassImpl() const
 {
-	return IdlmmPackage::_instance()->getParameterDef();
+    return IdlmmPackage::_instance()->getParameterDef();
 }
- 
+

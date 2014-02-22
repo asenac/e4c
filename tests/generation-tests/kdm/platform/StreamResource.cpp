@@ -9,14 +9,14 @@ using namespace kdm::platform;
 
 StreamResource::StreamResource()
 {
-	/*PROTECTED REGION ID(StreamResource constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(StreamResource constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 StreamResource::~StreamResource()
 {
-	/*PROTECTED REGION ID(StreamResource destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(StreamResource destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ StreamResource::~StreamResource()
 
 ecore::EClass_ptr StreamResource::eClassImpl() const
 {
-	return PlatformPackage::_instance()->getStreamResource();
+    return PlatformPackage::_instance()->getStreamResource();
 }
- 
+

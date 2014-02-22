@@ -9,14 +9,14 @@ using namespace xtext;
 
 Alternatives::Alternatives()
 {
-	/*PROTECTED REGION ID(Alternatives constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(Alternatives constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 Alternatives::~Alternatives()
 {
-	/*PROTECTED REGION ID(Alternatives destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(Alternatives destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ Alternatives::~Alternatives()
 
 ecore::EClass_ptr Alternatives::eClassImpl() const
 {
-	return XtextPackage::_instance()->getAlternatives();
+    return XtextPackage::_instance()->getAlternatives();
 }
- 
+

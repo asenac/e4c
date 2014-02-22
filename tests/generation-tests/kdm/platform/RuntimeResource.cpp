@@ -9,14 +9,14 @@ using namespace kdm::platform;
 
 RuntimeResource::RuntimeResource()
 {
-	/*PROTECTED REGION ID(RuntimeResource constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(RuntimeResource constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 RuntimeResource::~RuntimeResource()
 {
-	/*PROTECTED REGION ID(RuntimeResource destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(RuntimeResource destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ RuntimeResource::~RuntimeResource()
 
 ecore::EClass_ptr RuntimeResource::eClassImpl() const
 {
-	return PlatformPackage::_instance()->getRuntimeResource();
+    return PlatformPackage::_instance()->getRuntimeResource();
 }
- 
+

@@ -9,14 +9,14 @@ using namespace kdm::code;
 
 SharedUnit::SharedUnit()
 {
-	/*PROTECTED REGION ID(SharedUnit constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(SharedUnit constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 SharedUnit::~SharedUnit()
 {
-	/*PROTECTED REGION ID(SharedUnit destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(SharedUnit destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ SharedUnit::~SharedUnit()
 
 ecore::EClass_ptr SharedUnit::eClassImpl() const
 {
-	return CodePackage::_instance()->getSharedUnit();
+    return CodePackage::_instance()->getSharedUnit();
 }
- 
+

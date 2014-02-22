@@ -9,14 +9,14 @@ using namespace xpand3::expression;
 
 RealLiteral::RealLiteral()
 {
-	/*PROTECTED REGION ID(RealLiteral constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(RealLiteral constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 RealLiteral::~RealLiteral()
 {
-	/*PROTECTED REGION ID(RealLiteral destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(RealLiteral destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ RealLiteral::~RealLiteral()
 
 ecore::EClass_ptr RealLiteral::eClassImpl() const
 {
-	return ExpressionPackage::_instance()->getRealLiteral();
+    return ExpressionPackage::_instance()->getRealLiteral();
 }
- 
+

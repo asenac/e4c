@@ -8,34 +8,34 @@ using namespace kdm::platform;
 /*PROTECTED REGION ID(kdm::platform::ResourceType include) START*/
 /*PROTECTED REGION END*/
 
-ResourceType::ResourceType() : 
-	m_platformElement()
+ResourceType::ResourceType() :
+    m_platformElement()
 {
-	/*PROTECTED REGION ID(ResourceType constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(ResourceType constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 ResourceType::~ResourceType()
 {
-	/*PROTECTED REGION ID(ResourceType destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(ResourceType destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 ResourceType::platformElement_t ResourceType::getPlatformElement() const
 {
-	return e4c::returned(m_platformElement);
+    return e4c::returned(m_platformElement);
 }
 
 
 void ResourceType::addPlatformElement(kdm::platform::AbstractPlatformElement_ptr platformElement_)
 {
-	m_platformElement.insert(std::unique_ptr < kdm::platform::AbstractPlatformElement >(platformElement_));
+    m_platformElement.insert(std::unique_ptr < kdm::platform::AbstractPlatformElement >(platformElement_));
 }
 
 void ResourceType::addAllPlatformElement(const platformElement_t& platformElement_)
 {
-	for (auto i = platformElement_.begin(); i != platformElement_.end(); i++)
-		addPlatformElement(*i);
+    for (auto i = platformElement_.begin(); i != platformElement_.end(); i++)
+        addPlatformElement(*i);
 }
 
 
@@ -45,6 +45,6 @@ void ResourceType::addAllPlatformElement(const platformElement_t& platformElemen
 
 ecore::EClass_ptr ResourceType::eClassImpl() const
 {
-	return PlatformPackage::_instance()->getResourceType();
+    return PlatformPackage::_instance()->getResourceType();
 }
- 
+

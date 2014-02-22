@@ -18,29 +18,29 @@ class TryUnit :  public virtual ::kdm::action::ExceptionUnit
 {
 public:
 
-	typedef TryUnit_ptr ptr_type;
-	
-	TryUnit();
-	virtual ~TryUnit();
+    typedef TryUnit_ptr ptr_type;
 
-	
-	
+    TryUnit();
+    virtual ~TryUnit();
 
-	/*PROTECTED REGION ID(kdm::action::TryUnit public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(kdm::action::TryUnit public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class ActionPackage;
+    friend class ActionPackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::action::TryUnit protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::action::TryUnit protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // action

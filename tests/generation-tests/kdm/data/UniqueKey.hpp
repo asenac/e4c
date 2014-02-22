@@ -18,29 +18,29 @@ class UniqueKey :  public virtual ::kdm::data::IndexElement
 {
 public:
 
-	typedef UniqueKey_ptr ptr_type;
-	
-	UniqueKey();
-	virtual ~UniqueKey();
+    typedef UniqueKey_ptr ptr_type;
 
-	
-	
+    UniqueKey();
+    virtual ~UniqueKey();
 
-	/*PROTECTED REGION ID(kdm::data::UniqueKey public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(kdm::data::UniqueKey public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class DataPackage;
+    friend class DataPackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::data::UniqueKey protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::data::UniqueKey protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // data

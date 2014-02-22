@@ -9,14 +9,14 @@ using namespace kdm::source;
 
 Configuration::Configuration()
 {
-	/*PROTECTED REGION ID(Configuration constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(Configuration constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 Configuration::~Configuration()
 {
-	/*PROTECTED REGION ID(Configuration destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(Configuration destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ Configuration::~Configuration()
 
 ecore::EClass_ptr Configuration::eClassImpl() const
 {
-	return SourcePackage::_instance()->getConfiguration();
+    return SourcePackage::_instance()->getConfiguration();
 }
- 
+

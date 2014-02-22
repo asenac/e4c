@@ -18,33 +18,33 @@ class ConceptualRole :  public virtual ::kdm::conceptual::AbstractConceptualElem
 {
 public:
 
-	typedef ConceptualRole_ptr ptr_type;
-	
-	ConceptualRole();
-	virtual ~ConceptualRole();
+    typedef ConceptualRole_ptr ptr_type;
 
-	typedef kdm::conceptual::AbstractConceptualElement_ptr conceptualElement_t;
-	
-	conceptualElement_t getConceptualElement() const;
-	void setConceptualElement(conceptualElement_t conceptualElement_);
-	
+    ConceptualRole();
+    virtual ~ConceptualRole();
 
-	/*PROTECTED REGION ID(kdm::conceptual::ConceptualRole public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef kdm::conceptual::AbstractConceptualElement_ptr conceptualElement_t;
+
+    conceptualElement_t getConceptualElement() const;
+    void setConceptualElement(conceptualElement_t conceptualElement_);
+
+
+    /*PROTECTED REGION ID(kdm::conceptual::ConceptualRole public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class ConceptualPackage;
+    friend class ConceptualPackage;
 
-	kdm::conceptual::AbstractConceptualElement_ptr m_conceptualElement;
+    kdm::conceptual::AbstractConceptualElement_ptr m_conceptualElement;
 
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::conceptual::ConceptualRole protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::conceptual::ConceptualRole protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // conceptual

@@ -9,14 +9,14 @@ using namespace kdm::source;
 
 AbstractInventoryRelationship::AbstractInventoryRelationship()
 {
-	/*PROTECTED REGION ID(AbstractInventoryRelationship constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(AbstractInventoryRelationship constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 AbstractInventoryRelationship::~AbstractInventoryRelationship()
 {
-	/*PROTECTED REGION ID(AbstractInventoryRelationship destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(AbstractInventoryRelationship destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ AbstractInventoryRelationship::~AbstractInventoryRelationship()
 
 ecore::EClass_ptr AbstractInventoryRelationship::eClassImpl() const
 {
-	return SourcePackage::_instance()->getAbstractInventoryRelationship();
+    return SourcePackage::_instance()->getAbstractInventoryRelationship();
 }
- 
+

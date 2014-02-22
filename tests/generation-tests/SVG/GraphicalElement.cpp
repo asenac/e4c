@@ -7,27 +7,27 @@ using namespace SVG;
 /*PROTECTED REGION ID(SVG::GraphicalElement include) START*/
 /*PROTECTED REGION END*/
 
-GraphicalElement::GraphicalElement() : 
-	m_stroke()
+GraphicalElement::GraphicalElement() :
+    m_stroke()
 {
-	/*PROTECTED REGION ID(GraphicalElement constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(GraphicalElement constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 GraphicalElement::~GraphicalElement()
 {
-	/*PROTECTED REGION ID(GraphicalElement destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(GraphicalElement destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 void GraphicalElement::setStroke(stroke_t _stroke)
 {
-	m_stroke = _stroke;;
+    m_stroke = _stroke;;
 }
 
 GraphicalElement::stroke_t GraphicalElement::getStroke() const
 {
-	return m_stroke;
+    return m_stroke;
 }
 
 
@@ -37,6 +37,6 @@ GraphicalElement::stroke_t GraphicalElement::getStroke() const
 
 ecore::EClass_ptr GraphicalElement::eClassImpl() const
 {
-	return SVGPackage::_instance()->getGraphicalElement();
+    return SVGPackage::_instance()->getGraphicalElement();
 }
- 
+

@@ -8,29 +8,29 @@ using namespace kdm::kdm;
 /*PROTECTED REGION ID(kdm::kdm::TaggedRef include) START*/
 /*PROTECTED REGION END*/
 
-TaggedRef::TaggedRef() : 
-	m_reference()
+TaggedRef::TaggedRef() :
+    m_reference()
 {
-	/*PROTECTED REGION ID(TaggedRef constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(TaggedRef constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 TaggedRef::~TaggedRef()
 {
-	/*PROTECTED REGION ID(TaggedRef destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(TaggedRef destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 TaggedRef::reference_t TaggedRef::getReference() const
 {
-	return e4c::returned(m_reference);
+    return e4c::returned(m_reference);
 }
 
 void TaggedRef::setReference(reference_t reference_)
 {
-	if (m_reference == reference_)
-		return;
-	m_reference = reference_;
+    if (m_reference == reference_)
+        return;
+    m_reference = reference_;
 }
 
 
@@ -40,6 +40,6 @@ void TaggedRef::setReference(reference_t reference_)
 
 ecore::EClass_ptr TaggedRef::eClassImpl() const
 {
-	return KdmPackage::_instance()->getTaggedRef();
+    return KdmPackage::_instance()->getTaggedRef();
 }
- 
+

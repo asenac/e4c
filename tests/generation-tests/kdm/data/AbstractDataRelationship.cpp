@@ -9,14 +9,14 @@ using namespace kdm::data;
 
 AbstractDataRelationship::AbstractDataRelationship()
 {
-	/*PROTECTED REGION ID(AbstractDataRelationship constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(AbstractDataRelationship constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 AbstractDataRelationship::~AbstractDataRelationship()
 {
-	/*PROTECTED REGION ID(AbstractDataRelationship destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(AbstractDataRelationship destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ AbstractDataRelationship::~AbstractDataRelationship()
 
 ecore::EClass_ptr AbstractDataRelationship::eClassImpl() const
 {
-	return DataPackage::_instance()->getAbstractDataRelationship();
+    return DataPackage::_instance()->getAbstractDataRelationship();
 }
- 
+

@@ -16,34 +16,34 @@ class CParameter :  public virtual ::C::CTypedElement
 {
 public:
 
-	typedef CParameter_ptr ptr_type;
-	
-	CParameter();
-	virtual ~CParameter();
+    typedef CParameter_ptr ptr_type;
 
-	typedef C::BehavioralFeature_ptr behavioralFeature_t;
-	
-	behavioralFeature_t getBehavioralFeature() const;
-	
+    CParameter();
+    virtual ~CParameter();
 
-	/*PROTECTED REGION ID(C::CParameter public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef C::BehavioralFeature_ptr behavioralFeature_t;
+
+    behavioralFeature_t getBehavioralFeature() const;
+
+
+    /*PROTECTED REGION ID(C::CParameter public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class CPackage;
+    friend class CPackage;
 
-	C::BehavioralFeature_ptr m_behavioralFeature;
+    C::BehavioralFeature_ptr m_behavioralFeature;
 
-	
-	friend class ::C::BehavioralFeature;
-	void setBehavioralFeature(behavioralFeature_t behavioralFeature_);
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(C::CParameter protected) START*/
-	/*PROTECTED REGION END*/
+
+    friend class ::C::BehavioralFeature;
+    void setBehavioralFeature(behavioralFeature_t behavioralFeature_);
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(C::CParameter protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // C

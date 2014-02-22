@@ -18,37 +18,37 @@ class Includes :  public virtual ::kdm::code::AbstractCodeRelationship
 {
 public:
 
-	typedef Includes_ptr ptr_type;
-	
-	Includes();
-	virtual ~Includes();
+    typedef Includes_ptr ptr_type;
 
-	typedef kdm::code::AbstractCodeElement_ptr to_t;
-	typedef kdm::code::PreprocessorDirective_ptr from_t;
-	
-	to_t getTo() const;
-	void setTo(to_t to_);
-	from_t getFrom() const;
-	void setFrom(from_t from_);
-	
+    Includes();
+    virtual ~Includes();
 
-	/*PROTECTED REGION ID(kdm::code::Includes public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef kdm::code::AbstractCodeElement_ptr to_t;
+    typedef kdm::code::PreprocessorDirective_ptr from_t;
+
+    to_t getTo() const;
+    void setTo(to_t to_);
+    from_t getFrom() const;
+    void setFrom(from_t from_);
+
+
+    /*PROTECTED REGION ID(kdm::code::Includes public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class CodePackage;
+    friend class CodePackage;
 
-	kdm::code::AbstractCodeElement_ptr m_to;
-	kdm::code::PreprocessorDirective_ptr m_from;
+    kdm::code::AbstractCodeElement_ptr m_to;
+    kdm::code::PreprocessorDirective_ptr m_from;
 
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::code::Includes protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::code::Includes protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // code

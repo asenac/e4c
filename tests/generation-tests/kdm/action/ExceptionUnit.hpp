@@ -18,29 +18,29 @@ class ExceptionUnit :  public virtual ::kdm::action::BlockUnit
 {
 public:
 
-	typedef ExceptionUnit_ptr ptr_type;
-	
-	ExceptionUnit();
-	virtual ~ExceptionUnit();
+    typedef ExceptionUnit_ptr ptr_type;
 
-	
-	
+    ExceptionUnit();
+    virtual ~ExceptionUnit();
 
-	/*PROTECTED REGION ID(kdm::action::ExceptionUnit public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(kdm::action::ExceptionUnit public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class ActionPackage;
+    friend class ActionPackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::action::ExceptionUnit protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::action::ExceptionUnit protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // action

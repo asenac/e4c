@@ -18,29 +18,29 @@ class Flow :  public virtual ::kdm::action::ControlFlow
 {
 public:
 
-	typedef Flow_ptr ptr_type;
-	
-	Flow();
-	virtual ~Flow();
+    typedef Flow_ptr ptr_type;
 
-	
-	
+    Flow();
+    virtual ~Flow();
 
-	/*PROTECTED REGION ID(kdm::action::Flow public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(kdm::action::Flow public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class ActionPackage;
+    friend class ActionPackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::action::Flow protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::action::Flow protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // action

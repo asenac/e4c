@@ -18,7 +18,7 @@ typedef CodeFactory * CodeFactory_ptr;
 // Data types
 enum class MethodKind : int
 {
-	operator,
+    operator,
     destructor,
     method,
     abstract,
@@ -28,7 +28,7 @@ enum class MethodKind : int
 };
 enum class ParameterKind : int
 {
-	byReference,
+    byReference,
     unknown,
     exception,
     return,
@@ -40,7 +40,7 @@ enum class ParameterKind : int
 };
 enum class ExportKind : int
 {
-	private,
+    private,
     unknown,
     public,
     protected,
@@ -48,7 +48,7 @@ enum class ExportKind : int
 };
 enum class StorableKind : int
 {
-	global,
+    global,
     external,
     static,
     unknown,
@@ -57,7 +57,7 @@ enum class StorableKind : int
 };
 enum class CallableKind : int
 {
-	external,
+    external,
     regular,
     stored,
     operator,
@@ -65,7 +65,7 @@ enum class CallableKind : int
 };
 enum class MacroKind : int
 {
-	external,
+    external,
     unknown,
     option,
     undefined,

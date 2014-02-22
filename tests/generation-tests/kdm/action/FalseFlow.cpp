@@ -9,14 +9,14 @@ using namespace kdm::action;
 
 FalseFlow::FalseFlow()
 {
-	/*PROTECTED REGION ID(FalseFlow constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(FalseFlow constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 FalseFlow::~FalseFlow()
 {
-	/*PROTECTED REGION ID(FalseFlow destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(FalseFlow destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ FalseFlow::~FalseFlow()
 
 ecore::EClass_ptr FalseFlow::eClassImpl() const
 {
-	return ActionPackage::_instance()->getFalseFlow();
+    return ActionPackage::_instance()->getFalseFlow();
 }
- 
+

@@ -9,14 +9,14 @@ using namespace kdm::platform;
 
 LockResource::LockResource()
 {
-	/*PROTECTED REGION ID(LockResource constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(LockResource constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 LockResource::~LockResource()
 {
-	/*PROTECTED REGION ID(LockResource destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(LockResource destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ LockResource::~LockResource()
 
 ecore::EClass_ptr LockResource::eClassImpl() const
 {
-	return PlatformPackage::_instance()->getLockResource();
+    return PlatformPackage::_instance()->getLockResource();
 }
- 
+

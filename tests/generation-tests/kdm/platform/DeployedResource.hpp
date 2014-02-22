@@ -18,34 +18,34 @@ class DeployedResource :  public virtual ::kdm::platform::AbstractPlatformElemen
 {
 public:
 
-	typedef DeployedResource_ptr ptr_type;
-	
-	DeployedResource();
-	virtual ~DeployedResource();
+    typedef DeployedResource_ptr ptr_type;
 
-	typedef std::set < kdm::platform::ResourceType_ptr > platformElement_t;
-	
-	platformElement_t getPlatformElement() const;
-	void addPlatformElement(kdm::platform::ResourceType_ptr platformElement_);
-	void addAllPlatformElement(const platformElement_t& platformElement_);
-	
+    DeployedResource();
+    virtual ~DeployedResource();
 
-	/*PROTECTED REGION ID(kdm::platform::DeployedResource public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef std::set < kdm::platform::ResourceType_ptr > platformElement_t;
+
+    platformElement_t getPlatformElement() const;
+    void addPlatformElement(kdm::platform::ResourceType_ptr platformElement_);
+    void addAllPlatformElement(const platformElement_t& platformElement_);
+
+
+    /*PROTECTED REGION ID(kdm::platform::DeployedResource public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class PlatformPackage;
+    friend class PlatformPackage;
 
-	std::set < std::unique_ptr < kdm::platform::ResourceType > > m_platformElement;
+    std::set < std::unique_ptr < kdm::platform::ResourceType > > m_platformElement;
 
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::platform::DeployedResource protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::platform::DeployedResource protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // platform

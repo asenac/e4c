@@ -18,29 +18,29 @@ class Subsystem :  public virtual ::kdm::structure::AbstractStructureElement
 {
 public:
 
-	typedef Subsystem_ptr ptr_type;
-	
-	Subsystem();
-	virtual ~Subsystem();
+    typedef Subsystem_ptr ptr_type;
 
-	
-	
+    Subsystem();
+    virtual ~Subsystem();
 
-	/*PROTECTED REGION ID(kdm::structure::Subsystem public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(kdm::structure::Subsystem public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class StructurePackage;
+    friend class StructurePackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::structure::Subsystem protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::structure::Subsystem protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // structure

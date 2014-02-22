@@ -9,42 +9,42 @@ using namespace kdm::action;
 /*PROTECTED REGION ID(kdm::action::Creates include) START*/
 /*PROTECTED REGION END*/
 
-Creates::Creates() : 
-	m_to(),
+Creates::Creates() :
+    m_to(),
     m_from()
 {
-	/*PROTECTED REGION ID(Creates constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(Creates constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 Creates::~Creates()
 {
-	/*PROTECTED REGION ID(Creates destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(Creates destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 Creates::to_t Creates::getTo() const
 {
-	return e4c::returned(m_to);
+    return e4c::returned(m_to);
 }
 
 void Creates::setTo(to_t to_)
 {
-	if (m_to == to_)
-		return;
-	m_to = to_;
+    if (m_to == to_)
+        return;
+    m_to = to_;
 }
 
 Creates::from_t Creates::getFrom() const
 {
-	return e4c::returned(m_from);
+    return e4c::returned(m_from);
 }
 
 void Creates::setFrom(from_t from_)
 {
-	if (m_from == from_)
-		return;
-	m_from = from_;
+    if (m_from == from_)
+        return;
+    m_from = from_;
 }
 
 
@@ -54,6 +54,6 @@ void Creates::setFrom(from_t from_)
 
 ecore::EClass_ptr Creates::eClassImpl() const
 {
-	return ActionPackage::_instance()->getCreates();
+    return ActionPackage::_instance()->getCreates();
 }
- 
+

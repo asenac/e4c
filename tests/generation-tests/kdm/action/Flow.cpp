@@ -9,14 +9,14 @@ using namespace kdm::action;
 
 Flow::Flow()
 {
-	/*PROTECTED REGION ID(Flow constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(Flow constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 Flow::~Flow()
 {
-	/*PROTECTED REGION ID(Flow destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(Flow destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ Flow::~Flow()
 
 ecore::EClass_ptr Flow::eClassImpl() const
 {
-	return ActionPackage::_instance()->getFlow();
+    return ActionPackage::_instance()->getFlow();
 }
- 
+

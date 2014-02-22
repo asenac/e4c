@@ -15,9 +15,9 @@ int main()
 
     auto references = e4c::select< EReference >(cl->getEAllStructuralFeatures());
 
-    for (auto i = references.begin(); i != references.end(); ++i)
+    for (auto i: references)
     {
-        std::cout << (*i)->getName() << std::endl;
+        std::cout << i->getName() << std::endl;
     }
 
     e4c::holder h(e4c::create_holder(references));
@@ -26,9 +26,12 @@ int main()
     e4c::holder h2(e4c::create_holder(1));
     std::cout << h2.is_valid() << std::endl;
 
-    std::function< e4c::holder(ecore::EObject_ptr) > get = [](ecore::EObject_ptr o) { 
-        return e4c::create_holder(dynamic_cast< ecore::EClass_ptr >(o)->getEAllStructuralFeatures());
-    };
+    std::function< e4c::holder(ecore::EObject_ptr) > get =
+        [](ecore::EObject_ptr o)
+        {
+            EClass_ptr cl = dynamic_cast< EClass_ptr >(o);
+            return e4c::create_holder(cl->getEAllStructuralFeatures());
+        };
 
     return 0;
 }

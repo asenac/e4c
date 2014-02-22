@@ -9,42 +9,42 @@ using namespace kdm::action;
 /*PROTECTED REGION ID(kdm::action::Throws include) START*/
 /*PROTECTED REGION END*/
 
-Throws::Throws() : 
-	m_to(),
+Throws::Throws() :
+    m_to(),
     m_from()
 {
-	/*PROTECTED REGION ID(Throws constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(Throws constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 Throws::~Throws()
 {
-	/*PROTECTED REGION ID(Throws destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(Throws destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 Throws::to_t Throws::getTo() const
 {
-	return e4c::returned(m_to);
+    return e4c::returned(m_to);
 }
 
 void Throws::setTo(to_t to_)
 {
-	if (m_to == to_)
-		return;
-	m_to = to_;
+    if (m_to == to_)
+        return;
+    m_to = to_;
 }
 
 Throws::from_t Throws::getFrom() const
 {
-	return e4c::returned(m_from);
+    return e4c::returned(m_from);
 }
 
 void Throws::setFrom(from_t from_)
 {
-	if (m_from == from_)
-		return;
-	m_from = from_;
+    if (m_from == from_)
+        return;
+    m_from = from_;
 }
 
 
@@ -54,6 +54,6 @@ void Throws::setFrom(from_t from_)
 
 ecore::EClass_ptr Throws::eClassImpl() const
 {
-	return ActionPackage::_instance()->getThrows();
+    return ActionPackage::_instance()->getThrows();
 }
- 
+

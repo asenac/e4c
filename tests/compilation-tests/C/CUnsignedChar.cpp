@@ -9,14 +9,14 @@ using namespace C;
 
 CUnsignedChar::CUnsignedChar()
 {
-	/*PROTECTED REGION ID(CUnsignedChar constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(CUnsignedChar constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 CUnsignedChar::~CUnsignedChar()
 {
-	/*PROTECTED REGION ID(CUnsignedChar destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(CUnsignedChar destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ CUnsignedChar::~CUnsignedChar()
 
 ecore::EClass_ptr CUnsignedChar::eClassImpl() const
 {
-	return CPackage::_instance()->getCUnsignedChar();
+    return CPackage::_instance()->getCUnsignedChar();
 }
- 
+

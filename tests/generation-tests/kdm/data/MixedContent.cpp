@@ -9,14 +9,14 @@ using namespace kdm::data;
 
 MixedContent::MixedContent()
 {
-	/*PROTECTED REGION ID(MixedContent constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(MixedContent constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 MixedContent::~MixedContent()
 {
-	/*PROTECTED REGION ID(MixedContent destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(MixedContent destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ MixedContent::~MixedContent()
 
 ecore::EClass_ptr MixedContent::eClassImpl() const
 {
-	return DataPackage::_instance()->getMixedContent();
+    return DataPackage::_instance()->getMixedContent();
 }
- 
+

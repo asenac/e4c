@@ -16,29 +16,29 @@ class DataType :  public virtual ::emof::Type
 {
 public:
 
-	typedef DataType_ptr ptr_type;
-	
-	DataType();
-	virtual ~DataType();
+    typedef DataType_ptr ptr_type;
 
-	
-	
+    DataType();
+    virtual ~DataType();
 
-	/*PROTECTED REGION ID(emof::DataType public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(emof::DataType public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class EmofPackage;
+    friend class EmofPackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(emof::DataType protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(emof::DataType protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // emof

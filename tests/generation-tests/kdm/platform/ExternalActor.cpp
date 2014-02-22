@@ -9,14 +9,14 @@ using namespace kdm::platform;
 
 ExternalActor::ExternalActor()
 {
-	/*PROTECTED REGION ID(ExternalActor constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(ExternalActor constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 ExternalActor::~ExternalActor()
 {
-	/*PROTECTED REGION ID(ExternalActor destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(ExternalActor destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ ExternalActor::~ExternalActor()
 
 ecore::EClass_ptr ExternalActor::eClassImpl() const
 {
-	return PlatformPackage::_instance()->getExternalActor();
+    return PlatformPackage::_instance()->getExternalActor();
 }
- 
+

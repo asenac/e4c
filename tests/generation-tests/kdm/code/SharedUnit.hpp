@@ -18,29 +18,29 @@ class SharedUnit :  public virtual ::kdm::code::CompilationUnit
 {
 public:
 
-	typedef SharedUnit_ptr ptr_type;
-	
-	SharedUnit();
-	virtual ~SharedUnit();
+    typedef SharedUnit_ptr ptr_type;
 
-	
-	
+    SharedUnit();
+    virtual ~SharedUnit();
 
-	/*PROTECTED REGION ID(kdm::code::SharedUnit public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(kdm::code::SharedUnit public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class CodePackage;
+    friend class CodePackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::code::SharedUnit protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::code::SharedUnit protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // code

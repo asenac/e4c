@@ -16,33 +16,33 @@ class Identifier :  public virtual ::xpand3::SyntaxElement
 {
 public:
 
-	typedef Identifier_ptr ptr_type;
-	
-	Identifier();
-	virtual ~Identifier();
+    typedef Identifier_ptr ptr_type;
 
-	typedef ::ecore::EString value_t;
-	
-	void setValue(value_t _value);
-	value_t getValue() const;
-	
+    Identifier();
+    virtual ~Identifier();
 
-	/*PROTECTED REGION ID(xpand3::Identifier public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef ::ecore::EString value_t;
+
+    void setValue(value_t _value);
+    value_t getValue() const;
+
+
+    /*PROTECTED REGION ID(xpand3::Identifier public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class Xpand3Package;
+    friend class Xpand3Package;
 
-	value_t m_value;
+    value_t m_value;
 
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(xpand3::Identifier protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(xpand3::Identifier protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // xpand3

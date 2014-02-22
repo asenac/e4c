@@ -18,29 +18,29 @@ class Datatype :  public virtual ::kdm::code::CodeItem
 {
 public:
 
-	typedef Datatype_ptr ptr_type;
-	
-	virtual ~Datatype();
+    typedef Datatype_ptr ptr_type;
 
-	
-	
+    virtual ~Datatype();
 
-	/*PROTECTED REGION ID(kdm::code::Datatype public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(kdm::code::Datatype public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
-	Datatype();
+    Datatype();
 
-	friend class CodePackage;
+    friend class CodePackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::code::Datatype protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::code::Datatype protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // code

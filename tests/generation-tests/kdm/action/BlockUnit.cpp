@@ -9,14 +9,14 @@ using namespace kdm::action;
 
 BlockUnit::BlockUnit()
 {
-	/*PROTECTED REGION ID(BlockUnit constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(BlockUnit constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 BlockUnit::~BlockUnit()
 {
-	/*PROTECTED REGION ID(BlockUnit destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(BlockUnit destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ BlockUnit::~BlockUnit()
 
 ecore::EClass_ptr BlockUnit::eClassImpl() const
 {
-	return ActionPackage::_instance()->getBlockUnit();
+    return ActionPackage::_instance()->getBlockUnit();
 }
- 
+

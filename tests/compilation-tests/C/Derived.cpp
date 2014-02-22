@@ -9,14 +9,14 @@ using namespace C;
 
 Derived::Derived()
 {
-	/*PROTECTED REGION ID(Derived constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(Derived constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 Derived::~Derived()
 {
-	/*PROTECTED REGION ID(Derived destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(Derived destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ Derived::~Derived()
 
 ecore::EClass_ptr Derived::eClassImpl() const
 {
-	return CPackage::_instance()->getDerived();
+    return CPackage::_instance()->getDerived();
 }
- 
+

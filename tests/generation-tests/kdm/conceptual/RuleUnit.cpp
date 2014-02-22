@@ -9,14 +9,14 @@ using namespace kdm::conceptual;
 
 RuleUnit::RuleUnit()
 {
-	/*PROTECTED REGION ID(RuleUnit constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(RuleUnit constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 RuleUnit::~RuleUnit()
 {
-	/*PROTECTED REGION ID(RuleUnit destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(RuleUnit destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ RuleUnit::~RuleUnit()
 
 ecore::EClass_ptr RuleUnit::eClassImpl() const
 {
-	return ConceptualPackage::_instance()->getRuleUnit();
+    return ConceptualPackage::_instance()->getRuleUnit();
 }
- 
+

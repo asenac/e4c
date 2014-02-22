@@ -18,34 +18,34 @@ class AbstractStatementWithBody :  public virtual ::xpand3::statement::AbstractS
 {
 public:
 
-	typedef AbstractStatementWithBody_ptr ptr_type;
-	
-	virtual ~AbstractStatementWithBody();
+    typedef AbstractStatementWithBody_ptr ptr_type;
 
-	typedef std::vector < xpand3::statement::AbstractStatement_ptr > body_t;
-	
-	body_t getBody() const;
-	void addBody(xpand3::statement::AbstractStatement_ptr body_);
-	void addAllBody(const body_t& body_);
-	
+    virtual ~AbstractStatementWithBody();
 
-	/*PROTECTED REGION ID(xpand3::statement::AbstractStatementWithBody public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef std::vector < xpand3::statement::AbstractStatement_ptr > body_t;
+
+    body_t getBody() const;
+    void addBody(xpand3::statement::AbstractStatement_ptr body_);
+    void addAllBody(const body_t& body_);
+
+
+    /*PROTECTED REGION ID(xpand3::statement::AbstractStatementWithBody public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
-	AbstractStatementWithBody();
+    AbstractStatementWithBody();
 
-	friend class StatementPackage;
+    friend class StatementPackage;
 
-	std::vector < std::unique_ptr < xpand3::statement::AbstractStatement > > m_body;
+    std::vector < std::unique_ptr < xpand3::statement::AbstractStatement > > m_body;
 
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(xpand3::statement::AbstractStatementWithBody protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(xpand3::statement::AbstractStatementWithBody protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // statement

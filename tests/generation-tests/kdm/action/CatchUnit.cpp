@@ -9,14 +9,14 @@ using namespace kdm::action;
 
 CatchUnit::CatchUnit()
 {
-	/*PROTECTED REGION ID(CatchUnit constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(CatchUnit constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 CatchUnit::~CatchUnit()
 {
-	/*PROTECTED REGION ID(CatchUnit destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(CatchUnit destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ CatchUnit::~CatchUnit()
 
 ecore::EClass_ptr CatchUnit::eClassImpl() const
 {
-	return ActionPackage::_instance()->getCatchUnit();
+    return ActionPackage::_instance()->getCatchUnit();
 }
- 
+

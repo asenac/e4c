@@ -9,14 +9,14 @@ using namespace xpand3::expression;
 
 BooleanLiteral::BooleanLiteral()
 {
-	/*PROTECTED REGION ID(BooleanLiteral constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(BooleanLiteral constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 BooleanLiteral::~BooleanLiteral()
 {
-	/*PROTECTED REGION ID(BooleanLiteral destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(BooleanLiteral destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ BooleanLiteral::~BooleanLiteral()
 
 ecore::EClass_ptr BooleanLiteral::eClassImpl() const
 {
-	return ExpressionPackage::_instance()->getBooleanLiteral();
+    return ExpressionPackage::_instance()->getBooleanLiteral();
 }
- 
+

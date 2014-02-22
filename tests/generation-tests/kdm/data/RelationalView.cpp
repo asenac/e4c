@@ -9,14 +9,14 @@ using namespace kdm::data;
 
 RelationalView::RelationalView()
 {
-	/*PROTECTED REGION ID(RelationalView constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(RelationalView constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 RelationalView::~RelationalView()
 {
-	/*PROTECTED REGION ID(RelationalView destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(RelationalView destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ RelationalView::~RelationalView()
 
 ecore::EClass_ptr RelationalView::eClassImpl() const
 {
-	return DataPackage::_instance()->getRelationalView();
+    return DataPackage::_instance()->getRelationalView();
 }
- 
+

@@ -16,29 +16,29 @@ class ReferencedMetamodel :  public virtual ::xtext::AbstractMetamodelDeclaratio
 {
 public:
 
-	typedef ReferencedMetamodel_ptr ptr_type;
-	
-	ReferencedMetamodel();
-	virtual ~ReferencedMetamodel();
+    typedef ReferencedMetamodel_ptr ptr_type;
 
-	
-	
+    ReferencedMetamodel();
+    virtual ~ReferencedMetamodel();
 
-	/*PROTECTED REGION ID(xtext::ReferencedMetamodel public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(xtext::ReferencedMetamodel public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class XtextPackage;
+    friend class XtextPackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(xtext::ReferencedMetamodel protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(xtext::ReferencedMetamodel protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // xtext

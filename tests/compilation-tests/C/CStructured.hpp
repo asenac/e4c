@@ -17,34 +17,34 @@ class CStructured :  public virtual ::C::CClassifier,  public virtual ::C::CStru
 {
 public:
 
-	typedef CStructured_ptr ptr_type;
-	
-	CStructured();
-	virtual ~CStructured();
+    typedef CStructured_ptr ptr_type;
 
-	typedef std::set < C::CStructureContents_ptr > contains_t;
-	
-	contains_t getContains() const;
-	void addContains(C::CStructureContents_ptr contains_);
-	void addAllContains(const contains_t& contains_);
-	
+    CStructured();
+    virtual ~CStructured();
 
-	/*PROTECTED REGION ID(C::CStructured public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef std::set < C::CStructureContents_ptr > contains_t;
+
+    contains_t getContains() const;
+    void addContains(C::CStructureContents_ptr contains_);
+    void addAllContains(const contains_t& contains_);
+
+
+    /*PROTECTED REGION ID(C::CStructured public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class CPackage;
+    friend class CPackage;
 
-	std::set < std::unique_ptr < C::CStructureContents > > m_contains;
+    std::set < std::unique_ptr < C::CStructureContents > > m_contains;
 
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(C::CStructured protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(C::CStructured protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // C

@@ -9,14 +9,14 @@ using namespace C;
 
 CLongDouble::CLongDouble()
 {
-	/*PROTECTED REGION ID(CLongDouble constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(CLongDouble constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 CLongDouble::~CLongDouble()
 {
-	/*PROTECTED REGION ID(CLongDouble destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(CLongDouble destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ CLongDouble::~CLongDouble()
 
 ecore::EClass_ptr CLongDouble::eClassImpl() const
 {
-	return CPackage::_instance()->getCLongDouble();
+    return CPackage::_instance()->getCLongDouble();
 }
- 
+

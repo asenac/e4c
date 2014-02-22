@@ -6,27 +6,27 @@ using namespace idlmm;
 /*PROTECTED REGION ID(idlmm::PrimitiveDef include) START*/
 /*PROTECTED REGION END*/
 
-PrimitiveDef::PrimitiveDef() : 
-	m_kind()
+PrimitiveDef::PrimitiveDef() :
+    m_kind()
 {
-	/*PROTECTED REGION ID(PrimitiveDef constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(PrimitiveDef constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 PrimitiveDef::~PrimitiveDef()
 {
-	/*PROTECTED REGION ID(PrimitiveDef destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(PrimitiveDef destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 void PrimitiveDef::setKind(kind_t _kind)
 {
-	m_kind = _kind;;
+    m_kind = _kind;;
 }
 
 PrimitiveDef::kind_t PrimitiveDef::getKind() const
 {
-	return m_kind;
+    return m_kind;
 }
 
 
@@ -36,6 +36,6 @@ PrimitiveDef::kind_t PrimitiveDef::getKind() const
 
 ecore::EClass_ptr PrimitiveDef::eClassImpl() const
 {
-	return IdlmmPackage::_instance()->getPrimitiveDef();
+    return IdlmmPackage::_instance()->getPrimitiveDef();
 }
- 
+

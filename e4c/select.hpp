@@ -4,7 +4,7 @@
 #include <set>
 #include <vector>
 
-namespace e4c 
+namespace e4c
 {
 
 template< typename T, typename Y >

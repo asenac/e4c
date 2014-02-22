@@ -9,14 +9,14 @@ using namespace kdm::conceptual;
 
 AbstractConceptualRelationship::AbstractConceptualRelationship()
 {
-	/*PROTECTED REGION ID(AbstractConceptualRelationship constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(AbstractConceptualRelationship constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 AbstractConceptualRelationship::~AbstractConceptualRelationship()
 {
-	/*PROTECTED REGION ID(AbstractConceptualRelationship destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(AbstractConceptualRelationship destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ AbstractConceptualRelationship::~AbstractConceptualRelationship()
 
 ecore::EClass_ptr AbstractConceptualRelationship::eClassImpl() const
 {
-	return ConceptualPackage::_instance()->getAbstractConceptualRelationship();
+    return ConceptualPackage::_instance()->getAbstractConceptualRelationship();
 }
- 
+

@@ -9,14 +9,14 @@ using namespace kdm::action;
 
 TrueFlow::TrueFlow()
 {
-	/*PROTECTED REGION ID(TrueFlow constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(TrueFlow constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 TrueFlow::~TrueFlow()
 {
-	/*PROTECTED REGION ID(TrueFlow destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(TrueFlow destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ TrueFlow::~TrueFlow()
 
 ecore::EClass_ptr TrueFlow::eClassImpl() const
 {
-	return ActionPackage::_instance()->getTrueFlow();
+    return ActionPackage::_instance()->getTrueFlow();
 }
- 
+

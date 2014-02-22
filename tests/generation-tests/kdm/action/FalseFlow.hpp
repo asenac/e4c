@@ -18,29 +18,29 @@ class FalseFlow :  public virtual ::kdm::action::ControlFlow
 {
 public:
 
-	typedef FalseFlow_ptr ptr_type;
-	
-	FalseFlow();
-	virtual ~FalseFlow();
+    typedef FalseFlow_ptr ptr_type;
 
-	
-	
+    FalseFlow();
+    virtual ~FalseFlow();
 
-	/*PROTECTED REGION ID(kdm::action::FalseFlow public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(kdm::action::FalseFlow public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class ActionPackage;
+    friend class ActionPackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::action::FalseFlow protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::action::FalseFlow protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // action

@@ -18,29 +18,29 @@ class StreamResource :  public virtual ::kdm::platform::ResourceType
 {
 public:
 
-	typedef StreamResource_ptr ptr_type;
-	
-	StreamResource();
-	virtual ~StreamResource();
+    typedef StreamResource_ptr ptr_type;
 
-	
-	
+    StreamResource();
+    virtual ~StreamResource();
 
-	/*PROTECTED REGION ID(kdm::platform::StreamResource public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(kdm::platform::StreamResource public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class PlatformPackage;
+    friend class PlatformPackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::platform::StreamResource protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::platform::StreamResource protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // platform

@@ -9,14 +9,14 @@ using namespace SVG;
 
 RelativeCoord::RelativeCoord()
 {
-	/*PROTECTED REGION ID(RelativeCoord constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(RelativeCoord constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 RelativeCoord::~RelativeCoord()
 {
-	/*PROTECTED REGION ID(RelativeCoord destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(RelativeCoord destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ RelativeCoord::~RelativeCoord()
 
 ecore::EClass_ptr RelativeCoord::eClassImpl() const
 {
-	return SVGPackage::_instance()->getRelativeCoord();
+    return SVGPackage::_instance()->getRelativeCoord();
 }
- 
+

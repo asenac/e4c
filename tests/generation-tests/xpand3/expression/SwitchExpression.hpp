@@ -18,44 +18,44 @@ class SwitchExpression :  public virtual ::xpand3::expression::AbstractExpressio
 {
 public:
 
-	typedef SwitchExpression_ptr ptr_type;
-	
-	SwitchExpression();
-	virtual ~SwitchExpression();
+    typedef SwitchExpression_ptr ptr_type;
 
-	typedef xpand3::expression::AbstractExpression_ptr switchExpr_t;
-	typedef xpand3::expression::AbstractExpression_ptr defaultExpr_t;
-	typedef std::vector < xpand3::expression::Case_ptr > cases_t;
-	
-	switchExpr_t getSwitchExpr() const;
-	void setSwitchExpr(switchExpr_t switchExpr_);
-	switchExpr_t releaseSwitchExpr();
-	defaultExpr_t getDefaultExpr() const;
-	void setDefaultExpr(defaultExpr_t defaultExpr_);
-	defaultExpr_t releaseDefaultExpr();
-	cases_t getCases() const;
-	void addCases(xpand3::expression::Case_ptr cases_);
-	void addAllCases(const cases_t& cases_);
-	
+    SwitchExpression();
+    virtual ~SwitchExpression();
 
-	/*PROTECTED REGION ID(xpand3::expression::SwitchExpression public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef xpand3::expression::AbstractExpression_ptr switchExpr_t;
+    typedef xpand3::expression::AbstractExpression_ptr defaultExpr_t;
+    typedef std::vector < xpand3::expression::Case_ptr > cases_t;
+
+    switchExpr_t getSwitchExpr() const;
+    void setSwitchExpr(switchExpr_t switchExpr_);
+    switchExpr_t releaseSwitchExpr();
+    defaultExpr_t getDefaultExpr() const;
+    void setDefaultExpr(defaultExpr_t defaultExpr_);
+    defaultExpr_t releaseDefaultExpr();
+    cases_t getCases() const;
+    void addCases(xpand3::expression::Case_ptr cases_);
+    void addAllCases(const cases_t& cases_);
+
+
+    /*PROTECTED REGION ID(xpand3::expression::SwitchExpression public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class ExpressionPackage;
+    friend class ExpressionPackage;
 
-	std::unique_ptr < xpand3::expression::AbstractExpression > m_switchExpr;
-	std::unique_ptr < xpand3::expression::AbstractExpression > m_defaultExpr;
-	std::vector < std::unique_ptr < xpand3::expression::Case > > m_cases;
+    std::unique_ptr < xpand3::expression::AbstractExpression > m_switchExpr;
+    std::unique_ptr < xpand3::expression::AbstractExpression > m_defaultExpr;
+    std::vector < std::unique_ptr < xpand3::expression::Case > > m_cases;
 
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(xpand3::expression::SwitchExpression protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(xpand3::expression::SwitchExpression protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // expression

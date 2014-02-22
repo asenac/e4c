@@ -9,14 +9,14 @@ using namespace kdm::ui;
 
 UIDisplay::UIDisplay()
 {
-	/*PROTECTED REGION ID(UIDisplay constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(UIDisplay constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 UIDisplay::~UIDisplay()
 {
-	/*PROTECTED REGION ID(UIDisplay destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(UIDisplay destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ UIDisplay::~UIDisplay()
 
 ecore::EClass_ptr UIDisplay::eClassImpl() const
 {
-	return UiPackage::_instance()->getUIDisplay();
+    return UiPackage::_instance()->getUIDisplay();
 }
- 
+

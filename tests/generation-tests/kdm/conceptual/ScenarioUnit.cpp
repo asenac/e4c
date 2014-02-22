@@ -9,14 +9,14 @@ using namespace kdm::conceptual;
 
 ScenarioUnit::ScenarioUnit()
 {
-	/*PROTECTED REGION ID(ScenarioUnit constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(ScenarioUnit constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 ScenarioUnit::~ScenarioUnit()
 {
-	/*PROTECTED REGION ID(ScenarioUnit destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(ScenarioUnit destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ ScenarioUnit::~ScenarioUnit()
 
 ecore::EClass_ptr ScenarioUnit::eClassImpl() const
 {
-	return ConceptualPackage::_instance()->getScenarioUnit();
+    return ConceptualPackage::_instance()->getScenarioUnit();
 }
- 
+

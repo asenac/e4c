@@ -8,14 +8,14 @@ using namespace idlmm;
 
 TypedefDef::TypedefDef()
 {
-	/*PROTECTED REGION ID(TypedefDef constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(TypedefDef constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 TypedefDef::~TypedefDef()
 {
-	/*PROTECTED REGION ID(TypedefDef destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(TypedefDef destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -25,6 +25,6 @@ TypedefDef::~TypedefDef()
 
 ecore::EClass_ptr TypedefDef::eClassImpl() const
 {
-	return IdlmmPackage::_instance()->getTypedefDef();
+    return IdlmmPackage::_instance()->getTypedefDef();
 }
- 
+

@@ -18,29 +18,29 @@ class Package :  public virtual ::kdm::code::Module
 {
 public:
 
-	typedef Package_ptr ptr_type;
-	
-	Package();
-	virtual ~Package();
+    typedef Package_ptr ptr_type;
 
-	
-	
+    Package();
+    virtual ~Package();
 
-	/*PROTECTED REGION ID(kdm::code::Package public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(kdm::code::Package public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class CodePackage;
+    friend class CodePackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::code::Package protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::code::Package protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // code

@@ -9,14 +9,14 @@ using namespace xpand3::expression;
 
 NullLiteral::NullLiteral()
 {
-	/*PROTECTED REGION ID(NullLiteral constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(NullLiteral constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 NullLiteral::~NullLiteral()
 {
-	/*PROTECTED REGION ID(NullLiteral destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(NullLiteral destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ NullLiteral::~NullLiteral()
 
 ecore::EClass_ptr NullLiteral::eClassImpl() const
 {
-	return ExpressionPackage::_instance()->getNullLiteral();
+    return ExpressionPackage::_instance()->getNullLiteral();
 }
- 
+

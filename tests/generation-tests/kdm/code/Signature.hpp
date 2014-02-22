@@ -18,34 +18,34 @@ class Signature :  public virtual ::kdm::code::Datatype
 {
 public:
 
-	typedef Signature_ptr ptr_type;
-	
-	Signature();
-	virtual ~Signature();
+    typedef Signature_ptr ptr_type;
 
-	typedef std::vector < kdm::code::ParameterUnit_ptr > parameterUnit_t;
-	
-	parameterUnit_t getParameterUnit() const;
-	void addParameterUnit(kdm::code::ParameterUnit_ptr parameterUnit_);
-	void addAllParameterUnit(const parameterUnit_t& parameterUnit_);
-	
+    Signature();
+    virtual ~Signature();
 
-	/*PROTECTED REGION ID(kdm::code::Signature public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef std::vector < kdm::code::ParameterUnit_ptr > parameterUnit_t;
+
+    parameterUnit_t getParameterUnit() const;
+    void addParameterUnit(kdm::code::ParameterUnit_ptr parameterUnit_);
+    void addAllParameterUnit(const parameterUnit_t& parameterUnit_);
+
+
+    /*PROTECTED REGION ID(kdm::code::Signature public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class CodePackage;
+    friend class CodePackage;
 
-	std::vector < std::unique_ptr < kdm::code::ParameterUnit > > m_parameterUnit;
+    std::vector < std::unique_ptr < kdm::code::ParameterUnit > > m_parameterUnit;
 
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::code::Signature protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::code::Signature protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // code

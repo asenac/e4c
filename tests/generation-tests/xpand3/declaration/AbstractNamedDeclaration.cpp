@@ -8,33 +8,33 @@ using namespace xpand3::declaration;
 /*PROTECTED REGION ID(xpand3::declaration::AbstractNamedDeclaration include) START*/
 /*PROTECTED REGION END*/
 
-AbstractNamedDeclaration::AbstractNamedDeclaration() : 
-	m_name()
+AbstractNamedDeclaration::AbstractNamedDeclaration() :
+    m_name()
 {
-	/*PROTECTED REGION ID(AbstractNamedDeclaration constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(AbstractNamedDeclaration constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 AbstractNamedDeclaration::~AbstractNamedDeclaration()
 {
-	/*PROTECTED REGION ID(AbstractNamedDeclaration destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(AbstractNamedDeclaration destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 AbstractNamedDeclaration::name_t AbstractNamedDeclaration::getName() const
 {
-	return e4c::returned(m_name);
+    return e4c::returned(m_name);
 }
 
 
 void AbstractNamedDeclaration::setName(name_t name_)
 {
-	m_name.reset(name_);
+    m_name.reset(name_);
 }
 
 AbstractNamedDeclaration::name_t AbstractNamedDeclaration::releaseName()
 {
-	return m_name.release();
+    return m_name.release();
 }
 
 
@@ -44,6 +44,6 @@ AbstractNamedDeclaration::name_t AbstractNamedDeclaration::releaseName()
 
 ecore::EClass_ptr AbstractNamedDeclaration::eClassImpl() const
 {
-	return DeclarationPackage::_instance()->getAbstractNamedDeclaration();
+    return DeclarationPackage::_instance()->getAbstractNamedDeclaration();
 }
- 
+

@@ -9,14 +9,14 @@ using namespace xpand3::expression;
 
 StringLiteral::StringLiteral()
 {
-	/*PROTECTED REGION ID(StringLiteral constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(StringLiteral constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 StringLiteral::~StringLiteral()
 {
-	/*PROTECTED REGION ID(StringLiteral destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(StringLiteral destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ StringLiteral::~StringLiteral()
 
 ecore::EClass_ptr StringLiteral::eClassImpl() const
 {
-	return ExpressionPackage::_instance()->getStringLiteral();
+    return ExpressionPackage::_instance()->getStringLiteral();
 }
- 
+

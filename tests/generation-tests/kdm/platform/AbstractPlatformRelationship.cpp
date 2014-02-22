@@ -9,14 +9,14 @@ using namespace kdm::platform;
 
 AbstractPlatformRelationship::AbstractPlatformRelationship()
 {
-	/*PROTECTED REGION ID(AbstractPlatformRelationship constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(AbstractPlatformRelationship constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 AbstractPlatformRelationship::~AbstractPlatformRelationship()
 {
-	/*PROTECTED REGION ID(AbstractPlatformRelationship destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(AbstractPlatformRelationship destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ AbstractPlatformRelationship::~AbstractPlatformRelationship()
 
 ecore::EClass_ptr AbstractPlatformRelationship::eClassImpl() const
 {
-	return PlatformPackage::_instance()->getAbstractPlatformRelationship();
+    return PlatformPackage::_instance()->getAbstractPlatformRelationship();
 }
- 
+

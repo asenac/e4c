@@ -9,14 +9,14 @@ using namespace CST;
 
 Tree::Tree()
 {
-	/*PROTECTED REGION ID(Tree constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(Tree constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 Tree::~Tree()
 {
-	/*PROTECTED REGION ID(Tree destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(Tree destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ Tree::~Tree()
 
 ecore::EClass_ptr Tree::eClassImpl() const
 {
-	return CSTPackage::_instance()->getTree();
+    return CSTPackage::_instance()->getTree();
 }
- 
+

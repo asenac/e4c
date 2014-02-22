@@ -9,14 +9,14 @@ using namespace kdm::structure;
 
 StructureElement::StructureElement()
 {
-	/*PROTECTED REGION ID(StructureElement constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(StructureElement constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 StructureElement::~StructureElement()
 {
-	/*PROTECTED REGION ID(StructureElement destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(StructureElement destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ StructureElement::~StructureElement()
 
 ecore::EClass_ptr StructureElement::eClassImpl() const
 {
-	return StructurePackage::_instance()->getStructureElement();
+    return StructurePackage::_instance()->getStructureElement();
 }
- 
+

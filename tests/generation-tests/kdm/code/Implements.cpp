@@ -8,42 +8,42 @@ using namespace kdm::code;
 /*PROTECTED REGION ID(kdm::code::Implements include) START*/
 /*PROTECTED REGION END*/
 
-Implements::Implements() : 
-	m_to(),
+Implements::Implements() :
+    m_to(),
     m_from()
 {
-	/*PROTECTED REGION ID(Implements constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(Implements constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 Implements::~Implements()
 {
-	/*PROTECTED REGION ID(Implements destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(Implements destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 Implements::to_t Implements::getTo() const
 {
-	return e4c::returned(m_to);
+    return e4c::returned(m_to);
 }
 
 void Implements::setTo(to_t to_)
 {
-	if (m_to == to_)
-		return;
-	m_to = to_;
+    if (m_to == to_)
+        return;
+    m_to = to_;
 }
 
 Implements::from_t Implements::getFrom() const
 {
-	return e4c::returned(m_from);
+    return e4c::returned(m_from);
 }
 
 void Implements::setFrom(from_t from_)
 {
-	if (m_from == from_)
-		return;
-	m_from = from_;
+    if (m_from == from_)
+        return;
+    m_from = from_;
 }
 
 
@@ -53,6 +53,6 @@ void Implements::setFrom(from_t from_)
 
 ecore::EClass_ptr Implements::eClassImpl() const
 {
-	return CodePackage::_instance()->getImplements();
+    return CodePackage::_instance()->getImplements();
 }
- 
+

@@ -14,44 +14,44 @@ class EObject
 {
 public:
 
-	typedef EObject_ptr ptr_type;
-	
-	EObject();
-	virtual ~EObject();
+    typedef EObject_ptr ptr_type;
 
-	
-	
-	ecore::EClass_ptr eClass();
-	ecore::EBoolean eIsProxy();
-	ecore::EResource eResource();
-	ecore::EObject_ptr eContainer();
-	ecore::EStructuralFeature_ptr eContainingFeature();
-	ecore::EReference_ptr eContainmentFeature();
-	ecore::EEList eContents();
-	ecore::ETreeIterator eAllContents();
-	ecore::EEList eCrossReferences();
-	ecore::EJavaObject eGet(ecore::EStructuralFeature_ptr feature);
-	ecore::EJavaObject eGet(ecore::EStructuralFeature_ptr feature, ecore::EBoolean resolve);
-	void eSet(ecore::EStructuralFeature_ptr feature, ecore::EJavaObject newValue);
-	ecore::EBoolean eIsSet(ecore::EStructuralFeature_ptr feature);
-	void eUnset(ecore::EStructuralFeature_ptr feature);
-	ecore::EJavaObject eInvoke(ecore::EOperation_ptr operation, ecore::EEList arguments);
+    EObject();
+    virtual ~EObject();
 
-	/*PROTECTED REGION ID(ecore::EObject public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+    ecore::EClass_ptr eClass();
+    ecore::EBoolean eIsProxy();
+    ecore::EResource eResource();
+    ecore::EObject_ptr eContainer();
+    ecore::EStructuralFeature_ptr eContainingFeature();
+    ecore::EReference_ptr eContainmentFeature();
+    ecore::EEList eContents();
+    ecore::ETreeIterator eAllContents();
+    ecore::EEList eCrossReferences();
+    ecore::EJavaObject eGet(ecore::EStructuralFeature_ptr feature);
+    ecore::EJavaObject eGet(ecore::EStructuralFeature_ptr feature, ecore::EBoolean resolve);
+    void eSet(ecore::EStructuralFeature_ptr feature, ecore::EJavaObject newValue);
+    ecore::EBoolean eIsSet(ecore::EStructuralFeature_ptr feature);
+    void eUnset(ecore::EStructuralFeature_ptr feature);
+    ecore::EJavaObject eInvoke(ecore::EOperation_ptr operation, ecore::EEList arguments);
+
+    /*PROTECTED REGION ID(ecore::EObject public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class EcorePackage;
+    friend class EcorePackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(ecore::EObject protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(ecore::EObject protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // ecore

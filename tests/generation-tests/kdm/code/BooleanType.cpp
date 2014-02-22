@@ -9,14 +9,14 @@ using namespace kdm::code;
 
 BooleanType::BooleanType()
 {
-	/*PROTECTED REGION ID(BooleanType constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(BooleanType constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 BooleanType::~BooleanType()
 {
-	/*PROTECTED REGION ID(BooleanType destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(BooleanType destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ BooleanType::~BooleanType()
 
 ecore::EClass_ptr BooleanType::eClassImpl() const
 {
-	return CodePackage::_instance()->getBooleanType();
+    return CodePackage::_instance()->getBooleanType();
 }
- 
+

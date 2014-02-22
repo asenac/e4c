@@ -18,29 +18,29 @@ class DataResource :  public virtual ::kdm::data::AbstractDataElement
 {
 public:
 
-	typedef DataResource_ptr ptr_type;
-	
-	DataResource();
-	virtual ~DataResource();
+    typedef DataResource_ptr ptr_type;
 
-	
-	
+    DataResource();
+    virtual ~DataResource();
 
-	/*PROTECTED REGION ID(kdm::data::DataResource public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(kdm::data::DataResource public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class DataPackage;
+    friend class DataPackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::data::DataResource protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::data::DataResource protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // data

@@ -18,29 +18,29 @@ class InventoryElement :  public virtual ::kdm::source::AbstractInventoryElement
 {
 public:
 
-	typedef InventoryElement_ptr ptr_type;
-	
-	InventoryElement();
-	virtual ~InventoryElement();
+    typedef InventoryElement_ptr ptr_type;
 
-	
-	
+    InventoryElement();
+    virtual ~InventoryElement();
 
-	/*PROTECTED REGION ID(kdm::source::InventoryElement public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(kdm::source::InventoryElement public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class SourcePackage;
+    friend class SourcePackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::source::InventoryElement protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::source::InventoryElement protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // source

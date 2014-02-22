@@ -8,42 +8,42 @@ using namespace kdm::code;
 /*PROTECTED REGION ID(kdm::code::VisibleIn include) START*/
 /*PROTECTED REGION END*/
 
-VisibleIn::VisibleIn() : 
-	m_to(),
+VisibleIn::VisibleIn() :
+    m_to(),
     m_from()
 {
-	/*PROTECTED REGION ID(VisibleIn constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(VisibleIn constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 VisibleIn::~VisibleIn()
 {
-	/*PROTECTED REGION ID(VisibleIn destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(VisibleIn destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 VisibleIn::to_t VisibleIn::getTo() const
 {
-	return e4c::returned(m_to);
+    return e4c::returned(m_to);
 }
 
 void VisibleIn::setTo(to_t to_)
 {
-	if (m_to == to_)
-		return;
-	m_to = to_;
+    if (m_to == to_)
+        return;
+    m_to = to_;
 }
 
 VisibleIn::from_t VisibleIn::getFrom() const
 {
-	return e4c::returned(m_from);
+    return e4c::returned(m_from);
 }
 
 void VisibleIn::setFrom(from_t from_)
 {
-	if (m_from == from_)
-		return;
-	m_from = from_;
+    if (m_from == from_)
+        return;
+    m_from = from_;
 }
 
 
@@ -53,6 +53,6 @@ void VisibleIn::setFrom(from_t from_)
 
 ecore::EClass_ptr VisibleIn::eClassImpl() const
 {
-	return CodePackage::_instance()->getVisibleIn();
+    return CodePackage::_instance()->getVisibleIn();
 }
- 
+

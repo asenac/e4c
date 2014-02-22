@@ -18,37 +18,37 @@ class ReadsUI :  public virtual ::kdm::action::AbstractActionRelationship
 {
 public:
 
-	typedef ReadsUI_ptr ptr_type;
-	
-	ReadsUI();
-	virtual ~ReadsUI();
+    typedef ReadsUI_ptr ptr_type;
 
-	typedef kdm::ui::UIResource_ptr to_t;
-	typedef kdm::action::ActionElement_ptr from_t;
-	
-	to_t getTo() const;
-	void setTo(to_t to_);
-	from_t getFrom() const;
-	void setFrom(from_t from_);
-	
+    ReadsUI();
+    virtual ~ReadsUI();
 
-	/*PROTECTED REGION ID(kdm::ui::ReadsUI public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef kdm::ui::UIResource_ptr to_t;
+    typedef kdm::action::ActionElement_ptr from_t;
+
+    to_t getTo() const;
+    void setTo(to_t to_);
+    from_t getFrom() const;
+    void setFrom(from_t from_);
+
+
+    /*PROTECTED REGION ID(kdm::ui::ReadsUI public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class UiPackage;
+    friend class UiPackage;
 
-	kdm::ui::UIResource_ptr m_to;
-	kdm::action::ActionElement_ptr m_from;
+    kdm::ui::UIResource_ptr m_to;
+    kdm::action::ActionElement_ptr m_from;
 
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::ui::ReadsUI protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::ui::ReadsUI protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // ui

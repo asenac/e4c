@@ -16,29 +16,29 @@ class CWChar :  public virtual ::C::CChar
 {
 public:
 
-	typedef CWChar_ptr ptr_type;
-	
-	CWChar();
-	virtual ~CWChar();
+    typedef CWChar_ptr ptr_type;
 
-	
-	
+    CWChar();
+    virtual ~CWChar();
 
-	/*PROTECTED REGION ID(C::CWChar public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(C::CWChar public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class CPackage;
+    friend class CPackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(C::CWChar protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(C::CWChar protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // C

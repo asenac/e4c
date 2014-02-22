@@ -15,33 +15,33 @@ class ModuleDef :  public virtual ::idlmm::Container
 {
 public:
 
-	typedef ModuleDef_ptr ptr_type;
-	
-	ModuleDef();
-	virtual ~ModuleDef();
+    typedef ModuleDef_ptr ptr_type;
 
-	typedef ::ecore::EString prefix_t;
-	
-	void setPrefix(prefix_t _prefix);
-	prefix_t getPrefix() const;
-	
+    ModuleDef();
+    virtual ~ModuleDef();
 
-	/*PROTECTED REGION ID(idlmm::ModuleDef public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef ::ecore::EString prefix_t;
+
+    void setPrefix(prefix_t _prefix);
+    prefix_t getPrefix() const;
+
+
+    /*PROTECTED REGION ID(idlmm::ModuleDef public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class IdlmmPackage;
+    friend class IdlmmPackage;
 
-	prefix_t m_prefix;
+    prefix_t m_prefix;
 
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(idlmm::ModuleDef protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(idlmm::ModuleDef protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // idlmm

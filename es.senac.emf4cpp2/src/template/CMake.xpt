@@ -13,13 +13,13 @@ include(«e.getCMakeFile()»)
 include_directories(${CMAKE_CURRENT_SOURCE_DIR})
 
 add_library(e4c-«getFQN("-")» SHARED
-	«getFQN("/")»/«getPackage()».cpp
-	«getFQN("/")»/«getFactory()».cpp
+    «getFQN("/")»/«getPackage()».cpp
+    «getFQN("/")»/«getFactory()».cpp
 «FOREACH getClasses() AS e-»
-	«e.getFilePrefix()».cpp
+    «e.getFilePrefix()».cpp
 «ENDFOREACH-»
-	)
-	
+    )
+
 target_link_libraries(e4c-«getFQN("-")» e4c)
 
 «ENDFILE»

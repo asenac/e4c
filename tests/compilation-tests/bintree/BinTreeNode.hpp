@@ -16,47 +16,47 @@ class BinTreeNode : ::ecore::EObject
 {
 public:
 
-	typedef BinTreeNode_ptr ptr_type;
-	
-	BinTreeNode();
-	virtual ~BinTreeNode();
+    typedef BinTreeNode_ptr ptr_type;
 
-	typedef bintree::BinTreeNode_ptr parent_t;
-	typedef bintree::BinTreeNode_ptr left_t;
-	typedef bintree::BinTreeNode_ptr right_t;
-	typedef ::ecore::EString data_t;
-	
-	parent_t getParent() const;
-	void setParent(parent_t parent_);
-	left_t getLeft() const;
-	void setLeft(left_t left_);
-	left_t releaseLeft();
-	right_t getRight() const;
-	void setRight(right_t right_);
-	right_t releaseRight();
-	void setData(data_t _data);
-	data_t getData() const;
-	
+    BinTreeNode();
+    virtual ~BinTreeNode();
 
-	/*PROTECTED REGION ID(bintree::BinTreeNode public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef bintree::BinTreeNode_ptr parent_t;
+    typedef bintree::BinTreeNode_ptr left_t;
+    typedef bintree::BinTreeNode_ptr right_t;
+    typedef ::ecore::EString data_t;
+
+    parent_t getParent() const;
+    void setParent(parent_t parent_);
+    left_t getLeft() const;
+    void setLeft(left_t left_);
+    left_t releaseLeft();
+    right_t getRight() const;
+    void setRight(right_t right_);
+    right_t releaseRight();
+    void setData(data_t _data);
+    data_t getData() const;
+
+
+    /*PROTECTED REGION ID(bintree::BinTreeNode public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class BintreePackage;
+    friend class BintreePackage;
 
-	bintree::BinTreeNode_ptr m_parent;
-	std::unique_ptr < bintree::BinTreeNode > m_left;
-	std::unique_ptr < bintree::BinTreeNode > m_right;
-	data_t m_data;
+    bintree::BinTreeNode_ptr m_parent;
+    std::unique_ptr < bintree::BinTreeNode > m_left;
+    std::unique_ptr < bintree::BinTreeNode > m_right;
+    data_t m_data;
 
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(bintree::BinTreeNode protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(bintree::BinTreeNode protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // bintree

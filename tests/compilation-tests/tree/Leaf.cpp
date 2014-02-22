@@ -9,14 +9,14 @@ using namespace tree;
 
 Leaf::Leaf()
 {
-	/*PROTECTED REGION ID(Leaf constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(Leaf constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 Leaf::~Leaf()
 {
-	/*PROTECTED REGION ID(Leaf destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(Leaf destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ Leaf::~Leaf()
 
 ecore::EClass_ptr Leaf::eClassImpl() const
 {
-	return TreePackage::_instance()->getLeaf();
+    return TreePackage::_instance()->getLeaf();
 }
- 
+

@@ -9,14 +9,14 @@ using namespace SVG;
 
 Transform::Transform()
 {
-	/*PROTECTED REGION ID(Transform constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(Transform constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 Transform::~Transform()
 {
-	/*PROTECTED REGION ID(Transform destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(Transform destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ Transform::~Transform()
 
 ecore::EClass_ptr Transform::eClassImpl() const
 {
-	return SVGPackage::_instance()->getTransform();
+    return SVGPackage::_instance()->getTransform();
 }
- 
+

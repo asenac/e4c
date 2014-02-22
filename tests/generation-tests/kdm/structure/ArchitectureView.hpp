@@ -18,29 +18,29 @@ class ArchitectureView :  public virtual ::kdm::structure::AbstractStructureElem
 {
 public:
 
-	typedef ArchitectureView_ptr ptr_type;
-	
-	ArchitectureView();
-	virtual ~ArchitectureView();
+    typedef ArchitectureView_ptr ptr_type;
 
-	
-	
+    ArchitectureView();
+    virtual ~ArchitectureView();
 
-	/*PROTECTED REGION ID(kdm::structure::ArchitectureView public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(kdm::structure::ArchitectureView public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class StructurePackage;
+    friend class StructurePackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::structure::ArchitectureView protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::structure::ArchitectureView protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // structure

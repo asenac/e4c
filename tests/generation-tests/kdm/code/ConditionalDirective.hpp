@@ -18,29 +18,29 @@ class ConditionalDirective :  public virtual ::kdm::code::PreprocessorDirective
 {
 public:
 
-	typedef ConditionalDirective_ptr ptr_type;
-	
-	ConditionalDirective();
-	virtual ~ConditionalDirective();
+    typedef ConditionalDirective_ptr ptr_type;
 
-	
-	
+    ConditionalDirective();
+    virtual ~ConditionalDirective();
 
-	/*PROTECTED REGION ID(kdm::code::ConditionalDirective public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(kdm::code::ConditionalDirective public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class CodePackage;
+    friend class CodePackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::code::ConditionalDirective protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::code::ConditionalDirective protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // code

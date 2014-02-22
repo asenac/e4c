@@ -9,14 +9,14 @@ using namespace kdm::code;
 
 OrdinalType::OrdinalType()
 {
-	/*PROTECTED REGION ID(OrdinalType constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(OrdinalType constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 OrdinalType::~OrdinalType()
 {
-	/*PROTECTED REGION ID(OrdinalType destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(OrdinalType destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ OrdinalType::~OrdinalType()
 
 ecore::EClass_ptr OrdinalType::eClassImpl() const
 {
-	return CodePackage::_instance()->getOrdinalType();
+    return CodePackage::_instance()->getOrdinalType();
 }
- 
+

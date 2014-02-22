@@ -7,27 +7,27 @@ using namespace Make;
 /*PROTECTED REGION ID(Make::Macro include) START*/
 /*PROTECTED REGION END*/
 
-Macro::Macro() : 
-	m_value()
+Macro::Macro() :
+    m_value()
 {
-	/*PROTECTED REGION ID(Macro constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(Macro constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 Macro::~Macro()
 {
-	/*PROTECTED REGION ID(Macro destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(Macro destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 void Macro::setValue(value_t _value)
 {
-	m_value = _value;;
+    m_value = _value;;
 }
 
 Macro::value_t Macro::getValue() const
 {
-	return m_value;
+    return m_value;
 }
 
 
@@ -37,6 +37,6 @@ Macro::value_t Macro::getValue() const
 
 ecore::EClass_ptr Macro::eClassImpl() const
 {
-	return MakePackage::_instance()->getMacro();
+    return MakePackage::_instance()->getMacro();
 }
- 
+

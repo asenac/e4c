@@ -18,29 +18,29 @@ class Component :  public virtual ::kdm::structure::AbstractStructureElement
 {
 public:
 
-	typedef Component_ptr ptr_type;
-	
-	Component();
-	virtual ~Component();
+    typedef Component_ptr ptr_type;
 
-	
-	
+    Component();
+    virtual ~Component();
 
-	/*PROTECTED REGION ID(kdm::structure::Component public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(kdm::structure::Component public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class StructurePackage;
+    friend class StructurePackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::structure::Component protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::structure::Component protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // structure

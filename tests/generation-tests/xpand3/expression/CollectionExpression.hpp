@@ -18,39 +18,39 @@ class CollectionExpression :  public virtual ::xpand3::expression::FeatureCall
 {
 public:
 
-	typedef CollectionExpression_ptr ptr_type;
-	
-	CollectionExpression();
-	virtual ~CollectionExpression();
+    typedef CollectionExpression_ptr ptr_type;
 
-	typedef xpand3::expression::AbstractExpression_ptr closure_t;
-	typedef xpand3::Identifier_ptr eleName_t;
-	
-	closure_t getClosure() const;
-	void setClosure(closure_t closure_);
-	closure_t releaseClosure();
-	eleName_t getEleName() const;
-	void setEleName(eleName_t eleName_);
-	eleName_t releaseEleName();
-	
+    CollectionExpression();
+    virtual ~CollectionExpression();
 
-	/*PROTECTED REGION ID(xpand3::expression::CollectionExpression public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef xpand3::expression::AbstractExpression_ptr closure_t;
+    typedef xpand3::Identifier_ptr eleName_t;
+
+    closure_t getClosure() const;
+    void setClosure(closure_t closure_);
+    closure_t releaseClosure();
+    eleName_t getEleName() const;
+    void setEleName(eleName_t eleName_);
+    eleName_t releaseEleName();
+
+
+    /*PROTECTED REGION ID(xpand3::expression::CollectionExpression public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class ExpressionPackage;
+    friend class ExpressionPackage;
 
-	std::unique_ptr < xpand3::expression::AbstractExpression > m_closure;
-	std::unique_ptr < xpand3::Identifier > m_eleName;
+    std::unique_ptr < xpand3::expression::AbstractExpression > m_closure;
+    std::unique_ptr < xpand3::Identifier > m_eleName;
 
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(xpand3::expression::CollectionExpression protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(xpand3::expression::CollectionExpression protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // expression

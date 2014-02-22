@@ -9,14 +9,14 @@ using namespace kdm::code;
 
 CompilationUnit::CompilationUnit()
 {
-	/*PROTECTED REGION ID(CompilationUnit constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(CompilationUnit constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 CompilationUnit::~CompilationUnit()
 {
-	/*PROTECTED REGION ID(CompilationUnit destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(CompilationUnit destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ CompilationUnit::~CompilationUnit()
 
 ecore::EClass_ptr CompilationUnit::eClassImpl() const
 {
-	return CodePackage::_instance()->getCompilationUnit();
+    return CodePackage::_instance()->getCompilationUnit();
 }
- 
+

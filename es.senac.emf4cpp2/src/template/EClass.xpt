@@ -27,45 +27,45 @@ class «getName()»«IF !ESuperTypes.isEmpty» : «FOREACH ESuperTypes AS e SEPARATOR
 {
 public:
 
-	typedef «name»_ptr ptr_type;
-	
+    typedef «name»_ptr ptr_type;
+
 «IF !abstract-»
-	«getName()»();
+    «getName()»();
 «ENDIF-»
-	virtual ~«getName()»();
+    virtual ~«getName()»();
 
-	«EXPAND generateTypedef FOREACH EStructuralFeatures-»
-	
-	«EXPAND generateAccessors FOREACH EStructuralFeatures-»
-	
-	«FOREACH EOperations AS o-»
-	«o.getSignature(false)»;
-	«ENDFOREACH-»
+    «EXPAND generateTypedef FOREACH EStructuralFeatures-»
 
-	«PROTECT CSTART '/*' CEND '*/' ID getFQN() + " public" DISABLE»
-	«ENDPROTECT»
-		
+    «EXPAND generateAccessors FOREACH EStructuralFeatures-»
+
+    «FOREACH EOperations AS o-»
+    «o.getSignature(false)»;
+    «ENDFOREACH-»
+
+    «PROTECT CSTART '/*' CEND '*/' ID getFQN() + " public" DISABLE»
+    «ENDPROTECT»
+
 protected:
 «IF abstract-»
-	«getName()»();
+    «getName()»();
 «ENDIF-»
 
-	friend class «EPackage.getPackage()»;
+    friend class «EPackage.getPackage()»;
 
-	«EXPAND generateDecl FOREACH EStructuralFeatures»
-	
-	«FOREACH EReferences.select(e|e.container) AS e-»
-		«IF e.EType != this-»
-	friend class ::«e.EType.getFQN()»;
-		«ENDIF-»
-	void set«e.getNameUpper()»(«e.getName()»_t «e.getName()»_);
-	«ENDFOREACH-»
-	
-	«REM»EObject stuff«ENDREM»
-	virtual «eClass().eClass().getFQN()»_ptr eClassImpl() const;
-	
-	«PROTECT CSTART '/*' CEND '*/' ID getFQN() + " protected" DISABLE»
-	«ENDPROTECT»
+    «EXPAND generateDecl FOREACH EStructuralFeatures»
+
+    «FOREACH EReferences.select(e|e.container) AS e-»
+        «IF e.EType != this-»
+    friend class ::«e.EType.getFQN()»;
+        «ENDIF-»
+    void set«e.getNameUpper()»(«e.getName()»_t «e.getName()»_);
+    «ENDFOREACH-»
+
+    «REM»EObject stuff«ENDREM»
+    virtual «eClass().eClass().getFQN()»_ptr eClassImpl() const;
+
+    «PROTECT CSTART '/*' CEND '*/' ID getFQN() + " protected" DISABLE»
+    «ENDPROTECT»
 };
 
 «EXPAND template::EPackage::namespacesEnd FOR EPackage»
@@ -78,51 +78,51 @@ protected:
 «DEFINE generateTypedef FOR EStructuralFeature»«ENDDEFINE»
 
 «DEFINE generateTypedef FOR EAttribute-»
-	typedef ::«EType.getFQN()» «getName()»_t;
+    typedef ::«EType.getFQN()» «getName()»_t;
 «ENDDEFINE»
 
 «DEFINE generateTypedef FOR EReference-»
-	typedef «getNoContaimentType()» «getName()»_t;
+    typedef «getNoContaimentType()» «getName()»_t;
 «ENDDEFINE»
 
 «DEFINE generateDecl FOR EStructuralFeature-»
-	«getName()»_t m_«getName()»;
+    «getName()»_t m_«getName()»;
 «ENDDEFINE»
 
 «DEFINE generateDecl FOR EReference-»
-	«getReferenceType()» m_«getName()»;
+    «getReferenceType()» m_«getName()»;
 «ENDDEFINE»
 
 «REM»Accessors«ENDREM»
 «DEFINE generateAccessors FOR EStructuralFeature»«ENDDEFINE»
 
 «DEFINE generateAccessors FOR EAttribute-»
-	void set«getNameUpper()»(«getName()»_t _«getName()»);
-	«getName()»_t get«getNameUpper()»() const;
+    void set«getNameUpper()»(«getName()»_t _«getName()»);
+    «getName()»_t get«getNameUpper()»() const;
 «ENDDEFINE»
 
 «DEFINE generateAccessors FOR EReference-»
-	«getName()»_t get«getNameUpper()»() const;
-	«IF upperBound != 1-»
-	void add«getNameUpper()»(«getNoContaimentPtr()» «getName()»_);
-	void addAll«getNameUpper()»(const «getName()»_t& «getName()»_);
-	void remove«getNameUpper()»(«getNoContaimentPtr()» «getName()»_);
-	void clear«getNameUpper()»();
-	«ENDIF-»
-	«IF containment-»
-		«IF upperBound == 1-»
-	void set«getNameUpper()»(«getName()»_t «getName()»_);
-	«getName()»_t release«getNameUpper()»();
-		«ELSEIF ordered-»
-		«ELSE-»
-		«ENDIF-»
-	«ELSEIF !container-»
-		«IF upperBound == 1-»
-	void set«getNameUpper()»(«getName()»_t «getName()»_);
-		«ELSEIF ordered-»
-		«ELSE-»
-		«ENDIF-»
-	«ENDIF-»
+    «getName()»_t get«getNameUpper()»() const;
+    «IF upperBound != 1-»
+    void add«getNameUpper()»(«getNoContaimentPtr()» «getName()»_);
+    void addAll«getNameUpper()»(const «getName()»_t& «getName()»_);
+    void remove«getNameUpper()»(«getNoContaimentPtr()» «getName()»_);
+    void clear«getNameUpper()»();
+    «ENDIF-»
+    «IF containment-»
+        «IF upperBound == 1-»
+    void set«getNameUpper()»(«getName()»_t «getName()»_);
+    «getName()»_t release«getNameUpper()»();
+        «ELSEIF ordered-»
+        «ELSE-»
+        «ENDIF-»
+    «ELSEIF !container-»
+        «IF upperBound == 1-»
+    void set«getNameUpper()»(«getName()»_t «getName()»_);
+        «ELSEIF ordered-»
+        «ELSE-»
+        «ENDIF-»
+    «ENDIF-»
 «ENDDEFINE»
 
 «DEFINE generateAccessorsImpl FOR EStructuralFeature»«ENDDEFINE»
@@ -130,12 +130,12 @@ protected:
 «DEFINE generateAccessorsImpl FOR EAttribute-»
 void «EContainingClass.getName()»::set«getNameUpper()»(«getName()»_t _«getName()»)
 {
-	m_«getName()» = _«getName()»;;
+    m_«getName()» = _«getName()»;;
 }
 
 «EContainingClass.getName()»::«getName()»_t «EContainingClass.getName()»::get«getNameUpper()»() const
 {
-	return m_«getName()»;
+    return m_«getName()»;
 }
 
 «ENDDEFINE»
@@ -143,129 +143,129 @@ void «EContainingClass.getName()»::set«getNameUpper()»(«getName()»_t _«getName()
 «DEFINE generateAccessorsImpl FOR EReference-»
 «EContainingClass.getName()»::«getName()»_t «EContainingClass.getName()»::get«getNameUpper()»() const
 {
-	return e4c::returned(m_«getName()»);
+    return e4c::returned(m_«getName()»);
 }
 «IF containment-»
-	«IF upperBound == 1-»«REM»Required upperBound == 1«ENDREM»
+    «IF upperBound == 1-»«REM»Required upperBound == 1«ENDREM»
 void «EContainingClass.getName()»::set«getNameUpper()»(«getName()»_t «getName()»_)
 {
-	m_«getName()».reset(«getName()»_);
-		«IF EOpposite != null-»
-	m_«getName()»->set«EOpposite.getNameUpper()»(this);
-		«ENDIF-»
+    m_«getName()».reset(«getName()»_);
+        «IF EOpposite != null-»
+    m_«getName()»->set«EOpposite.getNameUpper()»(this);
+        «ENDIF-»
 }
 
 «EContainingClass.getName()»::«getName()»_t «EContainingClass.getName()»::release«getNameUpper()»()
 {
-		«IF EOpposite != null-»
-	m_«getName()»->set«EOpposite.getNameUpper()»(0);
-		«ENDIF-»
-	return m_«getName()».release();
+        «IF EOpposite != null-»
+    m_«getName()»->set«EOpposite.getNameUpper()»(0);
+        «ENDIF-»
+    return m_«getName()».release();
 }
-	«ELSE-»«REM»Required EOpposite.upperBound == 1«ENDREM»
+    «ELSE-»«REM»Required EOpposite.upperBound == 1«ENDREM»
 void «EContainingClass.getName()»::add«getNameUpper()»(«getNoContaimentPtr()» «getName()»_)
 {
-	assert(«getName()»_);
-		«IF EOpposite != null-»
-	«getName()»_->set«EOpposite.getNameUpper()»(this);
-		«ENDIF-»
-	m_«getName()».«getInsertMethod()»(«getContaimentPtr()»(«getName()»_));
+    assert(«getName()»_);
+        «IF EOpposite != null-»
+    «getName()»_->set«EOpposite.getNameUpper()»(this);
+        «ENDIF-»
+    m_«getName()».«getInsertMethod()»(«getContaimentPtr()»(«getName()»_));
 }
 
 void «EContainingClass.getName()»::addAll«getNameUpper()»(const «getName()»_t& «getName()»_)
 {
-	for (auto i = «getName()»_.begin(); i != «getName()»_.end(); i++)
-		add«getNameUpper()»(*i);
+    for (auto i = «getName()»_.begin(); i != «getName()»_.end(); i++)
+        add«getNameUpper()»(*i);
 }
 
 void «EContainingClass.getName()»::remove«getNameUpper()»(«getNoContaimentPtr()» «getName()»_)
 {
-	assert(«getName()»_);
-	e4c::remove(m_«getName()», «getName()»_);
+    assert(«getName()»_);
+    e4c::remove(m_«getName()», «getName()»_);
 }
 
 void «EContainingClass.getName()»::clear«getNameUpper()»()
 {
-	m_«getName()».clear();
+    m_«getName()».clear();
 }
-	«ENDIF-»
+    «ENDIF-»
 «ELSEIF container-»«REM»Protected method«ENDREM-»
 void «EContainingClass.getName()»::set«getNameUpper()»(«getName()»_t «getName()»_)
 {
-	m_«getName()» = «getName()»_;
+    m_«getName()» = «getName()»_;
 }
 «ELSE-»
-	«IF upperBound == 1-»
+    «IF upperBound == 1-»
 void «EContainingClass.getName()»::set«getNameUpper()»(«getName()»_t «getName()»_)
 {
-	if (m_«getName()» == «getName()»_)
-		return;
-		«IF EOpposite != null && EOpposite.upperBound == 1-»
-	if (m_«getName()»)
-		m_«getName()»->set«EOpposite.getNameUpper()»(0);
-		«ELSEIF EOpposite != null-»
-	if (m_«getName()»)
-		m_«getName()»->remove«EOpposite.getNameUpper()»(this);
-		«ENDIF-»
-	m_«getName()» = «getName()»_;
-		«IF EOpposite != null && EOpposite.upperBound == 1-»
-	if (m_«getName()»)
-		m_«getName()»->set«EOpposite.getNameUpper()»(this);
-		«ELSEIF EOpposite != null-»
-	if (m_«getName()»)
-		m_«getName()»->add«EOpposite.getNameUpper()»(this);
-		«ENDIF-»
+    if (m_«getName()» == «getName()»_)
+        return;
+        «IF EOpposite != null && EOpposite.upperBound == 1-»
+    if (m_«getName()»)
+        m_«getName()»->set«EOpposite.getNameUpper()»(0);
+        «ELSEIF EOpposite != null-»
+    if (m_«getName()»)
+        m_«getName()»->remove«EOpposite.getNameUpper()»(this);
+        «ENDIF-»
+    m_«getName()» = «getName()»_;
+        «IF EOpposite != null && EOpposite.upperBound == 1-»
+    if (m_«getName()»)
+        m_«getName()»->set«EOpposite.getNameUpper()»(this);
+        «ELSEIF EOpposite != null-»
+    if (m_«getName()»)
+        m_«getName()»->add«EOpposite.getNameUpper()»(this);
+        «ENDIF-»
 }
-	«ELSE-»
+    «ELSE-»
 void «EContainingClass.getName()»::add«getNameUpper()»(«getNoContaimentPtr()» «getName()»_)
 {
-	assert(«getName()»_);
-	if (e4c::contains(m_«getName()», «getName()»_))
-		return;
-	m_«getName()».«getInsertMethod()»(«getName()»_);
-		«IF EOpposite != null && EOpposite.upperBound == 1-»
-	«getName()»_->set«EOpposite.getNameUpper()»(this);
-		«ELSEIF EOpposite != null-»
-	«getName()»_->add«EOpposite.getNameUpper()»(this);
-		«ENDIF-»
+    assert(«getName()»_);
+    if (e4c::contains(m_«getName()», «getName()»_))
+        return;
+    m_«getName()».«getInsertMethod()»(«getName()»_);
+        «IF EOpposite != null && EOpposite.upperBound == 1-»
+    «getName()»_->set«EOpposite.getNameUpper()»(this);
+        «ELSEIF EOpposite != null-»
+    «getName()»_->add«EOpposite.getNameUpper()»(this);
+        «ENDIF-»
 }
 
 void «EContainingClass.getName()»::addAll«getNameUpper()»(const «getName()»_t& «getName()»_)
 {
-	for (auto i = «getName()»_.begin(); i != «getName()»_.end(); i++)
-		add«getNameUpper()»(*i);
+    for (auto i = «getName()»_.begin(); i != «getName()»_.end(); i++)
+        add«getNameUpper()»(*i);
 }
 
 void «EContainingClass.getName()»::remove«getNameUpper()»(«getNoContaimentPtr()» «getName()»_)
 {
-	assert(«getName()»_);
-		«IF EOpposite != null && EOpposite.upperBound == 1-»
-	if (e4c::remove(m_«getName()», «getName()»_))
-		«getName()»_->set«EOpposite.getNameUpper()»(0);
-		«ELSEIF EOpposite != null-»
-	if (e4c::remove(m_«getName()», «getName()»_))
-		«getName()»_->remove«EOpposite.getNameUpper()»(this);
-		«ELSE-»
-	e4c::remove(m_«getName()», «getName()»_);
-		«ENDIF-»
+    assert(«getName()»_);
+        «IF EOpposite != null && EOpposite.upperBound == 1-»
+    if (e4c::remove(m_«getName()», «getName()»_))
+        «getName()»_->set«EOpposite.getNameUpper()»(0);
+        «ELSEIF EOpposite != null-»
+    if (e4c::remove(m_«getName()», «getName()»_))
+        «getName()»_->remove«EOpposite.getNameUpper()»(this);
+        «ELSE-»
+    e4c::remove(m_«getName()», «getName()»_);
+        «ENDIF-»
 }
 
 void «EContainingClass.getName()»::clear«getNameUpper()»()
 {
-	«IF EOpposite != null-»
-	const «getName()»_t old(std::move(m_«getName()»));
-	for (auto i = old.begin(); i != old.end(); ++i) {
-		«IF EOpposite.upperBound == 1-»
-		(*i)->set«EOpposite.getNameUpper()»(0);
-		«ELSE-»
-		(*i)->remove«EOpposite.getNameUpper()»(this);
-		«ENDIF-»	
-	}
-	«ELSE-»
-	m_«getName()».clear();
-	«ENDIF-»
+    «IF EOpposite != null-»
+    const «getName()»_t old(std::move(m_«getName()»));
+    for (auto i = old.begin(); i != old.end(); ++i) {
+        «IF EOpposite.upperBound == 1-»
+        (*i)->set«EOpposite.getNameUpper()»(0);
+        «ELSE-»
+        (*i)->remove«EOpposite.getNameUpper()»(this);
+        «ENDIF-»
+    }
+    «ELSE-»
+    m_«getName()».clear();
+    «ENDIF-»
 }
-	«ENDIF-»
+    «ENDIF-»
 «ENDIF-»
 
 «ENDDEFINE»
@@ -285,17 +285,17 @@ using namespace «EPackage.getFQN()»;
 «PROTECT CSTART '/*' CEND '*/' ID getFQN() + " include" DISABLE»
 «ENDPROTECT»
 
-«getName()»::«getName()»()«IF !EStructuralFeatures.isEmpty-» : 
-	«FOREACH EStructuralFeatures AS e SEPARATOR ",\n    "»m_«e.getName()»()«ENDFOREACH»«ENDIF»
+«getName()»::«getName()»()«IF !EStructuralFeatures.isEmpty-» :
+    «FOREACH EStructuralFeatures AS e SEPARATOR ",\n    "»m_«e.getName()»()«ENDFOREACH»«ENDIF»
 {
-	«PROTECT CSTART '/*' CEND '*/' ID getName() + " constructor" DISABLE»
-	«ENDPROTECT»
+    «PROTECT CSTART '/*' CEND '*/' ID getName() + " constructor" DISABLE»
+    «ENDPROTECT»
 }
 
 «getName()»::~«getName()»()
 {
-	«PROTECT CSTART '/*' CEND '*/' ID getName() + " destructor" DISABLE»
-	«ENDPROTECT»
+    «PROTECT CSTART '/*' CEND '*/' ID getName() + " destructor" DISABLE»
+    «ENDPROTECT»
 }
 
 «EXPAND generateAccessorsImpl FOREACH EStructuralFeatures-»
@@ -303,11 +303,11 @@ using namespace «EPackage.getFQN()»;
 «FOREACH EOperations AS o-»
 «o.getSignature(true)»
 {
-	«PROTECT CSTART '/*' CEND '*/' ID o.getProtectedRegion() DISABLE»
-	«IF o.EType != null-»
-	return «o.getType()»();
-	«ENDIF-»
-	«ENDPROTECT»
+    «PROTECT CSTART '/*' CEND '*/' ID o.getProtectedRegion() DISABLE»
+    «IF o.EType != null-»
+    return «o.getType()»();
+    «ENDIF-»
+    «ENDPROTECT»
 }
 
 «ENDFOREACH-»
@@ -317,8 +317,8 @@ using namespace «EPackage.getFQN()»;
 
 «eClass().eClass().getFQN()»_ptr «getName()»::eClassImpl() const
 {
-	return «EPackage.getPackage()»::_instance()->get«getName()»();
+    return «EPackage.getPackage()»::_instance()->get«getName()»();
 }
- 
+
 «ENDFILE»
 «ENDDEFINE»

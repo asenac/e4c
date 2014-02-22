@@ -9,14 +9,14 @@ using namespace SVG;
 
 AbsoluteCoord::AbsoluteCoord()
 {
-	/*PROTECTED REGION ID(AbsoluteCoord constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(AbsoluteCoord constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 AbsoluteCoord::~AbsoluteCoord()
 {
-	/*PROTECTED REGION ID(AbsoluteCoord destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(AbsoluteCoord destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ AbsoluteCoord::~AbsoluteCoord()
 
 ecore::EClass_ptr AbsoluteCoord::eClassImpl() const
 {
-	return SVGPackage::_instance()->getAbsoluteCoord();
+    return SVGPackage::_instance()->getAbsoluteCoord();
 }
- 
+

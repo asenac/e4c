@@ -15,33 +15,33 @@ class NamedElement :  public virtual ::idlmm::ModelElement
 {
 public:
 
-	typedef NamedElement_ptr ptr_type;
-	
-	virtual ~NamedElement();
+    typedef NamedElement_ptr ptr_type;
 
-	typedef ::ecore::EString identifier_t;
-	
-	void setIdentifier(identifier_t _identifier);
-	identifier_t getIdentifier() const;
-	
+    virtual ~NamedElement();
 
-	/*PROTECTED REGION ID(idlmm::NamedElement public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef ::ecore::EString identifier_t;
+
+    void setIdentifier(identifier_t _identifier);
+    identifier_t getIdentifier() const;
+
+
+    /*PROTECTED REGION ID(idlmm::NamedElement public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
-	NamedElement();
+    NamedElement();
 
-	friend class IdlmmPackage;
+    friend class IdlmmPackage;
 
-	identifier_t m_identifier;
+    identifier_t m_identifier;
 
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(idlmm::NamedElement protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(idlmm::NamedElement protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // idlmm

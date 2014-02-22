@@ -9,14 +9,14 @@ using namespace kdm::data;
 
 ContentReference::ContentReference()
 {
-	/*PROTECTED REGION ID(ContentReference constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(ContentReference constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 ContentReference::~ContentReference()
 {
-	/*PROTECTED REGION ID(ContentReference destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(ContentReference destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ ContentReference::~ContentReference()
 
 ecore::EClass_ptr ContentReference::eClassImpl() const
 {
-	return DataPackage::_instance()->getContentReference();
+    return DataPackage::_instance()->getContentReference();
 }
- 
+

@@ -9,14 +9,14 @@ using namespace kdm::data;
 
 AllContent::AllContent()
 {
-	/*PROTECTED REGION ID(AllContent constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(AllContent constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 AllContent::~AllContent()
 {
-	/*PROTECTED REGION ID(AllContent destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(AllContent destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ AllContent::~AllContent()
 
 ecore::EClass_ptr AllContent::eClassImpl() const
 {
-	return DataPackage::_instance()->getAllContent();
+    return DataPackage::_instance()->getAllContent();
 }
- 
+

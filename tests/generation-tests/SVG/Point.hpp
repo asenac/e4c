@@ -16,29 +16,29 @@ class Point :  public virtual ::SVG::Shape
 {
 public:
 
-	typedef Point_ptr ptr_type;
-	
-	Point();
-	virtual ~Point();
+    typedef Point_ptr ptr_type;
 
-	
-	
+    Point();
+    virtual ~Point();
 
-	/*PROTECTED REGION ID(SVG::Point public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(SVG::Point public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class SVGPackage;
+    friend class SVGPackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(SVG::Point protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(SVG::Point protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // SVG

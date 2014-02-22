@@ -9,14 +9,14 @@ using namespace xtext;
 
 UntilToken::UntilToken()
 {
-	/*PROTECTED REGION ID(UntilToken constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(UntilToken constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 UntilToken::~UntilToken()
 {
-	/*PROTECTED REGION ID(UntilToken destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(UntilToken destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ UntilToken::~UntilToken()
 
 ecore::EClass_ptr UntilToken::eClassImpl() const
 {
-	return XtextPackage::_instance()->getUntilToken();
+    return XtextPackage::_instance()->getUntilToken();
 }
- 
+

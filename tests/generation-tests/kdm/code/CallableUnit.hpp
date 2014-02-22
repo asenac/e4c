@@ -18,33 +18,33 @@ class CallableUnit :  public virtual ::kdm::code::ControlElement
 {
 public:
 
-	typedef CallableUnit_ptr ptr_type;
-	
-	CallableUnit();
-	virtual ~CallableUnit();
+    typedef CallableUnit_ptr ptr_type;
 
-	typedef ::kdm::code::CallableKind kind_t;
-	
-	void setKind(kind_t _kind);
-	kind_t getKind() const;
-	
+    CallableUnit();
+    virtual ~CallableUnit();
 
-	/*PROTECTED REGION ID(kdm::code::CallableUnit public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef ::kdm::code::CallableKind kind_t;
+
+    void setKind(kind_t _kind);
+    kind_t getKind() const;
+
+
+    /*PROTECTED REGION ID(kdm::code::CallableUnit public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class CodePackage;
+    friend class CodePackage;
 
-	kind_t m_kind;
+    kind_t m_kind;
 
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::code::CallableUnit protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::code::CallableUnit protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // code

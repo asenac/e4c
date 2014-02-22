@@ -18,29 +18,29 @@ class ChoiceContent :  public virtual ::kdm::data::ComplexContentType
 {
 public:
 
-	typedef ChoiceContent_ptr ptr_type;
-	
-	ChoiceContent();
-	virtual ~ChoiceContent();
+    typedef ChoiceContent_ptr ptr_type;
 
-	
-	
+    ChoiceContent();
+    virtual ~ChoiceContent();
 
-	/*PROTECTED REGION ID(kdm::data::ChoiceContent public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(kdm::data::ChoiceContent public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class DataPackage;
+    friend class DataPackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::data::ChoiceContent protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::data::ChoiceContent protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // data

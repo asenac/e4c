@@ -16,38 +16,38 @@ class NVPair : ::ecore::EObject
 {
 public:
 
-	typedef NVPair_ptr ptr_type;
-	
-	NVPair();
-	virtual ~NVPair();
+    typedef NVPair_ptr ptr_type;
 
-	typedef ::ecore::EString name_t;
-	typedef json::Value_ptr value_t;
-	
-	void setName(name_t _name);
-	name_t getName() const;
-	value_t getValue() const;
-	void setValue(value_t value_);
-	value_t releaseValue();
-	
+    NVPair();
+    virtual ~NVPair();
 
-	/*PROTECTED REGION ID(json::NVPair public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef ::ecore::EString name_t;
+    typedef json::Value_ptr value_t;
+
+    void setName(name_t _name);
+    name_t getName() const;
+    value_t getValue() const;
+    void setValue(value_t value_);
+    value_t releaseValue();
+
+
+    /*PROTECTED REGION ID(json::NVPair public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class JsonPackage;
+    friend class JsonPackage;
 
-	name_t m_name;
-	std::unique_ptr < json::Value > m_value;
+    name_t m_name;
+    std::unique_ptr < json::Value > m_value;
 
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(json::NVPair protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(json::NVPair protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // json

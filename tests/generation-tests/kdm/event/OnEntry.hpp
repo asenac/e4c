@@ -18,29 +18,29 @@ class OnEntry :  public virtual ::kdm::event::Transition
 {
 public:
 
-	typedef OnEntry_ptr ptr_type;
-	
-	OnEntry();
-	virtual ~OnEntry();
+    typedef OnEntry_ptr ptr_type;
 
-	
-	
+    OnEntry();
+    virtual ~OnEntry();
 
-	/*PROTECTED REGION ID(kdm::event::OnEntry public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(kdm::event::OnEntry public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class EventPackage;
+    friend class EventPackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::event::OnEntry protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::event::OnEntry protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // event

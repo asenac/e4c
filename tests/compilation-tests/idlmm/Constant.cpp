@@ -8,14 +8,14 @@ using namespace idlmm;
 
 Constant::Constant()
 {
-	/*PROTECTED REGION ID(Constant constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(Constant constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 Constant::~Constant()
 {
-	/*PROTECTED REGION ID(Constant destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(Constant destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -25,6 +25,6 @@ Constant::~Constant()
 
 ecore::EClass_ptr Constant::eClassImpl() const
 {
-	return IdlmmPackage::_instance()->getConstant();
+    return IdlmmPackage::_instance()->getConstant();
 }
- 
+

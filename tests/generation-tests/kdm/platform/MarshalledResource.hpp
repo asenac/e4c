@@ -18,29 +18,29 @@ class MarshalledResource :  public virtual ::kdm::platform::ResourceType
 {
 public:
 
-	typedef MarshalledResource_ptr ptr_type;
-	
-	MarshalledResource();
-	virtual ~MarshalledResource();
+    typedef MarshalledResource_ptr ptr_type;
 
-	
-	
+    MarshalledResource();
+    virtual ~MarshalledResource();
 
-	/*PROTECTED REGION ID(kdm::platform::MarshalledResource public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(kdm::platform::MarshalledResource public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class PlatformPackage;
+    friend class PlatformPackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::platform::MarshalledResource protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::platform::MarshalledResource protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // platform

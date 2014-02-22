@@ -9,14 +9,14 @@ using namespace kdm::platform;
 
 MessagingResource::MessagingResource()
 {
-	/*PROTECTED REGION ID(MessagingResource constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(MessagingResource constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 MessagingResource::~MessagingResource()
 {
-	/*PROTECTED REGION ID(MessagingResource destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(MessagingResource destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ MessagingResource::~MessagingResource()
 
 ecore::EClass_ptr MessagingResource::eClassImpl() const
 {
-	return PlatformPackage::_instance()->getMessagingResource();
+    return PlatformPackage::_instance()->getMessagingResource();
 }
- 
+

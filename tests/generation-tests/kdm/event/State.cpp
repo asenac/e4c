@@ -9,14 +9,14 @@ using namespace kdm::event;
 
 State::State()
 {
-	/*PROTECTED REGION ID(State constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(State constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 State::~State()
 {
-	/*PROTECTED REGION ID(State destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(State destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ State::~State()
 
 ecore::EClass_ptr State::eClassImpl() const
 {
-	return EventPackage::_instance()->getState();
+    return EventPackage::_instance()->getState();
 }
- 
+

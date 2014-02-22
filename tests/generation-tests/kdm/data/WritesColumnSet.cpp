@@ -9,42 +9,42 @@ using namespace kdm::data;
 /*PROTECTED REGION ID(kdm::data::WritesColumnSet include) START*/
 /*PROTECTED REGION END*/
 
-WritesColumnSet::WritesColumnSet() : 
-	m_to(),
+WritesColumnSet::WritesColumnSet() :
+    m_to(),
     m_from()
 {
-	/*PROTECTED REGION ID(WritesColumnSet constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(WritesColumnSet constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 WritesColumnSet::~WritesColumnSet()
 {
-	/*PROTECTED REGION ID(WritesColumnSet destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(WritesColumnSet destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 WritesColumnSet::to_t WritesColumnSet::getTo() const
 {
-	return e4c::returned(m_to);
+    return e4c::returned(m_to);
 }
 
 void WritesColumnSet::setTo(to_t to_)
 {
-	if (m_to == to_)
-		return;
-	m_to = to_;
+    if (m_to == to_)
+        return;
+    m_to = to_;
 }
 
 WritesColumnSet::from_t WritesColumnSet::getFrom() const
 {
-	return e4c::returned(m_from);
+    return e4c::returned(m_from);
 }
 
 void WritesColumnSet::setFrom(from_t from_)
 {
-	if (m_from == from_)
-		return;
-	m_from = from_;
+    if (m_from == from_)
+        return;
+    m_from = from_;
 }
 
 
@@ -54,6 +54,6 @@ void WritesColumnSet::setFrom(from_t from_)
 
 ecore::EClass_ptr WritesColumnSet::eClassImpl() const
 {
-	return DataPackage::_instance()->getWritesColumnSet();
+    return DataPackage::_instance()->getWritesColumnSet();
 }
- 
+

@@ -18,33 +18,33 @@ class MacroUnit :  public virtual ::kdm::code::PreprocessorDirective
 {
 public:
 
-	typedef MacroUnit_ptr ptr_type;
-	
-	MacroUnit();
-	virtual ~MacroUnit();
+    typedef MacroUnit_ptr ptr_type;
 
-	typedef ::kdm::code::MacroKind kind_t;
-	
-	void setKind(kind_t _kind);
-	kind_t getKind() const;
-	
+    MacroUnit();
+    virtual ~MacroUnit();
 
-	/*PROTECTED REGION ID(kdm::code::MacroUnit public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef ::kdm::code::MacroKind kind_t;
+
+    void setKind(kind_t _kind);
+    kind_t getKind() const;
+
+
+    /*PROTECTED REGION ID(kdm::code::MacroUnit public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class CodePackage;
+    friend class CodePackage;
 
-	kind_t m_kind;
+    kind_t m_kind;
 
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::code::MacroUnit protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::code::MacroUnit protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // code

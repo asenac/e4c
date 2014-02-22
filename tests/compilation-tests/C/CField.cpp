@@ -9,14 +9,14 @@ using namespace C;
 
 CField::CField()
 {
-	/*PROTECTED REGION ID(CField constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(CField constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 CField::~CField()
 {
-	/*PROTECTED REGION ID(CField destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(CField destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ CField::~CField()
 
 ecore::EClass_ptr CField::eClassImpl() const
 {
-	return CPackage::_instance()->getCField();
+    return CPackage::_instance()->getCField();
 }
- 
+

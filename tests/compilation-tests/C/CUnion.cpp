@@ -9,14 +9,14 @@ using namespace C;
 
 CUnion::CUnion()
 {
-	/*PROTECTED REGION ID(CUnion constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(CUnion constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 CUnion::~CUnion()
 {
-	/*PROTECTED REGION ID(CUnion destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(CUnion destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ CUnion::~CUnion()
 
 ecore::EClass_ptr CUnion::eClassImpl() const
 {
-	return CPackage::_instance()->getCUnion();
+    return CPackage::_instance()->getCUnion();
 }
- 
+

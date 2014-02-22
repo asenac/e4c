@@ -18,29 +18,29 @@ class Thread :  public virtual ::kdm::platform::RuntimeResource
 {
 public:
 
-	typedef Thread_ptr ptr_type;
-	
-	Thread();
-	virtual ~Thread();
+    typedef Thread_ptr ptr_type;
 
-	
-	
+    Thread();
+    virtual ~Thread();
 
-	/*PROTECTED REGION ID(kdm::platform::Thread public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(kdm::platform::Thread public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class PlatformPackage;
+    friend class PlatformPackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::platform::Thread protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::platform::Thread protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // platform

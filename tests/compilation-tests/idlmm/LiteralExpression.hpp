@@ -15,29 +15,29 @@ class LiteralExpression :  public virtual ::idlmm::Expression
 {
 public:
 
-	typedef LiteralExpression_ptr ptr_type;
-	
-	virtual ~LiteralExpression();
+    typedef LiteralExpression_ptr ptr_type;
 
-	
-	
+    virtual ~LiteralExpression();
 
-	/*PROTECTED REGION ID(idlmm::LiteralExpression public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(idlmm::LiteralExpression public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
-	LiteralExpression();
+    LiteralExpression();
 
-	friend class IdlmmPackage;
+    friend class IdlmmPackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(idlmm::LiteralExpression protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(idlmm::LiteralExpression protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // idlmm

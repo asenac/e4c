@@ -16,29 +16,29 @@ class URIExtent :  public virtual ::emof::Extent
 {
 public:
 
-	typedef URIExtent_ptr ptr_type;
-	
-	URIExtent();
-	virtual ~URIExtent();
+    typedef URIExtent_ptr ptr_type;
 
-	
-	
+    URIExtent();
+    virtual ~URIExtent();
 
-	/*PROTECTED REGION ID(emof::URIExtent public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(emof::URIExtent public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class EmofPackage;
+    friend class EmofPackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(emof::URIExtent protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(emof::URIExtent protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // emof

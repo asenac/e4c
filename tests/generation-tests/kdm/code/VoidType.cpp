@@ -9,14 +9,14 @@ using namespace kdm::code;
 
 VoidType::VoidType()
 {
-	/*PROTECTED REGION ID(VoidType constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(VoidType constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 VoidType::~VoidType()
 {
-	/*PROTECTED REGION ID(VoidType destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(VoidType destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ VoidType::~VoidType()
 
 ecore::EClass_ptr VoidType::eClassImpl() const
 {
-	return CodePackage::_instance()->getVoidType();
+    return CodePackage::_instance()->getVoidType();
 }
- 
+

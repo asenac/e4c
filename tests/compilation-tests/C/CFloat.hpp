@@ -16,29 +16,29 @@ class CFloat :  public virtual ::C::CFloating
 {
 public:
 
-	typedef CFloat_ptr ptr_type;
-	
-	CFloat();
-	virtual ~CFloat();
+    typedef CFloat_ptr ptr_type;
 
-	
-	
+    CFloat();
+    virtual ~CFloat();
 
-	/*PROTECTED REGION ID(C::CFloat public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(C::CFloat public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class CPackage;
+    friend class CPackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(C::CFloat protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(C::CFloat protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // C

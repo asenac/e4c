@@ -9,14 +9,14 @@ using namespace kdm::action;
 
 FinallyUnit::FinallyUnit()
 {
-	/*PROTECTED REGION ID(FinallyUnit constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(FinallyUnit constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 FinallyUnit::~FinallyUnit()
 {
-	/*PROTECTED REGION ID(FinallyUnit destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(FinallyUnit destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ FinallyUnit::~FinallyUnit()
 
 ecore::EClass_ptr FinallyUnit::eClassImpl() const
 {
-	return ActionPackage::_instance()->getFinallyUnit();
+    return ActionPackage::_instance()->getFinallyUnit();
 }
- 
+

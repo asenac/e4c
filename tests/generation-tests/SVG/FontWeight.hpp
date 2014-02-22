@@ -16,33 +16,33 @@ class FontWeight :  public virtual ::SVG::Attribute
 {
 public:
 
-	typedef FontWeight_ptr ptr_type;
-	
-	FontWeight();
-	virtual ~FontWeight();
+    typedef FontWeight_ptr ptr_type;
 
-	typedef ::PrimitiveTypes::Boolean bold_t;
-	
-	void setBold(bold_t _bold);
-	bold_t getBold() const;
-	
+    FontWeight();
+    virtual ~FontWeight();
 
-	/*PROTECTED REGION ID(SVG::FontWeight public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef ::PrimitiveTypes::Boolean bold_t;
+
+    void setBold(bold_t _bold);
+    bold_t getBold() const;
+
+
+    /*PROTECTED REGION ID(SVG::FontWeight public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class SVGPackage;
+    friend class SVGPackage;
 
-	bold_t m_bold;
+    bold_t m_bold;
 
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(SVG::FontWeight protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(SVG::FontWeight protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // SVG

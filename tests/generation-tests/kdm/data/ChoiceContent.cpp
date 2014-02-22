@@ -9,14 +9,14 @@ using namespace kdm::data;
 
 ChoiceContent::ChoiceContent()
 {
-	/*PROTECTED REGION ID(ChoiceContent constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(ChoiceContent constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 ChoiceContent::~ChoiceContent()
 {
-	/*PROTECTED REGION ID(ChoiceContent destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(ChoiceContent destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ ChoiceContent::~ChoiceContent()
 
 ecore::EClass_ptr ChoiceContent::eClassImpl() const
 {
-	return DataPackage::_instance()->getChoiceContent();
+    return DataPackage::_instance()->getChoiceContent();
 }
- 
+

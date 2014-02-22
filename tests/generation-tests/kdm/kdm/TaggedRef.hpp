@@ -18,33 +18,33 @@ class TaggedRef :  public virtual ::kdm::kdm::ExtendedValue
 {
 public:
 
-	typedef TaggedRef_ptr ptr_type;
-	
-	TaggedRef();
-	virtual ~TaggedRef();
+    typedef TaggedRef_ptr ptr_type;
 
-	typedef kdm::core::ModelElement_ptr reference_t;
-	
-	reference_t getReference() const;
-	void setReference(reference_t reference_);
-	
+    TaggedRef();
+    virtual ~TaggedRef();
 
-	/*PROTECTED REGION ID(kdm::kdm::TaggedRef public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef kdm::core::ModelElement_ptr reference_t;
+
+    reference_t getReference() const;
+    void setReference(reference_t reference_);
+
+
+    /*PROTECTED REGION ID(kdm::kdm::TaggedRef public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class KdmPackage;
+    friend class KdmPackage;
 
-	kdm::core::ModelElement_ptr m_reference;
+    kdm::core::ModelElement_ptr m_reference;
 
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::kdm::TaggedRef protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::kdm::TaggedRef protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // kdm

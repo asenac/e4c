@@ -18,37 +18,37 @@ class ExtensionTo :  public virtual ::kdm::data::AbstractDataRelationship
 {
 public:
 
-	typedef ExtensionTo_ptr ptr_type;
-	
-	ExtensionTo();
-	virtual ~ExtensionTo();
+    typedef ExtensionTo_ptr ptr_type;
 
-	typedef kdm::data::ComplexContentType_ptr to_t;
-	typedef kdm::data::ComplexContentType_ptr from_t;
-	
-	to_t getTo() const;
-	void setTo(to_t to_);
-	from_t getFrom() const;
-	void setFrom(from_t from_);
-	
+    ExtensionTo();
+    virtual ~ExtensionTo();
 
-	/*PROTECTED REGION ID(kdm::data::ExtensionTo public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef kdm::data::ComplexContentType_ptr to_t;
+    typedef kdm::data::ComplexContentType_ptr from_t;
+
+    to_t getTo() const;
+    void setTo(to_t to_);
+    from_t getFrom() const;
+    void setFrom(from_t from_);
+
+
+    /*PROTECTED REGION ID(kdm::data::ExtensionTo public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class DataPackage;
+    friend class DataPackage;
 
-	kdm::data::ComplexContentType_ptr m_to;
-	kdm::data::ComplexContentType_ptr m_from;
+    kdm::data::ComplexContentType_ptr m_to;
+    kdm::data::ComplexContentType_ptr m_from;
 
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::data::ExtensionTo protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::data::ExtensionTo protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // data

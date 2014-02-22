@@ -18,29 +18,29 @@ class ContentReference :  public virtual ::kdm::data::ContentItem
 {
 public:
 
-	typedef ContentReference_ptr ptr_type;
-	
-	ContentReference();
-	virtual ~ContentReference();
+    typedef ContentReference_ptr ptr_type;
 
-	
-	
+    ContentReference();
+    virtual ~ContentReference();
 
-	/*PROTECTED REGION ID(kdm::data::ContentReference public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(kdm::data::ContentReference public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class DataPackage;
+    friend class DataPackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::data::ContentReference protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::data::ContentReference protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // data

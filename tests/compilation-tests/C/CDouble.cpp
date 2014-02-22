@@ -9,14 +9,14 @@ using namespace C;
 
 CDouble::CDouble()
 {
-	/*PROTECTED REGION ID(CDouble constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(CDouble constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 CDouble::~CDouble()
 {
-	/*PROTECTED REGION ID(CDouble destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(CDouble destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ CDouble::~CDouble()
 
 ecore::EClass_ptr CDouble::eClassImpl() const
 {
-	return CPackage::_instance()->getCDouble();
+    return CPackage::_instance()->getCDouble();
 }
- 
+

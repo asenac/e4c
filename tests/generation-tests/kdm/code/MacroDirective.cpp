@@ -9,14 +9,14 @@ using namespace kdm::code;
 
 MacroDirective::MacroDirective()
 {
-	/*PROTECTED REGION ID(MacroDirective constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(MacroDirective constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 MacroDirective::~MacroDirective()
 {
-	/*PROTECTED REGION ID(MacroDirective destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(MacroDirective destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ MacroDirective::~MacroDirective()
 
 ecore::EClass_ptr MacroDirective::eClassImpl() const
 {
-	return CodePackage::_instance()->getMacroDirective();
+    return CodePackage::_instance()->getMacroDirective();
 }
- 
+

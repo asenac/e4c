@@ -9,14 +9,14 @@ using namespace json;
 
 Value::Value()
 {
-	/*PROTECTED REGION ID(Value constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(Value constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 Value::~Value()
 {
-	/*PROTECTED REGION ID(Value destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(Value destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ Value::~Value()
 
 ecore::EClass_ptr Value::eClassImpl() const
 {
-	return JsonPackage::_instance()->getValue();
+    return JsonPackage::_instance()->getValue();
 }
- 
+

@@ -7,32 +7,32 @@ using namespace idlmm;
 /*PROTECTED REGION ID(idlmm::StringDef include) START*/
 /*PROTECTED REGION END*/
 
-StringDef::StringDef() : 
-	m_bound()
+StringDef::StringDef() :
+    m_bound()
 {
-	/*PROTECTED REGION ID(StringDef constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(StringDef constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 StringDef::~StringDef()
 {
-	/*PROTECTED REGION ID(StringDef destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(StringDef destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 StringDef::bound_t StringDef::getBound() const
 {
-	return e4c::returned(m_bound);
+    return e4c::returned(m_bound);
 }
 
 void StringDef::setBound(bound_t bound_)
 {
-	m_bound.reset(bound_);
+    m_bound.reset(bound_);
 }
 
 StringDef::bound_t StringDef::releaseBound()
 {
-	return m_bound.release();
+    return m_bound.release();
 }
 
 
@@ -42,6 +42,6 @@ StringDef::bound_t StringDef::releaseBound()
 
 ecore::EClass_ptr StringDef::eClassImpl() const
 {
-	return IdlmmPackage::_instance()->getStringDef();
+    return IdlmmPackage::_instance()->getStringDef();
 }
- 
+

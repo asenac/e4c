@@ -18,33 +18,33 @@ class UIEvent :  public virtual ::kdm::ui::AbstractUIElement
 {
 public:
 
-	typedef UIEvent_ptr ptr_type;
-	
-	UIEvent();
-	virtual ~UIEvent();
+    typedef UIEvent_ptr ptr_type;
 
-	typedef ::kdm::core::String kind_t;
-	
-	void setKind(kind_t _kind);
-	kind_t getKind() const;
-	
+    UIEvent();
+    virtual ~UIEvent();
 
-	/*PROTECTED REGION ID(kdm::ui::UIEvent public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef ::kdm::core::String kind_t;
+
+    void setKind(kind_t _kind);
+    kind_t getKind() const;
+
+
+    /*PROTECTED REGION ID(kdm::ui::UIEvent public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class UiPackage;
+    friend class UiPackage;
 
-	kind_t m_kind;
+    kind_t m_kind;
 
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::ui::UIEvent protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::ui::UIEvent protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // ui

@@ -9,14 +9,14 @@ using namespace emof;
 
 DataType::DataType()
 {
-	/*PROTECTED REGION ID(DataType constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(DataType constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 DataType::~DataType()
 {
-	/*PROTECTED REGION ID(DataType destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(DataType destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ DataType::~DataType()
 
 ecore::EClass_ptr DataType::eClassImpl() const
 {
-	return EmofPackage::_instance()->getDataType();
+    return EmofPackage::_instance()->getDataType();
 }
- 
+

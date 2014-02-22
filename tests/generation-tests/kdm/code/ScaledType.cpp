@@ -9,14 +9,14 @@ using namespace kdm::code;
 
 ScaledType::ScaledType()
 {
-	/*PROTECTED REGION ID(ScaledType constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(ScaledType constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 ScaledType::~ScaledType()
 {
-	/*PROTECTED REGION ID(ScaledType destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(ScaledType destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ ScaledType::~ScaledType()
 
 ecore::EClass_ptr ScaledType::eClassImpl() const
 {
-	return CodePackage::_instance()->getScaledType();
+    return CodePackage::_instance()->getScaledType();
 }
- 
+

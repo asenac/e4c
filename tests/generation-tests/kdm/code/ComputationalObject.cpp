@@ -9,14 +9,14 @@ using namespace kdm::code;
 
 ComputationalObject::ComputationalObject()
 {
-	/*PROTECTED REGION ID(ComputationalObject constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(ComputationalObject constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 ComputationalObject::~ComputationalObject()
 {
-	/*PROTECTED REGION ID(ComputationalObject destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(ComputationalObject destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ ComputationalObject::~ComputationalObject()
 
 ecore::EClass_ptr ComputationalObject::eClassImpl() const
 {
-	return CodePackage::_instance()->getComputationalObject();
+    return CodePackage::_instance()->getComputationalObject();
 }
- 
+

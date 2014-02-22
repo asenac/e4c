@@ -7,27 +7,27 @@ using namespace kdm::kdm;
 /*PROTECTED REGION ID(kdm::kdm::TaggedValue include) START*/
 /*PROTECTED REGION END*/
 
-TaggedValue::TaggedValue() : 
-	m_value()
+TaggedValue::TaggedValue() :
+    m_value()
 {
-	/*PROTECTED REGION ID(TaggedValue constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(TaggedValue constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 TaggedValue::~TaggedValue()
 {
-	/*PROTECTED REGION ID(TaggedValue destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(TaggedValue destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 void TaggedValue::setValue(value_t _value)
 {
-	m_value = _value;;
+    m_value = _value;;
 }
 
 TaggedValue::value_t TaggedValue::getValue() const
 {
-	return m_value;
+    return m_value;
 }
 
 
@@ -37,6 +37,6 @@ TaggedValue::value_t TaggedValue::getValue() const
 
 ecore::EClass_ptr TaggedValue::eClassImpl() const
 {
-	return KdmPackage::_instance()->getTaggedValue();
+    return KdmPackage::_instance()->getTaggedValue();
 }
- 
+

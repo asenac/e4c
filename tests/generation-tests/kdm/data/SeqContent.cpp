@@ -9,14 +9,14 @@ using namespace kdm::data;
 
 SeqContent::SeqContent()
 {
-	/*PROTECTED REGION ID(SeqContent constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(SeqContent constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 SeqContent::~SeqContent()
 {
-	/*PROTECTED REGION ID(SeqContent destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(SeqContent destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ SeqContent::~SeqContent()
 
 ecore::EClass_ptr SeqContent::eClassImpl() const
 {
-	return DataPackage::_instance()->getSeqContent();
+    return DataPackage::_instance()->getSeqContent();
 }
- 
+

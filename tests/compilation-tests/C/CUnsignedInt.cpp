@@ -9,14 +9,14 @@ using namespace C;
 
 CUnsignedInt::CUnsignedInt()
 {
-	/*PROTECTED REGION ID(CUnsignedInt constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(CUnsignedInt constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 CUnsignedInt::~CUnsignedInt()
 {
-	/*PROTECTED REGION ID(CUnsignedInt destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(CUnsignedInt destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ CUnsignedInt::~CUnsignedInt()
 
 ecore::EClass_ptr CUnsignedInt::eClassImpl() const
 {
-	return CPackage::_instance()->getCUnsignedInt();
+    return CPackage::_instance()->getCUnsignedInt();
 }
- 
+

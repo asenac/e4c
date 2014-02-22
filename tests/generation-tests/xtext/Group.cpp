@@ -9,14 +9,14 @@ using namespace xtext;
 
 Group::Group()
 {
-	/*PROTECTED REGION ID(Group constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(Group constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 Group::~Group()
 {
-	/*PROTECTED REGION ID(Group destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(Group destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ Group::~Group()
 
 ecore::EClass_ptr Group::eClassImpl() const
 {
-	return XtextPackage::_instance()->getGroup();
+    return XtextPackage::_instance()->getGroup();
 }
- 
+

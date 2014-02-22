@@ -18,29 +18,29 @@ class TimeType :  public virtual ::kdm::code::PrimitiveType
 {
 public:
 
-	typedef TimeType_ptr ptr_type;
-	
-	TimeType();
-	virtual ~TimeType();
+    typedef TimeType_ptr ptr_type;
 
-	
-	
+    TimeType();
+    virtual ~TimeType();
 
-	/*PROTECTED REGION ID(kdm::code::TimeType public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(kdm::code::TimeType public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class CodePackage;
+    friend class CodePackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::code::TimeType protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::code::TimeType protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // code

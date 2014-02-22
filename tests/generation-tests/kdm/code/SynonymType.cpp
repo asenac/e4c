@@ -9,14 +9,14 @@ using namespace kdm::code;
 
 SynonymType::SynonymType()
 {
-	/*PROTECTED REGION ID(SynonymType constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(SynonymType constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 SynonymType::~SynonymType()
 {
-	/*PROTECTED REGION ID(SynonymType destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(SynonymType destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ SynonymType::~SynonymType()
 
 ecore::EClass_ptr SynonymType::eClassImpl() const
 {
-	return CodePackage::_instance()->getSynonymType();
+    return CodePackage::_instance()->getSynonymType();
 }
- 
+

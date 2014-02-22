@@ -9,14 +9,14 @@ using namespace kdm::ui;
 
 Screen::Screen()
 {
-	/*PROTECTED REGION ID(Screen constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(Screen constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 Screen::~Screen()
 {
-	/*PROTECTED REGION ID(Screen destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(Screen destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ Screen::~Screen()
 
 ecore::EClass_ptr Screen::eClassImpl() const
 {
-	return UiPackage::_instance()->getScreen();
+    return UiPackage::_instance()->getScreen();
 }
- 
+

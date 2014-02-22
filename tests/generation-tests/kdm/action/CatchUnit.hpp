@@ -18,29 +18,29 @@ class CatchUnit :  public virtual ::kdm::action::ExceptionUnit
 {
 public:
 
-	typedef CatchUnit_ptr ptr_type;
-	
-	CatchUnit();
-	virtual ~CatchUnit();
+    typedef CatchUnit_ptr ptr_type;
 
-	
-	
+    CatchUnit();
+    virtual ~CatchUnit();
 
-	/*PROTECTED REGION ID(kdm::action::CatchUnit public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(kdm::action::CatchUnit public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class ActionPackage;
+    friend class ActionPackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::action::CatchUnit protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::action::CatchUnit protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // action

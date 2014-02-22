@@ -16,38 +16,38 @@ class Company : ::ecore::EObject
 {
 public:
 
-	typedef Company_ptr ptr_type;
-	
-	Company();
-	virtual ~Company();
+    typedef Company_ptr ptr_type;
 
-	typedef ::ecore::EString name_t;
-	typedef std::vector < company::Department_ptr > departments_t;
-	
-	void setName(name_t _name);
-	name_t getName() const;
-	departments_t getDepartments() const;
-	void addDepartments(company::Department_ptr departments_);
-	void addAllDepartments(const departments_t& departments_);
-	
+    Company();
+    virtual ~Company();
 
-	/*PROTECTED REGION ID(company::Company public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef ::ecore::EString name_t;
+    typedef std::vector < company::Department_ptr > departments_t;
+
+    void setName(name_t _name);
+    name_t getName() const;
+    departments_t getDepartments() const;
+    void addDepartments(company::Department_ptr departments_);
+    void addAllDepartments(const departments_t& departments_);
+
+
+    /*PROTECTED REGION ID(company::Company public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class CompanyPackage;
+    friend class CompanyPackage;
 
-	name_t m_name;
-	std::vector < std::unique_ptr < company::Department > > m_departments;
+    name_t m_name;
+    std::vector < std::unique_ptr < company::Department > > m_departments;
 
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(company::Company protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(company::Company protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // company

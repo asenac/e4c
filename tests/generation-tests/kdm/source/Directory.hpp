@@ -18,33 +18,33 @@ class Directory :  public virtual ::kdm::source::InventoryContainer
 {
 public:
 
-	typedef Directory_ptr ptr_type;
-	
-	Directory();
-	virtual ~Directory();
+    typedef Directory_ptr ptr_type;
 
-	typedef ::kdm::core::String path_t;
-	
-	void setPath(path_t _path);
-	path_t getPath() const;
-	
+    Directory();
+    virtual ~Directory();
 
-	/*PROTECTED REGION ID(kdm::source::Directory public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef ::kdm::core::String path_t;
+
+    void setPath(path_t _path);
+    path_t getPath() const;
+
+
+    /*PROTECTED REGION ID(kdm::source::Directory public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class SourcePackage;
+    friend class SourcePackage;
 
-	path_t m_path;
+    path_t m_path;
 
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::source::Directory protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::source::Directory protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // source

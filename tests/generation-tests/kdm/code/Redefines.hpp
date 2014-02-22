@@ -18,37 +18,37 @@ class Redefines :  public virtual ::kdm::code::AbstractCodeRelationship
 {
 public:
 
-	typedef Redefines_ptr ptr_type;
-	
-	Redefines();
-	virtual ~Redefines();
+    typedef Redefines_ptr ptr_type;
 
-	typedef kdm::code::PreprocessorDirective_ptr to_t;
-	typedef kdm::code::PreprocessorDirective_ptr from_t;
-	
-	to_t getTo() const;
-	void setTo(to_t to_);
-	from_t getFrom() const;
-	void setFrom(from_t from_);
-	
+    Redefines();
+    virtual ~Redefines();
 
-	/*PROTECTED REGION ID(kdm::code::Redefines public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef kdm::code::PreprocessorDirective_ptr to_t;
+    typedef kdm::code::PreprocessorDirective_ptr from_t;
+
+    to_t getTo() const;
+    void setTo(to_t to_);
+    from_t getFrom() const;
+    void setFrom(from_t from_);
+
+
+    /*PROTECTED REGION ID(kdm::code::Redefines public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class CodePackage;
+    friend class CodePackage;
 
-	kdm::code::PreprocessorDirective_ptr m_to;
-	kdm::code::PreprocessorDirective_ptr m_from;
+    kdm::code::PreprocessorDirective_ptr m_to;
+    kdm::code::PreprocessorDirective_ptr m_from;
 
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::code::Redefines protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::code::Redefines protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // code

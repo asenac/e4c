@@ -15,13 +15,13 @@ class KdmPackage : public ::ecore::EPackage
 public:
     static const KdmPackage_ptr _instance();
 
- 	
 
- 
+
+
 
 protected:
     KdmPackage();
-    
+
 };
 
 } // kdm

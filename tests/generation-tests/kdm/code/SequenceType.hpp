@@ -18,33 +18,33 @@ class SequenceType :  public virtual ::kdm::code::DerivedType
 {
 public:
 
-	typedef SequenceType_ptr ptr_type;
-	
-	SequenceType();
-	virtual ~SequenceType();
+    typedef SequenceType_ptr ptr_type;
 
-	typedef ::kdm::core::Integer size_t;
-	
-	void setSize(size_t _size);
-	size_t getSize() const;
-	
+    SequenceType();
+    virtual ~SequenceType();
 
-	/*PROTECTED REGION ID(kdm::code::SequenceType public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef ::kdm::core::Integer size_t;
+
+    void setSize(size_t _size);
+    size_t getSize() const;
+
+
+    /*PROTECTED REGION ID(kdm::code::SequenceType public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class CodePackage;
+    friend class CodePackage;
 
-	size_t m_size;
+    size_t m_size;
 
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::code::SequenceType protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::code::SequenceType protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // code

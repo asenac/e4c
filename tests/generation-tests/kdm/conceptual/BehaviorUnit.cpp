@@ -9,14 +9,14 @@ using namespace kdm::conceptual;
 
 BehaviorUnit::BehaviorUnit()
 {
-	/*PROTECTED REGION ID(BehaviorUnit constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(BehaviorUnit constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 BehaviorUnit::~BehaviorUnit()
 {
-	/*PROTECTED REGION ID(BehaviorUnit destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(BehaviorUnit destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ BehaviorUnit::~BehaviorUnit()
 
 ecore::EClass_ptr BehaviorUnit::eClassImpl() const
 {
-	return ConceptualPackage::_instance()->getBehaviorUnit();
+    return ConceptualPackage::_instance()->getBehaviorUnit();
 }
- 
+

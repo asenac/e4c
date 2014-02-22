@@ -18,29 +18,29 @@ class ChoiceType :  public virtual ::kdm::code::CompositeType
 {
 public:
 
-	typedef ChoiceType_ptr ptr_type;
-	
-	ChoiceType();
-	virtual ~ChoiceType();
+    typedef ChoiceType_ptr ptr_type;
 
-	
-	
+    ChoiceType();
+    virtual ~ChoiceType();
 
-	/*PROTECTED REGION ID(kdm::code::ChoiceType public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(kdm::code::ChoiceType public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class CodePackage;
+    friend class CodePackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::code::ChoiceType protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::code::ChoiceType protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // code

@@ -9,14 +9,14 @@ using namespace xpand3::expression;
 
 AbstractExpression::AbstractExpression()
 {
-	/*PROTECTED REGION ID(AbstractExpression constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(AbstractExpression constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 AbstractExpression::~AbstractExpression()
 {
-	/*PROTECTED REGION ID(AbstractExpression destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(AbstractExpression destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ AbstractExpression::~AbstractExpression()
 
 ecore::EClass_ptr AbstractExpression::eClassImpl() const
 {
-	return ExpressionPackage::_instance()->getAbstractExpression();
+    return ExpressionPackage::_instance()->getAbstractExpression();
 }
- 
+

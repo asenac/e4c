@@ -14,37 +14,37 @@ class EModelElement
 {
 public:
 
-	typedef EModelElement_ptr ptr_type;
-	
-	virtual ~EModelElement();
+    typedef EModelElement_ptr ptr_type;
 
-	typedef std::vector < ecore::EAnnotation_ptr > eAnnotations_t;
-	
-	eAnnotations_t getEAnnotations() const;
-	void addEAnnotations(ecore::EAnnotation_ptr eAnnotations_);
-	void addAllEAnnotations(const eAnnotations_t& eAnnotations_);
-	void removeEAnnotations(ecore::EAnnotation_ptr eAnnotations_);
-	void clearEAnnotations();
-	
-	ecore::EAnnotation_ptr getEAnnotation(ecore::EString source);
+    virtual ~EModelElement();
 
-	/*PROTECTED REGION ID(ecore::EModelElement public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef std::vector < ecore::EAnnotation_ptr > eAnnotations_t;
+
+    eAnnotations_t getEAnnotations() const;
+    void addEAnnotations(ecore::EAnnotation_ptr eAnnotations_);
+    void addAllEAnnotations(const eAnnotations_t& eAnnotations_);
+    void removeEAnnotations(ecore::EAnnotation_ptr eAnnotations_);
+    void clearEAnnotations();
+
+    ecore::EAnnotation_ptr getEAnnotation(ecore::EString source);
+
+    /*PROTECTED REGION ID(ecore::EModelElement public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
-	EModelElement();
+    EModelElement();
 
-	friend class EcorePackage;
+    friend class EcorePackage;
 
-	std::vector < std::unique_ptr < ecore::EAnnotation > > m_eAnnotations;
+    std::vector < std::unique_ptr < ecore::EAnnotation > > m_eAnnotations;
 
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(ecore::EModelElement protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(ecore::EModelElement protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // ecore

@@ -18,37 +18,37 @@ class TagDefinition :  public virtual ::kdm::core::Element
 {
 public:
 
-	typedef TagDefinition_ptr ptr_type;
-	
-	TagDefinition();
-	virtual ~TagDefinition();
+    typedef TagDefinition_ptr ptr_type;
 
-	typedef ::kdm::core::String tag_t;
-	typedef ::kdm::core::String type_t;
-	
-	void setTag(tag_t _tag);
-	tag_t getTag() const;
-	void setType(type_t _type);
-	type_t getType() const;
-	
+    TagDefinition();
+    virtual ~TagDefinition();
 
-	/*PROTECTED REGION ID(kdm::kdm::TagDefinition public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef ::kdm::core::String tag_t;
+    typedef ::kdm::core::String type_t;
+
+    void setTag(tag_t _tag);
+    tag_t getTag() const;
+    void setType(type_t _type);
+    type_t getType() const;
+
+
+    /*PROTECTED REGION ID(kdm::kdm::TagDefinition public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class KdmPackage;
+    friend class KdmPackage;
 
-	tag_t m_tag;
-	type_t m_type;
+    tag_t m_tag;
+    type_t m_type;
 
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::kdm::TagDefinition protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::kdm::TagDefinition protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // kdm

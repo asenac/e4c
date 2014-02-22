@@ -20,7 +20,7 @@ namespace «getName()»
 «ENDDEFINE»
 
 «DEFINE generateFwd FOR EPackage»
-«FILE getFwdFile()-	»
+«FILE getFwdFile()-    »
 #ifndef «getHeader("FWD")»
 #define «getHeader("FWD")»
 
@@ -61,7 +61,7 @@ typedef int «getName()»;
 «DEFINE generateFwd FOR EEnum-»
 enum class «getName()» : int
 {
-	«FOREACH ELiterals AS e SEPARATOR ",\n    "»«e.literal»«ENDFOREACH»
+    «FOREACH ELiterals AS e SEPARATOR ",\n    "»«e.literal»«ENDFOREACH»
 };
 «ENDDEFINE»
 
@@ -79,35 +79,35 @@ struct «getTagName()»;
 «DEFINE generateTag FOR EStructuralFeature»«ENDDEFINE»
 
 «DEFINE tagMembers FOR ETypedElement-»
-	static const int upperBound = «upperBound»;
-	static const int lowerBound = «lowerBound»;
-	static const bool ordered = «ordered»;
-	static const bool unique = «unique»;
+    static const int upperBound = «upperBound»;
+    static const int lowerBound = «lowerBound»;
+    static const bool ordered = «ordered»;
+    static const bool unique = «unique»;
 «ENDDEFINE-»
 
 «DEFINE generateTag FOR EAttribute»
 struct «getTagName()»
 {
-	typedef «EContainingClass.getName()» eClass;
-	typedef ::«EType.getFQN()» eType;
-	«EXPAND tagMembers FOR this-»
+    typedef «EContainingClass.getName()» eClass;
+    typedef ::«EType.getFQN()» eType;
+    «EXPAND tagMembers FOR this-»
 };
 «ENDDEFINE»
 
 «DEFINE generateTag FOR EReference»
 struct «getTagName()»
 {
-	typedef «EContainingClass.getName()» eClass;
-	typedef ::«EReferenceType.getFQN()» eReferenceType;
-	static const bool containment = «containment»;
-	static const bool container = «container»;
-	static const bool hasOpposite = «EOpposite != null»; 
-	«IF EOpposite == null-»
-	typedef «getTagName()» eOpposite;
-	«ELSE-»
-	typedef ::«EOpposite.getTagFQN()» eOpposite;
-	«ENDIF-»
-	«EXPAND tagMembers FOR this-»
+    typedef «EContainingClass.getName()» eClass;
+    typedef ::«EReferenceType.getFQN()» eReferenceType;
+    static const bool containment = «containment»;
+    static const bool container = «container»;
+    static const bool hasOpposite = «EOpposite != null»;
+    «IF EOpposite == null-»
+    typedef «getTagName()» eOpposite;
+    «ELSE-»
+    typedef ::«EOpposite.getTagFQN()» eOpposite;
+    «ENDIF-»
+    «EXPAND tagMembers FOR this-»
 };
 «ENDDEFINE»
 
@@ -164,37 +164,37 @@ namespace definition
 template < >
 struct epackage< ::«getFQN()»::«getPackage()» >
 {
-	typedef boost::mpl::list< «FOREACH getClasses() AS f SEPARATOR getListSeparator()»::«f.getFQN()»«ENDFOREACH» > eClasses;
-	typedef boost::mpl::list< «FOREACH ESubpackages AS f SEPARATOR getListSeparator()»::«f.getFQN()»::«f.getPackage()»«ENDFOREACH» > eSubpackages;
+    typedef boost::mpl::list< «FOREACH getClasses() AS f SEPARATOR getListSeparator()»::«f.getFQN()»«ENDFOREACH» > eClasses;
+    typedef boost::mpl::list< «FOREACH ESubpackages AS f SEPARATOR getListSeparator()»::«f.getFQN()»::«f.getPackage()»«ENDFOREACH» > eSubpackages;
 };
 
 «FOREACH getClasses() AS e-»
 template < >
 struct eclass< ::«e.getFQN()» >
 {
-	typedef boost::mpl::list< «FOREACH e.ESuperTypes AS f SEPARATOR getListSeparator()»::«f.getFQN()»«ENDFOREACH» > eSuperTypes;
-	typedef boost::mpl::list< «FOREACH e.EAllSuperTypes AS f SEPARATOR getListSeparator()»::«f.getFQN()»«ENDFOREACH» > eAllSuperTypes;
-	typedef boost::mpl::list< «FOREACH e.EStructuralFeatures AS f SEPARATOR getListSeparator()»::«f.getTagFQN()»«ENDFOREACH» > eStructuralFeatures;
-	typedef boost::mpl::list< «FOREACH e.EAllStructuralFeatures AS f SEPARATOR getListSeparator()»::«f.getTagFQN()»«ENDFOREACH» > eAllStructuralFeatures;
+    typedef boost::mpl::list< «FOREACH e.ESuperTypes AS f SEPARATOR getListSeparator()»::«f.getFQN()»«ENDFOREACH» > eSuperTypes;
+    typedef boost::mpl::list< «FOREACH e.EAllSuperTypes AS f SEPARATOR getListSeparator()»::«f.getFQN()»«ENDFOREACH» > eAllSuperTypes;
+    typedef boost::mpl::list< «FOREACH e.EStructuralFeatures AS f SEPARATOR getListSeparator()»::«f.getTagFQN()»«ENDFOREACH» > eStructuralFeatures;
+    typedef boost::mpl::list< «FOREACH e.EAllStructuralFeatures AS f SEPARATOR getListSeparator()»::«f.getTagFQN()»«ENDFOREACH» > eAllStructuralFeatures;
 };
 
 template < >
 struct name< ::«e.getFQN()» >
 {
-	static const char * get()
-	{
-		return "«e.name»";
-	}
+    static const char * get()
+    {
+        return "«e.name»";
+    }
 };
 
 «FOREACH e.EStructuralFeatures AS f»
 template < >
 struct name< ::«f.getTagFQN()» >
 {
-	static const char * get()
-	{
-		return "«f.name»";
-	}
+    static const char * get()
+    {
+        return "«f.name»";
+    }
 };
 
 «ENDFOREACH»

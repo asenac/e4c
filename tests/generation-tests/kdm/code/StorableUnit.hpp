@@ -18,33 +18,33 @@ class StorableUnit :  public virtual ::kdm::code::DataElement
 {
 public:
 
-	typedef StorableUnit_ptr ptr_type;
-	
-	StorableUnit();
-	virtual ~StorableUnit();
+    typedef StorableUnit_ptr ptr_type;
 
-	typedef ::kdm::code::StorableKind kind_t;
-	
-	void setKind(kind_t _kind);
-	kind_t getKind() const;
-	
+    StorableUnit();
+    virtual ~StorableUnit();
 
-	/*PROTECTED REGION ID(kdm::code::StorableUnit public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef ::kdm::code::StorableKind kind_t;
+
+    void setKind(kind_t _kind);
+    kind_t getKind() const;
+
+
+    /*PROTECTED REGION ID(kdm::code::StorableUnit public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class CodePackage;
+    friend class CodePackage;
 
-	kind_t m_kind;
+    kind_t m_kind;
 
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::code::StorableUnit protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::code::StorableUnit protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // code

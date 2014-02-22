@@ -7,27 +7,27 @@ using namespace kdm::source;
 /*PROTECTED REGION ID(kdm::source::Directory include) START*/
 /*PROTECTED REGION END*/
 
-Directory::Directory() : 
-	m_path()
+Directory::Directory() :
+    m_path()
 {
-	/*PROTECTED REGION ID(Directory constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(Directory constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 Directory::~Directory()
 {
-	/*PROTECTED REGION ID(Directory destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(Directory destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 void Directory::setPath(path_t _path)
 {
-	m_path = _path;;
+    m_path = _path;;
 }
 
 Directory::path_t Directory::getPath() const
 {
-	return m_path;
+    return m_path;
 }
 
 
@@ -37,6 +37,6 @@ Directory::path_t Directory::getPath() const
 
 ecore::EClass_ptr Directory::eClassImpl() const
 {
-	return SourcePackage::_instance()->getDirectory();
+    return SourcePackage::_instance()->getDirectory();
 }
- 
+

@@ -9,14 +9,14 @@ using namespace kdm::ui;
 
 Report::Report()
 {
-	/*PROTECTED REGION ID(Report constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(Report constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 Report::~Report()
 {
-	/*PROTECTED REGION ID(Report destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(Report destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ Report::~Report()
 
 ecore::EClass_ptr Report::eClassImpl() const
 {
-	return UiPackage::_instance()->getReport();
+    return UiPackage::_instance()->getReport();
 }
- 
+

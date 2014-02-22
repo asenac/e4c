@@ -8,14 +8,14 @@ using namespace idlmm;
 
 Expression::Expression()
 {
-	/*PROTECTED REGION ID(Expression constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(Expression constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 Expression::~Expression()
 {
-	/*PROTECTED REGION ID(Expression destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(Expression destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -25,6 +25,6 @@ Expression::~Expression()
 
 ecore::EClass_ptr Expression::eClassImpl() const
 {
-	return IdlmmPackage::_instance()->getExpression();
+    return IdlmmPackage::_instance()->getExpression();
 }
- 
+

@@ -9,14 +9,14 @@ using namespace kdm::structure;
 
 ArchitectureView::ArchitectureView()
 {
-	/*PROTECTED REGION ID(ArchitectureView constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(ArchitectureView constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 ArchitectureView::~ArchitectureView()
 {
-	/*PROTECTED REGION ID(ArchitectureView destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(ArchitectureView destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ ArchitectureView::~ArchitectureView()
 
 ecore::EClass_ptr ArchitectureView::eClassImpl() const
 {
-	return StructurePackage::_instance()->getArchitectureView();
+    return StructurePackage::_instance()->getArchitectureView();
 }
- 
+

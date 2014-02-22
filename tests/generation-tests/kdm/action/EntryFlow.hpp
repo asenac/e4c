@@ -18,37 +18,37 @@ class EntryFlow :  public virtual ::kdm::action::AbstractActionRelationship
 {
 public:
 
-	typedef EntryFlow_ptr ptr_type;
-	
-	EntryFlow();
-	virtual ~EntryFlow();
+    typedef EntryFlow_ptr ptr_type;
 
-	typedef kdm::action::ActionElement_ptr to_t;
-	typedef kdm::code::ControlElement_ptr from_t;
-	
-	to_t getTo() const;
-	void setTo(to_t to_);
-	from_t getFrom() const;
-	void setFrom(from_t from_);
-	
+    EntryFlow();
+    virtual ~EntryFlow();
 
-	/*PROTECTED REGION ID(kdm::action::EntryFlow public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef kdm::action::ActionElement_ptr to_t;
+    typedef kdm::code::ControlElement_ptr from_t;
+
+    to_t getTo() const;
+    void setTo(to_t to_);
+    from_t getFrom() const;
+    void setFrom(from_t from_);
+
+
+    /*PROTECTED REGION ID(kdm::action::EntryFlow public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class ActionPackage;
+    friend class ActionPackage;
 
-	kdm::action::ActionElement_ptr m_to;
-	kdm::code::ControlElement_ptr m_from;
+    kdm::action::ActionElement_ptr m_to;
+    kdm::code::ControlElement_ptr m_from;
 
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::action::EntryFlow protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::action::EntryFlow protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // action

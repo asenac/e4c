@@ -16,46 +16,46 @@ class Polyline :  public virtual ::SVG::Shape
 {
 public:
 
-	typedef Polyline_ptr ptr_type;
-	
-	Polyline();
-	virtual ~Polyline();
+    typedef Polyline_ptr ptr_type;
 
-	typedef std::vector < SVG::Point_ptr > waypoints_t;
-	typedef ::PrimitiveTypes::String strokeDashArray_t;
-	typedef ::PrimitiveTypes::String markerEnd_t;
-	typedef ::PrimitiveTypes::String markerStart_t;
-	
-	waypoints_t getWaypoints() const;
-	void addWaypoints(SVG::Point_ptr waypoints_);
-	void addAllWaypoints(const waypoints_t& waypoints_);
-	void setStrokeDashArray(strokeDashArray_t _strokeDashArray);
-	strokeDashArray_t getStrokeDashArray() const;
-	void setMarkerEnd(markerEnd_t _markerEnd);
-	markerEnd_t getMarkerEnd() const;
-	void setMarkerStart(markerStart_t _markerStart);
-	markerStart_t getMarkerStart() const;
-	
+    Polyline();
+    virtual ~Polyline();
 
-	/*PROTECTED REGION ID(SVG::Polyline public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef std::vector < SVG::Point_ptr > waypoints_t;
+    typedef ::PrimitiveTypes::String strokeDashArray_t;
+    typedef ::PrimitiveTypes::String markerEnd_t;
+    typedef ::PrimitiveTypes::String markerStart_t;
+
+    waypoints_t getWaypoints() const;
+    void addWaypoints(SVG::Point_ptr waypoints_);
+    void addAllWaypoints(const waypoints_t& waypoints_);
+    void setStrokeDashArray(strokeDashArray_t _strokeDashArray);
+    strokeDashArray_t getStrokeDashArray() const;
+    void setMarkerEnd(markerEnd_t _markerEnd);
+    markerEnd_t getMarkerEnd() const;
+    void setMarkerStart(markerStart_t _markerStart);
+    markerStart_t getMarkerStart() const;
+
+
+    /*PROTECTED REGION ID(SVG::Polyline public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class SVGPackage;
+    friend class SVGPackage;
 
-	std::vector < std::unique_ptr < SVG::Point > > m_waypoints;
-	strokeDashArray_t m_strokeDashArray;
-	markerEnd_t m_markerEnd;
-	markerStart_t m_markerStart;
+    std::vector < std::unique_ptr < SVG::Point > > m_waypoints;
+    strokeDashArray_t m_strokeDashArray;
+    markerEnd_t m_markerEnd;
+    markerStart_t m_markerStart;
 
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(SVG::Polyline protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(SVG::Polyline protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // SVG

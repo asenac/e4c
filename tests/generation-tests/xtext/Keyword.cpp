@@ -7,27 +7,27 @@ using namespace xtext;
 /*PROTECTED REGION ID(xtext::Keyword include) START*/
 /*PROTECTED REGION END*/
 
-Keyword::Keyword() : 
-	m_value()
+Keyword::Keyword() :
+    m_value()
 {
-	/*PROTECTED REGION ID(Keyword constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(Keyword constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 Keyword::~Keyword()
 {
-	/*PROTECTED REGION ID(Keyword destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(Keyword destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 void Keyword::setValue(value_t _value)
 {
-	m_value = _value;;
+    m_value = _value;;
 }
 
 Keyword::value_t Keyword::getValue() const
 {
-	return m_value;
+    return m_value;
 }
 
 
@@ -37,6 +37,6 @@ Keyword::value_t Keyword::getValue() const
 
 ecore::EClass_ptr Keyword::eClassImpl() const
 {
-	return XtextPackage::_instance()->getKeyword();
+    return XtextPackage::_instance()->getKeyword();
 }
- 
+

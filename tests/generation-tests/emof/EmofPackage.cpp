@@ -8,90 +8,90 @@ using namespace emof;
 
 EmofPackage::EmofPackage()
 {
-	m_eFactoryInstance = EmofFactory::_instance();
-	::ecore::EcoreFactory_ptr ecoreFactory = ::ecore::EcoreFactory::_instance();
-	
-	
-	
-	m_Boolean = ecoreFactory->createEDataType();
-	m_Boolean->setName("Boolean");
-	addEClassifiers(m_Boolean);
-	m_Class = ecoreFactory->createEClass();
-	m_Class->setName("Class");
-	addEClassifiers(m_Class);
-	m_Comment = ecoreFactory->createEClass();
-	m_Comment->setName("Comment");
-	addEClassifiers(m_Comment);
-	m_DataType = ecoreFactory->createEClass();
-	m_DataType->setName("DataType");
-	addEClassifiers(m_DataType);
-	m_Element = ecoreFactory->createEClass();
-	m_Element->setName("Element");
-	addEClassifiers(m_Element);
-	m_Enumeration = ecoreFactory->createEClass();
-	m_Enumeration->setName("Enumeration");
-	addEClassifiers(m_Enumeration);
-	m_EnumerationLiteral = ecoreFactory->createEClass();
-	m_EnumerationLiteral->setName("EnumerationLiteral");
-	addEClassifiers(m_EnumerationLiteral);
-	m_Extent = ecoreFactory->createEClass();
-	m_Extent->setName("Extent");
-	addEClassifiers(m_Extent);
-	m_Integer = ecoreFactory->createEDataType();
-	m_Integer->setName("Integer");
-	addEClassifiers(m_Integer);
-	m_MultiplicityElement = ecoreFactory->createEClass();
-	m_MultiplicityElement->setName("MultiplicityElement");
-	addEClassifiers(m_MultiplicityElement);
-	m_NamedElement = ecoreFactory->createEClass();
-	m_NamedElement->setName("NamedElement");
-	addEClassifiers(m_NamedElement);
-	m_Object = ecoreFactory->createEClass();
-	m_Object->setName("Object");
-	addEClassifiers(m_Object);
-	m_Operation = ecoreFactory->createEClass();
-	m_Operation->setName("Operation");
-	addEClassifiers(m_Operation);
-	m_Package = ecoreFactory->createEClass();
-	m_Package->setName("Package");
-	addEClassifiers(m_Package);
-	m_Parameter = ecoreFactory->createEClass();
-	m_Parameter->setName("Parameter");
-	addEClassifiers(m_Parameter);
-	m_PrimitiveType = ecoreFactory->createEClass();
-	m_PrimitiveType->setName("PrimitiveType");
-	addEClassifiers(m_PrimitiveType);
-	m_Property = ecoreFactory->createEClass();
-	m_Property->setName("Property");
-	addEClassifiers(m_Property);
-	m_Real = ecoreFactory->createEDataType();
-	m_Real->setName("Real");
-	addEClassifiers(m_Real);
-	m_String = ecoreFactory->createEDataType();
-	m_String->setName("String");
-	addEClassifiers(m_String);
-	m_Tag = ecoreFactory->createEClass();
-	m_Tag->setName("Tag");
-	addEClassifiers(m_Tag);
-	m_Type = ecoreFactory->createEClass();
-	m_Type->setName("Type");
-	addEClassifiers(m_Type);
-	m_TypedElement = ecoreFactory->createEClass();
-	m_TypedElement->setName("TypedElement");
-	addEClassifiers(m_TypedElement);
-	m_URIExtent = ecoreFactory->createEClass();
-	m_URIExtent->setName("URIExtent");
-	addEClassifiers(m_URIExtent);
-	m_UnlimitedNatural = ecoreFactory->createEDataType();
-	m_UnlimitedNatural->setName("UnlimitedNatural");
-	addEClassifiers(m_UnlimitedNatural);
+    m_eFactoryInstance = EmofFactory::_instance();
+    ::ecore::EcoreFactory_ptr ecoreFactory = ::ecore::EcoreFactory::_instance();
+
+
+
+    m_Boolean = ecoreFactory->createEDataType();
+    m_Boolean->setName("Boolean");
+    addEClassifiers(m_Boolean);
+    m_Class = ecoreFactory->createEClass();
+    m_Class->setName("Class");
+    addEClassifiers(m_Class);
+    m_Comment = ecoreFactory->createEClass();
+    m_Comment->setName("Comment");
+    addEClassifiers(m_Comment);
+    m_DataType = ecoreFactory->createEClass();
+    m_DataType->setName("DataType");
+    addEClassifiers(m_DataType);
+    m_Element = ecoreFactory->createEClass();
+    m_Element->setName("Element");
+    addEClassifiers(m_Element);
+    m_Enumeration = ecoreFactory->createEClass();
+    m_Enumeration->setName("Enumeration");
+    addEClassifiers(m_Enumeration);
+    m_EnumerationLiteral = ecoreFactory->createEClass();
+    m_EnumerationLiteral->setName("EnumerationLiteral");
+    addEClassifiers(m_EnumerationLiteral);
+    m_Extent = ecoreFactory->createEClass();
+    m_Extent->setName("Extent");
+    addEClassifiers(m_Extent);
+    m_Integer = ecoreFactory->createEDataType();
+    m_Integer->setName("Integer");
+    addEClassifiers(m_Integer);
+    m_MultiplicityElement = ecoreFactory->createEClass();
+    m_MultiplicityElement->setName("MultiplicityElement");
+    addEClassifiers(m_MultiplicityElement);
+    m_NamedElement = ecoreFactory->createEClass();
+    m_NamedElement->setName("NamedElement");
+    addEClassifiers(m_NamedElement);
+    m_Object = ecoreFactory->createEClass();
+    m_Object->setName("Object");
+    addEClassifiers(m_Object);
+    m_Operation = ecoreFactory->createEClass();
+    m_Operation->setName("Operation");
+    addEClassifiers(m_Operation);
+    m_Package = ecoreFactory->createEClass();
+    m_Package->setName("Package");
+    addEClassifiers(m_Package);
+    m_Parameter = ecoreFactory->createEClass();
+    m_Parameter->setName("Parameter");
+    addEClassifiers(m_Parameter);
+    m_PrimitiveType = ecoreFactory->createEClass();
+    m_PrimitiveType->setName("PrimitiveType");
+    addEClassifiers(m_PrimitiveType);
+    m_Property = ecoreFactory->createEClass();
+    m_Property->setName("Property");
+    addEClassifiers(m_Property);
+    m_Real = ecoreFactory->createEDataType();
+    m_Real->setName("Real");
+    addEClassifiers(m_Real);
+    m_String = ecoreFactory->createEDataType();
+    m_String->setName("String");
+    addEClassifiers(m_String);
+    m_Tag = ecoreFactory->createEClass();
+    m_Tag->setName("Tag");
+    addEClassifiers(m_Tag);
+    m_Type = ecoreFactory->createEClass();
+    m_Type->setName("Type");
+    addEClassifiers(m_Type);
+    m_TypedElement = ecoreFactory->createEClass();
+    m_TypedElement->setName("TypedElement");
+    addEClassifiers(m_TypedElement);
+    m_URIExtent = ecoreFactory->createEClass();
+    m_URIExtent->setName("URIExtent");
+    addEClassifiers(m_URIExtent);
+    m_UnlimitedNatural = ecoreFactory->createEDataType();
+    m_UnlimitedNatural->setName("UnlimitedNatural");
+    addEClassifiers(m_UnlimitedNatural);
 
     m_Boolean->setSerializable(true);
     m_Integer->setSerializable(true);
     m_Real->setSerializable(true);
     m_String->setSerializable(true);
     m_UnlimitedNatural->setSerializable(true);
-	
+
     {
         m_Class__isAbstract = ecoreFactory->createEAttribute();
         m_Class__isAbstract->setName("isAbstract");
@@ -356,789 +356,789 @@ EmofPackage::EmofPackage()
         m_TypedElement->addEReferences(m_TypedElement__type);
         m_TypedElement->addEAllReferences(m_TypedElement__type);
     }
-	
-	m_Class->addESuperTypes(m_Type);
-	m_Class->addAllEAllOperations(m_Type->getEOperations());
-	m_Class->addAllEAllReferences(m_Type->getEReferences());
-	m_Class->addAllEAllAttributes(m_Type->getEAttributes());
-	m_Class->addAllEAllStructuralFeatures(m_Type->getEStructuralFeatures());
-	m_Comment->addESuperTypes(m_Element);
-	m_Comment->addAllEAllOperations(m_Element->getEOperations());
-	m_Comment->addAllEAllReferences(m_Element->getEReferences());
-	m_Comment->addAllEAllAttributes(m_Element->getEAttributes());
-	m_Comment->addAllEAllStructuralFeatures(m_Element->getEStructuralFeatures());
-	m_DataType->addESuperTypes(m_Type);
-	m_DataType->addAllEAllOperations(m_Type->getEOperations());
-	m_DataType->addAllEAllReferences(m_Type->getEReferences());
-	m_DataType->addAllEAllAttributes(m_Type->getEAttributes());
-	m_DataType->addAllEAllStructuralFeatures(m_Type->getEStructuralFeatures());
-	m_Element->addESuperTypes(m_Object);
-	m_Element->addAllEAllOperations(m_Object->getEOperations());
-	m_Element->addAllEAllReferences(m_Object->getEReferences());
-	m_Element->addAllEAllAttributes(m_Object->getEAttributes());
-	m_Element->addAllEAllStructuralFeatures(m_Object->getEStructuralFeatures());
-	m_Enumeration->addESuperTypes(m_DataType);
-	m_Enumeration->addAllEAllOperations(m_DataType->getEOperations());
-	m_Enumeration->addAllEAllReferences(m_DataType->getEReferences());
-	m_Enumeration->addAllEAllAttributes(m_DataType->getEAttributes());
-	m_Enumeration->addAllEAllStructuralFeatures(m_DataType->getEStructuralFeatures());
-	m_EnumerationLiteral->addESuperTypes(m_NamedElement);
-	m_EnumerationLiteral->addAllEAllOperations(m_NamedElement->getEOperations());
-	m_EnumerationLiteral->addAllEAllReferences(m_NamedElement->getEReferences());
-	m_EnumerationLiteral->addAllEAllAttributes(m_NamedElement->getEAttributes());
-	m_EnumerationLiteral->addAllEAllStructuralFeatures(m_NamedElement->getEStructuralFeatures());
-	m_Extent->addESuperTypes(m_Object);
-	m_Extent->addAllEAllOperations(m_Object->getEOperations());
-	m_Extent->addAllEAllReferences(m_Object->getEReferences());
-	m_Extent->addAllEAllAttributes(m_Object->getEAttributes());
-	m_Extent->addAllEAllStructuralFeatures(m_Object->getEStructuralFeatures());
-	m_NamedElement->addESuperTypes(m_Element);
-	m_NamedElement->addAllEAllOperations(m_Element->getEOperations());
-	m_NamedElement->addAllEAllReferences(m_Element->getEReferences());
-	m_NamedElement->addAllEAllAttributes(m_Element->getEAttributes());
-	m_NamedElement->addAllEAllStructuralFeatures(m_Element->getEStructuralFeatures());
-	m_Operation->addESuperTypes(m_TypedElement);
-	m_Operation->addAllEAllOperations(m_TypedElement->getEOperations());
-	m_Operation->addAllEAllReferences(m_TypedElement->getEReferences());
-	m_Operation->addAllEAllAttributes(m_TypedElement->getEAttributes());
-	m_Operation->addAllEAllStructuralFeatures(m_TypedElement->getEStructuralFeatures());
-	m_Operation->addESuperTypes(m_MultiplicityElement);
-	m_Operation->addAllEAllOperations(m_MultiplicityElement->getEOperations());
-	m_Operation->addAllEAllReferences(m_MultiplicityElement->getEReferences());
-	m_Operation->addAllEAllAttributes(m_MultiplicityElement->getEAttributes());
-	m_Operation->addAllEAllStructuralFeatures(m_MultiplicityElement->getEStructuralFeatures());
-	m_Package->addESuperTypes(m_NamedElement);
-	m_Package->addAllEAllOperations(m_NamedElement->getEOperations());
-	m_Package->addAllEAllReferences(m_NamedElement->getEReferences());
-	m_Package->addAllEAllAttributes(m_NamedElement->getEAttributes());
-	m_Package->addAllEAllStructuralFeatures(m_NamedElement->getEStructuralFeatures());
-	m_Parameter->addESuperTypes(m_TypedElement);
-	m_Parameter->addAllEAllOperations(m_TypedElement->getEOperations());
-	m_Parameter->addAllEAllReferences(m_TypedElement->getEReferences());
-	m_Parameter->addAllEAllAttributes(m_TypedElement->getEAttributes());
-	m_Parameter->addAllEAllStructuralFeatures(m_TypedElement->getEStructuralFeatures());
-	m_Parameter->addESuperTypes(m_MultiplicityElement);
-	m_Parameter->addAllEAllOperations(m_MultiplicityElement->getEOperations());
-	m_Parameter->addAllEAllReferences(m_MultiplicityElement->getEReferences());
-	m_Parameter->addAllEAllAttributes(m_MultiplicityElement->getEAttributes());
-	m_Parameter->addAllEAllStructuralFeatures(m_MultiplicityElement->getEStructuralFeatures());
-	m_PrimitiveType->addESuperTypes(m_DataType);
-	m_PrimitiveType->addAllEAllOperations(m_DataType->getEOperations());
-	m_PrimitiveType->addAllEAllReferences(m_DataType->getEReferences());
-	m_PrimitiveType->addAllEAllAttributes(m_DataType->getEAttributes());
-	m_PrimitiveType->addAllEAllStructuralFeatures(m_DataType->getEStructuralFeatures());
-	m_Property->addESuperTypes(m_TypedElement);
-	m_Property->addAllEAllOperations(m_TypedElement->getEOperations());
-	m_Property->addAllEAllReferences(m_TypedElement->getEReferences());
-	m_Property->addAllEAllAttributes(m_TypedElement->getEAttributes());
-	m_Property->addAllEAllStructuralFeatures(m_TypedElement->getEStructuralFeatures());
-	m_Property->addESuperTypes(m_MultiplicityElement);
-	m_Property->addAllEAllOperations(m_MultiplicityElement->getEOperations());
-	m_Property->addAllEAllReferences(m_MultiplicityElement->getEReferences());
-	m_Property->addAllEAllAttributes(m_MultiplicityElement->getEAttributes());
-	m_Property->addAllEAllStructuralFeatures(m_MultiplicityElement->getEStructuralFeatures());
-	m_Tag->addESuperTypes(m_Element);
-	m_Tag->addAllEAllOperations(m_Element->getEOperations());
-	m_Tag->addAllEAllReferences(m_Element->getEReferences());
-	m_Tag->addAllEAllAttributes(m_Element->getEAttributes());
-	m_Tag->addAllEAllStructuralFeatures(m_Element->getEStructuralFeatures());
-	m_Type->addESuperTypes(m_NamedElement);
-	m_Type->addAllEAllOperations(m_NamedElement->getEOperations());
-	m_Type->addAllEAllReferences(m_NamedElement->getEReferences());
-	m_Type->addAllEAllAttributes(m_NamedElement->getEAttributes());
-	m_Type->addAllEAllStructuralFeatures(m_NamedElement->getEStructuralFeatures());
-	m_TypedElement->addESuperTypes(m_NamedElement);
-	m_TypedElement->addAllEAllOperations(m_NamedElement->getEOperations());
-	m_TypedElement->addAllEAllReferences(m_NamedElement->getEReferences());
-	m_TypedElement->addAllEAllAttributes(m_NamedElement->getEAttributes());
-	m_TypedElement->addAllEAllStructuralFeatures(m_NamedElement->getEStructuralFeatures());
-	m_URIExtent->addESuperTypes(m_Extent);
-	m_URIExtent->addAllEAllOperations(m_Extent->getEOperations());
-	m_URIExtent->addAllEAllReferences(m_Extent->getEReferences());
-	m_URIExtent->addAllEAllAttributes(m_Extent->getEAttributes());
-	m_URIExtent->addAllEAllStructuralFeatures(m_Extent->getEStructuralFeatures());
-	
-	
-	m_Class->addFeatureAccesors(m_Class__isAbstract, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< emof::Class_ptr >(o)->getIsAbstract()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
-	m_Class->addFeatureAccesors(m_Class__ownedAttribute, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< emof::Class_ptr >(o)->getOwnedAttribute()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
-	m_Class->addFeatureAccesors(m_Class__ownedOperation, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< emof::Class_ptr >(o)->getOwnedOperation()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
-	m_Class->addFeatureAccesors(m_Class__superClass, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< emof::Class_ptr >(o)->getSuperClass()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
-	m_Comment->addFeatureAccesors(m_Comment__annotatedElement, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< emof::Comment_ptr >(o)->getAnnotatedElement()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
-	m_Element->addFeatureAccesors(m_Element__ownedComment, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< emof::Element_ptr >(o)->getOwnedComment()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
-	m_Element->addFeatureAccesors(m_Element__tag, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< emof::Element_ptr >(o)->getTag()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
-	m_Enumeration->addFeatureAccesors(m_Enumeration__ownedLiteral, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< emof::Enumeration_ptr >(o)->getOwnedLiteral()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
-	m_EnumerationLiteral->addFeatureAccesors(m_EnumerationLiteral__enumeration, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< emof::EnumerationLiteral_ptr >(o)->getEnumeration()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
-	m_MultiplicityElement->addFeatureAccesors(m_MultiplicityElement__isOrdered, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< emof::MultiplicityElement_ptr >(o)->getIsOrdered()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
-	m_MultiplicityElement->addFeatureAccesors(m_MultiplicityElement__isUnique, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< emof::MultiplicityElement_ptr >(o)->getIsUnique()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
-	m_MultiplicityElement->addFeatureAccesors(m_MultiplicityElement__lower, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< emof::MultiplicityElement_ptr >(o)->getLower()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
-	m_MultiplicityElement->addFeatureAccesors(m_MultiplicityElement__upper, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< emof::MultiplicityElement_ptr >(o)->getUpper()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
-	m_NamedElement->addFeatureAccesors(m_NamedElement__name, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< emof::NamedElement_ptr >(o)->getName()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
-	m_Operation->addFeatureAccesors(m_Operation__class, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< emof::Operation_ptr >(o)->getClass()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
-	m_Operation->addFeatureAccesors(m_Operation__ownedParameter, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< emof::Operation_ptr >(o)->getOwnedParameter()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
-	m_Operation->addFeatureAccesors(m_Operation__raisedException, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< emof::Operation_ptr >(o)->getRaisedException()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
-	m_Package->addFeatureAccesors(m_Package__nestedPackage, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< emof::Package_ptr >(o)->getNestedPackage()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
-	m_Package->addFeatureAccesors(m_Package__ownedType, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< emof::Package_ptr >(o)->getOwnedType()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
-	m_Package->addFeatureAccesors(m_Package__uri, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< emof::Package_ptr >(o)->getUri()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
-	m_Parameter->addFeatureAccesors(m_Parameter__operation, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< emof::Parameter_ptr >(o)->getOperation()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
-	m_Property->addFeatureAccesors(m_Property__class, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< emof::Property_ptr >(o)->getClass()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
-	m_Property->addFeatureAccesors(m_Property__default, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< emof::Property_ptr >(o)->getDefault()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
-	m_Property->addFeatureAccesors(m_Property__isComposite, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< emof::Property_ptr >(o)->getIsComposite()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
-	m_Property->addFeatureAccesors(m_Property__isDerived, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< emof::Property_ptr >(o)->getIsDerived()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
-	m_Property->addFeatureAccesors(m_Property__isId, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< emof::Property_ptr >(o)->getIsId()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
-	m_Property->addFeatureAccesors(m_Property__isReadOnly, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< emof::Property_ptr >(o)->getIsReadOnly()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
-	m_Property->addFeatureAccesors(m_Property__opposite, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< emof::Property_ptr >(o)->getOpposite()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
-	m_Tag->addFeatureAccesors(m_Tag__element, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< emof::Tag_ptr >(o)->getElement()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
-	m_Tag->addFeatureAccesors(m_Tag__name, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< emof::Tag_ptr >(o)->getName()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
-	m_Tag->addFeatureAccesors(m_Tag__value, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< emof::Tag_ptr >(o)->getValue()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
-	m_Type->addFeatureAccesors(m_Type__package, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< emof::Type_ptr >(o)->getPackage()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
-	m_TypedElement->addFeatureAccesors(m_TypedElement__type, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< emof::TypedElement_ptr >(o)->getType()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
-	
+
+    m_Class->addESuperTypes(m_Type);
+    m_Class->addAllEAllOperations(m_Type->getEOperations());
+    m_Class->addAllEAllReferences(m_Type->getEReferences());
+    m_Class->addAllEAllAttributes(m_Type->getEAttributes());
+    m_Class->addAllEAllStructuralFeatures(m_Type->getEStructuralFeatures());
+    m_Comment->addESuperTypes(m_Element);
+    m_Comment->addAllEAllOperations(m_Element->getEOperations());
+    m_Comment->addAllEAllReferences(m_Element->getEReferences());
+    m_Comment->addAllEAllAttributes(m_Element->getEAttributes());
+    m_Comment->addAllEAllStructuralFeatures(m_Element->getEStructuralFeatures());
+    m_DataType->addESuperTypes(m_Type);
+    m_DataType->addAllEAllOperations(m_Type->getEOperations());
+    m_DataType->addAllEAllReferences(m_Type->getEReferences());
+    m_DataType->addAllEAllAttributes(m_Type->getEAttributes());
+    m_DataType->addAllEAllStructuralFeatures(m_Type->getEStructuralFeatures());
+    m_Element->addESuperTypes(m_Object);
+    m_Element->addAllEAllOperations(m_Object->getEOperations());
+    m_Element->addAllEAllReferences(m_Object->getEReferences());
+    m_Element->addAllEAllAttributes(m_Object->getEAttributes());
+    m_Element->addAllEAllStructuralFeatures(m_Object->getEStructuralFeatures());
+    m_Enumeration->addESuperTypes(m_DataType);
+    m_Enumeration->addAllEAllOperations(m_DataType->getEOperations());
+    m_Enumeration->addAllEAllReferences(m_DataType->getEReferences());
+    m_Enumeration->addAllEAllAttributes(m_DataType->getEAttributes());
+    m_Enumeration->addAllEAllStructuralFeatures(m_DataType->getEStructuralFeatures());
+    m_EnumerationLiteral->addESuperTypes(m_NamedElement);
+    m_EnumerationLiteral->addAllEAllOperations(m_NamedElement->getEOperations());
+    m_EnumerationLiteral->addAllEAllReferences(m_NamedElement->getEReferences());
+    m_EnumerationLiteral->addAllEAllAttributes(m_NamedElement->getEAttributes());
+    m_EnumerationLiteral->addAllEAllStructuralFeatures(m_NamedElement->getEStructuralFeatures());
+    m_Extent->addESuperTypes(m_Object);
+    m_Extent->addAllEAllOperations(m_Object->getEOperations());
+    m_Extent->addAllEAllReferences(m_Object->getEReferences());
+    m_Extent->addAllEAllAttributes(m_Object->getEAttributes());
+    m_Extent->addAllEAllStructuralFeatures(m_Object->getEStructuralFeatures());
+    m_NamedElement->addESuperTypes(m_Element);
+    m_NamedElement->addAllEAllOperations(m_Element->getEOperations());
+    m_NamedElement->addAllEAllReferences(m_Element->getEReferences());
+    m_NamedElement->addAllEAllAttributes(m_Element->getEAttributes());
+    m_NamedElement->addAllEAllStructuralFeatures(m_Element->getEStructuralFeatures());
+    m_Operation->addESuperTypes(m_TypedElement);
+    m_Operation->addAllEAllOperations(m_TypedElement->getEOperations());
+    m_Operation->addAllEAllReferences(m_TypedElement->getEReferences());
+    m_Operation->addAllEAllAttributes(m_TypedElement->getEAttributes());
+    m_Operation->addAllEAllStructuralFeatures(m_TypedElement->getEStructuralFeatures());
+    m_Operation->addESuperTypes(m_MultiplicityElement);
+    m_Operation->addAllEAllOperations(m_MultiplicityElement->getEOperations());
+    m_Operation->addAllEAllReferences(m_MultiplicityElement->getEReferences());
+    m_Operation->addAllEAllAttributes(m_MultiplicityElement->getEAttributes());
+    m_Operation->addAllEAllStructuralFeatures(m_MultiplicityElement->getEStructuralFeatures());
+    m_Package->addESuperTypes(m_NamedElement);
+    m_Package->addAllEAllOperations(m_NamedElement->getEOperations());
+    m_Package->addAllEAllReferences(m_NamedElement->getEReferences());
+    m_Package->addAllEAllAttributes(m_NamedElement->getEAttributes());
+    m_Package->addAllEAllStructuralFeatures(m_NamedElement->getEStructuralFeatures());
+    m_Parameter->addESuperTypes(m_TypedElement);
+    m_Parameter->addAllEAllOperations(m_TypedElement->getEOperations());
+    m_Parameter->addAllEAllReferences(m_TypedElement->getEReferences());
+    m_Parameter->addAllEAllAttributes(m_TypedElement->getEAttributes());
+    m_Parameter->addAllEAllStructuralFeatures(m_TypedElement->getEStructuralFeatures());
+    m_Parameter->addESuperTypes(m_MultiplicityElement);
+    m_Parameter->addAllEAllOperations(m_MultiplicityElement->getEOperations());
+    m_Parameter->addAllEAllReferences(m_MultiplicityElement->getEReferences());
+    m_Parameter->addAllEAllAttributes(m_MultiplicityElement->getEAttributes());
+    m_Parameter->addAllEAllStructuralFeatures(m_MultiplicityElement->getEStructuralFeatures());
+    m_PrimitiveType->addESuperTypes(m_DataType);
+    m_PrimitiveType->addAllEAllOperations(m_DataType->getEOperations());
+    m_PrimitiveType->addAllEAllReferences(m_DataType->getEReferences());
+    m_PrimitiveType->addAllEAllAttributes(m_DataType->getEAttributes());
+    m_PrimitiveType->addAllEAllStructuralFeatures(m_DataType->getEStructuralFeatures());
+    m_Property->addESuperTypes(m_TypedElement);
+    m_Property->addAllEAllOperations(m_TypedElement->getEOperations());
+    m_Property->addAllEAllReferences(m_TypedElement->getEReferences());
+    m_Property->addAllEAllAttributes(m_TypedElement->getEAttributes());
+    m_Property->addAllEAllStructuralFeatures(m_TypedElement->getEStructuralFeatures());
+    m_Property->addESuperTypes(m_MultiplicityElement);
+    m_Property->addAllEAllOperations(m_MultiplicityElement->getEOperations());
+    m_Property->addAllEAllReferences(m_MultiplicityElement->getEReferences());
+    m_Property->addAllEAllAttributes(m_MultiplicityElement->getEAttributes());
+    m_Property->addAllEAllStructuralFeatures(m_MultiplicityElement->getEStructuralFeatures());
+    m_Tag->addESuperTypes(m_Element);
+    m_Tag->addAllEAllOperations(m_Element->getEOperations());
+    m_Tag->addAllEAllReferences(m_Element->getEReferences());
+    m_Tag->addAllEAllAttributes(m_Element->getEAttributes());
+    m_Tag->addAllEAllStructuralFeatures(m_Element->getEStructuralFeatures());
+    m_Type->addESuperTypes(m_NamedElement);
+    m_Type->addAllEAllOperations(m_NamedElement->getEOperations());
+    m_Type->addAllEAllReferences(m_NamedElement->getEReferences());
+    m_Type->addAllEAllAttributes(m_NamedElement->getEAttributes());
+    m_Type->addAllEAllStructuralFeatures(m_NamedElement->getEStructuralFeatures());
+    m_TypedElement->addESuperTypes(m_NamedElement);
+    m_TypedElement->addAllEAllOperations(m_NamedElement->getEOperations());
+    m_TypedElement->addAllEAllReferences(m_NamedElement->getEReferences());
+    m_TypedElement->addAllEAllAttributes(m_NamedElement->getEAttributes());
+    m_TypedElement->addAllEAllStructuralFeatures(m_NamedElement->getEStructuralFeatures());
+    m_URIExtent->addESuperTypes(m_Extent);
+    m_URIExtent->addAllEAllOperations(m_Extent->getEOperations());
+    m_URIExtent->addAllEAllReferences(m_Extent->getEReferences());
+    m_URIExtent->addAllEAllAttributes(m_Extent->getEAttributes());
+    m_URIExtent->addAllEAllStructuralFeatures(m_Extent->getEStructuralFeatures());
+
+
+    m_Class->addFeatureAccesors(m_Class__isAbstract,
+        [](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< emof::Class_ptr >(o)->getIsAbstract()); },
+        [](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+    m_Class->addFeatureAccesors(m_Class__ownedAttribute,
+        [](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< emof::Class_ptr >(o)->getOwnedAttribute()); },
+        [](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+    m_Class->addFeatureAccesors(m_Class__ownedOperation,
+        [](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< emof::Class_ptr >(o)->getOwnedOperation()); },
+        [](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+    m_Class->addFeatureAccesors(m_Class__superClass,
+        [](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< emof::Class_ptr >(o)->getSuperClass()); },
+        [](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+    m_Comment->addFeatureAccesors(m_Comment__annotatedElement,
+        [](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< emof::Comment_ptr >(o)->getAnnotatedElement()); },
+        [](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+    m_Element->addFeatureAccesors(m_Element__ownedComment,
+        [](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< emof::Element_ptr >(o)->getOwnedComment()); },
+        [](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+    m_Element->addFeatureAccesors(m_Element__tag,
+        [](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< emof::Element_ptr >(o)->getTag()); },
+        [](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+    m_Enumeration->addFeatureAccesors(m_Enumeration__ownedLiteral,
+        [](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< emof::Enumeration_ptr >(o)->getOwnedLiteral()); },
+        [](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+    m_EnumerationLiteral->addFeatureAccesors(m_EnumerationLiteral__enumeration,
+        [](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< emof::EnumerationLiteral_ptr >(o)->getEnumeration()); },
+        [](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+    m_MultiplicityElement->addFeatureAccesors(m_MultiplicityElement__isOrdered,
+        [](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< emof::MultiplicityElement_ptr >(o)->getIsOrdered()); },
+        [](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+    m_MultiplicityElement->addFeatureAccesors(m_MultiplicityElement__isUnique,
+        [](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< emof::MultiplicityElement_ptr >(o)->getIsUnique()); },
+        [](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+    m_MultiplicityElement->addFeatureAccesors(m_MultiplicityElement__lower,
+        [](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< emof::MultiplicityElement_ptr >(o)->getLower()); },
+        [](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+    m_MultiplicityElement->addFeatureAccesors(m_MultiplicityElement__upper,
+        [](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< emof::MultiplicityElement_ptr >(o)->getUpper()); },
+        [](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+    m_NamedElement->addFeatureAccesors(m_NamedElement__name,
+        [](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< emof::NamedElement_ptr >(o)->getName()); },
+        [](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+    m_Operation->addFeatureAccesors(m_Operation__class,
+        [](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< emof::Operation_ptr >(o)->getClass()); },
+        [](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+    m_Operation->addFeatureAccesors(m_Operation__ownedParameter,
+        [](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< emof::Operation_ptr >(o)->getOwnedParameter()); },
+        [](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+    m_Operation->addFeatureAccesors(m_Operation__raisedException,
+        [](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< emof::Operation_ptr >(o)->getRaisedException()); },
+        [](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+    m_Package->addFeatureAccesors(m_Package__nestedPackage,
+        [](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< emof::Package_ptr >(o)->getNestedPackage()); },
+        [](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+    m_Package->addFeatureAccesors(m_Package__ownedType,
+        [](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< emof::Package_ptr >(o)->getOwnedType()); },
+        [](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+    m_Package->addFeatureAccesors(m_Package__uri,
+        [](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< emof::Package_ptr >(o)->getUri()); },
+        [](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+    m_Parameter->addFeatureAccesors(m_Parameter__operation,
+        [](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< emof::Parameter_ptr >(o)->getOperation()); },
+        [](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+    m_Property->addFeatureAccesors(m_Property__class,
+        [](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< emof::Property_ptr >(o)->getClass()); },
+        [](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+    m_Property->addFeatureAccesors(m_Property__default,
+        [](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< emof::Property_ptr >(o)->getDefault()); },
+        [](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+    m_Property->addFeatureAccesors(m_Property__isComposite,
+        [](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< emof::Property_ptr >(o)->getIsComposite()); },
+        [](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+    m_Property->addFeatureAccesors(m_Property__isDerived,
+        [](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< emof::Property_ptr >(o)->getIsDerived()); },
+        [](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+    m_Property->addFeatureAccesors(m_Property__isId,
+        [](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< emof::Property_ptr >(o)->getIsId()); },
+        [](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+    m_Property->addFeatureAccesors(m_Property__isReadOnly,
+        [](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< emof::Property_ptr >(o)->getIsReadOnly()); },
+        [](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+    m_Property->addFeatureAccesors(m_Property__opposite,
+        [](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< emof::Property_ptr >(o)->getOpposite()); },
+        [](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+    m_Tag->addFeatureAccesors(m_Tag__element,
+        [](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< emof::Tag_ptr >(o)->getElement()); },
+        [](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+    m_Tag->addFeatureAccesors(m_Tag__name,
+        [](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< emof::Tag_ptr >(o)->getName()); },
+        [](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+    m_Tag->addFeatureAccesors(m_Tag__value,
+        [](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< emof::Tag_ptr >(o)->getValue()); },
+        [](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+    m_Type->addFeatureAccesors(m_Type__package,
+        [](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< emof::Type_ptr >(o)->getPackage()); },
+        [](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+    m_TypedElement->addFeatureAccesors(m_TypedElement__type,
+        [](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< emof::TypedElement_ptr >(o)->getType()); },
+        [](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+
 }
 
 const EmofPackage_ptr EmofPackage::_instance()
 {
-	static EmofPackage __instance;
-	return &__instance;
+    static EmofPackage __instance;
+    return &__instance;
 }
 
 ecore::EDataType_ptr EmofPackage::getBoolean() const
 {
-	return m_Boolean;
+    return m_Boolean;
 }
-  	
+
 e4c::tag_t EmofPackage::getTag_Boolean() const
 {
-	return e4c::tag< Boolean >::get();
+    return e4c::tag< Boolean >::get();
 }
- 
+
 ecore::EClass_ptr EmofPackage::getClass() const
 {
-	return m_Class;
+    return m_Class;
 }
-  	
+
 e4c::tag_t EmofPackage::getTag_Class() const
 {
-	return e4c::tag< Class >::get();
+    return e4c::tag< Class >::get();
 }
- 
+
 ecore::EClass_ptr EmofPackage::getComment() const
 {
-	return m_Comment;
+    return m_Comment;
 }
-  	
+
 e4c::tag_t EmofPackage::getTag_Comment() const
 {
-	return e4c::tag< Comment >::get();
+    return e4c::tag< Comment >::get();
 }
- 
+
 ecore::EClass_ptr EmofPackage::getDataType() const
 {
-	return m_DataType;
+    return m_DataType;
 }
-  	
+
 e4c::tag_t EmofPackage::getTag_DataType() const
 {
-	return e4c::tag< DataType >::get();
+    return e4c::tag< DataType >::get();
 }
- 
+
 ecore::EClass_ptr EmofPackage::getElement() const
 {
-	return m_Element;
+    return m_Element;
 }
-  	
+
 e4c::tag_t EmofPackage::getTag_Element() const
 {
-	return e4c::tag< Element >::get();
+    return e4c::tag< Element >::get();
 }
- 
+
 ecore::EClass_ptr EmofPackage::getEnumeration() const
 {
-	return m_Enumeration;
+    return m_Enumeration;
 }
-  	
+
 e4c::tag_t EmofPackage::getTag_Enumeration() const
 {
-	return e4c::tag< Enumeration >::get();
+    return e4c::tag< Enumeration >::get();
 }
- 
+
 ecore::EClass_ptr EmofPackage::getEnumerationLiteral() const
 {
-	return m_EnumerationLiteral;
+    return m_EnumerationLiteral;
 }
-  	
+
 e4c::tag_t EmofPackage::getTag_EnumerationLiteral() const
 {
-	return e4c::tag< EnumerationLiteral >::get();
+    return e4c::tag< EnumerationLiteral >::get();
 }
- 
+
 ecore::EClass_ptr EmofPackage::getExtent() const
 {
-	return m_Extent;
+    return m_Extent;
 }
-  	
+
 e4c::tag_t EmofPackage::getTag_Extent() const
 {
-	return e4c::tag< Extent >::get();
+    return e4c::tag< Extent >::get();
 }
- 
+
 ecore::EDataType_ptr EmofPackage::getInteger() const
 {
-	return m_Integer;
+    return m_Integer;
 }
-  	
+
 e4c::tag_t EmofPackage::getTag_Integer() const
 {
-	return e4c::tag< Integer >::get();
+    return e4c::tag< Integer >::get();
 }
- 
+
 ecore::EClass_ptr EmofPackage::getMultiplicityElement() const
 {
-	return m_MultiplicityElement;
+    return m_MultiplicityElement;
 }
-  	
+
 e4c::tag_t EmofPackage::getTag_MultiplicityElement() const
 {
-	return e4c::tag< MultiplicityElement >::get();
+    return e4c::tag< MultiplicityElement >::get();
 }
- 
+
 ecore::EClass_ptr EmofPackage::getNamedElement() const
 {
-	return m_NamedElement;
+    return m_NamedElement;
 }
-  	
+
 e4c::tag_t EmofPackage::getTag_NamedElement() const
 {
-	return e4c::tag< NamedElement >::get();
+    return e4c::tag< NamedElement >::get();
 }
- 
+
 ecore::EClass_ptr EmofPackage::getObject() const
 {
-	return m_Object;
+    return m_Object;
 }
-  	
+
 e4c::tag_t EmofPackage::getTag_Object() const
 {
-	return e4c::tag< Object >::get();
+    return e4c::tag< Object >::get();
 }
- 
+
 ecore::EClass_ptr EmofPackage::getOperation() const
 {
-	return m_Operation;
+    return m_Operation;
 }
-  	
+
 e4c::tag_t EmofPackage::getTag_Operation() const
 {
-	return e4c::tag< Operation >::get();
+    return e4c::tag< Operation >::get();
 }
- 
+
 ecore::EClass_ptr EmofPackage::getPackage() const
 {
-	return m_Package;
+    return m_Package;
 }
-  	
+
 e4c::tag_t EmofPackage::getTag_Package() const
 {
-	return e4c::tag< Package >::get();
+    return e4c::tag< Package >::get();
 }
- 
+
 ecore::EClass_ptr EmofPackage::getParameter() const
 {
-	return m_Parameter;
+    return m_Parameter;
 }
-  	
+
 e4c::tag_t EmofPackage::getTag_Parameter() const
 {
-	return e4c::tag< Parameter >::get();
+    return e4c::tag< Parameter >::get();
 }
- 
+
 ecore::EClass_ptr EmofPackage::getPrimitiveType() const
 {
-	return m_PrimitiveType;
+    return m_PrimitiveType;
 }
-  	
+
 e4c::tag_t EmofPackage::getTag_PrimitiveType() const
 {
-	return e4c::tag< PrimitiveType >::get();
+    return e4c::tag< PrimitiveType >::get();
 }
- 
+
 ecore::EClass_ptr EmofPackage::getProperty() const
 {
-	return m_Property;
+    return m_Property;
 }
-  	
+
 e4c::tag_t EmofPackage::getTag_Property() const
 {
-	return e4c::tag< Property >::get();
+    return e4c::tag< Property >::get();
 }
- 
+
 ecore::EDataType_ptr EmofPackage::getReal() const
 {
-	return m_Real;
+    return m_Real;
 }
-  	
+
 e4c::tag_t EmofPackage::getTag_Real() const
 {
-	return e4c::tag< Real >::get();
+    return e4c::tag< Real >::get();
 }
- 
+
 ecore::EDataType_ptr EmofPackage::getString() const
 {
-	return m_String;
+    return m_String;
 }
-  	
+
 e4c::tag_t EmofPackage::getTag_String() const
 {
-	return e4c::tag< String >::get();
+    return e4c::tag< String >::get();
 }
- 
+
 ecore::EClass_ptr EmofPackage::getTag() const
 {
-	return m_Tag;
+    return m_Tag;
 }
-  	
+
 e4c::tag_t EmofPackage::getTag_Tag() const
 {
-	return e4c::tag< Tag >::get();
+    return e4c::tag< Tag >::get();
 }
- 
+
 ecore::EClass_ptr EmofPackage::getType() const
 {
-	return m_Type;
+    return m_Type;
 }
-  	
+
 e4c::tag_t EmofPackage::getTag_Type() const
 {
-	return e4c::tag< Type >::get();
+    return e4c::tag< Type >::get();
 }
- 
+
 ecore::EClass_ptr EmofPackage::getTypedElement() const
 {
-	return m_TypedElement;
+    return m_TypedElement;
 }
-  	
+
 e4c::tag_t EmofPackage::getTag_TypedElement() const
 {
-	return e4c::tag< TypedElement >::get();
+    return e4c::tag< TypedElement >::get();
 }
- 
+
 ecore::EClass_ptr EmofPackage::getURIExtent() const
 {
-	return m_URIExtent;
+    return m_URIExtent;
 }
-  	
+
 e4c::tag_t EmofPackage::getTag_URIExtent() const
 {
-	return e4c::tag< URIExtent >::get();
+    return e4c::tag< URIExtent >::get();
 }
- 
+
 ecore::EDataType_ptr EmofPackage::getUnlimitedNatural() const
 {
-	return m_UnlimitedNatural;
+    return m_UnlimitedNatural;
 }
-  	
+
 e4c::tag_t EmofPackage::getTag_UnlimitedNatural() const
 {
-	return e4c::tag< UnlimitedNatural >::get();
+    return e4c::tag< UnlimitedNatural >::get();
 }
- 
+
 e4c::tag_t EmofPackage::getTag_Class__isAbstract() const
 {
-	return e4c::tag< Class__isAbstract_tag >::get();
+    return e4c::tag< Class__isAbstract_tag >::get();
 }
 
 ecore::EAttribute_ptr EmofPackage::getClass__isAbstract() const
 {
-	return m_Class__isAbstract;
+    return m_Class__isAbstract;
 }
 
 e4c::tag_t EmofPackage::getTag_Class__ownedAttribute() const
 {
-	return e4c::tag< Class__ownedAttribute_tag >::get();
+    return e4c::tag< Class__ownedAttribute_tag >::get();
 }
 
 ecore::EReference_ptr EmofPackage::getClass__ownedAttribute() const
 {
-	return m_Class__ownedAttribute;
+    return m_Class__ownedAttribute;
 }
 
 e4c::tag_t EmofPackage::getTag_Class__ownedOperation() const
 {
-	return e4c::tag< Class__ownedOperation_tag >::get();
+    return e4c::tag< Class__ownedOperation_tag >::get();
 }
 
 ecore::EReference_ptr EmofPackage::getClass__ownedOperation() const
 {
-	return m_Class__ownedOperation;
+    return m_Class__ownedOperation;
 }
 
 e4c::tag_t EmofPackage::getTag_Class__superClass() const
 {
-	return e4c::tag< Class__superClass_tag >::get();
+    return e4c::tag< Class__superClass_tag >::get();
 }
 
 ecore::EReference_ptr EmofPackage::getClass__superClass() const
 {
-	return m_Class__superClass;
+    return m_Class__superClass;
 }
 
 e4c::tag_t EmofPackage::getTag_Comment__annotatedElement() const
 {
-	return e4c::tag< Comment__annotatedElement_tag >::get();
+    return e4c::tag< Comment__annotatedElement_tag >::get();
 }
 
 ecore::EReference_ptr EmofPackage::getComment__annotatedElement() const
 {
-	return m_Comment__annotatedElement;
+    return m_Comment__annotatedElement;
 }
 
 e4c::tag_t EmofPackage::getTag_Element__ownedComment() const
 {
-	return e4c::tag< Element__ownedComment_tag >::get();
+    return e4c::tag< Element__ownedComment_tag >::get();
 }
 
 ecore::EReference_ptr EmofPackage::getElement__ownedComment() const
 {
-	return m_Element__ownedComment;
+    return m_Element__ownedComment;
 }
 
 e4c::tag_t EmofPackage::getTag_Element__tag() const
 {
-	return e4c::tag< Element__tag_tag >::get();
+    return e4c::tag< Element__tag_tag >::get();
 }
 
 ecore::EReference_ptr EmofPackage::getElement__tag() const
 {
-	return m_Element__tag;
+    return m_Element__tag;
 }
 
 e4c::tag_t EmofPackage::getTag_Enumeration__ownedLiteral() const
 {
-	return e4c::tag< Enumeration__ownedLiteral_tag >::get();
+    return e4c::tag< Enumeration__ownedLiteral_tag >::get();
 }
 
 ecore::EReference_ptr EmofPackage::getEnumeration__ownedLiteral() const
 {
-	return m_Enumeration__ownedLiteral;
+    return m_Enumeration__ownedLiteral;
 }
 
 e4c::tag_t EmofPackage::getTag_EnumerationLiteral__enumeration() const
 {
-	return e4c::tag< EnumerationLiteral__enumeration_tag >::get();
+    return e4c::tag< EnumerationLiteral__enumeration_tag >::get();
 }
 
 ecore::EReference_ptr EmofPackage::getEnumerationLiteral__enumeration() const
 {
-	return m_EnumerationLiteral__enumeration;
+    return m_EnumerationLiteral__enumeration;
 }
 
 e4c::tag_t EmofPackage::getTag_MultiplicityElement__isOrdered() const
 {
-	return e4c::tag< MultiplicityElement__isOrdered_tag >::get();
+    return e4c::tag< MultiplicityElement__isOrdered_tag >::get();
 }
 
 ecore::EAttribute_ptr EmofPackage::getMultiplicityElement__isOrdered() const
 {
-	return m_MultiplicityElement__isOrdered;
+    return m_MultiplicityElement__isOrdered;
 }
 
 e4c::tag_t EmofPackage::getTag_MultiplicityElement__isUnique() const
 {
-	return e4c::tag< MultiplicityElement__isUnique_tag >::get();
+    return e4c::tag< MultiplicityElement__isUnique_tag >::get();
 }
 
 ecore::EAttribute_ptr EmofPackage::getMultiplicityElement__isUnique() const
 {
-	return m_MultiplicityElement__isUnique;
+    return m_MultiplicityElement__isUnique;
 }
 
 e4c::tag_t EmofPackage::getTag_MultiplicityElement__lower() const
 {
-	return e4c::tag< MultiplicityElement__lower_tag >::get();
+    return e4c::tag< MultiplicityElement__lower_tag >::get();
 }
 
 ecore::EAttribute_ptr EmofPackage::getMultiplicityElement__lower() const
 {
-	return m_MultiplicityElement__lower;
+    return m_MultiplicityElement__lower;
 }
 
 e4c::tag_t EmofPackage::getTag_MultiplicityElement__upper() const
 {
-	return e4c::tag< MultiplicityElement__upper_tag >::get();
+    return e4c::tag< MultiplicityElement__upper_tag >::get();
 }
 
 ecore::EAttribute_ptr EmofPackage::getMultiplicityElement__upper() const
 {
-	return m_MultiplicityElement__upper;
+    return m_MultiplicityElement__upper;
 }
 
 e4c::tag_t EmofPackage::getTag_NamedElement__name() const
 {
-	return e4c::tag< NamedElement__name_tag >::get();
+    return e4c::tag< NamedElement__name_tag >::get();
 }
 
 ecore::EAttribute_ptr EmofPackage::getNamedElement__name() const
 {
-	return m_NamedElement__name;
+    return m_NamedElement__name;
 }
 
 e4c::tag_t EmofPackage::getTag_Operation__class() const
 {
-	return e4c::tag< Operation__class_tag >::get();
+    return e4c::tag< Operation__class_tag >::get();
 }
 
 ecore::EReference_ptr EmofPackage::getOperation__class() const
 {
-	return m_Operation__class;
+    return m_Operation__class;
 }
 
 e4c::tag_t EmofPackage::getTag_Operation__ownedParameter() const
 {
-	return e4c::tag< Operation__ownedParameter_tag >::get();
+    return e4c::tag< Operation__ownedParameter_tag >::get();
 }
 
 ecore::EReference_ptr EmofPackage::getOperation__ownedParameter() const
 {
-	return m_Operation__ownedParameter;
+    return m_Operation__ownedParameter;
 }
 
 e4c::tag_t EmofPackage::getTag_Operation__raisedException() const
 {
-	return e4c::tag< Operation__raisedException_tag >::get();
+    return e4c::tag< Operation__raisedException_tag >::get();
 }
 
 ecore::EReference_ptr EmofPackage::getOperation__raisedException() const
 {
-	return m_Operation__raisedException;
+    return m_Operation__raisedException;
 }
 
 e4c::tag_t EmofPackage::getTag_Package__nestedPackage() const
 {
-	return e4c::tag< Package__nestedPackage_tag >::get();
+    return e4c::tag< Package__nestedPackage_tag >::get();
 }
 
 ecore::EReference_ptr EmofPackage::getPackage__nestedPackage() const
 {
-	return m_Package__nestedPackage;
+    return m_Package__nestedPackage;
 }
 
 e4c::tag_t EmofPackage::getTag_Package__ownedType() const
 {
-	return e4c::tag< Package__ownedType_tag >::get();
+    return e4c::tag< Package__ownedType_tag >::get();
 }
 
 ecore::EReference_ptr EmofPackage::getPackage__ownedType() const
 {
-	return m_Package__ownedType;
+    return m_Package__ownedType;
 }
 
 e4c::tag_t EmofPackage::getTag_Package__uri() const
 {
-	return e4c::tag< Package__uri_tag >::get();
+    return e4c::tag< Package__uri_tag >::get();
 }
 
 ecore::EAttribute_ptr EmofPackage::getPackage__uri() const
 {
-	return m_Package__uri;
+    return m_Package__uri;
 }
 
 e4c::tag_t EmofPackage::getTag_Parameter__operation() const
 {
-	return e4c::tag< Parameter__operation_tag >::get();
+    return e4c::tag< Parameter__operation_tag >::get();
 }
 
 ecore::EReference_ptr EmofPackage::getParameter__operation() const
 {
-	return m_Parameter__operation;
+    return m_Parameter__operation;
 }
 
 e4c::tag_t EmofPackage::getTag_Property__class() const
 {
-	return e4c::tag< Property__class_tag >::get();
+    return e4c::tag< Property__class_tag >::get();
 }
 
 ecore::EReference_ptr EmofPackage::getProperty__class() const
 {
-	return m_Property__class;
+    return m_Property__class;
 }
 
 e4c::tag_t EmofPackage::getTag_Property__default() const
 {
-	return e4c::tag< Property__default_tag >::get();
+    return e4c::tag< Property__default_tag >::get();
 }
 
 ecore::EAttribute_ptr EmofPackage::getProperty__default() const
 {
-	return m_Property__default;
+    return m_Property__default;
 }
 
 e4c::tag_t EmofPackage::getTag_Property__isComposite() const
 {
-	return e4c::tag< Property__isComposite_tag >::get();
+    return e4c::tag< Property__isComposite_tag >::get();
 }
 
 ecore::EAttribute_ptr EmofPackage::getProperty__isComposite() const
 {
-	return m_Property__isComposite;
+    return m_Property__isComposite;
 }
 
 e4c::tag_t EmofPackage::getTag_Property__isDerived() const
 {
-	return e4c::tag< Property__isDerived_tag >::get();
+    return e4c::tag< Property__isDerived_tag >::get();
 }
 
 ecore::EAttribute_ptr EmofPackage::getProperty__isDerived() const
 {
-	return m_Property__isDerived;
+    return m_Property__isDerived;
 }
 
 e4c::tag_t EmofPackage::getTag_Property__isId() const
 {
-	return e4c::tag< Property__isId_tag >::get();
+    return e4c::tag< Property__isId_tag >::get();
 }
 
 ecore::EAttribute_ptr EmofPackage::getProperty__isId() const
 {
-	return m_Property__isId;
+    return m_Property__isId;
 }
 
 e4c::tag_t EmofPackage::getTag_Property__isReadOnly() const
 {
-	return e4c::tag< Property__isReadOnly_tag >::get();
+    return e4c::tag< Property__isReadOnly_tag >::get();
 }
 
 ecore::EAttribute_ptr EmofPackage::getProperty__isReadOnly() const
 {
-	return m_Property__isReadOnly;
+    return m_Property__isReadOnly;
 }
 
 e4c::tag_t EmofPackage::getTag_Property__opposite() const
 {
-	return e4c::tag< Property__opposite_tag >::get();
+    return e4c::tag< Property__opposite_tag >::get();
 }
 
 ecore::EReference_ptr EmofPackage::getProperty__opposite() const
 {
-	return m_Property__opposite;
+    return m_Property__opposite;
 }
 
 e4c::tag_t EmofPackage::getTag_Tag__element() const
 {
-	return e4c::tag< Tag__element_tag >::get();
+    return e4c::tag< Tag__element_tag >::get();
 }
 
 ecore::EReference_ptr EmofPackage::getTag__element() const
 {
-	return m_Tag__element;
+    return m_Tag__element;
 }
 
 e4c::tag_t EmofPackage::getTag_Tag__name() const
 {
-	return e4c::tag< Tag__name_tag >::get();
+    return e4c::tag< Tag__name_tag >::get();
 }
 
 ecore::EAttribute_ptr EmofPackage::getTag__name() const
 {
-	return m_Tag__name;
+    return m_Tag__name;
 }
 
 e4c::tag_t EmofPackage::getTag_Tag__value() const
 {
-	return e4c::tag< Tag__value_tag >::get();
+    return e4c::tag< Tag__value_tag >::get();
 }
 
 ecore::EAttribute_ptr EmofPackage::getTag__value() const
 {
-	return m_Tag__value;
+    return m_Tag__value;
 }
 
 e4c::tag_t EmofPackage::getTag_Type__package() const
 {
-	return e4c::tag< Type__package_tag >::get();
+    return e4c::tag< Type__package_tag >::get();
 }
 
 ecore::EReference_ptr EmofPackage::getType__package() const
 {
-	return m_Type__package;
+    return m_Type__package;
 }
 
 e4c::tag_t EmofPackage::getTag_TypedElement__type() const
 {
-	return e4c::tag< TypedElement__type_tag >::get();
+    return e4c::tag< TypedElement__type_tag >::get();
 }
 
 ecore::EReference_ptr EmofPackage::getTypedElement__type() const
 {
-	return m_TypedElement__type;
+    return m_TypedElement__type;
 }
 
 
 extern "C" ::ecore::EPackage_ptr e4c_emof()
 {
-	return ::emof::EmofPackage::_instance();
+    return ::emof::EmofPackage::_instance();
 }

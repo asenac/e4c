@@ -18,34 +18,34 @@ class Definition :  public virtual ::xpand3::declaration::AbstractNamedDeclarati
 {
 public:
 
-	typedef Definition_ptr ptr_type;
-	
-	Definition();
-	virtual ~Definition();
+    typedef Definition_ptr ptr_type;
 
-	typedef std::vector < xpand3::statement::AbstractStatement_ptr > body_t;
-	
-	body_t getBody() const;
-	void addBody(xpand3::statement::AbstractStatement_ptr body_);
-	void addAllBody(const body_t& body_);
-	
+    Definition();
+    virtual ~Definition();
 
-	/*PROTECTED REGION ID(xpand3::declaration::Definition public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef std::vector < xpand3::statement::AbstractStatement_ptr > body_t;
+
+    body_t getBody() const;
+    void addBody(xpand3::statement::AbstractStatement_ptr body_);
+    void addAllBody(const body_t& body_);
+
+
+    /*PROTECTED REGION ID(xpand3::declaration::Definition public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class DeclarationPackage;
+    friend class DeclarationPackage;
 
-	std::vector < std::unique_ptr < xpand3::statement::AbstractStatement > > m_body;
+    std::vector < std::unique_ptr < xpand3::statement::AbstractStatement > > m_body;
 
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(xpand3::declaration::Definition protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(xpand3::declaration::Definition protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // declaration

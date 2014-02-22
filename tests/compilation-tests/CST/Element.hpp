@@ -16,33 +16,33 @@ class Element : ::ecore::EObject
 {
 public:
 
-	typedef Element_ptr ptr_type;
-	
-	Element();
-	virtual ~Element();
+    typedef Element_ptr ptr_type;
 
-	typedef ::ecore::EString kind_t;
-	
-	void setKind(kind_t _kind);
-	kind_t getKind() const;
-	
+    Element();
+    virtual ~Element();
 
-	/*PROTECTED REGION ID(CST::Element public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef ::ecore::EString kind_t;
+
+    void setKind(kind_t _kind);
+    kind_t getKind() const;
+
+
+    /*PROTECTED REGION ID(CST::Element public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class CSTPackage;
+    friend class CSTPackage;
 
-	kind_t m_kind;
+    kind_t m_kind;
 
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(CST::Element protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(CST::Element protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // CST

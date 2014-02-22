@@ -18,34 +18,34 @@ class AbstractInventoryElement :  public virtual ::kdm::core::KDMEntity
 {
 public:
 
-	typedef AbstractInventoryElement_ptr ptr_type;
-	
-	virtual ~AbstractInventoryElement();
+    typedef AbstractInventoryElement_ptr ptr_type;
 
-	typedef std::set < kdm::source::AbstractInventoryRelationship_ptr > inventoryRelation_t;
-	
-	inventoryRelation_t getInventoryRelation() const;
-	void addInventoryRelation(kdm::source::AbstractInventoryRelationship_ptr inventoryRelation_);
-	void addAllInventoryRelation(const inventoryRelation_t& inventoryRelation_);
-	
+    virtual ~AbstractInventoryElement();
 
-	/*PROTECTED REGION ID(kdm::source::AbstractInventoryElement public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef std::set < kdm::source::AbstractInventoryRelationship_ptr > inventoryRelation_t;
+
+    inventoryRelation_t getInventoryRelation() const;
+    void addInventoryRelation(kdm::source::AbstractInventoryRelationship_ptr inventoryRelation_);
+    void addAllInventoryRelation(const inventoryRelation_t& inventoryRelation_);
+
+
+    /*PROTECTED REGION ID(kdm::source::AbstractInventoryElement public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
-	AbstractInventoryElement();
+    AbstractInventoryElement();
 
-	friend class SourcePackage;
+    friend class SourcePackage;
 
-	std::set < std::unique_ptr < kdm::source::AbstractInventoryRelationship > > m_inventoryRelation;
+    std::set < std::unique_ptr < kdm::source::AbstractInventoryRelationship > > m_inventoryRelation;
 
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::source::AbstractInventoryElement protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::source::AbstractInventoryElement protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // source

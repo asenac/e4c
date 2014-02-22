@@ -9,14 +9,14 @@ using namespace C;
 
 CLong::CLong()
 {
-	/*PROTECTED REGION ID(CLong constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(CLong constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 CLong::~CLong()
 {
-	/*PROTECTED REGION ID(CLong destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(CLong destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ CLong::~CLong()
 
 ecore::EClass_ptr CLong::eClassImpl() const
 {
-	return CPackage::_instance()->getCLong();
+    return CPackage::_instance()->getCLong();
 }
- 
+

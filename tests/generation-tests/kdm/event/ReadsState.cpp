@@ -9,42 +9,42 @@ using namespace kdm::event;
 /*PROTECTED REGION ID(kdm::event::ReadsState include) START*/
 /*PROTECTED REGION END*/
 
-ReadsState::ReadsState() : 
-	m_to(),
+ReadsState::ReadsState() :
+    m_to(),
     m_from()
 {
-	/*PROTECTED REGION ID(ReadsState constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(ReadsState constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 ReadsState::~ReadsState()
 {
-	/*PROTECTED REGION ID(ReadsState destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(ReadsState destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 ReadsState::to_t ReadsState::getTo() const
 {
-	return e4c::returned(m_to);
+    return e4c::returned(m_to);
 }
 
 void ReadsState::setTo(to_t to_)
 {
-	if (m_to == to_)
-		return;
-	m_to = to_;
+    if (m_to == to_)
+        return;
+    m_to = to_;
 }
 
 ReadsState::from_t ReadsState::getFrom() const
 {
-	return e4c::returned(m_from);
+    return e4c::returned(m_from);
 }
 
 void ReadsState::setFrom(from_t from_)
 {
-	if (m_from == from_)
-		return;
-	m_from = from_;
+    if (m_from == from_)
+        return;
+    m_from = from_;
 }
 
 
@@ -54,6 +54,6 @@ void ReadsState::setFrom(from_t from_)
 
 ecore::EClass_ptr ReadsState::eClassImpl() const
 {
-	return EventPackage::_instance()->getReadsState();
+    return EventPackage::_instance()->getReadsState();
 }
- 
+

@@ -9,14 +9,14 @@ using namespace kdm::data;
 
 DataSegment::DataSegment()
 {
-	/*PROTECTED REGION ID(DataSegment constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(DataSegment constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 DataSegment::~DataSegment()
 {
-	/*PROTECTED REGION ID(DataSegment destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(DataSegment destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ DataSegment::~DataSegment()
 
 ecore::EClass_ptr DataSegment::eClassImpl() const
 {
-	return DataPackage::_instance()->getDataSegment();
+    return DataPackage::_instance()->getDataSegment();
 }
- 
+

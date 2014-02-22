@@ -18,29 +18,29 @@ class PrimitiveType :  public virtual ::kdm::code::Datatype
 {
 public:
 
-	typedef PrimitiveType_ptr ptr_type;
-	
-	PrimitiveType();
-	virtual ~PrimitiveType();
+    typedef PrimitiveType_ptr ptr_type;
 
-	
-	
+    PrimitiveType();
+    virtual ~PrimitiveType();
 
-	/*PROTECTED REGION ID(kdm::code::PrimitiveType public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(kdm::code::PrimitiveType public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class CodePackage;
+    friend class CodePackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::code::PrimitiveType protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::code::PrimitiveType protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // code

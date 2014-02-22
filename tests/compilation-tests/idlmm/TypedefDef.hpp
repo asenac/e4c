@@ -16,29 +16,29 @@ class TypedefDef :  public virtual ::idlmm::IDLType,  public virtual ::idlmm::Co
 {
 public:
 
-	typedef TypedefDef_ptr ptr_type;
-	
-	virtual ~TypedefDef();
+    typedef TypedefDef_ptr ptr_type;
 
-	
-	
+    virtual ~TypedefDef();
 
-	/*PROTECTED REGION ID(idlmm::TypedefDef public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(idlmm::TypedefDef public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
-	TypedefDef();
+    TypedefDef();
 
-	friend class IdlmmPackage;
+    friend class IdlmmPackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(idlmm::TypedefDef protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(idlmm::TypedefDef protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // idlmm

@@ -16,29 +16,29 @@ class CIntegral :  public virtual ::C::CDataType
 {
 public:
 
-	typedef CIntegral_ptr ptr_type;
-	
-	CIntegral();
-	virtual ~CIntegral();
+    typedef CIntegral_ptr ptr_type;
 
-	
-	
+    CIntegral();
+    virtual ~CIntegral();
 
-	/*PROTECTED REGION ID(C::CIntegral public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(C::CIntegral public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class CPackage;
+    friend class CPackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(C::CIntegral protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(C::CIntegral protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // C

@@ -8,42 +8,42 @@ using namespace kdm::platform;
 /*PROTECTED REGION ID(kdm::platform::BindsTo include) START*/
 /*PROTECTED REGION END*/
 
-BindsTo::BindsTo() : 
-	m_to(),
+BindsTo::BindsTo() :
+    m_to(),
     m_from()
 {
-	/*PROTECTED REGION ID(BindsTo constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(BindsTo constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 BindsTo::~BindsTo()
 {
-	/*PROTECTED REGION ID(BindsTo destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(BindsTo destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 BindsTo::to_t BindsTo::getTo() const
 {
-	return e4c::returned(m_to);
+    return e4c::returned(m_to);
 }
 
 void BindsTo::setTo(to_t to_)
 {
-	if (m_to == to_)
-		return;
-	m_to = to_;
+    if (m_to == to_)
+        return;
+    m_to = to_;
 }
 
 BindsTo::from_t BindsTo::getFrom() const
 {
-	return e4c::returned(m_from);
+    return e4c::returned(m_from);
 }
 
 void BindsTo::setFrom(from_t from_)
 {
-	if (m_from == from_)
-		return;
-	m_from = from_;
+    if (m_from == from_)
+        return;
+    m_from = from_;
 }
 
 
@@ -53,6 +53,6 @@ void BindsTo::setFrom(from_t from_)
 
 ecore::EClass_ptr BindsTo::eClassImpl() const
 {
-	return PlatformPackage::_instance()->getBindsTo();
+    return PlatformPackage::_instance()->getBindsTo();
 }
- 
+

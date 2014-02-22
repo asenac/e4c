@@ -7,38 +7,38 @@ using namespace kdm::kdm;
 /*PROTECTED REGION ID(kdm::kdm::Attribute include) START*/
 /*PROTECTED REGION END*/
 
-Attribute::Attribute() : 
-	m_tag(),
+Attribute::Attribute() :
+    m_tag(),
     m_value()
 {
-	/*PROTECTED REGION ID(Attribute constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(Attribute constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 Attribute::~Attribute()
 {
-	/*PROTECTED REGION ID(Attribute destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(Attribute destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 void Attribute::setTag(tag_t _tag)
 {
-	m_tag = _tag;;
+    m_tag = _tag;;
 }
 
 Attribute::tag_t Attribute::getTag() const
 {
-	return m_tag;
+    return m_tag;
 }
 
 void Attribute::setValue(value_t _value)
 {
-	m_value = _value;;
+    m_value = _value;;
 }
 
 Attribute::value_t Attribute::getValue() const
 {
-	return m_value;
+    return m_value;
 }
 
 
@@ -48,6 +48,6 @@ Attribute::value_t Attribute::getValue() const
 
 ecore::EClass_ptr Attribute::eClassImpl() const
 {
-	return KdmPackage::_instance()->getAttribute();
+    return KdmPackage::_instance()->getAttribute();
 }
- 
+

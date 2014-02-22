@@ -18,34 +18,34 @@ class TypeSelectExpression :  public virtual ::xpand3::expression::FeatureCall
 {
 public:
 
-	typedef TypeSelectExpression_ptr ptr_type;
-	
-	TypeSelectExpression();
-	virtual ~TypeSelectExpression();
+    typedef TypeSelectExpression_ptr ptr_type;
 
-	typedef xpand3::Identifier_ptr typeLiteral_t;
-	
-	typeLiteral_t getTypeLiteral() const;
-	void setTypeLiteral(typeLiteral_t typeLiteral_);
-	typeLiteral_t releaseTypeLiteral();
-	
+    TypeSelectExpression();
+    virtual ~TypeSelectExpression();
 
-	/*PROTECTED REGION ID(xpand3::expression::TypeSelectExpression public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef xpand3::Identifier_ptr typeLiteral_t;
+
+    typeLiteral_t getTypeLiteral() const;
+    void setTypeLiteral(typeLiteral_t typeLiteral_);
+    typeLiteral_t releaseTypeLiteral();
+
+
+    /*PROTECTED REGION ID(xpand3::expression::TypeSelectExpression public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class ExpressionPackage;
+    friend class ExpressionPackage;
 
-	std::unique_ptr < xpand3::Identifier > m_typeLiteral;
+    std::unique_ptr < xpand3::Identifier > m_typeLiteral;
 
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(xpand3::expression::TypeSelectExpression protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(xpand3::expression::TypeSelectExpression protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // expression

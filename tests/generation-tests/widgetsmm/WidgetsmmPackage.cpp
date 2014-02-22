@@ -8,25 +8,25 @@ using namespace widgetsmm;
 
 WidgetsmmPackage::WidgetsmmPackage()
 {
-	m_eFactoryInstance = WidgetsmmFactory::_instance();
-	::ecore::EcoreFactory_ptr ecoreFactory = ::ecore::EcoreFactory::_instance();
-	
-	
-	
-	m_Widget = ecoreFactory->createEClass();
-	m_Widget->setName("Widget");
-	addEClassifiers(m_Widget);
-	m_ComboBox = ecoreFactory->createEClass();
-	m_ComboBox->setName("ComboBox");
-	addEClassifiers(m_ComboBox);
-	m_Window = ecoreFactory->createEClass();
-	m_Window->setName("Window");
-	addEClassifiers(m_Window);
-	m_Property = ecoreFactory->createEClass();
-	m_Property->setName("Property");
-	addEClassifiers(m_Property);
+    m_eFactoryInstance = WidgetsmmFactory::_instance();
+    ::ecore::EcoreFactory_ptr ecoreFactory = ::ecore::EcoreFactory::_instance();
 
-	
+
+
+    m_Widget = ecoreFactory->createEClass();
+    m_Widget->setName("Widget");
+    addEClassifiers(m_Widget);
+    m_ComboBox = ecoreFactory->createEClass();
+    m_ComboBox->setName("ComboBox");
+    addEClassifiers(m_ComboBox);
+    m_Window = ecoreFactory->createEClass();
+    m_Window->setName("Window");
+    addEClassifiers(m_Window);
+    m_Property = ecoreFactory->createEClass();
+    m_Property->setName("Property");
+    addEClassifiers(m_Property);
+
+
     {
         m_Widget__parent = ecoreFactory->createEReference();
         m_Widget__parent->setName("parent");
@@ -107,200 +107,200 @@ WidgetsmmPackage::WidgetsmmPackage()
         m_Property->addEAttributes(m_Property__value);
         m_Property->addEAllAttributes(m_Property__value);
     }
-	
-	m_ComboBox->addESuperTypes(m_Widget);
-	m_ComboBox->addAllEAllOperations(m_Widget->getEOperations());
-	m_ComboBox->addAllEAllReferences(m_Widget->getEReferences());
-	m_ComboBox->addAllEAllAttributes(m_Widget->getEAttributes());
-	m_ComboBox->addAllEAllStructuralFeatures(m_Widget->getEStructuralFeatures());
-	m_Window->addESuperTypes(m_Widget);
-	m_Window->addAllEAllOperations(m_Widget->getEOperations());
-	m_Window->addAllEAllReferences(m_Widget->getEReferences());
-	m_Window->addAllEAllAttributes(m_Widget->getEAttributes());
-	m_Window->addAllEAllStructuralFeatures(m_Widget->getEStructuralFeatures());
-	
-	
-	m_Widget->addFeatureAccesors(m_Widget__parent, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< widgetsmm::Widget_ptr >(o)->getParent()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
-	m_Widget->addFeatureAccesors(m_Widget__properties, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< widgetsmm::Widget_ptr >(o)->getProperties()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
-	m_Widget->addFeatureAccesors(m_Widget__name, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< widgetsmm::Widget_ptr >(o)->getName()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
-	m_Widget->addFeatureAccesors(m_Widget__type, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< widgetsmm::Widget_ptr >(o)->getType()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
-	m_ComboBox->addFeatureAccesors(m_ComboBox__count, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< widgetsmm::ComboBox_ptr >(o)->getCount()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
-	m_ComboBox->addFeatureAccesors(m_ComboBox__currentIndex, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< widgetsmm::ComboBox_ptr >(o)->getCurrentIndex()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
-	m_Window->addFeatureAccesors(m_Window__title, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< widgetsmm::Window_ptr >(o)->getTitle()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
-	m_Window->addFeatureAccesors(m_Window__children, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< widgetsmm::Window_ptr >(o)->getChildren()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
-	m_Property->addFeatureAccesors(m_Property__name, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< widgetsmm::Property_ptr >(o)->getName()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
-	m_Property->addFeatureAccesors(m_Property__value, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< widgetsmm::Property_ptr >(o)->getValue()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
-	
+
+    m_ComboBox->addESuperTypes(m_Widget);
+    m_ComboBox->addAllEAllOperations(m_Widget->getEOperations());
+    m_ComboBox->addAllEAllReferences(m_Widget->getEReferences());
+    m_ComboBox->addAllEAllAttributes(m_Widget->getEAttributes());
+    m_ComboBox->addAllEAllStructuralFeatures(m_Widget->getEStructuralFeatures());
+    m_Window->addESuperTypes(m_Widget);
+    m_Window->addAllEAllOperations(m_Widget->getEOperations());
+    m_Window->addAllEAllReferences(m_Widget->getEReferences());
+    m_Window->addAllEAllAttributes(m_Widget->getEAttributes());
+    m_Window->addAllEAllStructuralFeatures(m_Widget->getEStructuralFeatures());
+
+
+    m_Widget->addFeatureAccesors(m_Widget__parent,
+        [](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< widgetsmm::Widget_ptr >(o)->getParent()); },
+        [](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+    m_Widget->addFeatureAccesors(m_Widget__properties,
+        [](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< widgetsmm::Widget_ptr >(o)->getProperties()); },
+        [](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+    m_Widget->addFeatureAccesors(m_Widget__name,
+        [](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< widgetsmm::Widget_ptr >(o)->getName()); },
+        [](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+    m_Widget->addFeatureAccesors(m_Widget__type,
+        [](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< widgetsmm::Widget_ptr >(o)->getType()); },
+        [](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+    m_ComboBox->addFeatureAccesors(m_ComboBox__count,
+        [](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< widgetsmm::ComboBox_ptr >(o)->getCount()); },
+        [](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+    m_ComboBox->addFeatureAccesors(m_ComboBox__currentIndex,
+        [](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< widgetsmm::ComboBox_ptr >(o)->getCurrentIndex()); },
+        [](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+    m_Window->addFeatureAccesors(m_Window__title,
+        [](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< widgetsmm::Window_ptr >(o)->getTitle()); },
+        [](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+    m_Window->addFeatureAccesors(m_Window__children,
+        [](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< widgetsmm::Window_ptr >(o)->getChildren()); },
+        [](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+    m_Property->addFeatureAccesors(m_Property__name,
+        [](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< widgetsmm::Property_ptr >(o)->getName()); },
+        [](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+    m_Property->addFeatureAccesors(m_Property__value,
+        [](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< widgetsmm::Property_ptr >(o)->getValue()); },
+        [](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+
 }
 
 const WidgetsmmPackage_ptr WidgetsmmPackage::_instance()
 {
-	static WidgetsmmPackage __instance;
-	return &__instance;
+    static WidgetsmmPackage __instance;
+    return &__instance;
 }
 
 ecore::EClass_ptr WidgetsmmPackage::getWidget() const
 {
-	return m_Widget;
+    return m_Widget;
 }
-  	
+
 e4c::tag_t WidgetsmmPackage::getTag_Widget() const
 {
-	return e4c::tag< Widget >::get();
+    return e4c::tag< Widget >::get();
 }
- 
+
 ecore::EClass_ptr WidgetsmmPackage::getComboBox() const
 {
-	return m_ComboBox;
+    return m_ComboBox;
 }
-  	
+
 e4c::tag_t WidgetsmmPackage::getTag_ComboBox() const
 {
-	return e4c::tag< ComboBox >::get();
+    return e4c::tag< ComboBox >::get();
 }
- 
+
 ecore::EClass_ptr WidgetsmmPackage::getWindow() const
 {
-	return m_Window;
+    return m_Window;
 }
-  	
+
 e4c::tag_t WidgetsmmPackage::getTag_Window() const
 {
-	return e4c::tag< Window >::get();
+    return e4c::tag< Window >::get();
 }
- 
+
 ecore::EClass_ptr WidgetsmmPackage::getProperty() const
 {
-	return m_Property;
+    return m_Property;
 }
-  	
+
 e4c::tag_t WidgetsmmPackage::getTag_Property() const
 {
-	return e4c::tag< Property >::get();
+    return e4c::tag< Property >::get();
 }
- 
+
 e4c::tag_t WidgetsmmPackage::getTag_Widget__parent() const
 {
-	return e4c::tag< Widget__parent_tag >::get();
+    return e4c::tag< Widget__parent_tag >::get();
 }
 
 ecore::EReference_ptr WidgetsmmPackage::getWidget__parent() const
 {
-	return m_Widget__parent;
+    return m_Widget__parent;
 }
 
 e4c::tag_t WidgetsmmPackage::getTag_Widget__properties() const
 {
-	return e4c::tag< Widget__properties_tag >::get();
+    return e4c::tag< Widget__properties_tag >::get();
 }
 
 ecore::EReference_ptr WidgetsmmPackage::getWidget__properties() const
 {
-	return m_Widget__properties;
+    return m_Widget__properties;
 }
 
 e4c::tag_t WidgetsmmPackage::getTag_Widget__name() const
 {
-	return e4c::tag< Widget__name_tag >::get();
+    return e4c::tag< Widget__name_tag >::get();
 }
 
 ecore::EAttribute_ptr WidgetsmmPackage::getWidget__name() const
 {
-	return m_Widget__name;
+    return m_Widget__name;
 }
 
 e4c::tag_t WidgetsmmPackage::getTag_Widget__type() const
 {
-	return e4c::tag< Widget__type_tag >::get();
+    return e4c::tag< Widget__type_tag >::get();
 }
 
 ecore::EAttribute_ptr WidgetsmmPackage::getWidget__type() const
 {
-	return m_Widget__type;
+    return m_Widget__type;
 }
 
 e4c::tag_t WidgetsmmPackage::getTag_ComboBox__count() const
 {
-	return e4c::tag< ComboBox__count_tag >::get();
+    return e4c::tag< ComboBox__count_tag >::get();
 }
 
 ecore::EAttribute_ptr WidgetsmmPackage::getComboBox__count() const
 {
-	return m_ComboBox__count;
+    return m_ComboBox__count;
 }
 
 e4c::tag_t WidgetsmmPackage::getTag_ComboBox__currentIndex() const
 {
-	return e4c::tag< ComboBox__currentIndex_tag >::get();
+    return e4c::tag< ComboBox__currentIndex_tag >::get();
 }
 
 ecore::EAttribute_ptr WidgetsmmPackage::getComboBox__currentIndex() const
 {
-	return m_ComboBox__currentIndex;
+    return m_ComboBox__currentIndex;
 }
 
 e4c::tag_t WidgetsmmPackage::getTag_Window__title() const
 {
-	return e4c::tag< Window__title_tag >::get();
+    return e4c::tag< Window__title_tag >::get();
 }
 
 ecore::EAttribute_ptr WidgetsmmPackage::getWindow__title() const
 {
-	return m_Window__title;
+    return m_Window__title;
 }
 
 e4c::tag_t WidgetsmmPackage::getTag_Window__children() const
 {
-	return e4c::tag< Window__children_tag >::get();
+    return e4c::tag< Window__children_tag >::get();
 }
 
 ecore::EReference_ptr WidgetsmmPackage::getWindow__children() const
 {
-	return m_Window__children;
+    return m_Window__children;
 }
 
 e4c::tag_t WidgetsmmPackage::getTag_Property__name() const
 {
-	return e4c::tag< Property__name_tag >::get();
+    return e4c::tag< Property__name_tag >::get();
 }
 
 ecore::EAttribute_ptr WidgetsmmPackage::getProperty__name() const
 {
-	return m_Property__name;
+    return m_Property__name;
 }
 
 e4c::tag_t WidgetsmmPackage::getTag_Property__value() const
 {
-	return e4c::tag< Property__value_tag >::get();
+    return e4c::tag< Property__value_tag >::get();
 }
 
 ecore::EAttribute_ptr WidgetsmmPackage::getProperty__value() const
 {
-	return m_Property__value;
+    return m_Property__value;
 }
 
 
 extern "C" ::ecore::EPackage_ptr e4c_widgetsmm()
 {
-	return ::widgetsmm::WidgetsmmPackage::_instance();
+    return ::widgetsmm::WidgetsmmPackage::_instance();
 }

@@ -18,29 +18,29 @@ class AbstractContentElement :  public virtual ::kdm::data::AbstractDataElement
 {
 public:
 
-	typedef AbstractContentElement_ptr ptr_type;
-	
-	virtual ~AbstractContentElement();
+    typedef AbstractContentElement_ptr ptr_type;
 
-	
-	
+    virtual ~AbstractContentElement();
 
-	/*PROTECTED REGION ID(kdm::data::AbstractContentElement public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(kdm::data::AbstractContentElement public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
-	AbstractContentElement();
+    AbstractContentElement();
 
-	friend class DataPackage;
+    friend class DataPackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::data::AbstractContentElement protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::data::AbstractContentElement protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // data

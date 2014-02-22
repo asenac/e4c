@@ -9,14 +9,14 @@ using namespace SVG;
 
 Defs::Defs()
 {
-	/*PROTECTED REGION ID(Defs constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(Defs constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 Defs::~Defs()
 {
-	/*PROTECTED REGION ID(Defs destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(Defs destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ Defs::~Defs()
 
 ecore::EClass_ptr Defs::eClassImpl() const
 {
-	return SVGPackage::_instance()->getDefs();
+    return SVGPackage::_instance()->getDefs();
 }
- 
+

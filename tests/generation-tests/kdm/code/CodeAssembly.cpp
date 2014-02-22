@@ -9,14 +9,14 @@ using namespace kdm::code;
 
 CodeAssembly::CodeAssembly()
 {
-	/*PROTECTED REGION ID(CodeAssembly constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(CodeAssembly constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 CodeAssembly::~CodeAssembly()
 {
-	/*PROTECTED REGION ID(CodeAssembly destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(CodeAssembly destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ CodeAssembly::~CodeAssembly()
 
 ecore::EClass_ptr CodeAssembly::eClassImpl() const
 {
-	return CodePackage::_instance()->getCodeAssembly();
+    return CodePackage::_instance()->getCodeAssembly();
 }
- 
+

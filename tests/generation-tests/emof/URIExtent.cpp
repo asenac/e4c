@@ -9,14 +9,14 @@ using namespace emof;
 
 URIExtent::URIExtent()
 {
-	/*PROTECTED REGION ID(URIExtent constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(URIExtent constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 URIExtent::~URIExtent()
 {
-	/*PROTECTED REGION ID(URIExtent destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(URIExtent destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ URIExtent::~URIExtent()
 
 ecore::EClass_ptr URIExtent::eClassImpl() const
 {
-	return EmofPackage::_instance()->getURIExtent();
+    return EmofPackage::_instance()->getURIExtent();
 }
- 
+

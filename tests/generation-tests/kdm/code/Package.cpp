@@ -9,14 +9,14 @@ using namespace kdm::code;
 
 Package::Package()
 {
-	/*PROTECTED REGION ID(Package constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(Package constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 Package::~Package()
 {
-	/*PROTECTED REGION ID(Package destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(Package destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ Package::~Package()
 
 ecore::EClass_ptr Package::eClassImpl() const
 {
-	return CodePackage::_instance()->getPackage();
+    return CodePackage::_instance()->getPackage();
 }
- 
+

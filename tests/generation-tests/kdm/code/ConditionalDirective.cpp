@@ -9,14 +9,14 @@ using namespace kdm::code;
 
 ConditionalDirective::ConditionalDirective()
 {
-	/*PROTECTED REGION ID(ConditionalDirective constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(ConditionalDirective constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 ConditionalDirective::~ConditionalDirective()
 {
-	/*PROTECTED REGION ID(ConditionalDirective destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(ConditionalDirective destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ ConditionalDirective::~ConditionalDirective()
 
 ecore::EClass_ptr ConditionalDirective::eClassImpl() const
 {
-	return CodePackage::_instance()->getConditionalDirective();
+    return CodePackage::_instance()->getConditionalDirective();
 }
- 
+

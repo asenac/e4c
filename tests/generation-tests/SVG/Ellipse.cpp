@@ -9,14 +9,14 @@ using namespace SVG;
 
 Ellipse::Ellipse()
 {
-	/*PROTECTED REGION ID(Ellipse constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(Ellipse constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 Ellipse::~Ellipse()
 {
-	/*PROTECTED REGION ID(Ellipse destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(Ellipse destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ Ellipse::~Ellipse()
 
 ecore::EClass_ptr Ellipse::eClassImpl() const
 {
-	return SVGPackage::_instance()->getEllipse();
+    return SVGPackage::_instance()->getEllipse();
 }
- 
+

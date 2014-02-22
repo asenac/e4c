@@ -16,41 +16,41 @@ class Property : ::ecore::EObject
 {
 public:
 
-	typedef Property_ptr ptr_type;
-	
-	Property();
-	virtual ~Property();
+    typedef Property_ptr ptr_type;
 
-	typedef ::ecore::EString name_t;
-	typedef myDsl::Type_ptr type_t;
-	typedef ::ecore::EBoolean many_t;
-	
-	void setName(name_t _name);
-	name_t getName() const;
-	type_t getType() const;
-	void setType(type_t type_);
-	void setMany(many_t _many);
-	many_t getMany() const;
-	
+    Property();
+    virtual ~Property();
 
-	/*PROTECTED REGION ID(myDsl::Property public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef ::ecore::EString name_t;
+    typedef myDsl::Type_ptr type_t;
+    typedef ::ecore::EBoolean many_t;
+
+    void setName(name_t _name);
+    name_t getName() const;
+    type_t getType() const;
+    void setType(type_t type_);
+    void setMany(many_t _many);
+    many_t getMany() const;
+
+
+    /*PROTECTED REGION ID(myDsl::Property public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class MyDslPackage;
+    friend class MyDslPackage;
 
-	name_t m_name;
-	myDsl::Type_ptr m_type;
-	many_t m_many;
+    name_t m_name;
+    myDsl::Type_ptr m_type;
+    many_t m_many;
 
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(myDsl::Property protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(myDsl::Property protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // myDsl

@@ -9,14 +9,14 @@ using namespace kdm::conceptual;
 
 FactUnit::FactUnit()
 {
-	/*PROTECTED REGION ID(FactUnit constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(FactUnit constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 FactUnit::~FactUnit()
 {
-	/*PROTECTED REGION ID(FactUnit destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(FactUnit destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ FactUnit::~FactUnit()
 
 ecore::EClass_ptr FactUnit::eClassImpl() const
 {
-	return ConceptualPackage::_instance()->getFactUnit();
+    return ConceptualPackage::_instance()->getFactUnit();
 }
- 
+

@@ -6,27 +6,27 @@ using namespace idlmm;
 /*PROTECTED REGION ID(idlmm::NamedElement include) START*/
 /*PROTECTED REGION END*/
 
-NamedElement::NamedElement() : 
-	m_identifier()
+NamedElement::NamedElement() :
+    m_identifier()
 {
-	/*PROTECTED REGION ID(NamedElement constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(NamedElement constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 NamedElement::~NamedElement()
 {
-	/*PROTECTED REGION ID(NamedElement destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(NamedElement destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 void NamedElement::setIdentifier(identifier_t _identifier)
 {
-	m_identifier = _identifier;;
+    m_identifier = _identifier;;
 }
 
 NamedElement::identifier_t NamedElement::getIdentifier() const
 {
-	return m_identifier;
+    return m_identifier;
 }
 
 
@@ -36,6 +36,6 @@ NamedElement::identifier_t NamedElement::getIdentifier() const
 
 ecore::EClass_ptr NamedElement::eClassImpl() const
 {
-	return IdlmmPackage::_instance()->getNamedElement();
+    return IdlmmPackage::_instance()->getNamedElement();
 }
- 
+

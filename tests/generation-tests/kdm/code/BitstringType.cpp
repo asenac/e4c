@@ -9,14 +9,14 @@ using namespace kdm::code;
 
 BitstringType::BitstringType()
 {
-	/*PROTECTED REGION ID(BitstringType constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(BitstringType constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 BitstringType::~BitstringType()
 {
-	/*PROTECTED REGION ID(BitstringType destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(BitstringType destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ BitstringType::~BitstringType()
 
 ecore::EClass_ptr BitstringType::eClassImpl() const
 {
-	return CodePackage::_instance()->getBitstringType();
+    return CodePackage::_instance()->getBitstringType();
 }
- 
+

@@ -9,14 +9,14 @@ using namespace C;
 
 CInt::CInt()
 {
-	/*PROTECTED REGION ID(CInt constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(CInt constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 CInt::~CInt()
 {
-	/*PROTECTED REGION ID(CInt destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(CInt destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ CInt::~CInt()
 
 ecore::EClass_ptr CInt::eClassImpl() const
 {
-	return CPackage::_instance()->getCInt();
+    return CPackage::_instance()->getCInt();
 }
- 
+

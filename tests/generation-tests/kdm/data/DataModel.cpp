@@ -8,34 +8,34 @@ using namespace kdm::data;
 /*PROTECTED REGION ID(kdm::data::DataModel include) START*/
 /*PROTECTED REGION END*/
 
-DataModel::DataModel() : 
-	m_dataElement()
+DataModel::DataModel() :
+    m_dataElement()
 {
-	/*PROTECTED REGION ID(DataModel constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(DataModel constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 DataModel::~DataModel()
 {
-	/*PROTECTED REGION ID(DataModel destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(DataModel destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 DataModel::dataElement_t DataModel::getDataElement() const
 {
-	return e4c::returned(m_dataElement);
+    return e4c::returned(m_dataElement);
 }
 
 
 void DataModel::addDataElement(kdm::data::AbstractDataElement_ptr dataElement_)
 {
-	m_dataElement.insert(std::unique_ptr < kdm::data::AbstractDataElement >(dataElement_));
+    m_dataElement.insert(std::unique_ptr < kdm::data::AbstractDataElement >(dataElement_));
 }
 
 void DataModel::addAllDataElement(const dataElement_t& dataElement_)
 {
-	for (auto i = dataElement_.begin(); i != dataElement_.end(); i++)
-		addDataElement(*i);
+    for (auto i = dataElement_.begin(); i != dataElement_.end(); i++)
+        addDataElement(*i);
 }
 
 
@@ -45,6 +45,6 @@ void DataModel::addAllDataElement(const dataElement_t& dataElement_)
 
 ecore::EClass_ptr DataModel::eClassImpl() const
 {
-	return DataPackage::_instance()->getDataModel();
+    return DataPackage::_instance()->getDataModel();
 }
- 
+

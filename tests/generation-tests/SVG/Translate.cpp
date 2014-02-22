@@ -7,38 +7,38 @@ using namespace SVG;
 /*PROTECTED REGION ID(SVG::Translate include) START*/
 /*PROTECTED REGION END*/
 
-Translate::Translate() : 
-	m_tx(),
+Translate::Translate() :
+    m_tx(),
     m_ty()
 {
-	/*PROTECTED REGION ID(Translate constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(Translate constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 Translate::~Translate()
 {
-	/*PROTECTED REGION ID(Translate destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(Translate destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 void Translate::setTx(tx_t _tx)
 {
-	m_tx = _tx;;
+    m_tx = _tx;;
 }
 
 Translate::tx_t Translate::getTx() const
 {
-	return m_tx;
+    return m_tx;
 }
 
 void Translate::setTy(ty_t _ty)
 {
-	m_ty = _ty;;
+    m_ty = _ty;;
 }
 
 Translate::ty_t Translate::getTy() const
 {
-	return m_ty;
+    return m_ty;
 }
 
 
@@ -48,6 +48,6 @@ Translate::ty_t Translate::getTy() const
 
 ecore::EClass_ptr Translate::eClassImpl() const
 {
-	return SVGPackage::_instance()->getTranslate();
+    return SVGPackage::_instance()->getTranslate();
 }
- 
+

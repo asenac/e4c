@@ -18,29 +18,29 @@ class BooleanLiteral :  public virtual ::xpand3::expression::Literal
 {
 public:
 
-	typedef BooleanLiteral_ptr ptr_type;
-	
-	BooleanLiteral();
-	virtual ~BooleanLiteral();
+    typedef BooleanLiteral_ptr ptr_type;
 
-	
-	
+    BooleanLiteral();
+    virtual ~BooleanLiteral();
 
-	/*PROTECTED REGION ID(xpand3::expression::BooleanLiteral public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(xpand3::expression::BooleanLiteral public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class ExpressionPackage;
+    friend class ExpressionPackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(xpand3::expression::BooleanLiteral protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(xpand3::expression::BooleanLiteral protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // expression

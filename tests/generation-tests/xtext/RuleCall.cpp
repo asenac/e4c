@@ -8,29 +8,29 @@ using namespace xtext;
 /*PROTECTED REGION ID(xtext::RuleCall include) START*/
 /*PROTECTED REGION END*/
 
-RuleCall::RuleCall() : 
-	m_rule()
+RuleCall::RuleCall() :
+    m_rule()
 {
-	/*PROTECTED REGION ID(RuleCall constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(RuleCall constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 RuleCall::~RuleCall()
 {
-	/*PROTECTED REGION ID(RuleCall destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(RuleCall destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 RuleCall::rule_t RuleCall::getRule() const
 {
-	return e4c::returned(m_rule);
+    return e4c::returned(m_rule);
 }
 
 void RuleCall::setRule(rule_t rule_)
 {
-	if (m_rule == rule_)
-		return;
-	m_rule = rule_;
+    if (m_rule == rule_)
+        return;
+    m_rule = rule_;
 }
 
 
@@ -40,6 +40,6 @@ void RuleCall::setRule(rule_t rule_)
 
 ecore::EClass_ptr RuleCall::eClassImpl() const
 {
-	return XtextPackage::_instance()->getRuleCall();
+    return XtextPackage::_instance()->getRuleCall();
 }
- 
+

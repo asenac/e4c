@@ -9,14 +9,14 @@ using namespace SVG;
 
 Shape::Shape()
 {
-	/*PROTECTED REGION ID(Shape constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(Shape constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 Shape::~Shape()
 {
-	/*PROTECTED REGION ID(Shape destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(Shape destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ Shape::~Shape()
 
 ecore::EClass_ptr Shape::eClassImpl() const
 {
-	return SVGPackage::_instance()->getShape();
+    return SVGPackage::_instance()->getShape();
 }
- 
+

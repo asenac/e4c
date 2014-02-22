@@ -18,29 +18,29 @@ class Process :  public virtual ::kdm::platform::RuntimeResource
 {
 public:
 
-	typedef Process_ptr ptr_type;
-	
-	Process();
-	virtual ~Process();
+    typedef Process_ptr ptr_type;
 
-	
-	
+    Process();
+    virtual ~Process();
 
-	/*PROTECTED REGION ID(kdm::platform::Process public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(kdm::platform::Process public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class PlatformPackage;
+    friend class PlatformPackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::platform::Process protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::platform::Process protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // platform

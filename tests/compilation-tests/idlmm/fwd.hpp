@@ -16,13 +16,13 @@ typedef IdlmmFactory * IdlmmFactory_ptr;
 // Data types
 enum class ParameterMode : int
 {
-	PARAM_IN,
+    PARAM_IN,
     PARAM_OUT,
     PARAM_INOUT
 };
 enum class PrimitiveKind : int
 {
-	PK_NULL,
+    PK_NULL,
     PK_VOID,
     PK_SHORT,
     PK_LONG,

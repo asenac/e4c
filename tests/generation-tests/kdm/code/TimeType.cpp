@@ -9,14 +9,14 @@ using namespace kdm::code;
 
 TimeType::TimeType()
 {
-	/*PROTECTED REGION ID(TimeType constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(TimeType constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 TimeType::~TimeType()
 {
-	/*PROTECTED REGION ID(TimeType destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(TimeType destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ TimeType::~TimeType()
 
 ecore::EClass_ptr TimeType::eClassImpl() const
 {
-	return CodePackage::_instance()->getTimeType();
+    return CodePackage::_instance()->getTimeType();
 }
- 
+

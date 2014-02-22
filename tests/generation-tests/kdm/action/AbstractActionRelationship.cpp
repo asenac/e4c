@@ -9,14 +9,14 @@ using namespace kdm::action;
 
 AbstractActionRelationship::AbstractActionRelationship()
 {
-	/*PROTECTED REGION ID(AbstractActionRelationship constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(AbstractActionRelationship constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 AbstractActionRelationship::~AbstractActionRelationship()
 {
-	/*PROTECTED REGION ID(AbstractActionRelationship destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(AbstractActionRelationship destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ AbstractActionRelationship::~AbstractActionRelationship()
 
 ecore::EClass_ptr AbstractActionRelationship::eClassImpl() const
 {
-	return ActionPackage::_instance()->getAbstractActionRelationship();
+    return ActionPackage::_instance()->getAbstractActionRelationship();
 }
- 
+

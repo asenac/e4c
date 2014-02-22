@@ -18,29 +18,29 @@ class SynonymType :  public virtual ::kdm::code::DefinedType
 {
 public:
 
-	typedef SynonymType_ptr ptr_type;
-	
-	SynonymType();
-	virtual ~SynonymType();
+    typedef SynonymType_ptr ptr_type;
 
-	
-	
+    SynonymType();
+    virtual ~SynonymType();
 
-	/*PROTECTED REGION ID(kdm::code::SynonymType public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(kdm::code::SynonymType public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class CodePackage;
+    friend class CodePackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::code::SynonymType protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::code::SynonymType protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // code

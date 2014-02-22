@@ -9,14 +9,14 @@ using namespace C;
 
 CEnumeration::CEnumeration()
 {
-	/*PROTECTED REGION ID(CEnumeration constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(CEnumeration constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 CEnumeration::~CEnumeration()
 {
-	/*PROTECTED REGION ID(CEnumeration destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(CEnumeration destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ CEnumeration::~CEnumeration()
 
 ecore::EClass_ptr CEnumeration::eClassImpl() const
 {
-	return CPackage::_instance()->getCEnumeration();
+    return CPackage::_instance()->getCEnumeration();
 }
- 
+

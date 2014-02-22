@@ -9,29 +9,29 @@ using namespace kdm::core;
 
 KDMRelationship::KDMRelationship()
 {
-	/*PROTECTED REGION ID(KDMRelationship constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(KDMRelationship constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 KDMRelationship::~KDMRelationship()
 {
-	/*PROTECTED REGION ID(KDMRelationship destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(KDMRelationship destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
 kdm::core::KDMEntity_ptr KDMRelationship::getTo()
 {
-	/*PROTECTED REGION ID(kdm::core::KDMEntity_ptr KDMRelationship::getTo) START*/
-	return kdm::core::KDMEntity_ptr();
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(kdm::core::KDMEntity_ptr KDMRelationship::getTo) START*/
+    return kdm::core::KDMEntity_ptr();
+    /*PROTECTED REGION END*/
 }
 
 kdm::core::KDMEntity_ptr KDMRelationship::getFrom()
 {
-	/*PROTECTED REGION ID(kdm::core::KDMEntity_ptr KDMRelationship::getFrom) START*/
-	return kdm::core::KDMEntity_ptr();
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(kdm::core::KDMEntity_ptr KDMRelationship::getFrom) START*/
+    return kdm::core::KDMEntity_ptr();
+    /*PROTECTED REGION END*/
 }
 
 
@@ -40,6 +40,6 @@ kdm::core::KDMEntity_ptr KDMRelationship::getFrom()
 
 ecore::EClass_ptr KDMRelationship::eClassImpl() const
 {
-	return CorePackage::_instance()->getKDMRelationship();
+    return CorePackage::_instance()->getKDMRelationship();
 }
- 
+

@@ -9,14 +9,14 @@ using namespace kdm::code;
 
 CharType::CharType()
 {
-	/*PROTECTED REGION ID(CharType constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(CharType constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 CharType::~CharType()
 {
-	/*PROTECTED REGION ID(CharType destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(CharType destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ CharType::~CharType()
 
 ecore::EClass_ptr CharType::eClassImpl() const
 {
-	return CodePackage::_instance()->getCharType();
+    return CodePackage::_instance()->getCharType();
 }
- 
+

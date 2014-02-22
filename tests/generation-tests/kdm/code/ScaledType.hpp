@@ -18,29 +18,29 @@ class ScaledType :  public virtual ::kdm::code::PrimitiveType
 {
 public:
 
-	typedef ScaledType_ptr ptr_type;
-	
-	ScaledType();
-	virtual ~ScaledType();
+    typedef ScaledType_ptr ptr_type;
 
-	
-	
+    ScaledType();
+    virtual ~ScaledType();
 
-	/*PROTECTED REGION ID(kdm::code::ScaledType public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(kdm::code::ScaledType public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class CodePackage;
+    friend class CodePackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::code::ScaledType protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::code::ScaledType protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // code

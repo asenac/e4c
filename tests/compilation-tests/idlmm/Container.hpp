@@ -15,36 +15,36 @@ class Container :  public virtual ::idlmm::Contained
 {
 public:
 
-	typedef Container_ptr ptr_type;
-	
-	virtual ~Container();
+    typedef Container_ptr ptr_type;
 
-	typedef std::vector < idlmm::Contained_ptr > contains_t;
-	
-	contains_t getContains() const;
-	void addContains(idlmm::Contained_ptr contains_);
-	void addAllContains(const contains_t& contains_);
-	void removeContains(idlmm::Contained_ptr contains_);
-	void clearContains();
-	
+    virtual ~Container();
 
-	/*PROTECTED REGION ID(idlmm::Container public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef std::vector < idlmm::Contained_ptr > contains_t;
+
+    contains_t getContains() const;
+    void addContains(idlmm::Contained_ptr contains_);
+    void addAllContains(const contains_t& contains_);
+    void removeContains(idlmm::Contained_ptr contains_);
+    void clearContains();
+
+
+    /*PROTECTED REGION ID(idlmm::Container public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
-	Container();
+    Container();
 
-	friend class IdlmmPackage;
+    friend class IdlmmPackage;
 
-	std::vector < std::unique_ptr < idlmm::Contained > > m_contains;
+    std::vector < std::unique_ptr < idlmm::Contained > > m_contains;
 
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(idlmm::Container protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(idlmm::Container protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // idlmm

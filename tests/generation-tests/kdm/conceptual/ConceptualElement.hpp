@@ -18,29 +18,29 @@ class ConceptualElement :  public virtual ::kdm::conceptual::AbstractConceptualE
 {
 public:
 
-	typedef ConceptualElement_ptr ptr_type;
-	
-	ConceptualElement();
-	virtual ~ConceptualElement();
+    typedef ConceptualElement_ptr ptr_type;
 
-	
-	
+    ConceptualElement();
+    virtual ~ConceptualElement();
 
-	/*PROTECTED REGION ID(kdm::conceptual::ConceptualElement public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(kdm::conceptual::ConceptualElement public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class ConceptualPackage;
+    friend class ConceptualPackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::conceptual::ConceptualElement protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::conceptual::ConceptualElement protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // conceptual

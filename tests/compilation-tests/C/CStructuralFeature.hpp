@@ -17,29 +17,29 @@ class CStructuralFeature :  public virtual ::C::CStructureContents,  public virt
 {
 public:
 
-	typedef CStructuralFeature_ptr ptr_type;
-	
-	CStructuralFeature();
-	virtual ~CStructuralFeature();
+    typedef CStructuralFeature_ptr ptr_type;
 
-	
-	
+    CStructuralFeature();
+    virtual ~CStructuralFeature();
 
-	/*PROTECTED REGION ID(C::CStructuralFeature public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(C::CStructuralFeature public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class CPackage;
+    friend class CPackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(C::CStructuralFeature protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(C::CStructuralFeature protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // C

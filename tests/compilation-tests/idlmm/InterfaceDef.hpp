@@ -16,52 +16,52 @@ class InterfaceDef :  public virtual ::idlmm::Container,  public virtual ::idlmm
 {
 public:
 
-	typedef InterfaceDef_ptr ptr_type;
-	
-	InterfaceDef();
-	virtual ~InterfaceDef();
+    typedef InterfaceDef_ptr ptr_type;
 
-	typedef ::ecore::EBoolean isAbstract_t;
-	typedef ::ecore::EBoolean isCustom_t;
-	typedef ::ecore::EBoolean isTruncatable_t;
-	typedef std::vector < idlmm::InterfaceDef_ptr > derivesFrom_t;
-	typedef idlmm::ForwardDef_ptr forward_t;
-	
-	void setIsAbstract(isAbstract_t _isAbstract);
-	isAbstract_t getIsAbstract() const;
-	void setIsCustom(isCustom_t _isCustom);
-	isCustom_t getIsCustom() const;
-	void setIsTruncatable(isTruncatable_t _isTruncatable);
-	isTruncatable_t getIsTruncatable() const;
-	derivesFrom_t getDerivesFrom() const;
-	void addDerivesFrom(idlmm::InterfaceDef_ptr derivesFrom_);
-	void addAllDerivesFrom(const derivesFrom_t& derivesFrom_);
-	void removeDerivesFrom(idlmm::InterfaceDef_ptr derivesFrom_);
-	void clearDerivesFrom();
-	forward_t getForward() const;
-	void setForward(forward_t forward_);
-	
+    InterfaceDef();
+    virtual ~InterfaceDef();
 
-	/*PROTECTED REGION ID(idlmm::InterfaceDef public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef ::ecore::EBoolean isAbstract_t;
+    typedef ::ecore::EBoolean isCustom_t;
+    typedef ::ecore::EBoolean isTruncatable_t;
+    typedef std::vector < idlmm::InterfaceDef_ptr > derivesFrom_t;
+    typedef idlmm::ForwardDef_ptr forward_t;
+
+    void setIsAbstract(isAbstract_t _isAbstract);
+    isAbstract_t getIsAbstract() const;
+    void setIsCustom(isCustom_t _isCustom);
+    isCustom_t getIsCustom() const;
+    void setIsTruncatable(isTruncatable_t _isTruncatable);
+    isTruncatable_t getIsTruncatable() const;
+    derivesFrom_t getDerivesFrom() const;
+    void addDerivesFrom(idlmm::InterfaceDef_ptr derivesFrom_);
+    void addAllDerivesFrom(const derivesFrom_t& derivesFrom_);
+    void removeDerivesFrom(idlmm::InterfaceDef_ptr derivesFrom_);
+    void clearDerivesFrom();
+    forward_t getForward() const;
+    void setForward(forward_t forward_);
+
+
+    /*PROTECTED REGION ID(idlmm::InterfaceDef public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class IdlmmPackage;
+    friend class IdlmmPackage;
 
-	isAbstract_t m_isAbstract;
-	isCustom_t m_isCustom;
-	isTruncatable_t m_isTruncatable;
-	std::vector < idlmm::InterfaceDef_ptr > m_derivesFrom;
-	idlmm::ForwardDef_ptr m_forward;
+    isAbstract_t m_isAbstract;
+    isCustom_t m_isCustom;
+    isTruncatable_t m_isTruncatable;
+    std::vector < idlmm::InterfaceDef_ptr > m_derivesFrom;
+    idlmm::ForwardDef_ptr m_forward;
 
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(idlmm::InterfaceDef protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(idlmm::InterfaceDef protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // idlmm

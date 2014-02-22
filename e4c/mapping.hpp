@@ -11,12 +11,12 @@
 #include <e4c/holder.hpp>
 #include <e4c/select.hpp>
 
-namespace ecore 
+namespace ecore
 {
 class EObject;
 } // namespace ecore
 
-namespace e4c 
+namespace e4c
 {
 
 typedef std::function< holder (ecore::EObject*)> get_t;
@@ -35,7 +35,7 @@ T * returned(T* t) {
 template< typename T >
 std::vector< T * > returned(const std::vector< std::unique_ptr< T > >& t) {
     std::vector< T* > r;
-    for (auto i = t.begin(); i != t.end(); i++) 
+    for (auto i = t.begin(); i != t.end(); i++)
         r.push_back(i->get());
     return r;
 }
@@ -43,7 +43,7 @@ std::vector< T * > returned(const std::vector< std::unique_ptr< T > >& t) {
 template< typename T >
 std::set< T * > returned(const std::set< std::unique_ptr< T > >& t) {
     std::set< T* > r;
-    for (auto i = t.begin(); i != t.end(); i++) 
+    for (auto i = t.begin(); i != t.end(); i++)
         r.insert(i->get());
     return r;
 }

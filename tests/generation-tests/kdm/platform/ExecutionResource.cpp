@@ -9,14 +9,14 @@ using namespace kdm::platform;
 
 ExecutionResource::ExecutionResource()
 {
-	/*PROTECTED REGION ID(ExecutionResource constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(ExecutionResource constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 ExecutionResource::~ExecutionResource()
 {
-	/*PROTECTED REGION ID(ExecutionResource destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(ExecutionResource destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ ExecutionResource::~ExecutionResource()
 
 ecore::EClass_ptr ExecutionResource::eClassImpl() const
 {
-	return PlatformPackage::_instance()->getExecutionResource();
+    return PlatformPackage::_instance()->getExecutionResource();
 }
- 
+

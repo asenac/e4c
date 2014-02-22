@@ -16,29 +16,29 @@ class SimpleType :  public virtual ::myDsl::Type
 {
 public:
 
-	typedef SimpleType_ptr ptr_type;
-	
-	SimpleType();
-	virtual ~SimpleType();
+    typedef SimpleType_ptr ptr_type;
 
-	
-	
+    SimpleType();
+    virtual ~SimpleType();
 
-	/*PROTECTED REGION ID(myDsl::SimpleType public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(myDsl::SimpleType public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class MyDslPackage;
+    friend class MyDslPackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(myDsl::SimpleType protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(myDsl::SimpleType protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // myDsl

@@ -16,29 +16,29 @@ class RelativeCoord :  public virtual ::SVG::Coordinates
 {
 public:
 
-	typedef RelativeCoord_ptr ptr_type;
-	
-	RelativeCoord();
-	virtual ~RelativeCoord();
+    typedef RelativeCoord_ptr ptr_type;
 
-	
-	
+    RelativeCoord();
+    virtual ~RelativeCoord();
 
-	/*PROTECTED REGION ID(SVG::RelativeCoord public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(SVG::RelativeCoord public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class SVGPackage;
+    friend class SVGPackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(SVG::RelativeCoord protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(SVG::RelativeCoord protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // SVG

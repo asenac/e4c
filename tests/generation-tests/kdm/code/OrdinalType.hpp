@@ -18,29 +18,29 @@ class OrdinalType :  public virtual ::kdm::code::PrimitiveType
 {
 public:
 
-	typedef OrdinalType_ptr ptr_type;
-	
-	OrdinalType();
-	virtual ~OrdinalType();
+    typedef OrdinalType_ptr ptr_type;
 
-	
-	
+    OrdinalType();
+    virtual ~OrdinalType();
 
-	/*PROTECTED REGION ID(kdm::code::OrdinalType public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(kdm::code::OrdinalType public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class CodePackage;
+    friend class CodePackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::code::OrdinalType protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::code::OrdinalType protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // code

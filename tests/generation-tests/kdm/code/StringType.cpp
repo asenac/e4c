@@ -9,14 +9,14 @@ using namespace kdm::code;
 
 StringType::StringType()
 {
-	/*PROTECTED REGION ID(StringType constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(StringType constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 StringType::~StringType()
 {
-	/*PROTECTED REGION ID(StringType destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(StringType destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ StringType::~StringType()
 
 ecore::EClass_ptr StringType::eClassImpl() const
 {
-	return CodePackage::_instance()->getStringType();
+    return CodePackage::_instance()->getStringType();
 }
- 
+

@@ -18,29 +18,29 @@ class BitType :  public virtual ::kdm::code::PrimitiveType
 {
 public:
 
-	typedef BitType_ptr ptr_type;
-	
-	BitType();
-	virtual ~BitType();
+    typedef BitType_ptr ptr_type;
 
-	
-	
+    BitType();
+    virtual ~BitType();
 
-	/*PROTECTED REGION ID(kdm::code::BitType public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(kdm::code::BitType public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class CodePackage;
+    friend class CodePackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::code::BitType protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::code::BitType protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // code

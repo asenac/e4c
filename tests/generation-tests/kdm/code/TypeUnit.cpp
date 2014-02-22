@@ -9,14 +9,14 @@ using namespace kdm::code;
 
 TypeUnit::TypeUnit()
 {
-	/*PROTECTED REGION ID(TypeUnit constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(TypeUnit constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 TypeUnit::~TypeUnit()
 {
-	/*PROTECTED REGION ID(TypeUnit destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(TypeUnit destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ TypeUnit::~TypeUnit()
 
 ecore::EClass_ptr TypeUnit::eClassImpl() const
 {
-	return CodePackage::_instance()->getTypeUnit();
+    return CodePackage::_instance()->getTypeUnit();
 }
- 
+

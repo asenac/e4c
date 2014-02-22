@@ -9,14 +9,14 @@ using namespace kdm::data;
 
 ReferenceKey::ReferenceKey()
 {
-	/*PROTECTED REGION ID(ReferenceKey constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(ReferenceKey constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 ReferenceKey::~ReferenceKey()
 {
-	/*PROTECTED REGION ID(ReferenceKey destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(ReferenceKey destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ ReferenceKey::~ReferenceKey()
 
 ecore::EClass_ptr ReferenceKey::eClassImpl() const
 {
-	return DataPackage::_instance()->getReferenceKey();
+    return DataPackage::_instance()->getReferenceKey();
 }
- 
+

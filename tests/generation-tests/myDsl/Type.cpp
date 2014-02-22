@@ -7,27 +7,27 @@ using namespace myDsl;
 /*PROTECTED REGION ID(myDsl::Type include) START*/
 /*PROTECTED REGION END*/
 
-Type::Type() : 
-	m_name()
+Type::Type() :
+    m_name()
 {
-	/*PROTECTED REGION ID(Type constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(Type constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 Type::~Type()
 {
-	/*PROTECTED REGION ID(Type destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(Type destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 void Type::setName(name_t _name)
 {
-	m_name = _name;;
+    m_name = _name;;
 }
 
 Type::name_t Type::getName() const
 {
-	return m_name;
+    return m_name;
 }
 
 
@@ -37,6 +37,6 @@ Type::name_t Type::getName() const
 
 ecore::EClass_ptr Type::eClassImpl() const
 {
-	return MyDslPackage::_instance()->getType();
+    return MyDslPackage::_instance()->getType();
 }
- 
+

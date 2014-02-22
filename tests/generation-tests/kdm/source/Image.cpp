@@ -9,14 +9,14 @@ using namespace kdm::source;
 
 Image::Image()
 {
-	/*PROTECTED REGION ID(Image constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(Image constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 Image::~Image()
 {
-	/*PROTECTED REGION ID(Image destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(Image destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ Image::~Image()
 
 ecore::EClass_ptr Image::eClassImpl() const
 {
-	return SourcePackage::_instance()->getImage();
+    return SourcePackage::_instance()->getImage();
 }
- 
+

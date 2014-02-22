@@ -9,42 +9,42 @@ using namespace kdm::code;
 /*PROTECTED REGION ID(kdm::code::CodeRelationship include) START*/
 /*PROTECTED REGION END*/
 
-CodeRelationship::CodeRelationship() : 
-	m_to(),
+CodeRelationship::CodeRelationship() :
+    m_to(),
     m_from()
 {
-	/*PROTECTED REGION ID(CodeRelationship constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(CodeRelationship constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 CodeRelationship::~CodeRelationship()
 {
-	/*PROTECTED REGION ID(CodeRelationship destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(CodeRelationship destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 CodeRelationship::to_t CodeRelationship::getTo() const
 {
-	return e4c::returned(m_to);
+    return e4c::returned(m_to);
 }
 
 void CodeRelationship::setTo(to_t to_)
 {
-	if (m_to == to_)
-		return;
-	m_to = to_;
+    if (m_to == to_)
+        return;
+    m_to = to_;
 }
 
 CodeRelationship::from_t CodeRelationship::getFrom() const
 {
-	return e4c::returned(m_from);
+    return e4c::returned(m_from);
 }
 
 void CodeRelationship::setFrom(from_t from_)
 {
-	if (m_from == from_)
-		return;
-	m_from = from_;
+    if (m_from == from_)
+        return;
+    m_from = from_;
 }
 
 
@@ -54,6 +54,6 @@ void CodeRelationship::setFrom(from_t from_)
 
 ecore::EClass_ptr CodeRelationship::eClassImpl() const
 {
-	return CodePackage::_instance()->getCodeRelationship();
+    return CodePackage::_instance()->getCodeRelationship();
 }
- 
+

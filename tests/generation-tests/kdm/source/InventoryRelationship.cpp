@@ -9,42 +9,42 @@ using namespace kdm::source;
 /*PROTECTED REGION ID(kdm::source::InventoryRelationship include) START*/
 /*PROTECTED REGION END*/
 
-InventoryRelationship::InventoryRelationship() : 
-	m_to(),
+InventoryRelationship::InventoryRelationship() :
+    m_to(),
     m_from()
 {
-	/*PROTECTED REGION ID(InventoryRelationship constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(InventoryRelationship constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 InventoryRelationship::~InventoryRelationship()
 {
-	/*PROTECTED REGION ID(InventoryRelationship destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(InventoryRelationship destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 InventoryRelationship::to_t InventoryRelationship::getTo() const
 {
-	return e4c::returned(m_to);
+    return e4c::returned(m_to);
 }
 
 void InventoryRelationship::setTo(to_t to_)
 {
-	if (m_to == to_)
-		return;
-	m_to = to_;
+    if (m_to == to_)
+        return;
+    m_to = to_;
 }
 
 InventoryRelationship::from_t InventoryRelationship::getFrom() const
 {
-	return e4c::returned(m_from);
+    return e4c::returned(m_from);
 }
 
 void InventoryRelationship::setFrom(from_t from_)
 {
-	if (m_from == from_)
-		return;
-	m_from = from_;
+    if (m_from == from_)
+        return;
+    m_from = from_;
 }
 
 
@@ -54,6 +54,6 @@ void InventoryRelationship::setFrom(from_t from_)
 
 ecore::EClass_ptr InventoryRelationship::eClassImpl() const
 {
-	return SourcePackage::_instance()->getInventoryRelationship();
+    return SourcePackage::_instance()->getInventoryRelationship();
 }
- 
+

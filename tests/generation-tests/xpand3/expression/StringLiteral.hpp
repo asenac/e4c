@@ -18,29 +18,29 @@ class StringLiteral :  public virtual ::xpand3::expression::Literal
 {
 public:
 
-	typedef StringLiteral_ptr ptr_type;
-	
-	StringLiteral();
-	virtual ~StringLiteral();
+    typedef StringLiteral_ptr ptr_type;
 
-	
-	
+    StringLiteral();
+    virtual ~StringLiteral();
 
-	/*PROTECTED REGION ID(xpand3::expression::StringLiteral public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(xpand3::expression::StringLiteral public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class ExpressionPackage;
+    friend class ExpressionPackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(xpand3::expression::StringLiteral protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(xpand3::expression::StringLiteral protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // expression

@@ -16,29 +16,29 @@ class Alternatives :  public virtual ::xtext::CompoundElement
 {
 public:
 
-	typedef Alternatives_ptr ptr_type;
-	
-	Alternatives();
-	virtual ~Alternatives();
+    typedef Alternatives_ptr ptr_type;
 
-	
-	
+    Alternatives();
+    virtual ~Alternatives();
 
-	/*PROTECTED REGION ID(xtext::Alternatives public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(xtext::Alternatives public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class XtextPackage;
+    friend class XtextPackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(xtext::Alternatives protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(xtext::Alternatives protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // xtext

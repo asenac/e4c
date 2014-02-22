@@ -9,14 +9,14 @@ using namespace kdm::source;
 
 Project::Project()
 {
-	/*PROTECTED REGION ID(Project constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(Project constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 Project::~Project()
 {
-	/*PROTECTED REGION ID(Project destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(Project destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ Project::~Project()
 
 ecore::EClass_ptr Project::eClassImpl() const
 {
-	return SourcePackage::_instance()->getProject();
+    return SourcePackage::_instance()->getProject();
 }
- 
+

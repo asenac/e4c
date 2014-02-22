@@ -18,29 +18,29 @@ class MixedContent :  public virtual ::kdm::data::ComplexContentType
 {
 public:
 
-	typedef MixedContent_ptr ptr_type;
-	
-	MixedContent();
-	virtual ~MixedContent();
+    typedef MixedContent_ptr ptr_type;
 
-	
-	
+    MixedContent();
+    virtual ~MixedContent();
 
-	/*PROTECTED REGION ID(kdm::data::MixedContent public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(kdm::data::MixedContent public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class DataPackage;
+    friend class DataPackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::data::MixedContent protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::data::MixedContent protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // data

@@ -16,40 +16,40 @@ class ArrayDef :  public virtual ::idlmm::Typed,  public virtual ::idlmm::IDLTyp
 {
 public:
 
-	typedef ArrayDef_ptr ptr_type;
-	
-	ArrayDef();
-	virtual ~ArrayDef();
+    typedef ArrayDef_ptr ptr_type;
 
-	typedef ::ecore::EString name_t;
-	typedef std::vector < idlmm::Expression_ptr > bounds_t;
-	
-	void setName(name_t _name);
-	name_t getName() const;
-	bounds_t getBounds() const;
-	void addBounds(idlmm::Expression_ptr bounds_);
-	void addAllBounds(const bounds_t& bounds_);
-	void removeBounds(idlmm::Expression_ptr bounds_);
-	void clearBounds();
-	
+    ArrayDef();
+    virtual ~ArrayDef();
 
-	/*PROTECTED REGION ID(idlmm::ArrayDef public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef ::ecore::EString name_t;
+    typedef std::vector < idlmm::Expression_ptr > bounds_t;
+
+    void setName(name_t _name);
+    name_t getName() const;
+    bounds_t getBounds() const;
+    void addBounds(idlmm::Expression_ptr bounds_);
+    void addAllBounds(const bounds_t& bounds_);
+    void removeBounds(idlmm::Expression_ptr bounds_);
+    void clearBounds();
+
+
+    /*PROTECTED REGION ID(idlmm::ArrayDef public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class IdlmmPackage;
+    friend class IdlmmPackage;
 
-	name_t m_name;
-	std::vector < std::unique_ptr < idlmm::Expression > > m_bounds;
+    name_t m_name;
+    std::vector < std::unique_ptr < idlmm::Expression > > m_bounds;
 
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(idlmm::ArrayDef protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(idlmm::ArrayDef protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // idlmm

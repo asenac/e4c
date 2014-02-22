@@ -16,29 +16,29 @@ class CInt :  public virtual ::C::CIntegral
 {
 public:
 
-	typedef CInt_ptr ptr_type;
-	
-	CInt();
-	virtual ~CInt();
+    typedef CInt_ptr ptr_type;
 
-	
-	
+    CInt();
+    virtual ~CInt();
 
-	/*PROTECTED REGION ID(C::CInt public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(C::CInt public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class CPackage;
+    friend class CPackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(C::CInt protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(C::CInt protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // C

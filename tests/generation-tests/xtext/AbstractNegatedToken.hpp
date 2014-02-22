@@ -16,34 +16,34 @@ class AbstractNegatedToken :  public virtual ::xtext::AbstractElement
 {
 public:
 
-	typedef AbstractNegatedToken_ptr ptr_type;
-	
-	AbstractNegatedToken();
-	virtual ~AbstractNegatedToken();
+    typedef AbstractNegatedToken_ptr ptr_type;
 
-	typedef xtext::AbstractElement_ptr terminal_t;
-	
-	terminal_t getTerminal() const;
-	void setTerminal(terminal_t terminal_);
-	terminal_t releaseTerminal();
-	
+    AbstractNegatedToken();
+    virtual ~AbstractNegatedToken();
 
-	/*PROTECTED REGION ID(xtext::AbstractNegatedToken public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef xtext::AbstractElement_ptr terminal_t;
+
+    terminal_t getTerminal() const;
+    void setTerminal(terminal_t terminal_);
+    terminal_t releaseTerminal();
+
+
+    /*PROTECTED REGION ID(xtext::AbstractNegatedToken public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class XtextPackage;
+    friend class XtextPackage;
 
-	std::unique_ptr < xtext::AbstractElement > m_terminal;
+    std::unique_ptr < xtext::AbstractElement > m_terminal;
 
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(xtext::AbstractNegatedToken protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(xtext::AbstractNegatedToken protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // xtext

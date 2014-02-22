@@ -18,29 +18,29 @@ class AbstractStatement :  public virtual ::xpand3::SyntaxElement
 {
 public:
 
-	typedef AbstractStatement_ptr ptr_type;
-	
-	virtual ~AbstractStatement();
+    typedef AbstractStatement_ptr ptr_type;
 
-	
-	
+    virtual ~AbstractStatement();
 
-	/*PROTECTED REGION ID(xpand3::statement::AbstractStatement public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(xpand3::statement::AbstractStatement public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
-	AbstractStatement();
+    AbstractStatement();
 
-	friend class StatementPackage;
+    friend class StatementPackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(xpand3::statement::AbstractStatement protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(xpand3::statement::AbstractStatement protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // statement

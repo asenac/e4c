@@ -9,14 +9,14 @@ using namespace kdm::code;
 
 LanguageUnit::LanguageUnit()
 {
-	/*PROTECTED REGION ID(LanguageUnit constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(LanguageUnit constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 LanguageUnit::~LanguageUnit()
 {
-	/*PROTECTED REGION ID(LanguageUnit destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(LanguageUnit destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ LanguageUnit::~LanguageUnit()
 
 ecore::EClass_ptr LanguageUnit::eClassImpl() const
 {
-	return CodePackage::_instance()->getLanguageUnit();
+    return CodePackage::_instance()->getLanguageUnit();
 }
- 
+

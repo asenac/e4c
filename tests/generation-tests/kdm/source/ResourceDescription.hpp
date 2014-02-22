@@ -18,29 +18,29 @@ class ResourceDescription :  public virtual ::kdm::source::InventoryItem
 {
 public:
 
-	typedef ResourceDescription_ptr ptr_type;
-	
-	ResourceDescription();
-	virtual ~ResourceDescription();
+    typedef ResourceDescription_ptr ptr_type;
 
-	
-	
+    ResourceDescription();
+    virtual ~ResourceDescription();
 
-	/*PROTECTED REGION ID(kdm::source::ResourceDescription public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(kdm::source::ResourceDescription public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class SourcePackage;
+    friend class SourcePackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::source::ResourceDescription protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::source::ResourceDescription protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // source

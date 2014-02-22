@@ -18,29 +18,29 @@ class MessagingResource :  public virtual ::kdm::platform::ResourceType
 {
 public:
 
-	typedef MessagingResource_ptr ptr_type;
-	
-	MessagingResource();
-	virtual ~MessagingResource();
+    typedef MessagingResource_ptr ptr_type;
 
-	
-	
+    MessagingResource();
+    virtual ~MessagingResource();
 
-	/*PROTECTED REGION ID(kdm::platform::MessagingResource public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(kdm::platform::MessagingResource public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class PlatformPackage;
+    friend class PlatformPackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::platform::MessagingResource protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::platform::MessagingResource protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // platform

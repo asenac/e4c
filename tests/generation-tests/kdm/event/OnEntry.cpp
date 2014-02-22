@@ -9,14 +9,14 @@ using namespace kdm::event;
 
 OnEntry::OnEntry()
 {
-	/*PROTECTED REGION ID(OnEntry constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(OnEntry constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 OnEntry::~OnEntry()
 {
-	/*PROTECTED REGION ID(OnEntry destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(OnEntry destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ OnEntry::~OnEntry()
 
 ecore::EClass_ptr OnEntry::eClassImpl() const
 {
-	return EventPackage::_instance()->getOnEntry();
+    return EventPackage::_instance()->getOnEntry();
 }
- 
+

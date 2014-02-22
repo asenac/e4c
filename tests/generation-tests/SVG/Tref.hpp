@@ -16,33 +16,33 @@ class Tref :  public virtual ::SVG::TextElement
 {
 public:
 
-	typedef Tref_ptr ptr_type;
-	
-	Tref();
-	virtual ~Tref();
+    typedef Tref_ptr ptr_type;
 
-	typedef SVG::TextElement_ptr xlinkHref_t;
-	
-	xlinkHref_t getXlinkHref() const;
-	void setXlinkHref(xlinkHref_t xlinkHref_);
-	
+    Tref();
+    virtual ~Tref();
 
-	/*PROTECTED REGION ID(SVG::Tref public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef SVG::TextElement_ptr xlinkHref_t;
+
+    xlinkHref_t getXlinkHref() const;
+    void setXlinkHref(xlinkHref_t xlinkHref_);
+
+
+    /*PROTECTED REGION ID(SVG::Tref public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class SVGPackage;
+    friend class SVGPackage;
 
-	SVG::TextElement_ptr m_xlinkHref;
+    SVG::TextElement_ptr m_xlinkHref;
 
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(SVG::Tref protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(SVG::Tref protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // SVG

@@ -18,29 +18,29 @@ class AbstractEventRelationship :  public virtual ::kdm::core::KDMRelationship
 {
 public:
 
-	typedef AbstractEventRelationship_ptr ptr_type;
-	
-	virtual ~AbstractEventRelationship();
+    typedef AbstractEventRelationship_ptr ptr_type;
 
-	
-	
+    virtual ~AbstractEventRelationship();
 
-	/*PROTECTED REGION ID(kdm::event::AbstractEventRelationship public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(kdm::event::AbstractEventRelationship public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
-	AbstractEventRelationship();
+    AbstractEventRelationship();
 
-	friend class EventPackage;
+    friend class EventPackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::event::AbstractEventRelationship protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::event::AbstractEventRelationship protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // event

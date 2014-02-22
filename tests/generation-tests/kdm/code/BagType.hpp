@@ -18,33 +18,33 @@ class BagType :  public virtual ::kdm::code::DerivedType
 {
 public:
 
-	typedef BagType_ptr ptr_type;
-	
-	BagType();
-	virtual ~BagType();
+    typedef BagType_ptr ptr_type;
 
-	typedef ::kdm::core::Integer size_t;
-	
-	void setSize(size_t _size);
-	size_t getSize() const;
-	
+    BagType();
+    virtual ~BagType();
 
-	/*PROTECTED REGION ID(kdm::code::BagType public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef ::kdm::core::Integer size_t;
+
+    void setSize(size_t _size);
+    size_t getSize() const;
+
+
+    /*PROTECTED REGION ID(kdm::code::BagType public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class CodePackage;
+    friend class CodePackage;
 
-	size_t m_size;
+    size_t m_size;
 
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::code::BagType protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::code::BagType protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // code

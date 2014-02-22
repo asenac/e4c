@@ -16,29 +16,29 @@ class EnumRule :  public virtual ::xtext::AbstractRule
 {
 public:
 
-	typedef EnumRule_ptr ptr_type;
-	
-	EnumRule();
-	virtual ~EnumRule();
+    typedef EnumRule_ptr ptr_type;
 
-	
-	
+    EnumRule();
+    virtual ~EnumRule();
 
-	/*PROTECTED REGION ID(xtext::EnumRule public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(xtext::EnumRule public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class XtextPackage;
+    friend class XtextPackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(xtext::EnumRule protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(xtext::EnumRule protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // xtext

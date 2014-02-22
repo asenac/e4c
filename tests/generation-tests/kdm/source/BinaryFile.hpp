@@ -18,29 +18,29 @@ class BinaryFile :  public virtual ::kdm::source::InventoryItem
 {
 public:
 
-	typedef BinaryFile_ptr ptr_type;
-	
-	BinaryFile();
-	virtual ~BinaryFile();
+    typedef BinaryFile_ptr ptr_type;
 
-	
-	
+    BinaryFile();
+    virtual ~BinaryFile();
 
-	/*PROTECTED REGION ID(kdm::source::BinaryFile public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(kdm::source::BinaryFile public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class SourcePackage;
+    friend class SourcePackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::source::BinaryFile protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::source::BinaryFile protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // source

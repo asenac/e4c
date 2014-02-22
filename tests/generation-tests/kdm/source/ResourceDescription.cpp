@@ -9,14 +9,14 @@ using namespace kdm::source;
 
 ResourceDescription::ResourceDescription()
 {
-	/*PROTECTED REGION ID(ResourceDescription constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(ResourceDescription constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 ResourceDescription::~ResourceDescription()
 {
-	/*PROTECTED REGION ID(ResourceDescription destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(ResourceDescription destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ ResourceDescription::~ResourceDescription()
 
 ecore::EClass_ptr ResourceDescription::eClassImpl() const
 {
-	return SourcePackage::_instance()->getResourceDescription();
+    return SourcePackage::_instance()->getResourceDescription();
 }
- 
+

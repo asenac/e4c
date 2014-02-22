@@ -9,14 +9,14 @@ using namespace kdm::structure;
 
 AbstractStructureRelationship::AbstractStructureRelationship()
 {
-	/*PROTECTED REGION ID(AbstractStructureRelationship constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(AbstractStructureRelationship constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 AbstractStructureRelationship::~AbstractStructureRelationship()
 {
-	/*PROTECTED REGION ID(AbstractStructureRelationship destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(AbstractStructureRelationship destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ AbstractStructureRelationship::~AbstractStructureRelationship()
 
 ecore::EClass_ptr AbstractStructureRelationship::eClassImpl() const
 {
-	return StructurePackage::_instance()->getAbstractStructureRelationship();
+    return StructurePackage::_instance()->getAbstractStructureRelationship();
 }
- 
+

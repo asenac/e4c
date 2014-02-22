@@ -18,29 +18,29 @@ class SeqContent :  public virtual ::kdm::data::ComplexContentType
 {
 public:
 
-	typedef SeqContent_ptr ptr_type;
-	
-	SeqContent();
-	virtual ~SeqContent();
+    typedef SeqContent_ptr ptr_type;
 
-	
-	
+    SeqContent();
+    virtual ~SeqContent();
 
-	/*PROTECTED REGION ID(kdm::data::SeqContent public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(kdm::data::SeqContent public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class DataPackage;
+    friend class DataPackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::data::SeqContent protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::data::SeqContent protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // data

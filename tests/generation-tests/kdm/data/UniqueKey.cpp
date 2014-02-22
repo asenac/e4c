@@ -9,14 +9,14 @@ using namespace kdm::data;
 
 UniqueKey::UniqueKey()
 {
-	/*PROTECTED REGION ID(UniqueKey constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(UniqueKey constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 UniqueKey::~UniqueKey()
 {
-	/*PROTECTED REGION ID(UniqueKey destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(UniqueKey destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ UniqueKey::~UniqueKey()
 
 ecore::EClass_ptr UniqueKey::eClassImpl() const
 {
-	return DataPackage::_instance()->getUniqueKey();
+    return DataPackage::_instance()->getUniqueKey();
 }
- 
+

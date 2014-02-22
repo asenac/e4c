@@ -9,14 +9,14 @@ using namespace kdm::code;
 
 IntegerType::IntegerType()
 {
-	/*PROTECTED REGION ID(IntegerType constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(IntegerType constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 IntegerType::~IntegerType()
 {
-	/*PROTECTED REGION ID(IntegerType destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(IntegerType destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ IntegerType::~IntegerType()
 
 ecore::EClass_ptr IntegerType::eClassImpl() const
 {
-	return CodePackage::_instance()->getIntegerType();
+    return CodePackage::_instance()->getIntegerType();
 }
- 
+

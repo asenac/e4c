@@ -18,34 +18,34 @@ class ErrorStatement :  public virtual ::xpand3::statement::AbstractStatement
 {
 public:
 
-	typedef ErrorStatement_ptr ptr_type;
-	
-	ErrorStatement();
-	virtual ~ErrorStatement();
+    typedef ErrorStatement_ptr ptr_type;
 
-	typedef xpand3::expression::AbstractExpression_ptr message_t;
-	
-	message_t getMessage() const;
-	void setMessage(message_t message_);
-	message_t releaseMessage();
-	
+    ErrorStatement();
+    virtual ~ErrorStatement();
 
-	/*PROTECTED REGION ID(xpand3::statement::ErrorStatement public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef xpand3::expression::AbstractExpression_ptr message_t;
+
+    message_t getMessage() const;
+    void setMessage(message_t message_);
+    message_t releaseMessage();
+
+
+    /*PROTECTED REGION ID(xpand3::statement::ErrorStatement public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class StatementPackage;
+    friend class StatementPackage;
 
-	std::unique_ptr < xpand3::expression::AbstractExpression > m_message;
+    std::unique_ptr < xpand3::expression::AbstractExpression > m_message;
 
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(xpand3::statement::ErrorStatement protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(xpand3::statement::ErrorStatement protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // statement

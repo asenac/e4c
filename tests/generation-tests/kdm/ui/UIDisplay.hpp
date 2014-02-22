@@ -18,29 +18,29 @@ class UIDisplay :  public virtual ::kdm::ui::UIResource
 {
 public:
 
-	typedef UIDisplay_ptr ptr_type;
-	
-	UIDisplay();
-	virtual ~UIDisplay();
+    typedef UIDisplay_ptr ptr_type;
 
-	
-	
+    UIDisplay();
+    virtual ~UIDisplay();
 
-	/*PROTECTED REGION ID(kdm::ui::UIDisplay public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(kdm::ui::UIDisplay public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class UiPackage;
+    friend class UiPackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::ui::UIDisplay protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::ui::UIDisplay protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // ui

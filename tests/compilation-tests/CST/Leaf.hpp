@@ -16,41 +16,41 @@ class Leaf :  public virtual ::CST::Element
 {
 public:
 
-	typedef Leaf_ptr ptr_type;
-	
-	Leaf();
-	virtual ~Leaf();
+    typedef Leaf_ptr ptr_type;
 
-	typedef ::ecore::EString value_t;
-	typedef ::ecore::EInt pos_t;
-	typedef ::ecore::EInt line_t;
-	
-	void setValue(value_t _value);
-	value_t getValue() const;
-	void setPos(pos_t _pos);
-	pos_t getPos() const;
-	void setLine(line_t _line);
-	line_t getLine() const;
-	
+    Leaf();
+    virtual ~Leaf();
 
-	/*PROTECTED REGION ID(CST::Leaf public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef ::ecore::EString value_t;
+    typedef ::ecore::EInt pos_t;
+    typedef ::ecore::EInt line_t;
+
+    void setValue(value_t _value);
+    value_t getValue() const;
+    void setPos(pos_t _pos);
+    pos_t getPos() const;
+    void setLine(line_t _line);
+    line_t getLine() const;
+
+
+    /*PROTECTED REGION ID(CST::Leaf public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class CSTPackage;
+    friend class CSTPackage;
 
-	value_t m_value;
-	pos_t m_pos;
-	line_t m_line;
+    value_t m_value;
+    pos_t m_pos;
+    line_t m_line;
 
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(CST::Leaf protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(CST::Leaf protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // CST

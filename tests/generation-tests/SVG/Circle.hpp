@@ -16,29 +16,29 @@ class Circle :  public virtual ::SVG::Shape
 {
 public:
 
-	typedef Circle_ptr ptr_type;
-	
-	Circle();
-	virtual ~Circle();
+    typedef Circle_ptr ptr_type;
 
-	
-	
+    Circle();
+    virtual ~Circle();
 
-	/*PROTECTED REGION ID(SVG::Circle public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(SVG::Circle public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class SVGPackage;
+    friend class SVGPackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(SVG::Circle protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(SVG::Circle protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // SVG

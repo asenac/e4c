@@ -9,14 +9,14 @@ using namespace C;
 
 UnsignedLong::UnsignedLong()
 {
-	/*PROTECTED REGION ID(UnsignedLong constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(UnsignedLong constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 UnsignedLong::~UnsignedLong()
 {
-	/*PROTECTED REGION ID(UnsignedLong destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(UnsignedLong destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ UnsignedLong::~UnsignedLong()
 
 ecore::EClass_ptr UnsignedLong::eClassImpl() const
 {
-	return CPackage::_instance()->getUnsignedLong();
+    return CPackage::_instance()->getUnsignedLong();
 }
- 
+

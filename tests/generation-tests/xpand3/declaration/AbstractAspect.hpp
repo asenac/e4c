@@ -18,38 +18,38 @@ class AbstractAspect :  public virtual ::xpand3::declaration::AbstractDeclaratio
 {
 public:
 
-	typedef AbstractAspect_ptr ptr_type;
-	
-	virtual ~AbstractAspect();
+    typedef AbstractAspect_ptr ptr_type;
 
-	typedef xpand3::Identifier_ptr pointcut_t;
-	typedef ::ecore::EBoolean wildparams_t;
-	
-	pointcut_t getPointcut() const;
-	void setPointcut(pointcut_t pointcut_);
-	pointcut_t releasePointcut();
-	void setWildparams(wildparams_t _wildparams);
-	wildparams_t getWildparams() const;
-	
+    virtual ~AbstractAspect();
 
-	/*PROTECTED REGION ID(xpand3::declaration::AbstractAspect public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef xpand3::Identifier_ptr pointcut_t;
+    typedef ::ecore::EBoolean wildparams_t;
+
+    pointcut_t getPointcut() const;
+    void setPointcut(pointcut_t pointcut_);
+    pointcut_t releasePointcut();
+    void setWildparams(wildparams_t _wildparams);
+    wildparams_t getWildparams() const;
+
+
+    /*PROTECTED REGION ID(xpand3::declaration::AbstractAspect public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
-	AbstractAspect();
+    AbstractAspect();
 
-	friend class DeclarationPackage;
+    friend class DeclarationPackage;
 
-	std::unique_ptr < xpand3::Identifier > m_pointcut;
-	wildparams_t m_wildparams;
+    std::unique_ptr < xpand3::Identifier > m_pointcut;
+    wildparams_t m_wildparams;
 
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(xpand3::declaration::AbstractAspect protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(xpand3::declaration::AbstractAspect protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // declaration

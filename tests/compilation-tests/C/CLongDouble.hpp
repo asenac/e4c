@@ -16,29 +16,29 @@ class CLongDouble :  public virtual ::C::CFloating
 {
 public:
 
-	typedef CLongDouble_ptr ptr_type;
-	
-	CLongDouble();
-	virtual ~CLongDouble();
+    typedef CLongDouble_ptr ptr_type;
 
-	
-	
+    CLongDouble();
+    virtual ~CLongDouble();
 
-	/*PROTECTED REGION ID(C::CLongDouble public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(C::CLongDouble public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class CPackage;
+    friend class CPackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(C::CLongDouble protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(C::CLongDouble protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // C

@@ -15,33 +15,33 @@ class ValueExpression :  public virtual ::idlmm::LiteralExpression
 {
 public:
 
-	typedef ValueExpression_ptr ptr_type;
-	
-	ValueExpression();
-	virtual ~ValueExpression();
+    typedef ValueExpression_ptr ptr_type;
 
-	typedef ::ecore::EString value_t;
-	
-	void setValue(value_t _value);
-	value_t getValue() const;
-	
+    ValueExpression();
+    virtual ~ValueExpression();
 
-	/*PROTECTED REGION ID(idlmm::ValueExpression public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef ::ecore::EString value_t;
+
+    void setValue(value_t _value);
+    value_t getValue() const;
+
+
+    /*PROTECTED REGION ID(idlmm::ValueExpression public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class IdlmmPackage;
+    friend class IdlmmPackage;
 
-	value_t m_value;
+    value_t m_value;
 
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(idlmm::ValueExpression protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(idlmm::ValueExpression protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // idlmm

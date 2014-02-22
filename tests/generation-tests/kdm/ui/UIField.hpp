@@ -18,29 +18,29 @@ class UIField :  public virtual ::kdm::ui::UIResource
 {
 public:
 
-	typedef UIField_ptr ptr_type;
-	
-	UIField();
-	virtual ~UIField();
+    typedef UIField_ptr ptr_type;
 
-	
-	
+    UIField();
+    virtual ~UIField();
 
-	/*PROTECTED REGION ID(kdm::ui::UIField public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(kdm::ui::UIField public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class UiPackage;
+    friend class UiPackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::ui::UIField protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::ui::UIField protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // ui

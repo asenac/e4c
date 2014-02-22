@@ -18,29 +18,29 @@ class ExecutionResource :  public virtual ::kdm::platform::ResourceType
 {
 public:
 
-	typedef ExecutionResource_ptr ptr_type;
-	
-	ExecutionResource();
-	virtual ~ExecutionResource();
+    typedef ExecutionResource_ptr ptr_type;
 
-	
-	
+    ExecutionResource();
+    virtual ~ExecutionResource();
 
-	/*PROTECTED REGION ID(kdm::platform::ExecutionResource public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(kdm::platform::ExecutionResource public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class PlatformPackage;
+    friend class PlatformPackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::platform::ExecutionResource protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::platform::ExecutionResource protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // platform

@@ -18,33 +18,33 @@ class MemberUnit :  public virtual ::kdm::code::DataElement
 {
 public:
 
-	typedef MemberUnit_ptr ptr_type;
-	
-	MemberUnit();
-	virtual ~MemberUnit();
+    typedef MemberUnit_ptr ptr_type;
 
-	typedef ::kdm::code::ExportKind export__t;
-	
-	void setExport_(export__t _export_);
-	export__t getExport_() const;
-	
+    MemberUnit();
+    virtual ~MemberUnit();
 
-	/*PROTECTED REGION ID(kdm::code::MemberUnit public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef ::kdm::code::ExportKind export__t;
+
+    void setExport_(export__t _export_);
+    export__t getExport_() const;
+
+
+    /*PROTECTED REGION ID(kdm::code::MemberUnit public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class CodePackage;
+    friend class CodePackage;
 
-	export__t m_export_;
+    export__t m_export_;
 
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::code::MemberUnit protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::code::MemberUnit protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // code

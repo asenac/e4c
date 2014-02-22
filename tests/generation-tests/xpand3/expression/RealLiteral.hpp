@@ -18,29 +18,29 @@ class RealLiteral :  public virtual ::xpand3::expression::Literal
 {
 public:
 
-	typedef RealLiteral_ptr ptr_type;
-	
-	RealLiteral();
-	virtual ~RealLiteral();
+    typedef RealLiteral_ptr ptr_type;
 
-	
-	
+    RealLiteral();
+    virtual ~RealLiteral();
 
-	/*PROTECTED REGION ID(xpand3::expression::RealLiteral public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(xpand3::expression::RealLiteral public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class ExpressionPackage;
+    friend class ExpressionPackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(xpand3::expression::RealLiteral protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(xpand3::expression::RealLiteral protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // expression

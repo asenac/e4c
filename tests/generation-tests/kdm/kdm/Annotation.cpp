@@ -7,27 +7,27 @@ using namespace kdm::kdm;
 /*PROTECTED REGION ID(kdm::kdm::Annotation include) START*/
 /*PROTECTED REGION END*/
 
-Annotation::Annotation() : 
-	m_text()
+Annotation::Annotation() :
+    m_text()
 {
-	/*PROTECTED REGION ID(Annotation constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(Annotation constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 Annotation::~Annotation()
 {
-	/*PROTECTED REGION ID(Annotation destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(Annotation destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 void Annotation::setText(text_t _text)
 {
-	m_text = _text;;
+    m_text = _text;;
 }
 
 Annotation::text_t Annotation::getText() const
 {
-	return m_text;
+    return m_text;
 }
 
 
@@ -37,6 +37,6 @@ Annotation::text_t Annotation::getText() const
 
 ecore::EClass_ptr Annotation::eClassImpl() const
 {
-	return KdmPackage::_instance()->getAnnotation();
+    return KdmPackage::_instance()->getAnnotation();
 }
- 
+

@@ -9,14 +9,14 @@ using namespace SVG;
 
 Circle::Circle()
 {
-	/*PROTECTED REGION ID(Circle constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(Circle constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 Circle::~Circle()
 {
-	/*PROTECTED REGION ID(Circle destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(Circle destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ Circle::~Circle()
 
 ecore::EClass_ptr Circle::eClassImpl() const
 {
-	return SVGPackage::_instance()->getCircle();
+    return SVGPackage::_instance()->getCircle();
 }
- 
+

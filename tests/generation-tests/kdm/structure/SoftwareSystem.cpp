@@ -9,14 +9,14 @@ using namespace kdm::structure;
 
 SoftwareSystem::SoftwareSystem()
 {
-	/*PROTECTED REGION ID(SoftwareSystem constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(SoftwareSystem constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 SoftwareSystem::~SoftwareSystem()
 {
-	/*PROTECTED REGION ID(SoftwareSystem destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(SoftwareSystem destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ SoftwareSystem::~SoftwareSystem()
 
 ecore::EClass_ptr SoftwareSystem::eClassImpl() const
 {
-	return StructurePackage::_instance()->getSoftwareSystem();
+    return StructurePackage::_instance()->getSoftwareSystem();
 }
- 
+

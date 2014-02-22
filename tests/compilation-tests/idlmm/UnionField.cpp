@@ -7,56 +7,56 @@ using namespace idlmm;
 /*PROTECTED REGION ID(idlmm::UnionField include) START*/
 /*PROTECTED REGION END*/
 
-UnionField::UnionField() : 
-	m_identifier(),
+UnionField::UnionField() :
+    m_identifier(),
     m_label()
 {
-	/*PROTECTED REGION ID(UnionField constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(UnionField constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 UnionField::~UnionField()
 {
-	/*PROTECTED REGION ID(UnionField destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(UnionField destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 void UnionField::setIdentifier(identifier_t _identifier)
 {
-	m_identifier = _identifier;;
+    m_identifier = _identifier;;
 }
 
 UnionField::identifier_t UnionField::getIdentifier() const
 {
-	return m_identifier;
+    return m_identifier;
 }
 
 UnionField::label_t UnionField::getLabel() const
 {
-	return e4c::returned(m_label);
+    return e4c::returned(m_label);
 }
 
 void UnionField::addLabel(idlmm::Expression_ptr label_)
 {
-	assert(label_);
-	m_label.push_back(std::unique_ptr < idlmm::Expression >(label_));
+    assert(label_);
+    m_label.push_back(std::unique_ptr < idlmm::Expression >(label_));
 }
 
 void UnionField::addAllLabel(const label_t& label_)
 {
-	for (auto i = label_.begin(); i != label_.end(); i++)
-		addLabel(*i);
+    for (auto i = label_.begin(); i != label_.end(); i++)
+        addLabel(*i);
 }
 
 void UnionField::removeLabel(idlmm::Expression_ptr label_)
 {
-	assert(label_);
-	e4c::remove(m_label, label_);
+    assert(label_);
+    e4c::remove(m_label, label_);
 }
 
 void UnionField::clearLabel()
 {
-	m_label.clear();
+    m_label.clear();
 }
 
 
@@ -66,6 +66,6 @@ void UnionField::clearLabel()
 
 ecore::EClass_ptr UnionField::eClassImpl() const
 {
-	return IdlmmPackage::_instance()->getUnionField();
+    return IdlmmPackage::_instance()->getUnionField();
 }
- 
+

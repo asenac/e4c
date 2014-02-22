@@ -9,14 +9,14 @@ using namespace kdm::source;
 
 ExecutableFile::ExecutableFile()
 {
-	/*PROTECTED REGION ID(ExecutableFile constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(ExecutableFile constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 ExecutableFile::~ExecutableFile()
 {
-	/*PROTECTED REGION ID(ExecutableFile destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(ExecutableFile destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ ExecutableFile::~ExecutableFile()
 
 ecore::EClass_ptr ExecutableFile::eClassImpl() const
 {
-	return SourcePackage::_instance()->getExecutableFile();
+    return SourcePackage::_instance()->getExecutableFile();
 }
- 
+

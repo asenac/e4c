@@ -9,14 +9,14 @@ using namespace xtext;
 
 Wildcard::Wildcard()
 {
-	/*PROTECTED REGION ID(Wildcard constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(Wildcard constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 Wildcard::~Wildcard()
 {
-	/*PROTECTED REGION ID(Wildcard destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(Wildcard destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ Wildcard::~Wildcard()
 
 ecore::EClass_ptr Wildcard::eClassImpl() const
 {
-	return XtextPackage::_instance()->getWildcard();
+    return XtextPackage::_instance()->getWildcard();
 }
- 
+

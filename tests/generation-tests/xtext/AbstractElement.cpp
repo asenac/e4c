@@ -7,27 +7,27 @@ using namespace xtext;
 /*PROTECTED REGION ID(xtext::AbstractElement include) START*/
 /*PROTECTED REGION END*/
 
-AbstractElement::AbstractElement() : 
-	m_cardinality()
+AbstractElement::AbstractElement() :
+    m_cardinality()
 {
-	/*PROTECTED REGION ID(AbstractElement constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(AbstractElement constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 AbstractElement::~AbstractElement()
 {
-	/*PROTECTED REGION ID(AbstractElement destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(AbstractElement destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 void AbstractElement::setCardinality(cardinality_t _cardinality)
 {
-	m_cardinality = _cardinality;;
+    m_cardinality = _cardinality;;
 }
 
 AbstractElement::cardinality_t AbstractElement::getCardinality() const
 {
-	return m_cardinality;
+    return m_cardinality;
 }
 
 
@@ -37,6 +37,6 @@ AbstractElement::cardinality_t AbstractElement::getCardinality() const
 
 ecore::EClass_ptr AbstractElement::eClassImpl() const
 {
-	return XtextPackage::_instance()->getAbstractElement();
+    return XtextPackage::_instance()->getAbstractElement();
 }
- 
+

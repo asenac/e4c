@@ -18,38 +18,38 @@ class ExtensionFamily :  public virtual ::kdm::core::Element
 {
 public:
 
-	typedef ExtensionFamily_ptr ptr_type;
-	
-	ExtensionFamily();
-	virtual ~ExtensionFamily();
+    typedef ExtensionFamily_ptr ptr_type;
 
-	typedef std::set < kdm::kdm::Stereotype_ptr > stereotype_t;
-	typedef ::kdm::core::String name_t;
-	
-	stereotype_t getStereotype() const;
-	void addStereotype(kdm::kdm::Stereotype_ptr stereotype_);
-	void addAllStereotype(const stereotype_t& stereotype_);
-	void setName(name_t _name);
-	name_t getName() const;
-	
+    ExtensionFamily();
+    virtual ~ExtensionFamily();
 
-	/*PROTECTED REGION ID(kdm::kdm::ExtensionFamily public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef std::set < kdm::kdm::Stereotype_ptr > stereotype_t;
+    typedef ::kdm::core::String name_t;
+
+    stereotype_t getStereotype() const;
+    void addStereotype(kdm::kdm::Stereotype_ptr stereotype_);
+    void addAllStereotype(const stereotype_t& stereotype_);
+    void setName(name_t _name);
+    name_t getName() const;
+
+
+    /*PROTECTED REGION ID(kdm::kdm::ExtensionFamily public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class KdmPackage;
+    friend class KdmPackage;
 
-	std::set < std::unique_ptr < kdm::kdm::Stereotype > > m_stereotype;
-	name_t m_name;
+    std::set < std::unique_ptr < kdm::kdm::Stereotype > > m_stereotype;
+    name_t m_name;
 
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::kdm::ExtensionFamily protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::kdm::ExtensionFamily protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // kdm

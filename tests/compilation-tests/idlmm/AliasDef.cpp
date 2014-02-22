@@ -8,14 +8,14 @@ using namespace idlmm;
 
 AliasDef::AliasDef()
 {
-	/*PROTECTED REGION ID(AliasDef constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(AliasDef constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 AliasDef::~AliasDef()
 {
-	/*PROTECTED REGION ID(AliasDef destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(AliasDef destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -25,6 +25,6 @@ AliasDef::~AliasDef()
 
 ecore::EClass_ptr AliasDef::eClassImpl() const
 {
-	return IdlmmPackage::_instance()->getAliasDef();
+    return IdlmmPackage::_instance()->getAliasDef();
 }
- 
+

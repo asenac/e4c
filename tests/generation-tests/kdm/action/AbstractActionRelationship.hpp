@@ -18,29 +18,29 @@ class AbstractActionRelationship :  public virtual ::kdm::core::KDMRelationship
 {
 public:
 
-	typedef AbstractActionRelationship_ptr ptr_type;
-	
-	virtual ~AbstractActionRelationship();
+    typedef AbstractActionRelationship_ptr ptr_type;
 
-	
-	
+    virtual ~AbstractActionRelationship();
 
-	/*PROTECTED REGION ID(kdm::action::AbstractActionRelationship public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(kdm::action::AbstractActionRelationship public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
-	AbstractActionRelationship();
+    AbstractActionRelationship();
 
-	friend class ActionPackage;
+    friend class ActionPackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::action::AbstractActionRelationship protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::action::AbstractActionRelationship protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // action

@@ -16,33 +16,33 @@ class Macro :  public virtual ::Make::Element
 {
 public:
 
-	typedef Macro_ptr ptr_type;
-	
-	Macro();
-	virtual ~Macro();
+    typedef Macro_ptr ptr_type;
 
-	typedef ::PrimitiveTypes::String value_t;
-	
-	void setValue(value_t _value);
-	value_t getValue() const;
-	
+    Macro();
+    virtual ~Macro();
 
-	/*PROTECTED REGION ID(Make::Macro public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef ::PrimitiveTypes::String value_t;
+
+    void setValue(value_t _value);
+    value_t getValue() const;
+
+
+    /*PROTECTED REGION ID(Make::Macro public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class MakePackage;
+    friend class MakePackage;
 
-	value_t m_value;
+    value_t m_value;
 
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(Make::Macro protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(Make::Macro protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // Make

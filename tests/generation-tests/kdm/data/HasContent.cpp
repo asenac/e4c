@@ -9,42 +9,42 @@ using namespace kdm::data;
 /*PROTECTED REGION ID(kdm::data::HasContent include) START*/
 /*PROTECTED REGION END*/
 
-HasContent::HasContent() : 
-	m_to(),
+HasContent::HasContent() :
+    m_to(),
     m_from()
 {
-	/*PROTECTED REGION ID(HasContent constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(HasContent constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 HasContent::~HasContent()
 {
-	/*PROTECTED REGION ID(HasContent destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(HasContent destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 HasContent::to_t HasContent::getTo() const
 {
-	return e4c::returned(m_to);
+    return e4c::returned(m_to);
 }
 
 void HasContent::setTo(to_t to_)
 {
-	if (m_to == to_)
-		return;
-	m_to = to_;
+    if (m_to == to_)
+        return;
+    m_to = to_;
 }
 
 HasContent::from_t HasContent::getFrom() const
 {
-	return e4c::returned(m_from);
+    return e4c::returned(m_from);
 }
 
 void HasContent::setFrom(from_t from_)
 {
-	if (m_from == from_)
-		return;
-	m_from = from_;
+    if (m_from == from_)
+        return;
+    m_from = from_;
 }
 
 
@@ -54,6 +54,6 @@ void HasContent::setFrom(from_t from_)
 
 ecore::EClass_ptr HasContent::eClassImpl() const
 {
-	return DataPackage::_instance()->getHasContent();
+    return DataPackage::_instance()->getHasContent();
 }
- 
+

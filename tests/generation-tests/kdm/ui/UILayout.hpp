@@ -18,37 +18,37 @@ class UILayout :  public virtual ::kdm::ui::AbstractUIRelationship
 {
 public:
 
-	typedef UILayout_ptr ptr_type;
-	
-	UILayout();
-	virtual ~UILayout();
+    typedef UILayout_ptr ptr_type;
 
-	typedef kdm::ui::UIResource_ptr to_t;
-	typedef kdm::ui::UIResource_ptr from_t;
-	
-	to_t getTo() const;
-	void setTo(to_t to_);
-	from_t getFrom() const;
-	void setFrom(from_t from_);
-	
+    UILayout();
+    virtual ~UILayout();
 
-	/*PROTECTED REGION ID(kdm::ui::UILayout public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef kdm::ui::UIResource_ptr to_t;
+    typedef kdm::ui::UIResource_ptr from_t;
+
+    to_t getTo() const;
+    void setTo(to_t to_);
+    from_t getFrom() const;
+    void setFrom(from_t from_);
+
+
+    /*PROTECTED REGION ID(kdm::ui::UILayout public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class UiPackage;
+    friend class UiPackage;
 
-	kdm::ui::UIResource_ptr m_to;
-	kdm::ui::UIResource_ptr m_from;
+    kdm::ui::UIResource_ptr m_to;
+    kdm::ui::UIResource_ptr m_from;
 
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::ui::UILayout protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::ui::UILayout protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // ui

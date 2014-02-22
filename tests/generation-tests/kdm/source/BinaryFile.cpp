@@ -9,14 +9,14 @@ using namespace kdm::source;
 
 BinaryFile::BinaryFile()
 {
-	/*PROTECTED REGION ID(BinaryFile constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(BinaryFile constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 BinaryFile::~BinaryFile()
 {
-	/*PROTECTED REGION ID(BinaryFile destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(BinaryFile destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ BinaryFile::~BinaryFile()
 
 ecore::EClass_ptr BinaryFile::eClassImpl() const
 {
-	return SourcePackage::_instance()->getBinaryFile();
+    return SourcePackage::_instance()->getBinaryFile();
 }
- 
+

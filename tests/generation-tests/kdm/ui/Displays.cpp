@@ -9,42 +9,42 @@ using namespace kdm::ui;
 /*PROTECTED REGION ID(kdm::ui::Displays include) START*/
 /*PROTECTED REGION END*/
 
-Displays::Displays() : 
-	m_to(),
+Displays::Displays() :
+    m_to(),
     m_from()
 {
-	/*PROTECTED REGION ID(Displays constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(Displays constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 Displays::~Displays()
 {
-	/*PROTECTED REGION ID(Displays destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(Displays destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 Displays::to_t Displays::getTo() const
 {
-	return e4c::returned(m_to);
+    return e4c::returned(m_to);
 }
 
 void Displays::setTo(to_t to_)
 {
-	if (m_to == to_)
-		return;
-	m_to = to_;
+    if (m_to == to_)
+        return;
+    m_to = to_;
 }
 
 Displays::from_t Displays::getFrom() const
 {
-	return e4c::returned(m_from);
+    return e4c::returned(m_from);
 }
 
 void Displays::setFrom(from_t from_)
 {
-	if (m_from == from_)
-		return;
-	m_from = from_;
+    if (m_from == from_)
+        return;
+    m_from = from_;
 }
 
 
@@ -54,6 +54,6 @@ void Displays::setFrom(from_t from_)
 
 ecore::EClass_ptr Displays::eClassImpl() const
 {
-	return UiPackage::_instance()->getDisplays();
+    return UiPackage::_instance()->getDisplays();
 }
- 
+

@@ -18,29 +18,29 @@ class AbstractPlatformRelationship :  public virtual ::kdm::core::KDMRelationshi
 {
 public:
 
-	typedef AbstractPlatformRelationship_ptr ptr_type;
-	
-	virtual ~AbstractPlatformRelationship();
+    typedef AbstractPlatformRelationship_ptr ptr_type;
 
-	
-	
+    virtual ~AbstractPlatformRelationship();
 
-	/*PROTECTED REGION ID(kdm::platform::AbstractPlatformRelationship public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(kdm::platform::AbstractPlatformRelationship public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
-	AbstractPlatformRelationship();
+    AbstractPlatformRelationship();
 
-	friend class PlatformPackage;
+    friend class PlatformPackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::platform::AbstractPlatformRelationship protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::platform::AbstractPlatformRelationship protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // platform

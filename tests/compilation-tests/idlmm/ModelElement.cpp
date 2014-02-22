@@ -8,14 +8,14 @@ using namespace idlmm;
 
 ModelElement::ModelElement()
 {
-	/*PROTECTED REGION ID(ModelElement constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(ModelElement constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 ModelElement::~ModelElement()
 {
-	/*PROTECTED REGION ID(ModelElement destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(ModelElement destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -25,6 +25,6 @@ ModelElement::~ModelElement()
 
 ecore::EClass_ptr ModelElement::eClassImpl() const
 {
-	return IdlmmPackage::_instance()->getModelElement();
+    return IdlmmPackage::_instance()->getModelElement();
 }
- 
+

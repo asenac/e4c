@@ -16,29 +16,29 @@ class AliasDef :  public virtual ::idlmm::Typed,  public virtual ::idlmm::Typede
 {
 public:
 
-	typedef AliasDef_ptr ptr_type;
-	
-	AliasDef();
-	virtual ~AliasDef();
+    typedef AliasDef_ptr ptr_type;
 
-	
-	
+    AliasDef();
+    virtual ~AliasDef();
 
-	/*PROTECTED REGION ID(idlmm::AliasDef public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(idlmm::AliasDef public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class IdlmmPackage;
+    friend class IdlmmPackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(idlmm::AliasDef protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(idlmm::AliasDef protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // idlmm

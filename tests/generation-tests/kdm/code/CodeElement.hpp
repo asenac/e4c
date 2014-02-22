@@ -18,29 +18,29 @@ class CodeElement :  public virtual ::kdm::code::CodeItem
 {
 public:
 
-	typedef CodeElement_ptr ptr_type;
-	
-	CodeElement();
-	virtual ~CodeElement();
+    typedef CodeElement_ptr ptr_type;
 
-	
-	
+    CodeElement();
+    virtual ~CodeElement();
 
-	/*PROTECTED REGION ID(kdm::code::CodeElement public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(kdm::code::CodeElement public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class CodePackage;
+    friend class CodePackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::code::CodeElement protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::code::CodeElement protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // code

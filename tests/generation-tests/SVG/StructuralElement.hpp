@@ -16,29 +16,29 @@ class StructuralElement :  public virtual ::SVG::Element
 {
 public:
 
-	typedef StructuralElement_ptr ptr_type;
-	
-	virtual ~StructuralElement();
+    typedef StructuralElement_ptr ptr_type;
 
-	
-	
+    virtual ~StructuralElement();
 
-	/*PROTECTED REGION ID(SVG::StructuralElement public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(SVG::StructuralElement public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
-	StructuralElement();
+    StructuralElement();
 
-	friend class SVGPackage;
+    friend class SVGPackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(SVG::StructuralElement protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(SVG::StructuralElement protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // SVG

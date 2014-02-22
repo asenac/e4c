@@ -9,14 +9,14 @@ using namespace kdm::code;
 
 ItemUnit::ItemUnit()
 {
-	/*PROTECTED REGION ID(ItemUnit constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(ItemUnit constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 ItemUnit::~ItemUnit()
 {
-	/*PROTECTED REGION ID(ItemUnit destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(ItemUnit destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ ItemUnit::~ItemUnit()
 
 ecore::EClass_ptr ItemUnit::eClassImpl() const
 {
-	return CodePackage::_instance()->getItemUnit();
+    return CodePackage::_instance()->getItemUnit();
 }
- 
+

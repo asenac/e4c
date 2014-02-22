@@ -9,14 +9,14 @@ using namespace SVG;
 
 Symbol::Symbol()
 {
-	/*PROTECTED REGION ID(Symbol constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(Symbol constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 Symbol::~Symbol()
 {
-	/*PROTECTED REGION ID(Symbol destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(Symbol destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ Symbol::~Symbol()
 
 ecore::EClass_ptr Symbol::eClassImpl() const
 {
-	return SVGPackage::_instance()->getSymbol();
+    return SVGPackage::_instance()->getSymbol();
 }
- 
+

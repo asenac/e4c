@@ -7,59 +7,59 @@ using namespace ecore;
 /*PROTECTED REGION ID(ecore::EEnumLiteral include) START*/
 /*PROTECTED REGION END*/
 
-EEnumLiteral::EEnumLiteral() : 
-	m_value(),
+EEnumLiteral::EEnumLiteral() :
+    m_value(),
     m_instance(),
     m_literal(),
     m_eEnum()
 {
-	/*PROTECTED REGION ID(EEnumLiteral constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(EEnumLiteral constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 EEnumLiteral::~EEnumLiteral()
 {
-	/*PROTECTED REGION ID(EEnumLiteral destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(EEnumLiteral destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 void EEnumLiteral::setValue(value_t _value)
 {
-	m_value = _value;;
+    m_value = _value;;
 }
 
 EEnumLiteral::value_t EEnumLiteral::getValue() const
 {
-	return m_value;
+    return m_value;
 }
 
 void EEnumLiteral::setInstance(instance_t _instance)
 {
-	m_instance = _instance;;
+    m_instance = _instance;;
 }
 
 EEnumLiteral::instance_t EEnumLiteral::getInstance() const
 {
-	return m_instance;
+    return m_instance;
 }
 
 void EEnumLiteral::setLiteral(literal_t _literal)
 {
-	m_literal = _literal;;
+    m_literal = _literal;;
 }
 
 EEnumLiteral::literal_t EEnumLiteral::getLiteral() const
 {
-	return m_literal;
+    return m_literal;
 }
 
 EEnumLiteral::eEnum_t EEnumLiteral::getEEnum() const
 {
-	return e4c::returned(m_eEnum);
+    return e4c::returned(m_eEnum);
 }
 void EEnumLiteral::setEEnum(eEnum_t eEnum_)
 {
-	m_eEnum = eEnum_;
+    m_eEnum = eEnum_;
 }
 
 
@@ -69,6 +69,6 @@ void EEnumLiteral::setEEnum(eEnum_t eEnum_)
 
 ecore::EClass_ptr EEnumLiteral::eClassImpl() const
 {
-	return EcorePackage::_instance()->getEEnumLiteral();
+    return EcorePackage::_instance()->getEEnumLiteral();
 }
- 
+

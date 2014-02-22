@@ -16,33 +16,33 @@ class CFunction :  public virtual ::C::BehavioralFeature
 {
 public:
 
-	typedef CFunction_ptr ptr_type;
-	
-	CFunction();
-	virtual ~CFunction();
+    typedef CFunction_ptr ptr_type;
 
-	typedef ::PrimitiveTypes::Boolean isVarArg_t;
-	
-	void setIsVarArg(isVarArg_t _isVarArg);
-	isVarArg_t getIsVarArg() const;
-	
+    CFunction();
+    virtual ~CFunction();
 
-	/*PROTECTED REGION ID(C::CFunction public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef ::PrimitiveTypes::Boolean isVarArg_t;
+
+    void setIsVarArg(isVarArg_t _isVarArg);
+    isVarArg_t getIsVarArg() const;
+
+
+    /*PROTECTED REGION ID(C::CFunction public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class CPackage;
+    friend class CPackage;
 
-	isVarArg_t m_isVarArg;
+    isVarArg_t m_isVarArg;
 
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(C::CFunction protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(C::CFunction protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // C

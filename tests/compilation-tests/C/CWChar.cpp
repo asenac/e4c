@@ -9,14 +9,14 @@ using namespace C;
 
 CWChar::CWChar()
 {
-	/*PROTECTED REGION ID(CWChar constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(CWChar constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 CWChar::~CWChar()
 {
-	/*PROTECTED REGION ID(CWChar destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(CWChar destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ CWChar::~CWChar()
 
 ecore::EClass_ptr CWChar::eClassImpl() const
 {
-	return CPackage::_instance()->getCWChar();
+    return CPackage::_instance()->getCWChar();
 }
- 
+

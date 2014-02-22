@@ -16,29 +16,29 @@ class TerminalRule :  public virtual ::xtext::AbstractRule
 {
 public:
 
-	typedef TerminalRule_ptr ptr_type;
-	
-	TerminalRule();
-	virtual ~TerminalRule();
+    typedef TerminalRule_ptr ptr_type;
 
-	
-	
+    TerminalRule();
+    virtual ~TerminalRule();
 
-	/*PROTECTED REGION ID(xtext::TerminalRule public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(xtext::TerminalRule public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class XtextPackage;
+    friend class XtextPackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(xtext::TerminalRule protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(xtext::TerminalRule protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // xtext

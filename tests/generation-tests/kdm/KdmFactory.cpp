@@ -6,12 +6,12 @@ using namespace kdm;
 
 KdmFactory::KdmFactory()
 {
-	// m_ePackage = KdmPackage::_instance();
+    // m_ePackage = KdmPackage::_instance();
 }
 
 const KdmFactory_ptr KdmFactory::_instance()
 {
-	static KdmFactory __instance;
-	return &__instance;
+    static KdmFactory __instance;
+    return &__instance;
 }
 

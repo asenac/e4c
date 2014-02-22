@@ -18,29 +18,29 @@ class ScenarioUnit :  public virtual ::kdm::conceptual::ConceptualContainer
 {
 public:
 
-	typedef ScenarioUnit_ptr ptr_type;
-	
-	ScenarioUnit();
-	virtual ~ScenarioUnit();
+    typedef ScenarioUnit_ptr ptr_type;
 
-	
-	
+    ScenarioUnit();
+    virtual ~ScenarioUnit();
 
-	/*PROTECTED REGION ID(kdm::conceptual::ScenarioUnit public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(kdm::conceptual::ScenarioUnit public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class ConceptualPackage;
+    friend class ConceptualPackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::conceptual::ScenarioUnit protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::conceptual::ScenarioUnit protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // conceptual

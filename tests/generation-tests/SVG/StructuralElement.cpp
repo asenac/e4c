@@ -9,14 +9,14 @@ using namespace SVG;
 
 StructuralElement::StructuralElement()
 {
-	/*PROTECTED REGION ID(StructuralElement constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(StructuralElement constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 StructuralElement::~StructuralElement()
 {
-	/*PROTECTED REGION ID(StructuralElement destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(StructuralElement destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ StructuralElement::~StructuralElement()
 
 ecore::EClass_ptr StructuralElement::eClassImpl() const
 {
-	return SVGPackage::_instance()->getStructuralElement();
+    return SVGPackage::_instance()->getStructuralElement();
 }
- 
+

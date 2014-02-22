@@ -17,34 +17,34 @@ class Parameter :  public virtual ::emof::TypedElement,  public virtual ::emof::
 {
 public:
 
-	typedef Parameter_ptr ptr_type;
-	
-	Parameter();
-	virtual ~Parameter();
+    typedef Parameter_ptr ptr_type;
 
-	typedef emof::Operation_ptr operation_t;
-	
-	operation_t getOperation() const;
-	
+    Parameter();
+    virtual ~Parameter();
 
-	/*PROTECTED REGION ID(emof::Parameter public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef emof::Operation_ptr operation_t;
+
+    operation_t getOperation() const;
+
+
+    /*PROTECTED REGION ID(emof::Parameter public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class EmofPackage;
+    friend class EmofPackage;
 
-	emof::Operation_ptr m_operation;
+    emof::Operation_ptr m_operation;
 
-	
-	friend class ::emof::Operation;
-	void setOperation(operation_t operation_);
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(emof::Parameter protected) START*/
-	/*PROTECTED REGION END*/
+
+    friend class ::emof::Operation;
+    void setOperation(operation_t operation_);
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(emof::Parameter protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // emof

@@ -16,34 +16,34 @@ class Use :  public virtual ::SVG::StructuralElement
 {
 public:
 
-	typedef Use_ptr ptr_type;
-	
-	Use();
-	virtual ~Use();
+    typedef Use_ptr ptr_type;
 
-	typedef std::set < SVG::Element_ptr > use_t;
-	
-	use_t getUse() const;
-	void addUse(SVG::Element_ptr use_);
-	void addAllUse(const use_t& use_);
-	
+    Use();
+    virtual ~Use();
 
-	/*PROTECTED REGION ID(SVG::Use public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef std::set < SVG::Element_ptr > use_t;
+
+    use_t getUse() const;
+    void addUse(SVG::Element_ptr use_);
+    void addAllUse(const use_t& use_);
+
+
+    /*PROTECTED REGION ID(SVG::Use public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class SVGPackage;
+    friend class SVGPackage;
 
-	std::set < SVG::Element_ptr > m_use;
+    std::set < SVG::Element_ptr > m_use;
 
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(SVG::Use protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(SVG::Use protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // SVG

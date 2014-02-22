@@ -8,44 +8,44 @@ using namespace idlmm;
 /*PROTECTED REGION ID(idlmm::Typed include) START*/
 /*PROTECTED REGION END*/
 
-Typed::Typed() : 
-	m_containedType(),
+Typed::Typed() :
+    m_containedType(),
     m_sharedType()
 {
-	/*PROTECTED REGION ID(Typed constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(Typed constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 Typed::~Typed()
 {
-	/*PROTECTED REGION ID(Typed destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(Typed destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 Typed::containedType_t Typed::getContainedType() const
 {
-	return e4c::returned(m_containedType);
+    return e4c::returned(m_containedType);
 }
 
 void Typed::setContainedType(containedType_t containedType_)
 {
-	m_containedType.reset(containedType_);
+    m_containedType.reset(containedType_);
 }
 
 Typed::containedType_t Typed::releaseContainedType()
 {
-	return m_containedType.release();
+    return m_containedType.release();
 }
 
 Typed::sharedType_t Typed::getSharedType() const
 {
-	return e4c::returned(m_sharedType);
+    return e4c::returned(m_sharedType);
 }
 void Typed::setSharedType(sharedType_t sharedType_)
 {
-	if (m_sharedType == sharedType_)
-		return;
-	m_sharedType = sharedType_;
+    if (m_sharedType == sharedType_)
+        return;
+    m_sharedType = sharedType_;
 }
 
 
@@ -55,6 +55,6 @@ void Typed::setSharedType(sharedType_t sharedType_)
 
 ecore::EClass_ptr Typed::eClassImpl() const
 {
-	return IdlmmPackage::_instance()->getTyped();
+    return IdlmmPackage::_instance()->getTyped();
 }
- 
+

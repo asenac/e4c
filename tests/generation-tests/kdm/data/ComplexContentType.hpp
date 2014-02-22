@@ -18,34 +18,34 @@ class ComplexContentType :  public virtual ::kdm::data::AbstractContentElement
 {
 public:
 
-	typedef ComplexContentType_ptr ptr_type;
-	
-	ComplexContentType();
-	virtual ~ComplexContentType();
+    typedef ComplexContentType_ptr ptr_type;
 
-	typedef std::vector < kdm::data::AbstractContentElement_ptr > contentElement_t;
-	
-	contentElement_t getContentElement() const;
-	void addContentElement(kdm::data::AbstractContentElement_ptr contentElement_);
-	void addAllContentElement(const contentElement_t& contentElement_);
-	
+    ComplexContentType();
+    virtual ~ComplexContentType();
 
-	/*PROTECTED REGION ID(kdm::data::ComplexContentType public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef std::vector < kdm::data::AbstractContentElement_ptr > contentElement_t;
+
+    contentElement_t getContentElement() const;
+    void addContentElement(kdm::data::AbstractContentElement_ptr contentElement_);
+    void addAllContentElement(const contentElement_t& contentElement_);
+
+
+    /*PROTECTED REGION ID(kdm::data::ComplexContentType public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class DataPackage;
+    friend class DataPackage;
 
-	std::vector < std::unique_ptr < kdm::data::AbstractContentElement > > m_contentElement;
+    std::vector < std::unique_ptr < kdm::data::AbstractContentElement > > m_contentElement;
 
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::data::ComplexContentType protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::data::ComplexContentType protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // data

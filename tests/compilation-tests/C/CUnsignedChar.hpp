@@ -16,29 +16,29 @@ class CUnsignedChar :  public virtual ::C::CChar
 {
 public:
 
-	typedef CUnsignedChar_ptr ptr_type;
-	
-	CUnsignedChar();
-	virtual ~CUnsignedChar();
+    typedef CUnsignedChar_ptr ptr_type;
 
-	
-	
+    CUnsignedChar();
+    virtual ~CUnsignedChar();
 
-	/*PROTECTED REGION ID(C::CUnsignedChar public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(C::CUnsignedChar public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class CPackage;
+    friend class CPackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(C::CUnsignedChar protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(C::CUnsignedChar protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // C

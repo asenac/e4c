@@ -15,37 +15,37 @@ class Include :  public virtual ::idlmm::ModelElement
 {
 public:
 
-	typedef Include_ptr ptr_type;
-	
-	Include();
-	virtual ~Include();
+    typedef Include_ptr ptr_type;
 
-	typedef ::ecore::EString importURI_t;
-	typedef idlmm::TranslationUnit_ptr translationUnit_t;
-	
-	void setImportURI(importURI_t _importURI);
-	importURI_t getImportURI() const;
-	translationUnit_t getTranslationUnit() const;
-	void setTranslationUnit(translationUnit_t translationUnit_);
-	
+    Include();
+    virtual ~Include();
 
-	/*PROTECTED REGION ID(idlmm::Include public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef ::ecore::EString importURI_t;
+    typedef idlmm::TranslationUnit_ptr translationUnit_t;
+
+    void setImportURI(importURI_t _importURI);
+    importURI_t getImportURI() const;
+    translationUnit_t getTranslationUnit() const;
+    void setTranslationUnit(translationUnit_t translationUnit_);
+
+
+    /*PROTECTED REGION ID(idlmm::Include public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class IdlmmPackage;
+    friend class IdlmmPackage;
 
-	importURI_t m_importURI;
-	idlmm::TranslationUnit_ptr m_translationUnit;
+    importURI_t m_importURI;
+    idlmm::TranslationUnit_ptr m_translationUnit;
 
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(idlmm::Include protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(idlmm::Include protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // idlmm

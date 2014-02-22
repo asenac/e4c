@@ -8,22 +8,22 @@ using namespace tree;
 
 TreePackage::TreePackage()
 {
-	m_eFactoryInstance = TreeFactory::_instance();
-	::ecore::EcoreFactory_ptr ecoreFactory = ::ecore::EcoreFactory::_instance();
-	
-	
-	
-	m_TreeNode = ecoreFactory->createEClass();
-	m_TreeNode->setName("TreeNode");
-	addEClassifiers(m_TreeNode);
-	m_Leaf = ecoreFactory->createEClass();
-	m_Leaf->setName("Leaf");
-	addEClassifiers(m_Leaf);
-	m_NonTerminal = ecoreFactory->createEClass();
-	m_NonTerminal->setName("NonTerminal");
-	addEClassifiers(m_NonTerminal);
+    m_eFactoryInstance = TreeFactory::_instance();
+    ::ecore::EcoreFactory_ptr ecoreFactory = ::ecore::EcoreFactory::_instance();
 
-	
+
+
+    m_TreeNode = ecoreFactory->createEClass();
+    m_TreeNode->setName("TreeNode");
+    addEClassifiers(m_TreeNode);
+    m_Leaf = ecoreFactory->createEClass();
+    m_Leaf->setName("Leaf");
+    addEClassifiers(m_Leaf);
+    m_NonTerminal = ecoreFactory->createEClass();
+    m_NonTerminal->setName("NonTerminal");
+    addEClassifiers(m_NonTerminal);
+
+
     {
         m_TreeNode__data = ecoreFactory->createEAttribute();
         m_TreeNode__data->setName("data");
@@ -48,99 +48,99 @@ TreePackage::TreePackage()
         m_NonTerminal->addEReferences(m_NonTerminal__children);
         m_NonTerminal->addEAllReferences(m_NonTerminal__children);
     }
-	
-	m_Leaf->addESuperTypes(m_TreeNode);
-	m_Leaf->addAllEAllOperations(m_TreeNode->getEOperations());
-	m_Leaf->addAllEAllReferences(m_TreeNode->getEReferences());
-	m_Leaf->addAllEAllAttributes(m_TreeNode->getEAttributes());
-	m_Leaf->addAllEAllStructuralFeatures(m_TreeNode->getEStructuralFeatures());
-	m_NonTerminal->addESuperTypes(m_TreeNode);
-	m_NonTerminal->addAllEAllOperations(m_TreeNode->getEOperations());
-	m_NonTerminal->addAllEAllReferences(m_TreeNode->getEReferences());
-	m_NonTerminal->addAllEAllAttributes(m_TreeNode->getEAttributes());
-	m_NonTerminal->addAllEAllStructuralFeatures(m_TreeNode->getEStructuralFeatures());
-	
-	
-	m_TreeNode->addFeatureAccesors(m_TreeNode__data, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< tree::TreeNode_ptr >(o)->getData()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
-	m_TreeNode->addFeatureAccesors(m_TreeNode__parent, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< tree::TreeNode_ptr >(o)->getParent()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
-	m_NonTerminal->addFeatureAccesors(m_NonTerminal__children, 
-		[](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< tree::NonTerminal_ptr >(o)->getChildren()); },
-		[](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
-	
+
+    m_Leaf->addESuperTypes(m_TreeNode);
+    m_Leaf->addAllEAllOperations(m_TreeNode->getEOperations());
+    m_Leaf->addAllEAllReferences(m_TreeNode->getEReferences());
+    m_Leaf->addAllEAllAttributes(m_TreeNode->getEAttributes());
+    m_Leaf->addAllEAllStructuralFeatures(m_TreeNode->getEStructuralFeatures());
+    m_NonTerminal->addESuperTypes(m_TreeNode);
+    m_NonTerminal->addAllEAllOperations(m_TreeNode->getEOperations());
+    m_NonTerminal->addAllEAllReferences(m_TreeNode->getEReferences());
+    m_NonTerminal->addAllEAllAttributes(m_TreeNode->getEAttributes());
+    m_NonTerminal->addAllEAllStructuralFeatures(m_TreeNode->getEStructuralFeatures());
+
+
+    m_TreeNode->addFeatureAccesors(m_TreeNode__data,
+        [](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< tree::TreeNode_ptr >(o)->getData()); },
+        [](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+    m_TreeNode->addFeatureAccesors(m_TreeNode__parent,
+        [](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< tree::TreeNode_ptr >(o)->getParent()); },
+        [](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+    m_NonTerminal->addFeatureAccesors(m_NonTerminal__children,
+        [](ecore::EObject_ptr o) { return e4c::create_holder(dynamic_cast< tree::NonTerminal_ptr >(o)->getChildren()); },
+        [](ecore::EObject_ptr o, e4c::holder h){ /* TODO */ });
+
 }
 
 const TreePackage_ptr TreePackage::_instance()
 {
-	static TreePackage __instance;
-	return &__instance;
+    static TreePackage __instance;
+    return &__instance;
 }
 
 ecore::EClass_ptr TreePackage::getTreeNode() const
 {
-	return m_TreeNode;
+    return m_TreeNode;
 }
-  	
+
 e4c::tag_t TreePackage::getTag_TreeNode() const
 {
-	return e4c::tag< TreeNode >::get();
+    return e4c::tag< TreeNode >::get();
 }
- 
+
 ecore::EClass_ptr TreePackage::getLeaf() const
 {
-	return m_Leaf;
+    return m_Leaf;
 }
-  	
+
 e4c::tag_t TreePackage::getTag_Leaf() const
 {
-	return e4c::tag< Leaf >::get();
+    return e4c::tag< Leaf >::get();
 }
- 
+
 ecore::EClass_ptr TreePackage::getNonTerminal() const
 {
-	return m_NonTerminal;
+    return m_NonTerminal;
 }
-  	
+
 e4c::tag_t TreePackage::getTag_NonTerminal() const
 {
-	return e4c::tag< NonTerminal >::get();
+    return e4c::tag< NonTerminal >::get();
 }
- 
+
 e4c::tag_t TreePackage::getTag_TreeNode__data() const
 {
-	return e4c::tag< TreeNode__data_tag >::get();
+    return e4c::tag< TreeNode__data_tag >::get();
 }
 
 ecore::EAttribute_ptr TreePackage::getTreeNode__data() const
 {
-	return m_TreeNode__data;
+    return m_TreeNode__data;
 }
 
 e4c::tag_t TreePackage::getTag_TreeNode__parent() const
 {
-	return e4c::tag< TreeNode__parent_tag >::get();
+    return e4c::tag< TreeNode__parent_tag >::get();
 }
 
 ecore::EReference_ptr TreePackage::getTreeNode__parent() const
 {
-	return m_TreeNode__parent;
+    return m_TreeNode__parent;
 }
 
 e4c::tag_t TreePackage::getTag_NonTerminal__children() const
 {
-	return e4c::tag< NonTerminal__children_tag >::get();
+    return e4c::tag< NonTerminal__children_tag >::get();
 }
 
 ecore::EReference_ptr TreePackage::getNonTerminal__children() const
 {
-	return m_NonTerminal__children;
+    return m_NonTerminal__children;
 }
 
 
 extern "C" ::ecore::EPackage_ptr e4c_tree()
 {
-	return ::tree::TreePackage::_instance();
+    return ::tree::TreePackage::_instance();
 }

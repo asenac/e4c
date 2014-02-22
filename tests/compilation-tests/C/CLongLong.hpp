@@ -16,29 +16,29 @@ class CLongLong :  public virtual ::C::CInt
 {
 public:
 
-	typedef CLongLong_ptr ptr_type;
-	
-	CLongLong();
-	virtual ~CLongLong();
+    typedef CLongLong_ptr ptr_type;
 
-	
-	
+    CLongLong();
+    virtual ~CLongLong();
 
-	/*PROTECTED REGION ID(C::CLongLong public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(C::CLongLong public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class CPackage;
+    friend class CPackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(C::CLongLong protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(C::CLongLong protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // C

@@ -18,29 +18,29 @@ class ContentAttribute :  public virtual ::kdm::data::ContentItem
 {
 public:
 
-	typedef ContentAttribute_ptr ptr_type;
-	
-	ContentAttribute();
-	virtual ~ContentAttribute();
+    typedef ContentAttribute_ptr ptr_type;
 
-	
-	
+    ContentAttribute();
+    virtual ~ContentAttribute();
 
-	/*PROTECTED REGION ID(kdm::data::ContentAttribute public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(kdm::data::ContentAttribute public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class DataPackage;
+    friend class DataPackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::data::ContentAttribute protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::data::ContentAttribute protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // data

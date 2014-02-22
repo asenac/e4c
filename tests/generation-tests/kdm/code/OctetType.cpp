@@ -9,14 +9,14 @@ using namespace kdm::code;
 
 OctetType::OctetType()
 {
-	/*PROTECTED REGION ID(OctetType constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(OctetType constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 OctetType::~OctetType()
 {
-	/*PROTECTED REGION ID(OctetType destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(OctetType destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ OctetType::~OctetType()
 
 ecore::EClass_ptr OctetType::eClassImpl() const
 {
-	return CodePackage::_instance()->getOctetType();
+    return CodePackage::_instance()->getOctetType();
 }
- 
+

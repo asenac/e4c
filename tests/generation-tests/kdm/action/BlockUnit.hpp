@@ -18,29 +18,29 @@ class BlockUnit :  public virtual ::kdm::action::ActionElement
 {
 public:
 
-	typedef BlockUnit_ptr ptr_type;
-	
-	BlockUnit();
-	virtual ~BlockUnit();
+    typedef BlockUnit_ptr ptr_type;
 
-	
-	
+    BlockUnit();
+    virtual ~BlockUnit();
 
-	/*PROTECTED REGION ID(kdm::action::BlockUnit public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(kdm::action::BlockUnit public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class ActionPackage;
+    friend class ActionPackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::action::BlockUnit protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::action::BlockUnit protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // action

@@ -3,12 +3,12 @@
 
 #include <memory>
 
-namespace e4c 
+namespace e4c
 {
 
 struct holder;
 
-struct holder_impl_base 
+struct holder_impl_base
 {
     virtual ~holder_impl_base();
     //virtual holder_impl_base * clone() const = 0;
@@ -44,7 +44,7 @@ struct holder
     bool is_valid() const;
 
     //descriptor_ptr get_type_descriptor() const;
-    
+
     holder_impl_ptr m_impl;
 };
 

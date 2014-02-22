@@ -15,29 +15,29 @@ class Constant :  public virtual ::idlmm::Contained
 {
 public:
 
-	typedef Constant_ptr ptr_type;
-	
-	virtual ~Constant();
+    typedef Constant_ptr ptr_type;
 
-	
-	
+    virtual ~Constant();
 
-	/*PROTECTED REGION ID(idlmm::Constant public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(idlmm::Constant public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
-	Constant();
+    Constant();
 
-	friend class IdlmmPackage;
+    friend class IdlmmPackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(idlmm::Constant protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(idlmm::Constant protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // idlmm

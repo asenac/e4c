@@ -9,14 +9,14 @@ using namespace kdm::source;
 
 InventoryElement::InventoryElement()
 {
-	/*PROTECTED REGION ID(InventoryElement constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(InventoryElement constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 InventoryElement::~InventoryElement()
 {
-	/*PROTECTED REGION ID(InventoryElement destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(InventoryElement destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ InventoryElement::~InventoryElement()
 
 ecore::EClass_ptr InventoryElement::eClassImpl() const
 {
-	return SourcePackage::_instance()->getInventoryElement();
+    return SourcePackage::_instance()->getInventoryElement();
 }
- 
+

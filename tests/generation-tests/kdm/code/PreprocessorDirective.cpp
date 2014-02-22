@@ -8,34 +8,34 @@ using namespace kdm::code;
 /*PROTECTED REGION ID(kdm::code::PreprocessorDirective include) START*/
 /*PROTECTED REGION END*/
 
-PreprocessorDirective::PreprocessorDirective() : 
-	m_codeElement()
+PreprocessorDirective::PreprocessorDirective() :
+    m_codeElement()
 {
-	/*PROTECTED REGION ID(PreprocessorDirective constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(PreprocessorDirective constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 PreprocessorDirective::~PreprocessorDirective()
 {
-	/*PROTECTED REGION ID(PreprocessorDirective destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(PreprocessorDirective destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 PreprocessorDirective::codeElement_t PreprocessorDirective::getCodeElement() const
 {
-	return e4c::returned(m_codeElement);
+    return e4c::returned(m_codeElement);
 }
 
 
 void PreprocessorDirective::addCodeElement(kdm::code::AbstractCodeElement_ptr codeElement_)
 {
-	m_codeElement.insert(std::unique_ptr < kdm::code::AbstractCodeElement >(codeElement_));
+    m_codeElement.insert(std::unique_ptr < kdm::code::AbstractCodeElement >(codeElement_));
 }
 
 void PreprocessorDirective::addAllCodeElement(const codeElement_t& codeElement_)
 {
-	for (auto i = codeElement_.begin(); i != codeElement_.end(); i++)
-		addCodeElement(*i);
+    for (auto i = codeElement_.begin(); i != codeElement_.end(); i++)
+        addCodeElement(*i);
 }
 
 
@@ -45,6 +45,6 @@ void PreprocessorDirective::addAllCodeElement(const codeElement_t& codeElement_)
 
 ecore::EClass_ptr PreprocessorDirective::eClassImpl() const
 {
-	return CodePackage::_instance()->getPreprocessorDirective();
+    return CodePackage::_instance()->getPreprocessorDirective();
 }
- 
+

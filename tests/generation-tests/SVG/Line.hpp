@@ -16,42 +16,42 @@ class Line :  public virtual ::SVG::Shape
 {
 public:
 
-	typedef Line_ptr ptr_type;
-	
-	Line();
-	virtual ~Line();
+    typedef Line_ptr ptr_type;
 
-	typedef std::set < SVG::Point_ptr > between_t;
-	typedef ::PrimitiveTypes::String markerEnd_t;
-	typedef ::PrimitiveTypes::String markerStart_t;
-	
-	between_t getBetween() const;
-	void addBetween(SVG::Point_ptr between_);
-	void addAllBetween(const between_t& between_);
-	void setMarkerEnd(markerEnd_t _markerEnd);
-	markerEnd_t getMarkerEnd() const;
-	void setMarkerStart(markerStart_t _markerStart);
-	markerStart_t getMarkerStart() const;
-	
+    Line();
+    virtual ~Line();
 
-	/*PROTECTED REGION ID(SVG::Line public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef std::set < SVG::Point_ptr > between_t;
+    typedef ::PrimitiveTypes::String markerEnd_t;
+    typedef ::PrimitiveTypes::String markerStart_t;
+
+    between_t getBetween() const;
+    void addBetween(SVG::Point_ptr between_);
+    void addAllBetween(const between_t& between_);
+    void setMarkerEnd(markerEnd_t _markerEnd);
+    markerEnd_t getMarkerEnd() const;
+    void setMarkerStart(markerStart_t _markerStart);
+    markerStart_t getMarkerStart() const;
+
+
+    /*PROTECTED REGION ID(SVG::Line public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class SVGPackage;
+    friend class SVGPackage;
 
-	std::set < SVG::Point_ptr > m_between;
-	markerEnd_t m_markerEnd;
-	markerStart_t m_markerStart;
+    std::set < SVG::Point_ptr > m_between;
+    markerEnd_t m_markerEnd;
+    markerStart_t m_markerStart;
 
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(SVG::Line protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(SVG::Line protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // SVG

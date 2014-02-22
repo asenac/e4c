@@ -9,14 +9,14 @@ using namespace kdm::ui;
 
 UIField::UIField()
 {
-	/*PROTECTED REGION ID(UIField constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(UIField constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 UIField::~UIField()
 {
-	/*PROTECTED REGION ID(UIField destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(UIField destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ UIField::~UIField()
 
 ecore::EClass_ptr UIField::eClassImpl() const
 {
-	return UiPackage::_instance()->getUIField();
+    return UiPackage::_instance()->getUIField();
 }
- 
+

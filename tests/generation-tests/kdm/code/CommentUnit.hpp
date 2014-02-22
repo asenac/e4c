@@ -18,33 +18,33 @@ class CommentUnit :  public virtual ::kdm::core::ModelElement
 {
 public:
 
-	typedef CommentUnit_ptr ptr_type;
-	
-	CommentUnit();
-	virtual ~CommentUnit();
+    typedef CommentUnit_ptr ptr_type;
 
-	typedef ::kdm::core::String text_t;
-	
-	void setText(text_t _text);
-	text_t getText() const;
-	
+    CommentUnit();
+    virtual ~CommentUnit();
 
-	/*PROTECTED REGION ID(kdm::code::CommentUnit public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef ::kdm::core::String text_t;
+
+    void setText(text_t _text);
+    text_t getText() const;
+
+
+    /*PROTECTED REGION ID(kdm::code::CommentUnit public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class CodePackage;
+    friend class CodePackage;
 
-	text_t m_text;
+    text_t m_text;
 
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::code::CommentUnit protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::code::CommentUnit protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // code

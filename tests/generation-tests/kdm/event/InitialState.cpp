@@ -9,14 +9,14 @@ using namespace kdm::event;
 
 InitialState::InitialState()
 {
-	/*PROTECTED REGION ID(InitialState constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(InitialState constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 InitialState::~InitialState()
 {
-	/*PROTECTED REGION ID(InitialState destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(InitialState destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ InitialState::~InitialState()
 
 ecore::EClass_ptr InitialState::eClassImpl() const
 {
-	return EventPackage::_instance()->getInitialState();
+    return EventPackage::_instance()->getInitialState();
 }
- 
+

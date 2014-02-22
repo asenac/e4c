@@ -16,29 +16,29 @@ class AbsoluteCoord :  public virtual ::SVG::Coordinates
 {
 public:
 
-	typedef AbsoluteCoord_ptr ptr_type;
-	
-	AbsoluteCoord();
-	virtual ~AbsoluteCoord();
+    typedef AbsoluteCoord_ptr ptr_type;
 
-	
-	
+    AbsoluteCoord();
+    virtual ~AbsoluteCoord();
 
-	/*PROTECTED REGION ID(SVG::AbsoluteCoord public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(SVG::AbsoluteCoord public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class SVGPackage;
+    friend class SVGPackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(SVG::AbsoluteCoord protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(SVG::AbsoluteCoord protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // SVG

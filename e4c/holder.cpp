@@ -2,7 +2,7 @@
 #include <e4c/detail/holder.ipp>
 #include <cstdint>
 
-namespace e4c 
+namespace e4c
 {
 
 template bool& holder::to_value< bool >();

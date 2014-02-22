@@ -8,42 +8,42 @@ using namespace kdm::action;
 /*PROTECTED REGION ID(kdm::action::ControlFlow include) START*/
 /*PROTECTED REGION END*/
 
-ControlFlow::ControlFlow() : 
-	m_to(),
+ControlFlow::ControlFlow() :
+    m_to(),
     m_from()
 {
-	/*PROTECTED REGION ID(ControlFlow constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(ControlFlow constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 ControlFlow::~ControlFlow()
 {
-	/*PROTECTED REGION ID(ControlFlow destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(ControlFlow destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 ControlFlow::to_t ControlFlow::getTo() const
 {
-	return e4c::returned(m_to);
+    return e4c::returned(m_to);
 }
 
 void ControlFlow::setTo(to_t to_)
 {
-	if (m_to == to_)
-		return;
-	m_to = to_;
+    if (m_to == to_)
+        return;
+    m_to = to_;
 }
 
 ControlFlow::from_t ControlFlow::getFrom() const
 {
-	return e4c::returned(m_from);
+    return e4c::returned(m_from);
 }
 
 void ControlFlow::setFrom(from_t from_)
 {
-	if (m_from == from_)
-		return;
-	m_from = from_;
+    if (m_from == from_)
+        return;
+    m_from = from_;
 }
 
 
@@ -53,6 +53,6 @@ void ControlFlow::setFrom(from_t from_)
 
 ecore::EClass_ptr ControlFlow::eClassImpl() const
 {
-	return ActionPackage::_instance()->getControlFlow();
+    return ActionPackage::_instance()->getControlFlow();
 }
- 
+

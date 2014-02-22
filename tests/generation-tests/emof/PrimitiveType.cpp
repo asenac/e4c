@@ -9,14 +9,14 @@ using namespace emof;
 
 PrimitiveType::PrimitiveType()
 {
-	/*PROTECTED REGION ID(PrimitiveType constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(PrimitiveType constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 PrimitiveType::~PrimitiveType()
 {
-	/*PROTECTED REGION ID(PrimitiveType destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(PrimitiveType destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ PrimitiveType::~PrimitiveType()
 
 ecore::EClass_ptr PrimitiveType::eClassImpl() const
 {
-	return EmofPackage::_instance()->getPrimitiveType();
+    return EmofPackage::_instance()->getPrimitiveType();
 }
- 
+

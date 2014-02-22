@@ -18,29 +18,29 @@ class Catalog :  public virtual ::kdm::data::DataContainer
 {
 public:
 
-	typedef Catalog_ptr ptr_type;
-	
-	Catalog();
-	virtual ~Catalog();
+    typedef Catalog_ptr ptr_type;
 
-	
-	
+    Catalog();
+    virtual ~Catalog();
 
-	/*PROTECTED REGION ID(kdm::data::Catalog public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(kdm::data::Catalog public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class DataPackage;
+    friend class DataPackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::data::Catalog protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::data::Catalog protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // data

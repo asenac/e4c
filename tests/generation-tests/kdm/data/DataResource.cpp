@@ -9,14 +9,14 @@ using namespace kdm::data;
 
 DataResource::DataResource()
 {
-	/*PROTECTED REGION ID(DataResource constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(DataResource constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 DataResource::~DataResource()
 {
-	/*PROTECTED REGION ID(DataResource destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(DataResource destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ DataResource::~DataResource()
 
 ecore::EClass_ptr DataResource::eClassImpl() const
 {
-	return DataPackage::_instance()->getDataResource();
+    return DataPackage::_instance()->getDataResource();
 }
- 
+

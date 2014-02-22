@@ -9,14 +9,14 @@ using namespace C;
 
 CStruct::CStruct()
 {
-	/*PROTECTED REGION ID(CStruct constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(CStruct constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 CStruct::~CStruct()
 {
-	/*PROTECTED REGION ID(CStruct destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(CStruct destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ CStruct::~CStruct()
 
 ecore::EClass_ptr CStruct::eClassImpl() const
 {
-	return CPackage::_instance()->getCStruct();
+    return CPackage::_instance()->getCStruct();
 }
- 
+

@@ -9,14 +9,14 @@ using namespace kdm::platform;
 
 Process::Process()
 {
-	/*PROTECTED REGION ID(Process constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(Process constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 Process::~Process()
 {
-	/*PROTECTED REGION ID(Process destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(Process destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ Process::~Process()
 
 ecore::EClass_ptr Process::eClassImpl() const
 {
-	return PlatformPackage::_instance()->getProcess();
+    return PlatformPackage::_instance()->getProcess();
 }
- 
+

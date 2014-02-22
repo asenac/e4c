@@ -7,27 +7,27 @@ using namespace SVG;
 /*PROTECTED REGION ID(SVG::FontWeight include) START*/
 /*PROTECTED REGION END*/
 
-FontWeight::FontWeight() : 
-	m_bold()
+FontWeight::FontWeight() :
+    m_bold()
 {
-	/*PROTECTED REGION ID(FontWeight constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(FontWeight constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 FontWeight::~FontWeight()
 {
-	/*PROTECTED REGION ID(FontWeight destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(FontWeight destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 void FontWeight::setBold(bold_t _bold)
 {
-	m_bold = _bold;;
+    m_bold = _bold;;
 }
 
 FontWeight::bold_t FontWeight::getBold() const
 {
-	return m_bold;
+    return m_bold;
 }
 
 
@@ -37,6 +37,6 @@ FontWeight::bold_t FontWeight::getBold() const
 
 ecore::EClass_ptr FontWeight::eClassImpl() const
 {
-	return SVGPackage::_instance()->getFontWeight();
+    return SVGPackage::_instance()->getFontWeight();
 }
- 
+

@@ -18,33 +18,33 @@ class Annotation :  public virtual ::kdm::core::Element
 {
 public:
 
-	typedef Annotation_ptr ptr_type;
-	
-	Annotation();
-	virtual ~Annotation();
+    typedef Annotation_ptr ptr_type;
 
-	typedef ::kdm::core::String text_t;
-	
-	void setText(text_t _text);
-	text_t getText() const;
-	
+    Annotation();
+    virtual ~Annotation();
 
-	/*PROTECTED REGION ID(kdm::kdm::Annotation public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef ::kdm::core::String text_t;
+
+    void setText(text_t _text);
+    text_t getText() const;
+
+
+    /*PROTECTED REGION ID(kdm::kdm::Annotation public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class KdmPackage;
+    friend class KdmPackage;
 
-	text_t m_text;
+    text_t m_text;
 
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::kdm::Annotation protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::kdm::Annotation protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // kdm

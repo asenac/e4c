@@ -6,27 +6,27 @@ using namespace idlmm;
 /*PROTECTED REGION ID(idlmm::ValueExpression include) START*/
 /*PROTECTED REGION END*/
 
-ValueExpression::ValueExpression() : 
-	m_value()
+ValueExpression::ValueExpression() :
+    m_value()
 {
-	/*PROTECTED REGION ID(ValueExpression constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(ValueExpression constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 ValueExpression::~ValueExpression()
 {
-	/*PROTECTED REGION ID(ValueExpression destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(ValueExpression destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 void ValueExpression::setValue(value_t _value)
 {
-	m_value = _value;;
+    m_value = _value;;
 }
 
 ValueExpression::value_t ValueExpression::getValue() const
 {
-	return m_value;
+    return m_value;
 }
 
 
@@ -36,6 +36,6 @@ ValueExpression::value_t ValueExpression::getValue() const
 
 ecore::EClass_ptr ValueExpression::eClassImpl() const
 {
-	return IdlmmPackage::_instance()->getValueExpression();
+    return IdlmmPackage::_instance()->getValueExpression();
 }
- 
+

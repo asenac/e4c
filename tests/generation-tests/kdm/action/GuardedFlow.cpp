@@ -9,14 +9,14 @@ using namespace kdm::action;
 
 GuardedFlow::GuardedFlow()
 {
-	/*PROTECTED REGION ID(GuardedFlow constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(GuardedFlow constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 GuardedFlow::~GuardedFlow()
 {
-	/*PROTECTED REGION ID(GuardedFlow destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(GuardedFlow destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ GuardedFlow::~GuardedFlow()
 
 ecore::EClass_ptr GuardedFlow::eClassImpl() const
 {
-	return ActionPackage::_instance()->getGuardedFlow();
+    return ActionPackage::_instance()->getGuardedFlow();
 }
- 
+

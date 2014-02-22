@@ -18,29 +18,29 @@ class AbstractExpression :  public virtual ::xpand3::SyntaxElement
 {
 public:
 
-	typedef AbstractExpression_ptr ptr_type;
-	
-	virtual ~AbstractExpression();
+    typedef AbstractExpression_ptr ptr_type;
 
-	
-	
+    virtual ~AbstractExpression();
 
-	/*PROTECTED REGION ID(xpand3::expression::AbstractExpression public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(xpand3::expression::AbstractExpression public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
-	AbstractExpression();
+    AbstractExpression();
 
-	friend class ExpressionPackage;
+    friend class ExpressionPackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(xpand3::expression::AbstractExpression protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(xpand3::expression::AbstractExpression protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // expression

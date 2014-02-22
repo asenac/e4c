@@ -9,14 +9,14 @@ using namespace kdm::platform;
 
 PlatformElement::PlatformElement()
 {
-	/*PROTECTED REGION ID(PlatformElement constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(PlatformElement constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 PlatformElement::~PlatformElement()
 {
-	/*PROTECTED REGION ID(PlatformElement destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(PlatformElement destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ PlatformElement::~PlatformElement()
 
 ecore::EClass_ptr PlatformElement::eClassImpl() const
 {
-	return PlatformPackage::_instance()->getPlatformElement();
+    return PlatformPackage::_instance()->getPlatformElement();
 }
- 
+

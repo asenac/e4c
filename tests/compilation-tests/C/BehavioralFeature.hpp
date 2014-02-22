@@ -16,34 +16,34 @@ class BehavioralFeature : ::ecore::EObject
 {
 public:
 
-	typedef BehavioralFeature_ptr ptr_type;
-	
-	BehavioralFeature();
-	virtual ~BehavioralFeature();
+    typedef BehavioralFeature_ptr ptr_type;
 
-	typedef std::set < C::CParameter_ptr > parameters_t;
-	
-	parameters_t getParameters() const;
-	void addParameters(C::CParameter_ptr parameters_);
-	void addAllParameters(const parameters_t& parameters_);
-	
+    BehavioralFeature();
+    virtual ~BehavioralFeature();
 
-	/*PROTECTED REGION ID(C::BehavioralFeature public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef std::set < C::CParameter_ptr > parameters_t;
+
+    parameters_t getParameters() const;
+    void addParameters(C::CParameter_ptr parameters_);
+    void addAllParameters(const parameters_t& parameters_);
+
+
+    /*PROTECTED REGION ID(C::BehavioralFeature public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class CPackage;
+    friend class CPackage;
 
-	std::set < std::unique_ptr < C::CParameter > > m_parameters;
+    std::set < std::unique_ptr < C::CParameter > > m_parameters;
 
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(C::BehavioralFeature protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(C::BehavioralFeature protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // C

@@ -9,14 +9,14 @@ using namespace kdm::kdm;
 
 KDMModel::KDMModel()
 {
-	/*PROTECTED REGION ID(KDMModel constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(KDMModel constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 KDMModel::~KDMModel()
 {
-	/*PROTECTED REGION ID(KDMModel destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(KDMModel destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ KDMModel::~KDMModel()
 
 ecore::EClass_ptr KDMModel::eClassImpl() const
 {
-	return KdmPackage::_instance()->getKDMModel();
+    return KdmPackage::_instance()->getKDMModel();
 }
- 
+

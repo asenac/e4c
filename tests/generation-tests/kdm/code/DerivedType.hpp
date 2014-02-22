@@ -18,34 +18,34 @@ class DerivedType :  public virtual ::kdm::code::Datatype
 {
 public:
 
-	typedef DerivedType_ptr ptr_type;
-	
-	DerivedType();
-	virtual ~DerivedType();
+    typedef DerivedType_ptr ptr_type;
 
-	typedef kdm::code::ItemUnit_ptr itemUnit_t;
-	
-	itemUnit_t getItemUnit() const;
-	void setItemUnit(itemUnit_t itemUnit_);
-	itemUnit_t releaseItemUnit();
-	
+    DerivedType();
+    virtual ~DerivedType();
 
-	/*PROTECTED REGION ID(kdm::code::DerivedType public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef kdm::code::ItemUnit_ptr itemUnit_t;
+
+    itemUnit_t getItemUnit() const;
+    void setItemUnit(itemUnit_t itemUnit_);
+    itemUnit_t releaseItemUnit();
+
+
+    /*PROTECTED REGION ID(kdm::code::DerivedType public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class CodePackage;
+    friend class CodePackage;
 
-	std::unique_ptr < kdm::code::ItemUnit > m_itemUnit;
+    std::unique_ptr < kdm::code::ItemUnit > m_itemUnit;
 
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::code::DerivedType protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::code::DerivedType protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // code

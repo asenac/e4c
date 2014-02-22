@@ -18,37 +18,37 @@ class MethodUnit :  public virtual ::kdm::code::ControlElement
 {
 public:
 
-	typedef MethodUnit_ptr ptr_type;
-	
-	MethodUnit();
-	virtual ~MethodUnit();
+    typedef MethodUnit_ptr ptr_type;
 
-	typedef ::kdm::code::MethodKind kind_t;
-	typedef ::kdm::code::ExportKind export__t;
-	
-	void setKind(kind_t _kind);
-	kind_t getKind() const;
-	void setExport_(export__t _export_);
-	export__t getExport_() const;
-	
+    MethodUnit();
+    virtual ~MethodUnit();
 
-	/*PROTECTED REGION ID(kdm::code::MethodUnit public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef ::kdm::code::MethodKind kind_t;
+    typedef ::kdm::code::ExportKind export__t;
+
+    void setKind(kind_t _kind);
+    kind_t getKind() const;
+    void setExport_(export__t _export_);
+    export__t getExport_() const;
+
+
+    /*PROTECTED REGION ID(kdm::code::MethodUnit public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class CodePackage;
+    friend class CodePackage;
 
-	kind_t m_kind;
-	export__t m_export_;
+    kind_t m_kind;
+    export__t m_export_;
 
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::code::MethodUnit protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::code::MethodUnit protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // code

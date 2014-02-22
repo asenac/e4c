@@ -6,12 +6,12 @@ using namespace PrimitiveTypes;
 
 PrimitiveTypesFactory::PrimitiveTypesFactory()
 {
-	// m_ePackage = PrimitiveTypesPackage::_instance();
+    // m_ePackage = PrimitiveTypesPackage::_instance();
 }
 
 const PrimitiveTypesFactory_ptr PrimitiveTypesFactory::_instance()
 {
-	static PrimitiveTypesFactory __instance;
-	return &__instance;
+    static PrimitiveTypesFactory __instance;
+    return &__instance;
 }
 

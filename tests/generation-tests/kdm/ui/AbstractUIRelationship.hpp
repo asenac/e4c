@@ -18,29 +18,29 @@ class AbstractUIRelationship :  public virtual ::kdm::core::KDMRelationship
 {
 public:
 
-	typedef AbstractUIRelationship_ptr ptr_type;
-	
-	virtual ~AbstractUIRelationship();
+    typedef AbstractUIRelationship_ptr ptr_type;
 
-	
-	
+    virtual ~AbstractUIRelationship();
 
-	/*PROTECTED REGION ID(kdm::ui::AbstractUIRelationship public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(kdm::ui::AbstractUIRelationship public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
-	AbstractUIRelationship();
+    AbstractUIRelationship();
 
-	friend class UiPackage;
+    friend class UiPackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::ui::AbstractUIRelationship protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::ui::AbstractUIRelationship protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // ui

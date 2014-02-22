@@ -6,27 +6,27 @@ using namespace idlmm;
 /*PROTECTED REGION ID(idlmm::Field include) START*/
 /*PROTECTED REGION END*/
 
-Field::Field() : 
-	m_identifier()
+Field::Field() :
+    m_identifier()
 {
-	/*PROTECTED REGION ID(Field constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(Field constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 Field::~Field()
 {
-	/*PROTECTED REGION ID(Field destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(Field destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 void Field::setIdentifier(identifier_t _identifier)
 {
-	m_identifier = _identifier;;
+    m_identifier = _identifier;;
 }
 
 Field::identifier_t Field::getIdentifier() const
 {
-	return m_identifier;
+    return m_identifier;
 }
 
 
@@ -36,6 +36,6 @@ Field::identifier_t Field::getIdentifier() const
 
 ecore::EClass_ptr Field::eClassImpl() const
 {
-	return IdlmmPackage::_instance()->getField();
+    return IdlmmPackage::_instance()->getField();
 }
- 
+

@@ -16,37 +16,37 @@ class Text :  public virtual ::SVG::TextElement
 {
 public:
 
-	typedef Text_ptr ptr_type;
-	
-	Text();
-	virtual ~Text();
+    typedef Text_ptr ptr_type;
 
-	typedef ::PrimitiveTypes::String lengthAdjust_t;
-	typedef ::PrimitiveTypes::String content_t;
-	
-	void setLengthAdjust(lengthAdjust_t _lengthAdjust);
-	lengthAdjust_t getLengthAdjust() const;
-	void setContent(content_t _content);
-	content_t getContent() const;
-	
+    Text();
+    virtual ~Text();
 
-	/*PROTECTED REGION ID(SVG::Text public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef ::PrimitiveTypes::String lengthAdjust_t;
+    typedef ::PrimitiveTypes::String content_t;
+
+    void setLengthAdjust(lengthAdjust_t _lengthAdjust);
+    lengthAdjust_t getLengthAdjust() const;
+    void setContent(content_t _content);
+    content_t getContent() const;
+
+
+    /*PROTECTED REGION ID(SVG::Text public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class SVGPackage;
+    friend class SVGPackage;
 
-	lengthAdjust_t m_lengthAdjust;
-	content_t m_content;
+    lengthAdjust_t m_lengthAdjust;
+    content_t m_content;
 
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(SVG::Text protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(SVG::Text protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // SVG

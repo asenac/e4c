@@ -18,34 +18,34 @@ class StructureModel :  public virtual ::kdm::kdm::KDMModel
 {
 public:
 
-	typedef StructureModel_ptr ptr_type;
-	
-	StructureModel();
-	virtual ~StructureModel();
+    typedef StructureModel_ptr ptr_type;
 
-	typedef std::set < kdm::structure::AbstractStructureElement_ptr > structureElement_t;
-	
-	structureElement_t getStructureElement() const;
-	void addStructureElement(kdm::structure::AbstractStructureElement_ptr structureElement_);
-	void addAllStructureElement(const structureElement_t& structureElement_);
-	
+    StructureModel();
+    virtual ~StructureModel();
 
-	/*PROTECTED REGION ID(kdm::structure::StructureModel public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef std::set < kdm::structure::AbstractStructureElement_ptr > structureElement_t;
+
+    structureElement_t getStructureElement() const;
+    void addStructureElement(kdm::structure::AbstractStructureElement_ptr structureElement_);
+    void addAllStructureElement(const structureElement_t& structureElement_);
+
+
+    /*PROTECTED REGION ID(kdm::structure::StructureModel public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class StructurePackage;
+    friend class StructurePackage;
 
-	std::set < std::unique_ptr < kdm::structure::AbstractStructureElement > > m_structureElement;
+    std::set < std::unique_ptr < kdm::structure::AbstractStructureElement > > m_structureElement;
 
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::structure::StructureModel protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::structure::StructureModel protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // structure

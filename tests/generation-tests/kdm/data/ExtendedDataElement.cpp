@@ -9,14 +9,14 @@ using namespace kdm::data;
 
 ExtendedDataElement::ExtendedDataElement()
 {
-	/*PROTECTED REGION ID(ExtendedDataElement constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(ExtendedDataElement constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 ExtendedDataElement::~ExtendedDataElement()
 {
-	/*PROTECTED REGION ID(ExtendedDataElement destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(ExtendedDataElement destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ ExtendedDataElement::~ExtendedDataElement()
 
 ecore::EClass_ptr ExtendedDataElement::eClassImpl() const
 {
-	return DataPackage::_instance()->getExtendedDataElement();
+    return DataPackage::_instance()->getExtendedDataElement();
 }
- 
+

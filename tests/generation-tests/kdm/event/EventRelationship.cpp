@@ -9,42 +9,42 @@ using namespace kdm::event;
 /*PROTECTED REGION ID(kdm::event::EventRelationship include) START*/
 /*PROTECTED REGION END*/
 
-EventRelationship::EventRelationship() : 
-	m_to(),
+EventRelationship::EventRelationship() :
+    m_to(),
     m_from()
 {
-	/*PROTECTED REGION ID(EventRelationship constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(EventRelationship constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 EventRelationship::~EventRelationship()
 {
-	/*PROTECTED REGION ID(EventRelationship destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(EventRelationship destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 EventRelationship::to_t EventRelationship::getTo() const
 {
-	return e4c::returned(m_to);
+    return e4c::returned(m_to);
 }
 
 void EventRelationship::setTo(to_t to_)
 {
-	if (m_to == to_)
-		return;
-	m_to = to_;
+    if (m_to == to_)
+        return;
+    m_to = to_;
 }
 
 EventRelationship::from_t EventRelationship::getFrom() const
 {
-	return e4c::returned(m_from);
+    return e4c::returned(m_from);
 }
 
 void EventRelationship::setFrom(from_t from_)
 {
-	if (m_from == from_)
-		return;
-	m_from = from_;
+    if (m_from == from_)
+        return;
+    m_from = from_;
 }
 
 
@@ -54,6 +54,6 @@ void EventRelationship::setFrom(from_t from_)
 
 ecore::EClass_ptr EventRelationship::eClassImpl() const
 {
-	return EventPackage::_instance()->getEventRelationship();
+    return EventPackage::_instance()->getEventRelationship();
 }
- 
+

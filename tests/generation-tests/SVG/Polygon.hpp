@@ -16,42 +16,42 @@ class Polygon :  public virtual ::SVG::Shape
 {
 public:
 
-	typedef Polygon_ptr ptr_type;
-	
-	Polygon();
-	virtual ~Polygon();
+    typedef Polygon_ptr ptr_type;
 
-	typedef std::vector < SVG::Point_ptr > waypoints_t;
-	typedef ::PrimitiveTypes::String markerEnd_t;
-	typedef ::PrimitiveTypes::String markerStart_t;
-	
-	waypoints_t getWaypoints() const;
-	void addWaypoints(SVG::Point_ptr waypoints_);
-	void addAllWaypoints(const waypoints_t& waypoints_);
-	void setMarkerEnd(markerEnd_t _markerEnd);
-	markerEnd_t getMarkerEnd() const;
-	void setMarkerStart(markerStart_t _markerStart);
-	markerStart_t getMarkerStart() const;
-	
+    Polygon();
+    virtual ~Polygon();
 
-	/*PROTECTED REGION ID(SVG::Polygon public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef std::vector < SVG::Point_ptr > waypoints_t;
+    typedef ::PrimitiveTypes::String markerEnd_t;
+    typedef ::PrimitiveTypes::String markerStart_t;
+
+    waypoints_t getWaypoints() const;
+    void addWaypoints(SVG::Point_ptr waypoints_);
+    void addAllWaypoints(const waypoints_t& waypoints_);
+    void setMarkerEnd(markerEnd_t _markerEnd);
+    markerEnd_t getMarkerEnd() const;
+    void setMarkerStart(markerStart_t _markerStart);
+    markerStart_t getMarkerStart() const;
+
+
+    /*PROTECTED REGION ID(SVG::Polygon public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class SVGPackage;
+    friend class SVGPackage;
 
-	std::vector < SVG::Point_ptr > m_waypoints;
-	markerEnd_t m_markerEnd;
-	markerStart_t m_markerStart;
+    std::vector < SVG::Point_ptr > m_waypoints;
+    markerEnd_t m_markerEnd;
+    markerStart_t m_markerStart;
 
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(SVG::Polygon protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(SVG::Polygon protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // SVG

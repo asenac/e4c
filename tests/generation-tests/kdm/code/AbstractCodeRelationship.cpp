@@ -9,14 +9,14 @@ using namespace kdm::code;
 
 AbstractCodeRelationship::AbstractCodeRelationship()
 {
-	/*PROTECTED REGION ID(AbstractCodeRelationship constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(AbstractCodeRelationship constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 AbstractCodeRelationship::~AbstractCodeRelationship()
 {
-	/*PROTECTED REGION ID(AbstractCodeRelationship destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(AbstractCodeRelationship destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ AbstractCodeRelationship::~AbstractCodeRelationship()
 
 ecore::EClass_ptr AbstractCodeRelationship::eClassImpl() const
 {
-	return CodePackage::_instance()->getAbstractCodeRelationship();
+    return CodePackage::_instance()->getAbstractCodeRelationship();
 }
- 
+

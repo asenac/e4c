@@ -15,64 +15,64 @@ class EOperation :  public virtual ::ecore::ETypedElement
 {
 public:
 
-	typedef EOperation_ptr ptr_type;
-	
-	EOperation();
-	virtual ~EOperation();
+    typedef EOperation_ptr ptr_type;
 
-	typedef ecore::EClass_ptr eContainingClass_t;
-	typedef std::vector < ecore::ETypeParameter_ptr > eTypeParameters_t;
-	typedef std::vector < ecore::EParameter_ptr > eParameters_t;
-	typedef std::vector < ecore::EClassifier_ptr > eExceptions_t;
-	typedef std::vector < ecore::EGenericType_ptr > eGenericExceptions_t;
-	
-	eContainingClass_t getEContainingClass() const;
-	eTypeParameters_t getETypeParameters() const;
-	void addETypeParameters(ecore::ETypeParameter_ptr eTypeParameters_);
-	void addAllETypeParameters(const eTypeParameters_t& eTypeParameters_);
-	void removeETypeParameters(ecore::ETypeParameter_ptr eTypeParameters_);
-	void clearETypeParameters();
-	eParameters_t getEParameters() const;
-	void addEParameters(ecore::EParameter_ptr eParameters_);
-	void addAllEParameters(const eParameters_t& eParameters_);
-	void removeEParameters(ecore::EParameter_ptr eParameters_);
-	void clearEParameters();
-	eExceptions_t getEExceptions() const;
-	void addEExceptions(ecore::EClassifier_ptr eExceptions_);
-	void addAllEExceptions(const eExceptions_t& eExceptions_);
-	void removeEExceptions(ecore::EClassifier_ptr eExceptions_);
-	void clearEExceptions();
-	eGenericExceptions_t getEGenericExceptions() const;
-	void addEGenericExceptions(ecore::EGenericType_ptr eGenericExceptions_);
-	void addAllEGenericExceptions(const eGenericExceptions_t& eGenericExceptions_);
-	void removeEGenericExceptions(ecore::EGenericType_ptr eGenericExceptions_);
-	void clearEGenericExceptions();
-	
-	ecore::EInt getOperationID();
-	ecore::EBoolean isOverrideOf(ecore::EOperation_ptr someOperation);
+    EOperation();
+    virtual ~EOperation();
 
-	/*PROTECTED REGION ID(ecore::EOperation public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef ecore::EClass_ptr eContainingClass_t;
+    typedef std::vector < ecore::ETypeParameter_ptr > eTypeParameters_t;
+    typedef std::vector < ecore::EParameter_ptr > eParameters_t;
+    typedef std::vector < ecore::EClassifier_ptr > eExceptions_t;
+    typedef std::vector < ecore::EGenericType_ptr > eGenericExceptions_t;
+
+    eContainingClass_t getEContainingClass() const;
+    eTypeParameters_t getETypeParameters() const;
+    void addETypeParameters(ecore::ETypeParameter_ptr eTypeParameters_);
+    void addAllETypeParameters(const eTypeParameters_t& eTypeParameters_);
+    void removeETypeParameters(ecore::ETypeParameter_ptr eTypeParameters_);
+    void clearETypeParameters();
+    eParameters_t getEParameters() const;
+    void addEParameters(ecore::EParameter_ptr eParameters_);
+    void addAllEParameters(const eParameters_t& eParameters_);
+    void removeEParameters(ecore::EParameter_ptr eParameters_);
+    void clearEParameters();
+    eExceptions_t getEExceptions() const;
+    void addEExceptions(ecore::EClassifier_ptr eExceptions_);
+    void addAllEExceptions(const eExceptions_t& eExceptions_);
+    void removeEExceptions(ecore::EClassifier_ptr eExceptions_);
+    void clearEExceptions();
+    eGenericExceptions_t getEGenericExceptions() const;
+    void addEGenericExceptions(ecore::EGenericType_ptr eGenericExceptions_);
+    void addAllEGenericExceptions(const eGenericExceptions_t& eGenericExceptions_);
+    void removeEGenericExceptions(ecore::EGenericType_ptr eGenericExceptions_);
+    void clearEGenericExceptions();
+
+    ecore::EInt getOperationID();
+    ecore::EBoolean isOverrideOf(ecore::EOperation_ptr someOperation);
+
+    /*PROTECTED REGION ID(ecore::EOperation public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class EcorePackage;
+    friend class EcorePackage;
 
-	ecore::EClass_ptr m_eContainingClass;
-	std::vector < std::unique_ptr < ecore::ETypeParameter > > m_eTypeParameters;
-	std::vector < std::unique_ptr < ecore::EParameter > > m_eParameters;
-	std::vector < ecore::EClassifier_ptr > m_eExceptions;
-	std::vector < std::unique_ptr < ecore::EGenericType > > m_eGenericExceptions;
+    ecore::EClass_ptr m_eContainingClass;
+    std::vector < std::unique_ptr < ecore::ETypeParameter > > m_eTypeParameters;
+    std::vector < std::unique_ptr < ecore::EParameter > > m_eParameters;
+    std::vector < ecore::EClassifier_ptr > m_eExceptions;
+    std::vector < std::unique_ptr < ecore::EGenericType > > m_eGenericExceptions;
 
-	
-	friend class ::ecore::EClass;
-	void setEContainingClass(eContainingClass_t eContainingClass_);
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(ecore::EOperation protected) START*/
-	/*PROTECTED REGION END*/
+
+    friend class ::ecore::EClass;
+    void setEContainingClass(eContainingClass_t eContainingClass_);
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(ecore::EOperation protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // ecore

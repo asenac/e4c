@@ -18,29 +18,29 @@ class ComputationalObject :  public virtual ::kdm::code::CodeItem
 {
 public:
 
-	typedef ComputationalObject_ptr ptr_type;
-	
-	virtual ~ComputationalObject();
+    typedef ComputationalObject_ptr ptr_type;
 
-	
-	
+    virtual ~ComputationalObject();
 
-	/*PROTECTED REGION ID(kdm::code::ComputationalObject public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(kdm::code::ComputationalObject public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
-	ComputationalObject();
+    ComputationalObject();
 
-	friend class CodePackage;
+    friend class CodePackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::code::ComputationalObject protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::code::ComputationalObject protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // code

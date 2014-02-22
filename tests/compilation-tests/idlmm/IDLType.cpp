@@ -6,27 +6,27 @@ using namespace idlmm;
 /*PROTECTED REGION ID(idlmm::IDLType include) START*/
 /*PROTECTED REGION END*/
 
-IDLType::IDLType() : 
-	m_typeCode()
+IDLType::IDLType() :
+    m_typeCode()
 {
-	/*PROTECTED REGION ID(IDLType constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(IDLType constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 IDLType::~IDLType()
 {
-	/*PROTECTED REGION ID(IDLType destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(IDLType destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 void IDLType::setTypeCode(typeCode_t _typeCode)
 {
-	m_typeCode = _typeCode;;
+    m_typeCode = _typeCode;;
 }
 
 IDLType::typeCode_t IDLType::getTypeCode() const
 {
-	return m_typeCode;
+    return m_typeCode;
 }
 
 
@@ -36,6 +36,6 @@ IDLType::typeCode_t IDLType::getTypeCode() const
 
 ecore::EClass_ptr IDLType::eClassImpl() const
 {
-	return IdlmmPackage::_instance()->getIDLType();
+    return IdlmmPackage::_instance()->getIDLType();
 }
- 
+

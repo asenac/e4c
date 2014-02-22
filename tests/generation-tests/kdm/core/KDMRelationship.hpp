@@ -18,31 +18,31 @@ class KDMRelationship :  public virtual ::kdm::core::ModelElement
 {
 public:
 
-	typedef KDMRelationship_ptr ptr_type;
-	
-	virtual ~KDMRelationship();
+    typedef KDMRelationship_ptr ptr_type;
 
-	
-	
-	kdm::core::KDMEntity_ptr getTo();
-	kdm::core::KDMEntity_ptr getFrom();
+    virtual ~KDMRelationship();
 
-	/*PROTECTED REGION ID(kdm::core::KDMRelationship public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+    kdm::core::KDMEntity_ptr getTo();
+    kdm::core::KDMEntity_ptr getFrom();
+
+    /*PROTECTED REGION ID(kdm::core::KDMRelationship public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
-	KDMRelationship();
+    KDMRelationship();
 
-	friend class CorePackage;
+    friend class CorePackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::core::KDMRelationship protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::core::KDMRelationship protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // core

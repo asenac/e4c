@@ -16,29 +16,29 @@ class Ellipse :  public virtual ::SVG::Shape
 {
 public:
 
-	typedef Ellipse_ptr ptr_type;
-	
-	Ellipse();
-	virtual ~Ellipse();
+    typedef Ellipse_ptr ptr_type;
 
-	
-	
+    Ellipse();
+    virtual ~Ellipse();
 
-	/*PROTECTED REGION ID(SVG::Ellipse public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(SVG::Ellipse public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class SVGPackage;
+    friend class SVGPackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(SVG::Ellipse protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(SVG::Ellipse protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // SVG

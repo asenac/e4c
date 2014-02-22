@@ -18,29 +18,29 @@ class FileResource :  public virtual ::kdm::platform::ResourceType
 {
 public:
 
-	typedef FileResource_ptr ptr_type;
-	
-	FileResource();
-	virtual ~FileResource();
+    typedef FileResource_ptr ptr_type;
 
-	
-	
+    FileResource();
+    virtual ~FileResource();
 
-	/*PROTECTED REGION ID(kdm::platform::FileResource public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(kdm::platform::FileResource public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class PlatformPackage;
+    friend class PlatformPackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::platform::FileResource protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::platform::FileResource protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // platform

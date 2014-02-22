@@ -9,14 +9,14 @@ using namespace xpand3::expression;
 
 BooleanOperation::BooleanOperation()
 {
-	/*PROTECTED REGION ID(BooleanOperation constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(BooleanOperation constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 BooleanOperation::~BooleanOperation()
 {
-	/*PROTECTED REGION ID(BooleanOperation destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(BooleanOperation destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ BooleanOperation::~BooleanOperation()
 
 ecore::EClass_ptr BooleanOperation::eClassImpl() const
 {
-	return ExpressionPackage::_instance()->getBooleanOperation();
+    return ExpressionPackage::_instance()->getBooleanOperation();
 }
- 
+

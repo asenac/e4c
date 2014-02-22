@@ -8,29 +8,29 @@ using namespace kdm::kdm;
 /*PROTECTED REGION ID(kdm::kdm::ExtendedValue include) START*/
 /*PROTECTED REGION END*/
 
-ExtendedValue::ExtendedValue() : 
-	m_tag()
+ExtendedValue::ExtendedValue() :
+    m_tag()
 {
-	/*PROTECTED REGION ID(ExtendedValue constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(ExtendedValue constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 ExtendedValue::~ExtendedValue()
 {
-	/*PROTECTED REGION ID(ExtendedValue destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(ExtendedValue destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 ExtendedValue::tag_t ExtendedValue::getTag() const
 {
-	return e4c::returned(m_tag);
+    return e4c::returned(m_tag);
 }
 
 void ExtendedValue::setTag(tag_t tag_)
 {
-	if (m_tag == tag_)
-		return;
-	m_tag = tag_;
+    if (m_tag == tag_)
+        return;
+    m_tag = tag_;
 }
 
 
@@ -40,6 +40,6 @@ void ExtendedValue::setTag(tag_t tag_)
 
 ecore::EClass_ptr ExtendedValue::eClassImpl() const
 {
-	return KdmPackage::_instance()->getExtendedValue();
+    return KdmPackage::_instance()->getExtendedValue();
 }
- 
+

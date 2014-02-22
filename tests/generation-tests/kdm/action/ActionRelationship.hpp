@@ -18,37 +18,37 @@ class ActionRelationship :  public virtual ::kdm::action::AbstractActionRelation
 {
 public:
 
-	typedef ActionRelationship_ptr ptr_type;
-	
-	ActionRelationship();
-	virtual ~ActionRelationship();
+    typedef ActionRelationship_ptr ptr_type;
 
-	typedef kdm::core::KDMEntity_ptr to_t;
-	typedef kdm::action::ActionElement_ptr from_t;
-	
-	to_t getTo() const;
-	void setTo(to_t to_);
-	from_t getFrom() const;
-	void setFrom(from_t from_);
-	
+    ActionRelationship();
+    virtual ~ActionRelationship();
 
-	/*PROTECTED REGION ID(kdm::action::ActionRelationship public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef kdm::core::KDMEntity_ptr to_t;
+    typedef kdm::action::ActionElement_ptr from_t;
+
+    to_t getTo() const;
+    void setTo(to_t to_);
+    from_t getFrom() const;
+    void setFrom(from_t from_);
+
+
+    /*PROTECTED REGION ID(kdm::action::ActionRelationship public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class ActionPackage;
+    friend class ActionPackage;
 
-	kdm::core::KDMEntity_ptr m_to;
-	kdm::action::ActionElement_ptr m_from;
+    kdm::core::KDMEntity_ptr m_to;
+    kdm::action::ActionElement_ptr m_from;
 
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::action::ActionRelationship protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::action::ActionRelationship protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // action

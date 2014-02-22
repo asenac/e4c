@@ -9,14 +9,14 @@ using namespace kdm::data;
 
 RecordFile::RecordFile()
 {
-	/*PROTECTED REGION ID(RecordFile constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(RecordFile constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 RecordFile::~RecordFile()
 {
-	/*PROTECTED REGION ID(RecordFile destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(RecordFile destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ RecordFile::~RecordFile()
 
 ecore::EClass_ptr RecordFile::eClassImpl() const
 {
-	return DataPackage::_instance()->getRecordFile();
+    return DataPackage::_instance()->getRecordFile();
 }
- 
+

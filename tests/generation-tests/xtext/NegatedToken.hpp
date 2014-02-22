@@ -16,29 +16,29 @@ class NegatedToken :  public virtual ::xtext::AbstractNegatedToken
 {
 public:
 
-	typedef NegatedToken_ptr ptr_type;
-	
-	NegatedToken();
-	virtual ~NegatedToken();
+    typedef NegatedToken_ptr ptr_type;
 
-	
-	
+    NegatedToken();
+    virtual ~NegatedToken();
 
-	/*PROTECTED REGION ID(xtext::NegatedToken public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(xtext::NegatedToken public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class XtextPackage;
+    friend class XtextPackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(xtext::NegatedToken protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(xtext::NegatedToken protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // xtext

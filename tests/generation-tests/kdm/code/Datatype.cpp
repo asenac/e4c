@@ -9,14 +9,14 @@ using namespace kdm::code;
 
 Datatype::Datatype()
 {
-	/*PROTECTED REGION ID(Datatype constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(Datatype constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 Datatype::~Datatype()
 {
-	/*PROTECTED REGION ID(Datatype destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(Datatype destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ Datatype::~Datatype()
 
 ecore::EClass_ptr Datatype::eClassImpl() const
 {
-	return CodePackage::_instance()->getDatatype();
+    return CodePackage::_instance()->getDatatype();
 }
- 
+

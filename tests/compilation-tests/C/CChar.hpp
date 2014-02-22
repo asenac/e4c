@@ -16,29 +16,29 @@ class CChar :  public virtual ::C::CIntegral
 {
 public:
 
-	typedef CChar_ptr ptr_type;
-	
-	CChar();
-	virtual ~CChar();
+    typedef CChar_ptr ptr_type;
 
-	
-	
+    CChar();
+    virtual ~CChar();
 
-	/*PROTECTED REGION ID(C::CChar public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(C::CChar public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class CPackage;
+    friend class CPackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(C::CChar protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(C::CChar protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // C

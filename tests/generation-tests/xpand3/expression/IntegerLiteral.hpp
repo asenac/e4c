@@ -18,29 +18,29 @@ class IntegerLiteral :  public virtual ::xpand3::expression::Literal
 {
 public:
 
-	typedef IntegerLiteral_ptr ptr_type;
-	
-	IntegerLiteral();
-	virtual ~IntegerLiteral();
+    typedef IntegerLiteral_ptr ptr_type;
 
-	
-	
+    IntegerLiteral();
+    virtual ~IntegerLiteral();
 
-	/*PROTECTED REGION ID(xpand3::expression::IntegerLiteral public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(xpand3::expression::IntegerLiteral public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class ExpressionPackage;
+    friend class ExpressionPackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(xpand3::expression::IntegerLiteral protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(xpand3::expression::IntegerLiteral protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // expression

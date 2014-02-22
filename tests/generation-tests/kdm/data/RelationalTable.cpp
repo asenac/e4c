@@ -9,14 +9,14 @@ using namespace kdm::data;
 
 RelationalTable::RelationalTable()
 {
-	/*PROTECTED REGION ID(RelationalTable constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(RelationalTable constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 RelationalTable::~RelationalTable()
 {
-	/*PROTECTED REGION ID(RelationalTable destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(RelationalTable destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ RelationalTable::~RelationalTable()
 
 ecore::EClass_ptr RelationalTable::eClassImpl() const
 {
-	return DataPackage::_instance()->getRelationalTable();
+    return DataPackage::_instance()->getRelationalTable();
 }
- 
+

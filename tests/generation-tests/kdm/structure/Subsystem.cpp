@@ -9,14 +9,14 @@ using namespace kdm::structure;
 
 Subsystem::Subsystem()
 {
-	/*PROTECTED REGION ID(Subsystem constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(Subsystem constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 Subsystem::~Subsystem()
 {
-	/*PROTECTED REGION ID(Subsystem destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(Subsystem destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ Subsystem::~Subsystem()
 
 ecore::EClass_ptr Subsystem::eClassImpl() const
 {
-	return StructurePackage::_instance()->getSubsystem();
+    return StructurePackage::_instance()->getSubsystem();
 }
- 
+

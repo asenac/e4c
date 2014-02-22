@@ -18,29 +18,29 @@ class IntegerType :  public virtual ::kdm::code::PrimitiveType
 {
 public:
 
-	typedef IntegerType_ptr ptr_type;
-	
-	IntegerType();
-	virtual ~IntegerType();
+    typedef IntegerType_ptr ptr_type;
 
-	
-	
+    IntegerType();
+    virtual ~IntegerType();
 
-	/*PROTECTED REGION ID(kdm::code::IntegerType public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(kdm::code::IntegerType public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class CodePackage;
+    friend class CodePackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::code::IntegerType protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::code::IntegerType protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // code

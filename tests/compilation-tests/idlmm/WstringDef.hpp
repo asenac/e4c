@@ -15,34 +15,34 @@ class WstringDef :  public virtual ::idlmm::IDLType
 {
 public:
 
-	typedef WstringDef_ptr ptr_type;
-	
-	WstringDef();
-	virtual ~WstringDef();
+    typedef WstringDef_ptr ptr_type;
 
-	typedef idlmm::Expression_ptr bound_t;
-	
-	bound_t getBound() const;
-	void setBound(bound_t bound_);
-	bound_t releaseBound();
-	
+    WstringDef();
+    virtual ~WstringDef();
 
-	/*PROTECTED REGION ID(idlmm::WstringDef public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef idlmm::Expression_ptr bound_t;
+
+    bound_t getBound() const;
+    void setBound(bound_t bound_);
+    bound_t releaseBound();
+
+
+    /*PROTECTED REGION ID(idlmm::WstringDef public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class IdlmmPackage;
+    friend class IdlmmPackage;
 
-	std::unique_ptr < idlmm::Expression > m_bound;
+    std::unique_ptr < idlmm::Expression > m_bound;
 
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(idlmm::WstringDef protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(idlmm::WstringDef protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // idlmm

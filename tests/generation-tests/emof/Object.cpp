@@ -9,14 +9,14 @@ using namespace emof;
 
 Object::Object()
 {
-	/*PROTECTED REGION ID(Object constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(Object constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 Object::~Object()
 {
-	/*PROTECTED REGION ID(Object destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(Object destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ Object::~Object()
 
 ecore::EClass_ptr Object::eClassImpl() const
 {
-	return EmofPackage::_instance()->getObject();
+    return EmofPackage::_instance()->getObject();
 }
- 
+

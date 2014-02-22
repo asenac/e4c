@@ -9,14 +9,14 @@ using namespace C;
 
 CIntegral::CIntegral()
 {
-	/*PROTECTED REGION ID(CIntegral constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(CIntegral constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 CIntegral::~CIntegral()
 {
-	/*PROTECTED REGION ID(CIntegral destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(CIntegral destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ CIntegral::~CIntegral()
 
 ecore::EClass_ptr CIntegral::eClassImpl() const
 {
-	return CPackage::_instance()->getCIntegral();
+    return CPackage::_instance()->getCIntegral();
 }
- 
+

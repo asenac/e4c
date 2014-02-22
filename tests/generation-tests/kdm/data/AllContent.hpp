@@ -18,29 +18,29 @@ class AllContent :  public virtual ::kdm::data::ComplexContentType
 {
 public:
 
-	typedef AllContent_ptr ptr_type;
-	
-	AllContent();
-	virtual ~AllContent();
+    typedef AllContent_ptr ptr_type;
 
-	
-	
+    AllContent();
+    virtual ~AllContent();
 
-	/*PROTECTED REGION ID(kdm::data::AllContent public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(kdm::data::AllContent public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class DataPackage;
+    friend class DataPackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::data::AllContent protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::data::AllContent protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // data

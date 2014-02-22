@@ -9,14 +9,14 @@ using namespace kdm::event;
 
 EventElement::EventElement()
 {
-	/*PROTECTED REGION ID(EventElement constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(EventElement constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 EventElement::~EventElement()
 {
-	/*PROTECTED REGION ID(EventElement destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(EventElement destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ EventElement::~EventElement()
 
 ecore::EClass_ptr EventElement::eClassImpl() const
 {
-	return EventPackage::_instance()->getEventElement();
+    return EventPackage::_instance()->getEventElement();
 }
- 
+

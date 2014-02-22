@@ -16,33 +16,33 @@ class Element : ::ecore::EObject
 {
 public:
 
-	typedef Element_ptr ptr_type;
-	
-	virtual ~Element();
+    typedef Element_ptr ptr_type;
 
-	typedef ::PrimitiveTypes::String name_t;
-	
-	void setName(name_t _name);
-	name_t getName() const;
-	
+    virtual ~Element();
 
-	/*PROTECTED REGION ID(Make::Element public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef ::PrimitiveTypes::String name_t;
+
+    void setName(name_t _name);
+    name_t getName() const;
+
+
+    /*PROTECTED REGION ID(Make::Element public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
-	Element();
+    Element();
 
-	friend class MakePackage;
+    friend class MakePackage;
 
-	name_t m_name;
+    name_t m_name;
 
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(Make::Element protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(Make::Element protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // Make

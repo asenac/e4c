@@ -18,29 +18,29 @@ class OctetType :  public virtual ::kdm::code::PrimitiveType
 {
 public:
 
-	typedef OctetType_ptr ptr_type;
-	
-	OctetType();
-	virtual ~OctetType();
+    typedef OctetType_ptr ptr_type;
 
-	
-	
+    OctetType();
+    virtual ~OctetType();
 
-	/*PROTECTED REGION ID(kdm::code::OctetType public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(kdm::code::OctetType public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class CodePackage;
+    friend class CodePackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::code::OctetType protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::code::OctetType protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // code

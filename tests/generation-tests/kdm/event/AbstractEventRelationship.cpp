@@ -9,14 +9,14 @@ using namespace kdm::event;
 
 AbstractEventRelationship::AbstractEventRelationship()
 {
-	/*PROTECTED REGION ID(AbstractEventRelationship constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(AbstractEventRelationship constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 AbstractEventRelationship::~AbstractEventRelationship()
 {
-	/*PROTECTED REGION ID(AbstractEventRelationship destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(AbstractEventRelationship destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ AbstractEventRelationship::~AbstractEventRelationship()
 
 ecore::EClass_ptr AbstractEventRelationship::eClassImpl() const
 {
-	return EventPackage::_instance()->getAbstractEventRelationship();
+    return EventPackage::_instance()->getAbstractEventRelationship();
 }
- 
+

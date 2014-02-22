@@ -6,27 +6,27 @@ using namespace ecore;
 /*PROTECTED REGION ID(ecore::EDataType include) START*/
 /*PROTECTED REGION END*/
 
-EDataType::EDataType() : 
-	m_serializable()
+EDataType::EDataType() :
+    m_serializable()
 {
-	/*PROTECTED REGION ID(EDataType constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(EDataType constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 EDataType::~EDataType()
 {
-	/*PROTECTED REGION ID(EDataType destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(EDataType destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 void EDataType::setSerializable(serializable_t _serializable)
 {
-	m_serializable = _serializable;;
+    m_serializable = _serializable;;
 }
 
 EDataType::serializable_t EDataType::getSerializable() const
 {
-	return m_serializable;
+    return m_serializable;
 }
 
 
@@ -36,6 +36,6 @@ EDataType::serializable_t EDataType::getSerializable() const
 
 ecore::EClass_ptr EDataType::eClassImpl() const
 {
-	return EcorePackage::_instance()->getEDataType();
+    return EcorePackage::_instance()->getEDataType();
 }
- 
+

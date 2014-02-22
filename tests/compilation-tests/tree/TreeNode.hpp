@@ -16,37 +16,37 @@ class TreeNode : ::ecore::EObject
 {
 public:
 
-	typedef TreeNode_ptr ptr_type;
-	
-	virtual ~TreeNode();
+    typedef TreeNode_ptr ptr_type;
 
-	typedef ::ecore::EString data_t;
-	typedef tree::TreeNode_ptr parent_t;
-	
-	void setData(data_t _data);
-	data_t getData() const;
-	parent_t getParent() const;
-	void setParent(parent_t parent_);
-	
+    virtual ~TreeNode();
 
-	/*PROTECTED REGION ID(tree::TreeNode public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef ::ecore::EString data_t;
+    typedef tree::TreeNode_ptr parent_t;
+
+    void setData(data_t _data);
+    data_t getData() const;
+    parent_t getParent() const;
+    void setParent(parent_t parent_);
+
+
+    /*PROTECTED REGION ID(tree::TreeNode public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
-	TreeNode();
+    TreeNode();
 
-	friend class TreePackage;
+    friend class TreePackage;
 
-	data_t m_data;
-	tree::TreeNode_ptr m_parent;
+    data_t m_data;
+    tree::TreeNode_ptr m_parent;
 
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(tree::TreeNode protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(tree::TreeNode protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // tree

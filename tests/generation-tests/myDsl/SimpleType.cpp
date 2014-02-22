@@ -9,14 +9,14 @@ using namespace myDsl;
 
 SimpleType::SimpleType()
 {
-	/*PROTECTED REGION ID(SimpleType constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(SimpleType constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 SimpleType::~SimpleType()
 {
-	/*PROTECTED REGION ID(SimpleType destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(SimpleType destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ SimpleType::~SimpleType()
 
 ecore::EClass_ptr SimpleType::eClassImpl() const
 {
-	return MyDslPackage::_instance()->getSimpleType();
+    return MyDslPackage::_instance()->getSimpleType();
 }
- 
+

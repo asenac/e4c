@@ -18,38 +18,38 @@ class UnaryOperation :  public virtual ::xpand3::expression::AbstractExpression
 {
 public:
 
-	typedef UnaryOperation_ptr ptr_type;
-	
-	UnaryOperation();
-	virtual ~UnaryOperation();
+    typedef UnaryOperation_ptr ptr_type;
 
-	typedef xpand3::Identifier_ptr operator_t;
-	typedef xpand3::expression::AbstractExpression_ptr operand_t;
-	
-	operator_t getOperator() const;
-	void setOperator(operator_t operator_);
-	operator_t releaseOperator();
-	operand_t getOperand() const;
-	void setOperand(operand_t operand_);
-	
+    UnaryOperation();
+    virtual ~UnaryOperation();
 
-	/*PROTECTED REGION ID(xpand3::expression::UnaryOperation public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef xpand3::Identifier_ptr operator_t;
+    typedef xpand3::expression::AbstractExpression_ptr operand_t;
+
+    operator_t getOperator() const;
+    void setOperator(operator_t operator_);
+    operator_t releaseOperator();
+    operand_t getOperand() const;
+    void setOperand(operand_t operand_);
+
+
+    /*PROTECTED REGION ID(xpand3::expression::UnaryOperation public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class ExpressionPackage;
+    friend class ExpressionPackage;
 
-	std::unique_ptr < xpand3::Identifier > m_operator;
-	xpand3::expression::AbstractExpression_ptr m_operand;
+    std::unique_ptr < xpand3::Identifier > m_operator;
+    xpand3::expression::AbstractExpression_ptr m_operand;
 
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(xpand3::expression::UnaryOperation protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(xpand3::expression::UnaryOperation protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // expression

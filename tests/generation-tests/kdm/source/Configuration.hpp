@@ -18,29 +18,29 @@ class Configuration :  public virtual ::kdm::source::InventoryItem
 {
 public:
 
-	typedef Configuration_ptr ptr_type;
-	
-	Configuration();
-	virtual ~Configuration();
+    typedef Configuration_ptr ptr_type;
 
-	
-	
+    Configuration();
+    virtual ~Configuration();
 
-	/*PROTECTED REGION ID(kdm::source::Configuration public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(kdm::source::Configuration public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class SourcePackage;
+    friend class SourcePackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::source::Configuration protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::source::Configuration protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // source

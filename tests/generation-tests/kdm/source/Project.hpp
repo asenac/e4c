@@ -18,29 +18,29 @@ class Project :  public virtual ::kdm::source::InventoryContainer
 {
 public:
 
-	typedef Project_ptr ptr_type;
-	
-	Project();
-	virtual ~Project();
+    typedef Project_ptr ptr_type;
 
-	
-	
+    Project();
+    virtual ~Project();
 
-	/*PROTECTED REGION ID(kdm::source::Project public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(kdm::source::Project public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class SourcePackage;
+    friend class SourcePackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::source::Project protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::source::Project protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // source

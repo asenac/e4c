@@ -9,14 +9,14 @@ using namespace kdm::code;
 
 RecordType::RecordType()
 {
-	/*PROTECTED REGION ID(RecordType constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(RecordType constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 RecordType::~RecordType()
 {
-	/*PROTECTED REGION ID(RecordType destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(RecordType destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ RecordType::~RecordType()
 
 ecore::EClass_ptr RecordType::eClassImpl() const
 {
-	return CodePackage::_instance()->getRecordType();
+    return CodePackage::_instance()->getRecordType();
 }
- 
+

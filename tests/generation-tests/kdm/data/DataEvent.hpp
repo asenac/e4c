@@ -18,33 +18,33 @@ class DataEvent :  public virtual ::kdm::data::DataResource
 {
 public:
 
-	typedef DataEvent_ptr ptr_type;
-	
-	DataEvent();
-	virtual ~DataEvent();
+    typedef DataEvent_ptr ptr_type;
 
-	typedef ::kdm::core::String kind_t;
-	
-	void setKind(kind_t _kind);
-	kind_t getKind() const;
-	
+    DataEvent();
+    virtual ~DataEvent();
 
-	/*PROTECTED REGION ID(kdm::data::DataEvent public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef ::kdm::core::String kind_t;
+
+    void setKind(kind_t _kind);
+    kind_t getKind() const;
+
+
+    /*PROTECTED REGION ID(kdm::data::DataEvent public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class DataPackage;
+    friend class DataPackage;
 
-	kind_t m_kind;
+    kind_t m_kind;
 
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::data::DataEvent protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::data::DataEvent protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // data

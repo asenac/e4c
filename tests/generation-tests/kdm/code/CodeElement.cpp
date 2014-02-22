@@ -9,14 +9,14 @@ using namespace kdm::code;
 
 CodeElement::CodeElement()
 {
-	/*PROTECTED REGION ID(CodeElement constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(CodeElement constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 CodeElement::~CodeElement()
 {
-	/*PROTECTED REGION ID(CodeElement destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(CodeElement destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ CodeElement::~CodeElement()
 
 ecore::EClass_ptr CodeElement::eClassImpl() const
 {
-	return CodePackage::_instance()->getCodeElement();
+    return CodePackage::_instance()->getCodeElement();
 }
- 
+

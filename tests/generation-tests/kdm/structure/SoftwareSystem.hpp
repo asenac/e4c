@@ -18,29 +18,29 @@ class SoftwareSystem :  public virtual ::kdm::structure::AbstractStructureElemen
 {
 public:
 
-	typedef SoftwareSystem_ptr ptr_type;
-	
-	SoftwareSystem();
-	virtual ~SoftwareSystem();
+    typedef SoftwareSystem_ptr ptr_type;
 
-	
-	
+    SoftwareSystem();
+    virtual ~SoftwareSystem();
 
-	/*PROTECTED REGION ID(kdm::structure::SoftwareSystem public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(kdm::structure::SoftwareSystem public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class StructurePackage;
+    friend class StructurePackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::structure::SoftwareSystem protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::structure::SoftwareSystem protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // structure

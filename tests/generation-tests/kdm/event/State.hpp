@@ -18,29 +18,29 @@ class State :  public virtual ::kdm::event::EventResource
 {
 public:
 
-	typedef State_ptr ptr_type;
-	
-	State();
-	virtual ~State();
+    typedef State_ptr ptr_type;
 
-	
-	
+    State();
+    virtual ~State();
 
-	/*PROTECTED REGION ID(kdm::event::State public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(kdm::event::State public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class EventPackage;
+    friend class EventPackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::event::State protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::event::State protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // event

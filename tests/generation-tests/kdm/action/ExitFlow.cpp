@@ -8,42 +8,42 @@ using namespace kdm::action;
 /*PROTECTED REGION ID(kdm::action::ExitFlow include) START*/
 /*PROTECTED REGION END*/
 
-ExitFlow::ExitFlow() : 
-	m_to(),
+ExitFlow::ExitFlow() :
+    m_to(),
     m_from()
 {
-	/*PROTECTED REGION ID(ExitFlow constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(ExitFlow constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 ExitFlow::~ExitFlow()
 {
-	/*PROTECTED REGION ID(ExitFlow destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(ExitFlow destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 ExitFlow::to_t ExitFlow::getTo() const
 {
-	return e4c::returned(m_to);
+    return e4c::returned(m_to);
 }
 
 void ExitFlow::setTo(to_t to_)
 {
-	if (m_to == to_)
-		return;
-	m_to = to_;
+    if (m_to == to_)
+        return;
+    m_to = to_;
 }
 
 ExitFlow::from_t ExitFlow::getFrom() const
 {
-	return e4c::returned(m_from);
+    return e4c::returned(m_from);
 }
 
 void ExitFlow::setFrom(from_t from_)
 {
-	if (m_from == from_)
-		return;
-	m_from = from_;
+    if (m_from == from_)
+        return;
+    m_from = from_;
 }
 
 
@@ -53,6 +53,6 @@ void ExitFlow::setFrom(from_t from_)
 
 ecore::EClass_ptr ExitFlow::eClassImpl() const
 {
-	return ActionPackage::_instance()->getExitFlow();
+    return ActionPackage::_instance()->getExitFlow();
 }
- 
+

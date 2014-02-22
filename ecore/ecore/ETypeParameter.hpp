@@ -15,36 +15,36 @@ class ETypeParameter :  public virtual ::ecore::ENamedElement
 {
 public:
 
-	typedef ETypeParameter_ptr ptr_type;
-	
-	ETypeParameter();
-	virtual ~ETypeParameter();
+    typedef ETypeParameter_ptr ptr_type;
 
-	typedef std::vector < ecore::EGenericType_ptr > eBounds_t;
-	
-	eBounds_t getEBounds() const;
-	void addEBounds(ecore::EGenericType_ptr eBounds_);
-	void addAllEBounds(const eBounds_t& eBounds_);
-	void removeEBounds(ecore::EGenericType_ptr eBounds_);
-	void clearEBounds();
-	
+    ETypeParameter();
+    virtual ~ETypeParameter();
 
-	/*PROTECTED REGION ID(ecore::ETypeParameter public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef std::vector < ecore::EGenericType_ptr > eBounds_t;
+
+    eBounds_t getEBounds() const;
+    void addEBounds(ecore::EGenericType_ptr eBounds_);
+    void addAllEBounds(const eBounds_t& eBounds_);
+    void removeEBounds(ecore::EGenericType_ptr eBounds_);
+    void clearEBounds();
+
+
+    /*PROTECTED REGION ID(ecore::ETypeParameter public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class EcorePackage;
+    friend class EcorePackage;
 
-	std::vector < std::unique_ptr < ecore::EGenericType > > m_eBounds;
+    std::vector < std::unique_ptr < ecore::EGenericType > > m_eBounds;
 
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(ecore::ETypeParameter protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(ecore::ETypeParameter protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // ecore

@@ -16,33 +16,33 @@ class Comment : ::ecore::EObject
 {
 public:
 
-	typedef Comment_ptr ptr_type;
-	
-	Comment();
-	virtual ~Comment();
+    typedef Comment_ptr ptr_type;
 
-	typedef ::PrimitiveTypes::String text_t;
-	
-	void setText(text_t _text);
-	text_t getText() const;
-	
+    Comment();
+    virtual ~Comment();
 
-	/*PROTECTED REGION ID(Make::Comment public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef ::PrimitiveTypes::String text_t;
+
+    void setText(text_t _text);
+    text_t getText() const;
+
+
+    /*PROTECTED REGION ID(Make::Comment public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class MakePackage;
+    friend class MakePackage;
 
-	text_t m_text;
+    text_t m_text;
 
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(Make::Comment protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(Make::Comment protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // Make

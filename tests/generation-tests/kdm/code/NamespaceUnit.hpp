@@ -18,34 +18,34 @@ class NamespaceUnit :  public virtual ::kdm::code::CodeItem
 {
 public:
 
-	typedef NamespaceUnit_ptr ptr_type;
-	
-	NamespaceUnit();
-	virtual ~NamespaceUnit();
+    typedef NamespaceUnit_ptr ptr_type;
 
-	typedef std::set < kdm::code::CodeItem_ptr > groupedCode_t;
-	
-	groupedCode_t getGroupedCode() const;
-	void addGroupedCode(kdm::code::CodeItem_ptr groupedCode_);
-	void addAllGroupedCode(const groupedCode_t& groupedCode_);
-	
+    NamespaceUnit();
+    virtual ~NamespaceUnit();
 
-	/*PROTECTED REGION ID(kdm::code::NamespaceUnit public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef std::set < kdm::code::CodeItem_ptr > groupedCode_t;
+
+    groupedCode_t getGroupedCode() const;
+    void addGroupedCode(kdm::code::CodeItem_ptr groupedCode_);
+    void addAllGroupedCode(const groupedCode_t& groupedCode_);
+
+
+    /*PROTECTED REGION ID(kdm::code::NamespaceUnit public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class CodePackage;
+    friend class CodePackage;
 
-	std::set < kdm::code::CodeItem_ptr > m_groupedCode;
+    std::set < kdm::code::CodeItem_ptr > m_groupedCode;
 
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::code::NamespaceUnit protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::code::NamespaceUnit protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // code

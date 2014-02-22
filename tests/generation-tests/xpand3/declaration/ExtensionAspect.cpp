@@ -8,33 +8,33 @@ using namespace xpand3::declaration;
 /*PROTECTED REGION ID(xpand3::declaration::ExtensionAspect include) START*/
 /*PROTECTED REGION END*/
 
-ExtensionAspect::ExtensionAspect() : 
-	m_expression()
+ExtensionAspect::ExtensionAspect() :
+    m_expression()
 {
-	/*PROTECTED REGION ID(ExtensionAspect constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(ExtensionAspect constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 ExtensionAspect::~ExtensionAspect()
 {
-	/*PROTECTED REGION ID(ExtensionAspect destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(ExtensionAspect destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 ExtensionAspect::expression_t ExtensionAspect::getExpression() const
 {
-	return e4c::returned(m_expression);
+    return e4c::returned(m_expression);
 }
 
 
 void ExtensionAspect::setExpression(expression_t expression_)
 {
-	m_expression.reset(expression_);
+    m_expression.reset(expression_);
 }
 
 ExtensionAspect::expression_t ExtensionAspect::releaseExpression()
 {
-	return m_expression.release();
+    return m_expression.release();
 }
 
 
@@ -44,6 +44,6 @@ ExtensionAspect::expression_t ExtensionAspect::releaseExpression()
 
 ecore::EClass_ptr ExtensionAspect::eClassImpl() const
 {
-	return DeclarationPackage::_instance()->getExtensionAspect();
+    return DeclarationPackage::_instance()->getExtensionAspect();
 }
- 
+

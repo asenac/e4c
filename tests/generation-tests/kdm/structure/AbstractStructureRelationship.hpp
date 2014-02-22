@@ -18,29 +18,29 @@ class AbstractStructureRelationship :  public virtual ::kdm::core::KDMRelationsh
 {
 public:
 
-	typedef AbstractStructureRelationship_ptr ptr_type;
-	
-	virtual ~AbstractStructureRelationship();
+    typedef AbstractStructureRelationship_ptr ptr_type;
 
-	
-	
+    virtual ~AbstractStructureRelationship();
 
-	/*PROTECTED REGION ID(kdm::structure::AbstractStructureRelationship public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(kdm::structure::AbstractStructureRelationship public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
-	AbstractStructureRelationship();
+    AbstractStructureRelationship();
 
-	friend class StructurePackage;
+    friend class StructurePackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::structure::AbstractStructureRelationship protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::structure::AbstractStructureRelationship protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // structure

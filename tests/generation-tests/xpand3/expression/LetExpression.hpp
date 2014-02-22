@@ -18,44 +18,44 @@ class LetExpression :  public virtual ::xpand3::expression::AbstractExpression
 {
 public:
 
-	typedef LetExpression_ptr ptr_type;
-	
-	LetExpression();
-	virtual ~LetExpression();
+    typedef LetExpression_ptr ptr_type;
 
-	typedef xpand3::expression::AbstractExpression_ptr varExpression_t;
-	typedef xpand3::expression::AbstractExpression_ptr targetExpression_t;
-	typedef xpand3::Identifier_ptr varName_t;
-	
-	varExpression_t getVarExpression() const;
-	void setVarExpression(varExpression_t varExpression_);
-	varExpression_t releaseVarExpression();
-	targetExpression_t getTargetExpression() const;
-	void setTargetExpression(targetExpression_t targetExpression_);
-	targetExpression_t releaseTargetExpression();
-	varName_t getVarName() const;
-	void setVarName(varName_t varName_);
-	varName_t releaseVarName();
-	
+    LetExpression();
+    virtual ~LetExpression();
 
-	/*PROTECTED REGION ID(xpand3::expression::LetExpression public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef xpand3::expression::AbstractExpression_ptr varExpression_t;
+    typedef xpand3::expression::AbstractExpression_ptr targetExpression_t;
+    typedef xpand3::Identifier_ptr varName_t;
+
+    varExpression_t getVarExpression() const;
+    void setVarExpression(varExpression_t varExpression_);
+    varExpression_t releaseVarExpression();
+    targetExpression_t getTargetExpression() const;
+    void setTargetExpression(targetExpression_t targetExpression_);
+    targetExpression_t releaseTargetExpression();
+    varName_t getVarName() const;
+    void setVarName(varName_t varName_);
+    varName_t releaseVarName();
+
+
+    /*PROTECTED REGION ID(xpand3::expression::LetExpression public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class ExpressionPackage;
+    friend class ExpressionPackage;
 
-	std::unique_ptr < xpand3::expression::AbstractExpression > m_varExpression;
-	std::unique_ptr < xpand3::expression::AbstractExpression > m_targetExpression;
-	std::unique_ptr < xpand3::Identifier > m_varName;
+    std::unique_ptr < xpand3::expression::AbstractExpression > m_varExpression;
+    std::unique_ptr < xpand3::expression::AbstractExpression > m_targetExpression;
+    std::unique_ptr < xpand3::Identifier > m_varName;
 
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(xpand3::expression::LetExpression protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(xpand3::expression::LetExpression protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // expression

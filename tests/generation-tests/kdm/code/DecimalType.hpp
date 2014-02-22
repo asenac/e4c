@@ -18,29 +18,29 @@ class DecimalType :  public virtual ::kdm::code::PrimitiveType
 {
 public:
 
-	typedef DecimalType_ptr ptr_type;
-	
-	DecimalType();
-	virtual ~DecimalType();
+    typedef DecimalType_ptr ptr_type;
 
-	
-	
+    DecimalType();
+    virtual ~DecimalType();
 
-	/*PROTECTED REGION ID(kdm::code::DecimalType public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(kdm::code::DecimalType public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class CodePackage;
+    friend class CodePackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::code::DecimalType protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::code::DecimalType protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // code

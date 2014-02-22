@@ -18,29 +18,29 @@ class Report :  public virtual ::kdm::ui::UIDisplay
 {
 public:
 
-	typedef Report_ptr ptr_type;
-	
-	Report();
-	virtual ~Report();
+    typedef Report_ptr ptr_type;
 
-	
-	
+    Report();
+    virtual ~Report();
 
-	/*PROTECTED REGION ID(kdm::ui::Report public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(kdm::ui::Report public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class UiPackage;
+    friend class UiPackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::ui::Report protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::ui::Report protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // ui

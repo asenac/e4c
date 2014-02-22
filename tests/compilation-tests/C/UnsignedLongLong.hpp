@@ -16,29 +16,29 @@ class UnsignedLongLong :  public virtual ::C::CUnsignedInt
 {
 public:
 
-	typedef UnsignedLongLong_ptr ptr_type;
-	
-	UnsignedLongLong();
-	virtual ~UnsignedLongLong();
+    typedef UnsignedLongLong_ptr ptr_type;
 
-	
-	
+    UnsignedLongLong();
+    virtual ~UnsignedLongLong();
 
-	/*PROTECTED REGION ID(C::UnsignedLongLong public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(C::UnsignedLongLong public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class CPackage;
+    friend class CPackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(C::UnsignedLongLong protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(C::UnsignedLongLong protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // C

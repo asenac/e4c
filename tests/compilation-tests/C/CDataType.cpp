@@ -9,14 +9,14 @@ using namespace C;
 
 CDataType::CDataType()
 {
-	/*PROTECTED REGION ID(CDataType constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(CDataType constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 CDataType::~CDataType()
 {
-	/*PROTECTED REGION ID(CDataType destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(CDataType destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ CDataType::~CDataType()
 
 ecore::EClass_ptr CDataType::eClassImpl() const
 {
-	return CPackage::_instance()->getCDataType();
+    return CPackage::_instance()->getCDataType();
 }
- 
+

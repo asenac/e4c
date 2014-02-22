@@ -15,39 +15,39 @@ class FixedDef :  public virtual ::idlmm::IDLType
 {
 public:
 
-	typedef FixedDef_ptr ptr_type;
-	
-	FixedDef();
-	virtual ~FixedDef();
+    typedef FixedDef_ptr ptr_type;
 
-	typedef idlmm::Expression_ptr digits_t;
-	typedef idlmm::Expression_ptr scale_t;
-	
-	digits_t getDigits() const;
-	void setDigits(digits_t digits_);
-	digits_t releaseDigits();
-	scale_t getScale() const;
-	void setScale(scale_t scale_);
-	scale_t releaseScale();
-	
+    FixedDef();
+    virtual ~FixedDef();
 
-	/*PROTECTED REGION ID(idlmm::FixedDef public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef idlmm::Expression_ptr digits_t;
+    typedef idlmm::Expression_ptr scale_t;
+
+    digits_t getDigits() const;
+    void setDigits(digits_t digits_);
+    digits_t releaseDigits();
+    scale_t getScale() const;
+    void setScale(scale_t scale_);
+    scale_t releaseScale();
+
+
+    /*PROTECTED REGION ID(idlmm::FixedDef public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class IdlmmPackage;
+    friend class IdlmmPackage;
 
-	std::unique_ptr < idlmm::Expression > m_digits;
-	std::unique_ptr < idlmm::Expression > m_scale;
+    std::unique_ptr < idlmm::Expression > m_digits;
+    std::unique_ptr < idlmm::Expression > m_scale;
 
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(idlmm::FixedDef protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(idlmm::FixedDef protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // idlmm

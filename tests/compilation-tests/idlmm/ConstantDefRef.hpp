@@ -15,33 +15,33 @@ class ConstantDefRef :  public virtual ::idlmm::LiteralExpression
 {
 public:
 
-	typedef ConstantDefRef_ptr ptr_type;
-	
-	ConstantDefRef();
-	virtual ~ConstantDefRef();
+    typedef ConstantDefRef_ptr ptr_type;
 
-	typedef idlmm::Constant_ptr constant_t;
-	
-	constant_t getConstant() const;
-	void setConstant(constant_t constant_);
-	
+    ConstantDefRef();
+    virtual ~ConstantDefRef();
 
-	/*PROTECTED REGION ID(idlmm::ConstantDefRef public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef idlmm::Constant_ptr constant_t;
+
+    constant_t getConstant() const;
+    void setConstant(constant_t constant_);
+
+
+    /*PROTECTED REGION ID(idlmm::ConstantDefRef public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class IdlmmPackage;
+    friend class IdlmmPackage;
 
-	idlmm::Constant_ptr m_constant;
+    idlmm::Constant_ptr m_constant;
 
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(idlmm::ConstantDefRef protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(idlmm::ConstantDefRef protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // idlmm

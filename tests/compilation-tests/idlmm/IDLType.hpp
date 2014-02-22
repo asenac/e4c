@@ -15,33 +15,33 @@ class IDLType :  public virtual ::idlmm::ModelElement
 {
 public:
 
-	typedef IDLType_ptr ptr_type;
-	
-	virtual ~IDLType();
+    typedef IDLType_ptr ptr_type;
 
-	typedef ::idlmm::ETypeCode typeCode_t;
-	
-	void setTypeCode(typeCode_t _typeCode);
-	typeCode_t getTypeCode() const;
-	
+    virtual ~IDLType();
 
-	/*PROTECTED REGION ID(idlmm::IDLType public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef ::idlmm::ETypeCode typeCode_t;
+
+    void setTypeCode(typeCode_t _typeCode);
+    typeCode_t getTypeCode() const;
+
+
+    /*PROTECTED REGION ID(idlmm::IDLType public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
-	IDLType();
+    IDLType();
 
-	friend class IdlmmPackage;
+    friend class IdlmmPackage;
 
-	typeCode_t m_typeCode;
+    typeCode_t m_typeCode;
 
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(idlmm::IDLType protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(idlmm::IDLType protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // idlmm

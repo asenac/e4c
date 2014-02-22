@@ -9,14 +9,14 @@ using namespace C;
 
 UnsignedShort::UnsignedShort()
 {
-	/*PROTECTED REGION ID(UnsignedShort constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(UnsignedShort constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 UnsignedShort::~UnsignedShort()
 {
-	/*PROTECTED REGION ID(UnsignedShort destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(UnsignedShort destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ UnsignedShort::~UnsignedShort()
 
 ecore::EClass_ptr UnsignedShort::eClassImpl() const
 {
-	return CPackage::_instance()->getUnsignedShort();
+    return CPackage::_instance()->getUnsignedShort();
 }
- 
+

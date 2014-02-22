@@ -18,37 +18,37 @@ class PlatformRelationship :  public virtual ::kdm::platform::AbstractPlatformRe
 {
 public:
 
-	typedef PlatformRelationship_ptr ptr_type;
-	
-	PlatformRelationship();
-	virtual ~PlatformRelationship();
+    typedef PlatformRelationship_ptr ptr_type;
 
-	typedef kdm::core::KDMEntity_ptr to_t;
-	typedef kdm::platform::AbstractPlatformElement_ptr from_t;
-	
-	to_t getTo() const;
-	void setTo(to_t to_);
-	from_t getFrom() const;
-	void setFrom(from_t from_);
-	
+    PlatformRelationship();
+    virtual ~PlatformRelationship();
 
-	/*PROTECTED REGION ID(kdm::platform::PlatformRelationship public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef kdm::core::KDMEntity_ptr to_t;
+    typedef kdm::platform::AbstractPlatformElement_ptr from_t;
+
+    to_t getTo() const;
+    void setTo(to_t to_);
+    from_t getFrom() const;
+    void setFrom(from_t from_);
+
+
+    /*PROTECTED REGION ID(kdm::platform::PlatformRelationship public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class PlatformPackage;
+    friend class PlatformPackage;
 
-	kdm::core::KDMEntity_ptr m_to;
-	kdm::platform::AbstractPlatformElement_ptr m_from;
+    kdm::core::KDMEntity_ptr m_to;
+    kdm::platform::AbstractPlatformElement_ptr m_from;
 
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::platform::PlatformRelationship protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::platform::PlatformRelationship protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // platform

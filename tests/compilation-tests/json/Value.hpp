@@ -16,29 +16,29 @@ class Value : ::ecore::EObject
 {
 public:
 
-	typedef Value_ptr ptr_type;
-	
-	virtual ~Value();
+    typedef Value_ptr ptr_type;
 
-	
-	
+    virtual ~Value();
 
-	/*PROTECTED REGION ID(json::Value public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(json::Value public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
-	Value();
+    Value();
 
-	friend class JsonPackage;
+    friend class JsonPackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(json::Value protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(json::Value protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // json

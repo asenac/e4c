@@ -7,56 +7,56 @@ using namespace idlmm;
 /*PROTECTED REGION ID(idlmm::ExceptionDef include) START*/
 /*PROTECTED REGION END*/
 
-ExceptionDef::ExceptionDef() : 
-	m_typeCode(),
+ExceptionDef::ExceptionDef() :
+    m_typeCode(),
     m_members()
 {
-	/*PROTECTED REGION ID(ExceptionDef constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(ExceptionDef constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 ExceptionDef::~ExceptionDef()
 {
-	/*PROTECTED REGION ID(ExceptionDef destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(ExceptionDef destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 void ExceptionDef::setTypeCode(typeCode_t _typeCode)
 {
-	m_typeCode = _typeCode;;
+    m_typeCode = _typeCode;;
 }
 
 ExceptionDef::typeCode_t ExceptionDef::getTypeCode() const
 {
-	return m_typeCode;
+    return m_typeCode;
 }
 
 ExceptionDef::members_t ExceptionDef::getMembers() const
 {
-	return e4c::returned(m_members);
+    return e4c::returned(m_members);
 }
 
 void ExceptionDef::addMembers(idlmm::Field_ptr members_)
 {
-	assert(members_);
-	m_members.push_back(std::unique_ptr < idlmm::Field >(members_));
+    assert(members_);
+    m_members.push_back(std::unique_ptr < idlmm::Field >(members_));
 }
 
 void ExceptionDef::addAllMembers(const members_t& members_)
 {
-	for (auto i = members_.begin(); i != members_.end(); i++)
-		addMembers(*i);
+    for (auto i = members_.begin(); i != members_.end(); i++)
+        addMembers(*i);
 }
 
 void ExceptionDef::removeMembers(idlmm::Field_ptr members_)
 {
-	assert(members_);
-	e4c::remove(m_members, members_);
+    assert(members_);
+    e4c::remove(m_members, members_);
 }
 
 void ExceptionDef::clearMembers()
 {
-	m_members.clear();
+    m_members.clear();
 }
 
 
@@ -66,6 +66,6 @@ void ExceptionDef::clearMembers()
 
 ecore::EClass_ptr ExceptionDef::eClassImpl() const
 {
-	return IdlmmPackage::_instance()->getExceptionDef();
+    return IdlmmPackage::_instance()->getExceptionDef();
 }
- 
+

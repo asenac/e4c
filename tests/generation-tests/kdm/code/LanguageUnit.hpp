@@ -18,29 +18,29 @@ class LanguageUnit :  public virtual ::kdm::code::Module
 {
 public:
 
-	typedef LanguageUnit_ptr ptr_type;
-	
-	LanguageUnit();
-	virtual ~LanguageUnit();
+    typedef LanguageUnit_ptr ptr_type;
 
-	
-	
+    LanguageUnit();
+    virtual ~LanguageUnit();
 
-	/*PROTECTED REGION ID(kdm::code::LanguageUnit public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(kdm::code::LanguageUnit public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class CodePackage;
+    friend class CodePackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::code::LanguageUnit protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::code::LanguageUnit protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // code

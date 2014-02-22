@@ -18,37 +18,37 @@ class ConceptualRelationship :  public virtual ::kdm::conceptual::AbstractConcep
 {
 public:
 
-	typedef ConceptualRelationship_ptr ptr_type;
-	
-	ConceptualRelationship();
-	virtual ~ConceptualRelationship();
+    typedef ConceptualRelationship_ptr ptr_type;
 
-	typedef kdm::core::KDMEntity_ptr to_t;
-	typedef kdm::conceptual::AbstractConceptualElement_ptr from_t;
-	
-	to_t getTo() const;
-	void setTo(to_t to_);
-	from_t getFrom() const;
-	void setFrom(from_t from_);
-	
+    ConceptualRelationship();
+    virtual ~ConceptualRelationship();
 
-	/*PROTECTED REGION ID(kdm::conceptual::ConceptualRelationship public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef kdm::core::KDMEntity_ptr to_t;
+    typedef kdm::conceptual::AbstractConceptualElement_ptr from_t;
+
+    to_t getTo() const;
+    void setTo(to_t to_);
+    from_t getFrom() const;
+    void setFrom(from_t from_);
+
+
+    /*PROTECTED REGION ID(kdm::conceptual::ConceptualRelationship public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class ConceptualPackage;
+    friend class ConceptualPackage;
 
-	kdm::core::KDMEntity_ptr m_to;
-	kdm::conceptual::AbstractConceptualElement_ptr m_from;
+    kdm::core::KDMEntity_ptr m_to;
+    kdm::conceptual::AbstractConceptualElement_ptr m_from;
 
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::conceptual::ConceptualRelationship protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::conceptual::ConceptualRelationship protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // conceptual

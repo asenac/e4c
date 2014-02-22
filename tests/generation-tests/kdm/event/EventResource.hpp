@@ -18,34 +18,34 @@ class EventResource :  public virtual ::kdm::event::AbstractEventElement
 {
 public:
 
-	typedef EventResource_ptr ptr_type;
-	
-	EventResource();
-	virtual ~EventResource();
+    typedef EventResource_ptr ptr_type;
 
-	typedef std::set < kdm::event::AbstractEventElement_ptr > eventElement_t;
-	
-	eventElement_t getEventElement() const;
-	void addEventElement(kdm::event::AbstractEventElement_ptr eventElement_);
-	void addAllEventElement(const eventElement_t& eventElement_);
-	
+    EventResource();
+    virtual ~EventResource();
 
-	/*PROTECTED REGION ID(kdm::event::EventResource public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef std::set < kdm::event::AbstractEventElement_ptr > eventElement_t;
+
+    eventElement_t getEventElement() const;
+    void addEventElement(kdm::event::AbstractEventElement_ptr eventElement_);
+    void addAllEventElement(const eventElement_t& eventElement_);
+
+
+    /*PROTECTED REGION ID(kdm::event::EventResource public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class EventPackage;
+    friend class EventPackage;
 
-	std::set < std::unique_ptr < kdm::event::AbstractEventElement > > m_eventElement;
+    std::set < std::unique_ptr < kdm::event::AbstractEventElement > > m_eventElement;
 
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::event::EventResource protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::event::EventResource protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // event

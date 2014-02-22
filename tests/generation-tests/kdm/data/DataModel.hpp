@@ -18,34 +18,34 @@ class DataModel :  public virtual ::kdm::kdm::KDMModel
 {
 public:
 
-	typedef DataModel_ptr ptr_type;
-	
-	DataModel();
-	virtual ~DataModel();
+    typedef DataModel_ptr ptr_type;
 
-	typedef std::set < kdm::data::AbstractDataElement_ptr > dataElement_t;
-	
-	dataElement_t getDataElement() const;
-	void addDataElement(kdm::data::AbstractDataElement_ptr dataElement_);
-	void addAllDataElement(const dataElement_t& dataElement_);
-	
+    DataModel();
+    virtual ~DataModel();
 
-	/*PROTECTED REGION ID(kdm::data::DataModel public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef std::set < kdm::data::AbstractDataElement_ptr > dataElement_t;
+
+    dataElement_t getDataElement() const;
+    void addDataElement(kdm::data::AbstractDataElement_ptr dataElement_);
+    void addAllDataElement(const dataElement_t& dataElement_);
+
+
+    /*PROTECTED REGION ID(kdm::data::DataModel public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class DataPackage;
+    friend class DataPackage;
 
-	std::set < std::unique_ptr < kdm::data::AbstractDataElement > > m_dataElement;
+    std::set < std::unique_ptr < kdm::data::AbstractDataElement > > m_dataElement;
 
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::data::DataModel protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::data::DataModel protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // data

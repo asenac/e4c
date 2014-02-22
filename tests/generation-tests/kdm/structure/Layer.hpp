@@ -18,29 +18,29 @@ class Layer :  public virtual ::kdm::structure::AbstractStructureElement
 {
 public:
 
-	typedef Layer_ptr ptr_type;
-	
-	Layer();
-	virtual ~Layer();
+    typedef Layer_ptr ptr_type;
 
-	
-	
+    Layer();
+    virtual ~Layer();
 
-	/*PROTECTED REGION ID(kdm::structure::Layer public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(kdm::structure::Layer public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class StructurePackage;
+    friend class StructurePackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::structure::Layer protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::structure::Layer protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // structure

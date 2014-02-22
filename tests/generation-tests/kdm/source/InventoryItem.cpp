@@ -7,38 +7,38 @@ using namespace kdm::source;
 /*PROTECTED REGION ID(kdm::source::InventoryItem include) START*/
 /*PROTECTED REGION END*/
 
-InventoryItem::InventoryItem() : 
-	m_version(),
+InventoryItem::InventoryItem() :
+    m_version(),
     m_path()
 {
-	/*PROTECTED REGION ID(InventoryItem constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(InventoryItem constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 InventoryItem::~InventoryItem()
 {
-	/*PROTECTED REGION ID(InventoryItem destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(InventoryItem destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 void InventoryItem::setVersion(version_t _version)
 {
-	m_version = _version;;
+    m_version = _version;;
 }
 
 InventoryItem::version_t InventoryItem::getVersion() const
 {
-	return m_version;
+    return m_version;
 }
 
 void InventoryItem::setPath(path_t _path)
 {
-	m_path = _path;;
+    m_path = _path;;
 }
 
 InventoryItem::path_t InventoryItem::getPath() const
 {
-	return m_path;
+    return m_path;
 }
 
 
@@ -48,6 +48,6 @@ InventoryItem::path_t InventoryItem::getPath() const
 
 ecore::EClass_ptr InventoryItem::eClassImpl() const
 {
-	return SourcePackage::_instance()->getInventoryItem();
+    return SourcePackage::_instance()->getInventoryItem();
 }
- 
+

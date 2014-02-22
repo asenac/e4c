@@ -9,14 +9,14 @@ using namespace kdm::code;
 
 DateType::DateType()
 {
-	/*PROTECTED REGION ID(DateType constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(DateType constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 DateType::~DateType()
 {
-	/*PROTECTED REGION ID(DateType destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(DateType destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ DateType::~DateType()
 
 ecore::EClass_ptr DateType::eClassImpl() const
 {
-	return CodePackage::_instance()->getDateType();
+    return CodePackage::_instance()->getDateType();
 }
- 
+

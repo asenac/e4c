@@ -9,14 +9,14 @@ using namespace kdm::conceptual;
 
 ConceptualElement::ConceptualElement()
 {
-	/*PROTECTED REGION ID(ConceptualElement constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(ConceptualElement constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 ConceptualElement::~ConceptualElement()
 {
-	/*PROTECTED REGION ID(ConceptualElement destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(ConceptualElement destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ ConceptualElement::~ConceptualElement()
 
 ecore::EClass_ptr ConceptualElement::eClassImpl() const
 {
-	return ConceptualPackage::_instance()->getConceptualElement();
+    return ConceptualPackage::_instance()->getConceptualElement();
 }
- 
+

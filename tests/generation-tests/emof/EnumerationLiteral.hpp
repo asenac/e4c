@@ -16,34 +16,34 @@ class EnumerationLiteral :  public virtual ::emof::NamedElement
 {
 public:
 
-	typedef EnumerationLiteral_ptr ptr_type;
-	
-	EnumerationLiteral();
-	virtual ~EnumerationLiteral();
+    typedef EnumerationLiteral_ptr ptr_type;
 
-	typedef emof::Enumeration_ptr enumeration_t;
-	
-	enumeration_t getEnumeration() const;
-	
+    EnumerationLiteral();
+    virtual ~EnumerationLiteral();
 
-	/*PROTECTED REGION ID(emof::EnumerationLiteral public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef emof::Enumeration_ptr enumeration_t;
+
+    enumeration_t getEnumeration() const;
+
+
+    /*PROTECTED REGION ID(emof::EnumerationLiteral public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class EmofPackage;
+    friend class EmofPackage;
 
-	emof::Enumeration_ptr m_enumeration;
+    emof::Enumeration_ptr m_enumeration;
 
-	
-	friend class ::emof::Enumeration;
-	void setEnumeration(enumeration_t enumeration_);
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(emof::EnumerationLiteral protected) START*/
-	/*PROTECTED REGION END*/
+
+    friend class ::emof::Enumeration;
+    void setEnumeration(enumeration_t enumeration_);
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(emof::EnumerationLiteral protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // emof

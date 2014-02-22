@@ -9,14 +9,14 @@ using namespace xtext;
 
 UnorderedGroup::UnorderedGroup()
 {
-	/*PROTECTED REGION ID(UnorderedGroup constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(UnorderedGroup constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 UnorderedGroup::~UnorderedGroup()
 {
-	/*PROTECTED REGION ID(UnorderedGroup destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(UnorderedGroup destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ UnorderedGroup::~UnorderedGroup()
 
 ecore::EClass_ptr UnorderedGroup::eClassImpl() const
 {
-	return XtextPackage::_instance()->getUnorderedGroup();
+    return XtextPackage::_instance()->getUnorderedGroup();
 }
- 
+

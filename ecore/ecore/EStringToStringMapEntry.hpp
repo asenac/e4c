@@ -14,37 +14,37 @@ class EStringToStringMapEntry
 {
 public:
 
-	typedef EStringToStringMapEntry_ptr ptr_type;
-	
-	EStringToStringMapEntry();
-	virtual ~EStringToStringMapEntry();
+    typedef EStringToStringMapEntry_ptr ptr_type;
 
-	typedef ::ecore::EString key_t;
-	typedef ::ecore::EString value_t;
-	
-	void setKey(key_t _key);
-	key_t getKey() const;
-	void setValue(value_t _value);
-	value_t getValue() const;
-	
+    EStringToStringMapEntry();
+    virtual ~EStringToStringMapEntry();
 
-	/*PROTECTED REGION ID(ecore::EStringToStringMapEntry public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef ::ecore::EString key_t;
+    typedef ::ecore::EString value_t;
+
+    void setKey(key_t _key);
+    key_t getKey() const;
+    void setValue(value_t _value);
+    value_t getValue() const;
+
+
+    /*PROTECTED REGION ID(ecore::EStringToStringMapEntry public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class EcorePackage;
+    friend class EcorePackage;
 
-	key_t m_key;
-	value_t m_value;
+    key_t m_key;
+    value_t m_value;
 
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(ecore::EStringToStringMapEntry protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(ecore::EStringToStringMapEntry protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // ecore

@@ -9,14 +9,14 @@ using namespace kdm::event;
 
 OnExit::OnExit()
 {
-	/*PROTECTED REGION ID(OnExit constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(OnExit constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 OnExit::~OnExit()
 {
-	/*PROTECTED REGION ID(OnExit destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(OnExit destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ OnExit::~OnExit()
 
 ecore::EClass_ptr OnExit::eClassImpl() const
 {
-	return EventPackage::_instance()->getOnExit();
+    return EventPackage::_instance()->getOnExit();
 }
- 
+

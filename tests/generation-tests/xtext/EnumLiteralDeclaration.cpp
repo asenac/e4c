@@ -9,46 +9,46 @@ using namespace xtext;
 /*PROTECTED REGION ID(xtext::EnumLiteralDeclaration include) START*/
 /*PROTECTED REGION END*/
 
-EnumLiteralDeclaration::EnumLiteralDeclaration() : 
-	m_enumLiteral(),
+EnumLiteralDeclaration::EnumLiteralDeclaration() :
+    m_enumLiteral(),
     m_literal()
 {
-	/*PROTECTED REGION ID(EnumLiteralDeclaration constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(EnumLiteralDeclaration constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 EnumLiteralDeclaration::~EnumLiteralDeclaration()
 {
-	/*PROTECTED REGION ID(EnumLiteralDeclaration destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(EnumLiteralDeclaration destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 EnumLiteralDeclaration::enumLiteral_t EnumLiteralDeclaration::getEnumLiteral() const
 {
-	return e4c::returned(m_enumLiteral);
+    return e4c::returned(m_enumLiteral);
 }
 
 void EnumLiteralDeclaration::setEnumLiteral(enumLiteral_t enumLiteral_)
 {
-	if (m_enumLiteral == enumLiteral_)
-		return;
-	m_enumLiteral = enumLiteral_;
+    if (m_enumLiteral == enumLiteral_)
+        return;
+    m_enumLiteral = enumLiteral_;
 }
 
 EnumLiteralDeclaration::literal_t EnumLiteralDeclaration::getLiteral() const
 {
-	return e4c::returned(m_literal);
+    return e4c::returned(m_literal);
 }
 
 
 void EnumLiteralDeclaration::setLiteral(literal_t literal_)
 {
-	m_literal.reset(literal_);
+    m_literal.reset(literal_);
 }
 
 EnumLiteralDeclaration::literal_t EnumLiteralDeclaration::releaseLiteral()
 {
-	return m_literal.release();
+    return m_literal.release();
 }
 
 
@@ -58,6 +58,6 @@ EnumLiteralDeclaration::literal_t EnumLiteralDeclaration::releaseLiteral()
 
 ecore::EClass_ptr EnumLiteralDeclaration::eClassImpl() const
 {
-	return XtextPackage::_instance()->getEnumLiteralDeclaration();
+    return XtextPackage::_instance()->getEnumLiteralDeclaration();
 }
- 
+

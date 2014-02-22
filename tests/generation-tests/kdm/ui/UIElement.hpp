@@ -18,29 +18,29 @@ class UIElement :  public virtual ::kdm::ui::AbstractUIElement
 {
 public:
 
-	typedef UIElement_ptr ptr_type;
-	
-	UIElement();
-	virtual ~UIElement();
+    typedef UIElement_ptr ptr_type;
 
-	
-	
+    UIElement();
+    virtual ~UIElement();
 
-	/*PROTECTED REGION ID(kdm::ui::UIElement public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(kdm::ui::UIElement public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class UiPackage;
+    friend class UiPackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::ui::UIElement protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::ui::UIElement protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // ui

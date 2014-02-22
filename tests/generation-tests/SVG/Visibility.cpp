@@ -7,27 +7,27 @@ using namespace SVG;
 /*PROTECTED REGION ID(SVG::Visibility include) START*/
 /*PROTECTED REGION END*/
 
-Visibility::Visibility() : 
-	m_visible()
+Visibility::Visibility() :
+    m_visible()
 {
-	/*PROTECTED REGION ID(Visibility constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(Visibility constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 Visibility::~Visibility()
 {
-	/*PROTECTED REGION ID(Visibility destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(Visibility destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 void Visibility::setVisible(visible_t _visible)
 {
-	m_visible = _visible;;
+    m_visible = _visible;;
 }
 
 Visibility::visible_t Visibility::getVisible() const
 {
-	return m_visible;
+    return m_visible;
 }
 
 
@@ -37,6 +37,6 @@ Visibility::visible_t Visibility::getVisible() const
 
 ecore::EClass_ptr Visibility::eClassImpl() const
 {
-	return SVGPackage::_instance()->getVisibility();
+    return SVGPackage::_instance()->getVisibility();
 }
- 
+

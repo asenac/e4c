@@ -16,29 +16,29 @@ class Symbol :  public virtual ::SVG::GroupingElement
 {
 public:
 
-	typedef Symbol_ptr ptr_type;
-	
-	Symbol();
-	virtual ~Symbol();
+    typedef Symbol_ptr ptr_type;
 
-	
-	
+    Symbol();
+    virtual ~Symbol();
 
-	/*PROTECTED REGION ID(SVG::Symbol public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(SVG::Symbol public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class SVGPackage;
+    friend class SVGPackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(SVG::Symbol protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(SVG::Symbol protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // SVG

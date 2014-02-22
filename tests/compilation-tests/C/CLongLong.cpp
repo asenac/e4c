@@ -9,14 +9,14 @@ using namespace C;
 
 CLongLong::CLongLong()
 {
-	/*PROTECTED REGION ID(CLongLong constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(CLongLong constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 CLongLong::~CLongLong()
 {
-	/*PROTECTED REGION ID(CLongLong destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(CLongLong destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ CLongLong::~CLongLong()
 
 ecore::EClass_ptr CLongLong::eClassImpl() const
 {
-	return CPackage::_instance()->getCLongLong();
+    return CPackage::_instance()->getCLongLong();
 }
- 
+

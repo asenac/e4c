@@ -9,14 +9,14 @@ using namespace kdm::data;
 
 Index::Index()
 {
-	/*PROTECTED REGION ID(Index constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(Index constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 Index::~Index()
 {
-	/*PROTECTED REGION ID(Index destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(Index destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ Index::~Index()
 
 ecore::EClass_ptr Index::eClassImpl() const
 {
-	return DataPackage::_instance()->getIndex();
+    return DataPackage::_instance()->getIndex();
 }
- 
+

@@ -7,26 +7,26 @@ using namespace ecore;
 /*PROTECTED REGION ID(ecore::EParameter include) START*/
 /*PROTECTED REGION END*/
 
-EParameter::EParameter() : 
-	m_eOperation()
+EParameter::EParameter() :
+    m_eOperation()
 {
-	/*PROTECTED REGION ID(EParameter constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(EParameter constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 EParameter::~EParameter()
 {
-	/*PROTECTED REGION ID(EParameter destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(EParameter destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 EParameter::eOperation_t EParameter::getEOperation() const
 {
-	return e4c::returned(m_eOperation);
+    return e4c::returned(m_eOperation);
 }
 void EParameter::setEOperation(eOperation_t eOperation_)
 {
-	m_eOperation = eOperation_;
+    m_eOperation = eOperation_;
 }
 
 
@@ -36,6 +36,6 @@ void EParameter::setEOperation(eOperation_t eOperation_)
 
 ecore::EClass_ptr EParameter::eClassImpl() const
 {
-	return EcorePackage::_instance()->getEParameter();
+    return EcorePackage::_instance()->getEParameter();
 }
- 
+

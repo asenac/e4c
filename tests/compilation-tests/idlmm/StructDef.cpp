@@ -7,45 +7,45 @@ using namespace idlmm;
 /*PROTECTED REGION ID(idlmm::StructDef include) START*/
 /*PROTECTED REGION END*/
 
-StructDef::StructDef() : 
-	m_members()
+StructDef::StructDef() :
+    m_members()
 {
-	/*PROTECTED REGION ID(StructDef constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(StructDef constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 StructDef::~StructDef()
 {
-	/*PROTECTED REGION ID(StructDef destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(StructDef destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 StructDef::members_t StructDef::getMembers() const
 {
-	return e4c::returned(m_members);
+    return e4c::returned(m_members);
 }
 
 void StructDef::addMembers(idlmm::Field_ptr members_)
 {
-	assert(members_);
-	m_members.push_back(std::unique_ptr < idlmm::Field >(members_));
+    assert(members_);
+    m_members.push_back(std::unique_ptr < idlmm::Field >(members_));
 }
 
 void StructDef::addAllMembers(const members_t& members_)
 {
-	for (auto i = members_.begin(); i != members_.end(); i++)
-		addMembers(*i);
+    for (auto i = members_.begin(); i != members_.end(); i++)
+        addMembers(*i);
 }
 
 void StructDef::removeMembers(idlmm::Field_ptr members_)
 {
-	assert(members_);
-	e4c::remove(m_members, members_);
+    assert(members_);
+    e4c::remove(m_members, members_);
 }
 
 void StructDef::clearMembers()
 {
-	m_members.clear();
+    m_members.clear();
 }
 
 
@@ -55,6 +55,6 @@ void StructDef::clearMembers()
 
 ecore::EClass_ptr StructDef::eClassImpl() const
 {
-	return IdlmmPackage::_instance()->getStructDef();
+    return IdlmmPackage::_instance()->getStructDef();
 }
- 
+

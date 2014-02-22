@@ -15,29 +15,29 @@ class Expression :  public virtual ::idlmm::ModelElement
 {
 public:
 
-	typedef Expression_ptr ptr_type;
-	
-	virtual ~Expression();
+    typedef Expression_ptr ptr_type;
 
-	
-	
+    virtual ~Expression();
 
-	/*PROTECTED REGION ID(idlmm::Expression public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(idlmm::Expression public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
-	Expression();
+    Expression();
 
-	friend class IdlmmPackage;
+    friend class IdlmmPackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(idlmm::Expression protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(idlmm::Expression protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // idlmm

@@ -18,34 +18,34 @@ class UIModel :  public virtual ::kdm::kdm::KDMModel
 {
 public:
 
-	typedef UIModel_ptr ptr_type;
-	
-	UIModel();
-	virtual ~UIModel();
+    typedef UIModel_ptr ptr_type;
 
-	typedef std::set < kdm::ui::AbstractUIElement_ptr > UIElement_t;
-	
-	UIElement_t getUIElement() const;
-	void addUIElement(kdm::ui::AbstractUIElement_ptr UIElement_);
-	void addAllUIElement(const UIElement_t& UIElement_);
-	
+    UIModel();
+    virtual ~UIModel();
 
-	/*PROTECTED REGION ID(kdm::ui::UIModel public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef std::set < kdm::ui::AbstractUIElement_ptr > UIElement_t;
+
+    UIElement_t getUIElement() const;
+    void addUIElement(kdm::ui::AbstractUIElement_ptr UIElement_);
+    void addAllUIElement(const UIElement_t& UIElement_);
+
+
+    /*PROTECTED REGION ID(kdm::ui::UIModel public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class UiPackage;
+    friend class UiPackage;
 
-	std::set < std::unique_ptr < kdm::ui::AbstractUIElement > > m_UIElement;
+    std::set < std::unique_ptr < kdm::ui::AbstractUIElement > > m_UIElement;
 
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::ui::UIModel protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::ui::UIModel protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // ui

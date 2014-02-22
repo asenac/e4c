@@ -16,37 +16,37 @@ class Scale :  public virtual ::SVG::Transform
 {
 public:
 
-	typedef Scale_ptr ptr_type;
-	
-	Scale();
-	virtual ~Scale();
+    typedef Scale_ptr ptr_type;
 
-	typedef ::PrimitiveTypes::Double sx_t;
-	typedef ::PrimitiveTypes::Double sy_t;
-	
-	void setSx(sx_t _sx);
-	sx_t getSx() const;
-	void setSy(sy_t _sy);
-	sy_t getSy() const;
-	
+    Scale();
+    virtual ~Scale();
 
-	/*PROTECTED REGION ID(SVG::Scale public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef ::PrimitiveTypes::Double sx_t;
+    typedef ::PrimitiveTypes::Double sy_t;
+
+    void setSx(sx_t _sx);
+    sx_t getSx() const;
+    void setSy(sy_t _sy);
+    sy_t getSy() const;
+
+
+    /*PROTECTED REGION ID(SVG::Scale public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class SVGPackage;
+    friend class SVGPackage;
 
-	sx_t m_sx;
-	sy_t m_sy;
+    sx_t m_sx;
+    sy_t m_sy;
 
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(SVG::Scale protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(SVG::Scale protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // SVG

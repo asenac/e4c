@@ -9,14 +9,14 @@ using namespace kdm::platform;
 
 NamingResource::NamingResource()
 {
-	/*PROTECTED REGION ID(NamingResource constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(NamingResource constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 NamingResource::~NamingResource()
 {
-	/*PROTECTED REGION ID(NamingResource destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(NamingResource destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ NamingResource::~NamingResource()
 
 ecore::EClass_ptr NamingResource::eClassImpl() const
 {
-	return PlatformPackage::_instance()->getNamingResource();
+    return PlatformPackage::_instance()->getNamingResource();
 }
- 
+

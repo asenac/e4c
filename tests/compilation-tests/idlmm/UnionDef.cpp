@@ -9,73 +9,73 @@ using namespace idlmm;
 /*PROTECTED REGION ID(idlmm::UnionDef include) START*/
 /*PROTECTED REGION END*/
 
-UnionDef::UnionDef() : 
-	m_unionMembers(),
+UnionDef::UnionDef() :
+    m_unionMembers(),
     m_containedDiscrim(),
     m_sharedDiscrim()
 {
-	/*PROTECTED REGION ID(UnionDef constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(UnionDef constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 UnionDef::~UnionDef()
 {
-	/*PROTECTED REGION ID(UnionDef destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(UnionDef destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 UnionDef::unionMembers_t UnionDef::getUnionMembers() const
 {
-	return e4c::returned(m_unionMembers);
+    return e4c::returned(m_unionMembers);
 }
 
 void UnionDef::addUnionMembers(idlmm::UnionField_ptr unionMembers_)
 {
-	assert(unionMembers_);
-	m_unionMembers.push_back(std::unique_ptr < idlmm::UnionField >(unionMembers_));
+    assert(unionMembers_);
+    m_unionMembers.push_back(std::unique_ptr < idlmm::UnionField >(unionMembers_));
 }
 
 void UnionDef::addAllUnionMembers(const unionMembers_t& unionMembers_)
 {
-	for (auto i = unionMembers_.begin(); i != unionMembers_.end(); i++)
-		addUnionMembers(*i);
+    for (auto i = unionMembers_.begin(); i != unionMembers_.end(); i++)
+        addUnionMembers(*i);
 }
 
 void UnionDef::removeUnionMembers(idlmm::UnionField_ptr unionMembers_)
 {
-	assert(unionMembers_);
-	e4c::remove(m_unionMembers, unionMembers_);
+    assert(unionMembers_);
+    e4c::remove(m_unionMembers, unionMembers_);
 }
 
 void UnionDef::clearUnionMembers()
 {
-	m_unionMembers.clear();
+    m_unionMembers.clear();
 }
 
 UnionDef::containedDiscrim_t UnionDef::getContainedDiscrim() const
 {
-	return e4c::returned(m_containedDiscrim);
+    return e4c::returned(m_containedDiscrim);
 }
 
 void UnionDef::setContainedDiscrim(containedDiscrim_t containedDiscrim_)
 {
-	m_containedDiscrim.reset(containedDiscrim_);
+    m_containedDiscrim.reset(containedDiscrim_);
 }
 
 UnionDef::containedDiscrim_t UnionDef::releaseContainedDiscrim()
 {
-	return m_containedDiscrim.release();
+    return m_containedDiscrim.release();
 }
 
 UnionDef::sharedDiscrim_t UnionDef::getSharedDiscrim() const
 {
-	return e4c::returned(m_sharedDiscrim);
+    return e4c::returned(m_sharedDiscrim);
 }
 void UnionDef::setSharedDiscrim(sharedDiscrim_t sharedDiscrim_)
 {
-	if (m_sharedDiscrim == sharedDiscrim_)
-		return;
-	m_sharedDiscrim = sharedDiscrim_;
+    if (m_sharedDiscrim == sharedDiscrim_)
+        return;
+    m_sharedDiscrim = sharedDiscrim_;
 }
 
 
@@ -85,6 +85,6 @@ void UnionDef::setSharedDiscrim(sharedDiscrim_t sharedDiscrim_)
 
 ecore::EClass_ptr UnionDef::eClassImpl() const
 {
-	return IdlmmPackage::_instance()->getUnionDef();
+    return IdlmmPackage::_instance()->getUnionDef();
 }
- 
+

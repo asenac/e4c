@@ -16,33 +16,33 @@ class StringValue :  public virtual ::json::Value
 {
 public:
 
-	typedef StringValue_ptr ptr_type;
-	
-	StringValue();
-	virtual ~StringValue();
+    typedef StringValue_ptr ptr_type;
 
-	typedef ::ecore::EString value_t;
-	
-	void setValue(value_t _value);
-	value_t getValue() const;
-	
+    StringValue();
+    virtual ~StringValue();
 
-	/*PROTECTED REGION ID(json::StringValue public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef ::ecore::EString value_t;
+
+    void setValue(value_t _value);
+    value_t getValue() const;
+
+
+    /*PROTECTED REGION ID(json::StringValue public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class JsonPackage;
+    friend class JsonPackage;
 
-	value_t m_value;
+    value_t m_value;
 
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(json::StringValue protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(json::StringValue protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // json

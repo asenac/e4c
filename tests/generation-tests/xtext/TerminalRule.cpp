@@ -9,14 +9,14 @@ using namespace xtext;
 
 TerminalRule::TerminalRule()
 {
-	/*PROTECTED REGION ID(TerminalRule constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(TerminalRule constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 TerminalRule::~TerminalRule()
 {
-	/*PROTECTED REGION ID(TerminalRule destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(TerminalRule destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ TerminalRule::~TerminalRule()
 
 ecore::EClass_ptr TerminalRule::eClassImpl() const
 {
-	return XtextPackage::_instance()->getTerminalRule();
+    return XtextPackage::_instance()->getTerminalRule();
 }
- 
+

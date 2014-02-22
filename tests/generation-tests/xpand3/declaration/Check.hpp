@@ -18,47 +18,47 @@ class Check :  public virtual ::xpand3::declaration::AbstractDeclaration
 {
 public:
 
-	typedef Check_ptr ptr_type;
-	
-	Check();
-	virtual ~Check();
+    typedef Check_ptr ptr_type;
 
-	typedef ::ecore::EBoolean errorSeverity_t;
-	typedef xpand3::expression::AbstractExpression_ptr msg_t;
-	typedef xpand3::expression::AbstractExpression_ptr constraint_t;
-	typedef ::ecore::EString feature_t;
-	
-	void setErrorSeverity(errorSeverity_t _errorSeverity);
-	errorSeverity_t getErrorSeverity() const;
-	msg_t getMsg() const;
-	void setMsg(msg_t msg_);
-	msg_t releaseMsg();
-	constraint_t getConstraint() const;
-	void setConstraint(constraint_t constraint_);
-	constraint_t releaseConstraint();
-	void setFeature(feature_t _feature);
-	feature_t getFeature() const;
-	
+    Check();
+    virtual ~Check();
 
-	/*PROTECTED REGION ID(xpand3::declaration::Check public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef ::ecore::EBoolean errorSeverity_t;
+    typedef xpand3::expression::AbstractExpression_ptr msg_t;
+    typedef xpand3::expression::AbstractExpression_ptr constraint_t;
+    typedef ::ecore::EString feature_t;
+
+    void setErrorSeverity(errorSeverity_t _errorSeverity);
+    errorSeverity_t getErrorSeverity() const;
+    msg_t getMsg() const;
+    void setMsg(msg_t msg_);
+    msg_t releaseMsg();
+    constraint_t getConstraint() const;
+    void setConstraint(constraint_t constraint_);
+    constraint_t releaseConstraint();
+    void setFeature(feature_t _feature);
+    feature_t getFeature() const;
+
+
+    /*PROTECTED REGION ID(xpand3::declaration::Check public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class DeclarationPackage;
+    friend class DeclarationPackage;
 
-	errorSeverity_t m_errorSeverity;
-	std::unique_ptr < xpand3::expression::AbstractExpression > m_msg;
-	std::unique_ptr < xpand3::expression::AbstractExpression > m_constraint;
-	feature_t m_feature;
+    errorSeverity_t m_errorSeverity;
+    std::unique_ptr < xpand3::expression::AbstractExpression > m_msg;
+    std::unique_ptr < xpand3::expression::AbstractExpression > m_constraint;
+    feature_t m_feature;
 
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(xpand3::declaration::Check protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(xpand3::declaration::Check protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // declaration

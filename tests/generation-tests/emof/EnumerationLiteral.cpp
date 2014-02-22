@@ -8,27 +8,27 @@ using namespace emof;
 /*PROTECTED REGION ID(emof::EnumerationLiteral include) START*/
 /*PROTECTED REGION END*/
 
-EnumerationLiteral::EnumerationLiteral() : 
-	m_enumeration()
+EnumerationLiteral::EnumerationLiteral() :
+    m_enumeration()
 {
-	/*PROTECTED REGION ID(EnumerationLiteral constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(EnumerationLiteral constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 EnumerationLiteral::~EnumerationLiteral()
 {
-	/*PROTECTED REGION ID(EnumerationLiteral destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(EnumerationLiteral destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 EnumerationLiteral::enumeration_t EnumerationLiteral::getEnumeration() const
 {
-	return e4c::returned(m_enumeration);
+    return e4c::returned(m_enumeration);
 }
 
 void EnumerationLiteral::setEnumeration(enumeration_t enumeration_)
 {
-	m_enumeration = enumeration_;
+    m_enumeration = enumeration_;
 }
 
 
@@ -38,6 +38,6 @@ void EnumerationLiteral::setEnumeration(enumeration_t enumeration_)
 
 ecore::EClass_ptr EnumerationLiteral::eClassImpl() const
 {
-	return EmofPackage::_instance()->getEnumerationLiteral();
+    return EmofPackage::_instance()->getEnumerationLiteral();
 }
- 
+

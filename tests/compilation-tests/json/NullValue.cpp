@@ -9,14 +9,14 @@ using namespace json;
 
 NullValue::NullValue()
 {
-	/*PROTECTED REGION ID(NullValue constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(NullValue constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 NullValue::~NullValue()
 {
-	/*PROTECTED REGION ID(NullValue destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(NullValue destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ NullValue::~NullValue()
 
 ecore::EClass_ptr NullValue::eClassImpl() const
 {
-	return JsonPackage::_instance()->getNullValue();
+    return JsonPackage::_instance()->getNullValue();
 }
- 
+

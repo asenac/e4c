@@ -18,37 +18,37 @@ class StructureRelationship :  public virtual ::kdm::structure::AbstractStructur
 {
 public:
 
-	typedef StructureRelationship_ptr ptr_type;
-	
-	StructureRelationship();
-	virtual ~StructureRelationship();
+    typedef StructureRelationship_ptr ptr_type;
 
-	typedef kdm::core::KDMEntity_ptr to_t;
-	typedef kdm::structure::AbstractStructureElement_ptr from_t;
-	
-	to_t getTo() const;
-	void setTo(to_t to_);
-	from_t getFrom() const;
-	void setFrom(from_t from_);
-	
+    StructureRelationship();
+    virtual ~StructureRelationship();
 
-	/*PROTECTED REGION ID(kdm::structure::StructureRelationship public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef kdm::core::KDMEntity_ptr to_t;
+    typedef kdm::structure::AbstractStructureElement_ptr from_t;
+
+    to_t getTo() const;
+    void setTo(to_t to_);
+    from_t getFrom() const;
+    void setFrom(from_t from_);
+
+
+    /*PROTECTED REGION ID(kdm::structure::StructureRelationship public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class StructurePackage;
+    friend class StructurePackage;
 
-	kdm::core::KDMEntity_ptr m_to;
-	kdm::structure::AbstractStructureElement_ptr m_from;
+    kdm::core::KDMEntity_ptr m_to;
+    kdm::structure::AbstractStructureElement_ptr m_from;
 
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::structure::StructureRelationship protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::structure::StructureRelationship protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // structure

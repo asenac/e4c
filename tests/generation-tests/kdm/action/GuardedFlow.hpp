@@ -18,29 +18,29 @@ class GuardedFlow :  public virtual ::kdm::action::ControlFlow
 {
 public:
 
-	typedef GuardedFlow_ptr ptr_type;
-	
-	GuardedFlow();
-	virtual ~GuardedFlow();
+    typedef GuardedFlow_ptr ptr_type;
 
-	
-	
+    GuardedFlow();
+    virtual ~GuardedFlow();
 
-	/*PROTECTED REGION ID(kdm::action::GuardedFlow public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(kdm::action::GuardedFlow public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class ActionPackage;
+    friend class ActionPackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::action::GuardedFlow protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::action::GuardedFlow protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // action

@@ -18,29 +18,29 @@ class FloatType :  public virtual ::kdm::code::PrimitiveType
 {
 public:
 
-	typedef FloatType_ptr ptr_type;
-	
-	FloatType();
-	virtual ~FloatType();
+    typedef FloatType_ptr ptr_type;
 
-	
-	
+    FloatType();
+    virtual ~FloatType();
 
-	/*PROTECTED REGION ID(kdm::code::FloatType public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(kdm::code::FloatType public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class CodePackage;
+    friend class CodePackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::code::FloatType protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::code::FloatType protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // code

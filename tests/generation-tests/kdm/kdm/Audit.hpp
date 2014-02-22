@@ -18,41 +18,41 @@ class Audit :  public virtual ::kdm::core::Element
 {
 public:
 
-	typedef Audit_ptr ptr_type;
-	
-	Audit();
-	virtual ~Audit();
+    typedef Audit_ptr ptr_type;
 
-	typedef ::kdm::core::String description_t;
-	typedef ::kdm::core::String author_t;
-	typedef ::kdm::core::String date_t;
-	
-	void setDescription(description_t _description);
-	description_t getDescription() const;
-	void setAuthor(author_t _author);
-	author_t getAuthor() const;
-	void setDate(date_t _date);
-	date_t getDate() const;
-	
+    Audit();
+    virtual ~Audit();
 
-	/*PROTECTED REGION ID(kdm::kdm::Audit public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef ::kdm::core::String description_t;
+    typedef ::kdm::core::String author_t;
+    typedef ::kdm::core::String date_t;
+
+    void setDescription(description_t _description);
+    description_t getDescription() const;
+    void setAuthor(author_t _author);
+    author_t getAuthor() const;
+    void setDate(date_t _date);
+    date_t getDate() const;
+
+
+    /*PROTECTED REGION ID(kdm::kdm::Audit public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class KdmPackage;
+    friend class KdmPackage;
 
-	description_t m_description;
-	author_t m_author;
-	date_t m_date;
+    description_t m_description;
+    author_t m_author;
+    date_t m_date;
 
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::kdm::Audit protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::kdm::Audit protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // kdm

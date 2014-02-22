@@ -18,33 +18,33 @@ class TaggedValue :  public virtual ::kdm::kdm::ExtendedValue
 {
 public:
 
-	typedef TaggedValue_ptr ptr_type;
-	
-	TaggedValue();
-	virtual ~TaggedValue();
+    typedef TaggedValue_ptr ptr_type;
 
-	typedef ::kdm::core::String value_t;
-	
-	void setValue(value_t _value);
-	value_t getValue() const;
-	
+    TaggedValue();
+    virtual ~TaggedValue();
 
-	/*PROTECTED REGION ID(kdm::kdm::TaggedValue public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef ::kdm::core::String value_t;
+
+    void setValue(value_t _value);
+    value_t getValue() const;
+
+
+    /*PROTECTED REGION ID(kdm::kdm::TaggedValue public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class KdmPackage;
+    friend class KdmPackage;
 
-	value_t m_value;
+    value_t m_value;
 
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::kdm::TaggedValue protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::kdm::TaggedValue protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // kdm

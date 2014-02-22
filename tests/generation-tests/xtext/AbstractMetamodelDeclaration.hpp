@@ -16,37 +16,37 @@ class AbstractMetamodelDeclaration : ::ecore::EObject
 {
 public:
 
-	typedef AbstractMetamodelDeclaration_ptr ptr_type;
-	
-	AbstractMetamodelDeclaration();
-	virtual ~AbstractMetamodelDeclaration();
+    typedef AbstractMetamodelDeclaration_ptr ptr_type;
 
-	typedef ecore::EPackage_ptr ePackage_t;
-	typedef ::ecore::EString alias_t;
-	
-	ePackage_t getEPackage() const;
-	void setEPackage(ePackage_t ePackage_);
-	void setAlias(alias_t _alias);
-	alias_t getAlias() const;
-	
+    AbstractMetamodelDeclaration();
+    virtual ~AbstractMetamodelDeclaration();
 
-	/*PROTECTED REGION ID(xtext::AbstractMetamodelDeclaration public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef ecore::EPackage_ptr ePackage_t;
+    typedef ::ecore::EString alias_t;
+
+    ePackage_t getEPackage() const;
+    void setEPackage(ePackage_t ePackage_);
+    void setAlias(alias_t _alias);
+    alias_t getAlias() const;
+
+
+    /*PROTECTED REGION ID(xtext::AbstractMetamodelDeclaration public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class XtextPackage;
+    friend class XtextPackage;
 
-	ecore::EPackage_ptr m_ePackage;
-	alias_t m_alias;
+    ecore::EPackage_ptr m_ePackage;
+    alias_t m_alias;
 
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(xtext::AbstractMetamodelDeclaration protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(xtext::AbstractMetamodelDeclaration protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // xtext

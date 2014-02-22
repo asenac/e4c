@@ -16,37 +16,37 @@ class Dimension : ::ecore::EObject
 {
 public:
 
-	typedef Dimension_ptr ptr_type;
-	
-	Dimension();
-	virtual ~Dimension();
+    typedef Dimension_ptr ptr_type;
 
-	typedef ::PrimitiveTypes::Double width_t;
-	typedef ::PrimitiveTypes::Double height_t;
-	
-	void setWidth(width_t _width);
-	width_t getWidth() const;
-	void setHeight(height_t _height);
-	height_t getHeight() const;
-	
+    Dimension();
+    virtual ~Dimension();
 
-	/*PROTECTED REGION ID(SVG::Dimension public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef ::PrimitiveTypes::Double width_t;
+    typedef ::PrimitiveTypes::Double height_t;
+
+    void setWidth(width_t _width);
+    width_t getWidth() const;
+    void setHeight(height_t _height);
+    height_t getHeight() const;
+
+
+    /*PROTECTED REGION ID(SVG::Dimension public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class SVGPackage;
+    friend class SVGPackage;
 
-	width_t m_width;
-	height_t m_height;
+    width_t m_width;
+    height_t m_height;
 
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(SVG::Dimension protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(SVG::Dimension protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // SVG

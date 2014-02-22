@@ -9,14 +9,14 @@ using namespace C;
 
 CChar::CChar()
 {
-	/*PROTECTED REGION ID(CChar constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(CChar constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 CChar::~CChar()
 {
-	/*PROTECTED REGION ID(CChar destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(CChar destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ CChar::~CChar()
 
 ecore::EClass_ptr CChar::eClassImpl() const
 {
-	return CPackage::_instance()->getCChar();
+    return CPackage::_instance()->getCChar();
 }
- 
+

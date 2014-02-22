@@ -9,14 +9,14 @@ using namespace kdm::data;
 
 GroupContent::GroupContent()
 {
-	/*PROTECTED REGION ID(GroupContent constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(GroupContent constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 GroupContent::~GroupContent()
 {
-	/*PROTECTED REGION ID(GroupContent destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(GroupContent destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ GroupContent::~GroupContent()
 
 ecore::EClass_ptr GroupContent::eClassImpl() const
 {
-	return DataPackage::_instance()->getGroupContent();
+    return DataPackage::_instance()->getGroupContent();
 }
- 
+

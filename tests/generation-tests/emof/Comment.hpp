@@ -16,34 +16,34 @@ class Comment :  public virtual ::emof::Element
 {
 public:
 
-	typedef Comment_ptr ptr_type;
-	
-	Comment();
-	virtual ~Comment();
+    typedef Comment_ptr ptr_type;
 
-	typedef std::set < emof::NamedElement_ptr > annotatedElement_t;
-	
-	annotatedElement_t getAnnotatedElement() const;
-	void addAnnotatedElement(emof::NamedElement_ptr annotatedElement_);
-	void addAllAnnotatedElement(const annotatedElement_t& annotatedElement_);
-	
+    Comment();
+    virtual ~Comment();
 
-	/*PROTECTED REGION ID(emof::Comment public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef std::set < emof::NamedElement_ptr > annotatedElement_t;
+
+    annotatedElement_t getAnnotatedElement() const;
+    void addAnnotatedElement(emof::NamedElement_ptr annotatedElement_);
+    void addAllAnnotatedElement(const annotatedElement_t& annotatedElement_);
+
+
+    /*PROTECTED REGION ID(emof::Comment public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class EmofPackage;
+    friend class EmofPackage;
 
-	std::set < emof::NamedElement_ptr > m_annotatedElement;
+    std::set < emof::NamedElement_ptr > m_annotatedElement;
 
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(emof::Comment protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(emof::Comment protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // emof

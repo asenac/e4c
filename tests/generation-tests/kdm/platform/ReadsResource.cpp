@@ -9,42 +9,42 @@ using namespace kdm::platform;
 /*PROTECTED REGION ID(kdm::platform::ReadsResource include) START*/
 /*PROTECTED REGION END*/
 
-ReadsResource::ReadsResource() : 
-	m_to(),
+ReadsResource::ReadsResource() :
+    m_to(),
     m_from()
 {
-	/*PROTECTED REGION ID(ReadsResource constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(ReadsResource constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 ReadsResource::~ReadsResource()
 {
-	/*PROTECTED REGION ID(ReadsResource destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(ReadsResource destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 ReadsResource::to_t ReadsResource::getTo() const
 {
-	return e4c::returned(m_to);
+    return e4c::returned(m_to);
 }
 
 void ReadsResource::setTo(to_t to_)
 {
-	if (m_to == to_)
-		return;
-	m_to = to_;
+    if (m_to == to_)
+        return;
+    m_to = to_;
 }
 
 ReadsResource::from_t ReadsResource::getFrom() const
 {
-	return e4c::returned(m_from);
+    return e4c::returned(m_from);
 }
 
 void ReadsResource::setFrom(from_t from_)
 {
-	if (m_from == from_)
-		return;
-	m_from = from_;
+    if (m_from == from_)
+        return;
+    m_from = from_;
 }
 
 
@@ -54,6 +54,6 @@ void ReadsResource::setFrom(from_t from_)
 
 ecore::EClass_ptr ReadsResource::eClassImpl() const
 {
-	return PlatformPackage::_instance()->getReadsResource();
+    return PlatformPackage::_instance()->getReadsResource();
 }
- 
+

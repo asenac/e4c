@@ -16,29 +16,29 @@ class Defs :  public virtual ::SVG::GroupingElement
 {
 public:
 
-	typedef Defs_ptr ptr_type;
-	
-	Defs();
-	virtual ~Defs();
+    typedef Defs_ptr ptr_type;
 
-	
-	
+    Defs();
+    virtual ~Defs();
 
-	/*PROTECTED REGION ID(SVG::Defs public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(SVG::Defs public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class SVGPackage;
+    friend class SVGPackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(SVG::Defs protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(SVG::Defs protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // SVG

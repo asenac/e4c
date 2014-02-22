@@ -18,34 +18,34 @@ class IndexElement :  public virtual ::kdm::data::DataResource
 {
 public:
 
-	typedef IndexElement_ptr ptr_type;
-	
-	IndexElement();
-	virtual ~IndexElement();
+    typedef IndexElement_ptr ptr_type;
 
-	typedef std::set < kdm::code::ItemUnit_ptr > implementation_t;
-	
-	implementation_t getImplementation() const;
-	void addImplementation(kdm::code::ItemUnit_ptr implementation_);
-	void addAllImplementation(const implementation_t& implementation_);
-	
+    IndexElement();
+    virtual ~IndexElement();
 
-	/*PROTECTED REGION ID(kdm::data::IndexElement public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef std::set < kdm::code::ItemUnit_ptr > implementation_t;
+
+    implementation_t getImplementation() const;
+    void addImplementation(kdm::code::ItemUnit_ptr implementation_);
+    void addAllImplementation(const implementation_t& implementation_);
+
+
+    /*PROTECTED REGION ID(kdm::data::IndexElement public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class DataPackage;
+    friend class DataPackage;
 
-	std::set < kdm::code::ItemUnit_ptr > m_implementation;
+    std::set < kdm::code::ItemUnit_ptr > m_implementation;
 
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::data::IndexElement protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::data::IndexElement protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // data

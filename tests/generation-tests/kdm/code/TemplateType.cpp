@@ -9,14 +9,14 @@ using namespace kdm::code;
 
 TemplateType::TemplateType()
 {
-	/*PROTECTED REGION ID(TemplateType constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(TemplateType constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 TemplateType::~TemplateType()
 {
-	/*PROTECTED REGION ID(TemplateType destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(TemplateType destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ TemplateType::~TemplateType()
 
 ecore::EClass_ptr TemplateType::eClassImpl() const
 {
-	return CodePackage::_instance()->getTemplateType();
+    return CodePackage::_instance()->getTemplateType();
 }
- 
+

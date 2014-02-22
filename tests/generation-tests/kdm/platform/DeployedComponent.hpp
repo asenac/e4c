@@ -18,34 +18,34 @@ class DeployedComponent :  public virtual ::kdm::platform::AbstractPlatformEleme
 {
 public:
 
-	typedef DeployedComponent_ptr ptr_type;
-	
-	DeployedComponent();
-	virtual ~DeployedComponent();
+    typedef DeployedComponent_ptr ptr_type;
 
-	typedef std::set < kdm::code::Module_ptr > groupedCode_t;
-	
-	groupedCode_t getGroupedCode() const;
-	void addGroupedCode(kdm::code::Module_ptr groupedCode_);
-	void addAllGroupedCode(const groupedCode_t& groupedCode_);
-	
+    DeployedComponent();
+    virtual ~DeployedComponent();
 
-	/*PROTECTED REGION ID(kdm::platform::DeployedComponent public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef std::set < kdm::code::Module_ptr > groupedCode_t;
+
+    groupedCode_t getGroupedCode() const;
+    void addGroupedCode(kdm::code::Module_ptr groupedCode_);
+    void addAllGroupedCode(const groupedCode_t& groupedCode_);
+
+
+    /*PROTECTED REGION ID(kdm::platform::DeployedComponent public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class PlatformPackage;
+    friend class PlatformPackage;
 
-	std::set < kdm::code::Module_ptr > m_groupedCode;
+    std::set < kdm::code::Module_ptr > m_groupedCode;
 
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::platform::DeployedComponent protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::platform::DeployedComponent protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // platform

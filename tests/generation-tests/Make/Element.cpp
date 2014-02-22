@@ -7,27 +7,27 @@ using namespace Make;
 /*PROTECTED REGION ID(Make::Element include) START*/
 /*PROTECTED REGION END*/
 
-Element::Element() : 
-	m_name()
+Element::Element() :
+    m_name()
 {
-	/*PROTECTED REGION ID(Element constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(Element constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 Element::~Element()
 {
-	/*PROTECTED REGION ID(Element destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(Element destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 void Element::setName(name_t _name)
 {
-	m_name = _name;;
+    m_name = _name;;
 }
 
 Element::name_t Element::getName() const
 {
-	return m_name;
+    return m_name;
 }
 
 
@@ -37,6 +37,6 @@ Element::name_t Element::getName() const
 
 ecore::EClass_ptr Element::eClassImpl() const
 {
-	return MakePackage::_instance()->getElement();
+    return MakePackage::_instance()->getElement();
 }
- 
+

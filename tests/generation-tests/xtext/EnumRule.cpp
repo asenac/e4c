@@ -9,14 +9,14 @@ using namespace xtext;
 
 EnumRule::EnumRule()
 {
-	/*PROTECTED REGION ID(EnumRule constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(EnumRule constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 EnumRule::~EnumRule()
 {
-	/*PROTECTED REGION ID(EnumRule destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(EnumRule destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ EnumRule::~EnumRule()
 
 ecore::EClass_ptr EnumRule::eClassImpl() const
 {
-	return XtextPackage::_instance()->getEnumRule();
+    return XtextPackage::_instance()->getEnumRule();
 }
- 
+

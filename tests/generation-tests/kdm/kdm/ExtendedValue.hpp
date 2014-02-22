@@ -18,33 +18,33 @@ class ExtendedValue :  public virtual ::kdm::core::Element
 {
 public:
 
-	typedef ExtendedValue_ptr ptr_type;
-	
-	virtual ~ExtendedValue();
+    typedef ExtendedValue_ptr ptr_type;
 
-	typedef kdm::kdm::TagDefinition_ptr tag_t;
-	
-	tag_t getTag() const;
-	void setTag(tag_t tag_);
-	
+    virtual ~ExtendedValue();
 
-	/*PROTECTED REGION ID(kdm::kdm::ExtendedValue public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef kdm::kdm::TagDefinition_ptr tag_t;
+
+    tag_t getTag() const;
+    void setTag(tag_t tag_);
+
+
+    /*PROTECTED REGION ID(kdm::kdm::ExtendedValue public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
-	ExtendedValue();
+    ExtendedValue();
 
-	friend class KdmPackage;
+    friend class KdmPackage;
 
-	kdm::kdm::TagDefinition_ptr m_tag;
+    kdm::kdm::TagDefinition_ptr m_tag;
 
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::kdm::ExtendedValue protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::kdm::ExtendedValue protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // kdm

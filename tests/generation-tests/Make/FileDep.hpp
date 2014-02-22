@@ -16,33 +16,33 @@ class FileDep :  public virtual ::Make::Dependency
 {
 public:
 
-	typedef FileDep_ptr ptr_type;
-	
-	FileDep();
-	virtual ~FileDep();
+    typedef FileDep_ptr ptr_type;
 
-	typedef ::PrimitiveTypes::String name_t;
-	
-	void setName(name_t _name);
-	name_t getName() const;
-	
+    FileDep();
+    virtual ~FileDep();
 
-	/*PROTECTED REGION ID(Make::FileDep public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef ::PrimitiveTypes::String name_t;
+
+    void setName(name_t _name);
+    name_t getName() const;
+
+
+    /*PROTECTED REGION ID(Make::FileDep public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class MakePackage;
+    friend class MakePackage;
 
-	name_t m_name;
+    name_t m_name;
 
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(Make::FileDep protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(Make::FileDep protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // Make

@@ -16,29 +16,29 @@ class CDataType :  public virtual ::C::CClassifier
 {
 public:
 
-	typedef CDataType_ptr ptr_type;
-	
-	CDataType();
-	virtual ~CDataType();
+    typedef CDataType_ptr ptr_type;
 
-	
-	
+    CDataType();
+    virtual ~CDataType();
 
-	/*PROTECTED REGION ID(C::CDataType public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(C::CDataType public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class CPackage;
+    friend class CPackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(C::CDataType protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(C::CDataType protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // C

@@ -18,29 +18,29 @@ class AbstractCodeRelationship :  public virtual ::kdm::core::KDMRelationship
 {
 public:
 
-	typedef AbstractCodeRelationship_ptr ptr_type;
-	
-	virtual ~AbstractCodeRelationship();
+    typedef AbstractCodeRelationship_ptr ptr_type;
 
-	
-	
+    virtual ~AbstractCodeRelationship();
 
-	/*PROTECTED REGION ID(kdm::code::AbstractCodeRelationship public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(kdm::code::AbstractCodeRelationship public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
-	AbstractCodeRelationship();
+    AbstractCodeRelationship();
 
-	friend class CodePackage;
+    friend class CodePackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::code::AbstractCodeRelationship protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::code::AbstractCodeRelationship protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // code

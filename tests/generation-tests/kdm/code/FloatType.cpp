@@ -9,14 +9,14 @@ using namespace kdm::code;
 
 FloatType::FloatType()
 {
-	/*PROTECTED REGION ID(FloatType constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(FloatType constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 FloatType::~FloatType()
 {
-	/*PROTECTED REGION ID(FloatType destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(FloatType destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ FloatType::~FloatType()
 
 ecore::EClass_ptr FloatType::eClassImpl() const
 {
-	return CodePackage::_instance()->getFloatType();
+    return CodePackage::_instance()->getFloatType();
 }
- 
+

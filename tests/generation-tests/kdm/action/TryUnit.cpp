@@ -9,14 +9,14 @@ using namespace kdm::action;
 
 TryUnit::TryUnit()
 {
-	/*PROTECTED REGION ID(TryUnit constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(TryUnit constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 TryUnit::~TryUnit()
 {
-	/*PROTECTED REGION ID(TryUnit destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(TryUnit destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ TryUnit::~TryUnit()
 
 ecore::EClass_ptr TryUnit::eClassImpl() const
 {
-	return ActionPackage::_instance()->getTryUnit();
+    return ActionPackage::_instance()->getTryUnit();
 }
- 
+

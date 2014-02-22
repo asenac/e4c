@@ -9,42 +9,42 @@ using namespace kdm::data;
 /*PROTECTED REGION ID(kdm::data::ReadsColumnSet include) START*/
 /*PROTECTED REGION END*/
 
-ReadsColumnSet::ReadsColumnSet() : 
-	m_to(),
+ReadsColumnSet::ReadsColumnSet() :
+    m_to(),
     m_from()
 {
-	/*PROTECTED REGION ID(ReadsColumnSet constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(ReadsColumnSet constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 ReadsColumnSet::~ReadsColumnSet()
 {
-	/*PROTECTED REGION ID(ReadsColumnSet destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(ReadsColumnSet destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 ReadsColumnSet::to_t ReadsColumnSet::getTo() const
 {
-	return e4c::returned(m_to);
+    return e4c::returned(m_to);
 }
 
 void ReadsColumnSet::setTo(to_t to_)
 {
-	if (m_to == to_)
-		return;
-	m_to = to_;
+    if (m_to == to_)
+        return;
+    m_to = to_;
 }
 
 ReadsColumnSet::from_t ReadsColumnSet::getFrom() const
 {
-	return e4c::returned(m_from);
+    return e4c::returned(m_from);
 }
 
 void ReadsColumnSet::setFrom(from_t from_)
 {
-	if (m_from == from_)
-		return;
-	m_from = from_;
+    if (m_from == from_)
+        return;
+    m_from = from_;
 }
 
 
@@ -54,6 +54,6 @@ void ReadsColumnSet::setFrom(from_t from_)
 
 ecore::EClass_ptr ReadsColumnSet::eClassImpl() const
 {
-	return DataPackage::_instance()->getReadsColumnSet();
+    return DataPackage::_instance()->getReadsColumnSet();
 }
- 
+

@@ -9,14 +9,14 @@ using namespace kdm::platform;
 
 FileResource::FileResource()
 {
-	/*PROTECTED REGION ID(FileResource constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(FileResource constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 FileResource::~FileResource()
 {
-	/*PROTECTED REGION ID(FileResource destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(FileResource destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ FileResource::~FileResource()
 
 ecore::EClass_ptr FileResource::eClassImpl() const
 {
-	return PlatformPackage::_instance()->getFileResource();
+    return PlatformPackage::_instance()->getFileResource();
 }
- 
+

@@ -16,29 +16,29 @@ class Group :  public virtual ::xtext::CompoundElement
 {
 public:
 
-	typedef Group_ptr ptr_type;
-	
-	Group();
-	virtual ~Group();
+    typedef Group_ptr ptr_type;
 
-	
-	
+    Group();
+    virtual ~Group();
 
-	/*PROTECTED REGION ID(xtext::Group public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(xtext::Group public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class XtextPackage;
+    friend class XtextPackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(xtext::Group protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(xtext::Group protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // xtext

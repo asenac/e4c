@@ -7,27 +7,27 @@ using namespace SVG;
 /*PROTECTED REGION ID(SVG::FontStyle include) START*/
 /*PROTECTED REGION END*/
 
-FontStyle::FontStyle() : 
-	m_italic()
+FontStyle::FontStyle() :
+    m_italic()
 {
-	/*PROTECTED REGION ID(FontStyle constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(FontStyle constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 FontStyle::~FontStyle()
 {
-	/*PROTECTED REGION ID(FontStyle destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(FontStyle destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 void FontStyle::setItalic(italic_t _italic)
 {
-	m_italic = _italic;;
+    m_italic = _italic;;
 }
 
 FontStyle::italic_t FontStyle::getItalic() const
 {
-	return m_italic;
+    return m_italic;
 }
 
 
@@ -37,6 +37,6 @@ FontStyle::italic_t FontStyle::getItalic() const
 
 ecore::EClass_ptr FontStyle::eClassImpl() const
 {
-	return SVGPackage::_instance()->getFontStyle();
+    return SVGPackage::_instance()->getFontStyle();
 }
- 
+

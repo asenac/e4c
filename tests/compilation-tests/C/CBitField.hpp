@@ -16,29 +16,29 @@ class CBitField :  public virtual ::C::CDataType
 {
 public:
 
-	typedef CBitField_ptr ptr_type;
-	
-	CBitField();
-	virtual ~CBitField();
+    typedef CBitField_ptr ptr_type;
 
-	
-	
+    CBitField();
+    virtual ~CBitField();
 
-	/*PROTECTED REGION ID(C::CBitField public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(C::CBitField public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class CPackage;
+    friend class CPackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(C::CBitField protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(C::CBitField protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // C

@@ -9,14 +9,14 @@ using namespace SVG;
 
 Point::Point()
 {
-	/*PROTECTED REGION ID(Point constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(Point constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 Point::~Point()
 {
-	/*PROTECTED REGION ID(Point destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(Point destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ Point::~Point()
 
 ecore::EClass_ptr Point::eClassImpl() const
 {
-	return SVGPackage::_instance()->getPoint();
+    return SVGPackage::_instance()->getPoint();
 }
- 
+

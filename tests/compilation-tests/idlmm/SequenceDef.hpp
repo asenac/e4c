@@ -16,34 +16,34 @@ class SequenceDef :  public virtual ::idlmm::Typed,  public virtual ::idlmm::IDL
 {
 public:
 
-	typedef SequenceDef_ptr ptr_type;
-	
-	SequenceDef();
-	virtual ~SequenceDef();
+    typedef SequenceDef_ptr ptr_type;
 
-	typedef idlmm::Expression_ptr bound_t;
-	
-	bound_t getBound() const;
-	void setBound(bound_t bound_);
-	bound_t releaseBound();
-	
+    SequenceDef();
+    virtual ~SequenceDef();
 
-	/*PROTECTED REGION ID(idlmm::SequenceDef public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef idlmm::Expression_ptr bound_t;
+
+    bound_t getBound() const;
+    void setBound(bound_t bound_);
+    bound_t releaseBound();
+
+
+    /*PROTECTED REGION ID(idlmm::SequenceDef public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class IdlmmPackage;
+    friend class IdlmmPackage;
 
-	std::unique_ptr < idlmm::Expression > m_bound;
+    std::unique_ptr < idlmm::Expression > m_bound;
 
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(idlmm::SequenceDef protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(idlmm::SequenceDef protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // idlmm

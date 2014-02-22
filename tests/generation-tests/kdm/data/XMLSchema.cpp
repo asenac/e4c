@@ -8,34 +8,34 @@ using namespace kdm::data;
 /*PROTECTED REGION ID(kdm::data::XMLSchema include) START*/
 /*PROTECTED REGION END*/
 
-XMLSchema::XMLSchema() : 
-	m_contentElement()
+XMLSchema::XMLSchema() :
+    m_contentElement()
 {
-	/*PROTECTED REGION ID(XMLSchema constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(XMLSchema constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 XMLSchema::~XMLSchema()
 {
-	/*PROTECTED REGION ID(XMLSchema destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(XMLSchema destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 XMLSchema::contentElement_t XMLSchema::getContentElement() const
 {
-	return e4c::returned(m_contentElement);
+    return e4c::returned(m_contentElement);
 }
 
 
 void XMLSchema::addContentElement(kdm::data::AbstractContentElement_ptr contentElement_)
 {
-	m_contentElement.insert(std::unique_ptr < kdm::data::AbstractContentElement >(contentElement_));
+    m_contentElement.insert(std::unique_ptr < kdm::data::AbstractContentElement >(contentElement_));
 }
 
 void XMLSchema::addAllContentElement(const contentElement_t& contentElement_)
 {
-	for (auto i = contentElement_.begin(); i != contentElement_.end(); i++)
-		addContentElement(*i);
+    for (auto i = contentElement_.begin(); i != contentElement_.end(); i++)
+        addContentElement(*i);
 }
 
 
@@ -45,6 +45,6 @@ void XMLSchema::addAllContentElement(const contentElement_t& contentElement_)
 
 ecore::EClass_ptr XMLSchema::eClassImpl() const
 {
-	return DataPackage::_instance()->getXMLSchema();
+    return DataPackage::_instance()->getXMLSchema();
 }
- 
+

@@ -15,33 +15,33 @@ class PrimitiveDef :  public virtual ::idlmm::IDLType
 {
 public:
 
-	typedef PrimitiveDef_ptr ptr_type;
-	
-	PrimitiveDef();
-	virtual ~PrimitiveDef();
+    typedef PrimitiveDef_ptr ptr_type;
 
-	typedef ::idlmm::PrimitiveKind kind_t;
-	
-	void setKind(kind_t _kind);
-	kind_t getKind() const;
-	
+    PrimitiveDef();
+    virtual ~PrimitiveDef();
 
-	/*PROTECTED REGION ID(idlmm::PrimitiveDef public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef ::idlmm::PrimitiveKind kind_t;
+
+    void setKind(kind_t _kind);
+    kind_t getKind() const;
+
+
+    /*PROTECTED REGION ID(idlmm::PrimitiveDef public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class IdlmmPackage;
+    friend class IdlmmPackage;
 
-	kind_t m_kind;
+    kind_t m_kind;
 
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(idlmm::PrimitiveDef protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(idlmm::PrimitiveDef protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // idlmm

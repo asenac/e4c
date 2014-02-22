@@ -8,27 +8,27 @@ using namespace kdm;
 
 KdmPackage::KdmPackage()
 {
-	m_eFactoryInstance = KdmFactory::_instance();
-	::ecore::EcoreFactory_ptr ecoreFactory = ::ecore::EcoreFactory::_instance();
-	
-	
-	
+    m_eFactoryInstance = KdmFactory::_instance();
+    ::ecore::EcoreFactory_ptr ecoreFactory = ::ecore::EcoreFactory::_instance();
 
-	
-	
-	
-	
-	
+
+
+
+
+
+
+
+
 }
 
 const KdmPackage_ptr KdmPackage::_instance()
 {
-	static KdmPackage __instance;
-	return &__instance;
+    static KdmPackage __instance;
+    return &__instance;
 }
 
 
 extern "C" ::ecore::EPackage_ptr e4c_kdm()
 {
-	return ::kdm::KdmPackage::_instance();
+    return ::kdm::KdmPackage::_instance();
 }

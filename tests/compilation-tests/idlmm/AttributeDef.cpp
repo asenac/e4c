@@ -7,87 +7,87 @@ using namespace idlmm;
 /*PROTECTED REGION ID(idlmm::AttributeDef include) START*/
 /*PROTECTED REGION END*/
 
-AttributeDef::AttributeDef() : 
-	m_getRaises(),
+AttributeDef::AttributeDef() :
+    m_getRaises(),
     m_setRaises(),
     m_isReadonly()
 {
-	/*PROTECTED REGION ID(AttributeDef constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(AttributeDef constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 AttributeDef::~AttributeDef()
 {
-	/*PROTECTED REGION ID(AttributeDef destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(AttributeDef destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 AttributeDef::getRaises_t AttributeDef::getGetRaises() const
 {
-	return e4c::returned(m_getRaises);
+    return e4c::returned(m_getRaises);
 }
 void AttributeDef::addGetRaises(idlmm::ExceptionDef_ptr getRaises_)
 {
-	assert(getRaises_);
-	if (e4c::contains(m_getRaises, getRaises_))
-		return;
-	m_getRaises.push_back(getRaises_);
+    assert(getRaises_);
+    if (e4c::contains(m_getRaises, getRaises_))
+        return;
+    m_getRaises.push_back(getRaises_);
 }
 
 void AttributeDef::addAllGetRaises(const getRaises_t& getRaises_)
 {
-	for (auto i = getRaises_.begin(); i != getRaises_.end(); i++)
-		addGetRaises(*i);
+    for (auto i = getRaises_.begin(); i != getRaises_.end(); i++)
+        addGetRaises(*i);
 }
 
 void AttributeDef::removeGetRaises(idlmm::ExceptionDef_ptr getRaises_)
 {
-	assert(getRaises_);
-	e4c::remove(m_getRaises, getRaises_);
+    assert(getRaises_);
+    e4c::remove(m_getRaises, getRaises_);
 }
 
 void AttributeDef::clearGetRaises()
 {
-	m_getRaises.clear();
+    m_getRaises.clear();
 }
 
 AttributeDef::setRaises_t AttributeDef::getSetRaises() const
 {
-	return e4c::returned(m_setRaises);
+    return e4c::returned(m_setRaises);
 }
 void AttributeDef::addSetRaises(idlmm::ExceptionDef_ptr setRaises_)
 {
-	assert(setRaises_);
-	if (e4c::contains(m_setRaises, setRaises_))
-		return;
-	m_setRaises.push_back(setRaises_);
+    assert(setRaises_);
+    if (e4c::contains(m_setRaises, setRaises_))
+        return;
+    m_setRaises.push_back(setRaises_);
 }
 
 void AttributeDef::addAllSetRaises(const setRaises_t& setRaises_)
 {
-	for (auto i = setRaises_.begin(); i != setRaises_.end(); i++)
-		addSetRaises(*i);
+    for (auto i = setRaises_.begin(); i != setRaises_.end(); i++)
+        addSetRaises(*i);
 }
 
 void AttributeDef::removeSetRaises(idlmm::ExceptionDef_ptr setRaises_)
 {
-	assert(setRaises_);
-	e4c::remove(m_setRaises, setRaises_);
+    assert(setRaises_);
+    e4c::remove(m_setRaises, setRaises_);
 }
 
 void AttributeDef::clearSetRaises()
 {
-	m_setRaises.clear();
+    m_setRaises.clear();
 }
 
 void AttributeDef::setIsReadonly(isReadonly_t _isReadonly)
 {
-	m_isReadonly = _isReadonly;;
+    m_isReadonly = _isReadonly;;
 }
 
 AttributeDef::isReadonly_t AttributeDef::getIsReadonly() const
 {
-	return m_isReadonly;
+    return m_isReadonly;
 }
 
 
@@ -97,6 +97,6 @@ AttributeDef::isReadonly_t AttributeDef::getIsReadonly() const
 
 ecore::EClass_ptr AttributeDef::eClassImpl() const
 {
-	return IdlmmPackage::_instance()->getAttributeDef();
+    return IdlmmPackage::_instance()->getAttributeDef();
 }
- 
+

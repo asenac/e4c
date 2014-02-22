@@ -18,29 +18,29 @@ class Screen :  public virtual ::kdm::ui::UIDisplay
 {
 public:
 
-	typedef Screen_ptr ptr_type;
-	
-	Screen();
-	virtual ~Screen();
+    typedef Screen_ptr ptr_type;
 
-	
-	
+    Screen();
+    virtual ~Screen();
 
-	/*PROTECTED REGION ID(kdm::ui::Screen public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(kdm::ui::Screen public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class UiPackage;
+    friend class UiPackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::ui::Screen protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::ui::Screen protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // ui

@@ -18,29 +18,29 @@ class TermUnit :  public virtual ::kdm::conceptual::AbstractConceptualElement
 {
 public:
 
-	typedef TermUnit_ptr ptr_type;
-	
-	TermUnit();
-	virtual ~TermUnit();
+    typedef TermUnit_ptr ptr_type;
 
-	
-	
+    TermUnit();
+    virtual ~TermUnit();
 
-	/*PROTECTED REGION ID(kdm::conceptual::TermUnit public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(kdm::conceptual::TermUnit public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class ConceptualPackage;
+    friend class ConceptualPackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::conceptual::TermUnit protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::conceptual::TermUnit protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // conceptual

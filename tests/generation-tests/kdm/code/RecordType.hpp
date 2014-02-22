@@ -18,29 +18,29 @@ class RecordType :  public virtual ::kdm::code::CompositeType
 {
 public:
 
-	typedef RecordType_ptr ptr_type;
-	
-	RecordType();
-	virtual ~RecordType();
+    typedef RecordType_ptr ptr_type;
 
-	
-	
+    RecordType();
+    virtual ~RecordType();
 
-	/*PROTECTED REGION ID(kdm::code::RecordType public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(kdm::code::RecordType public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class CodePackage;
+    friend class CodePackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::code::RecordType protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::code::RecordType protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // code

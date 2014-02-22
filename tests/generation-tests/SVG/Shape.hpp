@@ -16,29 +16,29 @@ class Shape :  public virtual ::SVG::GraphicalElement
 {
 public:
 
-	typedef Shape_ptr ptr_type;
-	
-	virtual ~Shape();
+    typedef Shape_ptr ptr_type;
 
-	
-	
+    virtual ~Shape();
 
-	/*PROTECTED REGION ID(SVG::Shape public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(SVG::Shape public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
-	Shape();
+    Shape();
 
-	friend class SVGPackage;
+    friend class SVGPackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(SVG::Shape protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(SVG::Shape protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // SVG

@@ -15,38 +15,38 @@ class UnaryExpression :  public virtual ::idlmm::Expression
 {
 public:
 
-	typedef UnaryExpression_ptr ptr_type;
-	
-	UnaryExpression();
-	virtual ~UnaryExpression();
+    typedef UnaryExpression_ptr ptr_type;
 
-	typedef idlmm::Expression_ptr expression_t;
-	typedef ::ecore::EString operator_t;
-	
-	expression_t getExpression() const;
-	void setExpression(expression_t expression_);
-	expression_t releaseExpression();
-	void setOperator(operator_t _operator);
-	operator_t getOperator() const;
-	
+    UnaryExpression();
+    virtual ~UnaryExpression();
 
-	/*PROTECTED REGION ID(idlmm::UnaryExpression public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef idlmm::Expression_ptr expression_t;
+    typedef ::ecore::EString operator_t;
+
+    expression_t getExpression() const;
+    void setExpression(expression_t expression_);
+    expression_t releaseExpression();
+    void setOperator(operator_t _operator);
+    operator_t getOperator() const;
+
+
+    /*PROTECTED REGION ID(idlmm::UnaryExpression public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class IdlmmPackage;
+    friend class IdlmmPackage;
 
-	std::unique_ptr < idlmm::Expression > m_expression;
-	operator_t m_operator;
+    std::unique_ptr < idlmm::Expression > m_expression;
+    operator_t m_operator;
 
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(idlmm::UnaryExpression protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(idlmm::UnaryExpression protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // idlmm

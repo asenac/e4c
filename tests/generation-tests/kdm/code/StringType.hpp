@@ -18,29 +18,29 @@ class StringType :  public virtual ::kdm::code::PrimitiveType
 {
 public:
 
-	typedef StringType_ptr ptr_type;
-	
-	StringType();
-	virtual ~StringType();
+    typedef StringType_ptr ptr_type;
 
-	
-	
+    StringType();
+    virtual ~StringType();
 
-	/*PROTECTED REGION ID(kdm::code::StringType public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(kdm::code::StringType public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class CodePackage;
+    friend class CodePackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::code::StringType protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::code::StringType protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // code

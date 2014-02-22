@@ -18,29 +18,29 @@ class KDMModel :  public virtual ::kdm::kdm::KDMFramework
 {
 public:
 
-	typedef KDMModel_ptr ptr_type;
-	
-	virtual ~KDMModel();
+    typedef KDMModel_ptr ptr_type;
 
-	
-	
+    virtual ~KDMModel();
 
-	/*PROTECTED REGION ID(kdm::kdm::KDMModel public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(kdm::kdm::KDMModel public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
-	KDMModel();
+    KDMModel();
 
-	friend class KdmPackage;
+    friend class KdmPackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::kdm::KDMModel protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::kdm::KDMModel protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // kdm

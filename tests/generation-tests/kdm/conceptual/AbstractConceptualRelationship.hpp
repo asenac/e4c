@@ -18,29 +18,29 @@ class AbstractConceptualRelationship :  public virtual ::kdm::core::KDMRelations
 {
 public:
 
-	typedef AbstractConceptualRelationship_ptr ptr_type;
-	
-	virtual ~AbstractConceptualRelationship();
+    typedef AbstractConceptualRelationship_ptr ptr_type;
 
-	
-	
+    virtual ~AbstractConceptualRelationship();
 
-	/*PROTECTED REGION ID(kdm::conceptual::AbstractConceptualRelationship public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(kdm::conceptual::AbstractConceptualRelationship public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
-	AbstractConceptualRelationship();
+    AbstractConceptualRelationship();
 
-	friend class ConceptualPackage;
+    friend class ConceptualPackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::conceptual::AbstractConceptualRelationship protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::conceptual::AbstractConceptualRelationship protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // conceptual

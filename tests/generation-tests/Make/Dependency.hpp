@@ -16,29 +16,29 @@ class Dependency : ::ecore::EObject
 {
 public:
 
-	typedef Dependency_ptr ptr_type;
-	
-	virtual ~Dependency();
+    typedef Dependency_ptr ptr_type;
 
-	
-	
+    virtual ~Dependency();
 
-	/*PROTECTED REGION ID(Make::Dependency public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(Make::Dependency public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
-	Dependency();
+    Dependency();
 
-	friend class MakePackage;
+    friend class MakePackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(Make::Dependency protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(Make::Dependency protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // Make

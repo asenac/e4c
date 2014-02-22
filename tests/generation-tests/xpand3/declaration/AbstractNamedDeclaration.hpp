@@ -18,34 +18,34 @@ class AbstractNamedDeclaration :  public virtual ::xpand3::declaration::Abstract
 {
 public:
 
-	typedef AbstractNamedDeclaration_ptr ptr_type;
-	
-	virtual ~AbstractNamedDeclaration();
+    typedef AbstractNamedDeclaration_ptr ptr_type;
 
-	typedef xpand3::Identifier_ptr name_t;
-	
-	name_t getName() const;
-	void setName(name_t name_);
-	name_t releaseName();
-	
+    virtual ~AbstractNamedDeclaration();
 
-	/*PROTECTED REGION ID(xpand3::declaration::AbstractNamedDeclaration public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef xpand3::Identifier_ptr name_t;
+
+    name_t getName() const;
+    void setName(name_t name_);
+    name_t releaseName();
+
+
+    /*PROTECTED REGION ID(xpand3::declaration::AbstractNamedDeclaration public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
-	AbstractNamedDeclaration();
+    AbstractNamedDeclaration();
 
-	friend class DeclarationPackage;
+    friend class DeclarationPackage;
 
-	std::unique_ptr < xpand3::Identifier > m_name;
+    std::unique_ptr < xpand3::Identifier > m_name;
 
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(xpand3::declaration::AbstractNamedDeclaration protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(xpand3::declaration::AbstractNamedDeclaration protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // declaration

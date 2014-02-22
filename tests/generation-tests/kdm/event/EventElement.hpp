@@ -18,29 +18,29 @@ class EventElement :  public virtual ::kdm::event::AbstractEventElement
 {
 public:
 
-	typedef EventElement_ptr ptr_type;
-	
-	EventElement();
-	virtual ~EventElement();
+    typedef EventElement_ptr ptr_type;
 
-	
-	
+    EventElement();
+    virtual ~EventElement();
 
-	/*PROTECTED REGION ID(kdm::event::EventElement public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(kdm::event::EventElement public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class EventPackage;
+    friend class EventPackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::event::EventElement protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::event::EventElement protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // event

@@ -9,14 +9,14 @@ using namespace kdm::ui;
 
 UIElement::UIElement()
 {
-	/*PROTECTED REGION ID(UIElement constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(UIElement constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 UIElement::~UIElement()
 {
-	/*PROTECTED REGION ID(UIElement destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(UIElement destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ UIElement::~UIElement()
 
 ecore::EClass_ptr UIElement::eClassImpl() const
 {
-	return UiPackage::_instance()->getUIElement();
+    return UiPackage::_instance()->getUIElement();
 }
- 
+

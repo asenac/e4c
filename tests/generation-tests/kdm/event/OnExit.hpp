@@ -18,29 +18,29 @@ class OnExit :  public virtual ::kdm::event::Transition
 {
 public:
 
-	typedef OnExit_ptr ptr_type;
-	
-	OnExit();
-	virtual ~OnExit();
+    typedef OnExit_ptr ptr_type;
 
-	
-	
+    OnExit();
+    virtual ~OnExit();
 
-	/*PROTECTED REGION ID(kdm::event::OnExit public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(kdm::event::OnExit public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class EventPackage;
+    friend class EventPackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::event::OnExit protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::event::OnExit protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // event

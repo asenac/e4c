@@ -7,27 +7,27 @@ using namespace SVG;
 /*PROTECTED REGION ID(SVG::G include) START*/
 /*PROTECTED REGION END*/
 
-G::G() : 
-	m_name()
+G::G() :
+    m_name()
 {
-	/*PROTECTED REGION ID(G constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(G constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 G::~G()
 {
-	/*PROTECTED REGION ID(G destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(G destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 void G::setName(name_t _name)
 {
-	m_name = _name;;
+    m_name = _name;;
 }
 
 G::name_t G::getName() const
 {
-	return m_name;
+    return m_name;
 }
 
 
@@ -37,6 +37,6 @@ G::name_t G::getName() const
 
 ecore::EClass_ptr G::eClassImpl() const
 {
-	return SVGPackage::_instance()->getG();
+    return SVGPackage::_instance()->getG();
 }
- 
+

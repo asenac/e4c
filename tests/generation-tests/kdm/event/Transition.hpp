@@ -18,29 +18,29 @@ class Transition :  public virtual ::kdm::event::EventResource
 {
 public:
 
-	typedef Transition_ptr ptr_type;
-	
-	Transition();
-	virtual ~Transition();
+    typedef Transition_ptr ptr_type;
 
-	
-	
+    Transition();
+    virtual ~Transition();
 
-	/*PROTECTED REGION ID(kdm::event::Transition public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(kdm::event::Transition public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class EventPackage;
+    friend class EventPackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::event::Transition protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::event::Transition protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // event

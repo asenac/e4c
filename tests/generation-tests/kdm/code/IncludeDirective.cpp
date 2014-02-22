@@ -9,14 +9,14 @@ using namespace kdm::code;
 
 IncludeDirective::IncludeDirective()
 {
-	/*PROTECTED REGION ID(IncludeDirective constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(IncludeDirective constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 IncludeDirective::~IncludeDirective()
 {
-	/*PROTECTED REGION ID(IncludeDirective destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(IncludeDirective destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ IncludeDirective::~IncludeDirective()
 
 ecore::EClass_ptr IncludeDirective::eClassImpl() const
 {
-	return CodePackage::_instance()->getIncludeDirective();
+    return CodePackage::_instance()->getIncludeDirective();
 }
- 
+

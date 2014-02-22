@@ -9,14 +9,14 @@ using namespace kdm::data;
 
 AbstractContentElement::AbstractContentElement()
 {
-	/*PROTECTED REGION ID(AbstractContentElement constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(AbstractContentElement constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 AbstractContentElement::~AbstractContentElement()
 {
-	/*PROTECTED REGION ID(AbstractContentElement destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(AbstractContentElement destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ AbstractContentElement::~AbstractContentElement()
 
 ecore::EClass_ptr AbstractContentElement::eClassImpl() const
 {
-	return DataPackage::_instance()->getAbstractContentElement();
+    return DataPackage::_instance()->getAbstractContentElement();
 }
- 
+

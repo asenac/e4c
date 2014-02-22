@@ -8,34 +8,34 @@ using namespace kdm::conceptual;
 /*PROTECTED REGION ID(kdm::conceptual::ConceptualContainer include) START*/
 /*PROTECTED REGION END*/
 
-ConceptualContainer::ConceptualContainer() : 
-	m_conceptualElement()
+ConceptualContainer::ConceptualContainer() :
+    m_conceptualElement()
 {
-	/*PROTECTED REGION ID(ConceptualContainer constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(ConceptualContainer constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 ConceptualContainer::~ConceptualContainer()
 {
-	/*PROTECTED REGION ID(ConceptualContainer destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(ConceptualContainer destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 ConceptualContainer::conceptualElement_t ConceptualContainer::getConceptualElement() const
 {
-	return e4c::returned(m_conceptualElement);
+    return e4c::returned(m_conceptualElement);
 }
 
 
 void ConceptualContainer::addConceptualElement(kdm::conceptual::AbstractConceptualElement_ptr conceptualElement_)
 {
-	m_conceptualElement.insert(std::unique_ptr < kdm::conceptual::AbstractConceptualElement >(conceptualElement_));
+    m_conceptualElement.insert(std::unique_ptr < kdm::conceptual::AbstractConceptualElement >(conceptualElement_));
 }
 
 void ConceptualContainer::addAllConceptualElement(const conceptualElement_t& conceptualElement_)
 {
-	for (auto i = conceptualElement_.begin(); i != conceptualElement_.end(); i++)
-		addConceptualElement(*i);
+    for (auto i = conceptualElement_.begin(); i != conceptualElement_.end(); i++)
+        addConceptualElement(*i);
 }
 
 
@@ -45,6 +45,6 @@ void ConceptualContainer::addAllConceptualElement(const conceptualElement_t& con
 
 ecore::EClass_ptr ConceptualContainer::eClassImpl() const
 {
-	return ConceptualPackage::_instance()->getConceptualContainer();
+    return ConceptualPackage::_instance()->getConceptualContainer();
 }
- 
+

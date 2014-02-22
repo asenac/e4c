@@ -9,14 +9,14 @@ using namespace kdm::code;
 
 DecimalType::DecimalType()
 {
-	/*PROTECTED REGION ID(DecimalType constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(DecimalType constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 DecimalType::~DecimalType()
 {
-	/*PROTECTED REGION ID(DecimalType destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(DecimalType destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ DecimalType::~DecimalType()
 
 ecore::EClass_ptr DecimalType::eClassImpl() const
 {
-	return CodePackage::_instance()->getDecimalType();
+    return CodePackage::_instance()->getDecimalType();
 }
- 
+

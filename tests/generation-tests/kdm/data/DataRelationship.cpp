@@ -9,42 +9,42 @@ using namespace kdm::data;
 /*PROTECTED REGION ID(kdm::data::DataRelationship include) START*/
 /*PROTECTED REGION END*/
 
-DataRelationship::DataRelationship() : 
-	m_to(),
+DataRelationship::DataRelationship() :
+    m_to(),
     m_from()
 {
-	/*PROTECTED REGION ID(DataRelationship constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(DataRelationship constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 DataRelationship::~DataRelationship()
 {
-	/*PROTECTED REGION ID(DataRelationship destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(DataRelationship destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 DataRelationship::to_t DataRelationship::getTo() const
 {
-	return e4c::returned(m_to);
+    return e4c::returned(m_to);
 }
 
 void DataRelationship::setTo(to_t to_)
 {
-	if (m_to == to_)
-		return;
-	m_to = to_;
+    if (m_to == to_)
+        return;
+    m_to = to_;
 }
 
 DataRelationship::from_t DataRelationship::getFrom() const
 {
-	return e4c::returned(m_from);
+    return e4c::returned(m_from);
 }
 
 void DataRelationship::setFrom(from_t from_)
 {
-	if (m_from == from_)
-		return;
-	m_from = from_;
+    if (m_from == from_)
+        return;
+    m_from = from_;
 }
 
 
@@ -54,6 +54,6 @@ void DataRelationship::setFrom(from_t from_)
 
 ecore::EClass_ptr DataRelationship::eClassImpl() const
 {
-	return DataPackage::_instance()->getDataRelationship();
+    return DataPackage::_instance()->getDataRelationship();
 }
- 
+

@@ -9,61 +9,61 @@ using namespace xpand3::declaration;
 /*PROTECTED REGION ID(xpand3::declaration::Extension include) START*/
 /*PROTECTED REGION END*/
 
-Extension::Extension() : 
-	m_cached(),
+Extension::Extension() :
+    m_cached(),
     m_body(),
     m_returnType()
 {
-	/*PROTECTED REGION ID(Extension constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(Extension constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 Extension::~Extension()
 {
-	/*PROTECTED REGION ID(Extension destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(Extension destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 void Extension::setCached(cached_t _cached)
 {
-	m_cached = _cached;;
+    m_cached = _cached;;
 }
 
 Extension::cached_t Extension::getCached() const
 {
-	return m_cached;
+    return m_cached;
 }
 
 Extension::body_t Extension::getBody() const
 {
-	return e4c::returned(m_body);
+    return e4c::returned(m_body);
 }
 
 
 void Extension::setBody(body_t body_)
 {
-	m_body.reset(body_);
+    m_body.reset(body_);
 }
 
 Extension::body_t Extension::releaseBody()
 {
-	return m_body.release();
+    return m_body.release();
 }
 
 Extension::returnType_t Extension::getReturnType() const
 {
-	return e4c::returned(m_returnType);
+    return e4c::returned(m_returnType);
 }
 
 
 void Extension::setReturnType(returnType_t returnType_)
 {
-	m_returnType.reset(returnType_);
+    m_returnType.reset(returnType_);
 }
 
 Extension::returnType_t Extension::releaseReturnType()
 {
-	return m_returnType.release();
+    return m_returnType.release();
 }
 
 
@@ -73,6 +73,6 @@ Extension::returnType_t Extension::releaseReturnType()
 
 ecore::EClass_ptr Extension::eClassImpl() const
 {
-	return DeclarationPackage::_instance()->getExtension();
+    return DeclarationPackage::_instance()->getExtension();
 }
- 
+

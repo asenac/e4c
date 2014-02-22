@@ -18,29 +18,29 @@ class Image :  public virtual ::kdm::source::InventoryItem
 {
 public:
 
-	typedef Image_ptr ptr_type;
-	
-	Image();
-	virtual ~Image();
+    typedef Image_ptr ptr_type;
 
-	
-	
+    Image();
+    virtual ~Image();
 
-	/*PROTECTED REGION ID(kdm::source::Image public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(kdm::source::Image public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class SourcePackage;
+    friend class SourcePackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::source::Image protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::source::Image protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // source

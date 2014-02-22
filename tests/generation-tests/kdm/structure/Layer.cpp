@@ -9,14 +9,14 @@ using namespace kdm::structure;
 
 Layer::Layer()
 {
-	/*PROTECTED REGION ID(Layer constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(Layer constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 Layer::~Layer()
 {
-	/*PROTECTED REGION ID(Layer destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(Layer destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ Layer::~Layer()
 
 ecore::EClass_ptr Layer::eClassImpl() const
 {
-	return StructurePackage::_instance()->getLayer();
+    return StructurePackage::_instance()->getLayer();
 }
- 
+

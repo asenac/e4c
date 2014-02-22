@@ -16,29 +16,29 @@ class CField :  public virtual ::C::CStructuralFeature
 {
 public:
 
-	typedef CField_ptr ptr_type;
-	
-	CField();
-	virtual ~CField();
+    typedef CField_ptr ptr_type;
 
-	
-	
+    CField();
+    virtual ~CField();
 
-	/*PROTECTED REGION ID(C::CField public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(C::CField public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class CPackage;
+    friend class CPackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(C::CField protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(C::CField protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // C

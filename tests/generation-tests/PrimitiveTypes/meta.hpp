@@ -23,8 +23,8 @@ namespace definition
 template < >
 struct epackage< ::PrimitiveTypes::PrimitiveTypesPackage >
 {
-	typedef boost::mpl::list<  > eClasses;
-	typedef boost::mpl::list<  > eSubpackages;
+    typedef boost::mpl::list<  > eClasses;
+    typedef boost::mpl::list<  > eSubpackages;
 };
 
 

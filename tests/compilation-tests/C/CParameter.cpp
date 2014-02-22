@@ -8,27 +8,27 @@ using namespace C;
 /*PROTECTED REGION ID(C::CParameter include) START*/
 /*PROTECTED REGION END*/
 
-CParameter::CParameter() : 
-	m_behavioralFeature()
+CParameter::CParameter() :
+    m_behavioralFeature()
 {
-	/*PROTECTED REGION ID(CParameter constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(CParameter constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 CParameter::~CParameter()
 {
-	/*PROTECTED REGION ID(CParameter destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(CParameter destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 CParameter::behavioralFeature_t CParameter::getBehavioralFeature() const
 {
-	return e4c::returned(m_behavioralFeature);
+    return e4c::returned(m_behavioralFeature);
 }
 
 void CParameter::setBehavioralFeature(behavioralFeature_t behavioralFeature_)
 {
-	m_behavioralFeature = behavioralFeature_;
+    m_behavioralFeature = behavioralFeature_;
 }
 
 
@@ -38,6 +38,6 @@ void CParameter::setBehavioralFeature(behavioralFeature_t behavioralFeature_)
 
 ecore::EClass_ptr CParameter::eClassImpl() const
 {
-	return CPackage::_instance()->getCParameter();
+    return CPackage::_instance()->getCParameter();
 }
- 
+

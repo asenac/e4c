@@ -18,29 +18,29 @@ class ExternalActor :  public virtual ::kdm::platform::PlatformAction
 {
 public:
 
-	typedef ExternalActor_ptr ptr_type;
-	
-	ExternalActor();
-	virtual ~ExternalActor();
+    typedef ExternalActor_ptr ptr_type;
 
-	
-	
+    ExternalActor();
+    virtual ~ExternalActor();
 
-	/*PROTECTED REGION ID(kdm::platform::ExternalActor public) START*/
-	/*PROTECTED REGION END*/
-		
+
+
+
+    /*PROTECTED REGION ID(kdm::platform::ExternalActor public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class PlatformPackage;
+    friend class PlatformPackage;
 
-	
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(kdm::platform::ExternalActor protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(kdm::platform::ExternalActor protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // platform

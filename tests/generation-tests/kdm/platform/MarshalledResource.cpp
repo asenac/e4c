@@ -9,14 +9,14 @@ using namespace kdm::platform;
 
 MarshalledResource::MarshalledResource()
 {
-	/*PROTECTED REGION ID(MarshalledResource constructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(MarshalledResource constructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 MarshalledResource::~MarshalledResource()
 {
-	/*PROTECTED REGION ID(MarshalledResource destructor) START*/
-	/*PROTECTED REGION END*/
+    /*PROTECTED REGION ID(MarshalledResource destructor) START*/
+    /*PROTECTED REGION END*/
 }
 
 
@@ -26,6 +26,6 @@ MarshalledResource::~MarshalledResource()
 
 ecore::EClass_ptr MarshalledResource::eClassImpl() const
 {
-	return PlatformPackage::_instance()->getMarshalledResource();
+    return PlatformPackage::_instance()->getMarshalledResource();
 }
- 
+

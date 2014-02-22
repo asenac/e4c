@@ -16,33 +16,33 @@ class RuleCall :  public virtual ::xtext::AbstractElement
 {
 public:
 
-	typedef RuleCall_ptr ptr_type;
-	
-	RuleCall();
-	virtual ~RuleCall();
+    typedef RuleCall_ptr ptr_type;
 
-	typedef xtext::AbstractRule_ptr rule_t;
-	
-	rule_t getRule() const;
-	void setRule(rule_t rule_);
-	
+    RuleCall();
+    virtual ~RuleCall();
 
-	/*PROTECTED REGION ID(xtext::RuleCall public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef xtext::AbstractRule_ptr rule_t;
+
+    rule_t getRule() const;
+    void setRule(rule_t rule_);
+
+
+    /*PROTECTED REGION ID(xtext::RuleCall public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class XtextPackage;
+    friend class XtextPackage;
 
-	xtext::AbstractRule_ptr m_rule;
+    xtext::AbstractRule_ptr m_rule;
 
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(xtext::RuleCall protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(xtext::RuleCall protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // xtext

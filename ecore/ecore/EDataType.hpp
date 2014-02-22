@@ -15,33 +15,33 @@ class EDataType :  public virtual ::ecore::EClassifier
 {
 public:
 
-	typedef EDataType_ptr ptr_type;
-	
-	EDataType();
-	virtual ~EDataType();
+    typedef EDataType_ptr ptr_type;
 
-	typedef ::ecore::EBoolean serializable_t;
-	
-	void setSerializable(serializable_t _serializable);
-	serializable_t getSerializable() const;
-	
+    EDataType();
+    virtual ~EDataType();
 
-	/*PROTECTED REGION ID(ecore::EDataType public) START*/
-	/*PROTECTED REGION END*/
-		
+    typedef ::ecore::EBoolean serializable_t;
+
+    void setSerializable(serializable_t _serializable);
+    serializable_t getSerializable() const;
+
+
+    /*PROTECTED REGION ID(ecore::EDataType public) START*/
+    /*PROTECTED REGION END*/
+
 protected:
 
-	friend class EcorePackage;
+    friend class EcorePackage;
 
-	serializable_t m_serializable;
+    serializable_t m_serializable;
 
-	
-	
-	
-	virtual ecore::EClass_ptr eClassImpl() const;
-	
-	/*PROTECTED REGION ID(ecore::EDataType protected) START*/
-	/*PROTECTED REGION END*/
+
+
+
+    virtual ecore::EClass_ptr eClassImpl() const;
+
+    /*PROTECTED REGION ID(ecore::EDataType protected) START*/
+    /*PROTECTED REGION END*/
 };
 
 } // ecore
